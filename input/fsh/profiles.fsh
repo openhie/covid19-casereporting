@@ -128,8 +128,8 @@ Description: "Client Ward Division"
 Profile: Covid19RelatedPerson
 Parent: RelatedPerson
 Id: covid19-RelatedPerson
-Title: "Covid19 Related Person"
-Description: "Covid19 Related Person"
+Title: "Related Person"
+Description: "Related Person"
 * name 1..* MS 
 * telecom MS
 
@@ -144,7 +144,7 @@ Description: "This Patient profile allows the exchange of patient information, i
     ClientMiddleName named clientMiddleName 0..1 MS 
 * name.family 1..1 MS // Surname
 * gender 1..1 MS // Client Sex
-* birthDate MS   // Client Date of Birth
+* birthDate 1..1 MS   // Client Date of Birth
 * extension contains
     ClientEstimatedAge named clientEstimatedAge 0..1 MS  //Estimated Age
 * telecom MS  // Client telephone number and Client Email Addresss
@@ -155,12 +155,12 @@ Description: "This Patient profile allows the exchange of patient information, i
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slice based on the type of identifier"
 
-* address 1..*
+//* address 1..*
 * address.country MS    //Client Country  /  Nationality / Citizenship
 * address.state MS      //Client County / Province  / State
 * address.district MS   //Client SubCounty / District 
 * extension contains
-    ClientWardDivision named clientWardDivision 1..1 MS  //Estimated Age
+    ClientWardDivision named clientWardDivision 1..1 MS  //
 * address.line MS   //Client Ward / Division
 * address.city MS      //Client Village / Estate */
 
@@ -181,14 +181,111 @@ Description: "This Patient profile allows the exchange of patient information, i
 
 //* managingOrganization 1..1
 
+Extension: ReasonforAssessment
+Id: reason-for-assessment
+Title: "Reason for Assessment"
+Description: "Reason for Assessment"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSAssessmentReason
+
+Extension: OtherReasonforAssessment
+Id: other-reason-for-assessment
+Title: "Other-reason for Assessment"
+Description: "Other reason for Assessment"
+* valueString only string
+
+Extension: Presentation
+Id: Presentation
+Title: "Presentation"
+Description: "Presentation"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSPresentation
 
 Profile: Covid19AssessmentEncounter
 Parent: Encounter
 Id: covid19-encounter
 Title: "Covid19 Assessment Encounter"
 Description: "Covid19 Assessment Encounter"
-* period.start MS  //Date of assessment
-    //Reasons for assessment
-/*Contact of a case,  Entry into a country, Follow-up, Health worker, 
-Other frontline worker, Post-mortem, Quarantine, RDT confirmatory,  Surveillance, Symptomatic/Illness,
-Travel out of country, Voluntary, Other (specify)*/
+* period.start 1..1 MS  //Date of assessment
+* subject 1..1 MS //Patient reference
+* extension contains ReasonforAssessment named assessmentReason 1..1 MS  //Reason for assessment
+* extension contains OtherReasonforAssessment named OtherReasonforAssessment 0..1 MS  // Other reasons for assessment
+* extension contains Presentation named presentation 0..1 MS  // Presentation
+* period.end MS  //Date died
+
+Profile: Covid19SymptomsDate
+Parent: Observation
+Id: covid19-symptoms-date
+Title: "Date of onset of symptoms"
+Description: "Date of onset of symptoms"
+* valueDateTime MS 
+
+Profile: Covid19Symptom
+Parent: Observation
+Id: covid19-symptom
+Title: "Covid19 Symptom"
+Description: "Covid19 Symptom"
+* value[x] only CodeableConcept 
+* valueCodeableConcept from VSSymptoms 
+
+Profile: Covid19OtherSymptoms
+Parent: Observation
+Id: covid19-other-symptoms
+Title: "Other specified symptoms"
+Description: "Other specified symptoms"
+* valueString MS
+
+Profile: Covid19ComorbidityPresent
+Parent: Observation
+Id: covid19-comorbidity-present
+Title: "Covid19 Comorbidity Present"
+Description: "Covid19 Comorbidity Present"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSYesNoUnknown
+
+Extension: OtherConditionsComorbidity
+Id: covid19-other-conditions-comorbidity
+Title: "Other Conditions or Comorbidity"
+Description: "Other Conditions or Comorbidity"
+* valueString only string
+
+Profile: Covid19ConditionsComorbidity
+Parent: Condition
+Id: covid19-conditions-comorbidity
+Title: "Covid19 Conditions or comorbidity"
+Description: "Covid19 Conditions or comorbidity"
+* code 1..1 MS
+//* CodeableConcept from VSConditionsComorbidity
+* extension contains OtherConditionsComorbidity named otherConditionsComorbidity 0..1 MS  //Reason for assessment
+
+Profile: Covid19VaccineDoseReceived
+Parent: Observation
+Id: covid19-vaccine-dose-received
+Title: "Covid19 Vaccine Dose Received"
+Description: "Covid19 Vaccine Dose Received"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSYesNoUnknown
+
+Profile: Covid19VaccineTypeAdministered
+Parent: Immunization
+Id: covid19-vaccine-type-administered
+Title: "Covid19 Vaccine Type Administered"
+Description: "Covid19 Vaccine Type Administered"
+* vaccineCode  MS  // #TODO include only code from valueCodeableConcept from VSVaccineTypes
+
+Profile: Covid19PatientOutcome
+Parent: Observation
+Id: covid19-patient-outcome
+Title: "Covid19 Patient Outcome"
+Description: "Covid19 Patient Outcome"
+//* value[x] only CodeableConcept
+* valueCodeableConcept from VSPatientOutcome 
+* valueString MS //Long COVID / post-COVID description
+* note MS    //additional notes
+
+Profile: Covid19DateRecovered  
+Parent: Observation
+Id: covid19-date-recovered
+Title: "Covid19 Date Recovered"
+Description: "Date recovered or date symptoms resolved"
+* valueDateTime MS 
