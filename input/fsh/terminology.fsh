@@ -106,7 +106,7 @@ Description:  "List of Conditions / Comorbidity"
 CodeSystem: CSVaccineTypes
 Id: cs-vaccine-types
 Title: "Vaccine Types"
-Description: "Vaccine Types"
+Description: "A list of Vaccine Types"
 * #AstraZenecaOxford "AstraZeneca/Oxford vaccine"
 * #J&J "Johnson and Johnson"
 * #Moderna "Moderna"
@@ -121,13 +121,13 @@ Description: "Vaccine Types"
 ValueSet: VSVaccineTypes
 Id: vs-vaccine-types
 Title: "Vaccine Types"
-Description: "Vaccine Types"
+Description: "A list of Vaccine Types"
 * include codes from system CSVaccineTypes
 
 CodeSystem: CSPatientOutcome
 Id: cs-patient-outcome
-Title: "Patient Outcome"
-Description: "Patient Outcome"
+Title: "Patient Outcomes"
+Description: "A list of Patient Outcomes"
 * #Recovered "Recovered (Symptoms resolved)"
 * #Died "died"
 * #LongCOVID "Long COVID /Post-COVID"  
@@ -135,5 +135,52 @@ Description: "Patient Outcome"
 ValueSet: VSPatientOutcome
 Id: vs-patient-outcome
 Title: "Patient Outcome"
-Description: "Patient Outcome"
+Description: "A list of Patient Outcomes"
 * include codes from system CSPatientOutcome
+
+CodeSystem: CSTestTypes
+Id: cs-test-requested
+Title: "Test Types"
+Description: "A list of Test Types"
+* #Rapid "Rapid Antigen Test"
+* #PCR "Diagnostic PCR Test"
+
+ValueSet: VSTestTypes
+Id: vs-test-types
+Title: "Test Types"
+Description: "A list of Test Types"
+* include codes from system CSTestTypes
+
+CodeSystem: CSCancellationReason
+Id: cs-cancellation-reason
+Title: "Cancellation Reasons"
+Description: "A list of Cancellation Reasons"
+* #Duplicate "duplicate orders"
+* #PCR "Improperly ordered"
+* #VOID "No longer required"
+* #NoSample "No sample collected"
+* #Old "Old order, Wrong entry"
+
+ValueSet: VSCancellationReason
+Id: vs-cancellation-reason
+Title: "Test Types"
+Description: "A list of Cancellation Reasons"
+* include codes from system CSCancellationReason
+
+CodeSystem: CSCovid19SpecimenType
+Id: cs-covid19-specimen-type
+Title: "Covid19 Specimen Type"
+Description: "A list of Covid19 Specimen Type"
+* #Nasopharyngeal "Nasopharyngeal" 
+* #OropharyngealSwab "Oropharyngeal swab" 
+* #Serum "Serum"
+* #Sputum "Sputum"
+* #TrachealAspirate "Tracheal Aspirate"
+* #Unknown "Unknown"
+* #Other "Other (specify)"
+
+ValueSet: VSCovid19SpecimenType
+Id: vs-covid19-specimen-type
+Title: "Covid19 Specimen Type"
+Description: "A list of Covid19 Specimen Type"
+* include codes from system CSCovid19SpecimenType

@@ -13,13 +13,10 @@ Title: "Covid19 Case Reporting Composition"
 * section ^slicing.ordered = true
 * section ^slicing.description = "Slice of composition.section based on code"
 * section contains
-    covid19PatientSection 1..1 
-    // hivDiagnosisSection 0..1 and
-    // hivEntryToCareSection 0..1 and
-    // arvTreatmentSection 0..1 and
-    // cd4Section 0..1 and
-    // viralSuppressionSection 0..1 and
-    // deathSection 0..1
+    covid19PatientSection 1..1 and
+    covid19AssessmentSection 0..1 and
+    covid19LabOrderManagementSection 0..1 
+
 * section[covid19PatientSection].title = "Client registration"
 //* section[covid19PatientSection].code = CSCaseReportSections#CLIENT-REGISTRATION
 * section[covid19PatientSection].entry ^slicing.discriminator.type = #profile
@@ -29,51 +26,43 @@ Title: "Covid19 Case Reporting Composition"
     covid19Patient 1..1 and
     covid19RelatedPerson 0..*
 * section[covid19PatientSection].entry[covid19Patient] only Reference(Covid19Patient)
-//* section[covid19PatientSection].entry[hivRelatedPerson] only Reference(HIVRelatedPerson)
+* section[covid19PatientSection].entry[covid19RelatedPerson] only Reference(Covid19RelatedPerson)
 
-/* * section[hivDiagnosisSection].title = "HIV Diagnosis"
-* section[hivDiagnosisSection].code = CSCaseReportSections#HIV-DIAGNOSIS
-* section[hivDiagnosisSection].entry only Reference(HIVDiagnosis or HIVDiagnosisEncounter or HIVRecencyTestConducted or HIVRecencyResult)
-* section[hivDiagnosisSection].entry ^slicing.discriminator.type = #profile
-* section[hivDiagnosisSection].entry ^slicing.discriminator.path = "item.resolve()"
-* section[hivDiagnosisSection].entry ^slicing.rules = #closed
-* section[hivDiagnosisSection].entry contains
-    hivDiagnosis 1..1 and
-    hivDiagnosisEncounter 1..1 and
-    hivRecencyTestConducted 1..1 and
-    hivRecencyResult 1..1
-* section[hivDiagnosisSection].entry[hivDiagnosis] only Reference(HIVDiagnosis)
-* section[hivDiagnosisSection].entry[hivDiagnosisEncounter] only Reference(HIVDiagnosisEncounter)
-* section[hivDiagnosisSection].entry[hivRecencyTestConducted] only Reference(HIVRecencyTestConducted)
-* section[hivDiagnosisSection].entry[hivRecencyResult] only Reference(HIVRecencyResult)
+* section[covid19AssessmentSection].title = "Covid19 Assessment Encounter"
+//* section[covid19AssessmentSection].code = CSCaseReportSections#COVID19-Encounter
+//* section[covid19AssessmentSection].entry only Reference(Covid19AssessmentEncounter)
+* section[covid19AssessmentSection].entry ^slicing.discriminator.type = #profile
+* section[covid19AssessmentSection].entry ^slicing.discriminator.path = "item.resolve()"
+* section[covid19AssessmentSection].entry ^slicing.rules = #closed
+* section[covid19AssessmentSection].entry contains
+    covid19AssessmentEncounter 1..1 and
+    covid19Symptom 0..* and 
+    covid19ConditionsComorbidity 0..* and
+    covid19VaccineTypeAdministered 0..* and
+    covid19PatientOutcome 0..1
+* section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
+* section[covid19AssessmentSection].entry[covid19Symptom] only Reference(Covid19Symptom)
+* section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
+* section[covid19AssessmentSection].entry[covid19VaccineTypeAdministered] only Reference(Covid19VaccineTypeAdministered)
+* section[covid19AssessmentSection].entry[covid19PatientOutcome] only Reference(Covid19PatientOutcome)
 
-* section[hivEntryToCareSection].title = "HIV Entry To Care"
-* section[hivEntryToCareSection].code = CSCaseReportSections#HIV-ENTRY-TO-CARE
-* section[hivEntryToCareSection].entry only Reference(HIVEpisodeOfCare or HIVClinicalEncounter)
-* section[hivEntryToCareSection].entry ^slicing.discriminator.type = #profile
-* section[hivEntryToCareSection].entry ^slicing.discriminator.path = "item.resolve()"
-* section[hivEntryToCareSection].entry ^slicing.rules = #closed
-* section[hivEntryToCareSection].entry contains
-    hivEpisodeOfCare 1..1 and
-    hivClinicalEncounter 1..1
-* section[hivEntryToCareSection].entry[hivEpisodeOfCare] only Reference(HIVEpisodeOfCare)
-* section[hivEntryToCareSection].entry[hivClinicalEncounter] only Reference(HIVClinicalEncounter)
+* section[covid19LabOrderManagementSection].title = "Lab Order"
+//* section[arvTreatmentSection].code = CSCaseReportSections#ARV-TREATMENT
+* section[covid19LabOrderManagementSection].entry ^slicing.discriminator.type = #profile
+* section[covid19LabOrderManagementSection].entry ^slicing.discriminator.path = "item.resolve()"
+* section[covid19LabOrderManagementSection].entry ^slicing.rules = #closed
+* section[covid19LabOrderManagementSection].entry contains
+    covid19LabOrder 1..1 and
+    covid19Specimen 1..1 and
+    covid19SpecimenCollection 1..1 and
+    covid19LabOrderCancellation 0..1
+    
+* section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
+* section[covid19LabOrderManagementSection].entry[covid19Specimen] only Reference(Covid19Specimen)
+* section[covid19LabOrderManagementSection].entry[covid19SpecimenCollection] only Reference(Covid19SpecimenCollection)
+* section[covid19LabOrderManagementSection].entry[covid19LabOrderCancellation] only Reference(Covid19LabOrderCancellation)
 
-* section[arvTreatmentSection].title = "ARV Treatment"
-* section[arvTreatmentSection].code = CSCaseReportSections#ARV-TREATMENT
-* section[arvTreatmentSection].entry only Reference(ARVTreatment)
 
-* section[cd4Section].title = "CD4"
-* section[cd4Section].code = CSCaseReportSections#CD4
-* section[cd4Section].entry only Reference(CD4)
-
-* section[viralSuppressionSection].title = "Viral Suppression"
-* section[viralSuppressionSection].code = CSCaseReportSections#VIRAL-SUPPRESSION
-* section[viralSuppressionSection].entry only Reference(ViralLoadSuppression)
-
-* section[deathSection].title = "Death"
-* section[deathSection].code = CSCaseReportSections#DEATH
-* section[deathSection].entry only Reference(DeathObs) */
 
 /* Profile: HIVDiagnosisEncounter
 Parent: Encounter
@@ -83,15 +72,6 @@ Description: "HIV Encounter for a case report"
 * serviceProvider 1..1
 * subject 1..1
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#PRENC
-
-Profile: HIVClinicalEncounter
-Parent: Encounter
-Id: hiv-clinical-encounter
-Title: "HIV Clinical Encounter"
-Description: "HIV Encounter for a case report"
-* subject 1..1
-* period.start 1..1
-* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#OBSENC
 
 Profile: HIVOrganization
 Parent: Organization
@@ -130,7 +110,7 @@ Parent: RelatedPerson
 Id: covid19-RelatedPerson
 Title: "Related Person"
 Description: "Related Person"
-* name 1..* MS 
+* name.given 1..* MS 
 * telecom MS
 
 
@@ -209,16 +189,21 @@ Description: "Covid19 Assessment Encounter"
 * period.start 1..1 MS  //Date of assessment
 * subject 1..1 MS //Patient reference
 * extension contains ReasonforAssessment named assessmentReason 1..1 MS  //Reason for assessment
-* extension contains OtherReasonforAssessment named OtherReasonforAssessment 0..1 MS  // Other reasons for assessment
+* extension contains OtherReasonforAssessment named otherReasonforAssessment 0..1 MS  // Other reasons for assessment
 * extension contains Presentation named presentation 0..1 MS  // Presentation
 * period.end MS  //Date died
 
-Profile: Covid19SymptomsDate
-Parent: Observation
+Extension: Covid19SymptomsDate
 Id: covid19-symptoms-date
 Title: "Date of onset of symptoms"
 Description: "Date of onset of symptoms"
 * valueDateTime MS 
+
+Extension: Covid19OtherSymptoms
+Id: covid19-other-symptoms
+Title: "Other specified symptoms"
+Description: "Other specified symptoms"
+* valueString MS
 
 Profile: Covid19Symptom
 Parent: Observation
@@ -226,17 +211,11 @@ Id: covid19-symptom
 Title: "Covid19 Symptom"
 Description: "Covid19 Symptom"
 * value[x] only CodeableConcept 
-* valueCodeableConcept from VSSymptoms 
+* valueCodeableConcept from VSSymptoms
+* extension contains Covid19SymptomsDate named covid19SymptomsDate 0..1 MS
+* extension contains Covid19OtherSymptoms named covid19OtherSymptoms 0..1 MS
 
-Profile: Covid19OtherSymptoms
-Parent: Observation
-Id: covid19-other-symptoms
-Title: "Other specified symptoms"
-Description: "Other specified symptoms"
-* valueString MS
-
-Profile: Covid19ComorbidityPresent
-Parent: Observation
+Extension: Covid19ComorbidityPresent
 Id: covid19-comorbidity-present
 Title: "Covid19 Comorbidity Present"
 Description: "Covid19 Comorbidity Present"
@@ -249,43 +228,141 @@ Title: "Other Conditions or Comorbidity"
 Description: "Other Conditions or Comorbidity"
 * valueString only string
 
+Extension: ConditionsComorbidityExt
+Id: conditions-comorbidity-extension
+Title: "Covid19 Conditions or comorbidity"
+Description: "Covid19 Conditions or comorbidity"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSConditionsComorbidity
+
 Profile: Covid19ConditionsComorbidity
 Parent: Condition
 Id: covid19-conditions-comorbidity
 Title: "Covid19 Conditions or comorbidity"
 Description: "Covid19 Conditions or comorbidity"
-* code 1..1 MS
-//* CodeableConcept from VSConditionsComorbidity
-* extension contains OtherConditionsComorbidity named otherConditionsComorbidity 0..1 MS  //Reason for assessment
+* code 0..0 // #TODO - check how to bind code field to the conditionsComorbidity value set
+* extension contains Covid19ComorbidityPresent named covid19ComorbidityPresent 0..1 MS  
+* extension contains ConditionsComorbidityExt named conditionsComorbidity 0..1 MS  
+* extension contains OtherConditionsComorbidity named otherConditionsComorbidity 0..1 MS  
 
-Profile: Covid19VaccineDoseReceived
-Parent: Observation
+Extension: Covid19VaccineDoseReceived
 Id: covid19-vaccine-dose-received
 Title: "Covid19 Vaccine Dose Received"
 Description: "Covid19 Vaccine Dose Received"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSYesNoUnknown
 
+Extension: Covid19VaccinceType
+Id: covid19-vaccine-code
+Title: "Covid19 Vaccine type"
+Description: "Covid19 Vaccine Type"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSVaccineTypes
+
 Profile: Covid19VaccineTypeAdministered
 Parent: Immunization
 Id: covid19-vaccine-type-administered
 Title: "Covid19 Vaccine Type Administered"
 Description: "Covid19 Vaccine Type Administered"
-* vaccineCode  MS  // #TODO include only code from valueCodeableConcept from VSVaccineTypes
+* extension contains Covid19VaccineDoseReceived named covid19VaccineDoseReceived 0..1 MS
+* extension contains Covid19VaccinceType named covid19VaccinceType 0..1 MS // #TODO investigate how to rather bind vaccineCode to  VSVaccineTypes
+
+Extension: Covid19DateRecovered  
+Id: covid19-date-recovered
+Title: "Covid19 Date Recovered"
+Description: "Date recovered or date symptoms resolved"
+* valueDateTime MS
+
+Extension: Covid19LongCOVIDDescription
+Id: covid19-long-covid-description
+Title: "Covid19 Date Recovered"
+Description: "Long COVID / post-COVID description"
+* valueString MS
 
 Profile: Covid19PatientOutcome
 Parent: Observation
 Id: covid19-patient-outcome
 Title: "Covid19 Patient Outcome"
 Description: "Covid19 Patient Outcome"
-//* value[x] only CodeableConcept
+* value[x] only CodeableConcept
 * valueCodeableConcept from VSPatientOutcome 
-* valueString MS //Long COVID / post-COVID description
+* extension contains Covid19DateRecovered named covid19DateRecovered 0..1 MS
+* extension contains Covid19LongCOVIDDescription named covid19LongCOVIDDescription 0..1 MS
 * note MS    //additional notes
 
-Profile: Covid19DateRecovered  
-Parent: Observation
-Id: covid19-date-recovered
-Title: "Covid19 Date Recovered"
-Description: "Date recovered or date symptoms resolved"
-* valueDateTime MS 
+Extension: Covid19TestRequested
+Id: covid19-test-requested
+Title: "Covid19 Test Requested"
+Description: "Covid19 Test Requested"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSTestTypes
+
+Profile: Covid19LabOrder
+Parent: ServiceRequest
+Id: covid19-lab-order
+Title: "Covid19 Lab Order"
+Description: "Covid19 Lab Order"
+//* reasonCode.coding.code only Reference(CSAssessmentReason)   #TODO - How to bind reasonCode to Reason Value set?
+* subject 1..1 MS // Patient reference
+* intent = #order 
+* reasonCode  1..1 MS //Reason for testing
+* extension contains OtherReasonforAssessment named otherReasonforTesting 0..1 MS
+* authoredOn  1..1 MS  //Order date    #TODO - How to add a custom desc to fields?
+* extension contains Covid19TestRequested named covid19TestRequested 1..1 MS   //could rather bind to field code?
+* status MS // Order labs: Yes =request status "active"   (yes, no)
+
+Extension: Covid19CancellationReason
+Id: covid19-cancellation-reason
+Title: "Covid19 Cancellation Reason"
+Description: "Covid19 Cancellation Reason"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSCancellationReason
+
+Extension: Covid19SpecimenType
+Id: covid19-specimen-type
+Title: "Covid19 Specimen Type"
+Description: "Covid19 Specimen Type"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSCovid19SpecimenType
+
+Profile: Covid19Specimen
+Parent: Specimen
+Id: covid19-specimen
+Title: "Covid19 Specimen"
+Description: "Covid19 Specimen"
+* type 0..0 ////* type    #TODO  - Bind type to CSCovid19SpecimenType - avoid extra extension Covid19SpecimenType?
+* collection.collectedDateTime 1..1 MS  // Date specimen collected
+* extension contains Covid19SpecimenType named covid19SpecimenType 1..1 MS  
+* extension contains OtherReasonforAssessment named otherSpecimenType 0..1 MS
+
+Extension: Covid19SpecimenForwarded
+Id: covid19-specimen-forwarded
+Title: "Covid19 Specimen Forwarded"
+Description: "Covid19 Specimen forwarded to reference lab"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSYesNoUnknown
+
+Profile: Covid19SpecimenCollection
+Parent: DiagnosticReport
+Id: covid19-specimen-collection
+Title: "Covid19 Specimen Collection"
+Description: "Covid19 Specimen Collection"
+* subject 1..1 MS // Patient reference
+* encounter 1..1 MS // Covid Assessment reference
+* specimen 1..1 MS //
+* identifier 1..1 MS //Sample ID
+// #TODO  --> Reference lab sample sent to
+* extension contains Covid19SpecimenForwarded named covid19SpecimenForwarded 1..1 MS //Specimen forwarded to reference lab
+
+Profile: Covid19LabOrderCancellation
+Parent: Task
+Id: covid19-lab-order-cancellation
+Title: "Covid19 Lab Order Cancellation"
+Description: "Covid19 Lab Order Cancellation Task"
+//* reasonCode.coding.code only Reference(CSAssessmentReason)   #TODO - How to bind reasonCode to Reason Value set?
+* intent = #order
+* focus 1..1 MS // Refer to Lab Order  --> What task is acting on
+* for 1..1 MS // Beneficiary of the Task --> Patient
+* encounter 1..1 MS // Healthcare event during which this task originated -- >Covid19AssessmentEncounter
+* authoredOn 1..1 MS //Cancellation date
+* extension contains Covid19CancellationReason named covid19CancellationReason 1..1 MS // #TODO bind statusReason  to VSCancellationReason
