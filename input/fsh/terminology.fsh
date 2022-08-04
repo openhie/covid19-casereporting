@@ -184,3 +184,40 @@ Id: vs-covid19-specimen-type
 Title: "Covid19 Specimen Type"
 Description: "A list of Covid19 Specimen Type"
 * include codes from system CSCovid19SpecimenType
+
+CodeSystem: CSReasonTestNotPerformed
+Id: cs-covid19-reason-test-not-performed
+Title: "Covid19 Reason Test not performed"
+Description: "Covid19 Reason Test not performed"
+* #BllodSampleCoagulated "Blood sample coagulated" 
+* #ContaminsatedSpecimen "Contaminated specimen" 
+* #EquipmentFailure "Equipment failure"
+* #InappropriateSampleContainer "Inappropriate sample container used"
+* #InsufficientSample "Insufficient sample"
+* #SpecimenNotlabeled "Specimen not labeled"
+* #SuppliesNotAvailable "Supplies not available"
+* #Other "Other"
+
+ValueSet: VSReasonTestNotPerformed
+Id: vs-covid19-reason-test-not-performed
+Title: "Covid19 Specimen Type"
+Description: "A list of Covid19 Specimen Type"
+* include codes from system CSCovid19SpecimenType
+
+//vaccineCode
+//Astrazeneca COVID-19 vaccine, 
+//Bharat Biotech Covaxin COVID-19 vaccine, Cansino Biologics Convidicea COVID-19 vaccine, Chumakov Center Covivac COVID-19 vaccine, COVID-19 convalescent plasma, CureVac CVnCoV COVID-19 vaccine, Gamaleya Sputnik v COVID-19 vaccine, Janssen COVID-19 vaccine, Moderna COVID-19 vaccine, Novavax NVX-COV2373 COVID-19 vaccine, Pfizer-BioNtech COVID-19 vaccine, Sinopharm BBIBP-CorV COVID-19 vaccine, Sinopharm-Wuhan COVID-19 vaccine, Sinovac COVID-19 vaccine, Vector Institute EpivacCorona COVID-19 vaccine
+
+CodeSystem: CSDoseNumber
+Id: cs-covid19-dose-number
+Title: "Covid19 Vaccination Dose Number"
+Description: "Covid19 Vaccination Dose Number"
+* #First "First" 
+* #second "Second" 
+* #booster "booster" 
+
+ValueSet: VSDoseNumber
+Id: vs-covid19-dose-number
+Title: "Covid19 Vaccination Dose Number"
+Description: "Covid19 Vaccination Dose Number"
+* include codes from system CSDoseNumber

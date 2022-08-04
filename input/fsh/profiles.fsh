@@ -15,8 +15,8 @@ Title: "Covid19 Case Reporting Composition"
 * section contains
     covid19PatientSection 1..1 and
     covid19AssessmentSection 0..1 and
-    covid19LabOrderManagementSection 0..1 
-
+    covid19LabOrderManagementSection 0..1 and
+    covid19ImmunizationSection 0..1
 * section[covid19PatientSection].title = "Client registration"
 //* section[covid19PatientSection].code = CSCaseReportSections#CLIENT-REGISTRATION
 * section[covid19PatientSection].entry ^slicing.discriminator.type = #profile
@@ -55,13 +55,22 @@ Title: "Covid19 Case Reporting Composition"
     covid19LabOrder 1..1 and
     covid19Specimen 1..1 and
     covid19SpecimenCollection 1..1 and
-    covid19LabOrderCancellation 0..1
-    
+    covid19LabOrderCancellation 0..1 and
+    covid19LabResults   0..1
 * section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
 * section[covid19LabOrderManagementSection].entry[covid19Specimen] only Reference(Covid19Specimen)
 * section[covid19LabOrderManagementSection].entry[covid19SpecimenCollection] only Reference(Covid19SpecimenCollection)
 * section[covid19LabOrderManagementSection].entry[covid19LabOrderCancellation] only Reference(Covid19LabOrderCancellation)
+* section[covid19LabOrderManagementSection].entry[covid19LabResults] only Reference(Covid19LabResults)
 
+* section[covid19ImmunizationSection].title = "Immunization"
+//* section[arvTreatmentSection].code = CSCaseReportSections#ARV-TREATMENT
+* section[covid19ImmunizationSection].entry ^slicing.discriminator.type = #profile
+* section[covid19ImmunizationSection].entry ^slicing.discriminator.path = "item.resolve()"
+* section[covid19ImmunizationSection].entry ^slicing.rules = #closed
+* section[covid19ImmunizationSection].entry contains
+    covid19Immunization 1..1 
+* section[covid19ImmunizationSection].entry[covid19Immunization] only Reference(Covid19Immunization)
 
 
 /* Profile: HIVDiagnosisEncounter
@@ -310,13 +319,12 @@ Description: "Covid19 Lab Order"
 * authoredOn  1..1 MS  //Order date    #TODO - How to add a custom desc to fields?
 * extension contains Covid19TestRequested named covid19TestRequested 1..1 MS   //could rather bind to field code?
 * status MS // Order labs: Yes =request status "active"   (yes, no)
+* performer MS // Facility ID /  Order location
+* encounter MS //
+* requester MS // 
+* authoredOn 1..1 MS // Order time
 
-Extension: Covid19CancellationReason
-Id: covid19-cancellation-reason
-Title: "Covid19 Cancellation Reason"
-Description: "Covid19 Cancellation Reason"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSCancellationReason
+
 
 Extension: Covid19SpecimenType
 Id: covid19-specimen-type
@@ -342,17 +350,30 @@ Description: "Covid19 Specimen forwarded to reference lab"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSYesNoUnknown
 
+Extension: ReferenceLab
+Id: covid-19reference-lab
+Title: "Covid19 Reference Lab"
+Description: "Covid19 Reference Lab sample sent to"  
+* valueReference only Reference(Organization) 
+
 Profile: Covid19SpecimenCollection
 Parent: DiagnosticReport
 Id: covid19-specimen-collection
 Title: "Covid19 Specimen Collection"
 Description: "Covid19 Specimen Collection"
 * subject 1..1 MS // Patient reference
-* encounter 1..1 MS // Covid Assessment reference
+* encounter 1..1 MS // Covid Assessment reference 
 * specimen 1..1 MS //
 * identifier 1..1 MS //Sample ID
-// #TODO  --> Reference lab sample sent to
+* extension contains ReferenceLab named referenceLab 0..1 MS //Reference lab sample sent to  // #TODO  --> Reference lab sample sent to
 * extension contains Covid19SpecimenForwarded named covid19SpecimenForwarded 1..1 MS //Specimen forwarded to reference lab
+
+Extension: Covid19CancellationReason
+Id: covid19-cancellation-reason
+Title: "Covid19 Cancellation Reason"
+Description: "Covid19 Cancellation Reason"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSCancellationReason
 
 Profile: Covid19LabOrderCancellation
 Parent: Task
@@ -366,3 +387,57 @@ Description: "Covid19 Lab Order Cancellation Task"
 * encounter 1..1 MS // Healthcare event during which this task originated -- >Covid19AssessmentEncounter
 * authoredOn 1..1 MS //Cancellation date
 * extension contains Covid19CancellationReason named covid19CancellationReason 1..1 MS // #TODO bind statusReason  to VSCancellationReason
+
+Extension: Covid19testCompleted
+Id: covid19-test-completed
+Title: "Covid19 Test Completed"
+Description: "Covid19 Test Completed"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSYesNoUnknown
+
+Extension: Covid19ReasonTestNotPerformed
+Id: covid19-reason-test-not-performed
+Title: "Covid19 Reason Test not performed"
+Description: "Covid19 Reason test not performed"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSReasonTestNotPerformed
+
+Profile: Covid19LabResults
+Parent: DiagnosticReport
+Id: covid19-lab-results
+Title: "Covid19 Lab Results"
+Description: "Covid19 Lab Results"
+* subject 1..1 MS // Patient reference
+* encounter 1..1 MS // Covid Assessment reference
+* identifier 1..1 MS //Sample ID
+* effectiveDateTime MS //Test result date
+* conclusionCode MS //Test Result --> Positive/Nagative/inconclusive  -->#TODO - Bind valueset to a afield of type valuecodeableconcept
+* extension contains Covid19testCompleted named testCompleted 1..1 MS  //Lab Test Performed
+* status MS  //Status of lab order -  #TODO - Bind Valueset to "Pending, complete, canceled, not done"
+* extension contains Covid19ReasonTestNotPerformed named reasonTestNotPerformed 0..1 MS //Reason test not performed
+
+Extension: Covid19NextVaccinationDate
+Id: covid19-next-vaccination-date
+Title: "Covid19 Date of next vaccination"
+Description: "Covid19 Date of next vaccination (if scheduled)"
+* valueDateTime MS 
+
+Extension: Covid19OtherVaccine
+Id: covid19-other-vaccine
+Title: "Covid19 Other vaccine"
+Description: "Covid19 Other vaccine"
+* valueString MS 
+
+Profile: Covid19Immunization
+Parent: Immunization
+Id: covid19-immunization
+Title: "Covid19 Immunization"
+Description: "Covid19 Immunization"
+* patient MS // Patient reference
+* occurrenceDateTime MS //Vaccination date
+* protocolApplied.doseNumberString MS   //#TODO - Bind field to VS --> First, second, booster  
+* expirationDate MS    //Vaccine expiration date
+* extension contains Covid19NextVaccinationDate named covid19NextVaccinationDate 0..1 MS //Date of next vaccination (if scheduled)
+* vaccineCode MS    //Vaccine administered     #TODO - Bind to covid19 vaccince code list
+* extension contains Covid19OtherVaccine named covid19OtherVaccine 0..1 MS  //Other vaccine
+* lotNumber MS  //Vaccine lot number

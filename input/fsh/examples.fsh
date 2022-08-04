@@ -111,17 +111,6 @@ Description: "Covid19 Lab Order example"
 * extension[covid19TestRequested].valueCodeableConcept = #Rapid
 * status = #active
 
-Instance: Covid19OrderCancellationExample
-InstanceOf: Covid19LabOrderCancellation
-Title: "Covid19 Lab Order Cancellation  example"
-Description: "Covid19 Lab Order Cancellation Task example"
-* focus = Reference(Covid19LabOrderExample)
-* for   = Reference(Covid19PatientExample)
-* encounter  = Reference(Covid19AssessmentEncounterExample) 
-* status = #requested
-* authoredOn = "2022-07-28"
-* extension[covid19CancellationReason].valueCodeableConcept = #Duplicate
-
 Instance: Covid19SpecimenExample
 InstanceOf: Covid19Specimen
 Title: "Covid19 Specimen example"
@@ -129,6 +118,12 @@ Description: "Covid19 Specimen example"
 * collection.collectedDateTime = "2022-07-28"
 * extension[covid19SpecimenType].valueCodeableConcept = #Serum  
 * extension[otherSpecimenType].valueString   = "none"
+
+Instance: Covid19Laboratory
+InstanceOf: Organization
+Title: "Covid19 Laboratory"
+Description: "Covid19 Laboratory testing the specimen"
+* identifier.id = "Lab001"
 
 Instance: Covid19SpecimenCollectionExample
 InstanceOf: Covid19SpecimenCollection
@@ -141,3 +136,43 @@ Description: "Covid19 Specimen Collection"
 * specimen = Reference(Covid19SpecimenExample)
 * identifier.id = "12341324"
 * extension[covid19SpecimenForwarded].valueCodeableConcept = #Yes
+* extension[referenceLab].valueReference = Reference(Covid19Laboratory) 
+
+Instance: Covid19OrderCancellationExample
+InstanceOf: Covid19LabOrderCancellation
+Title: "Covid19 Lab Order Cancellation  example"
+Description: "Covid19 Lab Order Cancellation Task example"
+* focus = Reference(Covid19LabOrderExample)
+* for   = Reference(Covid19PatientExample)
+* encounter  = Reference(Covid19AssessmentEncounterExample) 
+* status = #requested
+* authoredOn = "2022-07-28"
+* extension[covid19CancellationReason].valueCodeableConcept = #Duplicate
+
+Instance: Covid19LabResultsExample
+InstanceOf: Covid19LabResults
+Title: "Covid19 Lab Results example"
+Description: "Covid19 Lab Results example"
+* code = $LNC#100156-9    /// #TODO --> Identify correct LOINC code
+* encounter = Reference(Covid19AssessmentEncounterExample) 
+* subject = Reference(Covid19PatientExample) 
+* identifier.id = "12341324"
+* effectiveDateTime = "2022-07-28"
+* conclusionCode.coding.code =  #Positive
+* extension[testCompleted].valueCodeableConcept = #Yes
+* status = #final //#TODO - change to specific VS in spreadsheet
+* extension[reasonTestNotPerformed].valueCodeableConcept = #Other
+
+Instance: Covid19ImmunizationExample
+InstanceOf: Covid19Immunization
+Title: "Covid19 Immunization example"
+Description: "Covid19 Immunization"
+* status = #final
+* patient = Reference(Covid19PatientExample)
+* occurrenceDateTime = "2022-07-28"
+* protocolApplied.doseNumberString = "first" 
+* expirationDate = "2022-12-28"
+* extension[covid19NextVaccinationDate].valueDate = "2022-12-28"
+* vaccineCode =   $LNC#1234   //#TODO
+* extension[covid19OtherVaccine].valueString = "n/a"
+* lotNumber = "1"
