@@ -3,6 +3,15 @@ Alias: $LNC = http://loinc.org
 Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6   //yes no unkw
 //Alias: $LNC-75618-9 = https://loinc.org/75618-9/
 
+CodeSystem: CSCaseReportSections
+Id: cs-case-report-sections
+Title: "Covid19 Case Report Sections codesystem"
+Description: ""
+* #CLIENT-REGISTRATION
+* #ASSESSMENT
+* #LABORDER
+* #IMMUNIZATION
+
 CodeSystem: CSAssessmentReason
 Id: cs-assessment-reason
 Title: "Assessment Reason codes"

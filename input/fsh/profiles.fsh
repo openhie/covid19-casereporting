@@ -18,7 +18,7 @@ Title: "Covid19 Case Reporting Composition"
     covid19LabOrderManagementSection 0..1 and
     covid19ImmunizationSection 0..1
 * section[covid19PatientSection].title = "Client registration"
-//* section[covid19PatientSection].code = CSCaseReportSections#CLIENT-REGISTRATION
+* section[covid19PatientSection].code = CSCaseReportSections#CLIENT-REGISTRATION
 * section[covid19PatientSection].entry ^slicing.discriminator.type = #profile
 * section[covid19PatientSection].entry ^slicing.discriminator.path = "item.resolve()"
 * section[covid19PatientSection].entry ^slicing.rules = #closed
@@ -29,7 +29,7 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19PatientSection].entry[covid19RelatedPerson] only Reference(Covid19RelatedPerson)
 
 * section[covid19AssessmentSection].title = "Covid19 Assessment Encounter"
-//* section[covid19AssessmentSection].code = CSCaseReportSections#COVID19-Encounter
+* section[covid19AssessmentSection].code = CSCaseReportSections#ASSESSMENT
 //* section[covid19AssessmentSection].entry only Reference(Covid19AssessmentEncounter)
 * section[covid19AssessmentSection].entry ^slicing.discriminator.type = #profile
 * section[covid19AssessmentSection].entry ^slicing.discriminator.path = "item.resolve()"
@@ -46,8 +46,8 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry[covid19VaccineTypeAdministered] only Reference(Covid19VaccineTypeAdministered)
 * section[covid19AssessmentSection].entry[covid19PatientOutcome] only Reference(Covid19PatientOutcome)
 
-* section[covid19LabOrderManagementSection].title = "Lab Order"
-//* section[arvTreatmentSection].code = CSCaseReportSections#ARV-TREATMENT
+* section[covid19LabOrderManagementSection].title = "Lab Order Management"
+* section[covid19LabOrderManagementSection].code = CSCaseReportSections#LABORDER
 * section[covid19LabOrderManagementSection].entry ^slicing.discriminator.type = #profile
 * section[covid19LabOrderManagementSection].entry ^slicing.discriminator.path = "item.resolve()"
 * section[covid19LabOrderManagementSection].entry ^slicing.rules = #closed
@@ -63,8 +63,8 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19LabOrderManagementSection].entry[covid19LabOrderCancellation] only Reference(Covid19LabOrderCancellation)
 * section[covid19LabOrderManagementSection].entry[covid19LabResults] only Reference(Covid19LabResults)
 
-* section[covid19ImmunizationSection].title = "Immunization"
-//* section[arvTreatmentSection].code = CSCaseReportSections#ARV-TREATMENT
+* section[covid19ImmunizationSection].title = "Covid 19 Immunization"
+* section[covid19ImmunizationSection].code = CSCaseReportSections#IMMUNIZATION
 * section[covid19ImmunizationSection].entry ^slicing.discriminator.type = #profile
 * section[covid19ImmunizationSection].entry ^slicing.discriminator.path = "item.resolve()"
 * section[covid19ImmunizationSection].entry ^slicing.rules = #closed
@@ -81,18 +81,19 @@ Description: "HIV Encounter for a case report"
 * serviceProvider 1..1
 * subject 1..1
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#PRENC
+*/
 
-Profile: HIVOrganization
+Profile: Covid19Organization
 Parent: Organization
-Id: hiv-organization
-Title: "HIV Organization"
-Description: "HIV Organization for case report - this represents a health facility"
+Id: covid19-organization
+Title: "Covid19 Organization"
+Description: "Covid19 Organization for case report - this represents a health facility"
 * address 1..1
 * address.country 1..1
 * address.state 1..1
 * address.district 1..1
 * address.city 1..1
-* identifier 1..* */
+* identifier 1..* 
 
 Extension: ClientMiddleName
 Id: client-middle-name
@@ -318,12 +319,10 @@ Description: "Covid19 Lab Order"
 * extension contains OtherReasonforAssessment named otherReasonforTesting 0..1 MS
 * authoredOn  1..1 MS  //Order date    #TODO - How to add a custom desc to fields?
 * extension contains Covid19TestRequested named covid19TestRequested 1..1 MS   //could rather bind to field code?
-* status MS // Order labs: Yes =request status "active"   (yes, no)
-* performer MS // Facility ID /  Order location
 * encounter MS //
-* requester MS // 
+* requester MS // Provider name
 * authoredOn 1..1 MS // Order time
-
+* code 1..1 MS // Test request Code
 
 
 Extension: Covid19SpecimenType
@@ -415,6 +414,8 @@ Description: "Covid19 Lab Results"
 * extension contains Covid19testCompleted named testCompleted 1..1 MS  //Lab Test Performed
 * status MS  //Status of lab order -  #TODO - Bind Valueset to "Pending, complete, canceled, not done"
 * extension contains Covid19ReasonTestNotPerformed named reasonTestNotPerformed 0..1 MS //Reason test not performed
+* code.coding.system MS  //Result Coding system
+* code.coding.code MS  //Result Code
 
 Extension: Covid19NextVaccinationDate
 Id: covid19-next-vaccination-date
