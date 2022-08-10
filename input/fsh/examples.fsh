@@ -88,7 +88,6 @@ Description: "Covid19 Organization example"
 * identifier[=].value = "facility1"
 
 
-
 Instance: Covid19PatientExample
 InstanceOf: Covid19Patient
 Usage: #example
@@ -116,9 +115,7 @@ Description: "Covid19 Patient example"
 * identifier[national].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
 * identifier[pos].value = "EMR1234567"
 * identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility1"
-//* managingOrganization = Reference(HIVOrganizationExample)
-//* extension[genderIdentity].valueCodeableConcept = #male
-//* extension[keyPopulation].valueCodeableConcept = #transgender
+* managingOrganization = Reference(Covid19OrganizationExample)
 
 Instance: Covid19RelatedPersonExample
 InstanceOf: Covid19RelatedPerson
