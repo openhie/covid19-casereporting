@@ -159,7 +159,7 @@ Description: "Covid19 Conditions or comorbidity example"
 * subject = Reference(Covid19PatientExample) 
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * extension[covid19ComorbidityPresent].valueCodeableConcept = #Yes  
-* extension[conditionsComorbidity].valueCodeableConcept = #ChronicLungDisease
+* code = #ChronicLungDisease
 * extension[otherConditionsComorbidity].valueString = "none"
 
 Instance: Covid19VaccineTypeAdministeredExample
@@ -169,7 +169,6 @@ Description: "Covid19 Vaccine Type Administered example"
 * patient = Reference(Covid19PatientExample) 
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * extension[covid19VaccineDoseReceived].valueCodeableConcept = #No
-* extension[covid19VaccinceType].valueCodeableConcept = #PfizerBionTech  //#TODO - duplciate field to vaccinecode - bind vaccinecode valueset to VSVaccineTypes
 * status = #not-done
 * vaccineCode.coding.code = #PfizerBionTech 
 * occurrenceDateTime = "2022-07-28"
@@ -197,7 +196,7 @@ Description: "Covid19 Lab Order example"
 * extension[otherReasonforTesting].valueString = "none"
 * authoredOn  = "2022-07-28"
 * extension[covid19TestRequested].valueCodeableConcept = #Rapid
-* status = #active
+* status = #Pending
 * code = $LNC#75618-9   // #todo re-check the LOINC codes
 
 Instance: Covid19SpecimenExample
@@ -205,7 +204,7 @@ InstanceOf: Covid19Specimen
 Title: "Covid19 Specimen example"
 Description: "Covid19 Specimen example"
 * collection.collectedDateTime = "2022-07-28"
-* extension[covid19SpecimenType].valueCodeableConcept = #Serum  
+* type = #Serum  
 * extension[otherSpecimenType].valueString   = "none"
 
 Instance: Covid19Laboratory
@@ -236,7 +235,7 @@ Description: "Covid19 Lab Order Cancellation Task example"
 * encounter  = Reference(Covid19AssessmentEncounterExample) 
 * status = #requested
 * authoredOn = "2022-07-28"
-* extension[covid19CancellationReason].valueCodeableConcept = #Duplicate
+* reasonCode = #Duplicate
 
 Instance: Covid19LabResultsExample
 InstanceOf: Covid19LabResults
@@ -254,6 +253,7 @@ Description: "Covid19 Lab Results example"
 * status = #final //#TODO - change to specific VS in spreadsheet
 * extension[reasonTestNotPerformed].valueCodeableConcept = #Other
 
+
 Instance: Covid19ImmunizationExample
 InstanceOf: Covid19Immunization
 Title: "Covid19 Immunization example"
@@ -261,9 +261,9 @@ Description: "Covid19 Immunization"
 * status = #final
 * patient = Reference(Covid19PatientExample)
 * occurrenceDateTime = "2022-07-28"
-* protocolApplied.doseNumberString = "first" 
+* protocolApplied.doseNumber[x].extension[covid19DoseNumberCode].valueCodeableConcept = #First
 * expirationDate = "2022-12-28"
 * extension[covid19NextVaccinationDate].valueDate = "2022-12-28"
-* vaccineCode =   $LNC#1234   //#TODO
+* vaccineCode =   #Astrazeneca
 * extension[covid19OtherVaccine].valueString = "n/a"
 * lotNumber = "1"

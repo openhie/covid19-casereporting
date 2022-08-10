@@ -250,9 +250,10 @@ Parent: Condition
 Id: covid19-conditions-comorbidity
 Title: "Covid19 Conditions or comorbidity"
 Description: "Covid19 Conditions or comorbidity"
-* code 0..0 // #TODO - check how to bind code field to the conditionsComorbidity value set
+* code MS
+* code from VSConditionsComorbidity 
 * extension contains Covid19ComorbidityPresent named covid19ComorbidityPresent 0..1 MS  
-* extension contains ConditionsComorbidityExt named conditionsComorbidity 0..1 MS  
+//* extension contains ConditionsComorbidityExt named conditionsComorbidity 0..1 MS  
 * extension contains OtherConditionsComorbidity named otherConditionsComorbidity 0..1 MS  
 
 Extension: Covid19VaccineDoseReceived
@@ -275,7 +276,9 @@ Id: covid19-vaccine-type-administered
 Title: "Covid19 Vaccine Type Administered"
 Description: "Covid19 Vaccine Type Administered"
 * extension contains Covid19VaccineDoseReceived named covid19VaccineDoseReceived 0..1 MS
-* extension contains Covid19VaccinceType named covid19VaccinceType 0..1 MS // #TODO investigate how to rather bind vaccineCode to  VSVaccineTypes
+* vaccineCode MS
+* vaccineCode from VSVaccineTypes
+
 
 Extension: Covid19DateRecovered  
 Id: covid19-date-recovered
@@ -312,12 +315,12 @@ Parent: ServiceRequest
 Id: covid19-lab-order
 Title: "Covid19 Lab Order"
 Description: "Covid19 Lab Order"
-//* reasonCode.coding.code only Reference(CSAssessmentReason)   #TODO - How to bind reasonCode to Reason Value set?
 * subject 1..1 MS // Patient reference
 * intent = #order 
-* reasonCode  1..1 MS //Reason for testing
+* reasonCode  0..1 MS //Reason for testing
+* reasonCode from VSAssessmentReason 
 * extension contains OtherReasonforAssessment named otherReasonforTesting 0..1 MS
-* authoredOn  1..1 MS  //Order date    #TODO - How to add a custom desc to fields?
+* authoredOn  1..1 MS  
 * extension contains Covid19TestRequested named covid19TestRequested 1..1 MS   //could rather bind to field code?
 * encounter MS //
 * requester MS // Provider name
@@ -337,9 +340,9 @@ Parent: Specimen
 Id: covid19-specimen
 Title: "Covid19 Specimen"
 Description: "Covid19 Specimen"
-* type 0..0 ////* type    #TODO  - Bind type to CSCovid19SpecimenType - avoid extra extension Covid19SpecimenType?
+* type 1..1 MS 
+* type from VSCovid19SpecimenType
 * collection.collectedDateTime 1..1 MS  // Date specimen collected
-* extension contains Covid19SpecimenType named covid19SpecimenType 1..1 MS  
 * extension contains OtherReasonforAssessment named otherSpecimenType 0..1 MS
 
 Extension: Covid19SpecimenForwarded
@@ -364,7 +367,7 @@ Description: "Covid19 Specimen Collection"
 * encounter 1..1 MS // Covid Assessment reference 
 * specimen 1..1 MS //
 * identifier 1..1 MS //Sample ID
-* extension contains ReferenceLab named referenceLab 0..1 MS //Reference lab sample sent to  // #TODO  --> Reference lab sample sent to
+* extension contains ReferenceLab named referenceLab 0..1 MS //##TODO - use of performer?
 * extension contains Covid19SpecimenForwarded named covid19SpecimenForwarded 1..1 MS //Specimen forwarded to reference lab
 
 Extension: Covid19CancellationReason
@@ -379,13 +382,13 @@ Parent: Task
 Id: covid19-lab-order-cancellation
 Title: "Covid19 Lab Order Cancellation"
 Description: "Covid19 Lab Order Cancellation Task"
-//* reasonCode.coding.code only Reference(CSAssessmentReason)   #TODO - How to bind reasonCode to Reason Value set?
 * intent = #order
 * focus 1..1 MS // Refer to Lab Order  --> What task is acting on
 * for 1..1 MS // Beneficiary of the Task --> Patient
 * encounter 1..1 MS // Healthcare event during which this task originated -- >Covid19AssessmentEncounter
 * authoredOn 1..1 MS //Cancellation date
-* extension contains Covid19CancellationReason named covid19CancellationReason 1..1 MS // #TODO bind statusReason  to VSCancellationReason
+* reasonCode 1..1 MS
+* reasonCode from VSCancellationReason
 
 Extension: Covid19testCompleted
 Id: covid19-test-completed
@@ -410,9 +413,11 @@ Description: "Covid19 Lab Results"
 * encounter 1..1 MS // Covid Assessment reference
 * identifier 1..1 MS //Sample ID
 * effectiveDateTime MS //Test result date
-* conclusionCode MS //Test Result --> Positive/Nagative/inconclusive  -->#TODO - Bind valueset to a afield of type valuecodeableconcept
+* conclusionCode MS //Test Result
+* conclusionCode from VSTestResult
 * extension contains Covid19testCompleted named testCompleted 1..1 MS  //Lab Test Performed
-* status MS  //Status of lab order -  #TODO - Bind Valueset to "Pending, complete, canceled, not done"
+* status MS  //Status of lab order
+* status from VSLabOrderStatus
 * extension contains Covid19ReasonTestNotPerformed named reasonTestNotPerformed 0..1 MS //Reason test not performed
 * code.coding.system MS  //Result Coding system
 * code.coding.code MS  //Result Code
@@ -429,6 +434,13 @@ Title: "Covid19 Other vaccine"
 Description: "Covid19 Other vaccine"
 * valueString MS 
 
+Extension: DoseNumberCode
+Id: covid19-dose-number-code
+Title: "Covid19 Dose Number "
+Description: "Covid19 Dose Number"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSDoseNumber
+
 Profile: Covid19Immunization
 Parent: Immunization
 Id: covid19-immunization
@@ -436,9 +448,10 @@ Title: "Covid19 Immunization"
 Description: "Covid19 Immunization"
 * patient MS // Patient reference
 * occurrenceDateTime MS //Vaccination date
-* protocolApplied.doseNumberString MS   //#TODO - Bind field to VS --> First, second, booster  
+* protocolApplied.doseNumber[x].extension contains DoseNumberCode named covid19DoseNumberCode 1..1 MS 
 * expirationDate MS    //Vaccine expiration date
 * extension contains Covid19NextVaccinationDate named covid19NextVaccinationDate 0..1 MS //Date of next vaccination (if scheduled)
-* vaccineCode MS    //Vaccine administered     #TODO - Bind to covid19 vaccince code list
+* vaccineCode MS    //Vaccine administered  
+* vaccineCode from VSCovid19VaccineCodes
 * extension contains Covid19OtherVaccine named covid19OtherVaccine 0..1 MS  //Other vaccine
 * lotNumber MS  //Vaccine lot number
