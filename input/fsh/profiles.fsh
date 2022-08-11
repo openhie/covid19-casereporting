@@ -140,11 +140,6 @@ Description: "This Patient profile allows the exchange of patient information, i
 * telecom MS  // Client telephone number and Client Email Addresss
 //* covid19RelatedPerson only Covid19RelatedPerson 0..1 MS //Next of kin
 
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.description = "Slice based on the type of identifier"
-
 //* address 1..*
 * address.country MS    //Client Country  /  Nationality / Citizenship
 * address.state MS      //Client County / Province  / State
@@ -154,6 +149,10 @@ Description: "This Patient profile allows the exchange of patient information, i
 * address.line MS   //Client Ward / Division
 * address.city MS      //Client Village / Estate */
 
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "Slice based on the type of identifier"
 
 * identifier contains
     // art 0..* and

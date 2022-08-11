@@ -198,7 +198,7 @@ CodeSystem: CSReasonTestNotPerformed
 Id: cs-covid19-reason-test-not-performed
 Title: "Covid19 Reason Test not performed"
 Description: "Covid19 Reason Test not performed"
-* #BllodSampleCoagulated "Blood sample coagulated" 
+* #BloodSampleCoagulated "Blood sample coagulated" 
 * #ContaminsatedSpecimen "Contaminated specimen" 
 * #EquipmentFailure "Equipment failure"
 * #InappropriateSampleContainer "Inappropriate sample container used"
