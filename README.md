@@ -13,7 +13,6 @@ Canonical / permanent URL:
 ### Issues
 Issues and change requests are managed here:  
 <br> </br>
-- Bind various existing field of type Codeable concept, to a custom Valueset  - avoid declaring new extension?  -> DONE
 - Add a custom description for an existing field 
 - Identify existing FHIR/LOINC value sets which could be re-used
 - Update Layout of the Index page

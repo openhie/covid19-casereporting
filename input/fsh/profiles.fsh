@@ -24,9 +24,9 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19PatientSection].entry ^slicing.rules = #closed
 * section[covid19PatientSection].entry contains
     covid19Patient 1..1 and
-    covid19RelatedPerson 0..*
+    covid19NextOfKin 0..*
 * section[covid19PatientSection].entry[covid19Patient] only Reference(Covid19Patient)
-* section[covid19PatientSection].entry[covid19RelatedPerson] only Reference(Covid19RelatedPerson)
+* section[covid19PatientSection].entry[covid19NextOfKin] only Reference(Covid19NextOfKin)
 
 * section[covid19AssessmentSection].title = "Covid19 Assessment Encounter"
 * section[covid19AssessmentSection].code = CSCaseReportSections#ASSESSMENT
@@ -72,17 +72,6 @@ Title: "Covid19 Case Reporting Composition"
     covid19Immunization 1..1 
 * section[covid19ImmunizationSection].entry[covid19Immunization] only Reference(Covid19Immunization)
 
-
-/* Profile: HIVDiagnosisEncounter
-Parent: Encounter
-Id: hiv-disgnosis-encounter
-Title: "HIV Diagnosis Encounter"
-Description: "HIV Encounter for a case report"
-* serviceProvider 1..1
-* subject 1..1
-* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#PRENC
-*/
-
 Profile: Covid19Organization
 Parent: Organization
 Id: covid19-organization
@@ -115,7 +104,7 @@ Description: "Client Ward Division"
 * valueString only string
 
 
-Profile: Covid19RelatedPerson
+Profile: Covid19NextOfKin
 Parent: RelatedPerson
 Id: covid19-RelatedPerson
 Title: "Related Person"
@@ -131,7 +120,7 @@ Title: "Covid19 Patient"
 Description: "This Patient profile allows the exchange of patient information, including all the data associated with Covid19 patients"
 * name.given 1..* MS   //Client first name (s)
 * extension contains
-    ClientMiddleName named clientMiddleName 0..1 MS 
+    ClientMiddleName named clientMiddleName 0..1 MS  //Client Middle Name
 * name.family 1..1 MS // Surname
 * gender 1..1 MS // Client Sex
 * birthDate 1..1 MS   // Client Date of Birth
@@ -251,8 +240,7 @@ Title: "Covid19 Conditions or comorbidity"
 Description: "Covid19 Conditions or comorbidity"
 * code MS
 * code from VSConditionsComorbidity 
-* extension contains Covid19ComorbidityPresent named covid19ComorbidityPresent 0..1 MS  
-//* extension contains ConditionsComorbidityExt named conditionsComorbidity 0..1 MS  
+* extension contains Covid19ComorbidityPresent named covid19ComorbidityPresent 0..1 MS   
 * extension contains OtherConditionsComorbidity named otherConditionsComorbidity 0..1 MS  
 
 Extension: Covid19VaccineDoseReceived
@@ -277,7 +265,6 @@ Description: "Covid19 Vaccine Type Administered"
 * extension contains Covid19VaccineDoseReceived named covid19VaccineDoseReceived 0..1 MS
 * vaccineCode MS
 * vaccineCode from VSVaccineTypes
-
 
 Extension: Covid19DateRecovered  
 Id: covid19-date-recovered
@@ -325,7 +312,6 @@ Description: "Covid19 Lab Order"
 * requester MS // Provider name
 * authoredOn 1..1 MS // Order time
 * code 1..1 MS // Test request Code
-
 
 Extension: Covid19SpecimenType
 Id: covid19-specimen-type
@@ -447,6 +433,7 @@ Title: "Covid19 Immunization"
 Description: "Covid19 Immunization"
 * patient MS // Patient reference
 * occurrenceDateTime MS //Vaccination date
+* protocolApplied 1..1 MS
 * protocolApplied.doseNumber[x].extension contains DoseNumberCode named covid19DoseNumberCode 1..1 MS 
 * expirationDate MS    //Vaccine expiration date
 * extension contains Covid19NextVaccinationDate named covid19NextVaccinationDate 0..1 MS //Date of next vaccination (if scheduled)

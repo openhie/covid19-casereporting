@@ -8,8 +8,8 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19CompositionExample
 * entry[+].fullUrl = "Composition/Covid19PatientExample"
 * entry[=].resource = Covid19PatientExample
-* entry[+].fullUrl = "Composition/Covid19RelatedPersonExample"
-* entry[=].resource = Covid19RelatedPersonExample
+* entry[+].fullUrl = "Composition/Covid19NextOfKinExample"
+* entry[=].resource = Covid19NextOfKinExample
 * entry[+].fullUrl = "Composition/Covid19AssessmentEncounterExample"
 * entry[=].resource = Covid19AssessmentEncounterExample
 * entry[+].fullUrl = "Composition/Covid19SymptomExample"
@@ -87,6 +87,13 @@ Description: "Covid19 Organization example"
 * identifier[+].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
 * identifier[=].value = "facility1"
 
+Instance: Covid19NextOfKinExample
+InstanceOf: Covid19NextOfKin
+Title: "Related Person example"
+Description: "Related Person example"
+* patient = Reference(Covid19PatientExample) 
+* name.given = "James"
+* telecom.system = #phone
 
 Instance: Covid19PatientExample
 InstanceOf: Covid19Patient
@@ -97,8 +104,6 @@ Description: "Covid19 Patient example"
 * name.use = #official
 * name.given = "Jane"
 * name.family = "Smith"
-//* maritalStatus.coding[0].code = #M
-//* maritalStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
 * gender = #female
 * birthDate = "1986-06-04"
 * extension[clientEstimatedAge].valueInteger = 45
@@ -116,14 +121,6 @@ Description: "Covid19 Patient example"
 * identifier[pos].value = "EMR1234567"
 * identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility1"
 * managingOrganization = Reference(Covid19OrganizationExample)
-
-Instance: Covid19RelatedPersonExample
-InstanceOf: Covid19RelatedPerson
-Title: "Related Person example"
-Description: "Related Person example"
-* patient = Reference(Covid19PatientExample) 
-* name.given = "James"
-* telecom.system = #Email
 
 Instance: Covid19AssessmentEncounterExample
 InstanceOf: Covid19AssessmentEncounter
@@ -253,7 +250,6 @@ Description: "Covid19 Lab Results example"
 * status = #final //#TODO - change to specific VS in spreadsheet
 * extension[reasonTestNotPerformed].valueCodeableConcept = #Other
 
-
 Instance: Covid19ImmunizationExample
 InstanceOf: Covid19Immunization
 Title: "Covid19 Immunization example"
@@ -267,3 +263,4 @@ Description: "Covid19 Immunization"
 * vaccineCode =   #Astrazeneca
 * extension[covid19OtherVaccine].valueString = "n/a"
 * lotNumber = "1"
+
