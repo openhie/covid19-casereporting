@@ -3,14 +3,15 @@ Alias: $LNC = http://loinc.org
 Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6   //yes no unkw
 //Alias: $LNC-75618-9 = https://loinc.org/75618-9/
 
+
 CodeSystem: CSCaseReportSections
 Id: cs-case-report-sections
 Title: "Covid19 Case Report Sections codesystem"
 Description: ""
 * #CLIENT-REGISTRATION
-* #ASSESSMENT
-* #LABORDER
-* #IMMUNIZATION
+* #COVID-ASSESSMENT
+* #LABORDER-MANAGEMENT
+* #COVID-VACCINATION
 
 CodeSystem: CSAssessmentReason
 Id: cs-assessment-reason
@@ -80,6 +81,20 @@ Id: vs-symptoms
 Title: "Presenting symptoms"
 Description:  "A list of symptoms"
 * include codes from system CSSymptoms
+
+CodeSystem: CSAdmissionTypes
+Id: cs-admission-types
+Title: "Admission Types"
+Description: "A list of Admission Types"
+* #Ward "Ward"
+* #HDU "HDU"
+* #ICU "ICU"
+
+ValueSet: VSAdmissionTypes
+Id: vs-AdmissionTypes
+Title: "Admission Types"
+Description: "A list of Admission Types"
+* include codes from system CSAdmissionTypes
 
 ValueSet: VSYesNoUnknown
 Id: vs-yes-no

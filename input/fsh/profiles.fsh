@@ -16,20 +16,18 @@ Title: "Covid19 Case Reporting Composition"
     covid19PatientSection 1..1 and
     covid19AssessmentSection 0..1 and
     covid19LabOrderManagementSection 0..1 and
-    covid19ImmunizationSection 0..1
+    covid19VaccinationSection 0..1
 * section[covid19PatientSection].title = "Client registration"
 * section[covid19PatientSection].code = CSCaseReportSections#CLIENT-REGISTRATION
 * section[covid19PatientSection].entry ^slicing.discriminator.type = #profile
 * section[covid19PatientSection].entry ^slicing.discriminator.path = "item.resolve()"
 * section[covid19PatientSection].entry ^slicing.rules = #closed
 * section[covid19PatientSection].entry contains
-    covid19Patient 1..1 and
-    covid19NextOfKin 0..*
+    covid19Patient 1..1 
 * section[covid19PatientSection].entry[covid19Patient] only Reference(Covid19Patient)
-* section[covid19PatientSection].entry[covid19NextOfKin] only Reference(Covid19NextOfKin)
 
 * section[covid19AssessmentSection].title = "Covid19 Assessment Encounter"
-* section[covid19AssessmentSection].code = CSCaseReportSections#ASSESSMENT
+* section[covid19AssessmentSection].code = CSCaseReportSections#COVID-ASSESSMENT
 //* section[covid19AssessmentSection].entry only Reference(Covid19AssessmentEncounter)
 * section[covid19AssessmentSection].entry ^slicing.discriminator.type = #profile
 * section[covid19AssessmentSection].entry ^slicing.discriminator.path = "item.resolve()"
@@ -38,16 +36,16 @@ Title: "Covid19 Case Reporting Composition"
     covid19AssessmentEncounter 1..1 and
     covid19Symptom 0..* and 
     covid19ConditionsComorbidity 0..* and
-    covid19VaccineTypeAdministered 0..* and
+    covid19AssessmentVaccination 0..* and
     covid19PatientOutcome 0..1
 * section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
 * section[covid19AssessmentSection].entry[covid19Symptom] only Reference(Covid19Symptom)
 * section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
-* section[covid19AssessmentSection].entry[covid19VaccineTypeAdministered] only Reference(Covid19VaccineTypeAdministered)
+* section[covid19AssessmentSection].entry[covid19AssessmentVaccination] only Reference(Covid19AssessmentVaccination)
 * section[covid19AssessmentSection].entry[covid19PatientOutcome] only Reference(Covid19PatientOutcome)
 
 * section[covid19LabOrderManagementSection].title = "Lab Order Management"
-* section[covid19LabOrderManagementSection].code = CSCaseReportSections#LABORDER
+* section[covid19LabOrderManagementSection].code = CSCaseReportSections#LABORDER-MANAGEMENT
 * section[covid19LabOrderManagementSection].entry ^slicing.discriminator.type = #profile
 * section[covid19LabOrderManagementSection].entry ^slicing.discriminator.path = "item.resolve()"
 * section[covid19LabOrderManagementSection].entry ^slicing.rules = #closed
@@ -63,14 +61,14 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19LabOrderManagementSection].entry[covid19LabOrderCancellation] only Reference(Covid19LabOrderCancellation)
 * section[covid19LabOrderManagementSection].entry[covid19LabResults] only Reference(Covid19LabResults)
 
-* section[covid19ImmunizationSection].title = "Covid 19 Immunization"
-* section[covid19ImmunizationSection].code = CSCaseReportSections#IMMUNIZATION
-* section[covid19ImmunizationSection].entry ^slicing.discriminator.type = #profile
-* section[covid19ImmunizationSection].entry ^slicing.discriminator.path = "item.resolve()"
-* section[covid19ImmunizationSection].entry ^slicing.rules = #closed
-* section[covid19ImmunizationSection].entry contains
-    covid19Immunization 1..1 
-* section[covid19ImmunizationSection].entry[covid19Immunization] only Reference(Covid19Immunization)
+* section[covid19VaccinationSection].title = "Covid 19 Vaccination"
+* section[covid19VaccinationSection].code = CSCaseReportSections#COVID-VACCINATION
+* section[covid19VaccinationSection].entry ^slicing.discriminator.type = #profile
+* section[covid19VaccinationSection].entry ^slicing.discriminator.path = "item.resolve()"
+* section[covid19VaccinationSection].entry ^slicing.rules = #closed
+* section[covid19VaccinationSection].entry contains
+    covid19Vaccination 1..1 
+* section[covid19VaccinationSection].entry[covid19Vaccination] only Reference(Covid19Vaccination)
 
 Profile: Covid19Organization
 Parent: Organization
@@ -95,7 +93,7 @@ Id: client-estimated-age
 Title: "Client Estimated Age"
 Description: "Client Estimated Age"
 * valueInteger only integer
-//* measurement from UnitsOfTime
+//* measurement from http://hl7.org/fhir/ValueSet/age-units
 
 Extension: ClientWardDivision
 Id: client-ward-division
@@ -104,37 +102,26 @@ Description: "Client Ward Division"
 * valueString only string
 
 
-Profile: Covid19NextOfKin
-Parent: RelatedPerson
-Id: covid19-RelatedPerson
-Title: "Related Person"
-Description: "Related Person"
-* name.given 1..* MS 
-* telecom MS
-
-
 Profile: Covid19Patient
 Parent: Patient
 Id: covid19-patient
 Title: "Covid19 Patient"
 Description: "This Patient profile allows the exchange of patient information, including all the data associated with Covid19 patients"
 * name.given 1..* MS   //Client first name (s)
-* extension contains
-    ClientMiddleName named clientMiddleName 0..1 MS  //Client Middle Name
+* extension contains ClientMiddleName named clientMiddleName 0..1 MS  //Client Middle Name
 * name.family 1..1 MS // Surname
 * gender 1..1 MS // Client Sex
 * birthDate 1..1 MS   // Client Date of Birth
-* extension contains
-    ClientEstimatedAge named clientEstimatedAge 0..1 MS  //Estimated Age
+* extension contains ClientEstimatedAge named clientEstimatedAge 0..1 MS  //Estimated Age  -- Use days if <1 month, months if <1 year, years if > 1year
 * telecom MS  // Client telephone number and Client Email Addresss
-//* covid19RelatedPerson only Covid19RelatedPerson 0..1 MS //Next of kin
-
+//Next of kin contact details
+* contact.name MS
+* contact.telecom MS
 //* address 1..*
 * address.country MS    //Client Country  /  Nationality / Citizenship
 * address.state MS      //Client County / Province  / State
 * address.district MS   //Client SubCounty / District 
-* extension contains
-    ClientWardDivision named clientWardDivision 1..1 MS  //
+* extension contains ClientWardDivision named clientWardDivision 1..1 MS  //
 * address.line MS   //Client Ward / Division
 * address.city MS      //Client Village / Estate */
 
@@ -179,6 +166,26 @@ Description: "Presentation"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSPresentation
 
+
+Extension: Covid19DateLastHospitalized  
+Id: covid19-date-last-hospitalized
+Title: "Covid19 Date last Hospitalized"
+Description: "Covid19 Date Last Hospitalized"
+* valueDateTime MS
+
+Extension: Covid19EverHospitalized
+Id: covid19-everhospitalized
+Title: "Covid19 Ever Hospitalised"
+Description: "Ever hospitalised due to COVID-19?"
+* valueCodeableConcept from VSYesNoUnknown 
+//* valueDateTime MS //Covid19DateLastHospitalized
+
+Extension: Covid19Admission
+Id: covid19-admission
+Title: "Covid19 Admission"
+Description: "Covid19 Admission"
+* valueCodeableConcept from VSAdmissionTypes   //Ward, HDU, ICU
+
 Profile: Covid19AssessmentEncounter
 Parent: Encounter
 Id: covid19-encounter
@@ -190,6 +197,19 @@ Description: "Covid19 Assessment Encounter"
 * extension contains OtherReasonforAssessment named otherReasonforAssessment 0..1 MS  // Other reasons for assessment
 * extension contains Presentation named presentation 0..1 MS  // Presentation
 * period.end MS  //Date died
+* hospitalization.extension contains Covid19EverHospitalized named covid19EverHospitalized 1..1 MS  // Ever hospitalised due to COVID-19
+* hospitalization.extension contains Covid19DateLastHospitalized named covid19DateLastHospitalized 0..1 MS //Date last hospitalised
+* hospitalization.extension contains Covid19Admission named covid19Admission 0..1 MS //   //Admission
+* extension contains Covid19VaccineDoseReceived named covid19VaccineDoseReceived 1..1 MS  //Ever received a dose of COVID-19 vaccine // #RULE: A Covid19AssessmentVaccination should be included if Yes
+/*#TODO Source of information
+
+Source of information VALUE-SET:
+Patient Recall
+Vaccine Card
+Mobile Phone Notification
+Vaccine administered from this facility
+Other (Specify)
+*/
 
 Extension: Covid19SymptomsDate
 Id: covid19-symptoms-date
@@ -250,21 +270,17 @@ Description: "Covid19 Vaccine Dose Received"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSYesNoUnknown
 
-Extension: Covid19VaccinceType
-Id: covid19-vaccine-code
-Title: "Covid19 Vaccine type"
-Description: "Covid19 Vaccine Type"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSVaccineTypes
-
-Profile: Covid19VaccineTypeAdministered
+Profile: Covid19AssessmentVaccination
 Parent: Immunization
-Id: covid19-vaccine-type-administered
-Title: "Covid19 Vaccine Type Administered"
-Description: "Covid19 Vaccine Type Administered"
-* extension contains Covid19VaccineDoseReceived named covid19VaccineDoseReceived 0..1 MS
+Id: covid19-assessment-vaccination
+Title: "Covid19 Vaccination info included as part of the Assessment"
+Description: "Covid19 Vaccination info included as part of the Assessment"
 * vaccineCode MS
-* vaccineCode from VSVaccineTypes
+* vaccineCode from VSVaccineTypes 
+* protocolApplied.doseNumberPositiveInt MS
+* protocolApplied.series MS  ///Primary, Booster   #TODO
+* extension contains Covid19OtherVaccine named covid19OtherVaccine 0..1 MS  //Other vaccine
+* occurrenceDateTime  MS // Vaccination date    #TODO - check all required fields
 
 Extension: Covid19DateRecovered  
 Id: covid19-date-recovered
@@ -426,15 +442,16 @@ Description: "Covid19 Dose Number"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSDoseNumber
 
-Profile: Covid19Immunization
+Profile: Covid19Vaccination
 Parent: Immunization
-Id: covid19-immunization
-Title: "Covid19 Immunization"
-Description: "Covid19 Immunization"
+Id: covid19-vaccination
+Title: "Covid19 Vaccination"
+Description: "Covid19 Vaccination"
 * patient MS // Patient reference
-* occurrenceDateTime MS //Vaccination date
+* occurrenceDateTime 1..1 MS //Vaccination date
 * protocolApplied 1..1 MS
-* protocolApplied.doseNumber[x].extension contains DoseNumberCode named covid19DoseNumberCode 1..1 MS 
+* protocolApplied.series MS // #TODO
+* protocolApplied.doseNumberPositiveInt 1..1  MS //extension contains DoseNumberCode named covid19DoseNumberCode 1..1 MS 
 * expirationDate MS    //Vaccine expiration date
 * extension contains Covid19NextVaccinationDate named covid19NextVaccinationDate 0..1 MS //Date of next vaccination (if scheduled)
 * vaccineCode MS    //Vaccine administered  

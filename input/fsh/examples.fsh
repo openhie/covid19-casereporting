@@ -8,16 +8,14 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19CompositionExample
 * entry[+].fullUrl = "Composition/Covid19PatientExample"
 * entry[=].resource = Covid19PatientExample
-* entry[+].fullUrl = "Composition/Covid19NextOfKinExample"
-* entry[=].resource = Covid19NextOfKinExample
 * entry[+].fullUrl = "Composition/Covid19AssessmentEncounterExample"
 * entry[=].resource = Covid19AssessmentEncounterExample
 * entry[+].fullUrl = "Composition/Covid19SymptomExample"
 * entry[=].resource = Covid19SymptomExample
 * entry[+].fullUrl = "Composition/Covid19ConditionsComorbidityExample"
 * entry[=].resource = Covid19ConditionsComorbidityExample
-* entry[+].fullUrl = "Composition/Covid19VaccineTypeAdministeredExample"
-* entry[=].resource = Covid19VaccineTypeAdministeredExample
+* entry[+].fullUrl = "Composition/Covid19AssessmentVaccinationExample"
+* entry[=].resource = Covid19AssessmentVaccinationExample
 * entry[+].fullUrl = "Composition/Covid19PatientOutcomeExample"
 * entry[=].resource = Covid19PatientOutcomeExample
 * entry[+].fullUrl = "Composition/Covid19LabOrderExample"
@@ -30,8 +28,8 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19LabOrderCancellationExample
 * entry[+].fullUrl = "Composition/Covid19LabResultsExample"
 * entry[=].resource = Covid19LabResultsExample
-* entry[+].fullUrl = "Composition/Covid19ImmunizationExample"
-* entry[=].resource = Covid19ImmunizationExample
+* entry[+].fullUrl = "Composition/Covid19VaccinationExample"
+* entry[=].resource = Covid19VaccinationExample
 
 
 Instance: Covid19CompositionExample
@@ -49,7 +47,6 @@ Description: "Basic Composition example"
 * section[+].title = "Client registration"
 * section[=].code = CSCaseReportSections#CLIENT-REGISTRATION
 * section[=].entry[+] = Reference(Covid19PatientExample)
-* section[=].entry[+] = Reference(Covid19RelatedPersonExample)  //next of Kin
 
 * section[+].title = "Covid19 Assessment Encounter"
 * section[=].code = CSCaseReportSections#ASSESSMENT
@@ -66,9 +63,9 @@ Description: "Basic Composition example"
 * section[=].entry[+] = Reference(Covid19LabOrderCancellationExample ) 
 * section[=].entry[+] = Reference(Covid19LabResultsExamples) 
 
-* section[+].title = "Covid 19 Immunization"
-* section[=].code = CSCaseReportSections#IMMUNIZATION
-* section[=].entry[+] = Reference(IMMUNIZATION)
+* section[+].title = "Covid 19 Vaccination"
+* section[=].code = CSCaseReportSections#COVID-VACCINATION
+* section[=].entry[+] = Reference(Covid19VaccinationExample)
 
 Instance: Covid19OrganizationExample
 InstanceOf: Covid19Organization
@@ -86,14 +83,6 @@ Description: "Covid19 Organization example"
 * name = "Covid19 Organization"
 * identifier[+].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
 * identifier[=].value = "facility1"
-
-Instance: Covid19NextOfKinExample
-InstanceOf: Covid19NextOfKin
-Title: "Related Person example"
-Description: "Related Person example"
-* patient = Reference(Covid19PatientExample) 
-* name.given = "James"
-* telecom.system = #phone
 
 Instance: Covid19PatientExample
 InstanceOf: Covid19Patient
@@ -121,6 +110,9 @@ Description: "Covid19 Patient example"
 * identifier[pos].value = "EMR1234567"
 * identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility1"
 * managingOrganization = Reference(Covid19OrganizationExample)
+* contact[0].relationship = #N   //https://hl7.org/fhir/valueset-patient-contactrelationship.html
+* contact[0].name.family = "John"
+* contact[0].telecom.system = #phone
 
 Instance: Covid19AssessmentEncounterExample
 InstanceOf: Covid19AssessmentEncounter
@@ -131,10 +123,14 @@ Description: "Covid19 Assessment Encounter  example"
 * status = #finished
 * period.start =  "2022-07-28"  //Date of assessment
 * subject = Reference(Covid19PatientExample) //Patient reference
-* extension[assessmentReason].valueCodeableConcept = #Other
+* extension[assessmentReason].valueCodeableConcept = #Other    
 * extension[otherReasonforAssessment].valueString = "Reasons not provided"
 * extension[presentation].valueCodeableConcept = #Symptomatic // Presentation
 * period.end  =  "2022-08-15"  //Date of death
+* hospitalization.extension[covid19EverHospitalized].valueCodeableConcept = #Yes
+* hospitalization.extension[covid19DateLastHospitalized].valueDate = "2020-04-10" 
+* hospitalization.extension[Covid19Admission].valueCodeableConcept = #Ward
+* extension[covid19VaccineDoseReceived].valueCodeableConcept = #Yes
 
 Instance: Covid19SymptomExample
 InstanceOf: Covid19Symptom
@@ -159,16 +155,16 @@ Description: "Covid19 Conditions or comorbidity example"
 * code = #ChronicLungDisease
 * extension[otherConditionsComorbidity].valueString = "none"
 
-Instance: Covid19VaccineTypeAdministeredExample
-InstanceOf: Covid19VaccineTypeAdministered
+Instance: Covid19AssessmentVaccinationExample
+InstanceOf: Covid19AssessmentVaccination
 Title: "Covid19 Vaccine Type Administered example"
 Description: "Covid19 Vaccine Type Administered example"
 * patient = Reference(Covid19PatientExample) 
 * encounter = Reference(Covid19AssessmentEncounterExample) 
-* extension[covid19VaccineDoseReceived].valueCodeableConcept = #No
 * status = #not-done
 * vaccineCode.coding.code = #PfizerBionTech 
 * occurrenceDateTime = "2022-07-28"
+* protocolApplied.doseNumberPositiveInt = 1
 
 Instance: Covid19PatientOutcomeExample
 InstanceOf: Covid19PatientOutcome
@@ -250,14 +246,14 @@ Description: "Covid19 Lab Results example"
 * status = #final //#TODO - change to specific VS in spreadsheet
 * extension[reasonTestNotPerformed].valueCodeableConcept = #Other
 
-Instance: Covid19ImmunizationExample
-InstanceOf: Covid19Immunization
-Title: "Covid19 Immunization example"
-Description: "Covid19 Immunization"
+Instance: Covid19VaccinationExample
+InstanceOf: Covid19Vaccination
+Title: "Covid19 Vaccination example"
+Description: "Covid19 Vaccination example"
 * status = #final
 * patient = Reference(Covid19PatientExample)
 * occurrenceDateTime = "2022-07-28"
-* protocolApplied.doseNumber[x].extension[covid19DoseNumberCode].valueCodeableConcept = #First
+* protocolApplied.doseNumberPositiveInt = 1    //#TODO : min=1, max = 9
 * expirationDate = "2022-12-28"
 * extension[covid19NextVaccinationDate].valueDate = "2022-12-28"
 * vaccineCode =   #Astrazeneca
