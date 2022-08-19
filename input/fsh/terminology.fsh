@@ -34,7 +34,7 @@ Description: "A list of assessment reasons"
 ValueSet: VSAssessmentReason
 Id: vs-assessment-reason
 Title: "Assessment Reason valueset"
-Description:  "Valueset - assessment reaason"
+Description:  "Valueset - assessment reason"
 * include codes from system CSAssessmentReason
 
 CodeSystem: CSPresentation
@@ -104,8 +104,8 @@ Description:  "Yes No Unknown"
 
 CodeSystem: CSConditionsComorbidity
 Id: cs-conditions-comorbidity
-Title: "Conditions or comorbidity"
-Description: "Conditions or comorbidity"
+Title: "Conditions or comorbidity list"
+Description: "Conditions or comorbidity list"
 * #CardiovascularDisease  "Cardiovascular disease e.g heart failure"
 * #ChronicLungDisease "Chronic Lung Disease"
 * #ChronicNeurological "Chronic neurological or neuromuscular disease"
@@ -121,11 +121,27 @@ Description: "Conditions or comorbidity"
 * #TB "TB" 
 * #Other "Other (specify)"
 
+CodeSystem: CSCovidDiagnosis
+Id: cs-covid-diagnosis
+Title: "COVID Diagnosis list"
+Description: "COVID Diagnosis list"
+* #Confirmed
+* #Probable
+* #Suspected
+
+ValueSet: VSCovidDiagnosis
+Id: vs-covid-diagnosis
+Title: "COVID Diagnosis list"
+Description: "COVID Diagnosis list"
+* include codes from system CSCovidDiagnosis
+
+
 ValueSet: VSConditionsComorbidity
 Id: vs-conditions-comorbidity
 Title: "List of Conditions / Comorbidity"
 Description:  "List of Conditions / Comorbidity"
 * include codes from system CSConditionsComorbidity
+
 
 CodeSystem: CSVaccineTypes
 Id: cs-vaccine-types
@@ -284,7 +300,7 @@ Description: "Covid19 Test Result"
 
 CodeSystem: CSLabOrderStatus
 Id: cs-covid19-lab-order-status
-Title: "Covid19 Lab Order Status"
+Title: "Covid19 Lab Order Status list"
 Description: "Covid19 Test Result"
 * #Pending "Pending" 
 * #Complete "Complete" 
@@ -296,3 +312,19 @@ Id: vs-covid19-lab-order-status
 Title: "Covid19 Lab Order Status"
 Description: "Covid19 Test Result"
 * include codes from system  CSLabOrderStatus
+
+CodeSystem: CSSourceOfInfo
+Id: cs-source-of-info
+Title: "Source of information - codes"
+Description: "Source of information - codes"
+* #PatietnRecall "Patient Recall"
+* #VaccineCard "Vaccine Card"
+* #MobilePhoneNotification "Mobile Phone Notification"
+* #VaccineAdministeredFromFacility "Vaccine Administered from this facility"
+* #Other "Other"
+
+ValueSet: VSSourceOfInfo
+Id: vs-source-of-info
+Title: "Source of information - codes"
+Description: "Source of information - codes"
+* include codes from system CSSourceOfInfo

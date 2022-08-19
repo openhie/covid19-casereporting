@@ -165,6 +165,7 @@ Description: "Covid19 Vaccine Type Administered example"
 * vaccineCode.coding.code = #PfizerBionTech 
 * occurrenceDateTime = "2022-07-28"
 * protocolApplied.doseNumberPositiveInt = 1
+* extension[vaccinationSourceOfInfo].valueCodeableConcept = #VaccineCard
 
 Instance: Covid19PatientOutcomeExample
 InstanceOf: Covid19PatientOutcome

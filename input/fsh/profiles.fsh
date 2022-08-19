@@ -196,20 +196,11 @@ Description: "Covid19 Assessment Encounter"
 * extension contains ReasonforAssessment named assessmentReason 1..1 MS  //Reason for assessment
 * extension contains OtherReasonforAssessment named otherReasonforAssessment 0..1 MS  // Other reasons for assessment
 * extension contains Presentation named presentation 0..1 MS  // Presentation
-* period.end MS  //Date died
+//* period.end MS  //Date died  --> Refer to Outcome effectivedate
 * hospitalization.extension contains Covid19EverHospitalized named covid19EverHospitalized 1..1 MS  // Ever hospitalised due to COVID-19
 * hospitalization.extension contains Covid19DateLastHospitalized named covid19DateLastHospitalized 0..1 MS //Date last hospitalised
 * hospitalization.extension contains Covid19Admission named covid19Admission 0..1 MS //   //Admission
-* extension contains Covid19VaccineDoseReceived named covid19VaccineDoseReceived 1..1 MS  //Ever received a dose of COVID-19 vaccine // #RULE: A Covid19AssessmentVaccination should be included if Yes
-/*#TODO Source of information
-
-Source of information VALUE-SET:
-Patient Recall
-Vaccine Card
-Mobile Phone Notification
-Vaccine administered from this facility
-Other (Specify)
-*/
+* extension contains Covid19VaccineDoseReceived named covid19VaccineDoseReceived 1..1 MS  //Ever received a dose of COVID-19 vaccine // #TODO: A Covid19AssessmentVaccination should be included if Yes
 
 Extension: Covid19SymptomsDate
 Id: covid19-symptoms-date
@@ -270,17 +261,27 @@ Description: "Covid19 Vaccine Dose Received"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSYesNoUnknown
 
+Extension: VaccinationSourceOfInfo
+Id: vaccination-source-of-info
+Title: "Vaccination source of info"
+Description: "Vaccination source of info"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSSourceOfInfo
+
 Profile: Covid19AssessmentVaccination
 Parent: Immunization
 Id: covid19-assessment-vaccination
 Title: "Covid19 Vaccination info included as part of the Assessment"
 Description: "Covid19 Vaccination info included as part of the Assessment"
+* patient MS // Patient ref
+* encounter MS //Covid19Assessment ref
 * vaccineCode MS
 * vaccineCode from VSVaccineTypes 
 * protocolApplied.doseNumberPositiveInt MS
 * protocolApplied.series MS  ///Primary, Booster   #TODO
 * extension contains Covid19OtherVaccine named covid19OtherVaccine 0..1 MS  //Other vaccine
 * occurrenceDateTime  MS // Vaccination date    #TODO - check all required fields
+* extension contains VaccinationSourceOfInfo named vaccinationSourceOfInfo 0..1 MS //Source of Information
 
 Extension: Covid19DateRecovered  
 Id: covid19-date-recovered
@@ -299,11 +300,12 @@ Parent: Observation
 Id: covid19-patient-outcome
 Title: "Covid19 Patient Outcome"
 Description: "Covid19 Patient Outcome"
-* value[x] only CodeableConcept
+//* value[x] only CodeableConcept
 * valueCodeableConcept from VSPatientOutcome 
 * extension contains Covid19DateRecovered named covid19DateRecovered 0..1 MS
 * extension contains Covid19LongCOVIDDescription named covid19LongCOVIDDescription 0..1 MS
 * note MS    //additional notes
+* effectiveDateTime  MS // Date of Outcome 
 
 Extension: Covid19TestRequested
 Id: covid19-test-requested
