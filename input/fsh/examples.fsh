@@ -55,6 +55,12 @@ Description: "Basic Composition example"
 * section[=].entry[+] = Reference(Covid19VaccineTypeAdministeredExampleministered) 
 * section[=].entry[+] = Reference(Covid19PatientOutcomeExample) 
 
+
+ /*    #TODO
+    covid19DateLastHospitalized 0..1 and
+    covid19EverHospitalized 0..1 and
+    covid19Admission 0..1 and
+*/
 * section[+].title = "Lab Order Management"
 * section[=].code = CSCaseReportSections#LABORDER
 * section[=].entry[+] = Reference(Covid19LabOrderExample)
@@ -123,13 +129,7 @@ Description: "Covid19 Assessment Encounter  example"
 * status = #finished
 * period.start =  "2022-07-28"  //Date of assessment
 * subject = Reference(Covid19PatientExample) //Patient reference
-* extension[assessmentReason].valueCodeableConcept = #Other    
-* extension[otherReasonforAssessment].valueString = "Reasons not provided"
-* extension[presentation].valueCodeableConcept = #Symptomatic // Presentation
 * period.end  =  "2022-08-15"  //Date of death
-* hospitalization.extension[covid19EverHospitalized].valueCodeableConcept = #Yes
-* hospitalization.extension[covid19DateLastHospitalized].valueDate = "2020-04-10" 
-* hospitalization.extension[Covid19Admission].valueCodeableConcept = #Ward
 * extension[covid19VaccineDoseReceived].valueCodeableConcept = #Yes
 
 Instance: Covid19SymptomExample
@@ -142,8 +142,8 @@ Description: "Covid19 Symptom example"
 * status = #final
 * code = $LNC#75618-9   // #todo re-check the LOINC codes
 * valueCodeableConcept = #JointPain
-* extension[covid19SymptomsDate].valueDate = "2022-07-28"
-* extension[covid19OtherSymptoms].valueString = "none"
+* valueDateTime = "2022-07-28"
+
 
 Instance: Covid19ConditionsComorbidityExample
 InstanceOf: Covid19ConditionsComorbidity
@@ -187,7 +187,6 @@ Description: "Covid19 Lab Order example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
 * reasonCode  = #Surveillance
-* extension[otherReasonforTesting].valueString = "none"
 * authoredOn  = "2022-07-28"
 * extension[covid19TestRequested].valueCodeableConcept = #Rapid
 * status = #Pending
@@ -199,7 +198,6 @@ Title: "Covid19 Specimen example"
 Description: "Covid19 Specimen example"
 * collection.collectedDateTime = "2022-07-28"
 * type = #Serum  
-* extension[otherSpecimenType].valueString   = "none"
 
 Instance: Covid19Laboratory
 InstanceOf: Organization
