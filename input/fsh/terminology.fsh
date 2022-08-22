@@ -1,6 +1,7 @@
 Alias: $SCT = http://snomed.info/sct
 Alias: $LNC = http://loinc.org
 Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6   //yes no unkw
+Alias: $KEYPOPULATION = https://openhie.github.io/hiv-ig/ValueSet-vs-key-population
 //Alias: $LNC-75618-9 = https://loinc.org/75618-9/
 
 
@@ -328,3 +329,9 @@ Id: vs-source-of-info
 Title: "Source of information - codes"
 Description: "Source of information - codes"
 * include codes from system CSSourceOfInfo
+
+ValueSet: VSKeyPopulation
+Id: vs-key-population
+Title: "Key population"
+Description: "A list of key population types"
+* include codes from system $KEYPOPULATION
