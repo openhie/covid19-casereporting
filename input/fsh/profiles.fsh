@@ -39,6 +39,8 @@ Title: "Covid19 Case Reporting Composition"
     covid19Admission 0..1 and
     covid19Symptom 0..* and 
     covid19ConditionsComorbidity 0..* and
+    covid19Diagnosis 0..1 and
+    hivDiagnosis 0..1 and
     covid19AssessmentVaccination 0..* and
     covid19PatientOutcome 0..1
 * section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
@@ -47,6 +49,8 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry[covid19Admission] only Reference(Covid19Admission)
 * section[covid19AssessmentSection].entry[covid19Symptom] only Reference(Covid19Symptom)
 * section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
+* section[covid19AssessmentSection].entry[covid19Diagnosis] only Reference(Covid19Diagnosis)
+* section[covid19AssessmentSection].entry[hivDiagnosis] only Reference(HIVDiagnosis)
 * section[covid19AssessmentSection].entry[covid19AssessmentVaccination] only Reference(Covid19AssessmentVaccination)
 * section[covid19AssessmentSection].entry[covid19PatientOutcome] only Reference(Covid19PatientOutcome)
 
@@ -56,9 +60,9 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19LabOrderManagementSection].entry ^slicing.discriminator.path = "item.resolve()"
 * section[covid19LabOrderManagementSection].entry ^slicing.rules = #closed
 * section[covid19LabOrderManagementSection].entry contains
-    covid19LabOrder 1..1 and
-    covid19Specimen 1..1 and
-    covid19SpecimenCollection 1..1 and
+    covid19LabOrder 0..1 and
+    covid19Specimen 0..1 and
+    covid19SpecimenCollection 0..1 and
     covid19LabOrderCancellation 0..1 and
     covid19LabResults   0..1
 * section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
@@ -107,6 +111,12 @@ Title: "Client Ward Division"
 Description: "Client Ward Division"
 * valueString only string
 
+Extension: KeyPopulation
+Id: key-population
+Title: "Key population"
+Description: "Key population"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSKeyPopulation
 
 Profile: Covid19Patient
 Parent: Patient
@@ -149,6 +159,8 @@ Description: "This Patient profile allows the exchange of patient information, i
 * identifier[national].value 0..1
 * identifier[national].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
 * identifier[pos].value 1..1
+
+* extension contains KeyPopulation named keyPopulation 0..1 MS
 
 //* managingOrganization 1..1
 
@@ -291,6 +303,25 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 * occurrenceDateTime  MS // Vaccination date    #TODO - check all required fields
 * extension contains VaccinationSourceOfInfo named vaccinationSourceOfInfo 0..1 MS //Source of Information
 
+Profile: Covid19Diagnosis
+Parent: Condition
+Id: covid19-diagnosis
+Title: "Covid19 Diagnosis"
+Description: "Covid19 Diagnosis"
+* code MS
+* code from VSCovidDiagnosis 
+* recordedDate MS // Date of Diagnosis
+
+//Fields required from the CBS MDS for Covid Report indicators
+Profile: HIVDiagnosis
+Parent: Condition
+Id: hiv-diagnosis
+Title: "HIV Diagnosis"
+Description: "This profile allows the exchange of a patient's hiv diagnosis"
+* recordedDate 1..1
+* identifier 1..*
+* code 1..1
+
 Extension: Covid19DateRecovered  
 Id: covid19-date-recovered
 Title: "Covid19 Date Recovered"
@@ -313,7 +344,7 @@ Description: "Covid19 Patient Outcome"
 * extension contains Covid19DateRecovered named covid19DateRecovered 0..1 MS
 * extension contains Covid19LongCOVIDDescription named covid19LongCOVIDDescription 0..1 MS
 * note MS    //additional notes
-* effectiveDateTime  MS // Date of Outcome 
+* valueDateTime  MS // Date of Outcome 
 
 Extension: Covid19TestRequested
 Id: covid19-test-requested

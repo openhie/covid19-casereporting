@@ -14,6 +14,8 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19SymptomExample
 * entry[+].fullUrl = "Composition/Covid19ConditionsComorbidityExample"
 * entry[=].resource = Covid19ConditionsComorbidityExample
+* entry[+].fullUrl = "Composition/Covid19DiagnosisExample"
+* entry[=].resource = Covid19DiagnosisExample 
 * entry[+].fullUrl = "Composition/Covid19EverHospitalizedExample"
 * entry[=].resource = Covid19EverHospitalizedExample
 * entry[+].fullUrl = "Composition/Covid19AssessmentVaccinationExample"
@@ -53,7 +55,6 @@ Description: "Basic Composition example"
 * section[=].code = CSCaseReportSections#ASSESSMENT
 * section[=].entry[+] = Reference(Covid19SymptomExample)
 * section[=].entry[+] = Reference(Covid19ConditionsComorbidityExample)  
-* section[=].entry[+] = Reference(Covid19EverHospitalizedExample) 
 * section[=].entry[+] = Reference(Covid19VaccineTypeAdministeredExampleministered) 
 * section[=].entry[+] = Reference(Covid19PatientOutcomeExample) 
  
@@ -96,6 +97,7 @@ Description: "Covid19 Patient example"
 * name.given = "Jane"
 * name.family = "Smith"
 * gender = #female
+* extension[keyPopulation].valueCodeableConcept = #GENERAL-POPULATION
 * birthDate = "1986-06-04"
 * extension[clientEstimatedAge].valueInteger = 45
 * telecom.system = #phone
@@ -150,16 +152,6 @@ Description: "Covid19 Conditions or comorbidity example"
 * extension[covid19ComorbidityPresent].valueCodeableConcept = #Yes  
 * code = #ChronicLungDisease
 * extension[otherConditionsComorbidity].valueString = "none"
-
-Instance: Covid19EverHospitalizedExample
-InstanceOf: Covid19EverHospitalized
-Usage: #example
-Title: "Covid19 Hospitalised Observation example"
-Description: "Covid19 Hospitalised Observation example"
-* valueCodeableConcept = #Yes
-* status = #final
-* code = $LNC#75618-9 // #TODO
-* encounter = Reference(Covid19AssessmentEncounterExample) 
 
 Instance: Covid19AssessmentVaccinationExample
 InstanceOf: Covid19AssessmentVaccination
