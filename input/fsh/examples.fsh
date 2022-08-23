@@ -15,7 +15,7 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[+].fullUrl = "Composition/Covid19ConditionsComorbidityExample"
 * entry[=].resource = Covid19ConditionsComorbidityExample
 * entry[+].fullUrl = "Composition/Covid19EverHospitalizedExample"
-* entry[=].resource = Covid19ConditionsComorbidityExample
+* entry[=].resource = Covid19EverHospitalizedExample
 * entry[+].fullUrl = "Composition/Covid19AssessmentVaccinationExample"
 * entry[=].resource = Covid19AssessmentVaccinationExample
 * entry[+].fullUrl = "Composition/Covid19PatientOutcomeExample"
