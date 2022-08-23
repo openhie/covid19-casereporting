@@ -34,9 +34,6 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry ^slicing.rules = #closed
 * section[covid19AssessmentSection].entry contains
     covid19AssessmentEncounter 1..1 and
-    covid19DateLastHospitalized 0..1 and
-    covid19EverHospitalized 1..1 and
-    covid19Admission 0..1 and
     covid19Symptom 0..* and 
     covid19ConditionsComorbidity 0..* and
     covid19Diagnosis 0..1 and
@@ -44,9 +41,6 @@ Title: "Covid19 Case Reporting Composition"
     covid19AssessmentVaccination 0..* and
     covid19PatientOutcome 0..1
 * section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
-* section[covid19AssessmentSection].entry[covid19DateLastHospitalized] only Reference(Covid19DateLastHospitalized)
-* section[covid19AssessmentSection].entry[covid19EverHospitalized] only Reference(Covid19EverHospitalized)
-* section[covid19AssessmentSection].entry[covid19Admission] only Reference(Covid19Admission)
 * section[covid19AssessmentSection].entry[covid19Symptom] only Reference(Covid19Symptom)
 * section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
 * section[covid19AssessmentSection].entry[covid19Diagnosis] only Reference(Covid19Diagnosis)
@@ -164,60 +158,45 @@ Description: "This Patient profile allows the exchange of patient information, i
 
 //* managingOrganization 1..1
 
-
-Profile: Covid19ReasonforAssessment
-Parent: Observation
-Id: covid19-reason-for-Assessment
-Title: "Covid19 Reason for Assessment"
-Description: "Covid19 Reason for Assessment"
+Extension: ReasonforAssessment
+Id: reason-for-assessment
+Title: "Reason for Assessment"
+Description: "Reason for Assessment"
 * value[x] only CodeableConcept
-* valueCodeableConcept from VSAssessmentReason 
-* encounter 1..1 MS
+* valueCodeableConcept from VSAssessmentReason
 
-Profile: OtherReasonforAssessment
-Parent: Observation
-Id: covid19-other-reason-for-Assessment
-Title: "Covid19 Other Reason for Assessment"
-Description: "Covid19 Other Reason for Assessment"
-* value[x] only string
-* encounter 1..1 MS
+Extension: OtherReasonforAssessment
+Id: other-reason-for-assessment
+Title: "Other-reason for Assessment"
+Description: "Other reason for Assessment"
+* valueString only string
 
-Profile: Covid19Presentation
-Parent: Observation
-Id: covid19-presentation
-Title: "Covid19 Presentation"
-Description: "Covid19 Presentation"
+Extension: Presentation
+Id: Presentation
+Title: "Presentation"
+Description: "Presentation"
 * value[x] only CodeableConcept
-* value[x] from VSPresentation
-* encounter 1..1 MS
+* valueCodeableConcept from VSPresentation
 
-//hospitalization info start
-Profile: Covid19DateLastHospitalized  
-Parent: Observation
+
+Extension: Covid19DateLastHospitalized  
 Id: covid19-date-last-hospitalized
 Title: "Covid19 Date last Hospitalized"
 Description: "Covid19 Date Last Hospitalized"
-* valueDateTime MS 
-* encounter 1..1 MS
+* valueDateTime MS
 
-Profile: Covid19EverHospitalized
-Parent: Observation
+Extension: Covid19EverHospitalized
 Id: covid19-everhospitalized
 Title: "Covid19 Ever Hospitalised"
 Description: "Ever hospitalised due to COVID-19?"
-* value[x] from VSYesNoUnknown
-* encounter 1..1 MS
+* valueCodeableConcept from VSYesNoUnknown 
+//* valueDateTime MS //Covid19DateLastHospitalized
 
-Profile: Covid19Admission
-Parent: Observation
+Extension: Covid19Admission
 Id: covid19-admission
 Title: "Covid19 Admission"
 Description: "Covid19 Admission"
-* value[x] only CodeableConcept
 * valueCodeableConcept from VSAdmissionTypes   //Ward, HDU, ICU
-* encounter 1..1 MS
-
-//hospitalization info ends
 
 Profile: Covid19AssessmentEncounter
 Parent: Encounter
@@ -226,11 +205,21 @@ Title: "Covid19 Assessment Encounter"
 Description: "Covid19 Assessment Encounter"
 * period.start 1..1 MS  //Date of assessment
 * subject 1..1 MS //Patient reference
-//* period.end MS  //Date died  --> Refer to Outcome effectivedate
+* extension contains ReasonforAssessment named assessmentReason 1..1 MS  //Reason for assessment
+* extension contains OtherReasonforAssessment named otherReasonforAssessment 0..1 MS  // Other reasons for assessment
+* extension contains Presentation named presentation 0..1 MS  // Presentation
+* hospitalization.extension contains Covid19EverHospitalized named covid19EverHospitalized 1..1 MS  // Ever hospitalised due to COVID-19
+* hospitalization.extension contains Covid19DateLastHospitalized named covid19DateLastHospitalized 0..1 MS //Date last hospitalised
+* hospitalization.extension contains Covid19Admission named covid19Admission 0..1 MS //   //Admission
 * extension contains Covid19VaccineDoseReceived named covid19VaccineDoseReceived 1..1 MS  //Ever received a dose of COVID-19 vaccine // #TODO: A Covid19AssessmentVaccination should be included if Yes
 
-Profile: Covid19OtherSymptoms
-Parent: Observation
+Extension: Covid19SymptomsDate
+Id: covid19-symptoms-date
+Title: "Date of onset of symptoms"
+Description: "Date of onset of symptoms"
+* valueDateTime MS 
+
+Extension: Covid19OtherSymptoms
 Id: covid19-other-symptoms
 Title: "Other specified symptoms"
 Description: "Other specified symptoms"
@@ -241,8 +230,10 @@ Parent: Observation
 Id: covid19-symptom
 Title: "Covid19 Symptom"
 Description: "Covid19 Symptom"
+* value[x] only CodeableConcept 
 * valueCodeableConcept from VSSymptoms
-* valueDateTime MS // Date of onset of symptoms
+* extension contains Covid19SymptomsDate named covid19SymptomsDate 0..1 MS
+* extension contains Covid19OtherSymptoms named covid19OtherSymptoms 0..1 MS
 
 Extension: Covid19ComorbidityPresent
 Id: covid19-comorbidity-present
@@ -362,7 +353,7 @@ Description: "Covid19 Lab Order"
 * intent = #order 
 * reasonCode  0..1 MS //Reason for testing
 * reasonCode from VSAssessmentReason 
-//* extension contains OtherReasonforAssessment named otherReasonforTesting 0..1 MS   #TODO
+* extension contains OtherReasonforAssessment named otherReasonforTesting 0..1 MS
 * authoredOn  1..1 MS  
 * extension contains Covid19TestRequested named covid19TestRequested 1..1 MS   //could rather bind to field code?
 * encounter MS //
@@ -385,7 +376,7 @@ Description: "Covid19 Specimen"
 * type 1..1 MS 
 * type from VSCovid19SpecimenType
 * collection.collectedDateTime 1..1 MS  // Date specimen collected
-//* extension contains OtherReasonforAssessment named otherSpecimenType 0..1 MS   #TODo
+* extension contains OtherReasonforAssessment named otherSpecimenType 0..1 MS
 
 Extension: Covid19SpecimenForwarded
 Id: covid19-specimen-forwarded
