@@ -14,6 +14,8 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19SymptomExample
 * entry[+].fullUrl = "Composition/Covid19ConditionsComorbidityExample"
 * entry[=].resource = Covid19ConditionsComorbidityExample
+* entry[+].fullUrl = "Composition/Covid19EverHospitalizedExample"
+* entry[=].resource = Covid19ConditionsComorbidityExample
 * entry[+].fullUrl = "Composition/Covid19AssessmentVaccinationExample"
 * entry[=].resource = Covid19AssessmentVaccinationExample
 * entry[+].fullUrl = "Composition/Covid19PatientOutcomeExample"
@@ -30,7 +32,6 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19LabResultsExample
 * entry[+].fullUrl = "Composition/Covid19VaccinationExample"
 * entry[=].resource = Covid19VaccinationExample
-
 
 Instance: Covid19CompositionExample
 InstanceOf: Covid19Composition
@@ -52,15 +53,10 @@ Description: "Basic Composition example"
 * section[=].code = CSCaseReportSections#ASSESSMENT
 * section[=].entry[+] = Reference(Covid19SymptomExample)
 * section[=].entry[+] = Reference(Covid19ConditionsComorbidityExample)  
+* section[=].entry[+] = Reference(Covid19EverHospitalizedExample) 
 * section[=].entry[+] = Reference(Covid19VaccineTypeAdministeredExampleministered) 
 * section[=].entry[+] = Reference(Covid19PatientOutcomeExample) 
-
-
- /*    #TODO
-    covid19DateLastHospitalized 0..1 and
-    covid19EverHospitalized 0..1 and
-    covid19Admission 0..1 and
-*/
+ 
 * section[+].title = "Lab Order Management"
 * section[=].code = CSCaseReportSections#LABORDER
 * section[=].entry[+] = Reference(Covid19LabOrderExample)
@@ -144,9 +140,9 @@ Description: "Covid19 Symptom example"
 * valueCodeableConcept = #JointPain
 * valueDateTime = "2022-07-28"
 
-
 Instance: Covid19ConditionsComorbidityExample
 InstanceOf: Covid19ConditionsComorbidity
+Usage: #example
 Title: "Covid19 Conditions or comorbidity example"
 Description: "Covid19 Conditions or comorbidity example"
 * subject = Reference(Covid19PatientExample) 
@@ -155,8 +151,19 @@ Description: "Covid19 Conditions or comorbidity example"
 * code = #ChronicLungDisease
 * extension[otherConditionsComorbidity].valueString = "none"
 
+Instance: Covid19EverHospitalizedExample
+InstanceOf: Covid19EverHospitalized
+Usage: #example
+Title: "Covid19 Hospitalised Observation example"
+Description: "Covid19 Hospitalised Observation example"
+* valueCodeableConcept = #Yes
+* status = #final
+* code = $LNC#75618-9 // #TODO
+* encounter = Reference(Covid19AssessmentEncounterExample) 
+
 Instance: Covid19AssessmentVaccinationExample
 InstanceOf: Covid19AssessmentVaccination
+Usage: #example
 Title: "Covid19 Vaccine Type Administered example"
 Description: "Covid19 Vaccine Type Administered example"
 * patient = Reference(Covid19PatientExample) 
@@ -169,6 +176,7 @@ Description: "Covid19 Vaccine Type Administered example"
 
 Instance: Covid19PatientOutcomeExample
 InstanceOf: Covid19PatientOutcome
+Usage: #example
 Title: "Covid19 Patient Outcome example"
 Description: "Covid19 Patient Outcome example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
@@ -182,6 +190,7 @@ Description: "Covid19 Patient Outcome example"
 
 Instance: Covid19LabOrderExample
 InstanceOf: Covid19LabOrder
+Usage: #example
 Title: "Covid19 Lab Order example"
 Description: "Covid19 Lab Order example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
@@ -194,6 +203,7 @@ Description: "Covid19 Lab Order example"
 
 Instance: Covid19SpecimenExample
 InstanceOf: Covid19Specimen
+Usage: #example
 Title: "Covid19 Specimen example"
 Description: "Covid19 Specimen example"
 * collection.collectedDateTime = "2022-07-28"
@@ -201,12 +211,14 @@ Description: "Covid19 Specimen example"
 
 Instance: Covid19Laboratory
 InstanceOf: Organization
+Usage: #example
 Title: "Covid19 Laboratory"
 Description: "Covid19 Laboratory testing the specimen"
 * identifier.id = "Lab001"
 
 Instance: Covid19SpecimenCollectionExample
 InstanceOf: Covid19SpecimenCollection
+Usage: #example
 Title: "Covid19 Specimen Collection"
 Description: "Covid19 Specimen Collection"
 * status = #final
@@ -220,6 +232,7 @@ Description: "Covid19 Specimen Collection"
 
 Instance: Covid19LabOrderCancellationExample
 InstanceOf: Covid19LabOrderCancellation
+Usage: #example
 Title: "Covid19 Lab Order Cancellation  example"
 Description: "Covid19 Lab Order Cancellation Task example"
 * focus = Reference(Covid19LabOrderExample)
@@ -231,6 +244,7 @@ Description: "Covid19 Lab Order Cancellation Task example"
 
 Instance: Covid19LabResultsExample
 InstanceOf: Covid19LabResults
+Usage: #example
 Title: "Covid19 Lab Results example"
 Description: "Covid19 Lab Results example"
 * code = $LNC#100156-9 
@@ -247,6 +261,7 @@ Description: "Covid19 Lab Results example"
 
 Instance: Covid19VaccinationExample
 InstanceOf: Covid19Vaccination
+Usage: #example
 Title: "Covid19 Vaccination example"
 Description: "Covid19 Vaccination example"
 * status = #final

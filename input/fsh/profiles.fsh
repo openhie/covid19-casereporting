@@ -217,12 +217,6 @@ Description: "Covid19 Assessment Encounter"
 //* period.end MS  //Date died  --> Refer to Outcome effectivedate
 * extension contains Covid19VaccineDoseReceived named covid19VaccineDoseReceived 1..1 MS  //Ever received a dose of COVID-19 vaccine // #TODO: A Covid19AssessmentVaccination should be included if Yes
 
-Extension: Covid19SymptomsDate
-Id: covid19-symptoms-date
-Title: "Date of onset of symptoms"
-Description: "Date of onset of symptoms"
-* valueDateTime MS 
-
 Profile: Covid19OtherSymptoms
 Parent: Observation
 Id: covid19-other-symptoms
