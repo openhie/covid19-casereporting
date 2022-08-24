@@ -54,8 +54,10 @@ Description: "Basic Composition example"
 * section[+].title = "Covid19 Assessment Encounter"
 * section[=].code = CSCaseReportSections#ASSESSMENT
 * section[=].entry[+] = Reference(Covid19SymptomExample)
-* section[=].entry[+] = Reference(Covid19ConditionsComorbidityExample)  
-* section[=].entry[+] = Reference(Covid19VaccineTypeAdministeredExampleministered) 
+* section[=].entry[+] = Reference(Covid19ConditionsComorbidityExample) 
+* section[=].entry[+] = Reference(Covid19DiagnosisExample)   
+* section[=].entry[+] = Reference(HIVDiagnosisExample) 
+* section[=].entry[+] = Reference(Covid19AssessmentVaccinationExample) 
 * section[=].entry[+] = Reference(Covid19PatientOutcomeExample) 
  
 * section[+].title = "Lab Order Management"
