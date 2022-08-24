@@ -153,6 +153,39 @@ Description: "Covid19 Conditions or comorbidity example"
 * code = #ChronicLungDisease
 * extension[otherConditionsComorbidity].valueString = "none"
 
+Instance: Covid19DiagnosisExample
+InstanceOf: Condition
+Usage: #example
+Title: "Covid19 Diagnosis Example"
+Description: "Covid19 Diagnosis Example"
+* code = #Confirmed
+* recordedDate = "2022-07-28"
+* subject = Reference(Covid19PatientExample)
+* encounter = Reference(Covid19AssessmentEncounterExample)
+
+Instance: HIVDiagnosisExample
+InstanceOf: HIVDiagnosis
+Usage: #example
+Title: "HIV Condition example"
+Description: "."
+* clinicalStatus = #active
+* verificationStatus = #confirmed
+* code = $SCT#86406008
+* subject = Reference(Covid19PatientExample)
+* recordedDate = "2021-05-18"
+* identifier[+].system = "http://openhie.org/fhir/hiv-casereporting/identifier/hiv-diagnosis"
+* identifier[=].value = "abc"
+
+Instance: Covid19EverHospitalizedExample
+InstanceOf: Covid19EverHospitalized
+Usage: #example
+Title: "Covid19 Hospitalised Observation example"
+Description: "Covid19 Hospitalised Observation example"
+* valueCodeableConcept = #Yes
+* status = #final
+* code = $LNC#75618-9 // #TODO
+* encounter = Reference(Covid19AssessmentEncounterExample) 
+
 Instance: Covid19AssessmentVaccinationExample
 InstanceOf: Covid19AssessmentVaccination
 Usage: #example
