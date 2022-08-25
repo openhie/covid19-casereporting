@@ -10,6 +10,10 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19PatientExample
 * entry[+].fullUrl = "Composition/Covid19AssessmentEncounterExample"
 * entry[=].resource = Covid19AssessmentEncounterExample
+* entry[+].fullUrl = "Composition/Covid19ReasonforAssessmentExample"
+* entry[=].resource = Covid19ReasonforAssessmentExample
+* entry[+].fullUrl = "Composition/Covid19PresentationExample"
+* entry[=].resource = Covid19PresentationExample
 * entry[+].fullUrl = "Composition/Covid19SymptomExample"
 * entry[=].resource = Covid19SymptomExample
 * entry[+].fullUrl = "Composition/Covid19ConditionsComorbidityExample"
@@ -53,6 +57,9 @@ Description: "Basic Composition example"
 
 * section[+].title = "Covid19 Assessment Encounter"
 * section[=].code = CSCaseReportSections#ASSESSMENT
+* section[=].entry[+] = Reference(Covid19AssessmentEncounterExample)
+* section[=].entry[+] = Reference(Covid19ReasonforAssessmentExample)
+* section[=].entry[+] = Reference(Covid19PresentationExample)
 * section[=].entry[+] = Reference(Covid19SymptomExample)
 * section[=].entry[+] = Reference(Covid19ConditionsComorbidityExample) 
 * section[=].entry[+] = Reference(Covid19DiagnosisExample)   
@@ -130,6 +137,28 @@ Description: "Covid19 Assessment Encounter  example"
 * subject = Reference(Covid19PatientExample) //Patient reference
 * period.end  =  "2022-08-15"  //Date of death
 * extension[covid19VaccineDoseReceived].valueCodeableConcept = #Yes
+
+Instance: Covid19ReasonforAssessmentExample
+InstanceOf: Covid19ReasonforAssessment
+Usage: #example
+Title: "Covid19 Reason for assessment example"
+Description: "Covid19 Reason for assessment example"
+* encounter = Reference(Covid19AssessmentEncounterExample) 
+* subject = Reference(Covid19PatientExample) 
+* status = #final
+* code = $LNC#75618-9   // #todo terminology
+* valueCodeableConcept = #CaseContact
+
+Instance: Covid19PresentationExample
+InstanceOf: Covid19Presentation
+Usage: #example
+Title: "Covid19 Presentation example"
+Description: "Covid19 Presentation example"
+* encounter = Reference(Covid19AssessmentEncounterExample) 
+* subject = Reference(Covid19PatientExample) 
+* status = #final
+* code = $LNC#75618-9   // #todo terminology
+* valueCodeableConcept = #Asymptomatic
 
 Instance: Covid19SymptomExample
 InstanceOf: Covid19Symptom

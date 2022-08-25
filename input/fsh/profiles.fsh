@@ -34,6 +34,9 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry ^slicing.rules = #closed
 * section[covid19AssessmentSection].entry contains
     covid19AssessmentEncounter 1..1 and
+    covid19ReasonforAssessment 1..* and
+    otherReasonforAssessment   0..1 and
+    covid19Presentation 1..1 and
     covid19DateLastHospitalized 0..1 and
     covid19EverHospitalized 1..1 and
     covid19Admission 0..1 and
@@ -42,8 +45,11 @@ Title: "Covid19 Case Reporting Composition"
     covid19Diagnosis 0..1 and
     hivDiagnosis 0..1 and
     covid19AssessmentVaccination 0..* and
-    covid19PatientOutcome 0..1
+    covid19PatientOutcome 1..1
 * section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
+* section[covid19AssessmentSection].entry[covid19ReasonforAssessment] only Reference(Covid19ReasonforAssessment)
+* section[covid19AssessmentSection].entry[otherReasonforAssessment] only Reference(OtherReasonforAssessment)
+* section[covid19AssessmentSection].entry[covid19Presentation] only Reference(Covid19Presentation)
 * section[covid19AssessmentSection].entry[covid19DateLastHospitalized] only Reference(Covid19DateLastHospitalized)
 * section[covid19AssessmentSection].entry[covid19EverHospitalized] only Reference(Covid19EverHospitalized)
 * section[covid19AssessmentSection].entry[covid19Admission] only Reference(Covid19Admission)
@@ -133,9 +139,9 @@ Description: "This Patient profile allows the exchange of patient information, i
 
 * identifier contains
     // art 0..* and
-    passport 0..* and
-    national 0..* and
-    pos 0..*
+    passport 0..1 and
+    national 0..1 and
+    pos 0..1
 
 //* identifier[art].value 0..1
 //* identifier[art].system = "http://openhie.org/fhir/hiv-casereporting/identifier/art"
@@ -147,7 +153,7 @@ Description: "This Patient profile allows the exchange of patient information, i
 
 * extension contains KeyPopulation named keyPopulation 0..1 MS
 
-//* managingOrganization 1..1
+* managingOrganization 1..1
 
 
 Profile: Covid19ReasonforAssessment
@@ -345,7 +351,7 @@ Title: "Covid19 Lab Order"
 Description: "Covid19 Lab Order"
 * subject 1..1 MS // Patient reference
 * intent = #order 
-* reasonCode  0..1 MS //Reason for testing
+* reasonCode  1..* MS //Reason for testing
 * reasonCode from VSAssessmentReason 
 //* extension contains OtherReasonforAssessment named otherReasonforTesting 0..1 MS   #TODO
 * authoredOn  1..1 MS  
