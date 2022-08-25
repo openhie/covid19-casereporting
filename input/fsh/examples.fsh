@@ -56,7 +56,7 @@ Description: "Basic Composition example"
 * section[=].entry[+] = Reference(Covid19PatientExample)
 
 * section[+].title = "Covid19 Assessment Encounter"
-* section[=].code = CSCaseReportSections#ASSESSMENT
+* section[=].code = CSCaseReportSections##COVID-ASSESSMENT
 * section[=].entry[+] = Reference(Covid19AssessmentEncounterExample)
 * section[=].entry[+] = Reference(Covid19ReasonforAssessmentExample)
 * section[=].entry[+] = Reference(Covid19PresentationExample)
@@ -68,7 +68,7 @@ Description: "Basic Composition example"
 * section[=].entry[+] = Reference(Covid19PatientOutcomeExample) 
  
 * section[+].title = "Lab Order Management"
-* section[=].code = CSCaseReportSections#LABORDER
+* section[=].code = CSCaseReportSections##LABORDER-MANAGEMENT
 * section[=].entry[+] = Reference(Covid19LabOrderExample)
 * section[=].entry[+] = Reference(Covid19SpecimenExample)  
 * section[=].entry[+] = Reference(Covid19SpecimenCollectionExample) 
