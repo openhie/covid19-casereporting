@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="Covid19ReasonforAssessmentExample"/>
+  <meta>
+    <profile value="http://example.com/fhir/example/StructureDefinition/covid19-reason-for-Assessment"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation "Covid19ReasonforAssessmentExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-reason-for-Assessment.html">Covid19 Reason for Assessment</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbid condition <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#75618-9)</span></p><p><b>subject</b>: <a href="Patient-Covid19PatientExample.html">Patient/Covid19PatientExample</a> " SMITH"</p><p><b>encounter</b>: <a href="Encounter-Covid19AssessmentEncounterExample.html">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>value</b>: CaseContact <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#CaseContact)</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="75618-9"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Covid19PatientExample"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/Covid19AssessmentEncounterExample"/>
+  </encounter>
+  <valueCodeableConcept>
+    <coding>
+      <code value="CaseContact"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

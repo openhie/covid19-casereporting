@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-presentation> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cs-presentation"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://example.com/fhir/example/CodeSystem/cs-presentation defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">Asymptomatic<a name=\"cs-presentation-Asymptomatic\"> </a></td><td>Asymptomatic</td></tr><tr><td style=\"white-space:nowrap\">Symptomatic<a name=\"cs-presentation-Symptomatic\"> </a></td><td>Symptomatic</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://example.com/fhir/example/CodeSystem/cs-presentation"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0-test"];
+  fhir:CodeSystem.name [ fhir:value "CSPresentation"];
+  fhir:CodeSystem.title [ fhir:value "Assessment Reason codes"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2022-08-25T11:38:34+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "OpenHIE"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://xxhl7.org/Special/committees/[something]" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "A list of assessment reasons"];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "2"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "Asymptomatic" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Asymptomatic" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "Symptomatic" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Symptomatic" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-presentation.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

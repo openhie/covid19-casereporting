@@ -1,0 +1,105 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-conditions-comorbidity> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cs-conditions-comorbidity"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://example.com/fhir/example/CodeSystem/cs-conditions-comorbidity defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CardiovascularDisease<a name=\"cs-conditions-comorbidity-CardiovascularDisease\"> </a></td><td>Cardiovascular disease e.g heart failure</td></tr><tr><td style=\"white-space:nowrap\">ChronicLungDisease<a name=\"cs-conditions-comorbidity-ChronicLungDisease\"> </a></td><td>Chronic Lung Disease</td></tr><tr><td style=\"white-space:nowrap\">ChronicNeurological<a name=\"cs-conditions-comorbidity-ChronicNeurological\"> </a></td><td>Chronic neurological or neuromuscular disease</td></tr><tr><td style=\"white-space:nowrap\">Smoker&quot;<a name=\"cs-conditions-comorbidity-Smoker.34\"> </a></td><td>Current smoker</td></tr><tr><td style=\"white-space:nowrap\">Diabetes<a name=\"cs-conditions-comorbidity-Diabetes\"> </a></td><td>Diabetes</td></tr><tr><td style=\"white-space:nowrap\">FormerSmoker&quot;<a name=\"cs-conditions-comorbidity-FormerSmoker.34\"> </a></td><td>Former smoker</td></tr><tr><td style=\"white-space:nowrap\">HIVAids&quot;<a name=\"cs-conditions-comorbidity-HIVAids.34\"> </a></td><td>HIV /AIDS</td></tr><tr><td style=\"white-space:nowrap\">Hypertension&quot;<a name=\"cs-conditions-comorbidity-Hypertension.34\"> </a></td><td>Hypertension</td></tr><tr><td style=\"white-space:nowrap\">Immunodeficiency<a name=\"cs-conditions-comorbidity-Immunodeficiency\"> </a></td><td>Immunodeficiency</td></tr><tr><td style=\"white-space:nowrap\">Liver<a name=\"cs-conditions-comorbidity-Liver\"> </a></td><td>Liver disease</td></tr><tr><td style=\"white-space:nowrap\">Malignancy<a name=\"cs-conditions-comorbidity-Malignancy\"> </a></td><td>Malignancy</td></tr><tr><td style=\"white-space:nowrap\">Renal<a name=\"cs-conditions-comorbidity-Renal\"> </a></td><td>Renal disease</td></tr><tr><td style=\"white-space:nowrap\">TB<a name=\"cs-conditions-comorbidity-TB\"> </a></td><td>TB</td></tr><tr><td style=\"white-space:nowrap\">Other<a name=\"cs-conditions-comorbidity-Other\"> </a></td><td>Other (specify)</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://example.com/fhir/example/CodeSystem/cs-conditions-comorbidity"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0-test"];
+  fhir:CodeSystem.name [ fhir:value "CSConditionsComorbidity"];
+  fhir:CodeSystem.title [ fhir:value "Conditions or comorbidity list"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2022-08-25T11:38:34+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "OpenHIE"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://xxhl7.org/Special/committees/[something]" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "Conditions or comorbidity list"];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "14"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "CardiovascularDisease" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Cardiovascular disease e.g heart failure" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "ChronicLungDisease" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Chronic Lung Disease" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "ChronicNeurological" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Chronic neurological or neuromuscular disease" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "Smoker\"" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Current smoker" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "Diabetes" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Diabetes" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "FormerSmoker\"" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Former smoker" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "HIVAids\"" ];
+     fhir:CodeSystem.concept.display [ fhir:value "HIV /AIDS" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "Hypertension\"" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Hypertension" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "Immunodeficiency" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Immunodeficiency" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "Liver" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Liver disease" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "Malignancy" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Malignancy" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "Renal" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Renal disease" ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "TB" ];
+     fhir:CodeSystem.concept.display [ fhir:value "TB" ]
+  ], [
+     fhir:index 13;
+     fhir:CodeSystem.concept.code [ fhir:value "Other" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Other (specify)" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-conditions-comorbidity.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="Covid19PatientExample"/>
+  <meta>
+    <profile value="http://example.com/fhir/example/StructureDefinition/covid19-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Jane Smith (OFFICIAL)</b> female, DoB: 1986-06-04 ( id: PASSPORT1234567)</p></div>
+  </text>
+  <extension url="http://example.com/fhir/example/StructureDefinition/client-ward-division">
+    <valueString value="Division 9087"/>
+  </extension>
+  <extension url="http://example.com/fhir/example/StructureDefinition/key-population">
+    <valueCodeableConcept>
+      <coding>
+        <code value="GENERAL-POPULATION"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <system value="http://openhie.org/fhir/covid19-casereporting/identifier/passport"/>
+    <value value="PASSPORT1234567"/>
+  </identifier>
+  <identifier>
+    <system value="http://openhie.org/fhir/covid19-casereporting/identifier/nid"/>
+    <value value="NAT1234567"/>
+  </identifier>
+  <identifier>
+    <system value="http://openhie.org/fhir/covid19-casereporting/identifier/facility1"/>
+    <value value="EMR1234567"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <family value="Smith"/>
+    <given value="Jane"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+27825556666"/>
+  </telecom>
+  <gender value="female"/>
+  <birthDate value="1986-06-04"/>
+  <address>
+    <city value="Cape Town"/>
+    <district value="City of Cape Town"/>
+    <state value="Western Province"/>
+    <country value="South Africa"/>
+  </address>
+  <contact>
+    <relationship>
+      <coding>
+        <code value="N"/>
+      </coding>
+    </relationship>
+    <name>
+      <family value="John"/>
+    </name>
+    <telecom>
+      <system value="phone"/>
+    </telecom>
+  </contact>
+  <managingOrganization>
+    <reference value="Organization/Covid19OrganizationExample"/>
+  </managingOrganization>
+</Patient>

@@ -1,0 +1,109 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-covid19-vaccine-codes> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cs-covid19-vaccine-codes"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://example.com/fhir/example/CodeSystem/cs-covid19-vaccine-codes defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">Astrazeneca<a name=\"cs-covid19-vaccine-codes-Astrazeneca\"> </a></td><td>Astrazeneca COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">BharatBiotech<a name=\"cs-covid19-vaccine-codes-BharatBiotech\"> </a></td><td>Bharat Biotech Covaxin COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">CansinoBiologics<a name=\"cs-covid19-vaccine-codes-CansinoBiologics\"> </a></td><td>Cansino Biologics Convidicea COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">Chumakov<a name=\"cs-covid19-vaccine-codes-Chumakov\"> </a></td><td>Chumakov Center Covivac COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">convalescent<a name=\"cs-covid19-vaccine-codes-convalescent\"> </a></td><td>COVID-19 convalescent plasma</td></tr><tr><td style=\"white-space:nowrap\">CureVacCVnCoV<a name=\"cs-covid19-vaccine-codes-CureVacCVnCoV\"> </a></td><td>CureVac CVnCoV COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">GamaleyaSputnik<a name=\"cs-covid19-vaccine-codes-GamaleyaSputnik\"> </a></td><td>Gamaleya Sputnik v COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">Janssen<a name=\"cs-covid19-vaccine-codes-Janssen\"> </a></td><td>Janssen COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">Moderna<a name=\"cs-covid19-vaccine-codes-Moderna\"> </a></td><td>Moderna COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">Novavax<a name=\"cs-covid19-vaccine-codes-Novavax\"> </a></td><td>Novavax NVX-COV2373 COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">Pfizer-BioNtech<a name=\"cs-covid19-vaccine-codes-Pfizer-BioNtech\"> </a></td><td>Pfizer-BioNtech COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">SinopharmBBIBP-CorV<a name=\"cs-covid19-vaccine-codes-SinopharmBBIBP-CorV\"> </a></td><td>Sinopharm BBIBP-CorV COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">Sinopharm-Wuhan<a name=\"cs-covid19-vaccine-codes-Sinopharm-Wuhan\"> </a></td><td>Sinopharm-Wuhan COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">Sinovac<a name=\"cs-covid19-vaccine-codes-Sinovac\"> </a></td><td>Sinovac COVID-19 vaccine</td></tr><tr><td style=\"white-space:nowrap\">VectorInstituteEpivacCorona<a name=\"cs-covid19-vaccine-codes-VectorInstituteEpivacCorona\"> </a></td><td>Vector Institute EpivacCorona COVID-19 vaccine</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://example.com/fhir/example/CodeSystem/cs-covid19-vaccine-codes"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0-test"];
+  fhir:CodeSystem.name [ fhir:value "CSCovid19VaccineCodes"];
+  fhir:CodeSystem.title [ fhir:value "Covid19 Vaccine Code List"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2022-08-25T11:38:34+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "OpenHIE"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://xxhl7.org/Special/committees/[something]" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "Covid19 Vaccine Code List"];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "15"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "Astrazeneca" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Astrazeneca COVID-19 vaccine" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "BharatBiotech" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Bharat Biotech Covaxin COVID-19 vaccine" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "CansinoBiologics" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Cansino Biologics Convidicea COVID-19 vaccine" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "Chumakov" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Chumakov Center Covivac COVID-19 vaccine" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "convalescent" ];
+     fhir:CodeSystem.concept.display [ fhir:value "COVID-19 convalescent plasma" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "CureVacCVnCoV" ];
+     fhir:CodeSystem.concept.display [ fhir:value "CureVac CVnCoV COVID-19 vaccine" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "GamaleyaSputnik" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Gamaleya Sputnik v COVID-19 vaccine" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "Janssen" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Janssen COVID-19 vaccine" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "Moderna" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Moderna COVID-19 vaccine" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "Novavax" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Novavax NVX-COV2373 COVID-19 vaccine" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "Pfizer-BioNtech" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Pfizer-BioNtech COVID-19 vaccine" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "SinopharmBBIBP-CorV" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Sinopharm BBIBP-CorV COVID-19 vaccine" ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "Sinopharm-Wuhan" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Sinopharm-Wuhan COVID-19 vaccine" ]
+  ], [
+     fhir:index 13;
+     fhir:CodeSystem.concept.code [ fhir:value "Sinovac" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Sinovac COVID-19 vaccine" ]
+  ], [
+     fhir:index 14;
+     fhir:CodeSystem.concept.code [ fhir:value "VectorInstituteEpivacCorona" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Vector Institute EpivacCorona COVID-19 vaccine" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-covid19-vaccine-codes.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

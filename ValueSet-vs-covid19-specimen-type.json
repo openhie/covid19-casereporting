@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-covid19-specimen-type",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-covid19-specimen-type.html\"><code>http://example.com/fhir/example/CodeSystem/cs-covid19-specimen-type</code></a></li></ul></div>"
+  },
+  "url": "http://example.com/fhir/example/ValueSet/vs-covid19-specimen-type",
+  "version": "0.1.0-test",
+  "name": "VSCovid19SpecimenType",
+  "title": "Covid19 Specimen Type",
+  "status": "active",
+  "date": "2022-08-25T11:38:34+00:00",
+  "publisher": "OpenHIE",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://xxhl7.org/Special/committees/[something]"
+        }
+      ]
+    }
+  ],
+  "description": "A list of Covid19 Specimen Type",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://example.com/fhir/example/CodeSystem/cs-covid19-specimen-type"
+      }
+    ]
+  }
+}
