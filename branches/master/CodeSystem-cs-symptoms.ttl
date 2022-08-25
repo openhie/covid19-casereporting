@@ -1,0 +1,133 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-symptoms> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cs-symptoms"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://example.com/fhir/example/CodeSystem/cs-symptoms defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">AbdominalPain<a name=\"cs-symptoms-AbdominalPain\"> </a></td><td>Abdominal Pain</td></tr><tr><td style=\"white-space:nowrap\">Chestpain<a name=\"cs-symptoms-Chestpain\"> </a></td><td>Chest pain</td></tr><tr><td style=\"white-space:nowrap\">Cough<a name=\"cs-symptoms-Cough\"> </a></td><td>Cough</td></tr><tr><td style=\"white-space:nowrap\">Diarrhoea<a name=\"cs-symptoms-Diarrhoea\"> </a></td><td>Diarrhoea</td></tr><tr><td style=\"white-space:nowrap\">DisturbanceOfConsciousness<a name=\"cs-symptoms-DisturbanceOfConsciousness\"> </a></td><td>Disturbance of Consciousness</td></tr><tr><td style=\"white-space:nowrap\">GeneralWeakness<a name=\"cs-symptoms-GeneralWeakness\"> </a></td><td>General Weakness</td></tr><tr><td style=\"white-space:nowrap\">Headache<a name=\"cs-symptoms-Headache\"> </a></td><td>Headache</td></tr><tr><td style=\"white-space:nowrap\">HistoryOfFeverOrChills<a name=\"cs-symptoms-HistoryOfFeverOrChills\"> </a></td><td>History Of Fever Or Chills</td></tr><tr><td style=\"white-space:nowrap\">IrritabilityConfusion<a name=\"cs-symptoms-IrritabilityConfusion\"> </a></td><td>Irritability / Confusion</td></tr><tr><td style=\"white-space:nowrap\">JointPain<a name=\"cs-symptoms-JointPain\"> </a></td><td>Joint Pain</td></tr><tr><td style=\"white-space:nowrap\">LossOfSmell<a name=\"cs-symptoms-LossOfSmell\"> </a></td><td>Loss of smell</td></tr><tr><td style=\"white-space:nowrap\">LossOfTaste<a name=\"cs-symptoms-LossOfTaste\"> </a></td><td>Loss of Taste</td></tr><tr><td style=\"white-space:nowrap\">MuscularPain<a name=\"cs-symptoms-MuscularPain\"> </a></td><td>Muscular pain</td></tr><tr><td style=\"white-space:nowrap\">Nausea/vomiting<a name=\"cs-symptoms-Nausea.47vomiting\"> </a></td><td>Nausea/vomiting</td></tr><tr><td style=\"white-space:nowrap\">Redeyes<a name=\"cs-symptoms-Redeyes\"> </a></td><td>Red eyes (Conjunctival hyperemia)</td></tr><tr><td style=\"white-space:nowrap\">RunnyNose<a name=\"cs-symptoms-RunnyNose\"> </a></td><td>Runny nose</td></tr><tr><td style=\"white-space:nowrap\">ShortnessOfBreath<a name=\"cs-symptoms-ShortnessOfBreath\"> </a></td><td>Shortness of breath (Acute respiratory distress)</td></tr><tr><td style=\"white-space:nowrap\">Sneezing<a name=\"cs-symptoms-Sneezing\"> </a></td><td>Sneezing</td></tr><tr><td style=\"white-space:nowrap\">SoreThroat<a name=\"cs-symptoms-SoreThroat\"> </a></td><td>Sore Throat</td></tr><tr><td style=\"white-space:nowrap\">Tiredness<a name=\"cs-symptoms-Tiredness\"> </a></td><td>Tiredness</td></tr><tr><td style=\"white-space:nowrap\">Other<a name=\"cs-symptoms-Other\"> </a></td><td>Other (specify)</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://example.com/fhir/example/CodeSystem/cs-symptoms"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0-test"];
+  fhir:CodeSystem.name [ fhir:value "CSSymptoms"];
+  fhir:CodeSystem.title [ fhir:value "Presenting symptoms"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2022-08-25T11:38:34+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "OpenHIE"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://xxhl7.org/Special/committees/[something]" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "A list of symptoms"];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "21"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "AbdominalPain" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Abdominal Pain" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "Chestpain" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Chest pain" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "Cough" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Cough" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "Diarrhoea" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Diarrhoea" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "DisturbanceOfConsciousness" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Disturbance of Consciousness" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "GeneralWeakness" ];
+     fhir:CodeSystem.concept.display [ fhir:value "General Weakness" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "Headache" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Headache" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "HistoryOfFeverOrChills" ];
+     fhir:CodeSystem.concept.display [ fhir:value "History Of Fever Or Chills" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "IrritabilityConfusion" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Irritability / Confusion" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "JointPain" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Joint Pain" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "LossOfSmell" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Loss of smell" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "LossOfTaste" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Loss of Taste" ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "MuscularPain" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Muscular pain" ]
+  ], [
+     fhir:index 13;
+     fhir:CodeSystem.concept.code [ fhir:value "Nausea/vomiting" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Nausea/vomiting" ]
+  ], [
+     fhir:index 14;
+     fhir:CodeSystem.concept.code [ fhir:value "Redeyes" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Red eyes (Conjunctival hyperemia)" ]
+  ], [
+     fhir:index 15;
+     fhir:CodeSystem.concept.code [ fhir:value "RunnyNose" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Runny nose" ]
+  ], [
+     fhir:index 16;
+     fhir:CodeSystem.concept.code [ fhir:value "ShortnessOfBreath" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Shortness of breath (Acute respiratory distress)" ]
+  ], [
+     fhir:index 17;
+     fhir:CodeSystem.concept.code [ fhir:value "Sneezing" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Sneezing" ]
+  ], [
+     fhir:index 18;
+     fhir:CodeSystem.concept.code [ fhir:value "SoreThroat" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Sore Throat" ]
+  ], [
+     fhir:index 19;
+     fhir:CodeSystem.concept.code [ fhir:value "Tiredness" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Tiredness" ]
+  ], [
+     fhir:index 20;
+     fhir:CodeSystem.concept.code [ fhir:value "Other" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Other (specify)" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-symptoms.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

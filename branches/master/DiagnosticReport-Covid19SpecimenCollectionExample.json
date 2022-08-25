@@ -1,0 +1,56 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "Covid19SpecimenCollectionExample",
+  "meta": {
+    "profile": [
+      "http://example.com/fhir/example/StructureDefinition/covid19-specimen-collection"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 100156-9}\">SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Jane Smith (OFFICIAL)</b> female, DoB: 1986-06-04 ( id: PASSPORT1234567)</td></tr><tr><td>Identifier:</td><td> id: ?ngen-9?</td></tr></table><p><b>Report Details</b></p></div>"
+  },
+  "extension": [
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/covid19-specimen-forwarded",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "Yes"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/covid-19reference-lab",
+      "valueReference": {
+        "reference": "Organization/Covid19Laboratory"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "id": "12341324"
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "100156-9"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Covid19PatientExample"
+  },
+  "encounter": {
+    "reference": "Encounter/Covid19AssessmentEncounterExample"
+  },
+  "specimen": [
+    {
+      "reference": "Specimen/Covid19SpecimenExample"
+    }
+  ]
+}

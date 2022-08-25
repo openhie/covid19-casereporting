@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-patient-outcome"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-cs-patient-outcome.html"><code>http://example.com/fhir/example/CodeSystem/cs-patient-outcome</code></a></li></ul></div>
+  </text>
+  <url value="http://example.com/fhir/example/ValueSet/vs-patient-outcome"/>
+  <version value="0.1.0-test"/>
+  <name value="VSPatientOutcome"/>
+  <title value="Patient Outcome"/>
+  <status value="active"/>
+  <date value="2022-08-25T11:38:34+00:00"/>
+  <publisher value="OpenHIE"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://xxhl7.org/Special/committees/[something]"/>
+    </telecom>
+  </contact>
+  <description value="A list of Patient Outcomes"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://example.com/fhir/example/CodeSystem/cs-patient-outcome"/>
+    </include>
+  </compose>
+</ValueSet>

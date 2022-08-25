@@ -1,0 +1,101 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-assessment-reason> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cs-assessment-reason"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://example.com/fhir/example/CodeSystem/cs-assessment-reason defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CaseContact<a name=\"cs-assessment-reason-CaseContact\"> </a></td><td>Contact of a case</td></tr><tr><td style=\"white-space:nowrap\">Entry<a name=\"cs-assessment-reason-Entry\"> </a></td><td>Entry into a country</td></tr><tr><td style=\"white-space:nowrap\">FO<a name=\"cs-assessment-reason-FO\"> </a></td><td>Follow-up</td></tr><tr><td style=\"white-space:nowrap\">HW<a name=\"cs-assessment-reason-HW\"> </a></td><td>Health worker</td></tr><tr><td style=\"white-space:nowrap\">OtherFrontlineWorker<a name=\"cs-assessment-reason-OtherFrontlineWorker\"> </a></td><td>Other frontline worker</td></tr><tr><td style=\"white-space:nowrap\">Post<a name=\"cs-assessment-reason-Post\"> </a></td><td>Post-mortem</td></tr><tr><td style=\"white-space:nowrap\">Quarantine<a name=\"cs-assessment-reason-Quarantine\"> </a></td><td>Quarantine</td></tr><tr><td style=\"white-space:nowrap\">RDT<a name=\"cs-assessment-reason-RDT\"> </a></td><td>RDT confirmatory</td></tr><tr><td style=\"white-space:nowrap\">Surveillance<a name=\"cs-assessment-reason-Surveillance\"> </a></td><td>Surveillance</td></tr><tr><td style=\"white-space:nowrap\">Symptomatic<a name=\"cs-assessment-reason-Symptomatic\"> </a></td><td>Symptomatic/Illness</td></tr><tr><td style=\"white-space:nowrap\">Travel<a name=\"cs-assessment-reason-Travel\"> </a></td><td>Travel out of country</td></tr><tr><td style=\"white-space:nowrap\">Voluntary<a name=\"cs-assessment-reason-Voluntary\"> </a></td><td>Voluntary</td></tr><tr><td style=\"white-space:nowrap\">Other<a name=\"cs-assessment-reason-Other\"> </a></td><td>Other (specify)</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://example.com/fhir/example/CodeSystem/cs-assessment-reason"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0-test"];
+  fhir:CodeSystem.name [ fhir:value "CSAssessmentReason"];
+  fhir:CodeSystem.title [ fhir:value "Assessment Reason codes"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2022-08-25T11:38:34+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "OpenHIE"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://xxhl7.org/Special/committees/[something]" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "A list of assessment reasons"];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "13"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "CaseContact" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Contact of a case" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "Entry" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Entry into a country" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "FO" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Follow-up" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "HW" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Health worker" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "OtherFrontlineWorker" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Other frontline worker" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "Post" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Post-mortem" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "Quarantine" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Quarantine" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "RDT" ];
+     fhir:CodeSystem.concept.display [ fhir:value "RDT confirmatory" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "Surveillance" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Surveillance" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "Symptomatic" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Symptomatic/Illness" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "Travel" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Travel out of country" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "Voluntary" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Voluntary" ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "Other" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Other (specify)" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-assessment-reason.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

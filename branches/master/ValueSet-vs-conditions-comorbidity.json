@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-conditions-comorbidity",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-conditions-comorbidity.html\"><code>http://example.com/fhir/example/CodeSystem/cs-conditions-comorbidity</code></a></li></ul></div>"
+  },
+  "url": "http://example.com/fhir/example/ValueSet/vs-conditions-comorbidity",
+  "version": "0.1.0-test",
+  "name": "VSConditionsComorbidity",
+  "title": "List of Conditions / Comorbidity",
+  "status": "active",
+  "date": "2022-08-25T11:38:34+00:00",
+  "publisher": "OpenHIE",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://xxhl7.org/Special/committees/[something]"
+        }
+      ]
+    }
+  ],
+  "description": "List of Conditions / Comorbidity",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://example.com/fhir/example/CodeSystem/cs-conditions-comorbidity"
+      }
+    ]
+  }
+}
