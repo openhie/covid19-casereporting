@@ -92,12 +92,6 @@ Description: "Covid19 Organization for case report - this represents a health fa
 * address.city 1..1
 * identifier 1..* 
 
-Extension: ClientMiddleName
-Id: client-middle-name
-Title: "Client Middle name"
-Description: "Client Middle name"
-* valueString only string
-
 Extension: ClientWardDivision
 Id: client-ward-division
 Title: "Client Ward Division"
@@ -116,8 +110,7 @@ Parent: Patient
 Id: covid19-patient
 Title: "Covid19 Patient"
 Description: "This Patient profile allows the exchange of patient information, including all the data associated with Covid19 patients"
-* name.given 1..* MS   //Client first name (s)
-* extension contains ClientMiddleName named clientMiddleName 0..1 MS  //Client Middle Name
+* name.given 1..* MS   //Client first name(s) & Mioddle Name(s)
 * name.family 1..1 MS // Surname
 * gender 1..1 MS // Client Sex
 * birthDate 1..1 MS   // Client Date of Birth
