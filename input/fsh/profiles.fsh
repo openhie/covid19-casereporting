@@ -98,13 +98,6 @@ Title: "Client Middle name"
 Description: "Client Middle name"
 * valueString only string
 
-Extension: ClientEstimatedAge
-Id: client-estimated-age
-Title: "Client Estimated Age"
-Description: "Client Estimated Age"
-* valueInteger only integer
-//* measurement from http://hl7.org/fhir/ValueSet/age-units
-
 Extension: ClientWardDivision
 Id: client-ward-division
 Title: "Client Ward Division"
@@ -128,7 +121,6 @@ Description: "This Patient profile allows the exchange of patient information, i
 * name.family 1..1 MS // Surname
 * gender 1..1 MS // Client Sex
 * birthDate 1..1 MS   // Client Date of Birth
-* extension contains ClientEstimatedAge named clientEstimatedAge 0..1 MS  //Estimated Age  -- Use days if <1 month, months if <1 year, years if > 1year
 * telecom MS  // Client telephone number and Client Email Addresss
 //Next of kin contact details
 * contact.name MS

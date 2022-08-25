@@ -101,7 +101,6 @@ Description: "Covid19 Patient example"
 * gender = #female
 * extension[keyPopulation].valueCodeableConcept = #GENERAL-POPULATION
 * birthDate = "1986-06-04"
-* extension[clientEstimatedAge].valueInteger = 45
 * telecom.system = #phone
 * telecom.value = "+27825556666"
 * address.country = "South Africa"
