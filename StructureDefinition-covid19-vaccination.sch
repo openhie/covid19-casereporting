@@ -14,6 +14,7 @@
     <sch:rule context="f:Immunization">
       <sch:assert test="count(f:extension[@url = 'http://example.com/fhir/example/StructureDefinition/covid19-next-vaccination-date']) &lt;= 1">extension with URL = 'http://example.com/fhir/example/StructureDefinition/covid19-next-vaccination-date': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://example.com/fhir/example/StructureDefinition/covid19-other-vaccine']) &lt;= 1">extension with URL = 'http://example.com/fhir/example/StructureDefinition/covid19-other-vaccine': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:lotNumber) &gt;= 1">lotNumber: minimum cardinality of 'lotNumber' is 1</sch:assert>
       <sch:assert test="count(f:protocolApplied) &gt;= 1">protocolApplied: minimum cardinality of 'protocolApplied' is 1</sch:assert>
       <sch:assert test="count(f:protocolApplied) &lt;= 1">protocolApplied: maximum cardinality of 'protocolApplied' is 1</sch:assert>
     </sch:rule>
