@@ -271,19 +271,19 @@ Title: "Covid19 Vaccine Code List"
 Description: "Covid19 Vaccine Code List"
 * include codes from system CSCovid19VaccineCodes
 
-CodeSystem: CSDoseNumber
-Id: cs-covid19-dose-number
-Title: "Covid19 Vaccination Dose Number"
-Description: "Covid19 Vaccination Dose Number"
+CodeSystem: CSVaccineSeries
+Id: cs-covid19-vaccine-series
+Title: "Covid19 Vaccination Series"
+Description: "Covid19 Vaccination Series"
 * #first "First" 
 * #second "Second" 
-* #booster "booster" 
+* #booster "Booster" 
 
-ValueSet: VSDoseNumber
+ValueSet: VSVaccineSeries
 Id: vs-covid19-dose-number
-Title: "Covid19 Vaccination Dose Number"
-Description: "Covid19 Vaccination Dose Number"
-* include codes from system CSDoseNumber
+Title: "Covid19 Vaccination Series"
+Description: "Covid19 Vaccination Series"
+* include codes from system CSVaccineSeries
 
 CodeSystem: CSTestResult
 Id: cs-covid19-test-result

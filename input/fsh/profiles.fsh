@@ -467,12 +467,12 @@ Title: "Covid19 Other vaccine"
 Description: "Covid19 Other vaccine"
 * valueString MS 
 
-Extension: DoseNumberCode
+Extension: VaccineSeries
 Id: covid19-dose-number-code
 Title: "Covid19 Dose Number "
 Description: "Covid19 Dose Number"
 * value[x] only CodeableConcept
-* valueCodeableConcept from VSDoseNumber
+* valueCodeableConcept from VSVaccineSeries
 
 Profile: Covid19Vaccination
 Parent: Immunization
@@ -482,8 +482,9 @@ Description: "Covid19 Vaccination"
 * patient MS // Patient reference
 * occurrenceDateTime 1..1 MS //Vaccination date
 * protocolApplied 1..1 MS
-* protocolApplied.series MS // #TODO
-* protocolApplied.doseNumberPositiveInt 1..1  MS //extension contains DoseNumberCode named covid19DoseNumberCode 1..1 MS 
+* protocolApplied.series 0..0 //  not used, using extension to bind to VSVaccineSeries
+* protocolApplied.extension contains  VaccineSeries named vaccineSeries 1..1 MS
+* protocolApplied.doseNumberPositiveInt 1..1  MS 
 * expirationDate MS    //Vaccine expiration date
 * extension contains Covid19NextVaccinationDate named covid19NextVaccinationDate 0..1 MS //Date of next vaccination (if scheduled)
 * vaccineCode MS    //Vaccine administered  
