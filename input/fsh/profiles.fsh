@@ -327,13 +327,6 @@ Description: "Covid19 Patient Outcome"
 * note MS    //additional notes
 * valueDateTime  MS // Date of Outcome 
 
-Extension: Covid19TestRequested
-Id: covid19-test-requested
-Title: "Covid19 Test Requested"
-Description: "Covid19 Test Requested"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSTestTypes
-
 Profile: Covid19LabOrder
 Parent: ServiceRequest
 Id: covid19-lab-order
@@ -345,10 +338,10 @@ Description: "Covid19 Lab Order"
 * reasonCode from VSAssessmentReason 
 //* extension contains OtherReasonforAssessment named otherReasonforTesting 0..1 MS   #TODO
 * authoredOn  1..1 MS  
-* extension contains Covid19TestRequested named covid19TestRequested 1..1 MS   //could rather bind to field code?
 * encounter MS //
 * requester MS // Provider name
 * authoredOn 1..1 MS // Order time
+* code from VSTestTypes
 * code 1..1 MS // Test request Code
 
 Extension: Covid19SpecimenType

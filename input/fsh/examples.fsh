@@ -266,9 +266,8 @@ Description: "Covid19 Lab Order example"
 * subject = Reference(Covid19PatientExample) 
 * reasonCode  = #Surveillance
 * authoredOn  = "2022-07-28"
-* extension[covid19TestRequested].valueCodeableConcept = #Rapid
 * status = #Pending
-* code = $LNC#75618-9   // #todo re-check the LOINC codes
+* code =  #Rapid //$LNC#75618-9   // #todo re-check the LOINC codes
 
 Instance: Covid19SpecimenExample
 InstanceOf: Covid19Specimen
