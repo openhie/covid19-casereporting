@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-08-25T11:38:34+00:00",
+  "date": "2022-08-31T09:33:23+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -670,14 +670,27 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/cs-covid19-vaccine-series"
+        },
+        "name": "Covid19 Vaccination Series",
+        "description": "Covid19 Vaccination Series"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ValueSet"
           }
         ],
         "reference": {
           "reference": "ValueSet/vs-covid19-dose-number"
         },
-        "name": "Covid19 Vaccination Dose Number",
-        "description": "Covid19 Vaccination Dose Number"
+        "name": "Covid19 Vaccination Series",
+        "description": "Covid19 Vaccination Series"
       },
       {
         "extension": [
@@ -1557,19 +1570,6 @@
         },
         "name": "Covid19 Reason Test not performed",
         "description": "Covid19 Reason test not performed"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-covid19-dose-number"
-        },
-        "name": "Covid19 Vaccination Dose Number",
-        "description": "Covid19 Vaccination Dose Number"
       },
       {
         "extension": [

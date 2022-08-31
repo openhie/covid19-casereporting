@@ -5,19 +5,19 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-covid19-dose-number> a fhir:CodeSystem;
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-covid19-vaccine-series> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "cs-covid19-dose-number"];
+  fhir:Resource.id [ fhir:value "cs-covid19-vaccine-series"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://example.com/fhir/example/CodeSystem/cs-covid19-dose-number defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">first<a name=\"cs-covid19-dose-number-first\"> </a></td><td>First</td></tr><tr><td style=\"white-space:nowrap\">second<a name=\"cs-covid19-dose-number-second\"> </a></td><td>Second</td></tr><tr><td style=\"white-space:nowrap\">booster<a name=\"cs-covid19-dose-number-booster\"> </a></td><td>booster</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://example.com/fhir/example/CodeSystem/cs-covid19-vaccine-series defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">first<a name=\"cs-covid19-vaccine-series-first\"> </a></td><td>First</td></tr><tr><td style=\"white-space:nowrap\">second<a name=\"cs-covid19-vaccine-series-second\"> </a></td><td>Second</td></tr><tr><td style=\"white-space:nowrap\">booster<a name=\"cs-covid19-vaccine-series-booster\"> </a></td><td>Booster</td></tr></table></div>"
   ];
-  fhir:CodeSystem.url [ fhir:value "http://example.com/fhir/example/CodeSystem/cs-covid19-dose-number"];
+  fhir:CodeSystem.url [ fhir:value "http://example.com/fhir/example/CodeSystem/cs-covid19-vaccine-series"];
   fhir:CodeSystem.version [ fhir:value "0.1.0-test"];
-  fhir:CodeSystem.name [ fhir:value "CSDoseNumber"];
-  fhir:CodeSystem.title [ fhir:value "Covid19 Vaccination Dose Number"];
+  fhir:CodeSystem.name [ fhir:value "CSVaccineSeries"];
+  fhir:CodeSystem.title [ fhir:value "Covid19 Vaccination Series"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2022-08-25T11:38:34+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2022-08-31T09:33:23+00:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "OpenHIE"];
   fhir:CodeSystem.contact [
      fhir:index 0;
@@ -27,7 +27,7 @@
        fhir:ContactPoint.value [ fhir:value "http://xxhl7.org/Special/committees/[something]" ]
      ]
   ];
-  fhir:CodeSystem.description [ fhir:value "Covid19 Vaccination Dose Number"];
+  fhir:CodeSystem.description [ fhir:value "Covid19 Vaccination Series"];
   fhir:CodeSystem.jurisdiction [
      fhir:index 0;
      fhir:CodeableConcept.coding [
@@ -49,12 +49,12 @@
   ], [
      fhir:index 2;
      fhir:CodeSystem.concept.code [ fhir:value "booster" ];
-     fhir:CodeSystem.concept.display [ fhir:value "booster" ]
+     fhir:CodeSystem.concept.display [ fhir:value "Booster" ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-covid19-dose-number.ttl> a owl:Ontology;
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-covid19-vaccine-series.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
