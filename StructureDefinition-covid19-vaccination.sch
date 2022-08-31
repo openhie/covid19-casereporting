@@ -333,8 +333,8 @@
   <sch:pattern>
     <sch:title>f:Immunization/f:protocolApplied</sch:title>
     <sch:rule context="f:Immunization/f:protocolApplied">
-      <sch:assert test="count(f:extension[@url = 'http://example.com/fhir/example/StructureDefinition/covid19-dose-number-code']) &gt;= 1">extension with URL = 'http://example.com/fhir/example/StructureDefinition/covid19-dose-number-code': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://example.com/fhir/example/StructureDefinition/covid19-dose-number-code']) &lt;= 1">extension with URL = 'http://example.com/fhir/example/StructureDefinition/covid19-dose-number-code': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://example.com/fhir/example/StructureDefinition/covid19-vaccine-series']) &gt;= 1">extension with URL = 'http://example.com/fhir/example/StructureDefinition/covid19-vaccine-series': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://example.com/fhir/example/StructureDefinition/covid19-vaccine-series']) &lt;= 1">extension with URL = 'http://example.com/fhir/example/StructureDefinition/covid19-vaccine-series': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:series) &lt;= 0">series: maximum cardinality of 'series' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>

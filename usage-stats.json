@@ -53,14 +53,6 @@
       ]
     },
     {
-      "url": "http://example.com/fhir/example/StructureDefinition/covid19-dose-number-code",
-      "title": "Covid19 Vaccine Series",
-      "types": [
-        "CodeableConcept",
-        "CodeableConcept"
-      ]
-    },
-    {
       "url": "http://example.com/fhir/example/StructureDefinition/covid19-long-covid-description",
       "title": "Covid19 Date Recovered",
       "types": [
@@ -135,6 +127,14 @@
     {
       "url": "http://example.com/fhir/example/StructureDefinition/covid19-vaccine-dose-received",
       "title": "Covid19 Vaccine Dose Received",
+      "types": [
+        "CodeableConcept",
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/covid19-vaccine-series",
+      "title": "Covid19 Vaccine Series",
       "types": [
         "CodeableConcept",
         "CodeableConcept"
@@ -242,10 +242,6 @@
       "Bundle.entry.resource",
       "Observation"
     ],
-    "http://example.com/fhir/example/StructureDefinition/covid19-dose-number-code": [
-      "Bundle.entry.resource.protocolApplied",
-      "Immunization.protocolApplied"
-    ],
     "http://example.com/fhir/example/StructureDefinition/covid19-long-covid-description": [
       "Bundle.entry.resource",
       "Observation"
@@ -281,6 +277,10 @@
     "http://example.com/fhir/example/StructureDefinition/covid19-vaccine-dose-received": [
       "Bundle.entry.resource",
       "Encounter"
+    ],
+    "http://example.com/fhir/example/StructureDefinition/covid19-vaccine-series": [
+      "Bundle.entry.resource.protocolApplied",
+      "Immunization.protocolApplied"
     ],
     "http://example.com/fhir/example/StructureDefinition/key-population": [
       "Bundle.entry.resource",

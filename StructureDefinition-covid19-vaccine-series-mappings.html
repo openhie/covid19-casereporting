@@ -1,9 +1,13 @@
+<!-- get modelType -->
+
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>XXEXAMPLE.FHIR.UV.MYIG\Covid19 Vaccine Series - FHIR v4.0.1</title>
+    <title>XXEXAMPLE.FHIR.UV.MYIG\Covid19 Vaccine Series - Mappings - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -47,8 +51,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"3.49"}
-    h3,h4,h5,h6{--heading-prefix:"3.49"}</style>
+    <style type="text/css">h2{--heading-prefix:"3.30"}
+    h3,h4,h5,h6{--heading-prefix:"3.30"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -148,7 +152,7 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div class="col-12">
+<div style="counter-reset: section 5" class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Covid 19 Case Reporting and Lab Management - Local Development build (v0.1.0-test). See the <a href="http://xxsomewhere.org/fhir/myig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
@@ -159,58 +163,62 @@
 
 
 
+
+
+
+
 <ul class="nav nav-tabs">
 
-  <li class="active">
-    <a href="#">Narrative Content</a>
+  <li>
+    <a href="StructureDefinition-covid19-vaccine-series.html">Content</a>
   </li>
 
 
+
+  <li>
+    <a href="StructureDefinition-covid19-vaccine-series-definitions.html">Detailed Descriptions</a>
+  </li>
+
+
+
+  
+    <li class="active">
+      <a href="#">Mappings</a>
+    </li>
+  
+
+
+
+
+
   
     <li>
-      <a href="ValueSet-vs-covid19-dose-number.xml.html">XML</a>
+      <a href="StructureDefinition-covid19-vaccine-series.profile.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="ValueSet-vs-covid19-dose-number.json.html">JSON</a>
+      <a href="StructureDefinition-covid19-vaccine-series.profile.json.html">JSON</a>
     </li>
   
 
 
   
     <li>
-      <a href="ValueSet-vs-covid19-dose-number.ttl.html">TTL</a>
+      <a href="StructureDefinition-covid19-vaccine-series.profile.ttl.html">TTL</a>
     </li>
   
-
 
 
 </ul>
 
-  <a name="root"> </a>
-  <h2 id="root">ValueSet: Covid19 Vaccine Series
 
-  </h2>
+<a name="root"> </a>
+<h2 id="root">Extension: VaccineSeries - Mappings</h2>
   <table class="colsi">
-
     <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://example.com/fhir/example/ValueSet/vs-covid19-dose-number<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://example.com/fhir/example/ValueSet/vs-covid19-dose-number"/></span>
-      </td>
-      <td><i>Version</i>:
-      <span class="copy-text">0.1.0-test<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://example.com/fhir/example/ValueSet/vs-covid19-dose-number|0.1.0-test"/></span>
-      </td>
-    </tr>
-
-    <tr>
-
-
-
-
-
-
 
       <td colspan="2">
         
@@ -221,101 +229,34 @@
         
       </td>
 
-
-      <td>
-        <i>Responsible:</i> 
-
-        <a href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>
-
-      </td>
-
-
-      <td>
-        <i>Realm:</i> <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
-      </td>
-
-      <td><i>Computable Name</i>: <span style="font-family: monospace;">VSVaccineSeries</span></td>
     </tr>
-
-
-
-
   </table>
 
-<p>
-<p>Covid19 Vaccine Series</p>
 
-</p>
-
-
-  <p>
-    <b>References</b>
-  </p>
-  
-<ul>
- <li><a href="StructureDefinition-covid19-dose-number-code.html">Covid19 Vaccine Series</a></li>
-</ul>
-
+<p>Mappings for the covid19-vaccine-series extension.</p>
 
   <!-- insert intro if present -->
   
 
 
 
-  <a name="definition"> </a>
+  <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>VaccineSeries</b></td></tr>
+ <tr><td>Extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;value[x] (valueCodeableConcept)</td><td>N/A</td> </tr>
+</table>
 
-<!-- Content Logical Definition heading in the fragment -->
-  <h3>Logical Definition (CLD)</h3>
-<div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-cs-covid19-vaccine-series.html"><code>http://example.com/fhir/example/CodeSystem/cs-covid19-vaccine-series</code></a></li></ul></div>
-
-  <p>&#160;</p>
-  <a name="expansion"> </a>
-  <h3 id="expansion">Expansion</h3>
-
-  <div xmlns="http://www.w3.org/1999/xhtml"><p>This value set contains 3 concepts</p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-cs-covid19-vaccine-series.html">Covid19 Vaccination Series v0.1.0-test (CodeSystem)</a></p><p>All codes in this table are from the system <a href="CodeSystem-cs-covid19-vaccine-series.html"><code>http://example.com/fhir/example/CodeSystem/cs-covid19-vaccine-series</code></a></p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap"><a name="http---example.com-fhir-example-CodeSystem-cs-covid19-vaccine-series-first"> </a>  <a href="CodeSystem-cs-covid19-vaccine-series.html#cs-covid19-vaccine-series-first">first</a></td><td>First</td></tr><tr><td style="white-space:nowrap"><a name="http---example.com-fhir-example-CodeSystem-cs-covid19-vaccine-series-second"> </a>  <a href="CodeSystem-cs-covid19-vaccine-series.html#cs-covid19-vaccine-series-second">second</a></td><td>Second</td></tr><tr><td style="white-space:nowrap"><a name="http---example.com-fhir-example-CodeSystem-cs-covid19-vaccine-series-booster"> </a>  <a href="CodeSystem-cs-covid19-vaccine-series.html#cs-covid19-vaccine-series-booster">booster</a></td><td>Booster</td></tr></table></div>
-
-  <hr/>
-  <p>
-    Explanation of the columns that may appear on this page:
-  </p>
-  <table class="grid">
-    <tr>
-      <td>Level</td>
-      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
-          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
-    </tr>
-    <tr>
-      <td>System</td>
-      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
-    </tr>
-    <tr>
-      <td>Code</td>
-      <td>The code (used as the code in the resource instance)</td>
-    </tr>
-    <tr>
-      <td>Display</td>
-      <td>The display (used in the <i>display</i> element of a <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
-    </tr>
-    <tr>
-      <td>Definition</td>
-      <td>An explanation of the meaning of the concept</td>
-    </tr>
-    <tr>
-      <td>Comments</td>
-      <td>Additional notes about how to use the code</td>
-    </tr>
-  </table>
-
-  
 
   <!-- insert notes if present -->
   
 
 
 
-  
-
 </div>
+
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -323,6 +264,29 @@
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    try {
+      var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+    } catch(exception) {
+    }
+
+    if (!currentTabIndex)
+      currentTabIndex = '0';
+
+    $( '#tabs' ).tabs({
+      active: currentTabIndex,
+      activate: function( event, ui ) {
+        var active = $('.selector').tabs('option', 'active');
+        currentTabIndex = ui.newTab.index();
+        document.activeElement.blur();
+        try {
+          sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+        } catch(exception) {
+        }
+      }
+    });
+  </script>
 
   <script type="text/javascript">
     $(document).ready(function(){
@@ -338,7 +302,7 @@
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 31, 2022 09:56+0000">2022-08-31</span>
+          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 31, 2022 10:36+0000">2022-08-31</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
