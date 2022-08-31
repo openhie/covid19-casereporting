@@ -41,6 +41,7 @@ Title: "Covid19 Case Reporting Composition"
     covid19EverHospitalized 1..1 and
     covid19Admission 0..1 and
     covid19Symptom 0..* and 
+    covid19ComorbidityPresent 1..1 and
     covid19ConditionsComorbidity 0..* and
     covid19Diagnosis 0..1 and
     hivDiagnosis 0..1 and
@@ -54,6 +55,7 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry[covid19EverHospitalized] only Reference(Covid19EverHospitalized)
 * section[covid19AssessmentSection].entry[covid19Admission] only Reference(Covid19Admission)
 * section[covid19AssessmentSection].entry[covid19Symptom] only Reference(Covid19Symptom)
+* section[covid19AssessmentSection].entry[covid19ComorbidityPresent] only Reference(Covid19ComorbidityPresent)
 * section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
 * section[covid19AssessmentSection].entry[covid19Diagnosis] only Reference(Covid19Diagnosis)
 * section[covid19AssessmentSection].entry[hivDiagnosis] only Reference(HIVDiagnosis)
@@ -235,7 +237,8 @@ Description: "Covid19 Symptom"
 * valueCodeableConcept from VSSymptoms
 * valueDateTime MS // Date of onset of symptoms
 
-Extension: Covid19ComorbidityPresent
+Profile: Covid19ComorbidityPresent
+Parent: Observation
 Id: covid19-comorbidity-present
 Title: "Covid19 Comorbidity Present"
 Description: "Covid19 Comorbidity Present"
@@ -262,7 +265,6 @@ Title: "Covid19 Conditions or comorbidity"
 Description: "Covid19 Conditions or comorbidity"
 * code MS
 * code from VSConditionsComorbidity 
-* extension contains Covid19ComorbidityPresent named covid19ComorbidityPresent 0..1 MS   
 * extension contains OtherConditionsComorbidity named otherConditionsComorbidity 0..1 MS  
 
 Extension: Covid19VaccineDoseReceived

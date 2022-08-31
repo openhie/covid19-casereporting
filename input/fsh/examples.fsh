@@ -16,6 +16,8 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19PresentationExample
 * entry[+].fullUrl = "Composition/Covid19SymptomExample"
 * entry[=].resource = Covid19SymptomExample
+* entry[+].fullUrl = "Composition/Covid19ComorbidityPresentExample"
+* entry[=].resource = Covid19ComorbidityPresentExample
 * entry[+].fullUrl = "Composition/Covid19ConditionsComorbidityExample"
 * entry[=].resource = Covid19ConditionsComorbidityExample
 * entry[+].fullUrl = "Composition/Covid19DiagnosisExample"
@@ -61,6 +63,7 @@ Description: "Basic Composition example"
 * section[=].entry[+] = Reference(Covid19ReasonforAssessmentExample)
 * section[=].entry[+] = Reference(Covid19PresentationExample)
 * section[=].entry[+] = Reference(Covid19SymptomExample)
+* section[=].entry[+] = Reference(Covid19ComorbidityPresentExample) 
 * section[=].entry[+] = Reference(Covid19ConditionsComorbidityExample) 
 * section[=].entry[+] = Reference(Covid19DiagnosisExample)   
 * section[=].entry[+] = Reference(HIVDiagnosisExample) 
@@ -172,6 +175,17 @@ Description: "Covid19 Symptom example"
 * valueCodeableConcept = #JointPain
 * valueDateTime = "2022-07-28"
 
+Instance: Covid19ComorbidityPresentExample
+InstanceOf: Observation
+Usage: #example
+Title: "Covid19 Comorbidity Present example"
+Description: "Covid19 Comorbidity Present example"
+* encounter = Reference(Covid19AssessmentEncounterExample) 
+* subject = Reference(Covid19PatientExample) 
+* status = #final
+* code = $LNC#83243-6  
+* valueCodeableConcept = #Yes
+
 Instance: Covid19ConditionsComorbidityExample
 InstanceOf: Covid19ConditionsComorbidity
 Usage: #example
@@ -179,7 +193,6 @@ Title: "Covid19 Conditions or comorbidity example"
 Description: "Covid19 Conditions or comorbidity example"
 * subject = Reference(Covid19PatientExample) 
 * encounter = Reference(Covid19AssessmentEncounterExample) 
-* extension[covid19ComorbidityPresent].valueCodeableConcept = #Yes  
 * code = #ChronicLungDisease
 * extension[otherConditionsComorbidity].valueString = "none"
 
