@@ -36,46 +36,50 @@
      fhir:Bundle.entry.resource <Composition/Covid19SymptomExample>
   ], [
      fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19ComorbidityPresentExample" ];
+     fhir:Bundle.entry.resource <Composition/Covid19ComorbidityPresentExample>
+  ], [
+     fhir:index 7;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19ConditionsComorbidityExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19ConditionsComorbidityExample>
   ], [
-     fhir:index 7;
+     fhir:index 8;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19DiagnosisExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19DiagnosisExample>
   ], [
-     fhir:index 8;
+     fhir:index 9;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19EverHospitalizedExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19EverHospitalizedExample>
   ], [
-     fhir:index 9;
+     fhir:index 10;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19AssessmentVaccinationExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19AssessmentVaccinationExample>
   ], [
-     fhir:index 10;
+     fhir:index 11;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19PatientOutcomeExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19PatientOutcomeExample>
   ], [
-     fhir:index 11;
+     fhir:index 12;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19LabOrderExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19LabOrderExample>
   ], [
-     fhir:index 12;
+     fhir:index 13;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19SpecimenExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19SpecimenExample>
   ], [
-     fhir:index 13;
+     fhir:index 14;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19SpecimenCollectionExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19SpecimenCollectionExample>
   ], [
-     fhir:index 14;
+     fhir:index 15;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19LabOrderCancellationExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19LabOrderCancellationExample>
   ], [
-     fhir:index 15;
+     fhir:index 16;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19LabResultsExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19LabResultsExample>
   ], [
-     fhir:index 16;
+     fhir:index 17;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19VaccinationExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19VaccinationExample>
   ] .
@@ -156,22 +160,26 @@
        fhir:Reference.reference [ fhir:value "Observation/Covid19SymptomExample" ]
      ], [
        fhir:index 4;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19ComorbidityPresentExample>;
+       fhir:Reference.reference [ fhir:value "Observation/Covid19ComorbidityPresentExample" ]
+     ], [
+       fhir:index 5;
        fhir:link <http://xxsomewhere.org/fhir/myig/Condition/Covid19ConditionsComorbidityExample>;
        fhir:Reference.reference [ fhir:value "Condition/Covid19ConditionsComorbidityExample" ]
      ], [
-       fhir:index 5;
+       fhir:index 6;
        fhir:link <http://xxsomewhere.org/fhir/myig/Condition/Covid19DiagnosisExample>;
        fhir:Reference.reference [ fhir:value "Condition/Covid19DiagnosisExample" ]
      ], [
-       fhir:index 6;
+       fhir:index 7;
        fhir:link <http://xxsomewhere.org/fhir/myig/Condition/HIVDiagnosisExample>;
        fhir:Reference.reference [ fhir:value "Condition/HIVDiagnosisExample" ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:link <http://xxsomewhere.org/fhir/myig/Immunization/Covid19AssessmentVaccinationExample>;
        fhir:Reference.reference [ fhir:value "Immunization/Covid19AssessmentVaccinationExample" ]
      ], [
-       fhir:index 8;
+       fhir:index 9;
        fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19PatientOutcomeExample>;
        fhir:Reference.reference [ fhir:value "Observation/Covid19PatientOutcomeExample" ]
      ]
@@ -455,6 +463,36 @@
      ]
   ] .
 
+<Composition/Covid19ComorbidityPresentExample> a fhir:Observation;
+  fhir:Resource.id [ fhir:value "Covid19ComorbidityPresentExample"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19ComorbidityPresentExample\" </p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbidities and coexisting conditions <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#83243-6)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Yes)</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:83243-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "83243-6" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
+     fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
+  ];
+  fhir:Observation.encounter [
+     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
+     fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "Yes" ]
+     ]
+  ] .
+
 <Composition/Covid19ConditionsComorbidityExample> a fhir:Condition;
   fhir:Resource.id [ fhir:value "Covid19ConditionsComorbidityExample"];
   fhir:Resource.meta [
@@ -466,19 +504,10 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition \"Covid19ConditionsComorbidityExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-conditions-comorbidity.html\">Covid19 Conditions or comorbidity</a></p></div><p><b>Covid19 Comorbidity Present</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Yes)</span></p><p><b>Other Conditions or Comorbidity</b>: none</p><p><b>code</b>: ChronicLungDisease <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#ChronicLungDisease)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition \"Covid19ConditionsComorbidityExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-conditions-comorbidity.html\">Covid19 Conditions or comorbidity</a></p></div><p><b>Other Conditions or Comorbidity</b>: none</p><p><b>code</b>: ChronicLungDisease <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#ChronicLungDisease)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p></div>"
   ];
   fhir:DomainResource.extension [
      fhir:index 0;
-     fhir:Extension.url [ fhir:value "http://example.com/fhir/example/StructureDefinition/covid19-comorbidity-present" ];
-     fhir:Extension.valueCodeableConcept [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.code [ fhir:value "Yes" ]
-       ]
-     ]
-  ], [
-     fhir:index 1;
      fhir:Extension.url [ fhir:value "http://example.com/fhir/example/StructureDefinition/covid19-other-conditions-comorbidity" ];
      fhir:Extension.valueString [ fhir:value "none" ]
   ];

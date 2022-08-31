@@ -12,7 +12,6 @@
   <sch:pattern>
     <sch:title>f:Condition</sch:title>
     <sch:rule context="f:Condition">
-      <sch:assert test="count(f:extension[@url = 'http://example.com/fhir/example/StructureDefinition/covid19-comorbidity-present']) &lt;= 1">extension with URL = 'http://example.com/fhir/example/StructureDefinition/covid19-comorbidity-present': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://example.com/fhir/example/StructureDefinition/covid19-other-conditions-comorbidity']) &lt;= 1">extension with URL = 'http://example.com/fhir/example/StructureDefinition/covid19-other-conditions-comorbidity': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -58,8 +57,6 @@
     <sch:rule context="f:Condition/f:extension">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
       <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])">Must have either extensions or value[x], not both (inherited)</sch:assert>
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both (inherited)</sch:assert>
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
       <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both (inherited)</sch:assert>
     </sch:rule>
