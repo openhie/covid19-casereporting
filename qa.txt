@@ -1,9 +1,9 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 283, warn = 133, info = 21
+err = 279, warn = 132, info = 21
 IG Publisher Version: 1.1.128
-Generated Wed Aug 31 14:43:06 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Wed Aug 31 20:09:52 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 21 / 24 / 0
  /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 53 / 71 / 36
  /github/workspace/fsh-generated/resources/CodeSystem-cs-admission-types : 2 / 0 / 2
@@ -45,7 +45,6 @@ Generated Wed Aug 31 14:43:06 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/ServiceRequest-Covid19LabOrderExample : 3 / 2 / 1
  /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-client-ward-division : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-conditions-comorbidity-extension : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid-19reference-lab : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination : 2 / 0 / 1
@@ -64,7 +63,6 @@ Generated Wed Aug 31 14:43:06 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-long-covid-description : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-next-vaccination-date : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-other-conditions-comorbidity : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-other-reason-for-Assessment : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-other-symptoms : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-other-vaccine : 2 / 0 / 1
@@ -220,7 +218,7 @@ WARNING: Bundle/Covid19BundleExample: Bundle.entry[6].resource.ofType(Observatio
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[7].resource.ofType(Condition).code.coding[0]: A code with no system has no defined meaning. A system should be provided
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[7].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[7].resource.ofType(Condition).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[7].resource.ofType(Condition).code: None of the codings provided are in the value set 'List of Conditions / Comorbidity' (http://example.com/fhir/example/ValueSet/vs-conditions-comorbidity), and a coding from this value set is required) (codes = null#ChronicLungDisease)
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[7].resource.ofType(Condition).code: None of the codings provided are in the value set 'List of Conditions / Comorbidity' (http://example.com/fhir/example/ValueSet/vs-conditions-comorbidity), and a coding from this value set is required) (codes = null#Other)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[8].resource.ofType(Condition).code.coding[0]: A code with no system has no defined meaning. A system should be provided
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[8].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[8].resource.ofType(Condition).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
@@ -372,7 +370,7 @@ ERROR: Composition/Covid19CompositionExample: Composition.section[3]: Slicing ca
 INFORMATION: Composition/Covid19CompositionExample: Composition: Composition.section:covid19PatientSection: Unable to check minimum required (Composition.section) due to lack of slicing validation (from http://example.com/fhir/example/StructureDefinition/covid19-composition)
 ERROR: Composition/Covid19CompositionExample: Composition.section[2].entry[4]: Unable to resolve resource with reference 'Covid19LabResultsExamples'
 == fsh-generated/resources/Condition-Covid19ConditionsComorbidityExample.json ==
-ERROR: Condition/Covid19ConditionsComorbidityExample: Condition.code: None of the codings provided are in the value set 'List of Conditions / Comorbidity' (http://example.com/fhir/example/ValueSet/vs-conditions-comorbidity), and a coding from this value set is required) (codes = null#ChronicLungDisease)
+ERROR: Condition/Covid19ConditionsComorbidityExample: Condition.code: None of the codings provided are in the value set 'List of Conditions / Comorbidity' (http://example.com/fhir/example/ValueSet/vs-conditions-comorbidity), and a coding from this value set is required) (codes = null#Other)
 WARNING: Condition/Covid19ConditionsComorbidityExample: Condition.code.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/Condition-Covid19DiagnosisExample.json ==
 WARNING: Condition/Covid19DiagnosisExample: Condition.code.coding[0]: A code with no system has no defined meaning. A system should be provided
@@ -450,10 +448,6 @@ WARNING: Specimen/Covid19SpecimenExample: Specimen.type.coding[0]: A code with n
 == fsh-generated/resources/StructureDefinition-client-ward-division.json ==
 ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/client-ward-division'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-client-ward-division.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/client-ward-division) does not match the URL (http://example.com/fhir/example/StructureDefinition/client-ward-division)
 ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-client-ward-division: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/client-ward-division vs http://example.com/fhir/example/StructureDefinition/client-ward-division
-== fsh-generated/resources/StructureDefinition-conditions-comorbidity-extension.json ==
-ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/conditions-comorbidity-extension'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-conditions-comorbidity-extension.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/conditions-comorbidity-extension) does not match the URL (http://example.com/fhir/example/StructureDefinition/conditions-comorbidity-extension)
-WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/conditions-comorbidity-extension'): The Implementation Guide contains no examples for this extension
-ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-conditions-comorbidity-extension: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/conditions-comorbidity-extension vs http://example.com/fhir/example/StructureDefinition/conditions-comorbidity-extension
 == fsh-generated/resources/StructureDefinition-covid-19reference-lab.json ==
 ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid-19reference-lab'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid-19reference-lab.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid-19reference-lab) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid-19reference-lab)
 ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid-19reference-lab: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid-19reference-lab vs http://example.com/fhir/example/StructureDefinition/covid-19reference-lab
@@ -516,9 +510,6 @@ ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-nex
 == fsh-generated/resources/StructureDefinition-covid19-organization.json ==
 ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-organization'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-organization) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid19-organization)
 ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-organization vs http://example.com/fhir/example/StructureDefinition/covid19-organization
-== fsh-generated/resources/StructureDefinition-covid19-other-conditions-comorbidity.json ==
-ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-other-conditions-comorbidity'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-other-conditions-comorbidity.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-other-conditions-comorbidity) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid19-other-conditions-comorbidity)
-ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-other-conditions-comorbidity: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-other-conditions-comorbidity vs http://example.com/fhir/example/StructureDefinition/covid19-other-conditions-comorbidity
 == fsh-generated/resources/StructureDefinition-covid19-other-reason-for-Assessment.json ==
 ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-other-reason-for-Assessment'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-other-reason-for-Assessment.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-other-reason-for-Assessment) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid19-other-reason-for-Assessment)
 WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-other-reason-for-Assessment'): The Implementation Guide contains no examples for this profile

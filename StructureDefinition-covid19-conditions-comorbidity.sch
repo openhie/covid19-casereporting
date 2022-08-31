@@ -10,12 +10,6 @@
     single schematron that validates contained resources (if you have any) 
   -->
   <sch:pattern>
-    <sch:title>f:Condition</sch:title>
-    <sch:rule context="f:Condition">
-      <sch:assert test="count(f:extension[@url = 'http://example.com/fhir/example/StructureDefinition/covid19-other-conditions-comorbidity']) &lt;= 1">extension with URL = 'http://example.com/fhir/example/StructureDefinition/covid19-other-conditions-comorbidity': maximum cardinality of 'extension' is 1</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:title>Condition</sch:title>
     <sch:rule context="f:Condition">
       <sch:assert test="exists(f:clinicalStatus) or exists(f:verificationStatus/f:coding/f:code/@value='entered-in-error') or not(exists(category[@value='problem-list-item']))">Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error and category is problem-list-item (inherited)</sch:assert>
@@ -57,8 +51,6 @@
     <sch:rule context="f:Condition/f:extension">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
       <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])">Must have either extensions or value[x], not both (inherited)</sch:assert>
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
