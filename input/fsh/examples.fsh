@@ -193,8 +193,8 @@ Title: "Covid19 Conditions or comorbidity example"
 Description: "Covid19 Conditions or comorbidity example"
 * subject = Reference(Covid19PatientExample) 
 * encounter = Reference(Covid19AssessmentEncounterExample) 
-* code = #ChronicLungDisease
-* extension[otherConditionsComorbidity].valueString = "none"
+* code = #Other
+* note.text = "Other condition details specified here"
 
 Instance: Covid19DiagnosisExample
 InstanceOf: Condition

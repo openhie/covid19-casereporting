@@ -245,19 +245,6 @@ Description: "Covid19 Comorbidity Present"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSYesNoUnknown
 
-Extension: OtherConditionsComorbidity
-Id: covid19-other-conditions-comorbidity
-Title: "Other Conditions or Comorbidity"
-Description: "Other Conditions or Comorbidity"
-* valueString only string
-
-Extension: ConditionsComorbidityExt
-Id: conditions-comorbidity-extension
-Title: "Covid19 Conditions or comorbidity"
-Description: "Covid19 Conditions or comorbidity"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSConditionsComorbidity
-
 Profile: Covid19ConditionsComorbidity
 Parent: Condition
 Id: covid19-conditions-comorbidity
@@ -265,7 +252,7 @@ Title: "Covid19 Conditions or comorbidity"
 Description: "Covid19 Conditions or comorbidity"
 * code MS
 * code from VSConditionsComorbidity 
-* extension contains OtherConditionsComorbidity named otherConditionsComorbidity 0..1 MS  
+* note MS  //#TODO: Conditional rule: mandatory if code = #Other
 
 Extension: Covid19VaccineDoseReceived
 Id: covid19-vaccine-dose-received
