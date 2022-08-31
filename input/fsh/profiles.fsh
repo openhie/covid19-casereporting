@@ -469,8 +469,8 @@ Description: "Covid19 Other vaccine"
 
 Extension: VaccineSeries
 Id: covid19-dose-number-code
-Title: "Covid19 Dose Number "
-Description: "Covid19 Dose Number"
+Title: "Covid19 Vaccine Series"
+Description: "Covid19 Vaccine Series"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSVaccineSeries
 

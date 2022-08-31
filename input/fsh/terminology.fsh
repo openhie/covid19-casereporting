@@ -281,8 +281,8 @@ Description: "Covid19 Vaccination Series"
 
 ValueSet: VSVaccineSeries
 Id: vs-covid19-dose-number
-Title: "Covid19 Vaccination Series"
-Description: "Covid19 Vaccination Series"
+Title: "Covid19 Vaccine Series"
+Description: "Covid19 Vaccine Series"
 * include codes from system CSVaccineSeries
 
 CodeSystem: CSTestResult
