@@ -336,7 +336,7 @@ Description: "Covid19 Lab Order"
 * intent = #order 
 * reasonCode  1..* MS //Reason for testing
 * reasonCode from VSAssessmentReason 
-//* extension contains OtherReasonforAssessment named otherReasonforTesting 0..1 MS   #TODO
+* note MS // for capturing other reasons for testing
 * authoredOn  1..1 MS  
 * encounter MS //
 * requester MS // Provider name
@@ -359,7 +359,6 @@ Description: "Covid19 Specimen"
 * type 1..1 MS 
 * type from VSCovid19SpecimenType
 * collection.collectedDateTime 1..1 MS  // Date specimen collected
-//* extension contains OtherReasonforAssessment named otherSpecimenType 0..1 MS   #TODo
 
 Extension: Covid19SpecimenForwarded
 Id: covid19-specimen-forwarded
