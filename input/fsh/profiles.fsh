@@ -472,4 +472,4 @@ Description: "Covid19 Vaccination"
 * vaccineCode MS    //Vaccine administered  
 * vaccineCode from VSCovid19VaccineCodes
 * extension contains Covid19OtherVaccine named covid19OtherVaccine 0..1 MS  //Other vaccine
-* lotNumber MS  //Vaccine lot number
+* lotNumber  1..1 MS  //Vaccine lot number
