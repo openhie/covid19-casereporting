@@ -1,11 +1,11 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 282, warn = 126, info = 21
+err = 284, warn = 128, info = 21
 IG Publisher Version: 1.1.128
-Generated Wed Aug 31 10:37:18 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Wed Aug 31 12:43:57 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 20 / 23 / 0
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 53 / 67 / 35
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 54 / 68 / 35
  /github/workspace/fsh-generated/resources/CodeSystem-cs-admission-types : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-assessment-reason : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-cancellation-reason : 2 / 0 / 2
@@ -31,7 +31,7 @@ Generated Wed Aug 31 10:37:18 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsExample : 4 / 3 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19SpecimenCollectionExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 1 / 2 / 1
- /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 2 / 2 / 1
+ /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 3 / 3 / 1
  /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 5 / 2 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19EverHospitalizedExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19PatientOutcomeExample : 1 / 1 / 1
@@ -227,6 +227,8 @@ WARNING: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(Immunizati
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(Immunization).vaccineCode.coding[0]: A code with no system has no defined meaning. A system should be provided
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(Immunization).patient: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(Immunization).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(Immunization).protocolApplied[0].extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'Covid19 Vaccine Series' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-series), and a coding from this value set is required) (codes = null#Booster)
+WARNING: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(Immunization).protocolApplied[0].extension[0].value.ofType(CodeableConcept).coding[0]: A code with no system has no defined meaning. A system should be provided
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(Immunization).vaccineCode: None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#PfizerBionTech)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[10].resource.ofType(Observation).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[10].resource.ofType(Observation).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
@@ -396,6 +398,8 @@ ERROR: Immunization/Covid19AssessmentVaccinationExample: Immunization.extension[
 WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.extension[0].value.ofType(CodeableConcept).coding[0]: A code with no system has no defined meaning. A system should be provided
 ERROR: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode: None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#PfizerBionTech)
 WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode.coding[0]: A code with no system has no defined meaning. A system should be provided
+ERROR: Immunization/Covid19AssessmentVaccinationExample: Immunization.protocolApplied[0].extension[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'Covid19 Vaccine Series' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-series), and a coding from this value set is required) (codes = null#Booster)
+WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.protocolApplied[0].extension[0].value.ofType(CodeableConcept).coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/Immunization-Covid19VaccinationExample.json ==
 ERROR: Immunization/Covid19VaccinationExample: Immunization.extension[0]: The Extension 'http://example.com/fhir/example/StructureDefinition/covid19-next-vaccination-date' definition allows for the types [dateTime] but found type date
 ERROR: Immunization/Covid19VaccinationExample: Immunization.extension[0].value.ofType(date): This element does not match any known slice  defined in the profile http://example.com/fhir/example/StructureDefinition/covid19-next-vaccination-date and slicing is CLOSED: Immunization.extension[0].value.ofType(date): Does not match slice 'valueDateTime' (discriminator: ($this is dateTime))
