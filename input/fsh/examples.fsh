@@ -228,6 +228,7 @@ Description: "Covid19 Vaccine Type Administered example"
 * occurrenceDateTime = "2022-07-28"
 * protocolApplied.doseNumberPositiveInt = 1
 * extension[vaccinationSourceOfInfo].valueCodeableConcept = #VaccineCard
+* protocolApplied.extension[vaccineSeries].valueCodeableConcept = #Booster
 
 Instance: Covid19PatientOutcomeExample
 InstanceOf: Covid19PatientOutcome

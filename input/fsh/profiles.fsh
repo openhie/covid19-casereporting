@@ -289,7 +289,8 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 * vaccineCode MS
 * vaccineCode from VSVaccineTypes 
 * protocolApplied.doseNumberPositiveInt MS
-* protocolApplied.series MS  ///Primary, Booster   #TODO
+* protocolApplied.series 0..0 //  not used, using extension to bind to VSVaccineSeries
+* protocolApplied.extension contains  VaccineSeries named vaccineSeries 1..1 MS
 * extension contains Covid19OtherVaccine named covid19OtherVaccine 0..1 MS  //Other vaccine
 * occurrenceDateTime  MS // Vaccination date    #TODO - check all required fields
 * extension contains VaccinationSourceOfInfo named vaccinationSourceOfInfo 0..1 MS //Source of Information
