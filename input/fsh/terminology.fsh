@@ -273,14 +273,14 @@ Description: "Covid19 Vaccine Code List"
 
 CodeSystem: CSVaccineSeries
 Id: cs-covid19-vaccine-series
-Title: "Covid19 Vaccination Series"
-Description: "Covid19 Vaccination Series"
+Title: "Covid19 Vaccine Series"
+Description: "Covid19 Vaccine Series"
 * #first "First" 
 * #second "Second" 
 * #booster "Booster" 
 
 ValueSet: VSVaccineSeries
-Id: vs-covid19-dose-number
+Id: vs-covid19-vaccine-series
 Title: "Covid19 Vaccine Series"
 Description: "Covid19 Vaccine Series"
 * include codes from system CSVaccineSeries

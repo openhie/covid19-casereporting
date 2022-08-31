@@ -468,7 +468,7 @@ Description: "Covid19 Other vaccine"
 * valueString MS 
 
 Extension: VaccineSeries
-Id: covid19-dose-number-code
+Id: covid19-vaccine-series
 Title: "Covid19 Vaccine Series"
 Description: "Covid19 Vaccine Series"
 * value[x] only CodeableConcept
