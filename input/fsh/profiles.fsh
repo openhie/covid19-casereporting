@@ -45,7 +45,8 @@ Title: "Covid19 Case Reporting Composition"
     covid19ConditionsComorbidity 0..* and
     covid19Diagnosis 0..1 and
     hivDiagnosis 0..1 and
-    covid19AssessmentVaccination 0..* and
+    covid19VaccineDoseReceived 1..1 and
+    covid19AssessmentVaccination 1..1 and
     covid19PatientOutcome 1..1
 * section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
 * section[covid19AssessmentSection].entry[covid19Presentation] only Reference(Covid19Presentation)
@@ -57,6 +58,7 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
 * section[covid19AssessmentSection].entry[covid19Diagnosis] only Reference(Covid19Diagnosis)
 * section[covid19AssessmentSection].entry[hivDiagnosis] only Reference(HIVDiagnosis)
+* section[covid19AssessmentSection].entry[covid19VaccineDoseReceived] only Reference(Covid19VaccineDoseReceived)  
 * section[covid19AssessmentSection].entry[covid19AssessmentVaccination] only Reference(Covid19AssessmentVaccination)
 * section[covid19AssessmentSection].entry[covid19PatientOutcome] only Reference(Covid19PatientOutcome)
 
@@ -170,8 +172,8 @@ Parent: Observation
 Id: covid19-date-last-hospitalized
 Title: "Covid19 Date last Hospitalized"
 Description: "Covid19 Date Last Hospitalized"
-* valueDateTime MS 
 * encounter 1..1 MS
+* effectiveDateTime MS
 
 Profile: Covid19EverHospitalized
 Parent: Observation
@@ -200,7 +202,6 @@ Description: "Covid19 Assessment Encounter"
 * period.start 1..1 MS  //Date of assessment
 * subject 1..1 MS //Patient reference
 //* period.end MS  //Date died  --> Refer to Outcome effectivedate
-* extension contains Covid19VaccineDoseReceived named covid19VaccineDoseReceived 1..1 MS  //Ever received a dose of COVID-19 vaccine // #TODO: Conditional rule: A Covid19AssessmentVaccination should be included if Yes
 * reasonCode 1..* MS  
 * reasonCode from VSAssessmentReason 
 * reasonCode.text MS
@@ -231,7 +232,8 @@ Description: "Covid19 Conditions or comorbidity"
 * code from VSConditionsComorbidity 
 * note MS  //OtherConditions   #TODO: Conditional rule: mandatory if code = #Other
 
-Extension: Covid19VaccineDoseReceived
+Profile: Covid19VaccineDoseReceived
+Parent: Observation
 Id: covid19-vaccine-dose-received
 Title: "Covid19 Vaccine Dose Received"
 Description: "Covid19 Vaccine Dose Received"
