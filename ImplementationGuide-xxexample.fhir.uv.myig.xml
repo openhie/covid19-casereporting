@@ -12,7 +12,7 @@
   <title value="Covid 19 Case Reporting and Lab Management"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-09-03T19:58:19+00:00"/>
+  <date value="2022-09-03T20:14:05+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -532,6 +532,14 @@
         <valueString value="Condition"/>
       </extension>
       <reference>
+        <reference value="Condition/Covid19PresentationExample"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
         <reference value="Condition/Covid19ConditionsComorbidityExample"/>
       </reference>
     </resource>
@@ -619,14 +627,6 @@
       </extension>
       <reference>
         <reference value="Observation/Covid19PatientOutcomeExample"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/Covid19PresentationExample"/>
       </reference>
     </resource>
     <resource>
