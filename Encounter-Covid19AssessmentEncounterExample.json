@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter \"Covid19AssessmentEncounterExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Covid19 Assessment Encounter</a></p></div><p><b>Covid19 Vaccine Dose Received</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Yes)</span></p><p><b>status</b>: finished</p><p><b>class</b>: SS (Details: [not stated] code SS = 'SS', stated as 'null')</p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter \"Covid19AssessmentEncounterExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Covid19 Assessment Encounter</a></p></div><p><b>Covid19 Vaccine Dose Received</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Yes)</span></p><p><b>status</b>: finished</p><p><b>class</b>: SS (Details: [not stated] code SS = 'SS', stated as 'null')</p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Other specified details <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Other)</span></p></div>"
   },
   "extension": [
     {
@@ -32,5 +32,15 @@
   "period": {
     "start": "2022-07-28",
     "end": "2022-08-15"
-  }
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "code": "Other"
+        }
+      ],
+      "text": "Other specified details"
+    }
+  ]
 }

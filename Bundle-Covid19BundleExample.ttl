@@ -24,62 +24,58 @@
      fhir:Bundle.entry.resource <Composition/Covid19AssessmentEncounterExample>
   ], [
      fhir:index 3;
-     fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19ReasonforAssessmentExample" ];
-     fhir:Bundle.entry.resource <Composition/Covid19ReasonforAssessmentExample>
-  ], [
-     fhir:index 4;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19PresentationExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19PresentationExample>
   ], [
-     fhir:index 5;
+     fhir:index 4;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19SymptomExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19SymptomExample>
   ], [
-     fhir:index 6;
+     fhir:index 5;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19ComorbidityPresentExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19ComorbidityPresentExample>
   ], [
-     fhir:index 7;
+     fhir:index 6;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19ConditionsComorbidityExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19ConditionsComorbidityExample>
   ], [
-     fhir:index 8;
+     fhir:index 7;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19DiagnosisExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19DiagnosisExample>
   ], [
-     fhir:index 9;
+     fhir:index 8;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19EverHospitalizedExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19EverHospitalizedExample>
   ], [
-     fhir:index 10;
+     fhir:index 9;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19AssessmentVaccinationExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19AssessmentVaccinationExample>
   ], [
-     fhir:index 11;
+     fhir:index 10;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19PatientOutcomeExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19PatientOutcomeExample>
   ], [
-     fhir:index 12;
+     fhir:index 11;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19LabOrderExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19LabOrderExample>
   ], [
-     fhir:index 13;
+     fhir:index 12;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19SpecimenExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19SpecimenExample>
   ], [
-     fhir:index 14;
+     fhir:index 13;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19SpecimenCollectionExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19SpecimenCollectionExample>
   ], [
-     fhir:index 15;
+     fhir:index 14;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19LabOrderCancellationExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19LabOrderCancellationExample>
   ], [
-     fhir:index 16;
+     fhir:index 15;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19LabResultsExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19LabResultsExample>
   ], [
-     fhir:index 17;
+     fhir:index 16;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19VaccinationExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19VaccinationExample>
   ] .
@@ -148,8 +144,7 @@
        fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
      ], [
        fhir:index 1;
-       fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19ReasonforAssessmentExample>;
-       fhir:Reference.reference [ fhir:value "Observation/Covid19ReasonforAssessmentExample" ]
+       fhir:Reference.reference [ fhir:value "Covid19ReasonforAssessmentExample" ]
      ], [
        fhir:index 2;
        fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19PresentationExample>;
@@ -327,7 +322,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter \"Covid19AssessmentEncounterExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Covid19 Assessment Encounter</a></p></div><p><b>Covid19 Vaccine Dose Received</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Yes)</span></p><p><b>status</b>: finished</p><p><b>class</b>: SS (Details: [not stated] code SS = 'SS', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter \"Covid19AssessmentEncounterExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Covid19 Assessment Encounter</a></p></div><p><b>Covid19 Vaccine Dose Received</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Yes)</span></p><p><b>status</b>: finished</p><p><b>class</b>: SS (Details: [not stated] code SS = 'SS', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Other specified details <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Other)</span></p></div>"
   ];
   fhir:DomainResource.extension [
      fhir:index 0;
@@ -350,43 +345,14 @@
   fhir:Encounter.period [
      fhir:Period.start [ fhir:value "2022-07-28"^^xsd:date ];
      fhir:Period.end [ fhir:value "2022-08-15"^^xsd:date ]
-  ] .
-
-<Composition/Covid19ReasonforAssessmentExample> a fhir:Observation;
-  fhir:Resource.id [ fhir:value "Covid19ReasonforAssessmentExample"];
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://example.com/fhir/example/StructureDefinition/covid19-reason-for-Assessment";
-       fhir:index 0;
-       fhir:link <http://example.com/fhir/example/StructureDefinition/covid19-reason-for-Assessment>
-     ]
   ];
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19ReasonforAssessmentExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-reason-for-Assessment.html\">Covid19 Reason for Assessment</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbid condition <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#75618-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>value</b>: CaseContact <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#CaseContact)</span></p></div>"
-  ];
-  fhir:Observation.status [ fhir:value "final"];
-  fhir:Observation.code [
+  fhir:Encounter.reasonCode [
+     fhir:index 0;
      fhir:CodeableConcept.coding [
        fhir:index 0;
-       a loinc:75618-9;
-       fhir:Coding.system [ fhir:value "http://loinc.org" ];
-       fhir:Coding.code [ fhir:value "75618-9" ]
-     ]
-  ];
-  fhir:Observation.subject [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
-     fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
-  ];
-  fhir:Observation.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
-     fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
-  ];
-  fhir:Observation.valueCodeableConcept [
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "CaseContact" ]
-     ]
+       fhir:Coding.code [ fhir:value "Other" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Other specified details" ]
   ] .
 
 <Composition/Covid19PresentationExample> a fhir:Observation;
