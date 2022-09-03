@@ -10,8 +10,6 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19PatientExample
 * entry[+].fullUrl = "Composition/Covid19AssessmentEncounterExample"
 * entry[=].resource = Covid19AssessmentEncounterExample
-* entry[+].fullUrl = "Composition/Covid19ReasonforAssessmentExample"
-* entry[=].resource = Covid19ReasonforAssessmentExample
 * entry[+].fullUrl = "Composition/Covid19PresentationExample"
 * entry[=].resource = Covid19PresentationExample
 * entry[+].fullUrl = "Composition/Covid19SymptomExample"
@@ -140,17 +138,8 @@ Description: "Covid19 Assessment Encounter  example"
 * subject = Reference(Covid19PatientExample) //Patient reference
 * period.end  =  "2022-08-15"  //Date of death
 * extension[covid19VaccineDoseReceived].valueCodeableConcept = #Yes
-
-Instance: Covid19ReasonforAssessmentExample
-InstanceOf: Covid19ReasonforAssessment
-Usage: #example
-Title: "Covid19 Reason for assessment example"
-Description: "Covid19 Reason for assessment example"
-* encounter = Reference(Covid19AssessmentEncounterExample) 
-* subject = Reference(Covid19PatientExample) 
-* status = #final
-* code = $LNC#75618-9   // #todo terminology
-* valueCodeableConcept = #CaseContact
+* reasonCode.coding.code = #Other
+* reasonCode.text = "Other specified details"
 
 Instance: Covid19PresentationExample
 InstanceOf: Covid19Presentation

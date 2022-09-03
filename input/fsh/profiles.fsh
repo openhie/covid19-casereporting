@@ -48,8 +48,6 @@ Title: "Covid19 Case Reporting Composition"
     covid19AssessmentVaccination 0..* and
     covid19PatientOutcome 1..1
 * section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
-* section[covid19AssessmentSection].entry[covid19ReasonforAssessment] only Reference(Covid19ReasonforAssessment)
-* section[covid19AssessmentSection].entry[otherReasonforAssessment] only Reference(OtherReasonforAssessment)
 * section[covid19AssessmentSection].entry[covid19Presentation] only Reference(Covid19Presentation)
 * section[covid19AssessmentSection].entry[covid19DateLastHospitalized] only Reference(Covid19DateLastHospitalized)
 * section[covid19AssessmentSection].entry[covid19EverHospitalized] only Reference(Covid19EverHospitalized)
@@ -157,24 +155,6 @@ Description: "This Patient profile allows the exchange of patient information, i
 
 * managingOrganization 1..1
 
-
-Profile: Covid19ReasonforAssessment
-Parent: Observation
-Id: covid19-reason-for-Assessment
-Title: "Covid19 Reason for Assessment"
-Description: "Covid19 Reason for Assessment"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSAssessmentReason 
-* encounter 1..1 MS
-
-Profile: OtherReasonforAssessment
-Parent: Observation
-Id: covid19-other-reason-for-Assessment
-Title: "Covid19 Other Reason for Assessment"
-Description: "Covid19 Other Reason for Assessment"
-* value[x] only string
-* encounter 1..1 MS
-
 Profile: Covid19Presentation
 Parent: Observation
 Id: covid19-presentation
@@ -220,7 +200,10 @@ Description: "Covid19 Assessment Encounter"
 * period.start 1..1 MS  //Date of assessment
 * subject 1..1 MS //Patient reference
 //* period.end MS  //Date died  --> Refer to Outcome effectivedate
-* extension contains Covid19VaccineDoseReceived named covid19VaccineDoseReceived 1..1 MS  //Ever received a dose of COVID-19 vaccine // #TODO: A Covid19AssessmentVaccination should be included if Yes
+* extension contains Covid19VaccineDoseReceived named covid19VaccineDoseReceived 1..1 MS  //Ever received a dose of COVID-19 vaccine // #TODO: Conditional rule: A Covid19AssessmentVaccination should be included if Yes
+* reasonCode 1..* MS  
+* reasonCode from VSAssessmentReason 
+* reasonCode.text MS
 
 Profile: Covid19OtherSymptoms
 Parent: Observation
@@ -252,7 +235,7 @@ Title: "Covid19 Conditions or comorbidity"
 Description: "Covid19 Conditions or comorbidity"
 * code MS
 * code from VSConditionsComorbidity 
-* note MS  //#TODO: Conditional rule: mandatory if code = #Other
+* note MS  //OtherConditions   #TODO: Conditional rule: mandatory if code = #Other
 
 Extension: Covid19VaccineDoseReceived
 Id: covid19-vaccine-dose-received
@@ -384,6 +367,7 @@ Description: "Covid19 Specimen Collection"
 * identifier 1..1 MS //Sample ID
 * extension contains ReferenceLab named referenceLab 0..1 MS //##TODO - use of performer?
 * extension contains Covid19SpecimenForwarded named covid19SpecimenForwarded 1..1 MS //Specimen forwarded to reference lab
+
 
 Extension: Covid19CancellationReason
 Id: covid19-cancellation-reason
