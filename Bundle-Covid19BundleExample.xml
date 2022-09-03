@@ -434,7 +434,7 @@
           <profile value="http://example.com/fhir/example/StructureDefinition/covid19-assessment-vaccination"/>
         </meta>
         <text>
-          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Immunization</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Immunization "Covid19AssessmentVaccinationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-assessment-vaccination.html">Covid19 Vaccination info included as part of the Assessment</a></p></div><p><b>Vaccination source of info</b>: VaccineCard <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#VaccineCard)</span></p><p><b>status</b>: not-done</p><p><b>vaccineCode</b>: PfizerBionTech <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#PfizerBionTech)</span></p><p><b>patient</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>occurrence</b>: 2022-07-28</p><h3>ProtocolApplieds</h3><table class="grid"><tr><td>-</td><td><b>Extension</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td>*</td><td></td><td>1</td></tr></table></div>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Immunization</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Immunization "Covid19AssessmentVaccinationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-assessment-vaccination.html">Covid19 Vaccination info included as part of the Assessment</a></p></div><p><b>Vaccination source of info</b>: VaccineCard <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#VaccineCard)</span></p><p><b>status</b>: not-done</p><p><b>vaccineCode</b>: PfizerBionTech <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#PfizerBionTech)</span></p><p><b>patient</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>occurrence</b>: 2022-07-28</p><h3>ProtocolApplieds</h3><table class="grid"><tr><td>-</td><td><b>Series</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td>*</td><td>Booster</td><td>1</td></tr></table></div>
         </text>
         <extension url="http://example.com/fhir/example/StructureDefinition/vaccination-source-of-info">
           <valueCodeableConcept>
@@ -457,13 +457,7 @@
         </encounter>
         <occurrenceDateTime value="2022-07-28"/>
         <protocolApplied>
-          <extension url="http://example.com/fhir/example/StructureDefinition/covid19-vaccine-series">
-            <valueCodeableConcept>
-              <coding>
-                <code value="Booster"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
+          <series value="Booster"/>
           <doseNumberPositiveInt value="1"/>
         </protocolApplied>
       </Immunization>
@@ -696,13 +690,10 @@
           <profile value="http://example.com/fhir/example/StructureDefinition/covid19-vaccination"/>
         </meta>
         <text>
-          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Immunization</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Immunization "Covid19VaccinationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-vaccination.html">Covid19 Vaccination</a></p></div><p><b>Covid19 Date of next vaccination</b>: 2022-12-28</p><p><b>Covid19 Other vaccine</b>: n/a</p><p><b>status</b>: final</p><p><b>vaccineCode</b>: Astrazeneca <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Astrazeneca)</span></p><p><b>patient</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>occurrence</b>: 2022-07-28</p><p><b>lotNumber</b>: 1</p><p><b>expirationDate</b>: 2022-12-28</p><h3>ProtocolApplieds</h3><table class="grid"><tr><td>-</td><td><b>Extension</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td>*</td><td></td><td>1</td></tr></table></div>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Immunization</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Immunization "Covid19VaccinationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-vaccination.html">Covid19 Vaccination</a></p></div><p><b>Covid19 Date of next vaccination</b>: 2022-12-28</p><p><b>status</b>: final</p><p><b>vaccineCode</b>: Astrazeneca <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Astrazeneca)</span></p><p><b>patient</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>occurrence</b>: 2022-07-28</p><p><b>lotNumber</b>: 1</p><p><b>expirationDate</b>: 2022-12-28</p><h3>ProtocolApplieds</h3><table class="grid"><tr><td>-</td><td><b>Series</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td>*</td><td>Booster</td><td>1</td></tr></table></div>
         </text>
         <extension url="http://example.com/fhir/example/StructureDefinition/covid19-next-vaccination-date">
           <valueDate value="2022-12-28"/>
-        </extension>
-        <extension url="http://example.com/fhir/example/StructureDefinition/covid19-other-vaccine">
-          <valueString value="n/a"/>
         </extension>
         <status value="final"/>
         <vaccineCode>
@@ -717,13 +708,7 @@
         <lotNumber value="1"/>
         <expirationDate value="2022-12-28"/>
         <protocolApplied>
-          <extension url="http://example.com/fhir/example/StructureDefinition/covid19-vaccine-series">
-            <valueCodeableConcept>
-              <coding>
-                <code value="Booster"/>
-              </coding>
-            </valueCodeableConcept>
-          </extension>
+          <series value="Booster"/>
           <doseNumberPositiveInt value="1"/>
         </protocolApplied>
       </Immunization>
