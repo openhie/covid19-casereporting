@@ -60,7 +60,7 @@
             <reference value="Condition/Covid19PresentationExample"/>
           </entry>
           <entry>
-            <reference value="Observation/Covid19SymptomExample"/>
+            <reference value="ClinicalImpression/Covid19SymptomExample"/>
           </entry>
           <entry>
             <reference value="Observation/Covid19ComorbidityPresentExample"/>
@@ -199,15 +199,8 @@
           <profile value="http://example.com/fhir/example/StructureDefinition/covid19-encounter"/>
         </meta>
         <text>
-          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Encounter</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Encounter "Covid19AssessmentEncounterExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-encounter.html">Covid19 Assessment Encounter</a></p></div><p><b>Covid19 Vaccine Dose Received</b>: Yes <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Yes)</span></p><p><b>status</b>: finished</p><p><b>class</b>: SS (Details: [not stated] code SS = 'SS', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Other specified details <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Other)</span></p><h3>Diagnoses</h3><table class="grid"><tr><td>-</td><td><b>Condition</b></td></tr><tr><td>*</td><td><a href="#Condition_Covid19PresentationExample">See above (Condition/Covid19PresentationExample)</a></td></tr></table></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Encounter</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Encounter "Covid19AssessmentEncounterExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-encounter.html">Covid19 Assessment Encounter</a></p></div><p><b>status</b>: finished</p><p><b>class</b>: SS (Details: [not stated] code SS = 'SS', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Other specified details <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Other)</span></p><h3>Diagnoses</h3><table class="grid"><tr><td>-</td><td><b>Condition</b></td></tr><tr><td>*</td><td><a href="#Condition_Covid19PresentationExample">See above (Condition/Covid19PresentationExample)</a></td></tr></table></div>
         </text>
-        <extension url="http://example.com/fhir/example/StructureDefinition/covid19-vaccine-dose-received">
-          <valueCodeableConcept>
-            <coding>
-              <code value="Yes"/>
-            </coding>
-          </valueCodeableConcept>
-        </extension>
         <status value="finished"/>
         <class>
           <code value="SS"/>
@@ -242,32 +235,34 @@
           <profile value="http://example.com/fhir/example/StructureDefinition/covid19-presentation"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Condition</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition "Covid19PresentationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-presentation.html">Covid19 Presentation</a></p></div><p><b>code</b>: Asymptomatic <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Asymptomatic)</span></p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Condition</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition "Covid19PresentationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-presentation.html">Covid19 Presentation</a></p></div><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><h3>Evidences</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Asymptomatic <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Asymptomatic)</span></td></tr></table></div>
         </text>
-        <code>
-          <coding>
-            <code value="Asymptomatic"/>
-          </coding>
-        </code>
         <subject>
           <reference value="Patient/Covid19PatientExample"/>
         </subject>
         <encounter>
           <reference value="Encounter/Covid19AssessmentEncounterExample"/>
         </encounter>
+        <evidence>
+          <code>
+            <coding>
+              <code value="Asymptomatic"/>
+            </coding>
+          </code>
+        </evidence>
       </Condition>
     </resource>
   </entry>
   <entry>
     <fullUrl value="Composition/Covid19SymptomExample"/>
     <resource>
-      <Observation>
+      <ClinicalImpression>
         <id value="Covid19SymptomExample"/>
         <meta>
           <profile value="http://example.com/fhir/example/StructureDefinition/covid19-symptom"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation "Covid19SymptomExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-symptom.html">Covid19 Symptom</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbid condition <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#75618-9)</span></p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>value</b>: JointPain <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#JointPain)</span></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ClinicalImpression</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ClinicalImpression "Covid19SymptomExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-symptom.html">Covid19 Symptom</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbid condition <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#75618-9)</span></p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><h3>Investigations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>JointPain <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#JointPain)</span></td></tr></table></div>
         </text>
         <status value="final"/>
         <code>
@@ -282,12 +277,14 @@
         <encounter>
           <reference value="Encounter/Covid19AssessmentEncounterExample"/>
         </encounter>
-        <valueCodeableConcept>
-          <coding>
-            <code value="JointPain"/>
-          </coding>
-        </valueCodeableConcept>
-      </Observation>
+        <investigation>
+          <code>
+            <coding>
+              <code value="JointPain"/>
+            </coding>
+          </code>
+        </investigation>
+      </ClinicalImpression>
     </resource>
   </entry>
   <entry>
@@ -380,6 +377,35 @@
         </meta>
         <text>
           <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation "Covid19EverHospitalizedExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-everhospitalized.html">Covid19 Ever Hospitalised</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbid condition <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#75618-9)</span></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>value</b>: Yes <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Yes)</span></p></div>
+        </text>
+        <status value="final"/>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="75618-9"/>
+          </coding>
+        </code>
+        <encounter>
+          <reference value="Encounter/Covid19AssessmentEncounterExample"/>
+        </encounter>
+        <valueCodeableConcept>
+          <coding>
+            <code value="Yes"/>
+          </coding>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="Composition/Covid19VaccineDoseReceivedExample"/>
+    <resource>
+      <Observation>
+        <id value="Covid19VaccineDoseReceivedExample"/>
+        <meta>
+          <profile value="http://example.com/fhir/example/StructureDefinition/covid19-vaccine-dose-received"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation "Covid19VaccineDoseReceivedExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-vaccine-dose-received.html">Covid19 Vaccine Dose Received</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbid condition <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#75618-9)</span></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>value</b>: Yes <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Yes)</span></p></div>
         </text>
         <status value="final"/>
         <code>
