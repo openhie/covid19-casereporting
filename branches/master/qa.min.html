@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = errors = 276, warn = 127, info = 22, 0 -->
+<!-- broken links = errors = 274, warn = 128, info = 22, 0 -->
 <head>
   <title>Covid19CaseReporting : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Covid19CaseReporting</h1>
- <p>Generated Sat Sep 03 19:59:39 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://xxsomewhere.org/fhir/myig">http://xxsomewhere.org/fhir/myig</a> (<a href="http://xxsomewhere.org/fhir/myig/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Sat Sep 03 20:15:19 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://xxsomewhere.org/fhir/myig">http://xxsomewhere.org/fhir/myig</a> (<a href="http://xxsomewhere.org/fhir/myig/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.128</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = openhie.fhir.covid, Canonical = http://xxsomewhere.org/fhir/myig</td></tr>
@@ -55,7 +55,7 @@
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://xxsomewhere.org/fhir/myig (Problem #1 with package-list.json at http://xxsomewhere.org/fhir/myig: xxsomewhere.org)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 276, warn = 127, info = 22, broken links = 0</td></tr>
+ <tr><td>Summary:</td><td> errors = 274, warn = 128, info = 22, broken links = 0</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -65,7 +65,7 @@
      <td><a href="#internal"><b>Build Errors</b></a></td><td><b>20</b></td><td><b>23</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-Covid19BundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample</b></a></td><td><b>56</b></td><td><b>68</b></td><td><b>2</b></td>
+     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-Covid19BundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample</b></a></td><td><b>55</b></td><td><b>69</b></td><td><b>2</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_CodeSystem-cs-admission-types"><b>/github/workspace/fsh-generated/resources/CodeSystem-cs-admission-types</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>1</b></td>
@@ -130,6 +130,9 @@
    <tr style="background-color: #EFFFEF">
      <td><a href="#_github_workspace_fsh-generated_resources_Condition-Covid19DiagnosisExample"><b>/github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_Condition-Covid19PresentationExample"><b>/github/workspace/fsh-generated/resources/Condition-Covid19PresentationExample</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_Condition-HIVDiagnosisExample"><b>/github/workspace/fsh-generated/resources/Condition-HIVDiagnosisExample</b></a></td><td><b>2</b></td><td><b>2</b></td><td><b>0</b></td>
    </tr>
@@ -156,9 +159,6 @@
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_Observation-Covid19PatientOutcomeExample"><b>/github/workspace/fsh-generated/resources/Observation-Covid19PatientOutcomeExample</b></a></td><td><b>1</b></td><td><b>1</b></td><td><b>0</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Observation-Covid19PresentationExample"><b>/github/workspace/fsh-generated/resources/Observation-Covid19PresentationExample</b></a></td><td><b>1</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_Observation-Covid19SymptomExample"><b>/github/workspace/fsh-generated/resources/Observation-Covid19SymptomExample</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td>
@@ -380,6 +380,12 @@
      <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Patient/Covid19PatientExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b></b></td><td><b>error</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.name for the resource Condition/Covid19PresentationExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Condition/Covid19PresentationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b></b></td><td><b>error</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.name for the resource Condition/Covid19ConditionsComorbidityExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
@@ -396,12 +402,6 @@
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19PatientOutcomeExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b></b></td><td><b>error</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.name for the resource Observation/Covid19PresentationExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19PresentationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Composition/Covid19CompositionExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
@@ -482,14 +482,14 @@
 <hr/>
 <a name="_github_workspace_fsh-generated_resources_Bundle-Covid19BundleExample"> </a>
 <h2><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(33)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>Bundle: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></li><li>Bundle.entry[0].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/composition.html">Composition</a> and <i>this.</i><a href="StructureDefinition-covid19-composition.html">Covid19 Case Reporting Composition</a> (per meta)</li><li>Bundle.entry[1].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a> and <i>this.</i><a href="StructureDefinition-covid19-patient.html">Covid19 Patient</a> (per meta)</li><li>Bundle.entry[2].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a> and <i>this.</i><a href="StructureDefinition-covid19-encounter.html">Covid19 Assessment Encounter</a> (per meta)</li><li>Bundle.entry[3].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and <i>this.</i><a href="StructureDefinition-covid19-presentation.html">Covid19 Presentation</a> (per meta)</li><li>Bundle.entry[4].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and <i>this.</i><a href="StructureDefinition-covid19-symptom.html">Covid19 Symptom</a> (per meta)</li><li>Bundle.entry[5].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a></li><li>Bundle.entry[6].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/condition.html">Condition</a> and <i>this.</i><a href="StructureDefinition-covid19-conditions-comorbidity.html">Covid19 Conditions or comorbidity</a> (per meta)</li><li>Bundle.entry[7].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/condition.html">Condition</a></li><li>Bundle.entry[8].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and <i>this.</i><a href="StructureDefinition-covid19-everhospitalized.html">Covid19 Ever Hospitalised</a> (per meta)</li><li>Bundle.entry[9].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/immunization.html">Immunization</a> and <i>this.</i><a href="StructureDefinition-covid19-assessment-vaccination.html">Covid19 Vaccination info included as part of the Assessment</a> (per meta)</li><li>Bundle.entry[10].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and <i>this.</i><a href="StructureDefinition-covid19-patient-outcome.html">Covid19 Patient Outcome</a> (per meta)</li><li>Bundle.entry[11].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a> and <i>this.</i><a href="StructureDefinition-covid19-lab-order.html">Covid19 Lab Order</a> (per meta)</li><li>Bundle.entry[12].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/specimen.html">Specimen</a> and <i>this.</i><a href="StructureDefinition-covid19-specimen.html">Covid19 Specimen</a> (per meta)</li><li>Bundle.entry[13].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a> and <i>this.</i><a href="StructureDefinition-covid19-specimen-collection.html">Covid19 Specimen Collection</a> (per meta)</li><li>Bundle.entry[14].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/task.html">Task</a> and <i>this.</i><a href="StructureDefinition-covid19-lab-order-cancellation.html">Covid19 Lab Order Cancellation</a> (per meta)</li><li>Bundle.entry[15].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a> and <i>this.</i><a href="StructureDefinition-covid19-lab-results.html">Covid19 Lab Results</a> (per meta)</li><li>Bundle.entry[16].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/immunization.html">Immunization</a> and <i>this.</i><a href="StructureDefinition-covid19-vaccination.html">Covid19 Vaccination</a> (per meta)</li></ul>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>Bundle: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></li><li>Bundle.entry[0].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/composition.html">Composition</a> and <i>this.</i><a href="StructureDefinition-covid19-composition.html">Covid19 Case Reporting Composition</a> (per meta)</li><li>Bundle.entry[1].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a> and <i>this.</i><a href="StructureDefinition-covid19-patient.html">Covid19 Patient</a> (per meta)</li><li>Bundle.entry[2].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a> and <i>this.</i><a href="StructureDefinition-covid19-encounter.html">Covid19 Assessment Encounter</a> (per meta)</li><li>Bundle.entry[3].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/condition.html">Condition</a> and <i>this.</i><a href="StructureDefinition-covid19-presentation.html">Covid19 Presentation</a> (per meta)</li><li>Bundle.entry[4].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and <i>this.</i><a href="StructureDefinition-covid19-symptom.html">Covid19 Symptom</a> (per meta)</li><li>Bundle.entry[5].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a></li><li>Bundle.entry[6].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/condition.html">Condition</a> and <i>this.</i><a href="StructureDefinition-covid19-conditions-comorbidity.html">Covid19 Conditions or comorbidity</a> (per meta)</li><li>Bundle.entry[7].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/condition.html">Condition</a></li><li>Bundle.entry[8].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and <i>this.</i><a href="StructureDefinition-covid19-everhospitalized.html">Covid19 Ever Hospitalised</a> (per meta)</li><li>Bundle.entry[9].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/immunization.html">Immunization</a> and <i>this.</i><a href="StructureDefinition-covid19-assessment-vaccination.html">Covid19 Vaccination info included as part of the Assessment</a> (per meta)</li><li>Bundle.entry[10].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and <i>this.</i><a href="StructureDefinition-covid19-patient-outcome.html">Covid19 Patient Outcome</a> (per meta)</li><li>Bundle.entry[11].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a> and <i>this.</i><a href="StructureDefinition-covid19-lab-order.html">Covid19 Lab Order</a> (per meta)</li><li>Bundle.entry[12].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/specimen.html">Specimen</a> and <i>this.</i><a href="StructureDefinition-covid19-specimen.html">Covid19 Specimen</a> (per meta)</li><li>Bundle.entry[13].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a> and <i>this.</i><a href="StructureDefinition-covid19-specimen-collection.html">Covid19 Specimen Collection</a> (per meta)</li><li>Bundle.entry[14].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/task.html">Task</a> and <i>this.</i><a href="StructureDefinition-covid19-lab-order-cancellation.html">Covid19 Lab Order Cancellation</a> (per meta)</li><li>Bundle.entry[15].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a> and <i>this.</i><a href="StructureDefinition-covid19-lab-results.html">Covid19 Lab Results</a> (per meta)</li><li>Bundle.entry[16].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/immunization.html">Immunization</a> and <i>this.</i><a href="StructureDefinition-covid19-vaccination.html">Covid19 Vaccination</a> (per meta)</li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[4].resource (l347/c8)</b></td><td><b>error</b></td><td title=""><b>Unrecognised property '@valueDateTime'</b></td>
+     <td><b>Bundle.entry[4].resource (l345/c8)</b></td><td><b>error</b></td><td title=""><b>Unrecognised property '@valueDateTime'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle (l1/c2)</b></td><td><b>error</b></td><td title="Rule bdl-9: 'A document must have an identifier with a system and a value' Failed"><b>Rule bdl-9: 'A document must have an identifier with a system and a value' Failed</b></td>
@@ -510,7 +510,7 @@
      <td><b>Bundle.entry[0].resource.ofType(Composition).section[1].entry[1] (l67/c16)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Covid19ReasonforAssessmentExample'</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[0].resource.ofType(Composition).section[1].entry[2]</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 3 matches the reference Observation/Covid19PresentationExample by type and id but it's fullUrl Composition/Covid19PresentationExample does not match the full target URL Observation/Covid19PresentationExample by Bundle resolution rules</b></td>
+     <td><b>Bundle.entry[0].resource.ofType(Composition).section[1].entry[2]</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 3 matches the reference Condition/Covid19PresentationExample by type and id but it's fullUrl Composition/Covid19PresentationExample does not match the full target URL Condition/Covid19PresentationExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[0].resource.ofType(Composition).section[1].entry[3]</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 4 matches the reference Observation/Covid19SymptomExample by type and id but it's fullUrl Composition/Covid19SymptomExample does not match the full target URL Observation/Covid19SymptomExample by Bundle resolution rules</b></td>
@@ -603,7 +603,7 @@
      <td><b>Bundle.entry[0].resource.ofType(Composition) (l25/c24)</b></td><td><b>information</b></td><td title="Validation_VAL_Profile_NoCheckMin"><b>Composition.section:covid19PatientSection: Unable to check minimum required (Composition.section) due to lack of slicing validation (from http://example.com/fhir/example/StructureDefinition/covid19-composition)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[1].resource.ofType(Patient).extension[1].value.ofType(CodeableConcept) (l161/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Key population' (http://example.com/fhir/example/ValueSet/vs-key-population), and a coding from this value set is required) (codes = null#GENERAL-POPULATION)</b> (<a href="qa-tx.html#l62">see Tx log</a>)</td>
+     <td><b>Bundle.entry[1].resource.ofType(Patient).extension[1].value.ofType(CodeableConcept) (l161/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Key population' (http://example.com/fhir/example/ValueSet/vs-key-population), and a coding from this value set is required) (codes = null#GENERAL-POPULATION)</b> (<a href="qa-tx.html#l61">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[1].resource.ofType(Patient).extension[1].value.ofType(CodeableConcept).coding[0] (l162/c18)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
@@ -621,7 +621,7 @@
      <td><b>Bundle.entry[1].resource.ofType(Patient).identifier[2] (l178/c12)</b></td><td><b>error</b></td><td title="SLICING_CANNOT_BE_EVALUATED"><b>Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://example.com/fhir/example/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[2].resource.ofType(Encounter).extension[0].value.ofType(CodeableConcept) (l249/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l68">see Tx log</a>)</td>
+     <td><b>Bundle.entry[2].resource.ofType(Encounter).extension[0].value.ofType(CodeableConcept) (l249/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l67">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[2].resource.ofType(Encounter).extension[0].value.ofType(CodeableConcept).coding[0] (l250/c18)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
@@ -633,25 +633,25 @@
      <td><b>Bundle.entry[2].resource.ofType(Encounter).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[2].resource.ofType(Encounter).reasonCode[0] (l269/c12)</b></td><td><b>information</b></td><td><b>None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason), and a coding is recommended to come from this value set) (codes = null#Other)</b> (<a href="qa-tx.html#l69">see Tx log</a>)</td>
+     <td><b>Bundle.entry[2].resource.ofType(Encounter).reasonCode[0] (l269/c12)</b></td><td><b>information</b></td><td><b>None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason), and a coding is recommended to come from this value set) (codes = null#Other)</b> (<a href="qa-tx.html#l68">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[2].resource.ofType(Encounter).reasonCode[0].coding[0] (l271/c16)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[2].resource.ofType(Encounter).reasonCode[0] (l269/c12)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Assessment Reason valueset' (http://example.com/fhir/example/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Other)</b> (<a href="qa-tx.html#l73">see Tx log</a>)</td>
-   </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[3].resource.ofType(Observation).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[3].resource.ofType(Observation).encounter</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[3].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0] (l307/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[2].resource.ofType(Encounter).diagnosis[0].condition</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 3 matches the reference Condition/Covid19PresentationExample by type and id but it's fullUrl Composition/Covid19PresentationExample does not match the full target URL Condition/Covid19PresentationExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[3].resource.ofType(Observation).value.ofType(CodeableConcept) (l306/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Presentation valueset' (http://example.com/fhir/example/ValueSet/vs-presentation), and a coding from this value set is required) (codes = null#Asymptomatic)</b> (<a href="qa-tx.html#l74">see Tx log</a>)</td>
+     <td><b>Bundle.entry[2].resource.ofType(Encounter).reasonCode[0] (l269/c12)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Assessment Reason valueset' (http://example.com/fhir/example/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Other)</b> (<a href="qa-tx.html#l72">see Tx log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[3].resource.ofType(Condition).code.coding[0] (l305/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[3].resource.ofType(Condition).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[3].resource.ofType(Condition).encounter</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[4].resource.ofType(Observation).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -660,10 +660,10 @@
      <td><b>Bundle.entry[4].resource.ofType(Observation).encounter</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[4].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0] (l341/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[4].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0] (l339/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[4].resource.ofType(Observation).value.ofType(CodeableConcept) (l340/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Presenting symptoms' (http://example.com/fhir/example/ValueSet/vs-symptoms), and a coding from this value set is required) (codes = null#JointPain)</b> (<a href="qa-tx.html#l75">see Tx log</a>)</td>
+     <td><b>Bundle.entry[4].resource.ofType(Observation).value.ofType(CodeableConcept) (l338/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Presenting symptoms' (http://example.com/fhir/example/ValueSet/vs-symptoms), and a coding from this value set is required) (codes = null#JointPain)</b> (<a href="qa-tx.html#l73">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[5].resource.ofType(Observation).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -672,10 +672,10 @@
      <td><b>Bundle.entry[5].resource.ofType(Observation).encounter</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[5].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0] (l371/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[5].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0] (l369/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[6].resource.ofType(Condition).code.coding[0] (l396/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[6].resource.ofType(Condition).code.coding[0] (l394/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[6].resource.ofType(Condition).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -684,10 +684,10 @@
      <td><b>Bundle.entry[6].resource.ofType(Condition).encounter</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[6].resource.ofType(Condition).code (l395/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'List of Conditions / Comorbidity' (http://example.com/fhir/example/ValueSet/vs-conditions-comorbidity), and a coding from this value set is required) (codes = null#Other)</b> (<a href="qa-tx.html#l76">see Tx log</a>)</td>
+     <td><b>Bundle.entry[6].resource.ofType(Condition).code (l393/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'List of Conditions / Comorbidity' (http://example.com/fhir/example/ValueSet/vs-conditions-comorbidity), and a coding from this value set is required) (codes = null#Other)</b> (<a href="qa-tx.html#l74">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[7].resource.ofType(Condition).code.coding[0] (l415/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[7].resource.ofType(Condition).code.coding[0] (l413/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[7].resource.ofType(Condition).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -699,19 +699,19 @@
      <td><b>Bundle.entry[8].resource.ofType(Observation).encounter</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[8].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0] (l441/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[8].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0] (l439/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[8].resource.ofType(Observation).value.ofType(CodeableConcept) (l440/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l77">see Tx log</a>)</td>
+     <td><b>Bundle.entry[8].resource.ofType(Observation).value.ofType(CodeableConcept) (l438/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l75">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[9].resource.ofType(Immunization).extension[0].value.ofType(CodeableConcept) (l491/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Source of information - codes' (http://example.com/fhir/example/ValueSet/vs-source-of-info), and a coding from this value set is required) (codes = null#VaccineCard)</b> (<a href="qa-tx.html#l78">see Tx log</a>)</td>
+     <td><b>Bundle.entry[9].resource.ofType(Immunization).extension[0].value.ofType(CodeableConcept) (l489/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Source of information - codes' (http://example.com/fhir/example/ValueSet/vs-source-of-info), and a coding from this value set is required) (codes = null#VaccineCard)</b> (<a href="qa-tx.html#l76">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[9].resource.ofType(Immunization).extension[0].value.ofType(CodeableConcept).coding[0] (l492/c18)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[9].resource.ofType(Immunization).extension[0].value.ofType(CodeableConcept).coding[0] (l490/c18)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[9].resource.ofType(Immunization).vaccineCode.coding[0] (l508/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[9].resource.ofType(Immunization).vaccineCode.coding[0] (l506/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[9].resource.ofType(Immunization).patient</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -720,13 +720,13 @@
      <td><b>Bundle.entry[9].resource.ofType(Immunization).encounter</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[9].resource.ofType(Immunization).protocolApplied[0].extension[0].value.ofType(CodeableConcept) (l476/c30)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Vaccine Series' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-series), and a coding from this value set is required) (codes = null#Booster)</b> (<a href="qa-tx.html#l79">see Tx log</a>)</td>
+     <td><b>Bundle.entry[9].resource.ofType(Immunization).protocolApplied[0].extension[0].value.ofType(CodeableConcept) (l474/c30)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Vaccine Series' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-series), and a coding from this value set is required) (codes = null#Booster)</b> (<a href="qa-tx.html#l77">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[9].resource.ofType(Immunization).protocolApplied[0].extension[0].value.ofType(CodeableConcept).coding[0] (l477/c22)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[9].resource.ofType(Immunization).protocolApplied[0].extension[0].value.ofType(CodeableConcept).coding[0] (l475/c22)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[9].resource.ofType(Immunization).vaccineCode (l507/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#PfizerBionTech)</b> (<a href="qa-tx.html#l83">see Tx log</a>)</td>
+     <td><b>Bundle.entry[9].resource.ofType(Immunization).vaccineCode (l505/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#PfizerBionTech)</b> (<a href="qa-tx.html#l81">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[10].resource.ofType(Observation).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -735,16 +735,16 @@
      <td><b>Bundle.entry[10].resource.ofType(Observation).encounter</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[10].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0] (l553/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[10].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0] (l551/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[10].resource.ofType(Observation).value.ofType(CodeableConcept) (l552/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Patient Outcome' (http://example.com/fhir/example/ValueSet/vs-patient-outcome), and a coding from this value set is required) (codes = null#Recovered)</b> (<a href="qa-tx.html#l87">see Tx log</a>)</td>
+     <td><b>Bundle.entry[10].resource.ofType(Observation).value.ofType(CodeableConcept) (l550/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Patient Outcome' (http://example.com/fhir/example/ValueSet/vs-patient-outcome), and a coding from this value set is required) (codes = null#Recovered)</b> (<a href="qa-tx.html#l85">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).status (l592/c29)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('Pending') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Pending in http://hl7.org/fhir/request-status)</b></td>
+     <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).status (l590/c29)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('Pending') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Pending in http://hl7.org/fhir/request-status)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).code.coding[0] (l595/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).code.coding[0] (l593/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -753,25 +753,25 @@
      <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).encounter</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).reasonCode[0].coding[0] (l585/c16)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).reasonCode[0].coding[0] (l583/c16)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).code (l594/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-test-types), and a coding from this value set is required) (codes = null#Rapid)</b> (<a href="qa-tx.html#l88">see Tx log</a>)</td>
+     <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).code (l592/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-test-types), and a coding from this value set is required) (codes = null#Rapid)</b> (<a href="qa-tx.html#l86">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).reasonCode[0] (l583/c12)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Assessment Reason valueset' (http://example.com/fhir/example/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Surveillance)</b> (<a href="qa-tx.html#l89">see Tx log</a>)</td>
+     <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).reasonCode[0] (l581/c12)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Assessment Reason valueset' (http://example.com/fhir/example/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Surveillance)</b> (<a href="qa-tx.html#l87">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[12].resource.ofType(Specimen).type.coding[0] (l617/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[12].resource.ofType(Specimen).type.coding[0] (l615/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[12].resource.ofType(Specimen).type (l616/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Specimen Type' (http://example.com/fhir/example/ValueSet/vs-covid19-specimen-type), and a coding from this value set is required) (codes = null#Serum)</b> (<a href="qa-tx.html#l90">see Tx log</a>)</td>
+     <td><b>Bundle.entry[12].resource.ofType(Specimen).type (l614/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Specimen Type' (http://example.com/fhir/example/ValueSet/vs-covid19-specimen-type), and a coding from this value set is required) (codes = null#Serum)</b> (<a href="qa-tx.html#l88">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[13].resource.ofType(DiagnosticReport).extension[0].value.ofType(CodeableConcept) (l638/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l91">see Tx log</a>)</td>
+     <td><b>Bundle.entry[13].resource.ofType(DiagnosticReport).extension[0].value.ofType(CodeableConcept) (l636/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l89">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[13].resource.ofType(DiagnosticReport).extension[0].value.ofType(CodeableConcept).coding[0] (l639/c18)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[13].resource.ofType(DiagnosticReport).extension[0].value.ofType(CodeableConcept).coding[0] (l637/c18)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[13].resource.ofType(DiagnosticReport).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -792,22 +792,22 @@
      <td><b>Bundle.entry[14].resource.ofType(Task).encounter</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[14].resource.ofType(Task).reasonCode.coding[0] (l703/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[14].resource.ofType(Task).reasonCode.coding[0] (l701/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[14].resource.ofType(Task).reasonCode (l702/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)</b> (<a href="qa-tx.html#l95">see Tx log</a>)</td>
+     <td><b>Bundle.entry[14].resource.ofType(Task).reasonCode (l700/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)</b> (<a href="qa-tx.html#l93">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).extension[0].value.ofType(CodeableConcept) (l724/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l96">see Tx log</a>)</td>
+     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).extension[0].value.ofType(CodeableConcept) (l722/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l94">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).extension[0].value.ofType(CodeableConcept).coding[0] (l725/c18)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).extension[0].value.ofType(CodeableConcept).coding[0] (l723/c18)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).extension[1].value.ofType(CodeableConcept) (l734/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Specimen Type' (http://example.com/fhir/example/ValueSet/vs-covid19-reason-test-not-performed), and a coding from this value set is required) (codes = null#Other)</b> (<a href="qa-tx.html#l97">see Tx log</a>)</td>
+     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).extension[1].value.ofType(CodeableConcept) (l732/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Specimen Type' (http://example.com/fhir/example/ValueSet/vs-covid19-reason-test-not-performed), and a coding from this value set is required) (codes = null#Other)</b> (<a href="qa-tx.html#l95">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).extension[1].value.ofType(CodeableConcept).coding[0] (l735/c18)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).extension[1].value.ofType(CodeableConcept).coding[0] (l733/c18)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -816,37 +816,37 @@
      <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).encounter</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).conclusionCode[0].coding[0] (l765/c16)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).conclusionCode[0].coding[0] (l763/c16)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).status (l772/c8)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('final') is not in the value set 'Covid19 Lab Order Status' (http://example.com/fhir/example/ValueSet/vs-covid19-lab-order-status), and a code is required from this value set) (error message = Unknown Code http://example.com/fhir/example/CodeSystem/cs-covid19-lab-order-status#final in http://example.com/fhir/example/CodeSystem/cs-covid19-lab-order-status)</b></td>
+     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).status (l770/c8)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('final') is not in the value set 'Covid19 Lab Order Status' (http://example.com/fhir/example/ValueSet/vs-covid19-lab-order-status), and a code is required from this value set) (error message = Unknown Code http://example.com/fhir/example/CodeSystem/cs-covid19-lab-order-status#final in http://example.com/fhir/example/CodeSystem/cs-covid19-lab-order-status)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).conclusionCode[0] (l763/c12)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Test Result' (http://example.com/fhir/example/ValueSet/vs-covid19-test-result), and a coding from this value set is required) (codes = null#Positive)</b> (<a href="qa-tx.html#l104">see Tx log</a>)</td>
+     <td><b>Bundle.entry[15].resource.ofType(DiagnosticReport).conclusionCode[0] (l761/c12)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Test Result' (http://example.com/fhir/example/ValueSet/vs-covid19-test-result), and a coding from this value set is required) (codes = null#Positive)</b> (<a href="qa-tx.html#l102">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[16].resource.ofType(Immunization).extension[0] (l802/c12)</b></td><td><b>error</b></td><td title="Extension_EXT_Type"><b>The Extension 'http://example.com/fhir/example/StructureDefinition/covid19-next-vaccination-date' definition allows for the types [dateTime] but found type date</b></td>
+     <td><b>Bundle.entry[16].resource.ofType(Immunization).extension[0] (l800/c12)</b></td><td><b>error</b></td><td title="Extension_EXT_Type"><b>The Extension 'http://example.com/fhir/example/StructureDefinition/covid19-next-vaccination-date' definition allows for the types [dateTime] but found type date</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[16].resource.ofType(Immunization).extension[0].value.ofType(date) (l805/c12)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_NotSlice"><b>This element does not match any known slice  defined in the profile http://example.com/fhir/example/StructureDefinition/covid19-next-vaccination-date and slicing is CLOSED: Bundle.entry[16].resource.ofType(Immunization).extension[0].value.ofType(date): Does not match slice 'valueDateTime' (discriminator: ($this is dateTime))</b></td>
+     <td><b>Bundle.entry[16].resource.ofType(Immunization).extension[0].value.ofType(date) (l803/c12)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_NotSlice"><b>This element does not match any known slice  defined in the profile http://example.com/fhir/example/StructureDefinition/covid19-next-vaccination-date and slicing is CLOSED: Bundle.entry[16].resource.ofType(Immunization).extension[0].value.ofType(date): Does not match slice 'valueDateTime' (discriminator: ($this is dateTime))</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[16].resource.ofType(Immunization).status (l811/c27)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('final') is not in the value set 'Immunization Status Codes' (http://hl7.org/fhir/ValueSet/immunization-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/event-status#final in http://hl7.org/fhir/event-status)</b></td>
+     <td><b>Bundle.entry[16].resource.ofType(Immunization).status (l809/c27)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('final') is not in the value set 'Immunization Status Codes' (http://hl7.org/fhir/ValueSet/immunization-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/event-status#final in http://hl7.org/fhir/event-status)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[16].resource.ofType(Immunization).vaccineCode.coding[0] (l819/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[16].resource.ofType(Immunization).vaccineCode.coding[0] (l817/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[16].resource.ofType(Immunization).patient</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[16].resource.ofType(Immunization).protocolApplied[0].extension[0].value.ofType(CodeableConcept) (l790/c30)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Vaccine Series' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-series), and a coding from this value set is required) (codes = null#Booster)</b> (<a href="qa-tx.html#l105">see Tx log</a>)</td>
+     <td><b>Bundle.entry[16].resource.ofType(Immunization).protocolApplied[0].extension[0].value.ofType(CodeableConcept) (l788/c30)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Vaccine Series' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-series), and a coding from this value set is required) (codes = null#Booster)</b> (<a href="qa-tx.html#l103">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[16].resource.ofType(Immunization).protocolApplied[0].extension[0].value.ofType(CodeableConcept).coding[0] (l791/c22)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[16].resource.ofType(Immunization).protocolApplied[0].extension[0].value.ofType(CodeableConcept).coding[0] (l789/c22)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[16].resource.ofType(Immunization).vaccineCode (l818/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Vaccine Code List' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-codes), and a coding from this value set is required) (codes = null#Astrazeneca)</b> (<a href="qa-tx.html#l106">see Tx log</a>)</td>
+     <td><b>Bundle.entry[16].resource.ofType(Immunization).vaccineCode (l816/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Vaccine Code List' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-codes), and a coding from this value set is required) (codes = null#Astrazeneca)</b> (<a href="qa-tx.html#l104">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle.entry[1].resource.author[1].reference (l31/c12)</b></td><td><b>error</b></td><td title="Bundle_BUNDLE_Entry_NotFound"><b>Can't find 'Organization/Covid19OrganizationExample' in the bundle (Composition.author)</b></td>
@@ -861,10 +861,10 @@
      <td><b>Bundle.entry[1].resource.section[3].entry[5].reference (l119/c16)</b></td><td><b>error</b></td><td title="Bundle_BUNDLE_Entry_NotFound"><b>Can't find 'Covid19LabResultsExamples' in the bundle (Section Entry)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[18] (l429/c6)</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_ENTRY_REVERSE"><b>Entry 'Composition/Covid19EverHospitalizedExample' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere</b></td>
+     <td><b>Bundle.entry[18] (l427/c6)</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_ENTRY_REVERSE"><b>Entry 'Composition/Covid19EverHospitalizedExample' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[18] (l710/c6)</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_ENTRY_REVERSE"><b>Entry 'Composition/Covid19LabResultsExample' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere</b></td>
+     <td><b>Bundle.entry[18] (l708/c6)</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_ENTRY_REVERSE"><b>Entry 'Composition/Covid19LabResultsExample' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere</b></td>
    </tr>
 </table>
 <hr/>
@@ -1306,22 +1306,35 @@
    </tr>
 </table>
 <hr/>
+<a name="_github_workspace_fsh-generated_resources_Condition-Covid19PresentationExample"> </a>
+<h2><a href="Condition-Covid19PresentationExample.html">fsh-generated/resources/Condition-Covid19PresentationExample.json</a> <span id="svi23" class="toggle" onclick="toggle('vi23')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi23')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi23"><ul style="font-size: 7px"><li>Condition: Validated against <i>this.</i><a href="StructureDefinition-covid19-presentation.html">Covid19 Presentation</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Condition.code.coding[0] (l17/c8)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+   </tr>
+</table>
+<hr/>
 <a name="_github_workspace_fsh-generated_resources_Condition-HIVDiagnosisExample"> </a>
-<h2><a href="Condition-HIVDiagnosisExample.html">fsh-generated/resources/Condition-HIVDiagnosisExample.json</a> <span id="svi23" class="toggle" onclick="toggle('vi23')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi23')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi23"><ul style="font-size: 7px"><li>Condition: Validated against <i>this.</i><a href="StructureDefinition-hiv-diagnosis.html">HIV Diagnosis</a></li></ul>
+<h2><a href="Condition-HIVDiagnosisExample.html">fsh-generated/resources/Condition-HIVDiagnosisExample.json</a> <span id="svi24" class="toggle" onclick="toggle('vi24')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi24')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi24"><ul style="font-size: 7px"><li>Condition: Validated against <i>this.</i><a href="StructureDefinition-hiv-diagnosis.html">HIV Diagnosis</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Condition.clinicalStatus (l10/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Condition Clinical Status Codes' (http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1), and a coding from this value set is required) (codes = null#active)</b> (<a href="qa-tx.html#l55">see Tx log</a>)</td>
+     <td><b>Condition.clinicalStatus (l10/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Condition Clinical Status Codes' (http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1), and a coding from this value set is required) (codes = null#active)</b> (<a href="qa-tx.html#l54">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Condition.clinicalStatus.coding[0] (l11/c8)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Condition.verificationStatus (l17/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'ConditionVerificationStatus' (http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1), and a coding from this value set is required) (codes = null#confirmed)</b> (<a href="qa-tx.html#l56">see Tx log</a>)</td>
+     <td><b>Condition.verificationStatus (l17/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'ConditionVerificationStatus' (http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1), and a coding from this value set is required) (codes = null#confirmed)</b> (<a href="qa-tx.html#l55">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Condition.verificationStatus.coding[0] (l18/c8)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
@@ -1329,21 +1342,21 @@
 </table>
 <hr/>
 <a name="_github_workspace_fsh-generated_resources_DiagnosticReport-Covid19LabResultsExample"> </a>
-<h2><a href="DiagnosticReport-Covid19LabResultsExample.html">fsh-generated/resources/DiagnosticReport-Covid19LabResultsExample.json</a> <span id="svi24" class="toggle" onclick="toggle('vi24')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi24')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi24"><ul style="font-size: 7px"><li>DiagnosticReport: Validated against <i>this.</i><a href="StructureDefinition-covid19-lab-results.html">Covid19 Lab Results</a></li></ul>
+<h2><a href="DiagnosticReport-Covid19LabResultsExample.html">fsh-generated/resources/DiagnosticReport-Covid19LabResultsExample.json</a> <span id="svi25" class="toggle" onclick="toggle('vi25')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi25')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi25"><ul style="font-size: 7px"><li>DiagnosticReport: Validated against <i>this.</i><a href="StructureDefinition-covid19-lab-results.html">Covid19 Lab Results</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>DiagnosticReport.extension[0].value.ofType(CodeableConcept) (l13/c20)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l41">see Tx log</a>)</td>
+     <td><b>DiagnosticReport.extension[0].value.ofType(CodeableConcept) (l13/c20)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l40">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>DiagnosticReport.extension[0].value.ofType(CodeableConcept).coding[0] (l14/c12)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>DiagnosticReport.extension[1].value.ofType(CodeableConcept) (l23/c20)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Specimen Type' (http://example.com/fhir/example/ValueSet/vs-covid19-reason-test-not-performed), and a coding from this value set is required) (codes = null#Other)</b> (<a href="qa-tx.html#l44">see Tx log</a>)</td>
+     <td><b>DiagnosticReport.extension[1].value.ofType(CodeableConcept) (l23/c20)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Specimen Type' (http://example.com/fhir/example/ValueSet/vs-covid19-reason-test-not-performed), and a coding from this value set is required) (codes = null#Other)</b> (<a href="qa-tx.html#l43">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>DiagnosticReport.extension[1].value.ofType(CodeableConcept).coding[0] (l24/c12)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
@@ -1352,7 +1365,7 @@
      <td><b>DiagnosticReport.status (l61/c2)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('final') is not in the value set 'Covid19 Lab Order Status' (http://example.com/fhir/example/ValueSet/vs-covid19-lab-order-status), and a code is required from this value set) (error message = Unknown Code http://example.com/fhir/example/CodeSystem/cs-covid19-lab-order-status#final in http://example.com/fhir/example/CodeSystem/cs-covid19-lab-order-status)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>DiagnosticReport.conclusionCode[0] (l52/c6)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Test Result' (http://example.com/fhir/example/ValueSet/vs-covid19-test-result), and a coding from this value set is required) (codes = null#Positive)</b> (<a href="qa-tx.html#l50">see Tx log</a>)</td>
+     <td><b>DiagnosticReport.conclusionCode[0] (l52/c6)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Test Result' (http://example.com/fhir/example/ValueSet/vs-covid19-test-result), and a coding from this value set is required) (codes = null#Positive)</b> (<a href="qa-tx.html#l49">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>DiagnosticReport.conclusionCode[0].coding[0] (l54/c10)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
@@ -1360,15 +1373,15 @@
 </table>
 <hr/>
 <a name="_github_workspace_fsh-generated_resources_DiagnosticReport-Covid19SpecimenCollectionExample"> </a>
-<h2><a href="DiagnosticReport-Covid19SpecimenCollectionExample.html">fsh-generated/resources/DiagnosticReport-Covid19SpecimenCollectionExample.json</a> <span id="svi25" class="toggle" onclick="toggle('vi25')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi25')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi25"><ul style="font-size: 7px"><li>DiagnosticReport: Validated against <i>this.</i><a href="StructureDefinition-covid19-specimen-collection.html">Covid19 Specimen Collection</a></li></ul>
+<h2><a href="DiagnosticReport-Covid19SpecimenCollectionExample.html">fsh-generated/resources/DiagnosticReport-Covid19SpecimenCollectionExample.json</a> <span id="svi26" class="toggle" onclick="toggle('vi26')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi26')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi26"><ul style="font-size: 7px"><li>DiagnosticReport: Validated against <i>this.</i><a href="StructureDefinition-covid19-specimen-collection.html">Covid19 Specimen Collection</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>DiagnosticReport.extension[0].value.ofType(CodeableConcept) (l13/c20)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l58">see Tx log</a>)</td>
+     <td><b>DiagnosticReport.extension[0].value.ofType(CodeableConcept) (l13/c20)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l57">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>DiagnosticReport.extension[0].value.ofType(CodeableConcept).coding[0] (l14/c12)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
@@ -1376,8 +1389,8 @@
 </table>
 <hr/>
 <a name="_github_workspace_fsh-generated_resources_Encounter-Covid19AssessmentEncounterExample"> </a>
-<h2><a href="Encounter-Covid19AssessmentEncounterExample.html">fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json</a> <span id="svi26" class="toggle" onclick="toggle('vi26')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi26')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi26"><ul style="font-size: 7px"><li>Encounter: Validated against <i>this.</i><a href="StructureDefinition-covid19-encounter.html">Covid19 Assessment Encounter</a></li></ul>
+<h2><a href="Encounter-Covid19AssessmentEncounterExample.html">fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json</a> <span id="svi27" class="toggle" onclick="toggle('vi27')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi27')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi27"><ul style="font-size: 7px"><li>Encounter: Validated against <i>this.</i><a href="StructureDefinition-covid19-encounter.html">Covid19 Assessment Encounter</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1401,27 +1414,27 @@
 </table>
 <hr/>
 <a name="_github_workspace_fsh-generated_resources_Immunization-Covid19AssessmentVaccinationExample"> </a>
-<h2><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a> <span id="svi27" class="toggle" onclick="toggle('vi27')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi27')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi27"><ul style="font-size: 7px"><li>Immunization: Validated against <i>this.</i><a href="StructureDefinition-covid19-assessment-vaccination.html">Covid19 Vaccination info included as part of the Assessment</a></li></ul>
+<h2><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a> <span id="svi28" class="toggle" onclick="toggle('vi28')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi28')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi28"><ul style="font-size: 7px"><li>Immunization: Validated against <i>this.</i><a href="StructureDefinition-covid19-assessment-vaccination.html">Covid19 Vaccination info included as part of the Assessment</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Immunization.extension[0].value.ofType(CodeableConcept) (l30/c20)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Source of information - codes' (http://example.com/fhir/example/ValueSet/vs-source-of-info), and a coding from this value set is required) (codes = null#VaccineCard)</b> (<a href="qa-tx.html#l34">see Tx log</a>)</td>
+     <td><b>Immunization.extension[0].value.ofType(CodeableConcept) (l30/c20)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Source of information - codes' (http://example.com/fhir/example/ValueSet/vs-source-of-info), and a coding from this value set is required) (codes = null#VaccineCard)</b> (<a href="qa-tx.html#l33">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Immunization.extension[0].value.ofType(CodeableConcept).coding[0] (l31/c12)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Immunization.vaccineCode (l46/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#PfizerBionTech)</b> (<a href="qa-tx.html#l37">see Tx log</a>)</td>
+     <td><b>Immunization.vaccineCode (l46/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#PfizerBionTech)</b> (<a href="qa-tx.html#l36">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Immunization.vaccineCode.coding[0] (l47/c8)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Immunization.protocolApplied[0].extension[0].value.ofType(CodeableConcept) (l15/c24)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Vaccine Series' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-series), and a coding from this value set is required) (codes = null#Booster)</b> (<a href="qa-tx.html#l38">see Tx log</a>)</td>
+     <td><b>Immunization.protocolApplied[0].extension[0].value.ofType(CodeableConcept) (l15/c24)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Vaccine Series' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-series), and a coding from this value set is required) (codes = null#Booster)</b> (<a href="qa-tx.html#l37">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Immunization.protocolApplied[0].extension[0].value.ofType(CodeableConcept).coding[0] (l16/c16)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
@@ -1429,8 +1442,8 @@
 </table>
 <hr/>
 <a name="_github_workspace_fsh-generated_resources_Immunization-Covid19VaccinationExample"> </a>
-<h2><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a> <span id="svi28" class="toggle" onclick="toggle('vi28')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi28')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi28"><ul style="font-size: 7px"><li>Immunization: Validated against <i>this.</i><a href="StructureDefinition-covid19-vaccination.html">Covid19 Vaccination</a></li></ul>
+<h2><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a> <span id="svi29" class="toggle" onclick="toggle('vi29')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi29')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi29"><ul style="font-size: 7px"><li>Immunization: Validated against <i>this.</i><a href="StructureDefinition-covid19-vaccination.html">Covid19 Vaccination</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1446,13 +1459,13 @@
      <td><b>Immunization.status (l36/c21)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('final') is not in the value set 'Immunization Status Codes' (http://hl7.org/fhir/ValueSet/immunization-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/event-status#final in http://hl7.org/fhir/event-status)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Immunization.vaccineCode (l43/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Vaccine Code List' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-codes), and a coding from this value set is required) (codes = null#Astrazeneca)</b> (<a href="qa-tx.html#l51">see Tx log</a>)</td>
+     <td><b>Immunization.vaccineCode (l43/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Vaccine Code List' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-codes), and a coding from this value set is required) (codes = null#Astrazeneca)</b> (<a href="qa-tx.html#l50">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Immunization.vaccineCode.coding[0] (l44/c8)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Immunization.protocolApplied[0].extension[0].value.ofType(CodeableConcept) (l15/c24)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Vaccine Series' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-series), and a coding from this value set is required) (codes = null#Booster)</b> (<a href="qa-tx.html#l52">see Tx log</a>)</td>
+     <td><b>Immunization.protocolApplied[0].extension[0].value.ofType(CodeableConcept) (l15/c24)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Vaccine Series' (http://example.com/fhir/example/ValueSet/vs-covid19-vaccine-series), and a coding from this value set is required) (codes = null#Booster)</b> (<a href="qa-tx.html#l51">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Immunization.protocolApplied[0].extension[0].value.ofType(CodeableConcept).coding[0] (l16/c16)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
@@ -1460,8 +1473,8 @@
 </table>
 <hr/>
 <a name="_github_workspace_fsh-generated_resources_Observation-Covid19ComorbidityPresentExample"> </a>
-<h2><a href="Observation-Covid19ComorbidityPresentExample.html">fsh-generated/resources/Observation-Covid19ComorbidityPresentExample.json</a> <span id="svi29" class="toggle" onclick="toggle('vi29')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi29')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi29"><ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a></li></ul>
+<h2><a href="Observation-Covid19ComorbidityPresentExample.html">fsh-generated/resources/Observation-Covid19ComorbidityPresentExample.json</a> <span id="svi30" class="toggle" onclick="toggle('vi30')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi30')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi30"><ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1473,8 +1486,8 @@
 </table>
 <hr/>
 <a name="_github_workspace_fsh-generated_resources_Observation-Covid19EverHospitalizedExample"> </a>
-<h2><a href="Observation-Covid19EverHospitalizedExample.html">fsh-generated/resources/Observation-Covid19EverHospitalizedExample.json</a> <span id="svi30" class="toggle" onclick="toggle('vi30')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi30')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi30"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-covid19-everhospitalized.html">Covid19 Ever Hospitalised</a></li></ul>
+<h2><a href="Observation-Covid19EverHospitalizedExample.html">fsh-generated/resources/Observation-Covid19EverHospitalizedExample.json</a> <span id="svi31" class="toggle" onclick="toggle('vi31')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi31')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi31"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-covid19-everhospitalized.html">Covid19 Ever Hospitalised</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1489,8 +1502,8 @@
 </table>
 <hr/>
 <a name="_github_workspace_fsh-generated_resources_Observation-Covid19PatientOutcomeExample"> </a>
-<h2><a href="Observation-Covid19PatientOutcomeExample.html">fsh-generated/resources/Observation-Covid19PatientOutcomeExample.json</a> <span id="svi31" class="toggle" onclick="toggle('vi31')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi31')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi31"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-covid19-patient-outcome.html">Covid19 Patient Outcome</a></li></ul>
+<h2><a href="Observation-Covid19PatientOutcomeExample.html">fsh-generated/resources/Observation-Covid19PatientOutcomeExample.json</a> <span id="svi32" class="toggle" onclick="toggle('vi32')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi32')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi32"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-covid19-patient-outcome.html">Covid19 Patient Outcome</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -1501,22 +1514,6 @@
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Observation.value.ofType(CodeableConcept).coding[0] (l36/c8)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="_github_workspace_fsh-generated_resources_Observation-Covid19PresentationExample"> </a>
-<h2><a href="Observation-Covid19PresentationExample.html">fsh-generated/resources/Observation-Covid19PresentationExample.json</a> <span id="svi32" class="toggle" onclick="toggle('vi32')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi32')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi32"><ul style="font-size: 7px"><li>Observation: Validated against <i>this.</i><a href="StructureDefinition-covid19-presentation.html">Covid19 Presentation</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Observation.value.ofType(CodeableConcept) (l25/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Presentation valueset' (http://example.com/fhir/example/ValueSet/vs-presentation), and a coding from this value set is required) (codes = null#Asymptomatic)</b> (<a href="qa-tx.html#l29">see Tx log</a>)</td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Observation.value.ofType(CodeableConcept).coding[0] (l26/c8)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
 </table>
 <hr/>
@@ -1601,7 +1598,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Specimen.type (l13/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Specimen Type' (http://example.com/fhir/example/ValueSet/vs-covid19-specimen-type), and a coding from this value set is required) (codes = null#Serum)</b> (<a href="qa-tx.html#l61">see Tx log</a>)</td>
+     <td><b>Specimen.type (l13/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Specimen Type' (http://example.com/fhir/example/ValueSet/vs-covid19-specimen-type), and a coding from this value set is required) (codes = null#Serum)</b> (<a href="qa-tx.html#l60">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Specimen.type.coding[0] (l14/c8)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
@@ -2239,7 +2236,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Task.reasonCode (l22/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)</b> (<a href="qa-tx.html#l32">see Tx log</a>)</td>
+     <td><b>Task.reasonCode (l22/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)</b> (<a href="qa-tx.html#l31">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Task.reasonCode.coding[0] (l23/c8)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
@@ -2434,7 +2431,7 @@
      <td><b>ValueSet.where(url = 'http://example.com/fhir/example/ValueSet/vs-key-population')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-key-population.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-key-population) does not match the URL (http://example.com/fhir/example/ValueSet/vs-key-population)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.where(id = 'vs-key-population')</b></td><td><b>warning</b></td><td><b>Error from server: Unable to provide support for code system https://openhie.github.io/hiv-ig/ValueSet-vs-key-population</b> (<a href="qa-tx.html#l112">see Tx log</a>)</td>
+     <td><b>ValueSet.where(id = 'vs-key-population')</b></td><td><b>warning</b></td><td><b>Error from server: Unable to provide support for code system https://openhie.github.io/hiv-ig/ValueSet-vs-key-population</b> (<a href="qa-tx.html#l110">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>fsh-generated/resources/ValueSet-vs-key-population</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-key-population vs http://example.com/fhir/example/ValueSet/vs-key-population</b></td>
@@ -2549,7 +2546,7 @@
      <td><b>ValueSet.where(url = 'http://example.com/fhir/example/ValueSet/vs-yes-no')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-yes-no) does not match the URL (http://example.com/fhir/example/ValueSet/vs-yes-no)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.where(id = 'vs-yes-no')</b></td><td><b>warning</b></td><td><b>Error from server: Unable to provide support for code system https://loinc.org/LL3044-6</b> (<a href="qa-tx.html#l114">see Tx log</a>)</td>
+     <td><b>ValueSet.where(id = 'vs-yes-no')</b></td><td><b>warning</b></td><td><b>Error from server: Unable to provide support for code system https://loinc.org/LL3044-6</b> (<a href="qa-tx.html#l112">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>fsh-generated/resources/ValueSet-vs-yes-no</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-yes-no vs http://example.com/fhir/example/ValueSet/vs-yes-no</b></td>
@@ -2581,7 +2578,7 @@
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>Entry 3 matches the reference Observation/Covid19PresentationExample by type and id but it's fullUrl Composition/Covid19PresentationExample does not match the full target URL Observation/Covid19PresentationExample by Bundle resolution rules</b></td>
+     <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>Entry 3 matches the reference Condition/Covid19PresentationExample by type and id but it's fullUrl Composition/Covid19PresentationExample does not match the full target URL Condition/Covid19PresentationExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>Entry 4 matches the reference Observation/Covid19SymptomExample by type and id but it's fullUrl Composition/Covid19SymptomExample does not match the full target URL Observation/Covid19SymptomExample by Bundle resolution rules</b></td>
@@ -2618,6 +2615,9 @@
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>Entry 3 matches the reference Condition/Covid19PresentationExample by type and id but it's fullUrl Composition/Covid19PresentationExample does not match the full target URL Condition/Covid19PresentationExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -3186,6 +3186,9 @@
      <td><a href="Condition-Covid19DiagnosisExample.html">fsh-generated/resources/Condition-Covid19DiagnosisExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
+     <td><a href="Condition-Covid19PresentationExample.html">fsh-generated/resources/Condition-Covid19PresentationExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
      <td><a href="Condition-HIVDiagnosisExample.html">fsh-generated/resources/Condition-HIVDiagnosisExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
@@ -3235,9 +3238,6 @@
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Observation-Covid19PatientOutcomeExample.html">fsh-generated/resources/Observation-Covid19PatientOutcomeExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Observation-Covid19PresentationExample.html">fsh-generated/resources/Observation-Covid19PresentationExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Observation-Covid19SymptomExample.html">fsh-generated/resources/Observation-Covid19SymptomExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
@@ -3296,9 +3296,6 @@
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>None of the codings provided are in the value set 'Assessment Reason valueset' (http://example.com/fhir/example/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Other)</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>None of the codings provided are in the value set 'Presentation valueset' (http://example.com/fhir/example/ValueSet/vs-presentation), and a coding from this value set is required) (codes = null#Asymptomatic)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>None of the codings provided are in the value set 'Presenting symptoms' (http://example.com/fhir/example/ValueSet/vs-symptoms), and a coding from this value set is required) (codes = null#JointPain)</b></td>
@@ -3398,9 +3395,6 @@
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Observation-Covid19PatientOutcomeExample.html">fsh-generated/resources/Observation-Covid19PatientOutcomeExample.json</a></td><td><b>None of the codings provided are in the value set 'Patient Outcome' (http://example.com/fhir/example/ValueSet/vs-patient-outcome), and a coding from this value set is required) (codes = null#Recovered)</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="Observation-Covid19PresentationExample.html">fsh-generated/resources/Observation-Covid19PresentationExample.json</a></td><td><b>None of the codings provided are in the value set 'Presentation valueset' (http://example.com/fhir/example/ValueSet/vs-presentation), and a coding from this value set is required) (codes = null#Asymptomatic)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Observation-Covid19SymptomExample.html">fsh-generated/resources/Observation-Covid19SymptomExample.json</a></td><td><b>None of the codings provided are in the value set 'Presenting symptoms' (http://example.com/fhir/example/ValueSet/vs-symptoms), and a coding from this value set is required) (codes = null#JointPain)</b></td>

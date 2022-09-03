@@ -1,11 +1,11 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 276, warn = 127, info = 22
+err = 274, warn = 128, info = 22
 IG Publisher Version: 1.1.128
-Generated Sat Sep 03 19:59:39 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Sat Sep 03 20:15:19 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 20 / 23 / 0
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 56 / 68 / 35
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 55 / 69 / 35
  /github/workspace/fsh-generated/resources/CodeSystem-cs-admission-types : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-assessment-reason : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-cancellation-reason : 2 / 0 / 2
@@ -27,6 +27,7 @@ Generated Sat Sep 03 19:59:39 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Composition-Covid19CompositionExample : 18 / 0 / 2
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsComorbidityExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/Condition-Covid19PresentationExample : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/Condition-HIVDiagnosisExample : 2 / 2 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsExample : 4 / 3 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19SpecimenCollectionExample : 1 / 1 / 1
@@ -36,7 +37,6 @@ Generated Sat Sep 03 19:59:39 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Observation-Covid19ComorbidityPresentExample : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19EverHospitalizedExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19PatientOutcomeExample : 1 / 1 / 1
- /github/workspace/fsh-generated/resources/Observation-Covid19PresentationExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19SymptomExample : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/Organization-Covid19Laboratory : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Organization-Covid19OrganizationExample : 0 / 0 / 1
@@ -113,14 +113,14 @@ ERROR: Unable to find ImplementationGuide.definition.resource.name for the resou
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19EverHospitalizedExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Patient/Covid19PatientExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/Covid19PatientExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Condition/Covid19PresentationExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Condition/Covid19PresentationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Condition/Covid19ConditionsComorbidityExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Condition/Covid19ConditionsComorbidityExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Observation/Covid19SymptomExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19SymptomExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Observation/Covid19PatientOutcomeExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19PatientOutcomeExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Observation/Covid19PresentationExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19PresentationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Composition/Covid19CompositionExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/Covid19Laboratory.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Covid19Laboratory.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
@@ -154,7 +154,7 @@ WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Compositio
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[0]: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[1]: Relative URLs must be of the format [ResourceName]/[id].  Encountered Covid19ReasonforAssessmentExample
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[1]: Unable to resolve resource with reference 'Covid19ReasonforAssessmentExample'
-WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[2]: Entry 3 matches the reference Observation/Covid19PresentationExample by type and id but it's fullUrl Composition/Covid19PresentationExample does not match the full target URL Observation/Covid19PresentationExample by Bundle resolution rules
+WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[2]: Entry 3 matches the reference Condition/Covid19PresentationExample by type and id but it's fullUrl Composition/Covid19PresentationExample does not match the full target URL Condition/Covid19PresentationExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[3]: Entry 4 matches the reference Observation/Covid19SymptomExample by type and id but it's fullUrl Composition/Covid19SymptomExample does not match the full target URL Observation/Covid19SymptomExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[4]: Entry 5 matches the reference Observation/Covid19ComorbidityPresentExample by type and id but it's fullUrl Composition/Covid19ComorbidityPresentExample does not match the full target URL Observation/Covid19ComorbidityPresentExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[5]: Entry 6 matches the reference Condition/Covid19ConditionsComorbidityExample by type and id but it's fullUrl Composition/Covid19ConditionsComorbidityExample does not match the full target URL Condition/Covid19ConditionsComorbidityExample by Bundle resolution rules
@@ -197,11 +197,11 @@ WARNING: Bundle/Covid19BundleExample: Bundle.entry[2].resource.ofType(Encounter)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[2].resource.ofType(Encounter).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 INFORMATION: Bundle/Covid19BundleExample: Bundle.entry[2].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason), and a coding is recommended to come from this value set) (codes = null#Other)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[2].resource.ofType(Encounter).reasonCode[0].coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/Covid19BundleExample: Bundle.entry[2].resource.ofType(Encounter).diagnosis[0].condition: Entry 3 matches the reference Condition/Covid19PresentationExample by type and id but it's fullUrl Composition/Covid19PresentationExample does not match the full target URL Condition/Covid19PresentationExample by Bundle resolution rules
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[2].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Assessment Reason valueset' (http://example.com/fhir/example/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Other)
-WARNING: Bundle/Covid19BundleExample: Bundle.entry[3].resource.ofType(Observation).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
-WARNING: Bundle/Covid19BundleExample: Bundle.entry[3].resource.ofType(Observation).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
-WARNING: Bundle/Covid19BundleExample: Bundle.entry[3].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: A code with no system has no defined meaning. A system should be provided
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[3].resource.ofType(Observation).value.ofType(CodeableConcept): None of the codings provided are in the value set 'Presentation valueset' (http://example.com/fhir/example/ValueSet/vs-presentation), and a coding from this value set is required) (codes = null#Asymptomatic)
+WARNING: Bundle/Covid19BundleExample: Bundle.entry[3].resource.ofType(Condition).code.coding[0]: A code with no system has no defined meaning. A system should be provided
+WARNING: Bundle/Covid19BundleExample: Bundle.entry[3].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
+WARNING: Bundle/Covid19BundleExample: Bundle.entry[3].resource.ofType(Condition).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[4].resource.ofType(Observation).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[4].resource.ofType(Observation).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[4].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: A code with no system has no defined meaning. A system should be provided
@@ -370,6 +370,8 @@ ERROR: Condition/Covid19ConditionsComorbidityExample: Condition.code: None of th
 WARNING: Condition/Covid19ConditionsComorbidityExample: Condition.code.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/Condition-Covid19DiagnosisExample.json ==
 WARNING: Condition/Covid19DiagnosisExample: Condition.code.coding[0]: A code with no system has no defined meaning. A system should be provided
+== fsh-generated/resources/Condition-Covid19PresentationExample.json ==
+WARNING: Condition/Covid19PresentationExample: Condition.code.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/Condition-HIVDiagnosisExample.json ==
 ERROR: Condition/HIVDiagnosisExample: Condition.clinicalStatus: None of the codings provided are in the value set 'Condition Clinical Status Codes' (http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1), and a coding from this value set is required) (codes = null#active)
 WARNING: Condition/HIVDiagnosisExample: Condition.clinicalStatus.coding[0]: A code with no system has no defined meaning. A system should be provided
@@ -415,9 +417,6 @@ WARNING: Observation/Covid19EverHospitalizedExample: Observation.value.ofType(Co
 == fsh-generated/resources/Observation-Covid19PatientOutcomeExample.json ==
 ERROR: Observation/Covid19PatientOutcomeExample: Observation.value.ofType(CodeableConcept): None of the codings provided are in the value set 'Patient Outcome' (http://example.com/fhir/example/ValueSet/vs-patient-outcome), and a coding from this value set is required) (codes = null#Recovered)
 WARNING: Observation/Covid19PatientOutcomeExample: Observation.value.ofType(CodeableConcept).coding[0]: A code with no system has no defined meaning. A system should be provided
-== fsh-generated/resources/Observation-Covid19PresentationExample.json ==
-ERROR: Observation/Covid19PresentationExample: Observation.value.ofType(CodeableConcept): None of the codings provided are in the value set 'Presentation valueset' (http://example.com/fhir/example/ValueSet/vs-presentation), and a coding from this value set is required) (codes = null#Asymptomatic)
-WARNING: Observation/Covid19PresentationExample: Observation.value.ofType(CodeableConcept).coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/Observation-Covid19SymptomExample.json ==
 ERROR: Observation: Unrecognised property '@valueDateTime'
 ERROR: Observation/Covid19SymptomExample: Observation.value.ofType(CodeableConcept): None of the codings provided are in the value set 'Presenting symptoms' (http://example.com/fhir/example/ValueSet/vs-symptoms), and a coding from this value set is required) (codes = null#JointPain)
