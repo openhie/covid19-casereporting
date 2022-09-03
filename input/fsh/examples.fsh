@@ -140,6 +140,7 @@ Description: "Covid19 Assessment Encounter  example"
 * extension[covid19VaccineDoseReceived].valueCodeableConcept = #Yes
 * reasonCode.coding.code = #Other
 * reasonCode.text = "Other specified details"
+* diagnosis.condition = Reference(Covid19PresentationExample)
 
 Instance: Covid19PresentationExample
 InstanceOf: Covid19Presentation
@@ -148,9 +149,7 @@ Title: "Covid19 Presentation example"
 Description: "Covid19 Presentation example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
-* status = #final
-* code = $LNC#75618-9   // #todo terminology
-* valueCodeableConcept = #Asymptomatic
+* code = #Asymptomatic
 
 Instance: Covid19SymptomExample
 InstanceOf: Covid19Symptom

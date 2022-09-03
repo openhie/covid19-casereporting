@@ -156,13 +156,12 @@ Description: "This Patient profile allows the exchange of patient information, i
 * managingOrganization 1..1
 
 Profile: Covid19Presentation
-Parent: Observation
+Parent: Condition
 Id: covid19-presentation
 Title: "Covid19 Presentation"
 Description: "Covid19 Presentation"
-* value[x] only CodeableConcept
-* value[x] from VSPresentation
 * encounter 1..1 MS
+* evidence.code from VSPresentation
 
 //hospitalization info start
 Profile: Covid19DateLastHospitalized  
