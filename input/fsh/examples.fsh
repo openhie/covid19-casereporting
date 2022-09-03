@@ -239,7 +239,7 @@ Description: "Covid19 Vaccine Type Administered example"
 * occurrenceDateTime = "2022-07-28"
 * protocolApplied.doseNumberPositiveInt = 1
 * extension[vaccinationSourceOfInfo].valueCodeableConcept = #VaccineCard
-* protocolApplied.extension[vaccineSeries].valueCodeableConcept = #Booster
+* protocolApplied.series = #Booster
 
 Instance: Covid19PatientOutcomeExample
 InstanceOf: Covid19PatientOutcome
@@ -334,10 +334,9 @@ Description: "Covid19 Vaccination example"
 * patient = Reference(Covid19PatientExample)
 * occurrenceDateTime = "2022-07-28"
 * protocolApplied.doseNumberPositiveInt = 1    //#TODO : min=1, max = 9
-* protocolApplied.extension[vaccineSeries].valueCodeableConcept = #Booster
+* protocolApplied.series = #Booster
 * expirationDate = "2022-12-28"
 * extension[covid19NextVaccinationDate].valueDate = "2022-12-28"
 * vaccineCode =   #Astrazeneca
-* extension[covid19OtherVaccine].valueString = "n/a"
 * lotNumber = "1"
 
