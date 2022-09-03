@@ -149,7 +149,7 @@ Title: "Covid19 Presentation example"
 Description: "Covid19 Presentation example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
-* code = #Asymptomatic
+* evidence.code = #Asymptomatic
 
 Instance: Covid19SymptomExample
 InstanceOf: Covid19Symptom
@@ -160,8 +160,7 @@ Description: "Covid19 Symptom example"
 * subject = Reference(Covid19PatientExample) 
 * status = #final
 * code = $LNC#75618-9   // #todo re-check the LOINC codes
-* valueCodeableConcept = #JointPain
-* valueDateTime = "2022-07-28"
+* investigation.code = #JointPain
 
 Instance: Covid19ComorbidityPresentExample
 InstanceOf: Observation

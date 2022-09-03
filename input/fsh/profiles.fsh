@@ -162,6 +162,7 @@ Title: "Covid19 Presentation"
 Description: "Covid19 Presentation"
 * encounter 1..1 MS
 * evidence.code from VSPresentation
+* onsetDateTime MS //date of onset of symptoms
 
 //hospitalization info start
 Profile: Covid19DateLastHospitalized  
@@ -204,20 +205,14 @@ Description: "Covid19 Assessment Encounter"
 * reasonCode from VSAssessmentReason 
 * reasonCode.text MS
 
-Profile: Covid19OtherSymptoms
-Parent: Observation
-Id: covid19-other-symptoms
-Title: "Other specified symptoms"
-Description: "Other specified symptoms"
-* valueString MS
-
 Profile: Covid19Symptom
-Parent: Observation
+Parent: ClinicalImpression
 Id: covid19-symptom
 Title: "Covid19 Symptom"
 Description: "Covid19 Symptom"
-* valueCodeableConcept from VSSymptoms
-* valueDateTime MS // Date of onset of symptoms
+* investigation.code from VSSymptoms
+* investigation.code MS
+* note MS // other presenting symptoms
 
 Profile: Covid19ComorbidityPresent
 Parent: Observation
