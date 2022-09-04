@@ -3,7 +3,7 @@
 
 err = 274, warn = 119, info = 23
 IG Publisher Version: 1.1.128
-Generated Sun Sep 04 16:53:56 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Sun Sep 04 17:04:31 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 21 / 23 / 0
  /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 60 / 64 / 36
  /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 2 / 1 / 1
@@ -141,7 +141,7 @@ ERROR: Unable to find ImplementationGuide.definition.resource.name for the resou
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Covid19LaboratoryExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/Covid19BundleExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/Covid19BundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: /github/workspace/output/ServiceRequest-Covid19LabOrderExample.html#/html/body/div/div/div/div/div/div/p/a at Line 222, column 1204: The link 'Covid19Laboratory' for "Covid19Laboratory" cannot be resolved
+ERROR: /github/workspace/output/ServiceRequest-Covid19LabOrderExample.html#/html/body/div/div/div/div/div/div/p/a at Line 222, column 1206: The link 'Covid19Laboratory' for "Covid19Laboratory" cannot be resolved
 == fsh-generated/resources/Bundle-Covid19BundleExample.json ==
 ERROR: Bundle/Covid19BundleExample: Bundle: Rule bdl-9: 'A document must have an identifier with a system and a value' Failed
 ERROR: Bundle/Covid19BundleExample: Bundle: Rule bdl-10: 'A document must have a date' Failed
@@ -225,7 +225,7 @@ WARNING: Bundle/Covid19BundleExample: Bundle.entry[10].resource.ofType(Immunizat
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[10].resource.ofType(Immunization).patient: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[10].resource.ofType(Immunization).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[10].resource.ofType(Immunization).vaccineCode: None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#PfizerBionTech)
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).status: The value provided ('Pending') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Pending in http://hl7.org/fhir/request-status)
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).status: The value provided ('Completed') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Completed in http://hl7.org/fhir/request-status)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).code.coding[0]: The code "Rapid" is not valid in the system http://loinc.org; The code provided (http://loinc.org#Rapid) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#Rapid'
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
@@ -427,7 +427,7 @@ ERROR: Patient/Covid19PatientExample: Patient.extension[1].value.ofType(Codeable
 WARNING: Patient/Covid19PatientExample: Patient.extension[1].value.ofType(CodeableConcept).coding[0]: A code with no system has no defined meaning. A system should be provided
 WARNING: Patient/Covid19PatientExample: Patient.contact[0].relationship[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/ServiceRequest-Covid19LabOrderExample.json ==
-ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.status: The value provided ('Pending') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Pending in http://hl7.org/fhir/request-status)
+ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.status: The value provided ('Completed') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Completed in http://hl7.org/fhir/request-status)
 ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.code: None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-test-types), and a coding from this value set is required) (codes = http://loinc.org#Rapid)
 ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.code.coding[0]: The code "Rapid" is not valid in the system http://loinc.org; The code provided (http://loinc.org#Rapid) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#Rapid'
 ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.locationReference[0]: Unable to resolve resource with reference 'Covid19Laboratory'

@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Covid19CaseReporting</h1>
- <p>Generated Sun Sep 04 16:53:54 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://xxsomewhere.org/fhir/myig">http://xxsomewhere.org/fhir/myig</a> (<a href="http://xxsomewhere.org/fhir/myig/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
+ <p>Generated Sun Sep 04 17:04:30 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://xxsomewhere.org/fhir/myig">http://xxsomewhere.org/fhir/myig</a> (<a href="http://xxsomewhere.org/fhir/myig/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.128</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = openhie.fhir.covid, Canonical = http://xxsomewhere.org/fhir/myig</td></tr>
@@ -473,7 +473,7 @@
      <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/Covid19BundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="ServiceRequest-Covid19LabOrderExample.html#l359">output/ServiceRequest-Covid19LabOrderExample.html#/html/body/div/div/div/div/div/div/p/a at Line 222, column 1204</a></b></td><td><b>error</b></td><td><b>The link 'Covid19Laboratory' for &quot;Covid19Laboratory&quot; cannot be resolved</b></td>
+     <td><b><a href="ServiceRequest-Covid19LabOrderExample.html#l359">output/ServiceRequest-Covid19LabOrderExample.html#/html/body/div/div/div/div/div/div/p/a at Line 222, column 1206</a></b></td><td><b>error</b></td><td><b>The link 'Covid19Laboratory' for &quot;Covid19Laboratory&quot; cannot be resolved</b></td>
    </tr>
 </table>
 <hr/>
@@ -732,7 +732,7 @@
      <td><b>Bundle.entry[10].resource.ofType(Immunization).vaccineCode (l516/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#PfizerBionTech)</b> (<a href="qa-tx.html#l67">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).status (l564/c29)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('Pending') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Pending in http://hl7.org/fhir/request-status)</b></td>
+     <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).status (l564/c31)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('Completed') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Completed in http://hl7.org/fhir/request-status)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle.entry[11].resource.ofType(ServiceRequest).code.coding[0] (l567/c14)</b></td><td><b>error</b></td><td><b>The code &quot;Rapid&quot; is not valid in the system http://loinc.org; The code provided (http://loinc.org#Rapid) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#Rapid'</b> (<a href="qa-tx.html#l15">see Tx log</a>)</td>
@@ -1597,7 +1597,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ServiceRequest.status (l32/c23)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('Pending') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Pending in http://hl7.org/fhir/request-status)</b></td>
+     <td><b>ServiceRequest.status (l32/c25)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('Completed') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Completed in http://hl7.org/fhir/request-status)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>ServiceRequest.code (l34/c16)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-test-types), and a coding from this value set is required) (codes = http://loinc.org#Rapid)</b></td>
@@ -3211,7 +3211,7 @@
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>The value provided ('final') is not in the value set 'Clinical Impression Status' (http://hl7.org/fhir/ValueSet/clinicalimpression-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/event-status#final in http://hl7.org/fhir/event-status)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>The value provided ('Pending') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Pending in http://hl7.org/fhir/request-status)</b></td>
+     <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>The value provided ('Completed') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Completed in http://hl7.org/fhir/request-status)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>The value provided ('final') is not in the value set 'Covid19 Lab Order Status' (http://example.com/fhir/example/ValueSet/vs-covid19-lab-order-status), and a code is required from this value set) (error message = Unknown Code http://example.com/fhir/example/CodeSystem/cs-covid19-lab-order-status#final in http://example.com/fhir/example/CodeSystem/cs-covid19-lab-order-status)</b></td>
@@ -3229,7 +3229,7 @@
      <td><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a></td><td><b>The value provided ('final') is not in the value set 'Immunization Status Codes' (http://hl7.org/fhir/ValueSet/immunization-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/event-status#final in http://hl7.org/fhir/event-status)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ServiceRequest-Covid19LabOrderExample.html">fsh-generated/resources/ServiceRequest-Covid19LabOrderExample.json</a></td><td><b>The value provided ('Pending') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Pending in http://hl7.org/fhir/request-status)</b></td>
+     <td><a href="ServiceRequest-Covid19LabOrderExample.html">fsh-generated/resources/ServiceRequest-Covid19LabOrderExample.json</a></td><td><b>The value provided ('Completed') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Completed in http://hl7.org/fhir/request-status)</b></td>
    </tr>
 </table>
 <hr/>
