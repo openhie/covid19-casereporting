@@ -244,12 +244,15 @@ InstanceOf: Covid19LabOrder
 Usage: #example
 Title: "Covid19 Lab Order example"
 Description: "Covid19 Lab Order example"
+* identifier.value = "ORDERNR109191879"
+* identifier.system = "http://covid19laborder.org/example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
 * reasonCode  = #Surveillance
 * authoredOn  = "2022-07-28"
 * status = #Pending
 * code =  #Rapid //$LNC#75618-9   // #todo re-check the LOINC codes
+* requester = Reference(Covid19OrganizationExample)
 
 Instance: Covid19SpecimenExample
 InstanceOf: Covid19Specimen

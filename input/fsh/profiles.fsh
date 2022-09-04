@@ -279,13 +279,14 @@ Parent: ServiceRequest
 Id: covid19-lab-order
 Title: "Covid19 Lab Order"
 Description: "Covid19 Lab Order"
+* identifier 1..1 MS //
 * subject 1..1 MS // Patient reference
 * intent = #order 
 * reasonCode  1..* MS //Reason for testing
 * reasonCode from VSAssessmentReason 
 * note MS // for capturing other reasons for testing
 * authoredOn  1..1 MS  
-* encounter MS //
+* encounter 1..1 MS 
 * requester MS // Provider name
 * authoredOn 1..1 MS // Order time
 * code from VSTestTypes
