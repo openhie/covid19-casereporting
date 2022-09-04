@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-09-03T21:25:02+00:00",
+  "date": "2022-09-04T09:55:59+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -397,19 +397,6 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/vaccination-source-of-info"
-        },
-        "name": "Vaccination source of info",
-        "description": "Vaccination source of info"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
           "reference": "StructureDefinition/covid19-specimen-forwarded"
         },
         "name": "Covid19 Specimen Forwarded",
@@ -657,19 +644,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/covid19-date-recovered"
-        },
-        "name": "Covid19 Date Recovered",
-        "description": "Date recovered or date symptoms resolved"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "CodeSystem"
           }
         ],
@@ -815,6 +789,19 @@
         },
         "name": "Covid19 Lab Results",
         "description": "Covid19 Lab Results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/cs-treatment-dispensed-prescribed"
+        },
+        "name": "COVID Treatmens dispensed or prescribed",
+        "description": "COVID Treatmens dispensed or prescribed"
       },
       {
         "extension": [
@@ -1477,6 +1464,19 @@
         },
         "name": "Presenting symptoms",
         "description": "A list of symptoms"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/vs-treatment-dispensed-prescribed"
+        },
+        "name": "COVID Treatmens dispensed or prescribed",
+        "description": "COVID Treatmens dispensed or prescribed"
       },
       {
         "extension": [
