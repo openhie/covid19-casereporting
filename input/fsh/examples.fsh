@@ -250,8 +250,6 @@ Description: "Covid19 Patient Outcome example"
 * subject = Reference(Covid19PatientExample) 
 * status = #final
 * code = $LNC#75618-9   // #todo re-check the LOINC codes
-* valueCodeableConcept = #Recovered
-* extension[covid19LongCOVIDDescription].valueString = "none"
 * note.text = "patient recovered"
 
 Instance: Covid19LabOrderExample
