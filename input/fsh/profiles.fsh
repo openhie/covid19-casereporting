@@ -308,6 +308,7 @@ Description: "Covid19 Specimen"
 * type 1..1 MS 
 * type from VSCovid19SpecimenType
 * collection.collectedDateTime 1..1 MS  // Date specimen collected
+* note MS // Other Sample Type
 
 Extension: Covid19SpecimenForwarded
 Id: covid19-specimen-forwarded
