@@ -255,6 +255,7 @@ Description: "Covid19 Lab Order example"
 * code.coding.system = $LNC
 * code.coding.code   = #Rapid // #TODO bind ValueSet to corect Terminology e.g "94558-4"
 * requester = Reference(Covid19OrganizationExample)
+* locationReference = Reference(Covid19Laboratory) 
 
 Instance: Covid19SpecimenExample
 InstanceOf: Covid19Specimen
@@ -266,7 +267,7 @@ Description: "Covid19 Specimen example"
 * collection.collectedDateTime = "2022-07-28"
 * type = #Serum  
 
-Instance: Covid19Laboratory
+Instance: Covid19LaboratoryExample
 InstanceOf: Organization
 Usage: #example
 Title: "Covid19 Laboratory"
@@ -285,7 +286,6 @@ Description: "Covid19 Specimen Collection"
 * specimen = Reference(Covid19SpecimenExample)
 * identifier.id = "12341324"
 * extension[covid19SpecimenForwarded].valueCodeableConcept = #Yes
-* extension[referenceLab].valueReference = Reference(Covid19Laboratory) 
 
 Instance: Covid19LabOrderCancellationExample
 InstanceOf: Covid19LabOrderCancellation

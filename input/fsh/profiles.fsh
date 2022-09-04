@@ -291,6 +291,7 @@ Description: "Covid19 Lab Order"
 * authoredOn 1..1 MS // Order time
 * code from VSTestTypes
 * code 1..1 MS // Test request Code
+* locationReference MS //Reference Lab sample send to
 
 Extension: Covid19SpecimenType
 Id: covid19-specimen-type
@@ -317,12 +318,6 @@ Description: "Covid19 Specimen forwarded to reference lab"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSYesNoUnknown
 
-Extension: ReferenceLab
-Id: covid-19reference-lab
-Title: "Covid19 Reference Lab"
-Description: "Covid19 Reference Lab sample sent to"  
-* valueReference only Reference(Organization) 
-
 Profile: Covid19SpecimenCollection
 Parent: DiagnosticReport
 Id: covid19-specimen-collection
@@ -332,7 +327,6 @@ Description: "Covid19 Specimen Collection"
 * encounter 1..1 MS // Covid Assessment reference 
 * specimen 1..1 MS //
 * identifier 1..1 MS //Sample ID
-* extension contains ReferenceLab named referenceLab 0..1 MS //##TODO - use of performer?
 * extension contains Covid19SpecimenForwarded named covid19SpecimenForwarded 1..1 MS //Specimen forwarded to reference lab
 
 
