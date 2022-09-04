@@ -250,7 +250,7 @@ Description: "Covid19 Lab Order example"
 * subject = Reference(Covid19PatientExample) 
 * reasonCode  = #Surveillance
 * authoredOn  = "2022-07-28"
-* status = #Pending
+* status = #Completed
 * code =  #Rapid 
 * code.coding.system = $LNC
 * code.coding.code   = #Rapid // #TODO bind ValueSet to corect Terminology e.g "94558-4"
