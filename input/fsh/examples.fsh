@@ -251,7 +251,9 @@ Description: "Covid19 Lab Order example"
 * reasonCode  = #Surveillance
 * authoredOn  = "2022-07-28"
 * status = #Pending
-* code =  #Rapid //$LNC#75618-9   // #todo re-check the LOINC codes
+* code =  #Rapid 
+* code.coding.system = $LNC
+* code.coding.code   = #Rapid // #TODO bind ValueSet to corect Terminology e.g "94558-4"
 * requester = Reference(Covid19OrganizationExample)
 
 Instance: Covid19SpecimenExample
