@@ -245,7 +245,7 @@ Usage: #example
 Title: "Covid19 Lab Order example"
 Description: "Covid19 Lab Order example"
 * identifier.value = "ORDERNR109191879"
-* identifier.system = "http://covid19laborder.org/example"
+* identifier.system = "http://covid19laborder.org/order"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
 * reasonCode  = #Surveillance
@@ -261,6 +261,8 @@ InstanceOf: Covid19Specimen
 Usage: #example
 Title: "Covid19 Specimen example"
 Description: "Covid19 Specimen example"
+* identifier.value = "SPECIMEN109191879"
+* identifier.system = "http://covid19laborder.org/specimen"
 * collection.collectedDateTime = "2022-07-28"
 * type = #Serum  
 

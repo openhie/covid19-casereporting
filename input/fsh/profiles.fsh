@@ -304,6 +304,7 @@ Parent: Specimen
 Id: covid19-specimen
 Title: "Covid19 Specimen"
 Description: "Covid19 Specimen"
+* identifier 1..1 MS //Sample ID
 * type 1..1 MS 
 * type from VSCovid19SpecimenType
 * collection.collectedDateTime 1..1 MS  // Date specimen collected
