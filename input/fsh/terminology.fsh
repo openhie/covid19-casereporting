@@ -136,13 +136,24 @@ Title: "COVID Diagnosis list"
 Description: "COVID Diagnosis list"
 * include codes from system CSCovidDiagnosis
 
-
 ValueSet: VSConditionsComorbidity
 Id: vs-conditions-comorbidity
 Title: "List of Conditions / Comorbidity"
 Description:  "List of Conditions / Comorbidity"
 * include codes from system CSConditionsComorbidity
 
+CodeSystem: CSTreatMentDispensedPrescribed
+Id: cs-treatment-dispensed-prescribed
+Title: "COVID Treatmens dispensed or prescribed"
+Description: "COVID Treatmens dispensed or prescribed"
+* #Paxlovid "Paxlovid"
+* #Other "Other (specify)"
+
+ValueSet: VSTreatMentDispensedPrescribed
+Id: vs-treatment-dispensed-prescribed
+Title: "COVID Treatmens dispensed or prescribed"
+Description: "COVID Treatmens dispensed or prescribed"
+* include codes from system CSTreatMentDispensedPrescribed
 
 CodeSystem: CSVaccineTypes
 Id: cs-vaccine-types

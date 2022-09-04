@@ -240,13 +240,6 @@ Description: "Covid19 Vaccine Dose Received"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSYesNoUnknown
 
-Extension: VaccinationSourceOfInfo
-Id: vaccination-source-of-info
-Title: "Vaccination source of info"
-Description: "Vaccination source of info"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSSourceOfInfo
-
 Profile: Covid19AssessmentVaccination
 Parent: Immunization
 Id: covid19-assessment-vaccination
@@ -260,16 +253,16 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 * protocolApplied.series 1..1 MS //  VSVaccineSeries  #TODO conditional validation for aplying binding validation
 * vaccineCode.text 0..1 MS //Other vaccine
 * occurrenceDateTime  MS // Vaccination date    #TODO - check all required fields
-* extension contains VaccinationSourceOfInfo named vaccinationSourceOfInfo 0..1 MS //Source of Information
+* reportOrigin from VSSourceOfInfo  // source of information
 
 Profile: Covid19Diagnosis
 Parent: Condition
 Id: covid19-diagnosis
 Title: "Covid19 Diagnosis"
 Description: "Covid19 Diagnosis"
-* code MS
-* code from VSCovidDiagnosis 
 * recordedDate MS // Date of Diagnosis
+* verificationStatus from VSCovidDiagnosis //Covid Diagnosis
+* abatementDateTime 0..1 MS //Date recovered or date symptoms resolved
 
 //Fields required from the CBS MDS for Covid Report indicators
 Profile: HIVDiagnosis
@@ -280,12 +273,6 @@ Description: "This profile allows the exchange of a patient's hiv diagnosis"
 * recordedDate 1..1
 * identifier 1..*
 * code 1..1
-
-Extension: Covid19DateRecovered  
-Id: covid19-date-recovered
-Title: "Covid19 Date Recovered"
-Description: "Date recovered or date symptoms resolved"
-* valueDateTime MS
 
 Extension: Covid19LongCOVIDDescription
 Id: covid19-long-covid-description
@@ -300,10 +287,9 @@ Title: "Covid19 Patient Outcome"
 Description: "Covid19 Patient Outcome"
 //* value[x] only CodeableConcept
 * valueCodeableConcept from VSPatientOutcome 
-* extension contains Covid19DateRecovered named covid19DateRecovered 0..1 MS
 * extension contains Covid19LongCOVIDDescription named covid19LongCOVIDDescription 0..1 MS
 * note MS    //additional notes
-* valueDateTime  MS // Date of Outcome 
+* valueDateTime  MS // Date of Death
 
 Profile: Covid19LabOrder
 Parent: ServiceRequest

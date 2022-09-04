@@ -238,7 +238,6 @@ Description: "Covid19 Vaccine Type Administered example"
 * vaccineCode.coding.code = #PfizerBionTech 
 * occurrenceDateTime = "2022-07-28"
 * protocolApplied.doseNumberPositiveInt = 1
-* extension[vaccinationSourceOfInfo].valueCodeableConcept = #VaccineCard
 * protocolApplied.series = #Booster
 
 Instance: Covid19PatientOutcomeExample
@@ -251,7 +250,6 @@ Description: "Covid19 Patient Outcome example"
 * status = #final
 * code = $LNC#75618-9   // #todo re-check the LOINC codes
 * valueCodeableConcept = #Recovered
-* extension[covid19DateRecovered].valueDateTime = "2022-07-28"
 * extension[covid19LongCOVIDDescription].valueString = "none"
 * note.text = "patient recovered"
 
