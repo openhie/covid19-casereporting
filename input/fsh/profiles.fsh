@@ -70,12 +70,14 @@ Title: "Covid19 Case Reporting Composition"
     covid19Specimen 0..1 and
     covid19SpecimenCollection 0..1 and
     covid19LabOrderCancellation 0..1 and
-    covid19LabResults   0..1
+    covid19LabResults   0..1 and
+    covid19ReasonTestNotPerformed 0..1
 * section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
 * section[covid19LabOrderManagementSection].entry[covid19Specimen] only Reference(Covid19Specimen)
 * section[covid19LabOrderManagementSection].entry[covid19SpecimenCollection] only Reference(Covid19SpecimenCollection)
 * section[covid19LabOrderManagementSection].entry[covid19LabOrderCancellation] only Reference(Covid19LabOrderCancellation)
 * section[covid19LabOrderManagementSection].entry[covid19LabResults] only Reference(Covid19LabResults)
+* section[covid19LabOrderManagementSection].entry[covid19ReasonTestNotPerformed] only Reference(Covid19ReasonTestNotPerformed)
 
 * section[covid19VaccinationSection].title = "Covid 19 Vaccination"
 * section[covid19VaccinationSection].code = CSCaseReportSections#COVID-VACCINATION
@@ -83,8 +85,11 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19VaccinationSection].entry ^slicing.discriminator.path = "item.resolve()"
 * section[covid19VaccinationSection].entry ^slicing.rules = #closed
 * section[covid19VaccinationSection].entry contains
-    covid19Vaccination 1..1 
+    covid19Vaccination 1..1 and
+    covid19VaccinationAppointment 0..1
 * section[covid19VaccinationSection].entry[covid19Vaccination] only Reference(Covid19Vaccination)
+* section[covid19VaccinationSection].entry[covid19VaccinationAppointment] only Reference(Covid19VaccinationAppointment)
+
 
 Profile: Covid19Organization
 Parent: Organization
@@ -292,6 +297,7 @@ Description: "Covid19 Lab Order"
 * code from VSTestTypes
 * code 1..1 MS // Test request Code
 * locationReference MS //Reference Lab sample send to
+* status MS // Lab Test Performed
 
 Extension: Covid19SpecimenType
 Id: covid19-specimen-type
@@ -357,36 +363,30 @@ Description: "Covid19 Test Completed"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSYesNoUnknown
 
-Extension: Covid19ReasonTestNotPerformed
-Id: covid19-reason-test-not-performed
-Title: "Covid19 Reason Test not performed"
-Description: "Covid19 Reason test not performed"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSReasonTestNotPerformed
-
 Profile: Covid19LabResults
 Parent: DiagnosticReport
 Id: covid19-lab-results
 Title: "Covid19 Lab Results"
 Description: "Covid19 Lab Results"
 * subject 1..1 MS // Patient reference
-* encounter 1..1 MS // Covid Assessment reference
+* basedOn 1..1 MS // Ref to ServiceRequest
 * identifier 1..1 MS //Sample ID
-* effectiveDateTime MS //Test result date
+* effectiveDateTime MS //Test result date-time
 * conclusionCode MS //Test Result
 * conclusionCode from VSTestResult
 * extension contains Covid19testCompleted named testCompleted 1..1 MS  //Lab Test Performed
 * status MS  //Status of lab order
 * status from VSLabOrderStatus
-* extension contains Covid19ReasonTestNotPerformed named reasonTestNotPerformed 0..1 MS //Reason test not performed
 * code.coding.system MS  //Result Coding system
 * code.coding.code MS  //Result Code
 
-Extension: Covid19NextVaccinationDate
-Id: covid19-next-vaccination-date
-Title: "Covid19 Date of next vaccination"
-Description: "Covid19 Date of next vaccination (if scheduled)"
-* valueDateTime MS 
+Profile: Covid19ReasonTestNotPerformed
+Parent: Observation
+Id: covid19-reason-test-not-performed
+Title: "Covid19 Reason Test Not Performed"
+Description: "Covid19 reason test not peformed"
+* dataAbsentReason from VSReasonTestNotPerformed   
+* dataAbsentReason MS //Reason test not performed
 
 Extension: Covid19OtherVaccine
 Id: covid19-other-vaccine
@@ -405,8 +405,16 @@ Description: "Covid19 Vaccination"
 * protocolApplied.series 1..1 MS //  VSVaccineSeries  #TODO conditional validation for aplying binding validation
 * protocolApplied.doseNumberPositiveInt 1..1  MS 
 * expirationDate MS    //Vaccine expiration date
-* extension contains Covid19NextVaccinationDate named covid19NextVaccinationDate 0..1 MS //Date of next vaccination (if scheduled)
 * vaccineCode MS    //Vaccine administered  
 * vaccineCode from VSCovid19VaccineCodes
 * vaccineCode.text MS //other vaccine
 * lotNumber  1..1 MS  //Vaccine lot number
+* note MS // notes
+
+Profile: Covid19VaccinationAppointment
+Parent: Appointment
+Id: covid19-vaccination-appointment
+Title: "Covid19 Vaccination Appointment"
+Description: "Covid19 Vaccination Appointment"
+* participant.actor 1..1 MS // Patient Reference
+* start 1..1 MS // date of next vaccination

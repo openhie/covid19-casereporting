@@ -38,6 +38,8 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19LabResultsExample
 * entry[+].fullUrl = "Composition/Covid19VaccinationExample"
 * entry[=].resource = Covid19VaccinationExample
+* entry[+].fullUrl = "Composition/Covid19VaccinationAppointmentExample"
+* entry[=].resource = Covid19VaccinationAppointmentExample
 
 Instance: Covid19CompositionExample
 InstanceOf: Covid19Composition
@@ -79,6 +81,7 @@ Description: "Basic Composition example"
 * section[+].title = "Covid 19 Vaccination"
 * section[=].code = CSCaseReportSections#COVID-VACCINATION
 * section[=].entry[+] = Reference(Covid19VaccinationExample)
+* section[=].entry[+] = Reference(Covid19VaccinationAppointmentExample)
 
 Instance: Covid19OrganizationExample
 InstanceOf: Covid19Organization
@@ -307,14 +310,13 @@ Description: "Covid19 Lab Results example"
 * code = $LNC#100156-9 
 * code.coding.system = $LNC
 * code.coding.code = $LNC#100156-9    /// #TODO --> Identify correct LOINC code
-* encounter = Reference(Covid19AssessmentEncounterExample) 
+* basedOn = Reference(Covid19LabOrder) 
 * subject = Reference(Covid19PatientExample) 
 * identifier.id = "12341324"
 * effectiveDateTime = "2022-07-28"
 * conclusionCode.coding.code =  #Positive
 * extension[testCompleted].valueCodeableConcept = #Yes
 * status = #final //#TODO - change to specific VS in spreadsheet
-* extension[reasonTestNotPerformed].valueCodeableConcept = #Other
 
 Instance: Covid19VaccinationExample
 InstanceOf: Covid19Vaccination
@@ -327,7 +329,15 @@ Description: "Covid19 Vaccination example"
 * protocolApplied.doseNumberPositiveInt = 1    //#TODO : min=1, max = 9
 * protocolApplied.series = #Booster
 * expirationDate = "2022-12-28"
-* extension[covid19NextVaccinationDate].valueDate = "2022-12-28"
 * vaccineCode =   #Astrazeneca
 * lotNumber = "1"
 
+Instance: Covid19VaccinationAppointmentExample
+InstanceOf: Covid19VaccinationAppointment
+Usage: #example
+Title: "Covid19 Vaccination Appointment example"
+Description: "Covid19 Vaccination Appointment example"
+* participant.actor  = Reference(Covid19PatientExample)
+* participant.status = #tentative
+* start = "2015-02-07T13:28:17.239+02:00"
+* status = #proposed
