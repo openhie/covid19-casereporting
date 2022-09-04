@@ -195,7 +195,7 @@ Description: "Covid19 Conditions or comorbidity example"
 * note.text = "Other condition details specified here"
 
 Instance: Covid19DiagnosisExample
-InstanceOf: Condition
+InstanceOf: Covid19Diagnosis
 Usage: #example
 Title: "Covid19 Diagnosis Example"
 Description: "Covid19 Diagnosis Example"
@@ -203,6 +203,7 @@ Description: "Covid19 Diagnosis Example"
 * recordedDate = "2022-07-28"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
+* clinicalStatus = #Confirmed 
 
 Instance: HIVDiagnosisExample
 InstanceOf: HIVDiagnosis

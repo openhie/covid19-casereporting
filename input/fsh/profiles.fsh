@@ -263,6 +263,8 @@ Description: "Covid19 Diagnosis"
 * recordedDate MS // Date of Diagnosis
 * verificationStatus from VSCovidDiagnosis //Covid Diagnosis
 * abatementDateTime 0..1 MS //Date recovered or date symptoms resolved
+* clinicalStatus from VSPatientOutcome
+* clinicalStatus 1..1 MS // Patient Outcome
 
 //Fields required from the CBS MDS for Covid Report indicators
 Profile: HIVDiagnosis
@@ -285,8 +287,6 @@ Parent: Observation
 Id: covid19-patient-outcome
 Title: "Covid19 Patient Outcome"
 Description: "Covid19 Patient Outcome"
-//* value[x] only CodeableConcept
-* valueCodeableConcept from VSPatientOutcome 
 * extension contains Covid19LongCOVIDDescription named covid19LongCOVIDDescription 0..1 MS
 * note MS    //additional notes
 * valueDateTime  MS // Date of Death
