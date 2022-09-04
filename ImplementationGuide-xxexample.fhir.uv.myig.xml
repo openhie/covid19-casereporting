@@ -12,7 +12,7 @@
   <title value="Covid 19 Case Reporting and Lab Management"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-09-04T17:03:18+00:00"/>
+  <date value="2022-09-04T18:26:39+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -419,6 +419,14 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/Covid19VaccinationAppointmentExample"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -659,6 +667,16 @@
       </reference>
       <name value="Conditions or comorbidity list"/>
       <description value="Conditions or comorbidity list"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-vaccination-appointment"/>
+      </reference>
+      <name value="Covid19 Vaccination Appointment"/>
+      <description value="Covid19 Vaccination Appointment"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1038,13 +1056,13 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
+        <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
         <reference value="StructureDefinition/covid19-reason-test-not-performed"/>
       </reference>
-      <name value="Covid19 Reason Test not performed"/>
-      <description value="Covid19 Reason test not performed"/>
+      <name value="Covid19 Reason Test Not Performed"/>
+      <description value="Covid19 reason test not peformed"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1083,16 +1101,6 @@
       <reference>
         <reference value="Bundle/Covid19BundleExample"/>
       </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-next-vaccination-date"/>
-      </reference>
-      <name value="Covid19 Date of next vaccination"/>
-      <description value="Covid19 Date of next vaccination (if scheduled)"/>
     </resource>
     <page>
       <nameUrl value="toc.html"/>

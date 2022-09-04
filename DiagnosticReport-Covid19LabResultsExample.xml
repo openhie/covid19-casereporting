@@ -15,14 +15,10 @@
       </coding>
     </valueCodeableConcept>
   </extension>
-  <extension url="http://example.com/fhir/example/StructureDefinition/covid19-reason-test-not-performed">
-    <valueCodeableConcept>
-      <coding>
-        <code value="Other"/>
-      </coding>
-    </valueCodeableConcept>
-  </extension>
   <identifier id="12341324"/>
+  <basedOn>
+    <reference value="Covid19LabOrder"/>
+  </basedOn>
   <status value="final"/>
   <code>
     <coding>
@@ -33,9 +29,6 @@
   <subject>
     <reference value="Patient/Covid19PatientExample"/>
   </subject>
-  <encounter>
-    <reference value="Encounter/Covid19AssessmentEncounterExample"/>
-  </encounter>
   <effectiveDateTime value="2022-07-28"/>
   <conclusionCode>
     <coding>

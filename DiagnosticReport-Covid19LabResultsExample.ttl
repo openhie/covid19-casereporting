@@ -29,19 +29,14 @@
          fhir:Coding.code [ fhir:value "Yes" ]
        ]
      ]
-  ], [
-     fhir:index 1;
-     fhir:Extension.url [ fhir:value "http://example.com/fhir/example/StructureDefinition/covid19-reason-test-not-performed" ];
-     fhir:Extension.valueCodeableConcept [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.code [ fhir:value "Other" ]
-       ]
-     ]
   ];
   fhir:DiagnosticReport.identifier [
      fhir:index 0;
      fhir:Element.id [ fhir:value "12341324" ]
+  ];
+  fhir:DiagnosticReport.basedOn [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "Covid19LabOrder" ]
   ];
   fhir:DiagnosticReport.status [ fhir:value "final"];
   fhir:DiagnosticReport.code [
@@ -55,10 +50,6 @@
   fhir:DiagnosticReport.subject [
      fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
-  ];
-  fhir:DiagnosticReport.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
-     fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
   ];
   fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2022-07-28"^^xsd:date];
   fhir:DiagnosticReport.conclusionCode [

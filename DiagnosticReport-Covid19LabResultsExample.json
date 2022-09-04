@@ -20,21 +20,16 @@
           }
         ]
       }
-    },
-    {
-      "url": "http://example.com/fhir/example/StructureDefinition/covid19-reason-test-not-performed",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "Other"
-          }
-        ]
-      }
     }
   ],
   "identifier": [
     {
       "id": "12341324"
+    }
+  ],
+  "basedOn": [
+    {
+      "reference": "Covid19LabOrder"
     }
   ],
   "status": "final",
@@ -48,9 +43,6 @@
   },
   "subject": {
     "reference": "Patient/Covid19PatientExample"
-  },
-  "encounter": {
-    "reference": "Encounter/Covid19AssessmentEncounterExample"
   },
   "effectiveDateTime": "2022-07-28",
   "conclusionCode": [

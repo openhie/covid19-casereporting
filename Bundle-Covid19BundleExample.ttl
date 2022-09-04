@@ -78,6 +78,10 @@
      fhir:index 16;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19VaccinationExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19VaccinationExample>
+  ], [
+     fhir:index 17;
+     fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19VaccinationAppointmentExample" ];
+     fhir:Bundle.entry.resource <Composition/Covid19VaccinationAppointmentExample>
   ] .
 
 <Composition/Covid19CompositionExample> a fhir:Composition;
@@ -221,6 +225,10 @@
        fhir:index 0;
        fhir:link <http://xxsomewhere.org/fhir/myig/Immunization/Covid19VaccinationExample>;
        fhir:Reference.reference [ fhir:value "Immunization/Covid19VaccinationExample" ]
+     ], [
+       fhir:index 1;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Appointment/Covid19VaccinationAppointmentExample>;
+       fhir:Reference.reference [ fhir:value "Appointment/Covid19VaccinationAppointmentExample" ]
      ]
   ] .
 
@@ -798,7 +806,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport \"Covid19LabResultsExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-results.html\">Covid19 Lab Results</a></p></div><p><b>Covid19 Test Completed</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Yes)</span></p><p><b>Covid19 Reason Test not performed</b>: Other <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Other)</span></p><p><b>identifier</b>: id: ?ngen-9?</p><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#100156-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>effective</b>: 2022-07-28</p><p><b>conclusionCode</b>: Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Positive)</span></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport \"Covid19LabResultsExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-results.html\">Covid19 Lab Results</a></p></div><p><b>Covid19 Test Completed</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Yes)</span></p><p><b>identifier</b>: id: ?ngen-9?</p><p><b>basedOn</b>: <a href=\"Covid19LabOrder\">Covid19LabOrder</a></p><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#100156-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>effective</b>: 2022-07-28</p><p><b>conclusionCode</b>: Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Positive)</span></p></div>"
   ];
   fhir:DomainResource.extension [
      fhir:index 0;
@@ -809,19 +817,14 @@
          fhir:Coding.code [ fhir:value "Yes" ]
        ]
      ]
-  ], [
-     fhir:index 1;
-     fhir:Extension.url [ fhir:value "http://example.com/fhir/example/StructureDefinition/covid19-reason-test-not-performed" ];
-     fhir:Extension.valueCodeableConcept [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.code [ fhir:value "Other" ]
-       ]
-     ]
   ];
   fhir:DiagnosticReport.identifier [
      fhir:index 0;
      fhir:Element.id [ fhir:value "12341324" ]
+  ];
+  fhir:DiagnosticReport.basedOn [
+     fhir:index 0;
+     fhir:Reference.reference [ fhir:value "Covid19LabOrder" ]
   ];
   fhir:DiagnosticReport.status [ fhir:value "final"];
   fhir:DiagnosticReport.code [
@@ -835,10 +838,6 @@
   fhir:DiagnosticReport.subject [
      fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
-  ];
-  fhir:DiagnosticReport.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
-     fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
   ];
   fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2022-07-28"^^xsd:date];
   fhir:DiagnosticReport.conclusionCode [
@@ -859,13 +858,8 @@
      ]
   ];
   fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Immunization</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Immunization \"Covid19VaccinationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-vaccination.html\">Covid19 Vaccination</a></p></div><p><b>Covid19 Date of next vaccination</b>: 2022-12-28</p><p><b>status</b>: final</p><p><b>vaccineCode</b>: Astrazeneca <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Astrazeneca)</span></p><p><b>patient</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>occurrence</b>: 2022-07-28</p><p><b>lotNumber</b>: 1</p><p><b>expirationDate</b>: 2022-12-28</p><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td>-</td><td><b>Series</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td>*</td><td>Booster</td><td>1</td></tr></table></div>"
-  ];
-  fhir:DomainResource.extension [
-     fhir:index 0;
-     fhir:Extension.url [ fhir:value "http://example.com/fhir/example/StructureDefinition/covid19-next-vaccination-date" ];
-     fhir:Extension.valueDate [ fhir:value "2022-12-28"^^xsd:date ]
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Immunization</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Immunization \"Covid19VaccinationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-vaccination.html\">Covid19 Vaccination</a></p></div><p><b>status</b>: final</p><p><b>vaccineCode</b>: Astrazeneca <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Astrazeneca)</span></p><p><b>patient</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>occurrence</b>: 2022-07-28</p><p><b>lotNumber</b>: 1</p><p><b>expirationDate</b>: 2022-12-28</p><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td>-</td><td><b>Series</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td>*</td><td>Booster</td><td>1</td></tr></table></div>"
   ];
   fhir:Immunization.status [ fhir:value "final"];
   fhir:Immunization.vaccineCode [
@@ -885,6 +879,30 @@
      fhir:index 0;
      fhir:Immunization.protocolApplied.series [ fhir:value "Booster" ];
      fhir:Immunization.protocolApplied.doseNumberPositiveInt [ fhir:value "1"^^xsd:positiveInteger ]
+  ] .
+
+<Composition/Covid19VaccinationAppointmentExample> a fhir:Appointment;
+  fhir:Resource.id [ fhir:value "Covid19VaccinationAppointmentExample"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://example.com/fhir/example/StructureDefinition/covid19-vaccination-appointment";
+       fhir:index 0;
+       fhir:link <http://example.com/fhir/example/StructureDefinition/covid19-vaccination-appointment>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Appointment</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Appointment \"Covid19VaccinationAppointmentExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-vaccination-appointment.html\">Covid19 Vaccination Appointment</a></p></div><p><b>status</b>: proposed</p><p><b>start</b>: Feb 7, 2015, 11:28:17 AM</p><h3>Participants</h3><table class=\"grid\"><tr><td>-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td>*</td><td><a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></td><td>tentative</td></tr></table></div>"
+  ];
+  fhir:Appointment.status [ fhir:value "proposed"];
+  fhir:Appointment.start [ fhir:value "2015-02-07T13:28:17.239+02:00"^^xsd:dateTime];
+  fhir:Appointment.participant [
+     fhir:index 0;
+     fhir:Appointment.participant.actor [
+       fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
+       fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
+     ];
+     fhir:Appointment.participant.status [ fhir:value "tentative" ]
   ] .
 
 # - ontology header ------------------------------------------------------------
