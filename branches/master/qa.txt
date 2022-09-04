@@ -1,11 +1,11 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 273, warn = 119, info = 23
+err = 274, warn = 119, info = 23
 IG Publisher Version: 1.1.128
-Generated Sun Sep 04 16:46:07 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
- Build Errors : 20 / 23 / 0
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 58 / 64 / 36
+Generated Sun Sep 04 16:53:56 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+ Build Errors : 21 / 23 / 0
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 60 / 64 / 36
  /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-cs-admission-types : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-assessment-reason : 2 / 0 / 2
@@ -39,13 +39,12 @@ Generated Sun Sep 04 16:46:07 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Observation-Covid19ComorbidityPresentExample : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19EverHospitalizedExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19VaccineDoseReceivedExample : 1 / 1 / 1
- /github/workspace/fsh-generated/resources/Organization-Covid19Laboratory : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Organization-Covid19LaboratoryExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Organization-Covid19OrganizationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Covid19PatientExample : 4 / 2 / 1
- /github/workspace/fsh-generated/resources/ServiceRequest-Covid19LabOrderExample : 4 / 1 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-Covid19LabOrderExample : 5 / 1 / 1
  /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-client-ward-division : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid-19reference-lab : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-cancellation-reason : 2 / 1 / 1
@@ -116,8 +115,6 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Condition/Covid19ConditionsComorbidityExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Condition/Covid19ConditionsComorbidityExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Composition/Covid19CompositionExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/Covid19Laboratory.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Covid19Laboratory.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Condition/Covid19DiagnosisExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Condition/Covid19DiagnosisExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Task/Covid19LabOrderCancellationExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
@@ -140,8 +137,11 @@ ERROR: Unable to find ImplementationGuide.definition.resource.name for the resou
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource DiagnosticReport/Covid19SpecimenCollectionExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Specimen/Covid19SpecimenExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Specimen/Covid19SpecimenExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/Covid19LaboratoryExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Covid19LaboratoryExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/Covid19BundleExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/Covid19BundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: /github/workspace/output/ServiceRequest-Covid19LabOrderExample.html#/html/body/div/div/div/div/div/div/p/a at Line 222, column 1204: The link 'Covid19Laboratory' for "Covid19Laboratory" cannot be resolved
 == fsh-generated/resources/Bundle-Covid19BundleExample.json ==
 ERROR: Bundle/Covid19BundleExample: Bundle: Rule bdl-9: 'A document must have an identifier with a system and a value' Failed
 ERROR: Bundle/Covid19BundleExample: Bundle: Rule bdl-10: 'A document must have a date' Failed
@@ -229,6 +229,8 @@ ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequ
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).code.coding[0]: The code "Rapid" is not valid in the system http://loinc.org; The code provided (http://loinc.org#Rapid) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#Rapid'
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).locationReference[0]: Relative URLs must be of the format [ResourceName]/[id].  Encountered Covid19Laboratory
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).locationReference[0]: Unable to resolve resource with reference 'Covid19Laboratory'
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).reasonCode[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).code: None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-test-types), and a coding from this value set is required) (codes = http://loinc.org#Rapid)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(ServiceRequest).reasonCode[0]: None of the codings provided are in the value set 'Assessment Reason valueset' (http://example.com/fhir/example/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Surveillance)
@@ -415,7 +417,7 @@ WARNING: Observation/Covid19EverHospitalizedExample: Observation.value.ofType(Co
 == fsh-generated/resources/Observation-Covid19VaccineDoseReceivedExample.json ==
 ERROR: Observation/Covid19VaccineDoseReceivedExample: Observation.value.ofType(CodeableConcept): None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)
 WARNING: Observation/Covid19VaccineDoseReceivedExample: Observation.value.ofType(CodeableConcept).coding[0]: A code with no system has no defined meaning. A system should be provided
-== fsh-generated/resources/Organization-Covid19Laboratory.json ==
+== fsh-generated/resources/Organization-Covid19LaboratoryExample.json ==
 == fsh-generated/resources/Organization-Covid19OrganizationExample.json ==
 == fsh-generated/resources/Patient-Covid19PatientExample.json ==
 ERROR: Patient/Covid19PatientExample: Patient.identifier[0]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://example.com/fhir/example/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
@@ -428,6 +430,7 @@ WARNING: Patient/Covid19PatientExample: Patient.contact[0].relationship[0].codin
 ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.status: The value provided ('Pending') is not in the value set 'RequestStatus' (http://hl7.org/fhir/ValueSet/request-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/request-status#Pending in http://hl7.org/fhir/request-status)
 ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.code: None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-test-types), and a coding from this value set is required) (codes = http://loinc.org#Rapid)
 ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.code.coding[0]: The code "Rapid" is not valid in the system http://loinc.org; The code provided (http://loinc.org#Rapid) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#Rapid'
+ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.locationReference[0]: Unable to resolve resource with reference 'Covid19Laboratory'
 ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.reasonCode[0]: None of the codings provided are in the value set 'Assessment Reason valueset' (http://example.com/fhir/example/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Surveillance)
 WARNING: ServiceRequest/Covid19LabOrderExample: ServiceRequest.reasonCode[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/Specimen-Covid19SpecimenExample.json ==
@@ -436,9 +439,6 @@ WARNING: Specimen/Covid19SpecimenExample: Specimen.type.coding[0]: A code with n
 == fsh-generated/resources/StructureDefinition-client-ward-division.json ==
 ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/client-ward-division'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-client-ward-division.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/client-ward-division) does not match the URL (http://example.com/fhir/example/StructureDefinition/client-ward-division)
 ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-client-ward-division: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/client-ward-division vs http://example.com/fhir/example/StructureDefinition/client-ward-division
-== fsh-generated/resources/StructureDefinition-covid-19reference-lab.json ==
-ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid-19reference-lab'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid-19reference-lab.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid-19reference-lab) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid-19reference-lab)
-ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid-19reference-lab: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid-19reference-lab vs http://example.com/fhir/example/StructureDefinition/covid-19reference-lab
 == fsh-generated/resources/StructureDefinition-covid19-admission.json ==
 ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-admission'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-admission) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid19-admission)
 WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-admission'): The Implementation Guide contains no examples for this profile

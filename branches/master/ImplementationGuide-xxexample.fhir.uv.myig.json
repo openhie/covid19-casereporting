@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-09-04T16:44:58+00:00",
+  "date": "2022-09-04T16:52:24+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -923,17 +923,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Organization"
-          }
-        ],
-        "reference": {
-          "reference": "Organization/Covid19Laboratory"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "CodeSystem"
           }
         ],
@@ -1269,19 +1258,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/covid-19reference-lab"
-        },
-        "name": "Covid19 Reference Lab",
-        "description": "Covid19 Reference Lab sample sent to"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           }
         ],
@@ -1440,6 +1416,17 @@
         },
         "name": "COVID Treatmens dispensed or prescribed",
         "description": "COVID Treatmens dispensed or prescribed"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/Covid19LaboratoryExample"
+        }
       },
       {
         "extension": [
