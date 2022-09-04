@@ -26,8 +26,6 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19VaccineDoseReceivedExample
 * entry[+].fullUrl = "Composition/Covid19AssessmentVaccinationExample"
 * entry[=].resource = Covid19AssessmentVaccinationExample
-* entry[+].fullUrl = "Composition/Covid19PatientOutcomeExample"
-* entry[=].resource = Covid19PatientOutcomeExample
 * entry[+].fullUrl = "Composition/Covid19LabOrderExample"
 * entry[=].resource = Covid19LabOrderExample
 * entry[+].fullUrl = "Composition/Covid19SpecimenExample"
@@ -240,17 +238,6 @@ Description: "Covid19 Vaccine Type Administered example"
 * occurrenceDateTime = "2022-07-28"
 * protocolApplied.doseNumberPositiveInt = 1
 * protocolApplied.series = #Booster
-
-Instance: Covid19PatientOutcomeExample
-InstanceOf: Covid19PatientOutcome
-Usage: #example
-Title: "Covid19 Patient Outcome example"
-Description: "Covid19 Patient Outcome example"
-* encounter = Reference(Covid19AssessmentEncounterExample) 
-* subject = Reference(Covid19PatientExample) 
-* status = #final
-* code = $LNC#75618-9   // #todo re-check the LOINC codes
-* note.text = "patient recovered"
 
 Instance: Covid19LabOrderExample
 InstanceOf: Covid19LabOrder

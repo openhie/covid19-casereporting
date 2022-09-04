@@ -46,8 +46,7 @@ Title: "Covid19 Case Reporting Composition"
     covid19Diagnosis 0..1 and
     hivDiagnosis 0..1 and
     covid19VaccineDoseReceived 1..1 and
-    covid19AssessmentVaccination 1..1 and
-    covid19PatientOutcome 1..1
+    covid19AssessmentVaccination 1..1
 * section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
 * section[covid19AssessmentSection].entry[covid19Presentation] only Reference(Covid19Presentation)
 * section[covid19AssessmentSection].entry[covid19DateLastHospitalized] only Reference(Covid19DateLastHospitalized)
@@ -60,7 +59,6 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry[hivDiagnosis] only Reference(HIVDiagnosis)
 * section[covid19AssessmentSection].entry[covid19VaccineDoseReceived] only Reference(Covid19VaccineDoseReceived)  
 * section[covid19AssessmentSection].entry[covid19AssessmentVaccination] only Reference(Covid19AssessmentVaccination)
-* section[covid19AssessmentSection].entry[covid19PatientOutcome] only Reference(Covid19PatientOutcome)
 
 * section[covid19LabOrderManagementSection].title = "Lab Order Management"
 * section[covid19LabOrderManagementSection].code = CSCaseReportSections#LABORDER-MANAGEMENT
@@ -201,7 +199,6 @@ Title: "Covid19 Assessment Encounter"
 Description: "Covid19 Assessment Encounter"
 * period.start 1..1 MS  //Date of assessment
 * subject 1..1 MS //Patient reference
-//* period.end MS  //Date died  --> Refer to Outcome effectivedate
 * reasonCode 1..* MS  
 * reasonCode from VSAssessmentReason 
 * reasonCode.text MS
@@ -262,10 +259,10 @@ Title: "Covid19 Diagnosis"
 Description: "Covid19 Diagnosis"
 * recordedDate MS // Date of Diagnosis
 * verificationStatus from VSCovidDiagnosis //Covid Diagnosis
-* abatementDateTime 0..1 MS //Date recovered or date symptoms resolved
 * clinicalStatus from VSPatientOutcome
 * clinicalStatus 1..1 MS // Patient Outcome
-* note MS  // Long covid description
+* abatementDateTime 0..1 MS //Date recovered or date symptoms resolved / Date Died
+* note MS  // Long covid description and/or Additional notes
 
 //Fields required from the CBS MDS for Covid Report indicators
 Profile: HIVDiagnosis
@@ -276,14 +273,6 @@ Description: "This profile allows the exchange of a patient's hiv diagnosis"
 * recordedDate 1..1
 * identifier 1..*
 * code 1..1
-
-Profile: Covid19PatientOutcome
-Parent: Observation
-Id: covid19-patient-outcome
-Title: "Covid19 Patient Outcome"
-Description: "Covid19 Patient Outcome"
-* note MS    //additional notes
-* valueDateTime  MS // Date of Death
 
 Profile: Covid19LabOrder
 Parent: ServiceRequest
