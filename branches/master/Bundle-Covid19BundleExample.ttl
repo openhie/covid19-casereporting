@@ -56,30 +56,26 @@
      fhir:Bundle.entry.resource <Composition/Covid19AssessmentVaccinationExample>
   ], [
      fhir:index 11;
-     fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19PatientOutcomeExample" ];
-     fhir:Bundle.entry.resource <Composition/Covid19PatientOutcomeExample>
-  ], [
-     fhir:index 12;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19LabOrderExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19LabOrderExample>
   ], [
-     fhir:index 13;
+     fhir:index 12;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19SpecimenExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19SpecimenExample>
   ], [
-     fhir:index 14;
+     fhir:index 13;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19SpecimenCollectionExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19SpecimenCollectionExample>
   ], [
-     fhir:index 15;
+     fhir:index 14;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19LabOrderCancellationExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19LabOrderCancellationExample>
   ], [
-     fhir:index 16;
+     fhir:index 15;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19LabResultsExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19LabResultsExample>
   ], [
-     fhir:index 17;
+     fhir:index 16;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19VaccinationExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19VaccinationExample>
   ] .
@@ -179,8 +175,7 @@
        fhir:Reference.reference [ fhir:value "Immunization/Covid19AssessmentVaccinationExample" ]
      ], [
        fhir:index 9;
-       fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19PatientOutcomeExample>;
-       fhir:Reference.reference [ fhir:value "Observation/Covid19PatientOutcomeExample" ]
+       fhir:Reference.reference [ fhir:value "Covid19PatientOutcomeExample" ]
      ]
   ], [
      fhir:index 2;
@@ -624,41 +619,6 @@
      fhir:index 0;
      fhir:Immunization.protocolApplied.series [ fhir:value "Booster" ];
      fhir:Immunization.protocolApplied.doseNumberPositiveInt [ fhir:value "1"^^xsd:positiveInteger ]
-  ] .
-
-<Composition/Covid19PatientOutcomeExample> a fhir:Observation;
-  fhir:Resource.id [ fhir:value "Covid19PatientOutcomeExample"];
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://example.com/fhir/example/StructureDefinition/covid19-patient-outcome";
-       fhir:index 0;
-       fhir:link <http://example.com/fhir/example/StructureDefinition/covid19-patient-outcome>
-     ]
-  ];
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19PatientOutcomeExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-patient-outcome.html\">Covid19 Patient Outcome</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbid condition <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#75618-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>note</b>: patient recovered</p></div>"
-  ];
-  fhir:Observation.status [ fhir:value "final"];
-  fhir:Observation.code [
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       a loinc:75618-9;
-       fhir:Coding.system [ fhir:value "http://loinc.org" ];
-       fhir:Coding.code [ fhir:value "75618-9" ]
-     ]
-  ];
-  fhir:Observation.subject [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
-     fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
-  ];
-  fhir:Observation.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
-     fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
-  ];
-  fhir:Observation.note [
-     fhir:index 0;
-     fhir:Annotation.text [ fhir:value "patient recovered" ]
   ] .
 
 <Composition/Covid19LabOrderExample> a fhir:ServiceRequest;

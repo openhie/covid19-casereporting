@@ -93,7 +93,7 @@
                 "reference": "Immunization/Covid19AssessmentVaccinationExample"
               },
               {
-                "reference": "Observation/Covid19PatientOutcomeExample"
+                "reference": "Covid19PatientOutcomeExample"
               }
             ]
           },
@@ -568,42 +568,6 @@
           {
             "series": "Booster",
             "doseNumberPositiveInt": 1
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "Composition/Covid19PatientOutcomeExample",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "Covid19PatientOutcomeExample",
-        "meta": {
-          "profile": [
-            "http://example.com/fhir/example/StructureDefinition/covid19-patient-outcome"
-          ]
-        },
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19PatientOutcomeExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-patient-outcome.html\">Covid19 Patient Outcome</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbid condition <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#75618-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>note</b>: patient recovered</p></div>"
-        },
-        "status": "final",
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "75618-9"
-            }
-          ]
-        },
-        "subject": {
-          "reference": "Patient/Covid19PatientExample"
-        },
-        "encounter": {
-          "reference": "Encounter/Covid19AssessmentEncounterExample"
-        },
-        "note": [
-          {
-            "text": "patient recovered"
           }
         ]
       }
