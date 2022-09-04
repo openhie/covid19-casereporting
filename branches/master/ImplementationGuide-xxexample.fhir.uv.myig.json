@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-09-04T17:03:18+00:00",
+  "date": "2022-09-04T18:26:39+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -618,6 +618,17 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Appointment"
+          }
+        ],
+        "reference": {
+          "reference": "Appointment/Covid19VaccinationAppointmentExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "CodeSystem"
           }
         ],
@@ -931,6 +942,19 @@
         },
         "name": "Conditions or comorbidity list",
         "description": "Conditions or comorbidity list"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-vaccination-appointment"
+        },
+        "name": "Covid19 Vaccination Appointment",
+        "description": "Covid19 Vaccination Appointment"
       },
       {
         "extension": [
@@ -1432,14 +1456,14 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
           "reference": "StructureDefinition/covid19-reason-test-not-performed"
         },
-        "name": "Covid19 Reason Test not performed",
-        "description": "Covid19 Reason test not performed"
+        "name": "Covid19 Reason Test Not Performed",
+        "description": "Covid19 reason test not peformed"
       },
       {
         "extension": [
@@ -1490,19 +1514,6 @@
         "reference": {
           "reference": "Bundle/Covid19BundleExample"
         }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/covid19-next-vaccination-date"
-        },
-        "name": "Covid19 Date of next vaccination",
-        "description": "Covid19 Date of next vaccination (if scheduled)"
       }
     ],
     "page": {

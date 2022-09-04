@@ -21,27 +21,11 @@
       ]
     },
     {
-      "url": "http://example.com/fhir/example/StructureDefinition/covid19-next-vaccination-date",
-      "title": "Covid19 Date of next vaccination",
-      "types": [
-        "dateTime",
-        "dateTime"
-      ]
-    },
-    {
       "url": "http://example.com/fhir/example/StructureDefinition/covid19-other-vaccine",
       "title": "Covid19 Other vaccine",
       "types": [
         "string",
         "string"
-      ]
-    },
-    {
-      "url": "http://example.com/fhir/example/StructureDefinition/covid19-reason-test-not-performed",
-      "title": "Covid19 Reason Test not performed",
-      "types": [
-        "CodeableConcept",
-        "CodeableConcept"
       ]
     },
     {
@@ -149,20 +133,18 @@
         "url": "http://example.com/fhir/example/StructureDefinition/covid19-symptom",
         "title": "Covid19 Symptom"
       }
+    ],
+    "Appointment": [
+      {
+        "url": "http://example.com/fhir/example/StructureDefinition/covid19-vaccination-appointment",
+        "title": "Covid19 Vaccination Appointment"
+      }
     ]
   },
   "usage": {
     "http://example.com/fhir/example/StructureDefinition/client-ward-division": [
       "Bundle.entry.resource",
       "Patient"
-    ],
-    "http://example.com/fhir/example/StructureDefinition/covid19-next-vaccination-date": [
-      "Bundle.entry.resource",
-      "Immunization"
-    ],
-    "http://example.com/fhir/example/StructureDefinition/covid19-reason-test-not-performed": [
-      "Bundle.entry.resource",
-      "DiagnosticReport"
     ],
     "http://example.com/fhir/example/StructureDefinition/covid19-specimen-forwarded": [
       "Bundle.entry.resource",
