@@ -46,7 +46,8 @@ Title: "Covid19 Case Reporting Composition"
     covid19Diagnosis 0..1 and
     hivDiagnosis 0..1 and
     covid19VaccineDoseReceived 1..1 and
-    covid19AssessmentVaccination 1..1
+    covid19AssessmentVaccination 1..1 and
+    covid19MedicationRequest 0..1
 * section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
 * section[covid19AssessmentSection].entry[covid19Presentation] only Reference(Covid19Presentation)
 * section[covid19AssessmentSection].entry[covid19DateLastHospitalized] only Reference(Covid19DateLastHospitalized)
@@ -59,6 +60,7 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry[hivDiagnosis] only Reference(HIVDiagnosis)
 * section[covid19AssessmentSection].entry[covid19VaccineDoseReceived] only Reference(Covid19VaccineDoseReceived)  
 * section[covid19AssessmentSection].entry[covid19AssessmentVaccination] only Reference(Covid19AssessmentVaccination)
+* section[covid19AssessmentSection].entry[covid19MedicationRequest] only Reference(Covid19MedicationRequest)
 
 * section[covid19LabOrderManagementSection].title = "Lab Order Management"
 * section[covid19LabOrderManagementSection].code = CSCaseReportSections#LABORDER-MANAGEMENT
@@ -267,6 +269,13 @@ Description: "Covid19 Diagnosis"
 * abatementDateTime 0..1 MS //Date recovered or date symptoms resolved / Date Died
 * note MS  // Long covid description and/or Additional notes
 
+Profile: Covid19MedicationRequest
+Parent: MedicationRequest
+Id: covid19-medication-request
+Title: "Covid19 Treatment dispensed or prescribed"
+Description: "Covid19 Treatment dispensed or prescribed"
+* medicationCodeableConcept from VSTreatMentDispensedPrescribed
+
 //Fields required from the CBS MDS for Covid Report indicators
 Profile: HIVDiagnosis
 Parent: Condition
@@ -322,12 +331,11 @@ Id: covid19-lab-order-cancellation
 Title: "Covid19 Lab Order Cancellation"
 Description: "Covid19 Lab Order Cancellation Task"
 * intent = #order
-* focus 1..1 MS // Refer to Lab Order  --> What task is acting on
-* for 1..1 MS // Beneficiary of the Task --> Patient
-* encounter 1..1 MS // Healthcare event during which this task originated -- >Covid19AssessmentEncounter
+* basedOn 1..1 MS // Reference to the Lab Order (ServiceRequest)
 * executionPeriod 1..1 MS //Cancellation date
 * statusReason 1..1 MS
 * statusReason from VSCancellationReason
+* status = #cancelled
 
 Profile: Covid19LabResultsDiagnosticReport
 Parent: DiagnosticReport

@@ -203,6 +203,17 @@ Description: "Covid19 Diagnosis Example"
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * clinicalStatus = #Confirmed 
 
+Instance: Covid19MedicationRequestExample
+InstanceOf: Covid19MedicationRequest
+Usage: #example
+Title: "Covid19 Treatment dispensed or prescribed example"
+Description: "Covid19 Treatment dispensed or prescribed example"
+* status = #active
+* intent = #proposal
+* subject = Reference(Covid19PatientExample)
+* encounter = Reference(Covid19AssessmentEncounterExample)
+* medicationCodeableConcept = #Paxlovid
+
 Instance: HIVDiagnosisExample
 InstanceOf: HIVDiagnosis
 Usage: #example
@@ -280,10 +291,7 @@ InstanceOf: Covid19LabOrderCancellation
 Usage: #example
 Title: "Covid19 Lab Order Cancellation  example"
 Description: "Covid19 Lab Order Cancellation Task example"
-* focus = Reference(Covid19LabOrderExample)
-* for   = Reference(Covid19PatientExample)
-* encounter  = Reference(Covid19AssessmentEncounterExample) 
-* status = #requested
+* basedOn = Reference(Covid19LabOrderExample)
 * executionPeriod.start = "2022-07-28"
 * statusReason = #Duplicate
 
