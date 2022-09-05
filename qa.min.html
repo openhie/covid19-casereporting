@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Covid19CaseReporting</h1>
- <p>Generated Mon Sep 05 12:18:16 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://xxsomewhere.org/fhir/myig">http://xxsomewhere.org/fhir/myig</a> (<a href="http://xxsomewhere.org/fhir/myig/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Mon Sep 05 12:42:10 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://xxsomewhere.org/fhir/myig">http://xxsomewhere.org/fhir/myig</a> (<a href="http://xxsomewhere.org/fhir/myig/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.128</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = openhie.fhir.covid, Canonical = http://xxsomewhere.org/fhir/myig</td></tr>
@@ -763,6 +763,9 @@
      <td><b>Bundle.entry[12].resource.ofType(Specimen).type (l608/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Covid19 Specimen Type' (http://example.com/fhir/example/ValueSet/vs-covid19-specimen-type), and a coding from this value set is required) (codes = null#Serum)</b> (<a href="qa-tx.html#l63">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[13].resource.ofType(Task).statusReason.coding[0] (l642/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[13].resource.ofType(Task).focus</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 11 matches the reference ServiceRequest/Covid19LabOrderExample by type and id but it's fullUrl Composition/Covid19LabOrderExample does not match the full target URL ServiceRequest/Covid19LabOrderExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
@@ -771,11 +774,8 @@
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[13].resource.ofType(Task).encounter</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules</b></td>
    </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[13].resource.ofType(Task).reasonCode.coding[0] (l642/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
-   </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[13].resource.ofType(Task).reasonCode (l641/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)</b> (<a href="qa-tx.html#l64">see Tx log</a>)</td>
+     <td><b>Bundle.entry[13].resource.ofType(Task).statusReason (l641/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)</b> (<a href="qa-tx.html#l64">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle.entry[14].resource.ofType(DiagnosticReport).extension[0].value.ofType(CodeableConcept) (l663/c26)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Yes No Unknown' (http://example.com/fhir/example/ValueSet/vs-yes-no), and a coding from this value set is required) (codes = null#Yes)</b> (<a href="qa-tx.html#l65">see Tx log</a>)</td>
@@ -2050,10 +2050,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Task.reasonCode (l24/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)</b> (<a href="qa-tx.html#l30">see Tx log</a>)</td>
+     <td><b>Task.statusReason (l24/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)</b> (<a href="qa-tx.html#l30">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Task.reasonCode.coding[0] (l25/c8)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Task.statusReason.coding[0] (l25/c8)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
 </table>
 <hr/>

@@ -718,9 +718,15 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"Covid19LabOrderCancellationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order-cancellation.html\">Covid19 Lab Order Cancellation</a></p></div><p><b>status</b>: requested</p><p><b>intent</b>: order</p><p><b>focus</b>: <a href=\"#ServiceRequest_Covid19LabOrderExample\">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>for</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p><p><b>reasonCode</b>: Duplicate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Duplicate)</span></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"Covid19LabOrderCancellationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order-cancellation.html\">Covid19 Lab Order Cancellation</a></p></div><p><b>status</b>: requested</p><p><b>statusReason</b>: Duplicate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Duplicate)</span></p><p><b>intent</b>: order</p><p><b>focus</b>: <a href=\"#ServiceRequest_Covid19LabOrderExample\">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>for</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p></div>"
   ];
   fhir:Task.status [ fhir:value "requested"];
+  fhir:Task.statusReason [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "Duplicate" ]
+     ]
+  ];
   fhir:Task.intent [ fhir:value "order"];
   fhir:Task.focus [
      fhir:link <http://xxsomewhere.org/fhir/myig/ServiceRequest/Covid19LabOrderExample>;
@@ -736,12 +742,6 @@
   ];
   fhir:Task.executionPeriod [
      fhir:Period.start [ fhir:value "2022-07-28"^^xsd:date ]
-  ];
-  fhir:Task.reasonCode [
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "Duplicate" ]
-     ]
   ] .
 
 <Composition/Covid19LabResultsExample> a fhir:DiagnosticReport;
