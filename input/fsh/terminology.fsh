@@ -1,9 +1,8 @@
 Alias: $SCT = http://snomed.info/sct
 Alias: $LNC = http://loinc.org
-Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6   //yes no unkw
+Alias: $ICD = http://id.who.int/icd/entity
+Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6 
 Alias: $KEYPOPULATION = https://openhie.github.io/hiv-ig/ValueSet-vs-key-population
-//Alias: $LNC-75618-9 = https://loinc.org/75618-9/
-
 
 CodeSystem: CSCaseReportSections
 Id: cs-case-report-sections
@@ -14,88 +13,72 @@ Description: ""
 * #LABORDER-MANAGEMENT
 * #COVID-VACCINATION
 
-CodeSystem: CSAssessmentReason
-Id: cs-assessment-reason
-Title: "Assessment Reason codes"
-Description: "A list of assessment reasons"
-* #CaseContact  "Contact of a case"
-* #Entry "Entry into a country"
-* #FO "Follow-up"
-* #HW "Health worker"
-* #OtherFrontlineWorker "Other frontline worker"
-* #Post "Post-mortem"
-* #Quarantine "Quarantine"
-* #RDT "RDT confirmatory"
-* #Surveillance "Surveillance"
-* #Symptomatic "Symptomatic/Illness"
-* #Travel "Travel out of country"
-* #Voluntary "Voluntary"
+CodeSystem: CSOther
+Id: cs-other
+Title: "Covid19 Case Report Sections codesystem"
+Description: ""
 * #Other "Other (specify)"
 
 ValueSet: VSAssessmentReason
 Id: vs-assessment-reason
 Title: "Assessment Reason valueset"
 Description:  "Valueset - assessment reason"
-* include codes from system CSAssessmentReason
+* include codes from system $SCT where concept is-a #428792000 "Contact of a case"
+* include codes from system $SCT where concept is-a #171367005 "Entry into a country"
+* include codes from system $SCT where concept is-a #308273005 "Follow-up"
+* include codes from system $SCT where concept is-a #223366009 "Health worker"
+* include codes from system $SCT where concept is-a #34325006 "Other frontline worker"
+* include codes from system $SCT where concept is-a #168260004 "Post-mortem"
+* include codes from system $SCT where concept is-a #170497006 "Quarantine"
+* include codes from system $SCT where concept is-a #273407003 "RDT confirmatory"
+* include codes from system $SCT where concept is-a #243790003 "Surveillance"
+* include codes from system $SCT where concept is-a #264931009 "Symptomatic/Illness"
+* include codes from system $SCT where concept is-a #171367005 "Travel out of country"
+* include codes from system $SCT where concept is-a #255375007 "Voluntary"
+* include codes from system CSOther
 
-CodeSystem: CSPresentation
-Id: cs-presentation
-Title: "Assessment Reason codes"
-Description: "A list of assessment reasons"
-* #Asymptomatic  "Asymptomatic"
-* #Symptomatic "Symptomatic"
+
 
 ValueSet: VSPresentation
 Id: vs-presentation
 Title: "Presentation valueset"
 Description:  "Valueset - presentation"
-* include codes from system CSPresentation
-
-CodeSystem: CSSymptoms
-Id: cs-symptoms
-Title: "Presenting symptoms"
-Description: "A list of symptoms"
-* #AbdominalPain "Abdominal Pain"
-* #Chestpain "Chest pain"
-* #Cough "Cough"  
-* #Diarrhoea "Diarrhoea"
-* #DisturbanceOfConsciousness "Disturbance of Consciousness"
-* #GeneralWeakness "General Weakness"
-* #Headache "Headache"
-* #HistoryOfFeverOrChills "History Of Fever Or Chills"
-* #IrritabilityConfusion "Irritability / Confusion" 
-* #JointPain "Joint Pain"
-* #LossOfSmell "Loss of smell"
-* #LossOfTaste "Loss of Taste"
-* #MuscularPain "Muscular pain"
-* #Nausea/vomiting "Nausea/vomiting"
-* #Redeyes "Red eyes (Conjunctival hyperemia)"
-* #RunnyNose "Runny nose" 
-* #ShortnessOfBreath "Shortness of breath (Acute respiratory distress)"
-* #Sneezing "Sneezing"
-* #SoreThroat "Sore Throat"
-* #Tiredness "Tiredness"
-* #Other "Other (specify)"
+* include codes from system $SCT where concept is-a #84387000 "Asymptomatic"
+* include codes from system $SCT where concept is-a #264931009 "Symptomatic"
 
 ValueSet: VSSymptoms
 Id: vs-symptoms
 Title: "Presenting symptoms"
 Description:  "A list of symptoms"
-* include codes from system CSSymptoms
-
-CodeSystem: CSAdmissionTypes
-Id: cs-admission-types
-Title: "Admission Types"
-Description: "A list of Admission Types"
-* #Ward "Ward"
-* #HDU "HDU"
-* #ICU "ICU"
+* include codes from system $SCT where concept is-a #21522001 "Abdominal Pain"
+* include codes from system $SCT where concept is-a #29857009 "Chest pain"
+* include codes from system $SCT where concept is-a #49727002 "Cough"
+* include codes from system $SCT where concept is-a #62315008 "Diarrhoea" 
+* include codes from system $SCT where concept is-a #3006004  "Disturbance of Consciousness" 
+* include codes from system $SCT where concept is-a #13791008 "General Weakness" 
+* include codes from system $SCT where concept is-a #25064002 "Headache" 
+* include codes from system $SCT where concept is-a #386661006 "History Of Fever Or Chills" 
+* include codes from system $SCT where concept is-a #130987000 "Irritability / Confusion" 
+* include codes from system $SCT where concept is-a #57676002 "Joint Pain" 
+* include codes from system $SCT where concept is-a #44169009 "Loss of smell" 
+* include codes from system $SCT where concept is-a #36955009 "Loss of Taste" 
+* include codes from system $SCT where concept is-a #68962001 "Muscular pain" 
+* include codes from system $SCT where concept is-a #16932000 "Nausea/vomiting" 
+* include codes from system $SCT where concept is-a #703630003 "Red eyes (Conjunctival hyperemia)" 
+* include codes from system $SCT where concept is-a #64531003 "Runny nose" 
+* include codes from system $SCT where concept is-a #373895009 "Shortness of breath (Acute respiratory distress)" 
+* include codes from system $SCT where concept is-a #76067001 "Sneezing" 
+* include codes from system $SCT where concept is-a #162397003 "Sore Throat" 
+* include codes from system $SCT where concept is-a #224960004 "Tiredness"
+* include codes from system CSOther
 
 ValueSet: VSAdmissionTypes
 Id: vs-AdmissionTypes
 Title: "Admission Types"
 Description: "A list of Admission Types"
-* include codes from system CSAdmissionTypes
+* include codes from system $SCT where concept is-a #225746001 "Ward"
+* include codes from system $SCT where concept is-a #309904001 "ICU"
+* include codes from system $SCT where concept is-a #397771005 "HDU"
 
 ValueSet: VSYesNoUnknown
 Id: vs-yes-no
@@ -103,44 +86,33 @@ Title: "Yes No Unknown"
 Description:  "Yes No Unknown"
 * include codes from system $LNC-LL3044-6
 
-CodeSystem: CSConditionsComorbidity
-Id: cs-conditions-comorbidity
-Title: "Conditions or comorbidity list"
-Description: "Conditions or comorbidity list"
-* #CardiovascularDisease  "Cardiovascular disease e.g heart failure"
-* #ChronicLungDisease "Chronic Lung Disease"
-* #ChronicNeurological "Chronic neurological or neuromuscular disease"
-* #Smoker" "Current smoker"
-* #Diabetes "Diabetes"
-* #FormerSmoker" "Former smoker"
-* #HIVAids" "HIV /AIDS"
-* #Hypertension" "Hypertension" 
-* #Immunodeficiency "Immunodeficiency"
-* #Liver "Liver disease"
-* #Malignancy "Malignancy"
-* #Renal "Renal disease"
-* #TB "TB" 
-* #Other "Other (specify)"
-
-CodeSystem: CSCovidDiagnosis
-Id: cs-covid-diagnosis
-Title: "COVID Diagnosis list"
-Description: "COVID Diagnosis list"
-* #Confirmed
-* #Probable
-* #Suspected
-
 ValueSet: VSCovidDiagnosis
 Id: vs-covid-diagnosis
 Title: "COVID Diagnosis list"
 Description: "COVID Diagnosis list"
-* include codes from system CSCovidDiagnosis
+* include codes from system $SCT where concept is-a #410605003 "Confirmed"
+* include codes from system $SCT where concept is-a #2931005 "Probable"
+* include codes from system $SCT where concept is-a #415684004 "Suspect"
 
 ValueSet: VSConditionsComorbidity
 Id: vs-conditions-comorbidity
 Title: "List of Conditions / Comorbidity"
 Description:  "List of Conditions / Comorbidity"
-* include codes from system CSConditionsComorbidity
+* include codes from system $SCT where concept is-a #49601007 "Cardiovascular disease e.g heart failure"
+* include codes from system $SCT where concept is-a #13645005 "Chronic Lung Disease"
+* include codes from system $SCT where concept is-a #118940003 "Chronic neurological or neuromuscular disease"
+* include codes from system $SCT where concept is-a #77176002 "Current smoker"
+* include codes from system $SCT where concept is-a #46635009 "Diabetes type 1" 
+* include codes from system $SCT where concept is-a #44054006 "Diabetes type 2" 
+* include codes from system $SCT where concept is-a #73211009 "Diabetes Type other or unspecified" 
+* include codes from system $SCT where concept is-a #165816005 "HIV /AIDS"
+* include codes from system $SCT where concept is-a #38341003 "Hypertension"
+* include codes from system $SCT where concept is-a #234532001 "Immunodeficiency"
+* include codes from system $SCT where concept is-a #76783007 "Liver disease"
+* include codes from system $SCT where concept is-a #363346000 "Malignancy"
+* include codes from system $SCT where concept is-a #709044004 "Renal disease"
+* include codes from system $SCT where concept is-a #56717001 "TB"
+* include codes from system CSOther
 
 CodeSystem: CSTreatMentDispensedPrescribed
 Id: cs-treatment-dispensed-prescribed
@@ -155,107 +127,78 @@ Title: "COVID Treatmens dispensed or prescribed"
 Description: "COVID Treatmens dispensed or prescribed"
 * include codes from system CSTreatMentDispensedPrescribed
 
-CodeSystem: CSVaccineTypes
-Id: cs-vaccine-types
-Title: "Vaccine Types"
-Description: "A list of Vaccine Types"
-* #AstraZenecaOxford "AstraZeneca/Oxford vaccine"
-* #J&J "Johnson and Johnson"
-* #Moderna "Moderna"
-* #PfizerBionTech "Pfizer/BionTech"
-* #Sinopharm "Sinopharm"
-* #Sinovac "Sinovac"
-* #COVAXIN "COVAXIN"
-* #Covovax "Covovax"
-* #Nuvaxovid "Nuvaxovid"
-* #CanSino "Nuvaxovid"
-
 ValueSet: VSVaccineTypes
 Id: vs-vaccine-types
 Title: "Vaccine Types"
 Description: "A list of Vaccine Types"
-* include codes from system CSVaccineTypes
-
-CodeSystem: CSPatientOutcome
-Id: cs-patient-outcome
-Title: "Patient Outcomes"
-Description: "A list of Patient Outcomes"
-* #Recovered "Recovered (Symptoms resolved)"
-* #Died "died"
-* #LongCOVID "Long COVID /Post-COVID"  
+* include codes from system $ICD where concept is-a #XM4YL8 "AstraZeneca/Oxford vaccine"
+* include codes from system $ICD where concept is-a #XM6QV1 "Johnson and Johnson"
+* include codes from system $ICD where concept is-a #XM3DT5 "Moderna"
+* include codes from system $ICD where concept is-a #XM8NQ0 "Pfizer/BionTech"
+* include codes from system $ICD where concept is-a #XM8866 "Sinopharm"
+* include codes from system $ICD where concept is-a #XM7HT3 "Sinovac"
+* include codes from system $ICD where concept is-a #XM1G90 "COVAXIN"
+* include codes from system $ICD where concept is-a #XM9T65  "Covovax"
+* include codes from system $ICD where concept is-a #XM5JC5 "Nuvaxovid"
+* include codes from system $ICD where concept is-a #XM1AG7 "CanSino "
 
 ValueSet: VSPatientOutcome
 Id: vs-patient-outcome
 Title: "Patient Outcome"
 Description: "A list of Patient Outcomes"
-* include codes from system CSPatientOutcome
-
-CodeSystem: CSTestTypes
-Id: cs-test-requested
-Title: "Test Types"
-Description: "A list of Test Types"
-* #Rapid "Rapid Antigen Test"
-* #PCR "Diagnostic PCR Test"
+* include codes from system $SCT where concept is-a #370996005 "Recovered (Symptoms resolved)"
+* include codes from system $SCT where concept is-a #419099009 "Died"
+* include codes from system $SCT where concept is-a #1119303003 "Long COVID /Post-COVID"
 
 ValueSet: VSTestTypes
 Id: vs-test-types
 Title: "Test Types"
 Description: "A list of Test Types"
-* include codes from system CSTestTypes
+* include codes from system $LNC where concept is-a #94558-4 "Rapid Antigen Test"
+* include codes from system $LNC where concept is-a #94745-7 "Diagnostic PCR Test"
 
+//double check with Marius
 CodeSystem: CSCancellationReason
 Id: cs-cancellation-reason
 Title: "Cancellation Reasons"
 Description: "A list of Cancellation Reasons"
-* #Duplicate "duplicate orders"
-* #PCR "Improperly ordered"
-* #VOID "No longer required"
+* #Duplicate "duplicate orders" //find out from CDC the snomed code
+* #PCR "Improperly ordered" //find out from CDC the snomed code
+* #VOID "No longer required" //find out from CDC the snomed code
 * #NoSample "No sample collected"
-* #Old "Old order, Wrong entry"
+* #Old "Old order, Wrong entry" //find out from CDC the snomed code
 
 ValueSet: VSCancellationReason
 Id: vs-cancellation-reason
 Title: "Test Types"
 Description: "A list of Cancellation Reasons"
-* include codes from system CSCancellationReason
-
-CodeSystem: CSCovid19SpecimenType
-Id: cs-covid19-specimen-type
-Title: "Covid19 Specimen Type"
-Description: "A list of Covid19 Specimen Type"
-* #Nasopharyngeal "Nasopharyngeal" 
-* #OropharyngealSwab "Oropharyngeal swab" 
-* #Serum "Serum"
-* #Sputum "Sputum"
-* #TrachealAspirate "Tracheal Aspirate"
-* #Unknown "Unknown"
-* #Other "Other (specify)"
+* include codes from system $ICD where concept is-a #281264009 "Improperly ordered" //need to double check the code from with CDC
+* include codes from system $ICD where concept is-a #281266006 "No sample collected"
+* include codes from system $ICD where concept is-a #135839007  "Sample rejected"
 
 ValueSet: VSCovid19SpecimenType
 Id: vs-covid19-specimen-type
 Title: "Covid19 Specimen Type"
 Description: "A list of Covid19 Specimen Type"
-* include codes from system CSCovid19SpecimenType
-
-CodeSystem: CSReasonTestNotPerformed
-Id: cs-covid19-reason-test-not-performed
-Title: "Covid19 Reason Test not performed"
-Description: "Covid19 Reason Test not performed"
-* #BloodSampleCoagulated "Blood sample coagulated" 
-* #ContaminsatedSpecimen "Contaminated specimen" 
-* #EquipmentFailure "Equipment failure"
-* #InappropriateSampleContainer "Inappropriate sample container used"
-* #InsufficientSample "Insufficient sample"
-* #SpecimenNotlabeled "Specimen not labeled"
-* #SuppliesNotAvailable "Supplies not available"
-* #Other "Other"
+* include codes from system $SCT where concept is-a #258500001 "Nasopharyngeal"
+* include codes from system $SCT where concept is-a #461911000124106 "Oropharyngeal swab" //TODO: replaced with the correct code. MDS uses the wrong one: 461911000000000
+* include codes from system $SCT where concept is-a #119324002 "unknown"
+* include codes from system CSOther
 
 ValueSet: VSReasonTestNotPerformed
 Id: vs-covid19-reason-test-not-performed
 Title: "Covid19 Specimen Type"
 Description: "A list of Covid19 Specimen Type"
-* include codes from system CSCovid19SpecimenType
+* include codes from system $SCT where concept is-a #441510007 "Blood sample coagulated" //TODO: CDC to clarify
+* include codes from system $SCT where concept is-a #123840003 "Contaminated specimen"
+* include codes from system $SCT where concept is-a #397933008 "Equipment failure"
+* include codes from system $SCT where concept is-a #281264009 "Inappropriate sample container used"
+* include codes from system $SCT where concept is-a #281268007 "Insufficient sample"
+* include codes from system $SCT where concept is-a #281265005 "Specimen not labeled"
+* include codes from system $SCT where concept is-a #419182006 "Supplies not available"
+* include codes from system CSOther
 
+//TODO: Marius to find out what this is for
 CodeSystem: CSCovid19VaccineCodes
 Id: cs-covid19-vaccine-codes
 Title: "Covid19 Vaccine Code List"
@@ -280,50 +223,24 @@ ValueSet: VSCovid19VaccineCodes
 Id: vs-covid19-vaccine-codes
 Title: "Covid19 Vaccine Code List"
 Description: "Covid19 Vaccine Code List"
-* include codes from system CSCovid19VaccineCodes
-
-CodeSystem: CSVaccineSeries
-Id: cs-covid19-vaccine-series
-Title: "Covid19 Vaccine Series"
-Description: "Covid19 Vaccine Series"
-* #first "First" 
-* #second "Second" 
-* #booster "Booster" 
-
-ValueSet: VSVaccineSeries
-Id: vs-covid19-vaccine-series
-Title: "Covid19 Vaccine Series"
-Description: "Covid19 Vaccine Series"
-* include codes from system CSVaccineSeries
-
-CodeSystem: CSTestResult
-Id: cs-covid19-test-result
-Title: "Covid19 Test Result"
-Description: "Covid19 Test Result"
-* #Positive "Positive" 
-* #Negative "Negative" 
-* #inconclusive "Inconclusive" 
+* include codes from system CSCovid19VaccineCodes 
 
 ValueSet: VSTestResult
 Id: vs-covid19-test-result
 Title: "Covid19 Test Result"
 Description: "Covid19 Test Result"
-* include codes from system CSTestResult
-
-CodeSystem: CSLabOrderStatus
-Id: cs-covid19-lab-order-status
-Title: "Covid19 Lab Order Status list"
-Description: "Covid19 Test Result"
-* #Pending "Pending" 
-* #Complete "Complete" 
-* #Cancelled "Cancelled" 
-* #NotDone "not done" 
+* include codes from system $SCT where concept is-a #10828004 "Positive"
+* include codes from system $SCT where concept is-a #260385009 "Negative"
+* include codes from system $SCT where concept is-a #419984006 "inconclusive"
 
 ValueSet: VSLabOrderStatus
 Id: vs-covid19-lab-order-status
 Title: "Covid19 Lab Order Status"
 Description: "Covid19 Test Result"
-* include codes from system  CSLabOrderStatus
+* include codes from system $SCT where concept is-a #255594003 "Pending" //no code provided in the google sheet. added a duplication of complete code
+* include codes from system $SCT where concept is-a #255594003 "Complete"
+* include codes from system $SCT where concept is-a #89925002 "Cancelled"
+* include codes from system $SCT where concept is-a #385660001 "Not done"
 
 CodeSystem: CSSourceOfInfo
 Id: cs-source-of-info
