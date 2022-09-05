@@ -326,8 +326,8 @@ Description: "Covid19 Lab Order Cancellation Task"
 * for 1..1 MS // Beneficiary of the Task --> Patient
 * encounter 1..1 MS // Healthcare event during which this task originated -- >Covid19AssessmentEncounter
 * executionPeriod 1..1 MS //Cancellation date
-* reasonCode 1..1 MS
-* reasonCode from VSCancellationReason
+* statusReason 1..1 MS
+* statusReason from VSCancellationReason
 
 Extension: Covid19testCompleted
 Id: covid19-test-completed

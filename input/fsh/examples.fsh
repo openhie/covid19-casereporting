@@ -285,7 +285,7 @@ Description: "Covid19 Lab Order Cancellation Task example"
 * encounter  = Reference(Covid19AssessmentEncounterExample) 
 * status = #requested
 * executionPeriod.start = "2022-07-28"
-* reasonCode = #Duplicate
+* statusReason = #Duplicate
 
 Instance: Covid19LabResultsExample
 InstanceOf: Covid19LabResults
