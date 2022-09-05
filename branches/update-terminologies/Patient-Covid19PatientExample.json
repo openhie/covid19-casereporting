@@ -1,0 +1,93 @@
+{
+  "resourceType": "Patient",
+  "id": "Covid19PatientExample",
+  "meta": {
+    "profile": [
+      "http://example.com/fhir/example/StructureDefinition/covid19-patient"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Jane Smith (OFFICIAL)</b> female, DoB: 1986-06-04 ( id: PASSPORT1234567)</p></div>"
+  },
+  "extension": [
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/client-ward-division",
+      "valueString": "Division 9087"
+    },
+    {
+      "url": "http://example.com/fhir/example/StructureDefinition/key-population",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "GENERAL-POPULATION"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://openhie.org/fhir/covid19-casereporting/identifier/passport",
+      "value": "PASSPORT1234567"
+    },
+    {
+      "system": "http://openhie.org/fhir/covid19-casereporting/identifier/nid",
+      "value": "NAT1234567"
+    },
+    {
+      "system": "http://openhie.org/fhir/covid19-casereporting/identifier/facility1",
+      "value": "EMR1234567"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Smith",
+      "given": [
+        "Jane"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+27825556666"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1986-06-04",
+  "address": [
+    {
+      "city": "Cape Town",
+      "district": "City of Cape Town",
+      "state": "Western Province",
+      "country": "South Africa"
+    }
+  ],
+  "contact": [
+    {
+      "relationship": [
+        {
+          "coding": [
+            {
+              "code": "N"
+            }
+          ]
+        }
+      ],
+      "name": {
+        "family": "John"
+      },
+      "telecom": [
+        {
+          "system": "phone"
+        }
+      ]
+    }
+  ],
+  "managingOrganization": {
+    "reference": "Organization/Covid19OrganizationExample"
+  }
+}

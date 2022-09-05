@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="Covid19MedicationRequestExample"/>
+  <meta>
+    <profile value="http://example.com/fhir/example/StructureDefinition/covid19-medication-request"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationRequest</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationRequest "Covid19MedicationRequestExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-medication-request.html">Covid19 Treatment dispensed or prescribed</a></p></div><p><b>status</b>: active</p><p><b>intent</b>: proposal</p><p><b>medication</b>: Paxlovid <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Paxlovid)</span></p><p><b>subject</b>: <a href="Patient-Covid19PatientExample.html">Patient/Covid19PatientExample</a> " SMITH"</p><p><b>encounter</b>: <a href="Encounter-Covid19AssessmentEncounterExample.html">Encounter/Covid19AssessmentEncounterExample</a></p></div>
+  </text>
+  <status value="active"/>
+  <intent value="proposal"/>
+  <medicationCodeableConcept>
+    <coding>
+      <code value="Paxlovid"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/Covid19PatientExample"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/Covid19AssessmentEncounterExample"/>
+  </encounter>
+</MedicationRequest>

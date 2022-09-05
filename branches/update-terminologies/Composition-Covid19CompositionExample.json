@@ -1,0 +1,138 @@
+{
+  "resourceType": "Composition",
+  "id": "Covid19CompositionExample",
+  "meta": {
+    "profile": [
+      "http://example.com/fhir/example/StructureDefinition/covid19-composition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition \"Covid19CompositionExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-composition.html\">Covid19 Case Reporting Composition</a></p></div><p><b>identifier</b>: id: 1111</p><p><b>status</b>: final</p><p><b>type</b>: COVID-19 case report <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#95412-3)</span></p><p><b>date</b>: 2022-08-04</p><p><b>author</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>title</b>: Covid19 Case Report</p></div>"
+  },
+  "identifier": {
+    "system": "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-case-report",
+    "value": "1111"
+  },
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "95412-3"
+      }
+    ]
+  },
+  "date": "2022-08-04",
+  "author": [
+    {
+      "reference": "Organization/Covid19OrganizationExample"
+    }
+  ],
+  "title": "Covid19 Case Report",
+  "section": [
+    {
+      "title": "Client registration",
+      "code": {
+        "coding": [
+          {
+            "system": "http://example.com/fhir/example/CodeSystem/cs-case-report-sections",
+            "code": "CLIENT-REGISTRATION"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "reference": "Patient/Covid19PatientExample"
+        }
+      ]
+    },
+    {
+      "title": "Covid19 Assessment Encounter",
+      "code": {
+        "coding": [
+          {
+            "system": "http://example.com/fhir/example/CodeSystem/cs-case-report-sections",
+            "code": "COVID-ASSESSMENT"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "reference": "Encounter/Covid19AssessmentEncounterExample"
+        },
+        {
+          "reference": "Covid19ReasonforAssessmentExample"
+        },
+        {
+          "reference": "Condition/Covid19PresentationExample"
+        },
+        {
+          "reference": "ClinicalImpression/Covid19SymptomExample"
+        },
+        {
+          "reference": "Observation/Covid19ComorbidityPresentExample"
+        },
+        {
+          "reference": "Condition/Covid19ConditionsComorbidityExample"
+        },
+        {
+          "reference": "Condition/Covid19DiagnosisExample"
+        },
+        {
+          "reference": "Condition/HIVDiagnosisExample"
+        },
+        {
+          "reference": "Immunization/Covid19AssessmentVaccinationExample"
+        },
+        {
+          "reference": "Covid19PatientOutcomeExample"
+        }
+      ]
+    },
+    {
+      "title": "Lab Order Management",
+      "code": {
+        "coding": [
+          {
+            "system": "http://example.com/fhir/example/CodeSystem/cs-case-report-sections",
+            "code": "LABORDER-MANAGEMENT"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "reference": "ServiceRequest/Covid19LabOrderExample"
+        },
+        {
+          "reference": "Specimen/Covid19SpecimenExample"
+        },
+        {
+          "reference": "Task/Covid19LabOrderCancellationExample"
+        },
+        {
+          "reference": "Covid19LabResultsExamples"
+        }
+      ]
+    },
+    {
+      "title": "Covid 19 Vaccination",
+      "code": {
+        "coding": [
+          {
+            "system": "http://example.com/fhir/example/CodeSystem/cs-case-report-sections",
+            "code": "COVID-VACCINATION"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "reference": "Immunization/Covid19VaccinationExample"
+        },
+        {
+          "reference": "Appointment/Covid19VaccinationAppointmentExample"
+        }
+      ]
+    }
+  ]
+}
