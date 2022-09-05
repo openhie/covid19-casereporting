@@ -52,7 +52,6 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry[covid19Presentation] only Reference(Covid19Presentation)
 * section[covid19AssessmentSection].entry[covid19DateLastHospitalized] only Reference(Covid19DateLastHospitalized)
 * section[covid19AssessmentSection].entry[covid19EverHospitalized] only Reference(Covid19EverHospitalized)
-* section[covid19AssessmentSection].entry[covid19Admission] only Reference(Covid19Admission)
 * section[covid19AssessmentSection].entry[covid19Symptom] only Reference(Covid19Symptom)
 * section[covid19AssessmentSection].entry[covid19ComorbidityPresent] only Reference(Covid19ComorbidityPresent)
 * section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
@@ -186,15 +185,6 @@ Description: "Ever hospitalised due to COVID-19?"
 * value[x] from VSYesNoUnknown
 * encounter 1..1 MS
 
-Profile: Covid19Admission
-Parent: Observation
-Id: covid19-admission
-Title: "Covid19 Admission"
-Description: "Covid19 Admission"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSAdmissionTypes   //Ward, HDU, ICU
-* encounter 1..1 MS
-
 //hospitalization info ends
 
 Profile: Covid19AssessmentEncounter
@@ -207,6 +197,8 @@ Description: "Covid19 Assessment Encounter"
 * reasonCode 1..* MS  
 * reasonCode from VSAssessmentReason 
 * reasonCode.text MS
+* location.physicalType from VSAdmissionTypes 
+* location.physicalType MS //Admission
 
 Profile: Covid19Symptom
 Parent: ClinicalImpression
@@ -256,6 +248,7 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 * vaccineCode.text 0..1 MS //Other vaccine
 * occurrenceDateTime  MS // Vaccination date    #TODO - check all required fields
 * reportOrigin from VSSourceOfInfo  // source of information
+* reportOrigin.text MS // Other Source of info details
 
 Profile: Covid19Diagnosis
 Parent: Condition
@@ -274,7 +267,8 @@ Parent: MedicationRequest
 Id: covid19-medication-request
 Title: "Covid19 Treatment dispensed or prescribed"
 Description: "Covid19 Treatment dispensed or prescribed"
-* medicationCodeableConcept from VSTreatMentDispensedPrescribed
+* medicationCodeableConcept from VSTreatMentDispensedPrescribed 
+* medicationCodeableConcept.text MS // Other (specify) - details
 
 //Fields required from the CBS MDS for Covid Report indicators
 Profile: HIVDiagnosis
