@@ -30,8 +30,6 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19LabOrderExample
 * entry[+].fullUrl = "Composition/Covid19SpecimenExample"
 * entry[=].resource = Covid19SpecimenExample
-* entry[+].fullUrl = "Composition/Covid19SpecimenCollectionExample"
-* entry[=].resource = Covid19SpecimenCollectionExample
 * entry[+].fullUrl = "Composition/Covid19LabOrderCancellationExample"
 * entry[=].resource = Covid19LabOrderCancellationExample
 * entry[+].fullUrl = "Composition/Covid19LabResultsExample"
@@ -74,7 +72,6 @@ Description: "Basic Composition example"
 * section[=].code = CSCaseReportSections#LABORDER-MANAGEMENT
 * section[=].entry[+] = Reference(Covid19LabOrderExample)
 * section[=].entry[+] = Reference(Covid19SpecimenExample)  
-* section[=].entry[+] = Reference(Covid19SpecimenCollectionExample) 
 * section[=].entry[+] = Reference(Covid19LabOrderCancellationExample ) 
 * section[=].entry[+] = Reference(Covid19LabResultsExamples) 
 
@@ -259,6 +256,7 @@ Description: "Covid19 Lab Order example"
 * code.coding.code   = #Rapid // #TODO bind ValueSet to corect Terminology e.g "94558-4"
 * requester = Reference(Covid19OrganizationExample)
 * locationReference = Reference(Covid19Laboratory) 
+* specimen = Reference(Covid19SpecimenExample)
 
 Instance: Covid19SpecimenExample
 InstanceOf: Covid19Specimen
@@ -277,19 +275,6 @@ Title: "Covid19 Laboratory"
 Description: "Covid19 Laboratory testing the specimen"
 * identifier.id = "Lab001"
 
-Instance: Covid19SpecimenCollectionExample
-InstanceOf: Covid19SpecimenCollection
-Usage: #example
-Title: "Covid19 Specimen Collection"
-Description: "Covid19 Specimen Collection"
-* status = #final
-* code = $LNC#100156-9
-* encounter = Reference(Covid19AssessmentEncounterExample) 
-* subject = Reference(Covid19PatientExample) 
-* specimen = Reference(Covid19SpecimenExample)
-* identifier.id = "12341324"
-* extension[covid19SpecimenForwarded].valueCodeableConcept = #Yes
-
 Instance: Covid19LabOrderCancellationExample
 InstanceOf: Covid19LabOrderCancellation
 Usage: #example
@@ -299,7 +284,7 @@ Description: "Covid19 Lab Order Cancellation Task example"
 * for   = Reference(Covid19PatientExample)
 * encounter  = Reference(Covid19AssessmentEncounterExample) 
 * status = #requested
-* authoredOn = "2022-07-28"
+* executionPeriod.start = "2022-07-28"
 * reasonCode = #Duplicate
 
 Instance: Covid19LabResultsExample

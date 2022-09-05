@@ -68,13 +68,11 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19LabOrderManagementSection].entry contains
     covid19LabOrder 0..1 and
     covid19Specimen 0..1 and
-    covid19SpecimenCollection 0..1 and
     covid19LabOrderCancellation 0..1 and
     covid19LabResults   0..1 and
     covid19ReasonTestNotPerformed 0..1
 * section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
 * section[covid19LabOrderManagementSection].entry[covid19Specimen] only Reference(Covid19Specimen)
-* section[covid19LabOrderManagementSection].entry[covid19SpecimenCollection] only Reference(Covid19SpecimenCollection)
 * section[covid19LabOrderManagementSection].entry[covid19LabOrderCancellation] only Reference(Covid19LabOrderCancellation)
 * section[covid19LabOrderManagementSection].entry[covid19LabResults] only Reference(Covid19LabResults)
 * section[covid19LabOrderManagementSection].entry[covid19ReasonTestNotPerformed] only Reference(Covid19ReasonTestNotPerformed)
@@ -290,14 +288,15 @@ Description: "Covid19 Lab Order"
 * reasonCode  1..* MS //Reason for testing
 * reasonCode from VSAssessmentReason 
 * note MS // for capturing other reasons for testing
-* authoredOn  1..1 MS  
-* encounter 1..1 MS 
+* encounter 1..1 MS  
 * requester MS // Provider name
 * authoredOn 1..1 MS // Order time
 * code from VSTestTypes
 * code 1..1 MS // Test request Code
 * locationReference MS //Reference Lab sample send to
 * status MS // Lab Test Performed
+* occurrenceDateTime MS // sample forwarded to reference lab; Yes = if there is a dateTime when sample was sent
+* specimen 1..1 MS //sample
 
 Extension: Covid19SpecimenType
 Id: covid19-specimen-type
@@ -317,32 +316,6 @@ Description: "Covid19 Specimen"
 * collection.collectedDateTime 1..1 MS  // Date specimen collected
 * note MS // Other Sample Type
 
-Extension: Covid19SpecimenForwarded
-Id: covid19-specimen-forwarded
-Title: "Covid19 Specimen Forwarded"
-Description: "Covid19 Specimen forwarded to reference lab"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSYesNoUnknown
-
-Profile: Covid19SpecimenCollection
-Parent: DiagnosticReport
-Id: covid19-specimen-collection
-Title: "Covid19 Specimen Collection"
-Description: "Covid19 Specimen Collection"
-* subject 1..1 MS // Patient reference
-* encounter 1..1 MS // Covid Assessment reference 
-* specimen 1..1 MS //
-* identifier 1..1 MS //Sample ID
-* extension contains Covid19SpecimenForwarded named covid19SpecimenForwarded 1..1 MS //Specimen forwarded to reference lab
-
-
-Extension: Covid19CancellationReason
-Id: covid19-cancellation-reason
-Title: "Covid19 Cancellation Reason"
-Description: "Covid19 Cancellation Reason"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSCancellationReason
-
 Profile: Covid19LabOrderCancellation
 Parent: Task
 Id: covid19-lab-order-cancellation
@@ -352,7 +325,7 @@ Description: "Covid19 Lab Order Cancellation Task"
 * focus 1..1 MS // Refer to Lab Order  --> What task is acting on
 * for 1..1 MS // Beneficiary of the Task --> Patient
 * encounter 1..1 MS // Healthcare event during which this task originated -- >Covid19AssessmentEncounter
-* authoredOn 1..1 MS //Cancellation date
+* executionPeriod 1..1 MS //Cancellation date
 * reasonCode 1..1 MS
 * reasonCode from VSCancellationReason
 
