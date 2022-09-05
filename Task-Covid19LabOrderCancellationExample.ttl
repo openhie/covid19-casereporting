@@ -17,9 +17,14 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"Covid19LabOrderCancellationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order-cancellation.html\">Covid19 Lab Order Cancellation</a></p></div><p><b>status</b>: requested</p><p><b>statusReason</b>: Duplicate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Duplicate)</span></p><p><b>intent</b>: order</p><p><b>focus</b>: <a href=\"ServiceRequest-Covid19LabOrderExample.html\">ServiceRequest/Covid19LabOrderExample</a></p><p><b>for</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"Covid19LabOrderCancellationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order-cancellation.html\">Covid19 Lab Order Cancellation</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-Covid19LabOrderExample.html\">ServiceRequest/Covid19LabOrderExample</a></p><p><b>status</b>: cancelled</p><p><b>statusReason</b>: Duplicate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Duplicate)</span></p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p></div>"
   ];
-  fhir:Task.status [ fhir:value "requested"];
+  fhir:Task.basedOn [
+     fhir:index 0;
+     fhir:link <http://xxsomewhere.org/fhir/myig/ServiceRequest/Covid19LabOrderExample>;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/Covid19LabOrderExample" ]
+  ];
+  fhir:Task.status [ fhir:value "cancelled"];
   fhir:Task.statusReason [
      fhir:CodeableConcept.coding [
        fhir:index 0;
@@ -27,18 +32,6 @@
      ]
   ];
   fhir:Task.intent [ fhir:value "order"];
-  fhir:Task.focus [
-     fhir:link <http://xxsomewhere.org/fhir/myig/ServiceRequest/Covid19LabOrderExample>;
-     fhir:Reference.reference [ fhir:value "ServiceRequest/Covid19LabOrderExample" ]
-  ];
-  fhir:Task.for [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
-     fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
-  ];
-  fhir:Task.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
-     fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
-  ];
   fhir:Task.executionPeriod [
      fhir:Period.start [ fhir:value "2022-07-28"^^xsd:date ]
   ] .

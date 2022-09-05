@@ -546,24 +546,18 @@
           <profile value="http://example.com/fhir/example/StructureDefinition/covid19-lab-order-cancellation"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Task</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Task "Covid19LabOrderCancellationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-lab-order-cancellation.html">Covid19 Lab Order Cancellation</a></p></div><p><b>status</b>: requested</p><p><b>statusReason</b>: Duplicate <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Duplicate)</span></p><p><b>intent</b>: order</p><p><b>focus</b>: <a href="#ServiceRequest_Covid19LabOrderExample">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>for</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Task</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Task "Covid19LabOrderCancellationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-lab-order-cancellation.html">Covid19 Lab Order Cancellation</a></p></div><p><b>basedOn</b>: <a href="#ServiceRequest_Covid19LabOrderExample">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>status</b>: cancelled</p><p><b>statusReason</b>: Duplicate <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Duplicate)</span></p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p></div>
         </text>
-        <status value="requested"/>
+        <basedOn>
+          <reference value="ServiceRequest/Covid19LabOrderExample"/>
+        </basedOn>
+        <status value="cancelled"/>
         <statusReason>
           <coding>
             <code value="Duplicate"/>
           </coding>
         </statusReason>
         <intent value="order"/>
-        <focus>
-          <reference value="ServiceRequest/Covid19LabOrderExample"/>
-        </focus>
-        <for>
-          <reference value="Patient/Covid19PatientExample"/>
-        </for>
-        <encounter>
-          <reference value="Encounter/Covid19AssessmentEncounterExample"/>
-        </encounter>
         <executionPeriod>
           <start value="2022-07-28"/>
         </executionPeriod>

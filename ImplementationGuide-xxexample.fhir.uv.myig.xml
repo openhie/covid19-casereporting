@@ -12,7 +12,7 @@
   <title value="Covid 19 Case Reporting and Lab Management"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-09-05T15:36:05+00:00"/>
+  <date value="2022-09-05T19:43:49+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -561,6 +561,14 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/Covid19MedicationRequestExample"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -568,6 +576,16 @@
       </reference>
       <name value="Covid19 Symptom"/>
       <description value="Covid19 Symptom"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-medication-request"/>
+      </reference>
+      <name value="Covid19 Treatment dispensed or prescribed"/>
+      <description value="Covid19 Treatment dispensed or prescribed"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
