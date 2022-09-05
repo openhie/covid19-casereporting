@@ -3,14 +3,14 @@
   "id": "vs-AdmissionTypes",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-admission-types.html\"><code>http://example.com/fhir/example/CodeSystem/cs-admission-types</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  225746001 (Ward)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  309904001 (Intensive care unit)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  397771005 (High dependency unit (environment))</li></ul></div>"
   },
   "url": "http://example.com/fhir/example/ValueSet/vs-AdmissionTypes",
   "version": "0.1.0-test",
   "name": "VSAdmissionTypes",
   "title": "Admission Types",
   "status": "active",
-  "date": "2022-09-05T20:02:35+00:00",
+  "date": "2022-09-05T20:38:58+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -36,7 +36,34 @@
   "compose": {
     "include": [
       {
-        "system": "http://example.com/fhir/example/CodeSystem/cs-admission-types"
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "225746001"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "309904001"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "397771005"
+          }
+        ]
       }
     ]
   }

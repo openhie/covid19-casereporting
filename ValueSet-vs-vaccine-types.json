@@ -3,14 +3,14 @@
   "id": "vs-vaccine-types",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-vaccine-types.html\"><code>http://example.com/fhir/example/CodeSystem/cs-vaccine-types</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  XM4YL8</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  XM6QV1</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  XM3DT5</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  XM8NQ0</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  XM8866</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  XM7HT3</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  XM1G90</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  XM9T65</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  XM5JC5</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  XM1AG7</li></ul></div>"
   },
   "url": "http://example.com/fhir/example/ValueSet/vs-vaccine-types",
   "version": "0.1.0-test",
   "name": "VSVaccineTypes",
   "title": "Vaccine Types",
   "status": "active",
-  "date": "2022-09-05T20:02:35+00:00",
+  "date": "2022-09-05T20:38:58+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -36,7 +36,104 @@
   "compose": {
     "include": [
       {
-        "system": "http://example.com/fhir/example/CodeSystem/cs-vaccine-types"
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM4YL8"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM6QV1"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM3DT5"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM8NQ0"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM8866"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM7HT3"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM1G90"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM9T65"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM5JC5"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM1AG7"
+          }
+        ]
       }
     ]
   }

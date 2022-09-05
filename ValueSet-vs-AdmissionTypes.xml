@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="vs-AdmissionTypes"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-cs-admission-types.html"><code>http://example.com/fhir/example/CodeSystem/cs-admission-types</code></a></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  225746001 (Ward)</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  309904001 (Intensive care unit)</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  397771005 (High dependency unit (environment))</li></ul></div>
   </text>
   <url value="http://example.com/fhir/example/ValueSet/vs-AdmissionTypes"/>
   <version value="0.1.0-test"/>
   <name value="VSAdmissionTypes"/>
   <title value="Admission Types"/>
   <status value="active"/>
-  <date value="2022-09-05T20:02:35+00:00"/>
+  <date value="2022-09-05T20:38:58+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -27,7 +27,28 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://example.com/fhir/example/CodeSystem/cs-admission-types"/>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="225746001"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="309904001"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="397771005"/>
+      </filter>
     </include>
   </compose>
 </ValueSet>

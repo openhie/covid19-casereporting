@@ -10,14 +10,14 @@
   fhir:Resource.id [ fhir:value "vs-presentation"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-presentation.html\"><code>http://example.com/fhir/example/CodeSystem/cs-presentation</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  84387000 (Asymptomatic)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  264931009 (Symptomatic)</li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://example.com/fhir/example/ValueSet/vs-presentation"];
   fhir:ValueSet.version [ fhir:value "0.1.0-test"];
   fhir:ValueSet.name [ fhir:value "VSPresentation"];
   fhir:ValueSet.title [ fhir:value "Presentation valueset"];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2022-09-05T20:02:35+00:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2022-09-05T20:38:58+00:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "OpenHIE"];
   fhir:ValueSet.contact [
      fhir:index 0;
@@ -39,7 +39,22 @@
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://example.com/fhir/example/CodeSystem/cs-presentation" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:ValueSet.compose.include.filter [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
+         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
+         fhir:ValueSet.compose.include.filter.value [ fhir:value "84387000" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:ValueSet.compose.include.filter [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
+         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
+         fhir:ValueSet.compose.include.filter.value [ fhir:value "264931009" ]
+       ]
      ]
   ] .
 

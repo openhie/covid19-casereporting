@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="vs-covid19-lab-order-status"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-cs-covid19-lab-order-status.html"><code>http://example.com/fhir/example/CodeSystem/cs-covid19-lab-order-status</code></a></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  255594003 (Complete)</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  255594003 (Complete)</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  89925002 (Canceled (qualifier value))</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  385660001 (Not done (qualifier value))</li></ul></div>
   </text>
   <url value="http://example.com/fhir/example/ValueSet/vs-covid19-lab-order-status"/>
   <version value="0.1.0-test"/>
   <name value="VSLabOrderStatus"/>
   <title value="Covid19 Lab Order Status"/>
   <status value="active"/>
-  <date value="2022-09-05T20:02:35+00:00"/>
+  <date value="2022-09-05T20:38:58+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -27,7 +27,36 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://example.com/fhir/example/CodeSystem/cs-covid19-lab-order-status"/>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="255594003"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="255594003"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="89925002"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="385660001"/>
+      </filter>
     </include>
   </compose>
 </ValueSet>

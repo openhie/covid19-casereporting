@@ -3,14 +3,14 @@
   "id": "vs-presentation",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-presentation.html\"><code>http://example.com/fhir/example/CodeSystem/cs-presentation</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  84387000 (Asymptomatic)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  264931009 (Symptomatic)</li></ul></div>"
   },
   "url": "http://example.com/fhir/example/ValueSet/vs-presentation",
   "version": "0.1.0-test",
   "name": "VSPresentation",
   "title": "Presentation valueset",
   "status": "active",
-  "date": "2022-09-05T20:02:35+00:00",
+  "date": "2022-09-05T20:38:58+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -36,7 +36,24 @@
   "compose": {
     "include": [
       {
-        "system": "http://example.com/fhir/example/CodeSystem/cs-presentation"
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "84387000"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "264931009"
+          }
+        ]
       }
     ]
   }
