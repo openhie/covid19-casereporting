@@ -69,12 +69,12 @@ Title: "Covid19 Case Reporting Composition"
     covid19LabOrder 0..1 and
     covid19Specimen 0..1 and
     covid19LabOrderCancellation 0..1 and
-    covid19LabResults   0..1 and
+    covid19LabResultsDiagnosticReport 0..1 and
     covid19ReasonTestNotPerformed 0..1
 * section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
 * section[covid19LabOrderManagementSection].entry[covid19Specimen] only Reference(Covid19Specimen)
 * section[covid19LabOrderManagementSection].entry[covid19LabOrderCancellation] only Reference(Covid19LabOrderCancellation)
-* section[covid19LabOrderManagementSection].entry[covid19LabResults] only Reference(Covid19LabResults)
+* section[covid19LabOrderManagementSection].entry[covid19LabResultsDiagnosticReport] only Reference(Covid19LabResultsDiagnosticReport)
 * section[covid19LabOrderManagementSection].entry[covid19ReasonTestNotPerformed] only Reference(Covid19ReasonTestNotPerformed)
 
 * section[covid19VaccinationSection].title = "Covid 19 Vaccination"
@@ -329,29 +329,22 @@ Description: "Covid19 Lab Order Cancellation Task"
 * statusReason 1..1 MS
 * statusReason from VSCancellationReason
 
-Extension: Covid19testCompleted
-Id: covid19-test-completed
-Title: "Covid19 Test Completed"
-Description: "Covid19 Test Completed"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSYesNoUnknown
-
-Profile: Covid19LabResults
+Profile: Covid19LabResultsDiagnosticReport
 Parent: DiagnosticReport
 Id: covid19-lab-results
 Title: "Covid19 Lab Results"
 Description: "Covid19 Lab Results"
 * subject 1..1 MS // Patient reference
 * basedOn 1..1 MS // Ref to ServiceRequest
-* identifier 1..1 MS //Sample ID
+* result  MS //
+
+Profile: Covid19TestResult
+Parent: Observation
+Id: covid19-test-results
+Title: "Covid19 Lab Results"
+Description: "Covid19 Lab Results"
 * effectiveDateTime MS //Test result date-time
-* conclusionCode MS //Test Result
-* conclusionCode from VSTestResult
-* extension contains Covid19testCompleted named testCompleted 1..1 MS  //Lab Test Performed
-* status MS  //Status of lab order
-* status from VSLabOrderStatus
-* code.coding.system MS  //Result Coding system
-* code.coding.code MS  //Result Code
+* valueCodeableConcept from VSTestResult
 
 Profile: Covid19ReasonTestNotPerformed
 Parent: Observation

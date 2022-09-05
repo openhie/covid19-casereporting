@@ -32,8 +32,8 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19SpecimenExample
 * entry[+].fullUrl = "Composition/Covid19LabOrderCancellationExample"
 * entry[=].resource = Covid19LabOrderCancellationExample
-* entry[+].fullUrl = "Composition/Covid19LabResultsExample"
-* entry[=].resource = Covid19LabResultsExample
+* entry[+].fullUrl = "Composition/Covid19LabResultsDiagnosticReportExample"
+* entry[=].resource = Covid19LabResultsDiagnosticReportExample
 * entry[+].fullUrl = "Composition/Covid19VaccinationExample"
 * entry[=].resource = Covid19VaccinationExample
 * entry[+].fullUrl = "Composition/Covid19VaccinationAppointmentExample"
@@ -287,8 +287,8 @@ Description: "Covid19 Lab Order Cancellation Task example"
 * executionPeriod.start = "2022-07-28"
 * statusReason = #Duplicate
 
-Instance: Covid19LabResultsExample
-InstanceOf: Covid19LabResults
+Instance: Covid19LabResultsDiagnosticReportExample
+InstanceOf: Covid19LabResultsDiagnosticReport
 Usage: #example
 Title: "Covid19 Lab Results example"
 Description: "Covid19 Lab Results example"
@@ -300,7 +300,6 @@ Description: "Covid19 Lab Results example"
 * identifier.id = "12341324"
 * effectiveDateTime = "2022-07-28"
 * conclusionCode.coding.code =  #Positive
-* extension[testCompleted].valueCodeableConcept = #Yes
 * status = #final //#TODO - change to specific VS in spreadsheet
 
 Instance: Covid19VaccinationExample
