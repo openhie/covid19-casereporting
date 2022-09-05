@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-09-05T15:36:05+00:00",
+  "date": "2022-09-05T19:43:49+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -805,6 +805,17 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MedicationRequest"
+          }
+        ],
+        "reference": {
+          "reference": "MedicationRequest/Covid19MedicationRequestExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           }
         ],
@@ -813,6 +824,19 @@
         },
         "name": "Covid19 Symptom",
         "description": "Covid19 Symptom"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-medication-request"
+        },
+        "name": "Covid19 Treatment dispensed or prescribed",
+        "description": "Covid19 Treatment dispensed or prescribed"
       },
       {
         "extension": [
