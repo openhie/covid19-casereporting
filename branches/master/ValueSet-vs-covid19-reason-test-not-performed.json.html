@@ -49,8 +49,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"3.42"}
-    h3,h4,h5,h6{--heading-prefix:"3.42"}</style>
+    <style type="text/css">h2{--heading-prefix:"3.41"}
+    h3,h4,h5,h6{--heading-prefix:"3.41"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -226,14 +226,14 @@
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">id</a>" : "vs-covid19-reason-test-not-performed",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;a href=\&quot;CodeSystem-cs-covid19-specimen-type.html\&quot;&gt;&lt;code&gt;http://example.com/fhir/example/CodeSystem/cs-covid19-specimen-type&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;This value set includes codes based on the following rules:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include codes from &lt;a href=\&quot;http://www.snomed.org/\&quot;&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/a&gt; where concept  is-a  441510007 (Blood specimen with anticoagulant)&lt;/li&gt;&lt;li&gt;Include codes from &lt;a href=\&quot;http://www.snomed.org/\&quot;&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/a&gt; where concept  is-a  123840003 (Sample contaminated)&lt;/li&gt;&lt;li&gt;Include codes from &lt;a href=\&quot;http://www.snomed.org/\&quot;&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/a&gt; where concept  is-a  397933008 (Equipment error/failure (finding))&lt;/li&gt;&lt;li&gt;Include codes from &lt;a href=\&quot;http://www.snomed.org/\&quot;&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/a&gt; where concept  is-a  281264009 (Inappropriate bottle or container for sample)&lt;/li&gt;&lt;li&gt;Include codes from &lt;a href=\&quot;http://www.snomed.org/\&quot;&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/a&gt; where concept  is-a  281268007 (Insufficient sample)&lt;/li&gt;&lt;li&gt;Include codes from &lt;a href=\&quot;http://www.snomed.org/\&quot;&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/a&gt; where concept  is-a  281265005 (Sample incorrectly labeled (finding))&lt;/li&gt;&lt;li&gt;Include codes from &lt;a href=\&quot;http://www.snomed.org/\&quot;&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/a&gt; where concept  is-a  419182006 (Supplies not available (finding))&lt;/li&gt;&lt;li&gt;Include all codes defined in &lt;a href=\&quot;CodeSystem-cs-other.html\&quot;&gt;&lt;code&gt;http://example.com/fhir/example/CodeSystem/cs-other&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
   },
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://example.com/fhir/example/ValueSet/vs-covid19-reason-test-not-performed",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "0.1.0-test",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "VSReasonTestNotPerformed",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "Covid19 Specimen Type",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "active",
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2022-09-05T20:02:35+00:00",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2022-09-05T20:52:48+00:00",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "OpenHIE",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
     {
@@ -259,7 +259,77 @@
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>" : {
     "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>" : [
       {
-        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://example.com/fhir/example/CodeSystem/cs-covid19-specimen-type"
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter">filter</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.property">property</a>" : "concept",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.op">op</a>" : "is-a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.value">value</a>" : "441510007"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter">filter</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.property">property</a>" : "concept",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.op">op</a>" : "is-a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.value">value</a>" : "123840003"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter">filter</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.property">property</a>" : "concept",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.op">op</a>" : "is-a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.value">value</a>" : "397933008"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter">filter</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.property">property</a>" : "concept",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.op">op</a>" : "is-a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.value">value</a>" : "281264009"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter">filter</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.property">property</a>" : "concept",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.op">op</a>" : "is-a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.value">value</a>" : "281268007"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter">filter</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.property">property</a>" : "concept",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.op">op</a>" : "is-a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.value">value</a>" : "281265005"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter">filter</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.property">property</a>" : "concept",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.op">op</a>" : "is-a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.value">value</a>" : "419182006"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://example.com/fhir/example/CodeSystem/cs-other"
       }
     ]
   }
@@ -294,7 +364,7 @@
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 5, 2022 20:02+0000">2022-09-05</span>
+          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 5, 2022 20:52+0000">2022-09-05</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

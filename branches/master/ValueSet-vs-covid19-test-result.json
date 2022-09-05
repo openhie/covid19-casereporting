@@ -3,14 +3,14 @@
   "id": "vs-covid19-test-result",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-covid19-test-result.html\"><code>http://example.com/fhir/example/CodeSystem/cs-covid19-test-result</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  10828004 (Positive)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  260385009 (Negative)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  419984006 (Inconclusive (qualifier value))</li></ul></div>"
   },
   "url": "http://example.com/fhir/example/ValueSet/vs-covid19-test-result",
   "version": "0.1.0-test",
   "name": "VSTestResult",
   "title": "Covid19 Test Result",
   "status": "active",
-  "date": "2022-09-05T20:02:35+00:00",
+  "date": "2022-09-05T20:52:48+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -36,7 +36,34 @@
   "compose": {
     "include": [
       {
-        "system": "http://example.com/fhir/example/CodeSystem/cs-covid19-test-result"
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "10828004"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "260385009"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "419984006"
+          }
+        ]
       }
     ]
   }

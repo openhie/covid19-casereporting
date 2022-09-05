@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="vs-covid19-specimen-type"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-cs-covid19-specimen-type.html"><code>http://example.com/fhir/example/CodeSystem/cs-covid19-specimen-type</code></a></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  258500001 (Nasopharyngeal swab)</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  461911000124106 (Swab specimen from oropharynx (specimen))</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  119324002 (Specimen of unknown material)</li><li>Include all codes defined in <a href="CodeSystem-cs-other.html"><code>http://example.com/fhir/example/CodeSystem/cs-other</code></a></li></ul></div>
   </text>
   <url value="http://example.com/fhir/example/ValueSet/vs-covid19-specimen-type"/>
   <version value="0.1.0-test"/>
   <name value="VSCovid19SpecimenType"/>
   <title value="Covid19 Specimen Type"/>
   <status value="active"/>
-  <date value="2022-09-05T20:02:35+00:00"/>
+  <date value="2022-09-05T20:52:48+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -27,7 +27,31 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://example.com/fhir/example/CodeSystem/cs-covid19-specimen-type"/>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="258500001"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="461911000124106"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="119324002"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://example.com/fhir/example/CodeSystem/cs-other"/>
     </include>
   </compose>
 </ValueSet>

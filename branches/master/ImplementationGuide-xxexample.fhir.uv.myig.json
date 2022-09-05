@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-09-05T20:02:35+00:00",
+  "date": "2022-09-05T20:52:48+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -393,32 +393,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-admission-types"
-        },
-        "name": "Admission Types",
-        "description": "A list of Admission Types"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-covid19-specimen-type"
-        },
-        "name": "Covid19 Specimen Type",
-        "description": "A list of Covid19 Specimen Type"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           }
         ],
@@ -438,19 +412,6 @@
         "reference": {
           "reference": "ServiceRequest/Covid19LabOrderExample"
         }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-covid-diagnosis"
-        },
-        "name": "COVID Diagnosis list",
-        "description": "COVID Diagnosis list"
       },
       {
         "extension": [
@@ -579,6 +540,18 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/cs-other"
+        },
+        "name": "Covid19 Case Report Sections codesystem"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ValueSet"
           }
         ],
@@ -598,32 +571,6 @@
         "reference": {
           "reference": "Appointment/Covid19VaccinationAppointmentExample"
         }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-patient-outcome"
-        },
-        "name": "Patient Outcomes",
-        "description": "A list of Patient Outcomes"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-covid19-vaccine-series"
-        },
-        "name": "Covid19 Vaccine Series",
-        "description": "Covid19 Vaccine Series"
       },
       {
         "extension": [
@@ -650,19 +597,6 @@
         },
         "name": "Cancellation Reasons",
         "description": "A list of Cancellation Reasons"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-vaccine-types"
-        },
-        "name": "Vaccine Types",
-        "description": "A list of Vaccine Types"
       },
       {
         "extension": [
@@ -855,32 +789,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-covid19-lab-order-status"
-        },
-        "name": "Covid19 Lab Order Status list",
-        "description": "Covid19 Test Result"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-covid19-test-result"
-        },
-        "name": "Covid19 Test Result",
-        "description": "Covid19 Test Result"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           }
         ],
@@ -914,19 +822,6 @@
           "reference": "Composition/Covid19CompositionExample"
         },
         "name": "Covid19 Case Report"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-conditions-comorbidity"
-        },
-        "name": "Conditions or comorbidity list",
-        "description": "Conditions or comorbidity list"
       },
       {
         "extension": [
@@ -1039,19 +934,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-test-requested"
-        },
-        "name": "Test Types",
-        "description": "A list of Test Types"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           }
         ],
@@ -1073,19 +955,6 @@
         },
         "name": "Covid19 Organization",
         "description": "Covid19 Organization for case report - this represents a health facility"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          }
-        ],
-        "reference": {
-          "reference": "ValueSet/vs-covid19-vaccine-series"
-        },
-        "name": "Covid19 Vaccine Series",
-        "description": "Covid19 Vaccine Series"
       },
       {
         "extension": [
@@ -1280,19 +1149,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-covid19-reason-test-not-performed"
-        },
-        "name": "Covid19 Reason Test not performed",
-        "description": "Covid19 Reason Test not performed"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:extension"
           }
         ],
@@ -1354,19 +1210,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-presentation"
-        },
-        "name": "Assessment Reason codes",
-        "description": "A list of assessment reasons"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:extension"
           }
         ],
@@ -1375,19 +1218,6 @@
         },
         "name": "Client Ward Division",
         "description": "Client Ward Division"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-symptoms"
-        },
-        "name": "Presenting symptoms",
-        "description": "A list of symptoms"
       },
       {
         "extension": [
@@ -1438,19 +1268,6 @@
         },
         "name": "Covid19 Presentation",
         "description": "Covid19 Presentation"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-assessment-reason"
-        },
-        "name": "Assessment Reason codes",
-        "description": "A list of assessment reasons"
       },
       {
         "extension": [

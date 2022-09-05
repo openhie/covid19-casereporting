@@ -3,14 +3,14 @@
   "id": "vs-cancellation-reason",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-cancellation-reason.html\"><code>http://example.com/fhir/example/CodeSystem/cs-cancellation-reason</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  281264009</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  281266006</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  135839007</li></ul></div>"
   },
   "url": "http://example.com/fhir/example/ValueSet/vs-cancellation-reason",
   "version": "0.1.0-test",
   "name": "VSCancellationReason",
   "title": "Test Types",
   "status": "active",
-  "date": "2022-09-05T20:02:35+00:00",
+  "date": "2022-09-05T20:52:48+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -36,7 +36,34 @@
   "compose": {
     "include": [
       {
-        "system": "http://example.com/fhir/example/CodeSystem/cs-cancellation-reason"
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "281264009"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "281266006"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd/entity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "135839007"
+          }
+        ]
       }
     ]
   }

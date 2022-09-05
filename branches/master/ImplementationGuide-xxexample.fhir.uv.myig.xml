@@ -12,7 +12,7 @@
   <title value="Covid 19 Case Reporting and Lab Management"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-09-05T20:02:35+00:00"/>
+  <date value="2022-09-05T20:52:48+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -248,26 +248,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-admission-types"/>
-      </reference>
-      <name value="Admission Types"/>
-      <description value="A list of Admission Types"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-covid19-specimen-type"/>
-      </reference>
-      <name value="Covid19 Specimen Type"/>
-      <description value="A list of Covid19 Specimen Type"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -283,16 +263,6 @@
       <reference>
         <reference value="ServiceRequest/Covid19LabOrderExample"/>
       </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-covid-diagnosis"/>
-      </reference>
-      <name value="COVID Diagnosis list"/>
-      <description value="COVID Diagnosis list"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -389,6 +359,15 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-other"/>
+      </reference>
+      <name value="Covid19 Case Report Sections codesystem"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -404,26 +383,6 @@
       <reference>
         <reference value="Appointment/Covid19VaccinationAppointmentExample"/>
       </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-patient-outcome"/>
-      </reference>
-      <name value="Patient Outcomes"/>
-      <description value="A list of Patient Outcomes"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-covid19-vaccine-series"/>
-      </reference>
-      <name value="Covid19 Vaccine Series"/>
-      <description value="Covid19 Vaccine Series"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -444,16 +403,6 @@
       </reference>
       <name value="Cancellation Reasons"/>
       <description value="A list of Cancellation Reasons"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-vaccine-types"/>
-      </reference>
-      <name value="Vaccine Types"/>
-      <description value="A list of Vaccine Types"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -599,26 +548,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-covid19-lab-order-status"/>
-      </reference>
-      <name value="Covid19 Lab Order Status list"/>
-      <description value="Covid19 Test Result"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-covid19-test-result"/>
-      </reference>
-      <name value="Covid19 Test Result"/>
-      <description value="Covid19 Test Result"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -645,16 +574,6 @@
         <reference value="Composition/Covid19CompositionExample"/>
       </reference>
       <name value="Covid19 Case Report"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-conditions-comorbidity"/>
-      </reference>
-      <name value="Conditions or comorbidity list"/>
-      <description value="Conditions or comorbidity list"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -738,16 +657,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-test-requested"/>
-      </reference>
-      <name value="Test Types"/>
-      <description value="A list of Test Types"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -765,16 +674,6 @@
       </reference>
       <name value="Covid19 Organization"/>
       <description value="Covid19 Organization for case report - this represents a health facility"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/vs-covid19-vaccine-series"/>
-      </reference>
-      <name value="Covid19 Vaccine Series"/>
-      <description value="Covid19 Vaccine Series"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -922,16 +821,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-covid19-reason-test-not-performed"/>
-      </reference>
-      <name value="Covid19 Reason Test not performed"/>
-      <description value="Covid19 Reason Test not performed"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -978,16 +867,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-presentation"/>
-      </reference>
-      <name value="Assessment Reason codes"/>
-      <description value="A list of assessment reasons"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:extension"/>
       </extension>
       <reference>
@@ -995,16 +874,6 @@
       </reference>
       <name value="Client Ward Division"/>
       <description value="Client Ward Division"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-symptoms"/>
-      </reference>
-      <name value="Presenting symptoms"/>
-      <description value="A list of symptoms"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1043,16 +912,6 @@
       </reference>
       <name value="Covid19 Presentation"/>
       <description value="Covid19 Presentation"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-assessment-reason"/>
-      </reference>
-      <name value="Assessment Reason codes"/>
-      <description value="A list of assessment reasons"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
