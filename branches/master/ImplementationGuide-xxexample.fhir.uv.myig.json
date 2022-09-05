@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-09-05T12:37:44+00:00",
+  "date": "2022-09-05T15:36:05+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -507,19 +507,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/covid19-test-completed"
-        },
-        "name": "Covid19 Test Completed",
-        "description": "Covid19 Test Completed"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ValueSet"
           }
         ],
@@ -792,6 +779,19 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-test-results"
+        },
+        "name": "Covid19 Lab Results",
+        "description": "Covid19 Lab Results"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ValueSet"
           }
         ],
@@ -1004,6 +1004,17 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "DiagnosticReport"
+          }
+        ],
+        "reference": {
+          "reference": "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ValueSet"
           }
         ],
@@ -1025,17 +1036,6 @@
         },
         "name": "Test Types",
         "description": "A list of Test Types"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "DiagnosticReport"
-          }
-        ],
-        "reference": {
-          "reference": "DiagnosticReport/Covid19LabResultsExample"
-        }
       },
       {
         "extension": [
