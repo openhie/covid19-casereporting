@@ -296,7 +296,6 @@ Description: "Covid19 Lab Results Diagnostic Report example"
 * subject = Reference(Covid19PatientExample) 
 * identifier.id = "12341324"
 * effectiveDateTime = "2022-07-28"
-* conclusionCode.coding.code =  #Positive
 * status = #final 
 * result = Reference(Covid19TestResultExample)
 

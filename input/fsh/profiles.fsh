@@ -285,13 +285,6 @@ Description: "Covid19 Lab Order"
 * occurrenceDateTime MS // sample forwarded to reference lab; Yes = if there is a dateTime when sample was sent
 * specimen 1..1 MS //sample
 
-Extension: Covid19SpecimenType
-Id: covid19-specimen-type
-Title: "Covid19 Specimen Type"
-Description: "Covid19 Specimen Type"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSCovid19SpecimenType
-
 Profile: Covid19Specimen
 Parent: Specimen
 Id: covid19-specimen
@@ -342,12 +335,6 @@ Description: "Covid19 reason test not peformed"
 * dataAbsentReason from VSReasonTestNotPerformed   
 * dataAbsentReason MS //Reason test not performed
 
-Extension: Covid19OtherVaccine
-Id: covid19-other-vaccine
-Title: "Covid19 Other vaccine"
-Description: "Covid19 Other vaccine"
-* valueString MS 
-
 Profile: Covid19Vaccination
 Parent: Immunization
 Id: covid19-vaccination
@@ -361,7 +348,7 @@ Description: "Covid19 Vaccination"
 * expirationDate MS    //Vaccine expiration date
 * vaccineCode MS    //Vaccine administered  
 * vaccineCode from VSVaccineTypes
-* vaccineCode.text MS //other vaccine
+* vaccineCode.text MS //other vaccine details
 * lotNumber  1..1 MS  //Vaccine lot number
 * note MS // notes
 
