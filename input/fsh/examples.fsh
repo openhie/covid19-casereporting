@@ -254,7 +254,7 @@ Description: "Covid19 Lab Order example"
 * subject = Reference(Covid19PatientExample) 
 * reasonCode  = #Surveillance
 * authoredOn  = "2022-07-28"
-* status = #Completed
+* status = #completed
 * code =  $LNC#94558-4 
 * requester = Reference(Covid19OrganizationExample)
 * locationReference = Reference(Covid19Laboratory) 
@@ -314,7 +314,7 @@ InstanceOf: Covid19Vaccination
 Usage: #example
 Title: "Covid19 Vaccination example"
 Description: "Covid19 Vaccination example"
-* status = #final
+* status = #completed
 * patient = Reference(Covid19PatientExample)
 * occurrenceDateTime = "2022-07-28"
 * protocolApplied.doseNumberPositiveInt = 1    //#TODO : min=1, max = 9
