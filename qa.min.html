@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = errors = 215, warn = 94, info = 11, 1 -->
+<!-- broken links = errors = 215, warn = 92, info = 13, 1 -->
 <head>
   <title>Covid19CaseReporting : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Covid19CaseReporting</h1>
- <p>Generated Tue Sep 06 13:51:56 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://xxsomewhere.org/fhir/myig">http://xxsomewhere.org/fhir/myig</a> (<a href="http://xxsomewhere.org/fhir/myig/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Tue Sep 06 13:54:28 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://xxsomewhere.org/fhir/myig">http://xxsomewhere.org/fhir/myig</a> (<a href="http://xxsomewhere.org/fhir/myig/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.128</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = openhie.fhir.covid, Canonical = http://xxsomewhere.org/fhir/myig</td></tr>
@@ -55,7 +55,7 @@
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://xxsomewhere.org/fhir/myig (Problem #1 with package-list.json at http://xxsomewhere.org/fhir/myig: xxsomewhere.org)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 215, warn = 94, info = 11, broken links = 1</td></tr>
+ <tr><td>Summary:</td><td> errors = 215, warn = 92, info = 13, broken links = 1</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -68,7 +68,7 @@
      <td><a href="#_github_workspace_fsh-generated_resources_Appointment-Covid19VaccinationAppointmentExample"><b>/github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-Covid19BundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample</b></a></td><td><b>53</b></td><td><b>47</b></td><td><b>3</b></td>
+     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-Covid19BundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample</b></a></td><td><b>53</b></td><td><b>46</b></td><td><b>4</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_ClinicalImpression-Covid19SymptomExample"><b>/github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td>
@@ -110,7 +110,7 @@
      <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19AssessmentVaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19VaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td>
+     <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19VaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_MedicationRequest-Covid19MedicationRequestExample"><b>/github/workspace/fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample</b></a></td><td><b>1</b></td><td><b>1</b></td><td><b>0</b></td>
@@ -690,17 +690,17 @@
    <tr style="background-color: #ffcccc">
      <td><b>Bundle.entry[14].resource.ofType(Immunization).status (l672/c27)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('final') is not in the value set 'Immunization Status Codes' (http://hl7.org/fhir/ValueSet/immunization-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/event-status#final in http://hl7.org/fhir/event-status)</b></td>
    </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[14].resource.ofType(Immunization).vaccineCode.coding[0] (l686/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+   <tr style="background-color: #ffffe6">
+     <td><b>Bundle.entry[14].resource.ofType(Immunization).vaccineCode.coding[0] (l686/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd/entity' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[14].resource.ofType(Immunization).patient</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[14].resource.ofType(Immunization).vaccineCode (l685/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#Astrazeneca)</b> (<a href="qa-tx.html#l146">see Tx log</a>)</td>
+     <td><b>Bundle.entry[14].resource.ofType(Immunization).vaccineCode (l685/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd/entity#XM4YL8)</b> (<a href="qa-tx.html#l146">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[15].resource.ofType(Appointment) (l699/c18)</b></td><td><b>error</b></td><td title="Rule app-2: 'Either start and end are specified, or neither' Failed"><b>Rule app-2: 'Either start and end are specified, or neither' Failed</b></td>
+     <td><b>Bundle.entry[15].resource.ofType(Appointment) (l700/c18)</b></td><td><b>error</b></td><td title="Rule app-2: 'Either start and end are specified, or neither' Failed"><b>Rule app-2: 'Either start and end are specified, or neither' Failed</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[15].resource.ofType(Appointment).participant[0].actor</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -1032,10 +1032,10 @@
      <td><b>Immunization.status (l9/c21)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_16"><b>The value provided ('final') is not in the value set 'Immunization Status Codes' (http://hl7.org/fhir/ValueSet/immunization-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/event-status#final in http://hl7.org/fhir/event-status)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Immunization.vaccineCode (l22/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#Astrazeneca)</b> (<a href="qa-tx.html#l122">see Tx log</a>)</td>
+     <td><b>Immunization.vaccineCode (l22/c16)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd/entity#XM4YL8)</b> (<a href="qa-tx.html#l122">see Tx log</a>)</td>
    </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Immunization.vaccineCode.coding[0] (l23/c8)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+   <tr style="background-color: #ffffe6">
+     <td><b>Immunization.vaccineCode.coding[0] (l23/c8)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd/entity' is unknown so the code cannot be validated</b></td>
    </tr>
 </table>
 <hr/>
@@ -2363,9 +2363,6 @@
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
      <td><a href="ClinicalImpression-Covid19SymptomExample.html">fsh-generated/resources/ClinicalImpression-Covid19SymptomExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
@@ -2388,9 +2385,6 @@
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Encounter-Covid19AssessmentEncounterExample.html">fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="MedicationRequest-Covid19MedicationRequestExample.html">fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
@@ -2472,7 +2466,7 @@
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#Astrazeneca)</b></td>
+     <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd/entity#XM4YL8)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="ClinicalImpression-Covid19SymptomExample.html">fsh-generated/resources/ClinicalImpression-Covid19SymptomExample.json</a></td><td><b>None of the codings provided are in the value set 'Presenting symptoms' (http://example.com/fhir/example/ValueSet/vs-symptoms), and a coding from this value set is required) (codes = null#JointPain)</b></td>
@@ -2496,7 +2490,7 @@
      <td><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd/entity#XM8NQ0)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#Astrazeneca)</b></td>
+     <td><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd/entity#XM4YL8)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="MedicationRequest-Covid19MedicationRequestExample.html">fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample.json</a></td><td><b>None of the codings provided are in the value set 'COVID Treatmens dispensed or prescribed' (http://example.com/fhir/example/ValueSet/vs-treatment-dispensed-prescribed), and a coding from this value set is required) (codes = null#Paxlovid)</b></td>
@@ -2533,7 +2527,13 @@
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd/entity' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #fffff2">
+     <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd/entity' is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
      <td><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd/entity' is unknown so the code cannot be validated</b></td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd/entity' is unknown so the code cannot be validated</b></td>
    </tr>
 </table>
 <hr/>

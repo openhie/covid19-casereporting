@@ -1,12 +1,12 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 215, warn = 94, info = 11
+err = 215, warn = 92, info = 13
 IG Publisher Version: 1.1.128
-Generated Tue Sep 06 13:51:56 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Tue Sep 06 13:54:28 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 21 / 24 / 0
  /github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 53 / 47 / 36
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 53 / 46 / 37
  /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-cs-cancellation-reason : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-case-report-sections : 2 / 0 / 2
@@ -21,7 +21,7 @@ Generated Tue Sep 06 13:51:56 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 1 / 2 / 1
  /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 1 / 0 / 2
- /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 2 / 1 / 1
+ /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19TestResultExample : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19VaccineDoseReceivedExample : 1 / 1 / 1
@@ -214,9 +214,9 @@ WARNING: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(Diagnosti
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).result[0]: Entry 13 matches the reference Observation/Covid19TestResultExample by type and id but it's fullUrl Composition/Covid19TestResultExample does not match the full target URL Observation/Covid19TestResultExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).conclusionCode[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).status: The value provided ('final') is not in the value set 'Immunization Status Codes' (http://hl7.org/fhir/ValueSet/immunization-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/event-status#final in http://hl7.org/fhir/event-status)
-WARNING: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).vaccineCode.coding[0]: A code with no system has no defined meaning. A system should be provided
+INFORMATION: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd/entity' is unknown so the code cannot be validated
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).patient: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).vaccineCode: None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#Astrazeneca)
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).vaccineCode: None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd/entity#XM4YL8)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[15].resource.ofType(Appointment): Rule app-2: 'Either start and end are specified, or neither' Failed
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[15].resource.ofType(Appointment).participant[0].actor: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.author[1].reference: Can't find 'Organization/Covid19OrganizationExample' in the bundle (Composition.author)
@@ -296,8 +296,8 @@ ERROR: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCod
 INFORMATION: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd/entity' is unknown so the code cannot be validated
 == fsh-generated/resources/Immunization-Covid19VaccinationExample.json ==
 ERROR: Immunization/Covid19VaccinationExample: Immunization.status: The value provided ('final') is not in the value set 'Immunization Status Codes' (http://hl7.org/fhir/ValueSet/immunization-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/event-status#final in http://hl7.org/fhir/event-status)
-ERROR: Immunization/Covid19VaccinationExample: Immunization.vaccineCode: None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = null#Astrazeneca)
-WARNING: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.coding[0]: A code with no system has no defined meaning. A system should be provided
+ERROR: Immunization/Covid19VaccinationExample: Immunization.vaccineCode: None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd/entity#XM4YL8)
+INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd/entity' is unknown so the code cannot be validated
 == fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample.json ==
 ERROR: MedicationRequest/Covid19MedicationRequestExample: MedicationRequest.medication.ofType(CodeableConcept): None of the codings provided are in the value set 'COVID Treatmens dispensed or prescribed' (http://example.com/fhir/example/ValueSet/vs-treatment-dispensed-prescribed), and a coding from this value set is required) (codes = null#Paxlovid)
 WARNING: MedicationRequest/Covid19MedicationRequestExample: MedicationRequest.medication.ofType(CodeableConcept).coding[0]: A code with no system has no defined meaning. A system should be provided
