@@ -6,7 +6,7 @@
     <profile value="http://example.com/fhir/example/StructureDefinition/covid19-presentation"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Condition</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition "Covid19PresentationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-presentation.html">Covid19 Presentation</a></p></div><p><b>subject</b>: <a href="Patient-Covid19PatientExample.html">Patient/Covid19PatientExample</a> " SMITH"</p><p><b>encounter</b>: <a href="Encounter-Covid19AssessmentEncounterExample.html">Encounter/Covid19AssessmentEncounterExample</a></p><h3>Evidences</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Asymptomatic <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Asymptomatic)</span></td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Condition</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition "Covid19PresentationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-presentation.html">Covid19 Presentation</a></p></div><p><b>subject</b>: <a href="Patient-Covid19PatientExample.html">Patient/Covid19PatientExample</a> " SMITH"</p><p><b>encounter</b>: <a href="Encounter-Covid19AssessmentEncounterExample.html">Encounter/Covid19AssessmentEncounterExample</a></p><h3>Evidences</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Asymptomatic <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#84387000)</span></td></tr></table></div>
   </text>
   <subject>
     <reference value="Patient/Covid19PatientExample"/>
@@ -17,7 +17,8 @@
   <evidence>
     <code>
       <coding>
-        <code value="Asymptomatic"/>
+        <system value="http://snomed.info/sct"/>
+        <code value="84387000"/>
       </coding>
     </code>
   </evidence>

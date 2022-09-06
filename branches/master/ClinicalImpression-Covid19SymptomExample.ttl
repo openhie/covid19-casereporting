@@ -1,7 +1,7 @@
 @prefix fhir: <http://hl7.org/fhir/> .
-@prefix loinc: <http://loinc.org/rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
@@ -18,15 +18,15 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ClinicalImpression</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ClinicalImpression \"Covid19SymptomExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-symptom.html\">Covid19 Symptom</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbid condition <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#75618-9)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><h3>Investigations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>JointPain <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#JointPain)</span></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ClinicalImpression</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ClinicalImpression \"Covid19SymptomExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-symptom.html\">Covid19 Symptom</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Abdominal pain <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#21522001)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><h3>Investigations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>JointPain <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#JointPain)</span></td></tr></table></div>"
   ];
   fhir:ClinicalImpression.status [ fhir:value "final"];
   fhir:ClinicalImpression.code [
      fhir:CodeableConcept.coding [
        fhir:index 0;
-       a loinc:75618-9;
-       fhir:Coding.system [ fhir:value "http://loinc.org" ];
-       fhir:Coding.code [ fhir:value "75618-9" ]
+       a sct:21522001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "21522001" ]
      ]
   ];
   fhir:ClinicalImpression.subject [
