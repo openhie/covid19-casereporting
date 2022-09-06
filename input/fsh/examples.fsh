@@ -321,7 +321,7 @@ Description: "Covid19 Vaccination example"
 * protocolApplied.doseNumberPositiveInt = 1    //#TODO : min=1, max = 9
 * protocolApplied.series = #Booster
 * expirationDate = "2022-12-28"
-* vaccineCode =   #Astrazeneca
+* vaccineCode = $ICD#XM4YL8
 * lotNumber = "1"
 
 Instance: Covid19VaccinationAppointmentExample
