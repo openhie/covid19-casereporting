@@ -158,7 +158,7 @@ Title: "Covid19 Presentation example"
 Description: "Covid19 Presentation example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
-* evidence.code = #Asymptomatic
+* evidence.code = $SCT#84387000
 
 Instance: Covid19SymptomExample
 InstanceOf: Covid19Symptom
@@ -168,7 +168,7 @@ Description: "Covid19 Symptom example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
 * status = #final
-* code = $LNC#75618-9   // #todo re-check the LOINC codes
+* code = $SCT#21522001 
 * investigation.code = #JointPain
 
 /*
@@ -204,7 +204,7 @@ Description: "Covid19 Diagnosis Example"
 * recordedDate = "2022-07-28"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
-* clinicalStatus = #Confirmed 
+* clinicalStatus = $SCT#410605003 
 
 Instance: Covid19MedicationRequestExample
 InstanceOf: Covid19MedicationRequest
@@ -237,8 +237,8 @@ Title: "Covid19 Vaccine Type Administered example"
 Description: "Covid19 Vaccine Type Administered example"
 * patient = Reference(Covid19PatientExample) 
 * encounter = Reference(Covid19AssessmentEncounterExample) 
-* status = #not-done
-* vaccineCode.coding.code = #PfizerBionTech 
+* status = #completed
+* vaccineCode = $ICD#XM8NQ0 
 * occurrenceDateTime = "2022-07-28"
 * protocolApplied.doseNumberPositiveInt = 1
 * protocolApplied.series = #Booster
@@ -255,9 +255,7 @@ Description: "Covid19 Lab Order example"
 * reasonCode  = #Surveillance
 * authoredOn  = "2022-07-28"
 * status = #Completed
-* code =  #Rapid 
-* code.coding.system = $LNC
-* code.coding.code   = #Rapid // #TODO bind ValueSet to corect Terminology e.g "94558-4"
+* code =  $LNC#94558-4 
 * requester = Reference(Covid19OrganizationExample)
 * locationReference = Reference(Covid19Laboratory) 
 * specimen = Reference(Covid19SpecimenExample)
@@ -270,7 +268,7 @@ Description: "Covid19 Specimen example"
 * identifier.value = "SPECIMEN109191879"
 * identifier.system = "http://covid19laborder.org/specimen"
 * collection.collectedDateTime = "2022-07-28"
-* type = #Serum  
+* type = $SCT#258500001  
 
 Instance: Covid19LaboratoryExample
 InstanceOf: Organization
@@ -293,9 +291,7 @@ InstanceOf: Covid19LabResultsDiagnosticReport
 Usage: #example
 Title: "Covid19 Lab Results Diagnostic Report example"
 Description: "Covid19 Lab Results Diagnostic Report example"
-* code = $LNC#100156-9 
-* code.coding.system = $LNC
-* code.coding.code = $LNC#100156-9   
+* code = $LNC#100156-9  
 * basedOn = Reference(Covid19LabOrder) 
 * subject = Reference(Covid19PatientExample) 
 * identifier.id = "12341324"

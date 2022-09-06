@@ -360,7 +360,7 @@ Description: "Covid19 Vaccination"
 * protocolApplied.doseNumberPositiveInt 1..1  MS 
 * expirationDate MS    //Vaccine expiration date
 * vaccineCode MS    //Vaccine administered  
-* vaccineCode from VSCovid19VaccineCodes
+* vaccineCode from VSVaccineTypes
 * vaccineCode.text MS //other vaccine
 * lotNumber  1..1 MS  //Vaccine lot number
 * note MS // notes
