@@ -14,8 +14,8 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19PresentationExample
 * entry[+].fullUrl = "Composition/Covid19SymptomExample"
 * entry[=].resource = Covid19SymptomExample
-* entry[+].fullUrl = "Composition/Covid19ComorbidityPresentExample"
-* entry[=].resource = Covid19ComorbidityPresentExample
+//* entry[+].fullUrl = "Composition/Covid19ComorbidityPresentExample"
+//* entry[=].resource = Covid19ComorbidityPresentExample
 * entry[+].fullUrl = "Composition/Covid19ConditionsComorbidityExample"
 * entry[=].resource = Covid19ConditionsComorbidityExample
 * entry[+].fullUrl = "Composition/Covid19DiagnosisExample"
@@ -61,8 +61,8 @@ Description: "Basic Composition example"
 * section[=].entry[+] = Reference(Covid19ReasonforAssessmentExample)
 * section[=].entry[+] = Reference(Covid19PresentationExample)
 * section[=].entry[+] = Reference(Covid19SymptomExample)
-* section[=].entry[+] = Reference(Covid19ComorbidityPresentExample) 
-* section[=].entry[+] = Reference(Covid19ConditionsComorbidityExample) 
+//* section[=].entry[+] = Reference(Covid19ComorbidityPresentExample) 
+//* section[=].entry[+] = Reference(Covid19ConditionsComorbidityExample) 
 * section[=].entry[+] = Reference(Covid19DiagnosisExample)   
 * section[=].entry[+] = Reference(HIVDiagnosisExample) 
 * section[=].entry[+] = Reference(Covid19AssessmentVaccinationExample) 
@@ -171,6 +171,7 @@ Description: "Covid19 Symptom example"
 * code = $LNC#75618-9   // #todo re-check the LOINC codes
 * investigation.code = #JointPain
 
+/*
 Instance: Covid19ComorbidityPresentExample
 InstanceOf: Observation
 Usage: #example
@@ -181,6 +182,8 @@ Description: "Covid19 Comorbidity Present example"
 * status = #final
 * code = $LNC#83243-6  
 * valueCodeableConcept = #Yes
+* valueDateTime = "2022-07-28"
+*/
 
 Instance: Covid19ConditionsComorbidityExample
 InstanceOf: Covid19ConditionsComorbidity

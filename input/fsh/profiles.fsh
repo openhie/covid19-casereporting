@@ -41,7 +41,7 @@ Title: "Covid19 Case Reporting Composition"
     covid19EverHospitalized 1..1 and
     covid19Admission 0..1 and
     covid19Symptom 0..* and 
-    covid19ComorbidityPresent 1..1 and
+    //covid19ComorbidityPresent 1..1 and
     covid19ConditionsComorbidity 0..* and
     covid19Diagnosis 0..1 and
     hivDiagnosis 0..1 and
@@ -53,7 +53,7 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry[covid19DateLastHospitalized] only Reference(Covid19DateLastHospitalized)
 * section[covid19AssessmentSection].entry[covid19EverHospitalized] only Reference(Covid19EverHospitalized)
 * section[covid19AssessmentSection].entry[covid19Symptom] only Reference(Covid19Symptom)
-* section[covid19AssessmentSection].entry[covid19ComorbidityPresent] only Reference(Covid19ComorbidityPresent)
+//* section[covid19AssessmentSection].entry[covid19ComorbidityPresent] only Reference(Covid19ComorbidityPresent)
 * section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
 * section[covid19AssessmentSection].entry[covid19Diagnosis] only Reference(Covid19Diagnosis)
 * section[covid19AssessmentSection].entry[hivDiagnosis] only Reference(HIVDiagnosis)
@@ -199,6 +199,8 @@ Description: "Covid19 Assessment Encounter"
 * reasonCode.text MS
 * location.physicalType from VSAdmissionTypes 
 * location.physicalType MS //Admission
+* classHistory.class MS //determine ever hospitalized → if classHistory.class = IMP and classHistory.period.start
+* classHistory.period.start MS // Date Last Hospitalized --> To answer  "Ever Hospitalized due to Covid-19?" 
 
 Profile: Covid19Symptom
 Parent: ClinicalImpression
@@ -209,13 +211,15 @@ Description: "Covid19 Symptom"
 * investigation.code MS
 * note MS // other presenting symptoms
 
+/*
 Profile: Covid19ComorbidityPresent
 Parent: Observation
 Id: covid19-comorbidity-present
 Title: "Covid19 Comorbidity Present"
 Description: "Covid19 Comorbidity Present"
-* value[x] only CodeableConcept
+//* value[x] only CodeableConcept
 * valueCodeableConcept from VSYesNoUnknown
+*/
 
 Profile: Covid19ConditionsComorbidity
 Parent: Condition
@@ -297,7 +301,7 @@ Description: "Covid19 Lab Order"
 * code from VSTestTypes
 * code 1..1 MS // Test request Code
 * locationReference MS //Reference Lab sample send to
-* status MS // Lab Test Performed
+* status MS // Status of Lab Order
 * occurrenceDateTime MS // sample forwarded to reference lab; Yes = if there is a dateTime when sample was sent
 * specimen 1..1 MS //sample
 
@@ -318,6 +322,7 @@ Description: "Covid19 Specimen"
 * type from VSCovid19SpecimenType
 * collection.collectedDateTime 1..1 MS  // Date specimen collected
 * note MS // Other Sample Type
+* processing.timePeriod.end MS   //Using the date to derive that the "Lab Test was Performed"
 
 Profile: Covid19LabOrderCancellation
 Parent: Task
