@@ -20,8 +20,6 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19ConditionsComorbidityExample
 * entry[+].fullUrl = "Composition/Covid19DiagnosisExample"
 * entry[=].resource = Covid19DiagnosisExample 
-* entry[+].fullUrl = "Composition/Covid19EverHospitalizedExample"
-* entry[=].resource = Covid19EverHospitalizedExample
 * entry[+].fullUrl = "Composition/Covid19VaccineDoseReceivedExample"
 * entry[=].resource = Covid19VaccineDoseReceivedExample
 * entry[+].fullUrl = "Composition/Covid19AssessmentVaccinationExample"
@@ -34,6 +32,8 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19LabOrderCancellationExample
 * entry[+].fullUrl = "Composition/Covid19LabResultsDiagnosticReportExample"
 * entry[=].resource = Covid19LabResultsDiagnosticReportExample
+* entry[+].fullUrl = "Composition/Covid19TestResultExample"
+* entry[=].resource = Covid19TestResultExample
 * entry[+].fullUrl = "Composition/Covid19VaccinationExample"
 * entry[=].resource = Covid19VaccinationExample
 * entry[+].fullUrl = "Composition/Covid19VaccinationAppointmentExample"
@@ -230,16 +230,6 @@ Description: "."
 * identifier[+].system = "http://openhie.org/fhir/hiv-casereporting/identifier/hiv-diagnosis"
 * identifier[=].value = "abc"
 
-Instance: Covid19EverHospitalizedExample
-InstanceOf: Covid19EverHospitalized
-Usage: #example
-Title: "Covid19 Hospitalised Observation example"
-Description: "Covid19 Hospitalised Observation example"
-* valueCodeableConcept = #Yes
-* status = #final
-* code = $LNC#75618-9 // #TODO
-* encounter = Reference(Covid19AssessmentEncounterExample) 
-
 Instance: Covid19AssessmentVaccinationExample
 InstanceOf: Covid19AssessmentVaccination
 Usage: #example
@@ -301,17 +291,28 @@ Description: "Covid19 Lab Order Cancellation Task example"
 Instance: Covid19LabResultsDiagnosticReportExample
 InstanceOf: Covid19LabResultsDiagnosticReport
 Usage: #example
-Title: "Covid19 Lab Results example"
-Description: "Covid19 Lab Results example"
+Title: "Covid19 Lab Results Diagnostic Report example"
+Description: "Covid19 Lab Results Diagnostic Report example"
 * code = $LNC#100156-9 
 * code.coding.system = $LNC
-* code.coding.code = $LNC#100156-9    /// #TODO --> Identify correct LOINC code
+* code.coding.code = $LNC#100156-9   
 * basedOn = Reference(Covid19LabOrder) 
 * subject = Reference(Covid19PatientExample) 
 * identifier.id = "12341324"
 * effectiveDateTime = "2022-07-28"
 * conclusionCode.coding.code =  #Positive
-* status = #final //#TODO - change to specific VS in spreadsheet
+* status = #final 
+* result = Reference(Covid19TestResultExample)
+
+Instance: Covid19TestResultExample
+InstanceOf: Covid19TestResult
+Usage: #example
+Title: "Covid19 Lab Results example"
+Description: "Covid19 Lab Results example"
+* status = #final
+* code = $LNC#94558-4
+* valueDateTime = "2022-07-28"
+* valueCodeableConcept = $SCT#10828004
 
 Instance: Covid19VaccinationExample
 InstanceOf: Covid19Vaccination

@@ -38,7 +38,6 @@ Title: "Covid19 Case Reporting Composition"
     otherReasonforAssessment   0..1 and
     covid19Presentation 1..1 and
     covid19DateLastHospitalized 0..1 and
-    covid19EverHospitalized 1..1 and
     covid19Admission 0..1 and
     covid19Symptom 0..* and 
     //covid19ComorbidityPresent 1..1 and
@@ -50,8 +49,6 @@ Title: "Covid19 Case Reporting Composition"
     covid19MedicationRequest 0..1
 * section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
 * section[covid19AssessmentSection].entry[covid19Presentation] only Reference(Covid19Presentation)
-* section[covid19AssessmentSection].entry[covid19DateLastHospitalized] only Reference(Covid19DateLastHospitalized)
-* section[covid19AssessmentSection].entry[covid19EverHospitalized] only Reference(Covid19EverHospitalized)
 * section[covid19AssessmentSection].entry[covid19Symptom] only Reference(Covid19Symptom)
 //* section[covid19AssessmentSection].entry[covid19ComorbidityPresent] only Reference(Covid19ComorbidityPresent)
 * section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
@@ -71,11 +68,13 @@ Title: "Covid19 Case Reporting Composition"
     covid19Specimen 0..1 and
     covid19LabOrderCancellation 0..1 and
     covid19LabResultsDiagnosticReport 0..1 and
+    covid19TestResult 0..1 and
     covid19ReasonTestNotPerformed 0..1
 * section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
 * section[covid19LabOrderManagementSection].entry[covid19Specimen] only Reference(Covid19Specimen)
 * section[covid19LabOrderManagementSection].entry[covid19LabOrderCancellation] only Reference(Covid19LabOrderCancellation)
 * section[covid19LabOrderManagementSection].entry[covid19LabResultsDiagnosticReport] only Reference(Covid19LabResultsDiagnosticReport)
+* section[covid19LabOrderManagementSection].entry[covid19TestResult] only Reference(Covid19TestResult)
 * section[covid19LabOrderManagementSection].entry[covid19ReasonTestNotPerformed] only Reference(Covid19ReasonTestNotPerformed)
 
 * section[covid19VaccinationSection].title = "Covid 19 Vaccination"
@@ -168,25 +167,6 @@ Description: "Covid19 Presentation"
 * evidence.code from VSPresentation
 * onsetDateTime MS //date of onset of symptoms
 
-//hospitalization info start
-Profile: Covid19DateLastHospitalized  
-Parent: Observation
-Id: covid19-date-last-hospitalized
-Title: "Covid19 Date last Hospitalized"
-Description: "Covid19 Date Last Hospitalized"
-* encounter 1..1 MS
-* effectiveDateTime MS
-
-Profile: Covid19EverHospitalized
-Parent: Observation
-Id: covid19-everhospitalized
-Title: "Covid19 Ever Hospitalised"
-Description: "Ever hospitalised due to COVID-19?"
-* value[x] from VSYesNoUnknown
-* encounter 1..1 MS
-
-//hospitalization info ends
-
 Profile: Covid19AssessmentEncounter
 Parent: Encounter
 Id: covid19-encounter
@@ -199,7 +179,7 @@ Description: "Covid19 Assessment Encounter"
 * reasonCode.text MS
 * location.physicalType from VSAdmissionTypes 
 * location.physicalType MS //Admission
-* classHistory.class MS //determine ever hospitalized → if classHistory.class = IMP and classHistory.period.start
+* classHistory.class MS //determine ever hospitalized → if classHistory.class = IMP and classHistory.period.start   
 * classHistory.period.start MS // Date Last Hospitalized --> To answer  "Ever Hospitalized due to Covid-19?" 
 
 Profile: Covid19Symptom
@@ -350,8 +330,9 @@ Parent: Observation
 Id: covid19-test-results
 Title: "Covid19 Lab Results"
 Description: "Covid19 Lab Results"
-* effectiveDateTime MS //Test result date-time
+* valueDateTime MS //Test result date-time
 * valueCodeableConcept from VSTestResult
+* valueCodeableConcept MS //Result Code
 
 Profile: Covid19ReasonTestNotPerformed
 Parent: Observation
