@@ -1,12 +1,12 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 213, warn = 92, info = 13
+err = 209, warn = 88, info = 13
 IG Publisher Version: 1.1.128
-Generated Tue Sep 06 13:58:54 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Tue Sep 06 15:53:07 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 21 / 24 / 0
  /github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 52 / 46 / 37
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 52 / 45 / 37
  /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-cs-cancellation-reason : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-case-report-sections : 2 / 0 / 2
@@ -18,7 +18,7 @@ Generated Tue Sep 06 13:58:54 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19PresentationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-HIVDiagnosisExample : 2 / 2 / 1
- /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 1 / 1 / 1
+ /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 1 / 2 / 1
  /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 1 / 0 / 2
  /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 2 / 0 / 2
@@ -41,12 +41,10 @@ Generated Tue Sep 06 13:58:54 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-results : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-medication-request : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-other-vaccine : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-patient : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-presentation : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-reason-test-not-performed : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen-type : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-symptom : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-test-results : 3 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccination : 2 / 0 / 1
@@ -211,7 +209,6 @@ ERROR: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticR
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).basedOn[0]: Unable to resolve resource with reference 'Covid19LabOrder'
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).result[0]: Entry 13 matches the reference Observation/Covid19TestResultExample by type and id but it's fullUrl Composition/Covid19TestResultExample does not match the full target URL Observation/Covid19TestResultExample by Bundle resolution rules
-WARNING: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).conclusionCode[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).status: The value provided ('final') is not in the value set 'Immunization Status Codes' (http://hl7.org/fhir/ValueSet/immunization-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/event-status#final in http://hl7.org/fhir/event-status)
 INFORMATION: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd/entity' is unknown so the code cannot be validated
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).patient: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
@@ -284,7 +281,6 @@ ERROR: Condition/HIVDiagnosisExample: Condition.verificationStatus: None of the 
 WARNING: Condition/HIVDiagnosisExample: Condition.verificationStatus.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.json ==
 ERROR: DiagnosticReport/Covid19LabResultsDiagnosticReportExample: DiagnosticReport.basedOn[0]: Unable to resolve resource with reference 'Covid19LabOrder'
-WARNING: DiagnosticReport/Covid19LabResultsDiagnosticReportExample: DiagnosticReport.conclusionCode[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json ==
 WARNING: Encounter/Covid19AssessmentEncounterExample: Encounter.class: A code with no system has no defined meaning. A system should be provided
 ERROR: Encounter/Covid19AssessmentEncounterExample: Encounter.reasonCode[0]: None of the codings provided are in the value set 'Assessment Reason valueset' (http://example.com/fhir/example/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Other)
@@ -358,10 +354,6 @@ ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-med
 == fsh-generated/resources/StructureDefinition-covid19-organization.json ==
 ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-organization'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-organization) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid19-organization)
 ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-organization vs http://example.com/fhir/example/StructureDefinition/covid19-organization
-== fsh-generated/resources/StructureDefinition-covid19-other-vaccine.json ==
-ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-other-vaccine'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-other-vaccine.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-other-vaccine) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid19-other-vaccine)
-WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-other-vaccine'): The Implementation Guide contains no examples for this extension
-ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-other-vaccine: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-other-vaccine vs http://example.com/fhir/example/StructureDefinition/covid19-other-vaccine
 == fsh-generated/resources/StructureDefinition-covid19-patient.json ==
 ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-patient'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-patient.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-patient) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid19-patient)
 ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-patient: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-patient vs http://example.com/fhir/example/StructureDefinition/covid19-patient
@@ -375,10 +367,6 @@ ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-rea
 == fsh-generated/resources/StructureDefinition-covid19-specimen.json ==
 ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-specimen'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-specimen) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid19-specimen)
 ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-specimen vs http://example.com/fhir/example/StructureDefinition/covid19-specimen
-== fsh-generated/resources/StructureDefinition-covid19-specimen-type.json ==
-ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-specimen-type'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen-type.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-specimen-type) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid19-specimen-type)
-WARNING: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-specimen-type'): The Implementation Guide contains no examples for this extension
-ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen-type: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-specimen-type vs http://example.com/fhir/example/StructureDefinition/covid19-specimen-type
 == fsh-generated/resources/StructureDefinition-covid19-symptom.json ==
 ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-symptom'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-symptom.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-symptom) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid19-symptom)
 WARNING: StructureDefinition/covid19-symptom: StructureDefinition.snapshot.element[20].comment: The Unicode sequence has unterminated bi-di control characters (see CVE-2021-42574): {1}
