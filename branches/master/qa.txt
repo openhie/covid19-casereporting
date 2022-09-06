@@ -1,13 +1,13 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 215, warn = 92, info = 13
+err = 213, warn = 92, info = 13
 IG Publisher Version: 1.1.128
-Generated Tue Sep 06 13:54:28 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Tue Sep 06 13:58:54 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 21 / 24 / 0
  /github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 53 / 46 / 37
- /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 2 / 1 / 1
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 52 / 46 / 37
+ /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-cs-cancellation-reason : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-case-report-sections : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-other : 2 / 0 / 2
@@ -175,7 +175,6 @@ WARNING: Bundle/Covid19BundleExample: Bundle.entry[2].resource.ofType(Encounter)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[2].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Assessment Reason valueset' (http://example.com/fhir/example/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Other)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[3].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[3].resource.ofType(Condition).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[4].resource.ofType(ClinicalImpression).status: The value provided ('final') is not in the value set 'Clinical Impression Status' (http://hl7.org/fhir/ValueSet/clinicalimpression-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/event-status#final in http://hl7.org/fhir/event-status)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[4].resource.ofType(ClinicalImpression).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[4].resource.ofType(ClinicalImpression).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[4].resource.ofType(ClinicalImpression).investigation[0].code.coding[0]: A code with no system has no defined meaning. A system should be provided
@@ -228,7 +227,6 @@ WARNING: Bundle/Covid19BundleExample: Bundle.entry[17]: Entry 'Composition/Covid
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[17]: Entry 'Composition/Covid19VaccineDoseReceivedExample' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[17]: Entry 'Composition/Covid19LabResultsDiagnosticReportExample' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere
 == fsh-generated/resources/ClinicalImpression-Covid19SymptomExample.json ==
-ERROR: ClinicalImpression/Covid19SymptomExample: ClinicalImpression.status: The value provided ('final') is not in the value set 'Clinical Impression Status' (http://hl7.org/fhir/ValueSet/clinicalimpression-status|4.0.1), and a code is required from this value set) (error message = Unknown Code http://hl7.org/fhir/event-status#final in http://hl7.org/fhir/event-status)
 ERROR: ClinicalImpression/Covid19SymptomExample: ClinicalImpression.investigation[0].code: None of the codings provided are in the value set 'Presenting symptoms' (http://example.com/fhir/example/ValueSet/vs-symptoms), and a coding from this value set is required) (codes = null#JointPain)
 WARNING: ClinicalImpression/Covid19SymptomExample: ClinicalImpression.investigation[0].code.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/CodeSystem-cs-cancellation-reason.json ==
