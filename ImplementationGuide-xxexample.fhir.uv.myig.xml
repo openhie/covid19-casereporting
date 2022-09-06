@@ -12,7 +12,7 @@
   <title value="Covid 19 Case Reporting and Lab Management"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-09-06T09:51:55+00:00"/>
+  <date value="2022-09-06T10:23:58+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -248,16 +248,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-everhospitalized"/>
-      </reference>
-      <name value="Covid19 Ever Hospitalised"/>
-      <description value="Ever hospitalised due to COVID-19?"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ServiceRequest"/>
       </extension>
       <reference>
@@ -348,14 +338,6 @@
       </reference>
       <name value="Covid19 Vaccine Code List"/>
       <description value="Covid19 Vaccine Code List"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/Covid19EverHospitalizedExample"/>
-      </reference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -773,13 +755,11 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
+        <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/covid19-date-last-hospitalized"/>
+        <reference value="Observation/Covid19TestResultExample"/>
       </reference>
-      <name value="Covid19 Date last Hospitalized"/>
-      <description value="Covid19 Date Last Hospitalized"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

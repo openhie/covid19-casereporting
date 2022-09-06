@@ -2,6 +2,7 @@
 @prefix loinc: <http://loinc.org/rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
@@ -40,32 +41,32 @@
      fhir:Bundle.entry.resource <Composition/Covid19DiagnosisExample>
   ], [
      fhir:index 7;
-     fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19EverHospitalizedExample" ];
-     fhir:Bundle.entry.resource <Composition/Covid19EverHospitalizedExample>
-  ], [
-     fhir:index 8;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19VaccineDoseReceivedExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19VaccineDoseReceivedExample>
   ], [
-     fhir:index 9;
+     fhir:index 8;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19AssessmentVaccinationExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19AssessmentVaccinationExample>
   ], [
-     fhir:index 10;
+     fhir:index 9;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19LabOrderExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19LabOrderExample>
   ], [
-     fhir:index 11;
+     fhir:index 10;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19SpecimenExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19SpecimenExample>
   ], [
-     fhir:index 12;
+     fhir:index 11;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19LabOrderCancellationExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19LabOrderCancellationExample>
   ], [
-     fhir:index 13;
+     fhir:index 12;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19LabResultsDiagnosticReportExample" ];
      fhir:Bundle.entry.resource <Composition/Covid19LabResultsDiagnosticReportExample>
+  ], [
+     fhir:index 13;
+     fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19TestResultExample" ];
+     fhir:Bundle.entry.resource <Composition/Covid19TestResultExample>
   ], [
      fhir:index 14;
      fhir:Bundle.entry.fullUrl [ fhir:value "Composition/Covid19VaccinationExample" ];
@@ -478,39 +479,6 @@
   ];
   fhir:Condition.recordedDate [ fhir:value "2022-07-28"^^xsd:date] .
 
-<Composition/Covid19EverHospitalizedExample> a fhir:Observation;
-  fhir:Resource.id [ fhir:value "Covid19EverHospitalizedExample"];
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://example.com/fhir/example/StructureDefinition/covid19-everhospitalized";
-       fhir:index 0;
-       fhir:link <http://example.com/fhir/example/StructureDefinition/covid19-everhospitalized>
-     ]
-  ];
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19EverHospitalizedExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-everhospitalized.html\">Covid19 Ever Hospitalised</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbid condition <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#75618-9)</span></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Yes)</span></p></div>"
-  ];
-  fhir:Observation.status [ fhir:value "final"];
-  fhir:Observation.code [
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       a loinc:75618-9;
-       fhir:Coding.system [ fhir:value "http://loinc.org" ];
-       fhir:Coding.code [ fhir:value "75618-9" ]
-     ]
-  ];
-  fhir:Observation.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
-     fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
-  ];
-  fhir:Observation.valueCodeableConcept [
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "Yes" ]
-     ]
-  ] .
-
 <Composition/Covid19VaccineDoseReceivedExample> a fhir:Observation;
   fhir:Resource.id [ fhir:value "Covid19VaccineDoseReceivedExample"];
   fhir:Resource.meta [
@@ -706,7 +674,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport \"Covid19LabResultsDiagnosticReportExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-results.html\">Covid19 Lab Results</a></p></div><p><b>identifier</b>: id: ?ngen-9?</p><p><b>basedOn</b>: <a href=\"Covid19LabOrder\">Covid19LabOrder</a></p><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#100156-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>effective</b>: 2022-07-28</p><p><b>conclusionCode</b>: Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Positive)</span></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport \"Covid19LabResultsDiagnosticReportExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-results.html\">Covid19 Lab Results</a></p></div><p><b>identifier</b>: id: ?ngen-9?</p><p><b>basedOn</b>: <a href=\"Covid19LabOrder\">Covid19LabOrder</a></p><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#100156-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>effective</b>: 2022-07-28</p><p><b>result</b>: <a href=\"#Observation_Covid19TestResultExample\">See above (Observation/Covid19TestResultExample)</a></p><p><b>conclusionCode</b>: Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Positive)</span></p></div>"
   ];
   fhir:DiagnosticReport.identifier [
      fhir:index 0;
@@ -730,11 +698,47 @@
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
   ];
   fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2022-07-28"^^xsd:date];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19TestResultExample>;
+     fhir:Reference.reference [ fhir:value "Observation/Covid19TestResultExample" ]
+  ];
   fhir:DiagnosticReport.conclusionCode [
      fhir:index 0;
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.code [ fhir:value "Positive" ]
+     ]
+  ] .
+
+<Composition/Covid19TestResultExample> a fhir:Observation;
+  fhir:Resource.id [ fhir:value "Covid19TestResultExample"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://example.com/fhir/example/StructureDefinition/covid19-test-results";
+       fhir:index 0;
+       fhir:link <http://example.com/fhir/example/StructureDefinition/covid19-test-results>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19TestResultExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-test-results.html\">Covid19 Lab Results</a></p></div><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#94558-4)</span></p><p><b>value</b>: Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#10828004)</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:94558-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "94558-4" ]
+     ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:10828004;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "10828004" ]
      ]
   ] .
 

@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-09-06T09:51:55+00:00",
+  "date": "2022-09-06T10:23:58+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -393,19 +393,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/covid19-everhospitalized"
-        },
-        "name": "Covid19 Ever Hospitalised",
-        "description": "Ever hospitalised due to COVID-19?"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ServiceRequest"
           }
         ],
@@ -524,17 +511,6 @@
         },
         "name": "Covid19 Vaccine Code List",
         "description": "Covid19 Vaccine Code List"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Observation"
-          }
-        ],
-        "reference": {
-          "reference": "Observation/Covid19EverHospitalizedExample"
-        }
       },
       {
         "extension": [
@@ -1086,14 +1062,12 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
+            "valueString": "Observation"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-date-last-hospitalized"
-        },
-        "name": "Covid19 Date last Hospitalized",
-        "description": "Covid19 Date Last Hospitalized"
+          "reference": "Observation/Covid19TestResultExample"
+        }
       },
       {
         "extension": [

@@ -51,8 +51,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"3.4"}
-    h3,h4,h5,h6{--heading-prefix:"3.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"3.3"}
+    h3,h4,h5,h6{--heading-prefix:"3.3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -340,7 +340,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (otherReasonforAssessment)</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19Presentation)</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19DateLastHospitalized)</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19EverHospitalized)</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19Admission)</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19Symptom)</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19ConditionsComorbidity)</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
@@ -366,6 +365,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19Specimen)</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19LabOrderCancellation)</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19LabResultsDiagnosticReport)</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19TestResult)</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19ReasonTestNotPerformed)</td><td>.outboundRelationship[typeCode=COMP] or  .participation[typeCode=SBJ]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td>.inboundRelationship[typeCode=SUBJ,code&lt;ListEmptyReason].value[type=CD]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td>./outboundRelationship[typeCode=&quot;COMP&quot; and isNormalActRelationship()]/target[moodCode=&quot;EVN&quot; and classCode=&quot;DOCSECT&quot; and isNormalAct]</td> </tr>
@@ -447,7 +447,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (otherReasonforAssessment)</td><td>.entry</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19Presentation)</td><td>.entry</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19DateLastHospitalized)</td><td>.entry</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19EverHospitalized)</td><td>.entry</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19Admission)</td><td>.entry</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19Symptom)</td><td>.entry</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19ConditionsComorbidity)</td><td>.entry</td> </tr>
@@ -471,6 +470,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19Specimen)</td><td>.entry</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19LabOrderCancellation)</td><td>.entry</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19LabResultsDiagnosticReport)</td><td>.entry</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19TestResult)</td><td>.entry</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry (covid19ReasonTestNotPerformed)</td><td>.entry</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emptyReason</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;section</td><td>.component.section</td> </tr>
@@ -593,7 +593,7 @@
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 6, 2022 09:51+0000">2022-09-06</span>
+          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 6, 2022 10:23+0000">2022-09-06</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
