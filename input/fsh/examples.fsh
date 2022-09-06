@@ -167,7 +167,7 @@ Title: "Covid19 Symptom example"
 Description: "Covid19 Symptom example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
-* status = #final
+* status = #completed
 * code = $SCT#21522001 
 * investigation.code = #JointPain
 
