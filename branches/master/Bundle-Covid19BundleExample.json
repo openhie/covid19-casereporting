@@ -78,12 +78,6 @@
                 "reference": "ClinicalImpression/Covid19SymptomExample"
               },
               {
-                "reference": "Observation/Covid19ComorbidityPresentExample"
-              },
-              {
-                "reference": "Condition/Covid19ConditionsComorbidityExample"
-              },
-              {
                 "reference": "Condition/Covid19DiagnosisExample"
               },
               {
@@ -359,39 +353,6 @@
             }
           }
         ]
-      }
-    },
-    {
-      "fullUrl": "Composition/Covid19ComorbidityPresentExample",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "Covid19ComorbidityPresentExample",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19ComorbidityPresentExample\" </p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbidities and coexisting conditions <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#83243-6)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Yes)</span></p></div>"
-        },
-        "status": "final",
-        "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "83243-6"
-            }
-          ]
-        },
-        "subject": {
-          "reference": "Patient/Covid19PatientExample"
-        },
-        "encounter": {
-          "reference": "Encounter/Covid19AssessmentEncounterExample"
-        },
-        "valueCodeableConcept": {
-          "coding": [
-            {
-              "code": "Yes"
-            }
-          ]
-        }
       }
     },
     {
