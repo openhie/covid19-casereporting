@@ -319,8 +319,8 @@ Description: "Covid19 Lab Order Cancellation Task"
 Profile: Covid19LabResultsDiagnosticReport
 Parent: DiagnosticReport
 Id: covid19-lab-results
-Title: "Covid19 Lab Results"
-Description: "Covid19 Lab Results"
+Title: "Covid19 Lab Results Diagnostic Report"
+Description: "Covid19 Lab Results Diagnostic Report"
 * subject 1..1 MS // Patient reference
 * basedOn 1..1 MS // Ref to ServiceRequest
 * result  MS //
