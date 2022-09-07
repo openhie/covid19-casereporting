@@ -107,13 +107,12 @@ Description: "Covid19 Patient example"
 * name.given = "Jane"
 * name.family = "Smith"
 * gender = #female
-* extension[keyPopulation].valueCodeableConcept = #GENERAL-POPULATION
+//* extension[keyPopulation].valueCodeableConcept = #GENERAL-POPULATION
 * birthDate = "1986-06-04"
 * telecom.system = #phone
 * telecom.value = "+27825556666"
 * address.country = "South Africa"
 * address.state = "Western Province"
-* extension[clientWardDivision].valueString = "Division 9087"
 * address.district = "City of Cape Town"
 * address.city = "Cape Town"
 * identifier[passport].value = "PASSPORT1234567"
@@ -216,7 +215,7 @@ Description: "Covid19 Treatment dispensed or prescribed example"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * medicationCodeableConcept = #Paxlovid
-
+/*
 Instance: HIVDiagnosisExample
 InstanceOf: HIVDiagnosis
 Usage: #example
@@ -229,7 +228,7 @@ Description: "HIV Condition example"
 * recordedDate = "2021-05-18"
 * identifier[+].system = "http://openhie.org/fhir/hiv-casereporting/identifier/hiv-diagnosis"
 * identifier[=].value = "abc"
-
+*/
 Instance: Covid19AssessmentVaccinationExample
 InstanceOf: Covid19AssessmentVaccination
 Usage: #example

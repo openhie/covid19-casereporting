@@ -53,7 +53,7 @@ Title: "Covid19 Case Reporting Composition"
 //* section[covid19AssessmentSection].entry[covid19ComorbidityPresent] only Reference(Covid19ComorbidityPresent)
 * section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
 * section[covid19AssessmentSection].entry[covid19Diagnosis] only Reference(Covid19Diagnosis)
-* section[covid19AssessmentSection].entry[hivDiagnosis] only Reference(HIVDiagnosis)
+//* section[covid19AssessmentSection].entry[hivDiagnosis] only Reference(HIVDiagnosis)
 * section[covid19AssessmentSection].entry[covid19VaccineDoseReceived] only Reference(Covid19VaccineDoseReceived)  
 * section[covid19AssessmentSection].entry[covid19AssessmentVaccination] only Reference(Covid19AssessmentVaccination)
 * section[covid19AssessmentSection].entry[covid19MedicationRequest] only Reference(Covid19MedicationRequest)
@@ -101,19 +101,6 @@ Description: "Covid19 Organization for case report - this represents a health fa
 * address.city 1..1
 * identifier 1..* 
 
-Extension: ClientWardDivision
-Id: client-ward-division
-Title: "Client Ward Division"
-Description: "Client Ward Division"
-* valueString only string
-
-Extension: KeyPopulation
-Id: key-population
-Title: "Key population"
-Description: "Key population"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSKeyPopulation
-
 Profile: Covid19Patient
 Parent: Patient
 Id: covid19-patient
@@ -131,7 +118,6 @@ Description: "This Patient profile allows the exchange of patient information, i
 * address.country MS    //Client Country  /  Nationality / Citizenship
 * address.state MS      //Client County / Province  / State
 * address.district MS   //Client SubCounty / District 
-* extension contains ClientWardDivision named clientWardDivision 1..1 MS  //
 * address.line MS   //Client Ward / Division
 * address.city MS      //Client Village / Estate */
 
@@ -154,7 +140,7 @@ Description: "This Patient profile allows the exchange of patient information, i
 * identifier[national].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
 * identifier[pos].value 1..1
 
-* extension contains KeyPopulation named keyPopulation 0..1 MS
+//* extension contains KeyPopulation named keyPopulation 0..1 MS
 
 * managingOrganization 1..1
 
@@ -254,6 +240,7 @@ Description: "Covid19 Treatment dispensed or prescribed"
 * medicationCodeableConcept from VSTreatMentDispensedPrescribed 
 * medicationCodeableConcept.text MS // Other (specify) - details
 
+/*
 //Fields required from the CBS MDS for Covid Report indicators
 Profile: HIVDiagnosis
 Parent: Condition
@@ -263,6 +250,7 @@ Description: "This profile allows the exchange of a patient's hiv diagnosis"
 * recordedDate 1..1
 * identifier 1..*
 * code 1..1
+*/
 
 Profile: Covid19LabOrder
 Parent: ServiceRequest
