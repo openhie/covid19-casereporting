@@ -64,7 +64,7 @@ Description: "Basic Composition example"
 //* section[=].entry[+] = Reference(Covid19ComorbidityPresentExample) 
 //* section[=].entry[+] = Reference(Covid19ConditionsComorbidityExample) 
 * section[=].entry[+] = Reference(Covid19DiagnosisExample)   
-* section[=].entry[+] = Reference(HIVDiagnosisExample) 
+//* section[=].entry[+] = Reference(HIVDiagnosisExample) 
 * section[=].entry[+] = Reference(Covid19AssessmentVaccinationExample) 
 * section[=].entry[+] = Reference(Covid19PatientOutcomeExample) 
  

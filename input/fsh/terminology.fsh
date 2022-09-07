@@ -2,7 +2,7 @@ Alias: $SCT = http://snomed.info/sct
 Alias: $LNC = http://loinc.org
 Alias: $ICD = http://id.who.int/icd/entity
 Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6 
-Alias: $KEYPOPULATION = https://openhie.github.io/hiv-ig/ValueSet-vs-key-population
+//Alias: $KEYPOPULATION = https://openhie.github.io/hiv-ig/ValueSet-vs-key-population
 
 CodeSystem: CSCaseReportSections
 Id: cs-case-report-sections
@@ -228,9 +228,10 @@ Id: vs-source-of-info
 Title: "Source of information - codes"
 Description: "Source of information - codes"
 * include codes from system CSSourceOfInfo
-
+/*
 ValueSet: VSKeyPopulation
 Id: vs-key-population
 Title: "Key population"
 Description: "A list of key population types"
 * include codes from system $KEYPOPULATION
+*/
