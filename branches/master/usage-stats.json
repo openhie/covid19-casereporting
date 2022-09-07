@@ -3,24 +3,7 @@
   "version": "0.1.0-test",
   "fhirVersion": "4.0.1",
   "jurisdiction": "001",
-  "extensions": [
-    {
-      "url": "http://example.com/fhir/example/StructureDefinition/client-ward-division",
-      "title": "Client Ward Division",
-      "types": [
-        "string",
-        "string"
-      ]
-    },
-    {
-      "url": "http://example.com/fhir/example/StructureDefinition/key-population",
-      "title": "Key population",
-      "types": [
-        "CodeableConcept",
-        "CodeableConcept"
-      ]
-    }
-  ],
+  "extensions": [],
   "profiles": {
     "Immunization": [
       {
@@ -36,8 +19,8 @@
     ],
     "Condition": [
       {
-        "url": "http://example.com/fhir/example/StructureDefinition/hiv-diagnosis",
-        "title": "HIV Diagnosis"
+        "url": "http://example.com/fhir/example/StructureDefinition/covid19-presentation",
+        "title": "Covid19 Presentation"
       }
     ],
     "Encounter": [
@@ -108,14 +91,6 @@
     ]
   },
   "usage": {
-    "http://example.com/fhir/example/StructureDefinition/client-ward-division": [
-      "Bundle.entry.resource",
-      "Patient"
-    ],
-    "http://example.com/fhir/example/StructureDefinition/key-population": [
-      "Bundle.entry.resource",
-      "Patient"
-    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
     ],
