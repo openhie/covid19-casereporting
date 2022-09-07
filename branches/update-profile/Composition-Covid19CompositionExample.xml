@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="Covid19CompositionExample"/>
+  <meta>
+    <profile value="http://example.com/fhir/example/StructureDefinition/covid19-composition"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Composition</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Composition "Covid19CompositionExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-composition.html">Covid19 Case Reporting Composition</a></p></div><p><b>identifier</b>: id: 1111</p><p><b>status</b>: final</p><p><b>type</b>: COVID-19 case report <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#95412-3)</span></p><p><b>date</b>: 2022-08-04</p><p><b>author</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> "Covid19 Organization"</p><p><b>title</b>: Covid19 Case Report</p></div>
+  </text>
+  <identifier>
+    <system value="http://openhie.org/fhir/covid19-casereporting/identifier/covid19-case-report"/>
+    <value value="1111"/>
+  </identifier>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="95412-3"/>
+    </coding>
+  </type>
+  <date value="2022-08-04"/>
+  <author>
+    <reference value="Organization/Covid19OrganizationExample"/>
+  </author>
+  <title value="Covid19 Case Report"/>
+  <section>
+    <title value="Client registration"/>
+    <code>
+      <coding>
+        <system value="http://example.com/fhir/example/CodeSystem/cs-case-report-sections"/>
+        <code value="CLIENT-REGISTRATION"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Patient/Covid19PatientExample"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Covid19 Assessment Encounter"/>
+    <code>
+      <coding>
+        <system value="http://example.com/fhir/example/CodeSystem/cs-case-report-sections"/>
+        <code value="COVID-ASSESSMENT"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Encounter/Covid19AssessmentEncounterExample"/>
+    </entry>
+    <entry>
+      <reference value="Covid19ReasonforAssessmentExample"/>
+    </entry>
+    <entry>
+      <reference value="Condition/Covid19PresentationExample"/>
+    </entry>
+    <entry>
+      <reference value="ClinicalImpression/Covid19SymptomExample"/>
+    </entry>
+    <entry>
+      <reference value="Condition/Covid19DiagnosisExample"/>
+    </entry>
+    <entry>
+      <reference value="Immunization/Covid19AssessmentVaccinationExample"/>
+    </entry>
+    <entry>
+      <reference value="Covid19PatientOutcomeExample"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Lab Order Management"/>
+    <code>
+      <coding>
+        <system value="http://example.com/fhir/example/CodeSystem/cs-case-report-sections"/>
+        <code value="LABORDER-MANAGEMENT"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="ServiceRequest/Covid19LabOrderExample"/>
+    </entry>
+    <entry>
+      <reference value="Specimen/Covid19SpecimenExample"/>
+    </entry>
+    <entry>
+      <reference value="Task/Covid19LabOrderCancellationExample"/>
+    </entry>
+    <entry>
+      <reference value="Covid19LabResultsExamples"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Covid 19 Vaccination"/>
+    <code>
+      <coding>
+        <system value="http://example.com/fhir/example/CodeSystem/cs-case-report-sections"/>
+        <code value="COVID-VACCINATION"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="Immunization/Covid19VaccinationExample"/>
+    </entry>
+    <entry>
+      <reference value="Appointment/Covid19VaccinationAppointmentExample"/>
+    </entry>
+  </section>
+</Composition>
