@@ -1,19 +1,19 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 197, warn = 83, info = 13
+err = 191, warn = 82, info = 13
 IG Publisher Version: 1.1.128
-Generated Wed Sep 07 09:53:09 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
- Build Errors : 24 / 23 / 0
+Generated Wed Sep 07 09:58:50 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+ Build Errors : 23 / 23 / 0
  /github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 51 / 44 / 37
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 48 / 44 / 37
  /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-cs-cancellation-reason : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-case-report-sections : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-other : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-treatment-dispensed-prescribed : 2 / 0 / 2
- /github/workspace/fsh-generated/resources/Composition-Covid19CompositionExample : 20 / 0 / 2
+ /github/workspace/fsh-generated/resources/Composition-Covid19CompositionExample : 19 / 0 / 2
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsComorbidityExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19PresentationExample : 0 / 0 / 1
@@ -58,7 +58,6 @@ Generated Wed Sep 07 09:53:09 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-test-not-performed : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-key-population : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-patient-outcome : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-presentation : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info : 2 / 0 / 1
@@ -113,9 +112,8 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/Covid19BundleExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/Covid19BundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: /github/workspace/output/Bundle-Covid19BundleExample.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 222, column 1245: The link 'Covid19ReasonforAssessmentExample' for "Covid19ReasonforAssessmentExample" cannot be resolved
-ERROR: /github/workspace/output/Bundle-Covid19BundleExample.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 222, column 1640: The link 'HIVDiagnosisExample' for "HIVDiagnosisExample" cannot be resolved
-ERROR: /github/workspace/output/Bundle-Covid19BundleExample.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 222, column 1827: The link 'Covid19PatientOutcomeExample' for "Covid19PatientOutcomeExample" cannot be resolved
-ERROR: /github/workspace/output/Bundle-Covid19BundleExample.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 222, column 2257: The link 'Covid19LabResultsExamples' for "Covid19LabResultsExamples" cannot be resolved
+ERROR: /github/workspace/output/Bundle-Covid19BundleExample.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 222, column 1765: The link 'Covid19PatientOutcomeExample' for "Covid19PatientOutcomeExample" cannot be resolved
+ERROR: /github/workspace/output/Bundle-Covid19BundleExample.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 222, column 2195: The link 'Covid19LabResultsExamples' for "Covid19LabResultsExamples" cannot be resolved
 ERROR: /github/workspace/output/ServiceRequest-Covid19LabOrderExample.html#/html/body/div/div/div/div/div/div/p/a at Line 222, column 1283: The link 'Covid19Laboratory' for "Covid19Laboratory" cannot be resolved
 == fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample.json ==
 ERROR: Appointment/Covid19VaccinationAppointmentExample: Appointment: Rule app-2: 'Either start and end are specified, or neither' Failed
@@ -130,11 +128,9 @@ ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[2]: Entry 3 matches the reference Condition/Covid19PresentationExample by type and id but it's fullUrl Composition/Covid19PresentationExample does not match the full target URL Condition/Covid19PresentationExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[3]: Entry 4 matches the reference ClinicalImpression/Covid19SymptomExample by type and id but it's fullUrl Composition/Covid19SymptomExample does not match the full target URL ClinicalImpression/Covid19SymptomExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[4]: Entry 6 matches the reference Condition/Covid19DiagnosisExample by type and id but it's fullUrl Composition/Covid19DiagnosisExample does not match the full target URL Condition/Covid19DiagnosisExample by Bundle resolution rules
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[5]: Relative URLs must be of the format [ResourceName]/[id].  Encountered HIVDiagnosisExample
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[5]: Unable to resolve resource with reference 'HIVDiagnosisExample'
-WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[6]: Entry 8 matches the reference Immunization/Covid19AssessmentVaccinationExample by type and id but it's fullUrl Composition/Covid19AssessmentVaccinationExample does not match the full target URL Immunization/Covid19AssessmentVaccinationExample by Bundle resolution rules
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[7]: Relative URLs must be of the format [ResourceName]/[id].  Encountered Covid19PatientOutcomeExample
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[7]: Unable to resolve resource with reference 'Covid19PatientOutcomeExample'
+WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[5]: Entry 8 matches the reference Immunization/Covid19AssessmentVaccinationExample by type and id but it's fullUrl Composition/Covid19AssessmentVaccinationExample does not match the full target URL Immunization/Covid19AssessmentVaccinationExample by Bundle resolution rules
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[6]: Relative URLs must be of the format [ResourceName]/[id].  Encountered Covid19PatientOutcomeExample
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[1].entry[6]: Unable to resolve resource with reference 'Covid19PatientOutcomeExample'
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[2].entry[0]: Entry 9 matches the reference ServiceRequest/Covid19LabOrderExample by type and id but it's fullUrl Composition/Covid19LabOrderExample does not match the full target URL ServiceRequest/Covid19LabOrderExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[2].entry[1]: Entry 10 matches the reference Specimen/Covid19SpecimenExample by type and id but it's fullUrl Composition/Covid19SpecimenExample does not match the full target URL Specimen/Covid19SpecimenExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[2].entry[2]: Entry 11 matches the reference Task/Covid19LabOrderCancellationExample by type and id but it's fullUrl Composition/Covid19LabOrderCancellationExample does not match the full target URL Task/Covid19LabOrderCancellationExample by Bundle resolution rules
@@ -213,8 +209,7 @@ ERROR: Bundle/Covid19BundleExample: Bundle.entry[15].resource.ofType(Appointment
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[15].resource.ofType(Appointment).participant[0].actor: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.author[1].reference: Can't find 'Organization/Covid19OrganizationExample' in the bundle (Composition.author)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.section[2].entry[2].reference: Can't find 'Covid19ReasonforAssessmentExample' in the bundle (Section Entry)
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.section[2].entry[6].reference: Can't find 'HIVDiagnosisExample' in the bundle (Section Entry)
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.section[2].entry[8].reference: Can't find 'Covid19PatientOutcomeExample' in the bundle (Section Entry)
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.section[2].entry[7].reference: Can't find 'Covid19PatientOutcomeExample' in the bundle (Section Entry)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.section[3].entry[4].reference: Can't find 'Covid19LabResultsExamples' in the bundle (Section Entry)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[17]: Entry 'Composition/Covid19ConditionsComorbidityExample' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[17]: Entry 'Composition/Covid19VaccineDoseReceivedExample' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere
@@ -261,8 +256,7 @@ ERROR: Composition/Covid19CompositionExample: Composition.section[2]: Slicing ca
 ERROR: Composition/Covid19CompositionExample: Composition.section[3]: Slicing cannot be evaluated: Could not match discriminator ([code.coding.code]) for slice Composition.section:covid19VaccinationSection in profile http://example.com/fhir/example/StructureDefinition/covid19-composition - the discriminator [code.coding.code] does not have fixed value, binding or existence assertions
 INFORMATION: Composition/Covid19CompositionExample: Composition: Composition.section:covid19PatientSection: Unable to check minimum required (Composition.section) due to lack of slicing validation (from http://example.com/fhir/example/StructureDefinition/covid19-composition)
 ERROR: Composition/Covid19CompositionExample: Composition.section[1].entry[1]: Unable to resolve resource with reference 'Covid19ReasonforAssessmentExample'
-ERROR: Composition/Covid19CompositionExample: Composition.section[1].entry[5]: Unable to resolve resource with reference 'HIVDiagnosisExample'
-ERROR: Composition/Covid19CompositionExample: Composition.section[1].entry[7]: Unable to resolve resource with reference 'Covid19PatientOutcomeExample'
+ERROR: Composition/Covid19CompositionExample: Composition.section[1].entry[6]: Unable to resolve resource with reference 'Covid19PatientOutcomeExample'
 ERROR: Composition/Covid19CompositionExample: Composition.section[2].entry[3]: Unable to resolve resource with reference 'Covid19LabResultsExamples'
 == fsh-generated/resources/Condition-Covid19ConditionsComorbidityExample.json ==
 ERROR: Condition/Covid19ConditionsComorbidityExample: Condition.code: None of the codings provided are in the value set 'List of Conditions / Comorbidity' (http://example.com/fhir/example/ValueSet/vs-conditions-comorbidity), and a coding from this value set is required) (codes = null#Other)
@@ -400,10 +394,6 @@ ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-ty
 == fsh-generated/resources/ValueSet-vs-covid19-test-result.json ==
 ERROR: ValueSet.where(url = 'http://example.com/fhir/example/ValueSet/vs-covid19-test-result'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-test-result) does not match the URL (http://example.com/fhir/example/ValueSet/vs-covid19-test-result)
 ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result: URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-test-result vs http://example.com/fhir/example/ValueSet/vs-covid19-test-result
-== fsh-generated/resources/ValueSet-vs-key-population.json ==
-ERROR: ValueSet.where(url = 'http://example.com/fhir/example/ValueSet/vs-key-population'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-key-population.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-key-population) does not match the URL (http://example.com/fhir/example/ValueSet/vs-key-population)
-WARNING: ValueSet.where(id = 'vs-key-population'): Error from server: Unable to provide support for code system https://openhie.github.io/hiv-ig/ValueSet-vs-key-population
-ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-key-population: URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-key-population vs http://example.com/fhir/example/ValueSet/vs-key-population
 == fsh-generated/resources/ValueSet-vs-patient-outcome.json ==
 ERROR: ValueSet.where(url = 'http://example.com/fhir/example/ValueSet/vs-patient-outcome'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-patient-outcome.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-patient-outcome) does not match the URL (http://example.com/fhir/example/ValueSet/vs-patient-outcome)
 ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-patient-outcome: URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-patient-outcome vs http://example.com/fhir/example/ValueSet/vs-patient-outcome
