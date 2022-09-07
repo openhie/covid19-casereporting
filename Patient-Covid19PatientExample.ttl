@@ -19,20 +19,6 @@
      fhir:Narrative.status [ fhir:value "generated" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Jane Smith (OFFICIAL)</b> female, DoB: 1986-06-04 ( id: PASSPORT1234567)</p></div>"
   ];
-  fhir:DomainResource.extension [
-     fhir:index 0;
-     fhir:Extension.url [ fhir:value "http://example.com/fhir/example/StructureDefinition/client-ward-division" ];
-     fhir:Extension.valueString [ fhir:value "Division 9087" ]
-  ], [
-     fhir:index 1;
-     fhir:Extension.url [ fhir:value "http://example.com/fhir/example/StructureDefinition/key-population" ];
-     fhir:Extension.valueCodeableConcept [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.code [ fhir:value "GENERAL-POPULATION" ]
-       ]
-     ]
-  ];
   fhir:Patient.identifier [
      fhir:index 0;
      fhir:Identifier.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/identifier/passport" ];
