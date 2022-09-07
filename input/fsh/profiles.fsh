@@ -20,7 +20,7 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19PatientSection].title = "Client registration"
 * section[covid19PatientSection].code = CSCaseReportSections#CLIENT-REGISTRATION
 * section[covid19PatientSection].entry ^slicing.discriminator.type = #profile
-* section[covid19PatientSection].entry ^slicing.discriminator.path = "item.resolve()"
+* section[covid19PatientSection].entry ^slicing.discriminator.path = "$this.resolve()"
 * section[covid19PatientSection].entry ^slicing.rules = #closed
 * section[covid19PatientSection].entry contains
     covid19Patient 1..1 
@@ -30,7 +30,7 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].code = CSCaseReportSections#COVID-ASSESSMENT
 //* section[covid19AssessmentSection].entry only Reference(Covid19AssessmentEncounter)
 * section[covid19AssessmentSection].entry ^slicing.discriminator.type = #profile
-* section[covid19AssessmentSection].entry ^slicing.discriminator.path = "item.resolve()"
+* section[covid19AssessmentSection].entry ^slicing.discriminator.path = "$this.resolve()"
 * section[covid19AssessmentSection].entry ^slicing.rules = #closed
 * section[covid19AssessmentSection].entry contains
     covid19AssessmentEncounter 1..1 and
@@ -61,7 +61,7 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19LabOrderManagementSection].title = "Lab Order Management"
 * section[covid19LabOrderManagementSection].code = CSCaseReportSections#LABORDER-MANAGEMENT
 * section[covid19LabOrderManagementSection].entry ^slicing.discriminator.type = #profile
-* section[covid19LabOrderManagementSection].entry ^slicing.discriminator.path = "item.resolve()"
+* section[covid19LabOrderManagementSection].entry ^slicing.discriminator.path = "$this.resolve()"
 * section[covid19LabOrderManagementSection].entry ^slicing.rules = #closed
 * section[covid19LabOrderManagementSection].entry contains
     covid19LabOrder 0..1 and
@@ -80,7 +80,7 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19VaccinationSection].title = "Covid 19 Vaccination"
 * section[covid19VaccinationSection].code = CSCaseReportSections#COVID-VACCINATION
 * section[covid19VaccinationSection].entry ^slicing.discriminator.type = #profile
-* section[covid19VaccinationSection].entry ^slicing.discriminator.path = "item.resolve()"
+* section[covid19VaccinationSection].entry ^slicing.discriminator.path = "$this.resolve()"
 * section[covid19VaccinationSection].entry ^slicing.rules = #closed
 * section[covid19VaccinationSection].entry contains
     covid19Vaccination 1..1 and
