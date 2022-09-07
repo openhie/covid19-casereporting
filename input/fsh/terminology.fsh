@@ -2,7 +2,7 @@ Alias: $SCT = http://snomed.info/sct
 Alias: $LNC = http://loinc.org
 Alias: $ICD = http://id.who.int/icd/entity
 Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6 
-Alias: $KEYPOPULATION = https://openhie.github.io/hiv-ig/ValueSet-vs-key-population
+//Alias: $KEYPOPULATION = https://openhie.github.io/hiv-ig/ValueSet-vs-key-population
 
 CodeSystem: CSCaseReportSections
 Id: cs-case-report-sections
@@ -36,8 +36,6 @@ Description:  "Valueset - assessment reason"
 * include codes from system $SCT where concept is-a #171367005 "Travel out of country"
 * include codes from system $SCT where concept is-a #255375007 "Voluntary"
 * include codes from system CSOther
-
-
 
 ValueSet: VSPresentation
 Id: vs-presentation
@@ -198,45 +196,18 @@ Description: "A list of Covid19 Specimen Type"
 * include codes from system $SCT where concept is-a #419182006 "Supplies not available"
 * include codes from system CSOther
 
-//TODO: Marius to find out what this is for
-CodeSystem: CSCovid19VaccineCodes
-Id: cs-covid19-vaccine-codes
-Title: "Covid19 Vaccine Code List"
-Description: "Covid19 Vaccine Code List"
-* #Astrazeneca "Astrazeneca COVID-19 vaccine"
-* #BharatBiotech  "Bharat Biotech Covaxin COVID-19 vaccine" 
-* #CansinoBiologics "Cansino Biologics Convidicea COVID-19 vaccine"
-* #Chumakov "Chumakov Center Covivac COVID-19 vaccine" 
-* #convalescent "COVID-19 convalescent plasma"
-* #CureVacCVnCoV "CureVac CVnCoV COVID-19 vaccine" 
-* #GamaleyaSputnik "Gamaleya Sputnik v COVID-19 vaccine"
-* #Janssen "Janssen COVID-19 vaccine" 
-* #Moderna "Moderna COVID-19 vaccine" 
-* #Novavax "Novavax NVX-COV2373 COVID-19 vaccine" 
-* #Pfizer-BioNtech "Pfizer-BioNtech COVID-19 vaccine"
-* #SinopharmBBIBP-CorV "Sinopharm BBIBP-CorV COVID-19 vaccine"
-* #Sinopharm-Wuhan  "Sinopharm-Wuhan COVID-19 vaccine"
-* #Sinovac "Sinovac COVID-19 vaccine"
-* #VectorInstituteEpivacCorona "Vector Institute EpivacCorona COVID-19 vaccine"
-
-ValueSet: VSCovid19VaccineCodes
-Id: vs-covid19-vaccine-codes
-Title: "Covid19 Vaccine Code List"
-Description: "Covid19 Vaccine Code List"
-* include codes from system CSCovid19VaccineCodes 
-
 ValueSet: VSTestResult
 Id: vs-covid19-test-result
 Title: "Covid19 Test Result"
 Description: "Covid19 Test Result"
 * include codes from system $SCT where concept is-a #10828004 "Positive"
 * include codes from system $SCT where concept is-a #260385009 "Negative"
-* include codes from system $SCT where concept is-a #419984006 "inconclusive"
+* include codes from system $SCT where concept is-a #419984006 "Inconclusive"
 
 ValueSet: VSLabOrderStatus
 Id: vs-covid19-lab-order-status
 Title: "Covid19 Lab Order Status"
-Description: "Covid19 Test Result"
+Description: "Covid19 Lab Order Status"
 * include codes from system $SCT where concept is-a #255594003 "Pending" //no code provided in the google sheet. added a duplication of complete code
 * include codes from system $SCT where concept is-a #255594003 "Complete"
 * include codes from system $SCT where concept is-a #89925002 "Cancelled"
@@ -257,9 +228,10 @@ Id: vs-source-of-info
 Title: "Source of information - codes"
 Description: "Source of information - codes"
 * include codes from system CSSourceOfInfo
-
+/*
 ValueSet: VSKeyPopulation
 Id: vs-key-population
 Title: "Key population"
 Description: "A list of key population types"
 * include codes from system $KEYPOPULATION
+*/
