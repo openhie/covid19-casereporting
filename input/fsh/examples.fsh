@@ -221,7 +221,7 @@ Instance: HIVDiagnosisExample
 InstanceOf: HIVDiagnosis
 Usage: #example
 Title: "HIV Condition example"
-Description: "."
+Description: "HIV Condition example"
 * clinicalStatus = #active
 * verificationStatus = #confirmed
 * code = $SCT#86406008
