@@ -202,7 +202,7 @@ Title: "Covid19 Test Result"
 Description: "Covid19 Test Result"
 * include codes from system $SCT where concept is-a #10828004 "Positive"
 * include codes from system $SCT where concept is-a #260385009 "Negative"
-* include codes from system $SCT where concept is-a #419984006 "inconclusive"
+* include codes from system $SCT where concept is-a #419984006 "Inconclusive"
 
 ValueSet: VSLabOrderStatus
 Id: vs-covid19-lab-order-status
