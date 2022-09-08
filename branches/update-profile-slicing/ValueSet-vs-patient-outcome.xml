@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-patient-outcome"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  370996005 (Patient condition resolved (finding))</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  419099009 (Dead (finding))</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  1119303003 (Post-acute COVID-19)</li></ul></div>
+  </text>
+  <url value="http://example.com/fhir/example/ValueSet/vs-patient-outcome"/>
+  <version value="0.1.0-test"/>
+  <name value="VSPatientOutcome"/>
+  <title value="Patient Outcome"/>
+  <status value="active"/>
+  <date value="2022-09-08T14:48:32+00:00"/>
+  <publisher value="OpenHIE"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://xxhl7.org/Special/committees/[something]"/>
+    </telecom>
+  </contact>
+  <description value="A list of Patient Outcomes"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="370996005"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="419099009"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="1119303003"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

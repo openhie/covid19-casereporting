@@ -1,0 +1,80 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-covid19-lab-order-status",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  255594003 (Complete)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  255594003 (Complete)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  89925002 (Canceled (qualifier value))</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  385660001 (Not done (qualifier value))</li></ul></div>"
+  },
+  "url": "http://example.com/fhir/example/ValueSet/vs-covid19-lab-order-status",
+  "version": "0.1.0-test",
+  "name": "VSLabOrderStatus",
+  "title": "Covid19 Lab Order Status",
+  "status": "active",
+  "date": "2022-09-08T14:48:32+00:00",
+  "publisher": "OpenHIE",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://xxhl7.org/Special/committees/[something]"
+        }
+      ]
+    }
+  ],
+  "description": "Covid19 Lab Order Status",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "255594003"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "255594003"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "89925002"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "385660001"
+          }
+        ]
+      }
+    ]
+  }
+}
