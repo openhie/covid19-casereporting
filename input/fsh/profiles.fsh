@@ -117,9 +117,9 @@ Description: "This Patient profile allows the exchange of patient information, i
 //* address 1..*
 * address.country MS    //Client Country  /  Nationality / Citizenship
 * address.state MS      //Client County / Province  / State
-* address.district MS   //Client SubCounty / District 
-* address.line MS   //Client Ward / Division
-* address.city MS      //Client Village / Estate */
+* address.district MS   //Client SubCounty / District   
+* address.line MS   ///Village/Communal Section whereclient currently resides
+* address.city MS      //Ward/Division/Commune where client currently resides
 
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
