@@ -241,6 +241,7 @@ Description: "Covid19 Vaccine Type Administered example"
 * occurrenceDateTime = "2022-07-28"
 * protocolApplied.doseNumberPositiveInt = 1
 * protocolApplied.series = #Booster
+* reportOrigin = #VaccineCard
 
 Instance: Covid19LabOrderExample
 InstanceOf: Covid19LabOrder

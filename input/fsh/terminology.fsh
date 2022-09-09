@@ -217,7 +217,7 @@ CodeSystem: CSSourceOfInfo
 Id: cs-source-of-info
 Title: "Source of information - codes"
 Description: "Source of information - codes"
-* #PatietnRecall "Patient Recall"
+* #PatientRecall "Patient Recall"
 * #VaccineCard "Vaccine Card"
 * #MobilePhoneNotification "Mobile Phone Notification"
 * #VaccineAdministeredFromFacility "Vaccine Administered from this facility"
