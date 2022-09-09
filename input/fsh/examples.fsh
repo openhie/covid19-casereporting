@@ -204,6 +204,7 @@ Description: "Covid19 Diagnosis Example"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * clinicalStatus = $SCT#410605003 
+* verificationStatus = #410605003
 
 Instance: Covid19MedicationRequestExample
 InstanceOf: Covid19MedicationRequest
