@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = errors = 212, warn = 82, info = 25, 4 -->
+<!-- broken links = errors = 212, warn = 83, info = 25, 4 -->
 <head>
   <title>Covid19CaseReporting : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,9 +36,9 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Covid19CaseReporting</h1>
- <p>Generated Thu Sep 08 14:50:22 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://xxsomewhere.org/fhir/myig">http://xxsomewhere.org/fhir/myig</a> (<a href="http://xxsomewhere.org/fhir/myig/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
+ <p>Generated Fri Sep 09 09:54:24 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://xxsomewhere.org/fhir/myig">http://xxsomewhere.org/fhir/myig</a> (<a href="http://xxsomewhere.org/fhir/myig/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.129</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.130</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = openhie.fhir.covid, Canonical = http://xxsomewhere.org/fhir/myig</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
  <tr><td>Version Check:</td><td>0.1.0-test: <span stlye="color: marron; font-weight: bold">no package-list.json - the guide is not ready for publishing</span></td></tr>
@@ -55,7 +55,7 @@
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://xxsomewhere.org/fhir/myig (Problem #1 with package-list.json at http://xxsomewhere.org/fhir/myig: xxsomewhere.org)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 212, warn = 82, info = 25, broken links = 4</td></tr>
+ <tr><td>Summary:</td><td> errors = 212, warn = 83, info = 25, broken links = 4</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -68,7 +68,7 @@
      <td><a href="#_github_workspace_fsh-generated_resources_Appointment-Covid19VaccinationAppointmentExample"><b>/github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-Covid19BundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample</b></a></td><td><b>46</b></td><td><b>44</b></td><td><b>10</b></td>
+     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-Covid19BundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample</b></a></td><td><b>46</b></td><td><b>45</b></td><td><b>10</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_ClinicalImpression-Covid19SymptomExample"><b>/github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample</b></a></td><td><b>1</b></td><td><b>1</b></td><td><b>0</b></td>
@@ -418,7 +418,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[13].resource (l623/c39)</b></td><td><b>error</b></td><td title=""><b>Unrecognised property '@valueDateTime'</b></td>
+     <td><b>Bundle.entry[13].resource (l626/c39)</b></td><td><b>error</b></td><td title=""><b>Unrecognised property '@valueDateTime'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle (l1/c2)</b></td><td><b>error</b></td><td title="Rule bdl-9: 'A document must have an identifier with a system and a value' Failed"><b>Rule bdl-9: 'A document must have an identifier with a system and a value' Failed</b></td>
@@ -661,19 +661,22 @@
      <td><b>Bundle.entry[9].resource.ofType(ServiceRequest).reasonCode[0] (l473/c12)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Assessment Reason valueset' (http://example.com/fhir/example/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Surveillance)</b> (<a href="qa-tx.html#l133">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffebcc">
+     <td><b>Bundle.entry[10].resource.ofType(Specimen).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[11].resource.ofType(Task).basedOn[0]</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 9 matches the reference ServiceRequest/Covid19LabOrderExample by type and id but it's fullUrl Composition/Covid19LabOrderExample does not match the full target URL ServiceRequest/Covid19LabOrderExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[11].resource.ofType(Task).statusReason.coding[0] (l557/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
+     <td><b>Bundle.entry[11].resource.ofType(Task).statusReason.coding[0] (l560/c14)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[11].resource.ofType(Task).statusReason (l556/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)</b> (<a href="qa-tx.html#l134">see Tx log</a>)</td>
+     <td><b>Bundle.entry[11].resource.ofType(Task).statusReason (l559/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)</b> (<a href="qa-tx.html#l134">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>Bundle.entry[12].resource.ofType(DiagnosticReport).basedOn[0]</b></td><td><b>error</b></td><td title="Reference_REF_Format2"><b>Relative URLs must be of the format [ResourceName]/[id].  Encountered Covid19LabOrder</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[12].resource.ofType(DiagnosticReport).basedOn[0] (l583/c12)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Covid19LabOrder'</b></td>
+     <td><b>Bundle.entry[12].resource.ofType(DiagnosticReport).basedOn[0] (l586/c12)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Covid19LabOrder'</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[12].resource.ofType(DiagnosticReport).subject</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -682,16 +685,16 @@
      <td><b>Bundle.entry[12].resource.ofType(DiagnosticReport).result[0]</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 13 matches the reference Observation/Covid19TestResultExample by type and id but it's fullUrl Composition/Covid19TestResultExample does not match the full target URL Observation/Covid19TestResultExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[14].resource.ofType(Immunization).vaccineCode.coding[0] (l658/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd/entity' is unknown so the code cannot be validated</b></td>
+     <td><b>Bundle.entry[14].resource.ofType(Immunization).vaccineCode.coding[0] (l661/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd/entity' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[14].resource.ofType(Immunization).patient</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[14].resource.ofType(Immunization).vaccineCode (l657/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd/entity#XM4YL8)</b> (<a href="qa-tx.html#l135">see Tx log</a>)</td>
+     <td><b>Bundle.entry[14].resource.ofType(Immunization).vaccineCode (l660/c22)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Vaccine Types' (http://example.com/fhir/example/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd/entity#XM4YL8)</b> (<a href="qa-tx.html#l135">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[15].resource.ofType(Appointment) (l672/c18)</b></td><td><b>error</b></td><td title="Rule app-2: 'Either start and end are specified, or neither' Failed"><b>Rule app-2: 'Either start and end are specified, or neither' Failed</b></td>
+     <td><b>Bundle.entry[15].resource.ofType(Appointment) (l675/c18)</b></td><td><b>error</b></td><td title="Rule app-2: 'Either start and end are specified, or neither' Failed"><b>Rule app-2: 'Either start and end are specified, or neither' Failed</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[15].resource.ofType(Appointment).participant[0].actor</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_POSSIBLE_MATCH_WRONG_FU"><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
@@ -715,7 +718,7 @@
      <td><b>Bundle.entry[17] (l384/c6)</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_ENTRY_REVERSE"><b>Entry 'Composition/Covid19VaccineDoseReceivedExample' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[17] (l564/c6)</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_ENTRY_REVERSE"><b>Entry 'Composition/Covid19LabResultsDiagnosticReportExample' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere</b></td>
+     <td><b>Bundle.entry[17] (l567/c6)</b></td><td><b>warning</b></td><td title="BUNDLE_BUNDLE_ENTRY_REVERSE"><b>Entry 'Composition/Covid19LabResultsDiagnosticReportExample' isn't reachable by traversing forwards from first Bundle entry, and isn't a resource type that is typically used that way - check this is not missed somewhere</b></td>
    </tr>
 </table>
 <hr/>
@@ -1947,6 +1950,9 @@
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>Entry 10 matches the reference Specimen/Covid19SpecimenExample by type and id but it's fullUrl Composition/Covid19SpecimenExample does not match the full target URL Specimen/Covid19SpecimenExample by Bundle resolution rules</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules</b></td>
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Bundle-Covid19BundleExample.html">fsh-generated/resources/Bundle-Covid19BundleExample.json</a></td><td><b>Entry 9 matches the reference ServiceRequest/Covid19LabOrderExample by type and id but it's fullUrl Composition/Covid19LabOrderExample does not match the full target URL ServiceRequest/Covid19LabOrderExample by Bundle resolution rules</b></td>
