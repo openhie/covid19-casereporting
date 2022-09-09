@@ -217,6 +217,7 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 * protocolApplied.series 1..1 MS //  VSVaccineSeries  #TODO conditional validation for aplying binding validation
 * vaccineCode.text 0..1 MS //Other vaccine
 * occurrenceDateTime  MS // Vaccination date    #TODO - check all required fields
+* reportOrigin 1..1 MS 
 * reportOrigin from VSSourceOfInfo  // source of information
 * reportOrigin.text MS // Other Source of info details
 
