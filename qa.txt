@@ -1,12 +1,12 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 217, warn = 87, info = 25
+err = 215, warn = 87, info = 25
 IG Publisher Version: 1.1.130
-Generated Fri Sep 09 15:01:58 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Fri Sep 09 15:16:41 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 23 / 23 / 0
  /github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 49 / 47 / 43
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 48 / 47 / 43
  /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-cs-cancellation-reason : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-case-report-sections : 2 / 0 / 2
@@ -15,7 +15,7 @@ Generated Fri Sep 09 15:01:58 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/CodeSystem-cs-treatment-dispensed-prescribed : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/Composition-Covid19CompositionExample : 17 / 0 / 8
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsComorbidityExample : 1 / 1 / 1
- /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 2 / 2 / 1
+ /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 1 / 2 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19PresentationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 1 / 2 / 1
@@ -179,13 +179,12 @@ WARNING: Bundle/Covid19BundleExample: Bundle.entry[5].resource.ofType(Condition)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[5].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[5].resource.ofType(Condition).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[5].resource.ofType(Condition).code: None of the codings provided are in the value set 'List of Conditions / Comorbidity' (http://example.com/fhir/example/ValueSet/vs-conditions-comorbidity), and a coding from this value set is required) (codes = null#Other)
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[6].resource.ofType(Condition).clinicalStatus: None of the codings provided are in the value set 'Condition Clinical Status Codes' (http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1), and a coding from this value set is required) (codes = http://snomed.info/sct#410605003)
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[6].resource.ofType(Condition).clinicalStatus: None of the codings provided are in the value set 'Condition Clinical Status Codes' (http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1), and a coding from this value set is required) (codes = http://snomed.info/sct#370996005)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[6].resource.ofType(Condition).verificationStatus: None of the codings provided are in the value set 'ConditionVerificationStatus' (http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1), and a coding from this value set is required) (codes = null#410605003)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[6].resource.ofType(Condition).verificationStatus.coding[0]: A code with no system has no defined meaning. A system should be provided
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[6].resource.ofType(Condition).code.coding[0]: A code with no system has no defined meaning. A system should be provided
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[6].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[6].resource.ofType(Condition).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[6].resource.ofType(Condition).clinicalStatus: None of the codings provided are in the value set 'Patient Outcome' (http://example.com/fhir/example/ValueSet/vs-patient-outcome), and a coding from this value set is required) (codes = http://snomed.info/sct#410605003)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[6].resource.ofType(Condition).verificationStatus: None of the codings provided are in the value set 'COVID Diagnosis list' (http://example.com/fhir/example/ValueSet/vs-covid-diagnosis), and a coding from this value set is required) (codes = null#410605003)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[7].resource.ofType(Observation).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[7].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: A code with no system has no defined meaning. A system should be provided
@@ -276,7 +275,6 @@ INFORMATION: Composition/Covid19CompositionExample: Composition.section[3]: Comp
 ERROR: Condition/Covid19ConditionsComorbidityExample: Condition.code: None of the codings provided are in the value set 'List of Conditions / Comorbidity' (http://example.com/fhir/example/ValueSet/vs-conditions-comorbidity), and a coding from this value set is required) (codes = null#Other)
 WARNING: Condition/Covid19ConditionsComorbidityExample: Condition.code.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/Condition-Covid19DiagnosisExample.json ==
-ERROR: Condition/Covid19DiagnosisExample: Condition.clinicalStatus: None of the codings provided are in the value set 'Patient Outcome' (http://example.com/fhir/example/ValueSet/vs-patient-outcome), and a coding from this value set is required) (codes = http://snomed.info/sct#410605003)
 ERROR: Condition/Covid19DiagnosisExample: Condition.verificationStatus: None of the codings provided are in the value set 'COVID Diagnosis list' (http://example.com/fhir/example/ValueSet/vs-covid-diagnosis), and a coding from this value set is required) (codes = null#410605003)
 WARNING: Condition/Covid19DiagnosisExample: Condition.verificationStatus.coding[0]: A code with no system has no defined meaning. A system should be provided
 WARNING: Condition/Covid19DiagnosisExample: Condition.code.coding[0]: A code with no system has no defined meaning. A system should be provided
