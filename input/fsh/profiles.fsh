@@ -284,6 +284,7 @@ Description: "Covid19 Specimen"
 * collection.collectedDateTime 1..1 MS  // Date specimen collected
 * note MS // Other Sample Type
 * processing.timePeriod.end MS   //Using the date to derive that the "Lab Test was Performed"
+* subject 1..1 MS // Patient reference
 
 Profile: Covid19LabOrderCancellation
 Parent: Task
