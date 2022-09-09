@@ -6,7 +6,7 @@
     <profile value="http://example.com/fhir/example/StructureDefinition/covid19-specimen"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Specimen</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Specimen "Covid19SpecimenExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-specimen.html">Covid19 Specimen</a></p></div><p><b>identifier</b>: id: SPECIMEN109191879</p><p><b>type</b>: Nasopharyngeal swab <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#258500001)</span></p><h3>Collections</h3><table class="grid"><tr><td>-</td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td>2022-07-28</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Specimen</b><a name="Covid19SpecimenExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Specimen "Covid19SpecimenExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-specimen.html">Covid19 Specimen</a></p></div><p><b>identifier</b>: id: SPECIMEN109191879</p><p><b>type</b>: Nasopharyngeal swab <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#258500001)</span></p><p><b>subject</b>: <a href="Patient-Covid19PatientExample.html">Patient/Covid19PatientExample</a> " SMITH"</p><h3>Collections</h3><table class="grid"><tr><td>-</td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td>2022-07-28</td></tr></table></div>
   </text>
   <identifier>
     <system value="http://covid19laborder.org/specimen"/>
@@ -18,6 +18,9 @@
       <code value="258500001"/>
     </coding>
   </type>
+  <subject>
+    <reference value="Patient/Covid19PatientExample"/>
+  </subject>
   <collection>
     <collectedDateTime value="2022-07-28"/>
   </collection>
