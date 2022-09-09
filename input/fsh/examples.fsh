@@ -268,6 +268,7 @@ Description: "Covid19 Specimen example"
 * identifier.system = "http://covid19laborder.org/specimen"
 * collection.collectedDateTime = "2022-07-28"
 * type = $SCT#258500001  
+* subject = Reference(Covid19PatientExample)
 
 Instance: Covid19LaboratoryExample
 InstanceOf: Organization
