@@ -3,14 +3,14 @@
   "id": "vs-cancellation-reason",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  281264009</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  281266006</li><li>Include codes from <code>http://id.who.int/icd/entity</code> where concept  is-a  135839007</li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  281264009 (Inappropriate bottle or container for sample)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  281266006 (No sample received)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  135839007 (Sample rejected)</li></ul></div>"
   },
   "url": "http://example.com/fhir/example/ValueSet/vs-cancellation-reason",
   "version": "0.1.0-test",
   "name": "VSCancellationReason",
   "title": "Test Types",
   "status": "active",
-  "date": "2022-09-09T14:31:53+00:00",
+  "date": "2022-09-12T10:06:31+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -36,7 +36,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://id.who.int/icd/entity",
+        "system": "http://snomed.info/sct",
         "filter": [
           {
             "property": "concept",
@@ -46,7 +46,7 @@
         ]
       },
       {
-        "system": "http://id.who.int/icd/entity",
+        "system": "http://snomed.info/sct",
         "filter": [
           {
             "property": "concept",
@@ -56,7 +56,7 @@
         ]
       },
       {
-        "system": "http://id.who.int/icd/entity",
+        "system": "http://snomed.info/sct",
         "filter": [
           {
             "property": "concept",
