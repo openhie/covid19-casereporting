@@ -203,7 +203,8 @@ Description: "Covid19 Diagnosis Example"
 * recordedDate = "2022-07-28"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
-* clinicalStatus = $SCT#410605003 
+* clinicalStatus = $SCT#370996005 
+* verificationStatus = #410605003
 
 Instance: Covid19MedicationRequestExample
 InstanceOf: Covid19MedicationRequest

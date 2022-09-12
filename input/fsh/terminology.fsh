@@ -1,6 +1,6 @@
 Alias: $SCT = http://snomed.info/sct
 Alias: $LNC = http://loinc.org
-Alias: $ICD = http://id.who.int/icd/entity
+Alias: $ICD = http://id.who.int/icd11/mms
 Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6 
 //Alias: $KEYPOPULATION = https://openhie.github.io/hiv-ig/ValueSet-vs-key-population
 
@@ -170,9 +170,9 @@ ValueSet: VSCancellationReason
 Id: vs-cancellation-reason
 Title: "Test Types"
 Description: "A list of Cancellation Reasons"
-* include codes from system $ICD where concept is-a #281264009 "Improperly ordered" //need to double check the code from with CDC
-* include codes from system $ICD where concept is-a #281266006 "No sample collected"
-* include codes from system $ICD where concept is-a #135839007  "Sample rejected"
+* include codes from system $SCT where concept is-a #281264009 "Improperly ordered" //need to double check the code from with CDC
+* include codes from system $SCT where concept is-a #281266006 "No sample collected"
+* include codes from system $SCT where concept is-a #135839007  "Sample rejected"
 
 ValueSet: VSCovid19SpecimenType
 Id: vs-covid19-specimen-type
