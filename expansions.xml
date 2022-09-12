@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="14e373a6-9d98-47f1-895a-c7d607e470f6"/>
+  <id value="7311119b-adeb-4cda-af96-1d882d07ce0c"/>
   <meta>
-    <lastUpdated value="2022-09-09T15:15:08.153+00:00"/>
+    <lastUpdated value="2022-09-12T10:00:30.171+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -33100,7 +33100,7 @@
         <name value="VSConditionsComorbidity"/>
         <title value="List of Conditions / Comorbidity"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -33122,8 +33122,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:dc97059d-f5c6-43c9-a827-0521d97a41f0"/>
-          <timestamp value="2022-09-09T15:15:47+00:00"/>
+          <identifier value="urn:uuid:3ca961b6-2fb3-49be-b413-81670f951b86"/>
+          <timestamp value="2022-09-12T10:01:08+00:00"/>
           <total value="4132"/>
           <parameter>
             <name value="excludeNested"/>
@@ -53810,6 +53810,130 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="http://example.com/fhir/example/ValueSet/vs-cancellation-reason"/>
+    <resource>
+      <ValueSet>
+        <id value="vs-cancellation-reason"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 4 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 31-Jul 2022</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---snomed.info-sct-281264009"> </a>  
+                  <a href="http://snomed.info/id/281264009">281264009</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Inappropriate bottle or container for sample</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---snomed.info-sct-281266006"> </a>  
+                  <a href="http://snomed.info/id/281266006">281266006</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>No sample received</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---snomed.info-sct-135839007"> </a>  
+                  <a href="http://snomed.info/id/135839007">135839007</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Sample rejected</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---snomed.info-sct-711533005"> </a>  
+                  <a href="http://snomed.info/id/711533005">711533005</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Rejected sample due to illegible identifiers on specimen (finding)</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://example.com/fhir/example/ValueSet/vs-cancellation-reason"/>
+        <version value="0.1.0-test"/>
+        <name value="VSCancellationReason"/>
+        <title value="Test Types"/>
+        <status value="active"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
+        <publisher value="OpenHIE"/>
+        <contact>
+          <telecom>
+            <system value="url"/>
+            <value value="http://xxhl7.org/Special/committees/[something]"/>
+          </telecom>
+        </contact>
+        <description value="A list of Cancellation Reasons"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
+            <valueBoolean value="true"/>
+          </extension>
+          <identifier value="urn:uuid:09b18b10-20b4-4cc4-8421-c2f7a77f6e5f"/>
+          <timestamp value="2022-09-12T10:01:12+00:00"/>
+          <total value="4"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="limitedExpansion"/>
+            <valueBoolean value="true"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="true"/>
+          </parameter>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="281264009"/>
+            <display value="Inappropriate bottle or container for sample"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="281266006"/>
+            <display value="No sample received"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="135839007"/>
+            <display value="Sample rejected"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="711533005"/>
+            <display value="Rejected sample due to illegible identifiers on specimen (finding)"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="http://example.com/fhir/example/ValueSet/vs-source-of-info"/>
     <resource>
       <ValueSet>
@@ -53881,7 +54005,7 @@
         <name value="VSSourceOfInfo"/>
         <title value="Source of information - codes"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -53897,8 +54021,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:6b6113f9-7bff-4bfa-9265-410d5b9f40b4"/>
-          <timestamp value="2022-09-09T15:15:52+00:00"/>
+          <identifier value="urn:uuid:6e0a7f64-9db7-4a2f-8cb5-72be7ca9d772"/>
+          <timestamp value="2022-09-12T10:01:13+00:00"/>
           <total value="5"/>
           <parameter>
             <name value="excludeNested"/>
@@ -54095,7 +54219,7 @@
         <name value="VSAdmissionTypes"/>
         <title value="Admission Types"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -54114,8 +54238,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:db3e0de3-6473-447c-bd2c-73abdde43089"/>
-          <timestamp value="2022-09-09T15:15:52+00:00"/>
+          <identifier value="urn:uuid:f751f774-13eb-4d02-8bcf-d598f0d12661"/>
+          <timestamp value="2022-09-12T10:01:13+00:00"/>
           <total value="16"/>
           <parameter>
             <name value="excludeNested"/>
@@ -59039,7 +59163,7 @@
         <name value="VSAssessmentReason"/>
         <title value="Assessment Reason valueset"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -59058,8 +59182,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:6eade672-6573-41e1-a24f-80507c03e400"/>
-          <timestamp value="2022-09-09T15:15:53+00:00"/>
+          <identifier value="urn:uuid:5bd29324-4222-4459-af77-44a31ed4a46f"/>
+          <timestamp value="2022-09-12T10:01:14+00:00"/>
           <total value="598"/>
           <parameter>
             <name value="excludeNested"/>
@@ -62409,7 +62533,7 @@
         <name value="VSPatientOutcome"/>
         <title value="Patient Outcome"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -62428,8 +62552,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:4960be97-a2a7-4cff-a262-43c045009bfb"/>
-          <timestamp value="2022-09-09T15:15:59+00:00"/>
+          <identifier value="urn:uuid:90081371-aaff-48eb-8fd8-418177a6436f"/>
+          <timestamp value="2022-09-12T10:01:20+00:00"/>
           <total value="38"/>
           <parameter>
             <name value="excludeNested"/>
@@ -62703,7 +62827,7 @@
         <name value="VSTestResult"/>
         <title value="Covid19 Test Result"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -62722,8 +62846,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:737c9cda-4dbb-4711-87d6-6a8f1599d023"/>
-          <timestamp value="2022-09-09T15:16:00+00:00"/>
+          <identifier value="urn:uuid:20772deb-ffa8-48e6-9c33-cb72b57eab75"/>
+          <timestamp value="2022-09-12T10:01:22+00:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>
@@ -62851,7 +62975,7 @@
         <name value="VSCovid19SpecimenType"/>
         <title value="Covid19 Specimen Type"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -62870,8 +62994,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:24ff9879-4471-45b3-a9aa-29337ff712b5"/>
-          <timestamp value="2022-09-09T15:16:02+00:00"/>
+          <identifier value="urn:uuid:7e007830-009b-4198-b17b-7847749f911c"/>
+          <timestamp value="2022-09-12T10:01:23+00:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -62989,7 +63113,7 @@
         <name value="VSLabOrderStatus"/>
         <title value="Covid19 Lab Order Status"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -63008,8 +63132,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:035e55c4-495c-4f20-9d4e-e0a01f0372ee"/>
-          <timestamp value="2022-09-09T15:16:03+00:00"/>
+          <identifier value="urn:uuid:4300ffbd-8007-452a-8023-708f62b6fe20"/>
+          <timestamp value="2022-09-12T10:01:25+00:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>
@@ -63080,7 +63204,7 @@
         <name value="VSTestTypes"/>
         <title value="Test Types"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -63096,8 +63220,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:fee5f33b-dad2-4cc8-8e9e-cd292c0efd09"/>
-          <timestamp value="2022-09-09T15:16:04+00:00"/>
+          <identifier value="urn:uuid:ac05d7a5-0fde-4d76-a4fa-2c262d5e86ac"/>
+          <timestamp value="2022-09-12T10:01:26+00:00"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -63176,7 +63300,7 @@
         <name value="VSCovidDiagnosis"/>
         <title value="COVID Diagnosis list"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -63195,8 +63319,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:53e2e2d6-67e2-4fc0-9f4e-19dddae73216"/>
-          <timestamp value="2022-09-09T15:16:05+00:00"/>
+          <identifier value="urn:uuid:032b1be0-f56f-4ae6-b19b-415c9e47148c"/>
+          <timestamp value="2022-09-12T10:01:26+00:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>
@@ -63444,7 +63568,7 @@
         <name value="VSReasonTestNotPerformed"/>
         <title value="Covid19 Specimen Type"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -63463,8 +63587,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:8d16ad0c-683f-4eab-98a4-d5233ae92d4d"/>
-          <timestamp value="2022-09-09T15:16:07+00:00"/>
+          <identifier value="urn:uuid:4a26ac9d-6f9a-4e87-aa17-5972e77817b8"/>
+          <timestamp value="2022-09-12T10:01:29+00:00"/>
           <total value="21"/>
           <parameter>
             <name value="excludeNested"/>
@@ -64177,7 +64301,7 @@
         <name value="VSPresentation"/>
         <title value="Presentation valueset"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -64196,8 +64320,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:304f4327-5c7a-44d7-8add-a2fbf86ff3b7"/>
-          <timestamp value="2022-09-09T15:16:09+00:00"/>
+          <identifier value="urn:uuid:4d82074e-1d9f-403a-8641-e219c53192b7"/>
+          <timestamp value="2022-09-12T10:01:30+00:00"/>
           <total value="69"/>
           <parameter>
             <name value="excludeNested"/>
@@ -71994,7 +72118,7 @@
         <name value="VSSymptoms"/>
         <title value="Presenting symptoms"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -72013,8 +72137,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-unclosed">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:9cd0b181-01db-409a-a6ba-50d3539d31fb"/>
-          <timestamp value="2022-09-09T15:16:14+00:00"/>
+          <identifier value="urn:uuid:93602059-d9f9-4860-b779-4a31507ea4c6"/>
+          <timestamp value="2022-09-12T10:01:35+00:00"/>
           <total value="924"/>
           <parameter>
             <name value="excludeNested"/>
@@ -76708,7 +76832,7 @@
         <name value="VSTreatMentDispensedPrescribed"/>
         <title value="COVID Treatmens dispensed or prescribed"/>
         <status value="active"/>
-        <date value="2022-09-09T15:15:08+00:00"/>
+        <date value="2022-09-12T10:00:30+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -76724,8 +76848,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:594c952c-5581-4842-ae26-9c7e375b47be"/>
-          <timestamp value="2022-09-09T15:16:20+00:00"/>
+          <identifier value="urn:uuid:917a775e-6c28-4948-b73b-f82cfd6d5b80"/>
+          <timestamp value="2022-09-12T10:01:39+00:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
