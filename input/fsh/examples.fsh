@@ -122,7 +122,8 @@ Description: "Covid19 Patient example"
 * identifier[pos].value = "EMR1234567"
 * identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility1"
 * managingOrganization = Reference(Covid19OrganizationExample)
-* contact[0].relationship = #N   //https://hl7.org/fhir/valueset-patient-contactrelationship.html
+* contact[0].relationship.coding.code = #N   //https://hl7.org/fhir/valueset-patient-contactrelationship.html
+* contact[0].relationship.coding.system =  "http://terminology.hl7.org/CodeSystem/v2-0131"
 * contact[0].name.family = "John"
 * contact[0].telecom.system = #phone
 
