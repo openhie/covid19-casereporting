@@ -1,12 +1,12 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 190, warn = 86, info = 25
-IG Publisher Version: 1.1.131
-Generated Mon Sep 12 10:08:05 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+err = 190, warn = 84, info = 25
+IG Publisher Version: 1.2.1
+Generated Wed Sep 14 11:16:33 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 23 / 23 / 0
  /github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 48 / 47 / 43
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 48 / 46 / 43
  /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-cs-cancellation-reason : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-case-report-sections : 2 / 0 / 2
@@ -26,7 +26,7 @@ Generated Mon Sep 12 10:08:05 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Observation-Covid19VaccineDoseReceivedExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Organization-Covid19LaboratoryExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Organization-Covid19OrganizationExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Patient-Covid19PatientExample : 3 / 1 / 1
+ /github/workspace/fsh-generated/resources/Patient-Covid19PatientExample : 3 / 0 / 1
  /github/workspace/fsh-generated/resources/ServiceRequest-Covid19LabOrderExample : 3 / 1 / 1
  /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination : 2 / 0 / 1
@@ -159,7 +159,6 @@ ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[3].entry[0]: Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Reference.reference in profile http://example.com/fhir/example/StructureDefinition/covid19-composition)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[3].entry[1]: Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Reference.reference in profile http://example.com/fhir/example/StructureDefinition/covid19-composition)
 INFORMATION: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[3]: Composition.section:covid19VaccinationSection.entry:covid19Vaccination: Unable to check minimum required (Composition.section.entry) due to lack of slicing validation (from http://example.com/fhir/example/StructureDefinition/covid19-composition)
-WARNING: Bundle/Covid19BundleExample: Bundle.entry[1].resource.ofType(Patient).contact[0].relationship[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.ofType(Patient).identifier[0]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://example.com/fhir/example/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.ofType(Patient).identifier[1]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://example.com/fhir/example/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.ofType(Patient).identifier[2]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://example.com/fhir/example/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
@@ -307,7 +306,6 @@ WARNING: Observation/Covid19VaccineDoseReceivedExample: Observation.value.ofType
 ERROR: Patient/Covid19PatientExample: Patient.identifier[0]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://example.com/fhir/example/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
 ERROR: Patient/Covid19PatientExample: Patient.identifier[1]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://example.com/fhir/example/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
 ERROR: Patient/Covid19PatientExample: Patient.identifier[2]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://example.com/fhir/example/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
-WARNING: Patient/Covid19PatientExample: Patient.contact[0].relationship[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/ServiceRequest-Covid19LabOrderExample.json ==
 ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.code: None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-test-types), and a coding from this value set is required) (codes = http://loinc.org#94558-4)
 ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.locationReference[0]: Unable to resolve resource with reference 'Covid19Laboratory'
