@@ -1,12 +1,12 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 198, warn = 87, info = 26
+err = 200, warn = 87, info = 26
 IG Publisher Version: 1.2.1
-Generated Thu Sep 15 14:15:19 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Thu Sep 15 14:55:20 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 30 / 26 / 0
  /github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 50 / 46 / 43
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 51 / 46 / 43
  /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-cs-cancellation-reason : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-case-report-sections : 2 / 0 / 2
@@ -17,7 +17,7 @@ Generated Thu Sep 15 14:15:19 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsComorbidityExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 1 / 2 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19PresentationExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 1 / 2 / 1
  /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 2 / 1 / 2
  /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 1 / 0 / 2
@@ -220,9 +220,10 @@ WARNING: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(Task).bas
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(Task).statusReason.coding[0]: A code with no system has no defined meaning. A system should be provided
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(Task).owner: Relative URLs must be of the format [ResourceName]/[id].  Encountered Covid19Laboratory
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(Task).owner: Unable to resolve resource with reference 'Covid19Laboratory'
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(Task).statusReason: None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(Task).statusReason: None of the codings provided are in the value set 'Cancellation Reasons' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).basedOn[0]: Relative URLs must be of the format [ResourceName]/[id].  Encountered Covid19LabOrder
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).basedOn[0]: Unable to resolve resource with reference 'Covid19LabOrder'
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).code: Error performing tx5 operation 'validate-code: timeout' (parameters = "")
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).result[0]: Entry 13 matches the reference Observation/Covid19TestResultExample by type and id but it's fullUrl Composition/Covid19TestResultExample does not match the full target URL Observation/Covid19TestResultExample by Bundle resolution rules
 INFORMATION: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
@@ -295,6 +296,7 @@ WARNING: Condition/Covid19DiagnosisExample: Condition.code.coding[0]: A code wit
 == fsh-generated/resources/Condition-Covid19PresentationExample.json ==
 == fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.json ==
 ERROR: DiagnosticReport/Covid19LabResultsDiagnosticReportExample: DiagnosticReport.basedOn[0]: Unable to resolve resource with reference 'Covid19LabOrder'
+ERROR: DiagnosticReport/Covid19LabResultsDiagnosticReportExample: DiagnosticReport.code: Error performing tx5 operation 'validate-code: timeout' (parameters = "")
 == fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json ==
 WARNING: Encounter/Covid19AssessmentEncounterExample: Encounter.class: A code with no system has no defined meaning. A system should be provided
 ERROR: Encounter/Covid19AssessmentEncounterExample: Encounter.reasonCode[0]: None of the codings provided are in the value set 'Assessment Reason valueset' (http://example.com/fhir/example/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Other)
@@ -394,7 +396,7 @@ ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vac
 ERROR: StructureDefinition.where(url = 'http://example.com/fhir/example/StructureDefinition/covid19-vaccine-dose-received'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-received.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccine-dose-received) does not match the URL (http://example.com/fhir/example/StructureDefinition/covid19-vaccine-dose-received)
 ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-received: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccine-dose-received vs http://example.com/fhir/example/StructureDefinition/covid19-vaccine-dose-received
 == fsh-generated/resources/Task-Covid19LabOrderCancellationExample.json ==
-ERROR: Task/Covid19LabOrderCancellationExample: Task.statusReason: None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)
+ERROR: Task/Covid19LabOrderCancellationExample: Task.statusReason: None of the codings provided are in the value set 'Cancellation Reasons' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)
 WARNING: Task/Covid19LabOrderCancellationExample: Task.statusReason.coding[0]: A code with no system has no defined meaning. A system should be provided
 ERROR: Task/Covid19LabOrderCancellationExample: Task.owner: Unable to resolve resource with reference 'Covid19Laboratory'
 == fsh-generated/resources/Task-LabOrderTaskExample.json ==
