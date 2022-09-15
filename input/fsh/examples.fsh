@@ -289,6 +289,10 @@ Description: "Covid19 Lab Order Cancellation Task example"
 * basedOn = Reference(Covid19LabOrderExample)
 * executionPeriod.start = "2022-07-28"
 * statusReason = #Duplicate
+* requester = Reference(Covid19OrganizationExample)
+* owner = Reference(Covid19Laboratory)
+* lastModified = "2015-02-07"
+
 
 Instance: Covid19LabResultsDiagnosticReportExample
 InstanceOf: Covid19LabResultsDiagnosticReport
