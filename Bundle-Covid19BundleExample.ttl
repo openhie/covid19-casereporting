@@ -174,8 +174,8 @@
      ];
      fhir:Composition.section.entry [
        fhir:index 0;
-       fhir:link <http://xxsomewhere.org/fhir/myig/ServiceRequest/Covid19LabOrderExample>;
-       fhir:Reference.reference [ fhir:value "ServiceRequest/Covid19LabOrderExample" ]
+       fhir:link <http://xxsomewhere.org/fhir/myig/ServiceRequest/labOrderGuid>;
+       fhir:Reference.reference [ fhir:value "ServiceRequest/labOrderGuid" ]
      ], [
        fhir:index 1;
        fhir:link <http://xxsomewhere.org/fhir/myig/Specimen/Covid19SpecimenExample>;
@@ -220,7 +220,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Covid19PatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Covid19PatientExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-patient.html\">Covid19 Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567, id: EMR1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Smith (OFFICIAL)</p><p><b>telecom</b>: <a href=\"tel:+27825556666\">+27825556666</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><h3>Contacts</h3><table class=\"grid\"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0131.html\">contactRole2</a>#N)</span></td><td>John </td><td>ph: -unknown-</td></tr></table><p><b>managingOrganization</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Covid19PatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Covid19PatientExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-patient.html\">Covid19 Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567, id: EMR1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Smith (OFFICIAL)</p><p><b>telecom</b>: <a href=\"tel:+27825556666\">+27825556666</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><h3>Contacts</h3><table class=\"grid\"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/4.0.0/CodeSystem-v2-0131.html\">contactRole2</a>#N)</span></td><td>John </td><td>ph: -unknown-</td></tr></table><p><b>managingOrganization</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p></div>"
   ];
   fhir:Patient.identifier [
      fhir:index 0;
@@ -548,7 +548,7 @@
   ] .
 
 <Composition/Covid19LabOrderExample> a fhir:ServiceRequest;
-  fhir:Resource.id [ fhir:value "Covid19LabOrderExample"];
+  fhir:Resource.id [ fhir:value "labOrderGuid"];
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://example.com/fhir/example/StructureDefinition/covid19-lab-order";
@@ -558,14 +558,14 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"Covid19LabOrderExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest \"Covid19LabOrderExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order.html\">Covid19 Lab Order</a></p></div><p><b>identifier</b>: id: ORDERNR109191879</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#94558-4)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>authoredOn</b>: 2022-07-28</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>locationReference</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p><p><b>reasonCode</b>: Surveillance <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Surveillance)</span></p><p><b>specimen</b>: <a href=\"#Specimen_Covid19SpecimenExample\">See above (Specimen/Covid19SpecimenExample)</a></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"labOrderGuid\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest \"labOrderGuid\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order.html\">Covid19 Lab Order</a></p></div><p><b>identifier</b>: id: testOrderNumber</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#94558-4)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>authoredOn</b>: 2022-07-28</p><p><b>requester</b>: <a href=\"Practitioner-PractitionerExample.html\">Practitioner/PractitionerExample</a> \" SMITH\"</p><p><b>locationReference</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p><p><b>reasonCode</b>: Surveillance <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Surveillance)</span></p><p><b>specimen</b>: <a href=\"#Specimen_Covid19SpecimenExample\">See above (Specimen/Covid19SpecimenExample)</a></p></div>"
   ];
   fhir:ServiceRequest.identifier [
      fhir:index 0;
-     fhir:Identifier.system [ fhir:value "http://covid19laborder.org/order" ];
-     fhir:Identifier.value [ fhir:value "ORDERNR109191879" ]
+     fhir:Identifier.system [ fhir:value "http://example.com/fhir/lab-integration/test-order-number" ];
+     fhir:Identifier.value [ fhir:value "testOrderNumber" ]
   ];
-  fhir:ServiceRequest.status [ fhir:value "completed"];
+  fhir:ServiceRequest.status [ fhir:value "active"];
   fhir:ServiceRequest.intent [ fhir:value "order"];
   fhir:ServiceRequest.code [
      fhir:CodeableConcept.coding [
@@ -585,8 +585,8 @@
   ];
   fhir:ServiceRequest.authoredOn [ fhir:value "2022-07-28"^^xsd:date];
   fhir:ServiceRequest.requester [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Organization/Covid19OrganizationExample>;
-     fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
+     fhir:link <http://xxsomewhere.org/fhir/myig/Practitioner/PractitionerExample>;
+     fhir:Reference.reference [ fhir:value "Practitioner/PractitionerExample" ]
   ];
   fhir:ServiceRequest.locationReference [
      fhir:index 0;
@@ -650,12 +650,12 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"Covid19LabOrderCancellationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"Covid19LabOrderCancellationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order-cancellation.html\">Covid19 Lab Order Cancellation</a></p></div><p><b>basedOn</b>: <a href=\"#ServiceRequest_Covid19LabOrderExample\">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>status</b>: cancelled</p><p><b>statusReason</b>: Duplicate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Duplicate)</span></p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"Covid19LabOrderCancellationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"Covid19LabOrderCancellationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order-cancellation.html\">Covid19 Lab Order Cancellation</a></p></div><p><b>basedOn</b>: <a href=\"#ServiceRequest_labOrderGuid\">See above (ServiceRequest/labOrderGuid)</a></p><p><b>status</b>: cancelled</p><p><b>statusReason</b>: Duplicate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Duplicate)</span></p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p></div>"
   ];
   fhir:Task.basedOn [
      fhir:index 0;
-     fhir:link <http://xxsomewhere.org/fhir/myig/ServiceRequest/Covid19LabOrderExample>;
-     fhir:Reference.reference [ fhir:value "ServiceRequest/Covid19LabOrderExample" ]
+     fhir:link <http://xxsomewhere.org/fhir/myig/ServiceRequest/labOrderGuid>;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/labOrderGuid" ]
   ];
   fhir:Task.status [ fhir:value "cancelled"];
   fhir:Task.statusReason [
@@ -680,7 +680,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b><a name=\"Covid19LabResultsDiagnosticReportExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport \"Covid19LabResultsDiagnosticReportExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-results.html\">Covid19 Lab Results Diagnostic Report</a></p></div><p><b>identifier</b>: id: ?ngen-9?</p><p><b>basedOn</b>: <a href=\"Covid19LabOrder\">Covid19LabOrder</a></p><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#100156-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>effective</b>: 2022-07-28</p><p><b>result</b>: <a href=\"#Observation_Covid19TestResultExample\">See above (Observation/Covid19TestResultExample)</a></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b><a name=\"Covid19LabResultsDiagnosticReportExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport \"Covid19LabResultsDiagnosticReportExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-results.html\">Covid19 Lab Results Diagnostic Report</a></p></div><p><b>identifier</b>: id: ?ngen-9?</p><p><b>basedOn</b>: <a href=\"Covid19LabOrder\">Covid19LabOrder</a></p><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#100156-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>effective</b>: 2022-07-28</p><p><b>performer</b>: <a href=\"Practitioner-PractitionerExample.html\">Practitioner/PractitionerExample</a> \" SMITH\"</p><p><b>result</b>: <a href=\"#Observation_Covid19TestResultExample\">See above (Observation/Covid19TestResultExample)</a></p></div>"
   ];
   fhir:DiagnosticReport.identifier [
      fhir:index 0;
@@ -704,6 +704,11 @@
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
   ];
   fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2022-07-28"^^xsd:date];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:link <http://xxsomewhere.org/fhir/myig/Practitioner/PractitionerExample>;
+     fhir:Reference.reference [ fhir:value "Practitioner/PractitionerExample" ]
+  ];
   fhir:DiagnosticReport.result [
      fhir:index 0;
      fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19TestResultExample>;

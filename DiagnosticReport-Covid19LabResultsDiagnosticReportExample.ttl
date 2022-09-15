@@ -42,6 +42,11 @@
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
   ];
   fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2022-07-28"^^xsd:date];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:link <http://xxsomewhere.org/fhir/myig/Practitioner/PractitionerExample>;
+     fhir:Reference.reference [ fhir:value "Practitioner/PractitionerExample" ]
+  ];
   fhir:DiagnosticReport.result [
      fhir:index 0;
      fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19TestResultExample>;

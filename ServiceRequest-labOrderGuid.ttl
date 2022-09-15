@@ -6,9 +6,9 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/ServiceRequest/Covid19LabOrderExample> a fhir:ServiceRequest;
+<http://xxsomewhere.org/fhir/myig/ServiceRequest/labOrderGuid> a fhir:ServiceRequest;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "Covid19LabOrderExample"];
+  fhir:Resource.id [ fhir:value "labOrderGuid"];
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://example.com/fhir/example/StructureDefinition/covid19-lab-order";
@@ -18,14 +18,14 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"Covid19LabOrderExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest \"Covid19LabOrderExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order.html\">Covid19 Lab Order</a></p></div><p><b>identifier</b>: id: ORDERNR109191879</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#94558-4)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>authoredOn</b>: 2022-07-28</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>locationReference</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p><p><b>reasonCode</b>: Surveillance <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Surveillance)</span></p><p><b>specimen</b>: <a href=\"Specimen-Covid19SpecimenExample.html\">Specimen/Covid19SpecimenExample</a></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"labOrderGuid\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest \"labOrderGuid\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order.html\">Covid19 Lab Order</a></p></div><p><b>identifier</b>: id: testOrderNumber</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#94558-4)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>authoredOn</b>: 2022-07-28</p><p><b>requester</b>: <a href=\"Practitioner-PractitionerExample.html\">Practitioner/PractitionerExample</a> \" SMITH\"</p><p><b>locationReference</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p><p><b>reasonCode</b>: Surveillance <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Surveillance)</span></p><p><b>specimen</b>: <a href=\"Specimen-Covid19SpecimenExample.html\">Specimen/Covid19SpecimenExample</a></p></div>"
   ];
   fhir:ServiceRequest.identifier [
      fhir:index 0;
-     fhir:Identifier.system [ fhir:value "http://covid19laborder.org/order" ];
-     fhir:Identifier.value [ fhir:value "ORDERNR109191879" ]
+     fhir:Identifier.system [ fhir:value "http://example.com/fhir/lab-integration/test-order-number" ];
+     fhir:Identifier.value [ fhir:value "testOrderNumber" ]
   ];
-  fhir:ServiceRequest.status [ fhir:value "completed"];
+  fhir:ServiceRequest.status [ fhir:value "active"];
   fhir:ServiceRequest.intent [ fhir:value "order"];
   fhir:ServiceRequest.code [
      fhir:CodeableConcept.coding [
@@ -45,8 +45,8 @@
   ];
   fhir:ServiceRequest.authoredOn [ fhir:value "2022-07-28"^^xsd:date];
   fhir:ServiceRequest.requester [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Organization/Covid19OrganizationExample>;
-     fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
+     fhir:link <http://xxsomewhere.org/fhir/myig/Practitioner/PractitionerExample>;
+     fhir:Reference.reference [ fhir:value "Practitioner/PractitionerExample" ]
   ];
   fhir:ServiceRequest.locationReference [
      fhir:index 0;
@@ -67,7 +67,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/ServiceRequest/Covid19LabOrderExample.ttl> a owl:Ontology;
+<http://xxsomewhere.org/fhir/myig/ServiceRequest/labOrderGuid.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

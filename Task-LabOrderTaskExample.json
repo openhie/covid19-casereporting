@@ -1,0 +1,28 @@
+{
+  "resourceType": "Task",
+  "id": "LabOrderTaskExample",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"LabOrderTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"LabOrderTaskExample\" </p></div><p><b>identifier</b>: id: testOrderNumber</p><p><b>basedOn</b>: <a href=\"ServiceRequest-labOrderGuid.html\">ServiceRequest/labOrderGuid</a></p><p><b>status</b>: requested</p><p><b>intent</b>: order</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>owner</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://example.com/fhir/lab-integration/test-order-number",
+      "value": "testOrderNumber"
+    }
+  ],
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/labOrderGuid"
+    }
+  ],
+  "status": "requested",
+  "intent": "order",
+  "lastModified": "2015-02-07",
+  "requester": {
+    "reference": "Organization/Covid19OrganizationExample"
+  },
+  "owner": {
+    "reference": "Covid19Laboratory"
+  }
+}
