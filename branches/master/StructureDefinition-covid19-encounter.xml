@@ -23,12 +23,12 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="patient"/>
   </extension>
-  <url value="http://example.com/fhir/example/StructureDefinition/covid19-encounter"/>
+  <url value="http://openhie.org/fhir/covid-casereporting/StructureDefinition/covid19-encounter"/>
   <version value="0.1.0-test"/>
   <name value="Covid19AssessmentEncounter"/>
   <title value="Covid19 Assessment Encounter"/>
   <status value="active"/>
-  <date value="2022-09-15T17:44:16+00:00"/>
+  <date value="2022-09-15T19:52:53+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -1921,7 +1921,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://example.com/fhir/example/ValueSet/vs-assessment-reason"/>
+        <valueSet value="http://openhie.org/fhir/covid-casereporting/ValueSet/vs-assessment-reason"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -3161,7 +3161,7 @@
       <isSummary value="false"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://example.com/fhir/example/ValueSet/vs-AdmissionTypes"/>
+        <valueSet value="http://openhie.org/fhir/covid-casereporting/ValueSet/vs-AdmissionTypes"/>
       </binding>
     </element>
     <element id="Encounter.location.period">
@@ -3298,7 +3298,7 @@
       <mustSupport value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://example.com/fhir/example/ValueSet/vs-assessment-reason"/>
+        <valueSet value="http://openhie.org/fhir/covid-casereporting/ValueSet/vs-assessment-reason"/>
       </binding>
     </element>
     <element id="Encounter.reasonCode.text">
@@ -3310,7 +3310,7 @@
       <mustSupport value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://example.com/fhir/example/ValueSet/vs-AdmissionTypes"/>
+        <valueSet value="http://openhie.org/fhir/covid-casereporting/ValueSet/vs-AdmissionTypes"/>
       </binding>
     </element>
   </differential>

@@ -17,12 +17,12 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="patient"/>
   </extension>
-  <url value="http://example.com/fhir/example/StructureDefinition/covid19-diagnosis"/>
+  <url value="http://openhie.org/fhir/covid-casereporting/StructureDefinition/covid19-diagnosis"/>
   <version value="0.1.0-test"/>
   <name value="Covid19Diagnosis"/>
   <title value="Covid19 Diagnosis"/>
   <status value="active"/>
-  <date value="2022-09-15T17:44:16+00:00"/>
+  <date value="2022-09-15T19:52:53+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -509,7 +509,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://example.com/fhir/example/ValueSet/vs-patient-outcome"/>
+        <valueSet value="http://openhie.org/fhir/covid-casereporting/ValueSet/vs-patient-outcome"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -563,7 +563,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://example.com/fhir/example/ValueSet/vs-covid-diagnosis"/>
+        <valueSet value="http://openhie.org/fhir/covid-casereporting/ValueSet/vs-covid-diagnosis"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -1682,7 +1682,7 @@
       <mustSupport value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://example.com/fhir/example/ValueSet/vs-patient-outcome"/>
+        <valueSet value="http://openhie.org/fhir/covid-casereporting/ValueSet/vs-patient-outcome"/>
       </binding>
     </element>
     <element id="Condition.verificationStatus">
@@ -1691,7 +1691,7 @@
       <mustSupport value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://example.com/fhir/example/ValueSet/vs-covid-diagnosis"/>
+        <valueSet value="http://openhie.org/fhir/covid-casereporting/ValueSet/vs-covid-diagnosis"/>
       </binding>
     </element>
     <element id="Condition.abatementDateTime">
