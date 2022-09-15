@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-09-14T11:15:14+00:00",
+  "date": "2022-09-15T17:44:16+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -44,7 +44,7 @@
       "id": "hl7tx",
       "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId": "hl7.terminology.r4",
-      "version": "3.1.0"
+      "version": "4.0.0"
     }
   ],
   "definition": {
@@ -393,24 +393,13 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ServiceRequest"
-          }
-        ],
-        "reference": {
-          "reference": "ServiceRequest/Covid19LabOrderExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ValueSet"
           }
         ],
         "reference": {
           "reference": "ValueSet/vs-cancellation-reason"
         },
-        "name": "Test Types",
+        "name": "Cancellation Reasons",
         "description": "A list of Cancellation Reasons"
       },
       {
@@ -484,6 +473,17 @@
           "reference": "CodeSystem/cs-other"
         },
         "name": "Covid19 Case Report Sections codesystem"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ServiceRequest"
+          }
+        ],
+        "reference": {
+          "reference": "ServiceRequest/labOrderGuid"
+        }
       },
       {
         "extension": [
@@ -687,6 +687,28 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/PractitionerExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Task"
+          }
+        ],
+        "reference": {
+          "reference": "Task/LabResultTaskExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           }
         ],
@@ -759,6 +781,17 @@
         },
         "name": "Covid19 Vaccination Appointment",
         "description": "Covid19 Vaccination Appointment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Task"
+          }
+        ],
+        "reference": {
+          "reference": "Task/LabOrderTaskExample"
+        }
       },
       {
         "extension": [

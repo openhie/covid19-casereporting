@@ -81,7 +81,7 @@
             </coding>
           </code>
           <entry>
-            <reference value="ServiceRequest/Covid19LabOrderExample"/>
+            <reference value="ServiceRequest/labOrderGuid"/>
           </entry>
           <entry>
             <reference value="Specimen/Covid19SpecimenExample"/>
@@ -120,7 +120,7 @@
           <profile value="http://example.com/fhir/example/StructureDefinition/covid19-patient"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Patient</b><a name="Covid19PatientExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient "Covid19PatientExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-patient.html">Covid19 Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567, id: EMR1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Smith (OFFICIAL)</p><p><b>telecom</b>: <a href="tel:+27825556666">+27825556666</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><h3>Contacts</h3><table class="grid"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v2-0131.html">contactRole2</a>#N)</span></td><td>John </td><td>ph: -unknown-</td></tr></table><p><b>managingOrganization</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> "Covid19 Organization"</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Patient</b><a name="Covid19PatientExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient "Covid19PatientExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-patient.html">Covid19 Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567, id: EMR1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Smith (OFFICIAL)</p><p><b>telecom</b>: <a href="tel:+27825556666">+27825556666</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><h3>Contacts</h3><table class="grid"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v2-0131.html">contactRole2</a>#N)</span></td><td>John </td><td>ph: -unknown-</td></tr></table><p><b>managingOrganization</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> "Covid19 Organization"</p></div>
         </text>
         <identifier>
           <system value="http://openhie.org/fhir/covid19-casereporting/identifier/passport"/>
@@ -405,18 +405,18 @@
     <fullUrl value="Composition/Covid19LabOrderExample"/>
     <resource>
       <ServiceRequest>
-        <id value="Covid19LabOrderExample"/>
+        <id value="labOrderGuid"/>
         <meta>
           <profile value="http://example.com/fhir/example/StructureDefinition/covid19-lab-order"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ServiceRequest</b><a name="Covid19LabOrderExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ServiceRequest "Covid19LabOrderExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-lab-order.html">Covid19 Lab Order</a></p></div><p><b>identifier</b>: id: ORDERNR109191879</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#94558-4)</span></p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>authoredOn</b>: 2022-07-28</p><p><b>requester</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> "Covid19 Organization"</p><p><b>locationReference</b>: <a href="Covid19Laboratory">Covid19Laboratory</a></p><p><b>reasonCode</b>: Surveillance <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Surveillance)</span></p><p><b>specimen</b>: <a href="#Specimen_Covid19SpecimenExample">See above (Specimen/Covid19SpecimenExample)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ServiceRequest</b><a name="labOrderGuid"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ServiceRequest "labOrderGuid" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-lab-order.html">Covid19 Lab Order</a></p></div><p><b>identifier</b>: id: testOrderNumber</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#94558-4)</span></p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>authoredOn</b>: 2022-07-28</p><p><b>requester</b>: <a href="Practitioner-PractitionerExample.html">Practitioner/PractitionerExample</a> " SMITH"</p><p><b>locationReference</b>: <a href="Covid19Laboratory">Covid19Laboratory</a></p><p><b>reasonCode</b>: Surveillance <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Surveillance)</span></p><p><b>specimen</b>: <a href="#Specimen_Covid19SpecimenExample">See above (Specimen/Covid19SpecimenExample)</a></p></div>
         </text>
         <identifier>
-          <system value="http://covid19laborder.org/order"/>
-          <value value="ORDERNR109191879"/>
+          <system value="http://example.com/fhir/lab-integration/test-order-number"/>
+          <value value="testOrderNumber"/>
         </identifier>
-        <status value="completed"/>
+        <status value="active"/>
         <intent value="order"/>
         <code>
           <coding>
@@ -432,7 +432,7 @@
         </encounter>
         <authoredOn value="2022-07-28"/>
         <requester>
-          <reference value="Organization/Covid19OrganizationExample"/>
+          <reference value="Practitioner/PractitionerExample"/>
         </requester>
         <locationReference>
           <reference value="Covid19Laboratory"/>
@@ -487,10 +487,10 @@
           <profile value="http://example.com/fhir/example/StructureDefinition/covid19-lab-order-cancellation"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Task</b><a name="Covid19LabOrderCancellationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Task "Covid19LabOrderCancellationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-lab-order-cancellation.html">Covid19 Lab Order Cancellation</a></p></div><p><b>basedOn</b>: <a href="#ServiceRequest_Covid19LabOrderExample">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>status</b>: cancelled</p><p><b>statusReason</b>: Duplicate <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Duplicate)</span></p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Task</b><a name="Covid19LabOrderCancellationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Task "Covid19LabOrderCancellationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-lab-order-cancellation.html">Covid19 Lab Order Cancellation</a></p></div><p><b>basedOn</b>: <a href="#ServiceRequest_labOrderGuid">See above (ServiceRequest/labOrderGuid)</a></p><p><b>status</b>: cancelled</p><p><b>statusReason</b>: Duplicate <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Duplicate)</span></p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> "Covid19 Organization"</p><p><b>owner</b>: <a href="Covid19Laboratory">Covid19Laboratory</a></p></div>
         </text>
         <basedOn>
-          <reference value="ServiceRequest/Covid19LabOrderExample"/>
+          <reference value="ServiceRequest/labOrderGuid"/>
         </basedOn>
         <status value="cancelled"/>
         <statusReason>
@@ -502,6 +502,13 @@
         <executionPeriod>
           <start value="2022-07-28"/>
         </executionPeriod>
+        <lastModified value="2015-02-07"/>
+        <requester>
+          <reference value="Organization/Covid19OrganizationExample"/>
+        </requester>
+        <owner>
+          <reference value="Covid19Laboratory"/>
+        </owner>
       </Task>
     </resource>
   </entry>
@@ -514,7 +521,7 @@
           <profile value="http://example.com/fhir/example/StructureDefinition/covid19-lab-results"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: DiagnosticReport</b><a name="Covid19LabResultsDiagnosticReportExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource DiagnosticReport "Covid19LabResultsDiagnosticReportExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-lab-results.html">Covid19 Lab Results Diagnostic Report</a></p></div><p><b>identifier</b>: id: ?ngen-9?</p><p><b>basedOn</b>: <a href="Covid19LabOrder">Covid19LabOrder</a></p><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#100156-9)</span></p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>effective</b>: 2022-07-28</p><p><b>result</b>: <a href="#Observation_Covid19TestResultExample">See above (Observation/Covid19TestResultExample)</a></p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: DiagnosticReport</b><a name="Covid19LabResultsDiagnosticReportExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource DiagnosticReport "Covid19LabResultsDiagnosticReportExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-lab-results.html">Covid19 Lab Results Diagnostic Report</a></p></div><p><b>identifier</b>: id: ?ngen-9?</p><p><b>basedOn</b>: <a href="Covid19LabOrder">Covid19LabOrder</a></p><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#100156-9)</span></p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>effective</b>: 2022-07-28</p><p><b>performer</b>: <a href="Practitioner-PractitionerExample.html">Practitioner/PractitionerExample</a> " SMITH"</p><p><b>result</b>: <a href="#Observation_Covid19TestResultExample">See above (Observation/Covid19TestResultExample)</a></p></div>
         </text>
         <identifier id="12341324"/>
         <basedOn>
@@ -531,6 +538,9 @@
           <reference value="Patient/Covid19PatientExample"/>
         </subject>
         <effectiveDateTime value="2022-07-28"/>
+        <performer>
+          <reference value="Practitioner/PractitionerExample"/>
+        </performer>
         <result>
           <reference value="Observation/Covid19TestResultExample"/>
         </result>

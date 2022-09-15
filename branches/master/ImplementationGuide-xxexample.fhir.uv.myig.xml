@@ -12,7 +12,7 @@
   <title value="Covid 19 Case Reporting and Lab Management"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-09-14T11:15:14+00:00"/>
+  <date value="2022-09-15T17:44:16+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -33,7 +33,7 @@
   <dependsOn id="hl7tx">
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="3.1.0"/>
+    <version value="4.0.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -248,20 +248,12 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ServiceRequest"/>
-      </extension>
-      <reference>
-        <reference value="ServiceRequest/Covid19LabOrderExample"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
         <reference value="ValueSet/vs-cancellation-reason"/>
       </reference>
-      <name value="Test Types"/>
+      <name value="Cancellation Reasons"/>
       <description value="A list of Cancellation Reasons"/>
     </resource>
     <resource>
@@ -317,6 +309,14 @@
         <reference value="CodeSystem/cs-other"/>
       </reference>
       <name value="Covid19 Case Report Sections codesystem"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ServiceRequest"/>
+      </extension>
+      <reference>
+        <reference value="ServiceRequest/labOrderGuid"/>
+      </reference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -470,6 +470,22 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/PractitionerExample"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/LabResultTaskExample"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -526,6 +542,14 @@
       </reference>
       <name value="Covid19 Vaccination Appointment"/>
       <description value="Covid19 Vaccination Appointment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/LabOrderTaskExample"/>
+      </reference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
