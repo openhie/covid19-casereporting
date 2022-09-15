@@ -250,15 +250,16 @@ InstanceOf: Covid19LabOrder
 Usage: #example
 Title: "Covid19 Lab Order example"
 Description: "Covid19 Lab Order example"
-* identifier.value = "ORDERNR109191879"
-* identifier.system = "http://covid19laborder.org/order"
+* identifier.value = "testOrderNumber"
+* identifier.system = "http://example.com/fhir/lab-integration/test-order-number"
+* id = "labOrderGuid"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
+* requester = Reference(PractitionerExample)
 * reasonCode  = #Surveillance
 * authoredOn  = "2022-07-28"
-* status = #completed
+* status = #active
 * code =  $LNC#94558-4 
-* requester = Reference(Covid19OrganizationExample)
 * locationReference = Reference(Covid19Laboratory) 
 * specimen = Reference(Covid19SpecimenExample)
 
@@ -288,6 +289,10 @@ Description: "Covid19 Lab Order Cancellation Task example"
 * basedOn = Reference(Covid19LabOrderExample)
 * executionPeriod.start = "2022-07-28"
 * statusReason = #Duplicate
+* requester = Reference(Covid19OrganizationExample)
+* owner = Reference(Covid19Laboratory)
+* lastModified = "2015-02-07"
+
 
 Instance: Covid19LabResultsDiagnosticReportExample
 InstanceOf: Covid19LabResultsDiagnosticReport
@@ -301,6 +306,7 @@ Description: "Covid19 Lab Results Diagnostic Report example"
 * effectiveDateTime = "2022-07-28"
 * status = #final 
 * result = Reference(Covid19TestResultExample)
+* performer = Reference(PractitionerExample)
 
 Instance: Covid19TestResultExample
 InstanceOf: Covid19TestResult
@@ -335,3 +341,44 @@ Description: "Covid19 Vaccination Appointment example"
 * participant.status = #tentative
 * start = "2015-02-07T13:28:17.239+02:00"
 * status = #proposed
+
+Instance: LabOrderTaskExample
+InstanceOf: Task
+Usage: #example
+Title: "Lab Order example"
+Description: "Lab Order example"
+* basedOn = Reference(Covid19LabOrderExample)
+* requester = Reference(Covid19OrganizationExample)
+* owner = Reference(Covid19Laboratory)
+* identifier.system = "http://example.com/fhir/lab-integration/test-order-number"
+* identifier.value = "testOrderNumber"
+* intent = #order
+* status = #requested
+* lastModified = "2015-02-07"
+
+Instance: PractitionerExample
+InstanceOf: Practitioner
+Usage: #example
+Title: "Practitioner example"
+Description: "Practitioner example"
+* name.given = "Joe"
+* name.family = "Smith"
+* telecom.system = #phone
+* telecom.value = "27 53 765 2509"
+
+Instance: LabResultTaskExample
+InstanceOf: Task
+Usage: #example
+Title: "Lab Result Task example"
+Description: "Lab Result Task example"
+* basedOn = Reference(Covid19LabOrderExample)
+* requester = Reference(Covid19OrganizationExample)
+* owner = Reference(Covid19Laboratory)
+* identifier.system = "http://example.com/fhir/lab-integration/test-order-number"
+* identifier.value = "testOrderNumber"
+* intent = #order
+* status = #completed
+* lastModified = "2015-02-07"
+* output.type.coding.system = "http://example.com/fhir/lab-integration/task-output"
+* output.type.coding.code = #result 
+* output.valueReference = Reference(Covid19LabResultsDiagnosticReportExample)
