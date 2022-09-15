@@ -1,0 +1,70 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-covid-diagnosis",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  410605003 (Confirmed present (qualifier value))</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  2931005 (Probable diagnosis)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  415684004 (Suspected (qualifier value))</li></ul></div>"
+  },
+  "url": "http://openhie.org/fhir/covid-casereporting/ValueSet/vs-covid-diagnosis",
+  "version": "0.1.0-test",
+  "name": "VSCovidDiagnosis",
+  "title": "COVID Diagnosis list",
+  "status": "active",
+  "date": "2022-09-15T19:01:40+00:00",
+  "publisher": "OpenHIE",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://xxhl7.org/Special/committees/[something]"
+        }
+      ]
+    }
+  ],
+  "description": "COVID Diagnosis list",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "410605003"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "2931005"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "415684004"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/Composition/Covid19CompositionExample> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Covid19CompositionExample"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://openhie.org/fhir/covid-casereporting/StructureDefinition/covid19-composition";
+       fhir:index 0;
+       fhir:link <http://openhie.org/fhir/covid-casereporting/StructureDefinition/covid19-composition>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"Covid19CompositionExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition \"Covid19CompositionExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-composition.html\">Covid19 Case Reporting Composition</a></p></div><p><b>identifier</b>: id: 1111</p><p><b>status</b>: final</p><p><b>type</b>: COVID-19 case report <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#95412-3)</span></p><p><b>date</b>: 2022-08-04</p><p><b>author</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>title</b>: Covid19 Case Report</p></div>"
+  ];
+  fhir:Composition.identifier [
+     fhir:Identifier.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-case-report" ];
+     fhir:Identifier.value [ fhir:value "1111" ]
+  ];
+  fhir:Composition.status [ fhir:value "final"];
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:95412-3;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "95412-3" ]
+     ]
+  ];
+  fhir:Composition.date [ fhir:value "2022-08-04"^^xsd:date];
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <http://xxsomewhere.org/fhir/myig/Organization/Covid19OrganizationExample>;
+     fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
+  ];
+  fhir:Composition.title [ fhir:value "Covid19 Case Report"];
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.title [ fhir:value "Client registration" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://openhie.org/fhir/covid-casereporting/CodeSystem/cs-case-report-sections" ];
+         fhir:Coding.code [ fhir:value "CLIENT-REGISTRATION" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
+       fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.title [ fhir:value "Covid19 Assessment Encounter" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://openhie.org/fhir/covid-casereporting/CodeSystem/cs-case-report-sections" ];
+         fhir:Coding.code [ fhir:value "COVID-ASSESSMENT" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
+       fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
+     ], [
+       fhir:index 1;
+       fhir:Reference.reference [ fhir:value "Covid19ReasonforAssessmentExample" ]
+     ], [
+       fhir:index 2;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Condition/Covid19PresentationExample>;
+       fhir:Reference.reference [ fhir:value "Condition/Covid19PresentationExample" ]
+     ], [
+       fhir:index 3;
+       fhir:link <http://xxsomewhere.org/fhir/myig/ClinicalImpression/Covid19SymptomExample>;
+       fhir:Reference.reference [ fhir:value "ClinicalImpression/Covid19SymptomExample" ]
+     ], [
+       fhir:index 4;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Condition/Covid19DiagnosisExample>;
+       fhir:Reference.reference [ fhir:value "Condition/Covid19DiagnosisExample" ]
+     ], [
+       fhir:index 5;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Immunization/Covid19AssessmentVaccinationExample>;
+       fhir:Reference.reference [ fhir:value "Immunization/Covid19AssessmentVaccinationExample" ]
+     ], [
+       fhir:index 6;
+       fhir:Reference.reference [ fhir:value "Covid19PatientOutcomeExample" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Composition.section.title [ fhir:value "Lab Order Management" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://openhie.org/fhir/covid-casereporting/CodeSystem/cs-case-report-sections" ];
+         fhir:Coding.code [ fhir:value "LABORDER-MANAGEMENT" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <http://xxsomewhere.org/fhir/myig/ServiceRequest/labOrderGuid>;
+       fhir:Reference.reference [ fhir:value "ServiceRequest/labOrderGuid" ]
+     ], [
+       fhir:index 1;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Specimen/Covid19SpecimenExample>;
+       fhir:Reference.reference [ fhir:value "Specimen/Covid19SpecimenExample" ]
+     ], [
+       fhir:index 2;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Task/Covid19LabOrderCancellationExample>;
+       fhir:Reference.reference [ fhir:value "Task/Covid19LabOrderCancellationExample" ]
+     ], [
+       fhir:index 3;
+       fhir:Reference.reference [ fhir:value "Covid19LabResultsExamples" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Composition.section.title [ fhir:value "Covid 19 Vaccination" ];
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://openhie.org/fhir/covid-casereporting/CodeSystem/cs-case-report-sections" ];
+         fhir:Coding.code [ fhir:value "COVID-VACCINATION" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Immunization/Covid19VaccinationExample>;
+       fhir:Reference.reference [ fhir:value "Immunization/Covid19VaccinationExample" ]
+     ], [
+       fhir:index 1;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Appointment/Covid19VaccinationAppointmentExample>;
+       fhir:Reference.reference [ fhir:value "Appointment/Covid19VaccinationAppointmentExample" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/Composition/Covid19CompositionExample.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,70 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-covid19-test-result",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  10828004 (Positive)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  260385009 (Negative)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  419984006 (Inconclusive (qualifier value))</li></ul></div>"
+  },
+  "url": "http://openhie.org/fhir/covid-casereporting/ValueSet/vs-covid19-test-result",
+  "version": "0.1.0-test",
+  "name": "VSTestResult",
+  "title": "Covid19 Test Result",
+  "status": "active",
+  "date": "2022-09-15T19:01:40+00:00",
+  "publisher": "OpenHIE",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://xxhl7.org/Special/committees/[something]"
+        }
+      ]
+    }
+  ],
+  "description": "Covid19 Test Result",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "10828004"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "260385009"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "419984006"
+          }
+        ]
+      }
+    ]
+  }
+}

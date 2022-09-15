@@ -1,0 +1,39 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/Appointment/Covid19VaccinationAppointmentExample> a fhir:Appointment;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Covid19VaccinationAppointmentExample"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://openhie.org/fhir/covid-casereporting/StructureDefinition/covid19-vaccination-appointment";
+       fhir:index 0;
+       fhir:link <http://openhie.org/fhir/covid-casereporting/StructureDefinition/covid19-vaccination-appointment>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Appointment</b><a name=\"Covid19VaccinationAppointmentExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Appointment \"Covid19VaccinationAppointmentExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-vaccination-appointment.html\">Covid19 Vaccination Appointment</a></p></div><p><b>status</b>: proposed</p><p><b>start</b>: Feb 7, 2015, 11:28:17 AM</p><h3>Participants</h3><table class=\"grid\"><tr><td>-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td>*</td><td><a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</td><td>tentative</td></tr></table></div>"
+  ];
+  fhir:Appointment.status [ fhir:value "proposed"];
+  fhir:Appointment.start [ fhir:value "2015-02-07T13:28:17.239+02:00"^^xsd:dateTime];
+  fhir:Appointment.participant [
+     fhir:index 0;
+     fhir:Appointment.participant.actor [
+       fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
+       fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
+     ];
+     fhir:Appointment.participant.status [ fhir:value "tentative" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/Appointment/Covid19VaccinationAppointmentExample.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

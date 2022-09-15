@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/Task/Covid19LabOrderCancellationExample> a fhir:Task;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Covid19LabOrderCancellationExample"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://openhie.org/fhir/covid-casereporting/StructureDefinition/covid19-lab-order-cancellation";
+       fhir:index 0;
+       fhir:link <http://openhie.org/fhir/covid-casereporting/StructureDefinition/covid19-lab-order-cancellation>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"Covid19LabOrderCancellationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"Covid19LabOrderCancellationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order-cancellation.html\">Covid19 Lab Order Cancellation</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-labOrderGuid.html\">ServiceRequest/labOrderGuid</a></p><p><b>status</b>: cancelled</p><p><b>statusReason</b>: Duplicate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Duplicate)</span></p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>owner</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p></div>"
+  ];
+  fhir:Task.basedOn [
+     fhir:index 0;
+     fhir:link <http://xxsomewhere.org/fhir/myig/ServiceRequest/labOrderGuid>;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/labOrderGuid" ]
+  ];
+  fhir:Task.status [ fhir:value "cancelled"];
+  fhir:Task.statusReason [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "Duplicate" ]
+     ]
+  ];
+  fhir:Task.intent [ fhir:value "order"];
+  fhir:Task.executionPeriod [
+     fhir:Period.start [ fhir:value "2022-07-28"^^xsd:date ]
+  ];
+  fhir:Task.lastModified [ fhir:value "2015-02-07"^^xsd:date];
+  fhir:Task.requester [
+     fhir:link <http://xxsomewhere.org/fhir/myig/Organization/Covid19OrganizationExample>;
+     fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
+  ];
+  fhir:Task.owner [
+     fhir:Reference.reference [ fhir:value "Covid19Laboratory" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/Task/Covid19LabOrderCancellationExample.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

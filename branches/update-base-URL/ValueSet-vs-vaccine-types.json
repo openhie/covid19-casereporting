@@ -1,0 +1,140 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-vaccine-types",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM4YL8</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM6QV1</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM3DT5</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM8NQ0</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM8866</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM7HT3</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM1G90</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM9T65</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM5JC5</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM1AG7</li></ul></div>"
+  },
+  "url": "http://openhie.org/fhir/covid-casereporting/ValueSet/vs-vaccine-types",
+  "version": "0.1.0-test",
+  "name": "VSVaccineTypes",
+  "title": "Vaccine Types",
+  "status": "active",
+  "date": "2022-09-15T19:01:40+00:00",
+  "publisher": "OpenHIE",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://xxhl7.org/Special/committees/[something]"
+        }
+      ]
+    }
+  ],
+  "description": "A list of Vaccine Types",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://id.who.int/icd11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM4YL8"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM6QV1"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM3DT5"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM8NQ0"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM8866"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM7HT3"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM1G90"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM9T65"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM5JC5"
+          }
+        ]
+      },
+      {
+        "system": "http://id.who.int/icd11/mms",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "XM1AG7"
+          }
+        ]
+      }
+    ]
+  }
+}
