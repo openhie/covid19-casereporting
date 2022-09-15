@@ -1,12 +1,12 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 195, warn = 87, info = 26
+err = 198, warn = 87, info = 26
 IG Publisher Version: 1.2.1
-Generated Thu Sep 15 13:04:54 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
- Build Errors : 28 / 26 / 0
+Generated Thu Sep 15 14:15:19 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+ Build Errors : 30 / 26 / 0
  /github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 48 / 46 / 43
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 50 / 46 / 43
  /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-cs-cancellation-reason : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-case-report-sections : 2 / 0 / 2
@@ -49,7 +49,7 @@ Generated Thu Sep 15 13:04:54 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccination : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccination-appointment : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-received : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/Task-Covid19LabOrderCancellationExample : 1 / 1 / 1
+ /github/workspace/fsh-generated/resources/Task-Covid19LabOrderCancellationExample : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/Task-LabOrderTaskExample : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-LabResultTaskExample : 1 / 0 / 2
  /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes : 2 / 0 / 1
@@ -123,7 +123,9 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 ERROR: /github/workspace/output/Bundle-Covid19BundleExample.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 222, column 1286: The link 'Covid19ReasonforAssessmentExample' for "Covid19ReasonforAssessmentExample" cannot be resolved
 ERROR: /github/workspace/output/Bundle-Covid19BundleExample.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 222, column 1806: The link 'Covid19PatientOutcomeExample' for "Covid19PatientOutcomeExample" cannot be resolved
 ERROR: /github/workspace/output/Bundle-Covid19BundleExample.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 222, column 2216: The link 'Covid19LabResultsExamples' for "Covid19LabResultsExamples" cannot be resolved
+ERROR: /github/workspace/output/Bundle-Covid19BundleExample.html#/html/body/div/div/div/div/div/div/blockquote/p/p/a at Line 222, column 14363: The link 'Covid19Laboratory' for "Covid19Laboratory" cannot be resolved
 ERROR: /github/workspace/output/ServiceRequest-labOrderGuid.html#/html/body/div/div/div/div/div/div/p/a at Line 222, column 1269: The link 'Covid19Laboratory' for "Covid19Laboratory" cannot be resolved
+ERROR: /github/workspace/output/Task-Covid19LabOrderCancellationExample.html#/html/body/div/div/div/div/div/div/p/a at Line 222, column 1112: The link 'Covid19Laboratory' for "Covid19Laboratory" cannot be resolved
 ERROR: /github/workspace/output/Task-LabOrderTaskExample.html#/html/body/div/div/div/div/div/div/p/a at Line 222, column 771: The link 'Covid19Laboratory' for "Covid19Laboratory" cannot be resolved
 ERROR: /github/workspace/output/Task-LabResultTaskExample.html#/html/body/div/div/div/div/div/div/p/a at Line 222, column 773: The link 'Covid19Laboratory' for "Covid19Laboratory" cannot be resolved
 == fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample.json ==
@@ -216,6 +218,8 @@ ERROR: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(ServiceReque
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[10].resource.ofType(Specimen).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(Task).basedOn[0]: Entry 9 matches the reference ServiceRequest/labOrderGuid by type and id but it's fullUrl Composition/Covid19LabOrderExample does not match the full target URL ServiceRequest/labOrderGuid by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(Task).statusReason.coding[0]: A code with no system has no defined meaning. A system should be provided
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(Task).owner: Relative URLs must be of the format [ResourceName]/[id].  Encountered Covid19Laboratory
+ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(Task).owner: Unable to resolve resource with reference 'Covid19Laboratory'
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(Task).statusReason: None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).basedOn[0]: Relative URLs must be of the format [ResourceName]/[id].  Encountered Covid19LabOrder
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).basedOn[0]: Unable to resolve resource with reference 'Covid19LabOrder'
@@ -392,6 +396,7 @@ ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vac
 == fsh-generated/resources/Task-Covid19LabOrderCancellationExample.json ==
 ERROR: Task/Covid19LabOrderCancellationExample: Task.statusReason: None of the codings provided are in the value set 'Test Types' (http://example.com/fhir/example/ValueSet/vs-cancellation-reason), and a coding from this value set is required) (codes = null#Duplicate)
 WARNING: Task/Covid19LabOrderCancellationExample: Task.statusReason.coding[0]: A code with no system has no defined meaning. A system should be provided
+ERROR: Task/Covid19LabOrderCancellationExample: Task.owner: Unable to resolve resource with reference 'Covid19Laboratory'
 == fsh-generated/resources/Task-LabOrderTaskExample.json ==
 ERROR: Task/LabOrderTaskExample: Task.owner: Unable to resolve resource with reference 'Covid19Laboratory'
 == fsh-generated/resources/Task-LabResultTaskExample.json ==
