@@ -139,6 +139,7 @@ Description: "This Patient profile allows the exchange of patient information, i
 * identifier[national].value 0..1
 * identifier[national].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
 * identifier[pos].value 1..1
+* identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
 
 //* extension contains KeyPopulation named keyPopulation 0..1 MS
 
