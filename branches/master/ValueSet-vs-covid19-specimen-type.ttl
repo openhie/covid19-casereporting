@@ -10,14 +10,14 @@
   fhir:Resource.id [ fhir:value "vs-covid19-specimen-type"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  258500001 (Nasopharyngeal swab)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  461911000124106 (Swab specimen from oropharynx (specimen))</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  119324002 (Specimen of unknown material)</li><li>Include all codes defined in <a href=\"CodeSystem-cs-other.html\"><code>http://openhie.org/fhir/covid-casereporting/CodeSystem/cs-other</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  258500001 (Nasopharyngeal swab)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  461911000124106 (Swab specimen from oropharynx (specimen))</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  119324002 (Specimen of unknown material)</li><li>Include all codes defined in <a href=\"CodeSystem-cs-other.html\"><code>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other</code></a></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "http://openhie.org/fhir/covid-casereporting/ValueSet/vs-covid19-specimen-type"];
+  fhir:ValueSet.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type"];
   fhir:ValueSet.version [ fhir:value "0.1.0-test"];
   fhir:ValueSet.name [ fhir:value "VSCovid19SpecimenType"];
   fhir:ValueSet.title [ fhir:value "Covid19 Specimen Type"];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2022-09-15T19:52:53+00:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2022-09-16T13:03:17+00:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "OpenHIE"];
   fhir:ValueSet.contact [
      fhir:index 0;
@@ -66,7 +66,7 @@
        ]
      ], [
        fhir:index 3;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://openhie.org/fhir/covid-casereporting/CodeSystem/cs-other" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other" ]
      ]
   ] .
 
