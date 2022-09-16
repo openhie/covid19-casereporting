@@ -1,12 +1,12 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 190, warn = 87, info = 26
+err = 184, warn = 93, info = 26
 IG Publisher Version: 1.2.1
-Generated Fri Sep 16 19:46:04 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Fri Sep 16 20:03:50 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 30 / 26 / 0
  /github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 46 / 46 / 43
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 43 / 48 / 43
  /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-cs-cancellation-reason : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-case-report-sections : 2 / 0 / 2
@@ -19,8 +19,8 @@ Generated Fri Sep 16 19:46:04 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Condition-Covid19PresentationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 1 / 2 / 1
- /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 2 / 1 / 2
- /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 1 / 0 / 2
+ /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 1 / 2 / 2
+ /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 0 / 1 / 2
  /github/workspace/fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19TestResultExample : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19VaccineDoseReceivedExample : 1 / 1 / 1
@@ -28,7 +28,7 @@ Generated Fri Sep 16 19:46:04 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Organization-Covid19OrganizationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Covid19PatientExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Practitioner-PractitionerExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ServiceRequest-labOrderGuid : 3 / 1 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-labOrderGuid : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-composition : 2 / 0 / 2
@@ -67,7 +67,7 @@ Generated Fri Sep 16 19:46:04 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-test-types : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types : 2 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types : 2 / 3 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no : 2 / 1 / 1
  /github/workspace/input/covid19-casereporting : 0 / 0 / 1
 </table>
@@ -201,7 +201,7 @@ INFORMATION: Bundle/Covid19BundleExample: Bundle.entry[8].resource.ofType(Immuni
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[8].resource.ofType(Immunization).patient: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[8].resource.ofType(Immunization).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[8].resource.ofType(Immunization).reportOrigin.coding[0]: A code with no system has no defined meaning. A system should be provided
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[8].resource.ofType(Immunization).vaccineCode: None of the codings provided are in the value set 'Vaccine Types' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd11/mms#XM8NQ0)
+WARNING: Bundle/Covid19BundleExample: Bundle.entry[8].resource.ofType(Immunization).vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[8].resource.ofType(Immunization).reportOrigin: None of the codings provided are in the value set 'Source of information - codes' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info), and a coding from this value set is required) (codes = null#VaccineCard)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(ServiceRequest).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(ServiceRequest).encounter: Entry 2 matches the reference Encounter/Covid19AssessmentEncounterExample by type and id but it's fullUrl Composition/Covid19AssessmentEncounterExample does not match the full target URL Encounter/Covid19AssessmentEncounterExample by Bundle resolution rules
@@ -209,7 +209,6 @@ ERROR: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(ServiceReque
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(ServiceRequest).locationReference[0]: Unable to resolve resource with reference 'Covid19Laboratory'
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(ServiceRequest).reasonCode[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(ServiceRequest).specimen[0]: Entry 10 matches the reference Specimen/Covid19SpecimenExample by type and id but it's fullUrl Composition/Covid19SpecimenExample does not match the full target URL Specimen/Covid19SpecimenExample by Bundle resolution rules
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(ServiceRequest).code: None of the codings provided are in the value set 'Test Types' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types), and a coding from this value set is required) (codes = http://loinc.org#94558-4)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[9].resource.ofType(ServiceRequest).reasonCode[0]: None of the codings provided are in the value set 'Assessment Reason valueset' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Surveillance)
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[10].resource.ofType(Specimen).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[11].resource.ofType(Task).basedOn[0]: Entry 9 matches the reference ServiceRequest/labOrderGuid by type and id but it's fullUrl Composition/Covid19LabOrderExample does not match the full target URL ServiceRequest/labOrderGuid by Bundle resolution rules
@@ -223,7 +222,7 @@ WARNING: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(Diagnosti
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[12].resource.ofType(DiagnosticReport).result[0]: Entry 13 matches the reference Observation/Covid19TestResultExample by type and id but it's fullUrl Composition/Covid19TestResultExample does not match the full target URL Observation/Covid19TestResultExample by Bundle resolution rules
 INFORMATION: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).patient: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).vaccineCode: None of the codings provided are in the value set 'Vaccine Types' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd11/mms#XM4YL8)
+WARNING: Bundle/Covid19BundleExample: Bundle.entry[14].resource.ofType(Immunization).vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[15].resource.ofType(Appointment): Rule app-2: 'Either start and end are specified, or neither' Failed
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[15].resource.ofType(Appointment).participant[0].actor: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.author[1].reference: Can't find 'Organization/Covid19OrganizationExample' in the bundle (Composition.author)
@@ -295,12 +294,12 @@ WARNING: Encounter/Covid19AssessmentEncounterExample: Encounter.class: A code wi
 ERROR: Encounter/Covid19AssessmentEncounterExample: Encounter.reasonCode[0]: None of the codings provided are in the value set 'Assessment Reason valueset' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Other)
 WARNING: Encounter/Covid19AssessmentEncounterExample: Encounter.reasonCode[0].coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json ==
-ERROR: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode: None of the codings provided are in the value set 'Vaccine Types' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd11/mms#XM8NQ0)
+WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
 ERROR: Immunization/Covid19AssessmentVaccinationExample: Immunization.reportOrigin: None of the codings provided are in the value set 'Source of information - codes' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info), and a coding from this value set is required) (codes = null#VaccineCard)
 WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.reportOrigin.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/Immunization-Covid19VaccinationExample.json ==
-ERROR: Immunization/Covid19VaccinationExample: Immunization.vaccineCode: None of the codings provided are in the value set 'Vaccine Types' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types), and a coding from this value set is required) (codes = http://id.who.int/icd11/mms#XM4YL8)
+WARNING: Immunization/Covid19VaccinationExample: Immunization.vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
 == fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample.json ==
 ERROR: MedicationRequest/Covid19MedicationRequestExample: MedicationRequest.medication.ofType(CodeableConcept): None of the codings provided are in the value set 'COVID Treatmens dispensed or prescribed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed), and a coding from this value set is required) (codes = null#Paxlovid)
@@ -315,7 +314,6 @@ WARNING: Observation/Covid19VaccineDoseReceivedExample: Observation.value.ofType
 == fsh-generated/resources/Patient-Covid19PatientExample.json ==
 == fsh-generated/resources/Practitioner-PractitionerExample.json ==
 == fsh-generated/resources/ServiceRequest-labOrderGuid.json ==
-ERROR: ServiceRequest/labOrderGuid: ServiceRequest.code: None of the codings provided are in the value set 'Test Types' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types), and a coding from this value set is required) (codes = http://loinc.org#94558-4)
 ERROR: ServiceRequest/labOrderGuid: ServiceRequest.locationReference[0]: Unable to resolve resource with reference 'Covid19Laboratory'
 ERROR: ServiceRequest/labOrderGuid: ServiceRequest.reasonCode[0]: None of the codings provided are in the value set 'Assessment Reason valueset' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-assessment-reason), and a coding from this value set is required) (codes = null#Surveillance)
 WARNING: ServiceRequest/labOrderGuid: ServiceRequest.reasonCode[0].coding[0]: A code with no system has no defined meaning. A system should be provided
@@ -441,6 +439,8 @@ ERROR: ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/Value
 ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed: URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-treatment-dispensed-prescribed vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed
 == fsh-generated/resources/ValueSet-vs-vaccine-types.json ==
 ERROR: ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-vaccine-types) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types)
+WARNING: ValueSet/vs-vaccine-types: ValueSet.compose.include[0].concept[9].display: value should not start or finish with whitespace 'CanSino '
+WARNING: ValueSet/vs-vaccine-types: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
 WARNING: ValueSet.where(id = 'vs-vaccine-types'): Error from server: Unable to provide support for code system http://id.who.int/icd11/mms
 ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types: URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-vaccine-types vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types
 == fsh-generated/resources/ValueSet-vs-yes-no.json ==
