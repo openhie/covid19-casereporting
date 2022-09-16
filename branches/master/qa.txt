@@ -1,12 +1,12 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 198, warn = 87, info = 26
+err = 192, warn = 87, info = 26
 IG Publisher Version: 1.2.1
-Generated Fri Sep 16 13:04:55 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Fri Sep 16 14:34:02 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 30 / 26 / 0
  /github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 50 / 46 / 43
+ /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 47 / 46 / 43
  /github/workspace/fsh-generated/resources/ClinicalImpression-Covid19SymptomExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/CodeSystem-cs-cancellation-reason : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-case-report-sections : 2 / 0 / 2
@@ -26,7 +26,7 @@ Generated Fri Sep 16 13:04:55 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Observation-Covid19VaccineDoseReceivedExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/Organization-Covid19LaboratoryExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Organization-Covid19OrganizationExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Patient-Covid19PatientExample : 3 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-Covid19PatientExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Practitioner-PractitionerExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ServiceRequest-labOrderGuid : 3 / 1 / 1
  /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenExample : 0 / 0 / 1
@@ -172,9 +172,6 @@ ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[3].entry[0]: Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Reference.reference in profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-composition)
 ERROR: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[3].entry[1]: Slicing cannot be evaluated: Profile based discriminators must have a type with a profile (Reference.reference in profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-composition)
 INFORMATION: Bundle/Covid19BundleExample: Bundle.entry[0].resource.ofType(Composition).section[3]: Composition.section:covid19VaccinationSection.entry:covid19Vaccination: Unable to check minimum required (Composition.section.entry) due to lack of slicing validation (from http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-composition)
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.ofType(Patient).identifier[0]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.ofType(Patient).identifier[1]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
-ERROR: Bundle/Covid19BundleExample: Bundle.entry[1].resource.ofType(Patient).identifier[2]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[2].resource.ofType(Encounter).class: A code with no system has no defined meaning. A system should be provided
 WARNING: Bundle/Covid19BundleExample: Bundle.entry[2].resource.ofType(Encounter).subject: Entry 1 matches the reference Patient/Covid19PatientExample by type and id but it's fullUrl Composition/Covid19PatientExample does not match the full target URL Patient/Covid19PatientExample by Bundle resolution rules
 INFORMATION: Bundle/Covid19BundleExample: Bundle.entry[2].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason), and a coding is recommended to come from this value set) (codes = null#Other)
@@ -318,9 +315,6 @@ WARNING: Observation/Covid19VaccineDoseReceivedExample: Observation.value.ofType
 == fsh-generated/resources/Organization-Covid19LaboratoryExample.json ==
 == fsh-generated/resources/Organization-Covid19OrganizationExample.json ==
 == fsh-generated/resources/Patient-Covid19PatientExample.json ==
-ERROR: Patient/Covid19PatientExample: Patient.identifier[0]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
-ERROR: Patient/Covid19PatientExample: Patient.identifier[1]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
-ERROR: Patient/Covid19PatientExample: Patient.identifier[2]: Slicing cannot be evaluated: Could not match discriminator ([system]) for slice Patient.identifier:pos in profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient - the discriminator [system] does not have fixed value, binding or existence assertions
 == fsh-generated/resources/Practitioner-PractitionerExample.json ==
 == fsh-generated/resources/ServiceRequest-labOrderGuid.json ==
 ERROR: ServiceRequest/labOrderGuid: ServiceRequest.code: None of the codings provided are in the value set 'Test Types' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types), and a coding from this value set is required) (codes = http://loinc.org#94558-4)
