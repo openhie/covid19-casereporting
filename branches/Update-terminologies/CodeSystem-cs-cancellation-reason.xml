@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cs-cancellation-reason"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-cancellation-reason</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">Duplicate<a name="cs-cancellation-reason-Duplicate"> </a></td><td>duplicate orders</td></tr><tr><td style="white-space:nowrap">PCR<a name="cs-cancellation-reason-PCR"> </a></td><td>Improperly ordered</td></tr><tr><td style="white-space:nowrap">VOID<a name="cs-cancellation-reason-VOID"> </a></td><td>No longer required</td></tr><tr><td style="white-space:nowrap">NoSample<a name="cs-cancellation-reason-NoSample"> </a></td><td>No sample collected</td></tr><tr><td style="white-space:nowrap">Old<a name="cs-cancellation-reason-Old"> </a></td><td>Old order, Wrong entry</td></tr></table></div>
+  </text>
+  <url value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-cancellation-reason"/>
+  <version value="0.1.0-test"/>
+  <name value="CSCancellationReason"/>
+  <title value="Cancellation Reasons"/>
+  <status value="active"/>
+  <date value="2022-09-16T20:02:42+00:00"/>
+  <publisher value="OpenHIE"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://xxhl7.org/Special/committees/[something]"/>
+    </telecom>
+  </contact>
+  <description value="A list of Cancellation Reasons"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <content value="complete"/>
+  <count value="5"/>
+  <concept>
+    <code value="Duplicate"/>
+    <display value="duplicate orders"/>
+  </concept>
+  <concept>
+    <code value="PCR"/>
+    <display value="Improperly ordered"/>
+  </concept>
+  <concept>
+    <code value="VOID"/>
+    <display value="No longer required"/>
+  </concept>
+  <concept>
+    <code value="NoSample"/>
+    <display value="No sample collected"/>
+  </concept>
+  <concept>
+    <code value="Old"/>
+    <display value="Old order, Wrong entry"/>
+  </concept>
+</CodeSystem>
