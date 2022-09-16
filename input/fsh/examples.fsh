@@ -171,20 +171,6 @@ Description: "Covid19 Symptom example"
 * code = $SCT#21522001 
 * investigation.code = #JointPain
 
-/*
-Instance: Covid19ComorbidityPresentExample
-InstanceOf: Observation
-Usage: #example
-Title: "Covid19 Comorbidity Present example"
-Description: "Covid19 Comorbidity Present example"
-* encounter = Reference(Covid19AssessmentEncounterExample) 
-* subject = Reference(Covid19PatientExample) 
-* status = #final
-* code = $LNC#83243-6  
-* valueCodeableConcept = #Yes
-* valueDateTime = "2022-07-28"
-*/
-
 Instance: Covid19ConditionsComorbidityExample
 InstanceOf: Covid19ConditionsComorbidity
 Usage: #example
@@ -217,20 +203,7 @@ Description: "Covid19 Treatment dispensed or prescribed example"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * medicationCodeableConcept = #Paxlovid
-/*
-Instance: HIVDiagnosisExample
-InstanceOf: HIVDiagnosis
-Usage: #example
-Title: "HIV Condition example"
-Description: "HIV Condition example"
-* clinicalStatus = #active
-* verificationStatus = #confirmed
-* code = $SCT#86406008
-* subject = Reference(Covid19PatientExample)
-* recordedDate = "2021-05-18"
-* identifier[+].system = "http://openhie.org/fhir/hiv-casereporting/identifier/hiv-diagnosis"
-* identifier[=].value = "abc"
-*/
+
 Instance: Covid19AssessmentVaccinationExample
 InstanceOf: Covid19AssessmentVaccination
 Usage: #example
