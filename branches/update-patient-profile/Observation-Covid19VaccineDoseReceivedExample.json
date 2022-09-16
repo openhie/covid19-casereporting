@@ -1,0 +1,32 @@
+{
+  "resourceType": "Observation",
+  "id": "Covid19VaccineDoseReceivedExample",
+  "meta": {
+    "profile": [
+      "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-received"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19VaccineDoseReceivedExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19VaccineDoseReceivedExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-vaccine-dose-received.html\">Covid19 Vaccine Dose Received</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbid condition <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#75618-9)</span></p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Yes)</span></p></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "75618-9"
+      }
+    ]
+  },
+  "encounter": {
+    "reference": "Encounter/Covid19AssessmentEncounterExample"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "Yes"
+      }
+    ]
+  }
+}
