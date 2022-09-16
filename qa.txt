@@ -1,9 +1,9 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 192, warn = 87, info = 26
+err = 190, warn = 87, info = 26
 IG Publisher Version: 1.2.1
-Generated Fri Sep 16 14:34:02 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Fri Sep 16 18:50:08 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 30 / 26 / 0
  /github/workspace/fsh-generated/resources/Appointment-Covid19VaccinationAppointmentExample : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/Bundle-Covid19BundleExample : 47 / 46 / 43
@@ -33,7 +33,7 @@ Generated Fri Sep 16 14:34:02 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-composition : 2 / 0 / 2
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-comorbidity : 2 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis : 6 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis : 4 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order-cancellation : 2 / 0 / 1
@@ -335,9 +335,7 @@ ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-con
 == fsh-generated/resources/StructureDefinition-covid19-diagnosis.json ==
 ERROR: StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-diagnosis) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis)
 ERROR: Covid19 Diagnosis.Condition.clinicalStatus: Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome is not a subset of binding http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1
-ERROR: Covid19 Diagnosis.Condition.verificationStatus: Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis is not a subset of binding http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1
 ERROR: StructureDefinition/covid19-diagnosis: StructureDefinition: Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome is not a subset of binding http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1
-ERROR: StructureDefinition/covid19-diagnosis: StructureDefinition: Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis is not a subset of binding http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1
 ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis: URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-diagnosis vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis
 == fsh-generated/resources/StructureDefinition-covid19-encounter.json ==
 ERROR: StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-encounter) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter)

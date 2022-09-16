@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="vs-covid-diagnosis"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  410605003 (Confirmed present (qualifier value))</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  2931005 (Probable diagnosis)</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  415684004 (Suspected (qualifier value))</li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a></li></ul></div>
   </text>
   <url value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis"/>
   <version value="0.1.0-test"/>
   <name value="VSCovidDiagnosis"/>
   <title value="COVID Diagnosis list"/>
   <status value="active"/>
-  <date value="2022-09-16T14:32:23+00:00"/>
+  <date value="2022-09-16T18:48:28+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -28,27 +28,6 @@
   <compose>
     <include>
       <system value="http://snomed.info/sct"/>
-      <filter>
-        <property value="concept"/>
-        <op value="is-a"/>
-        <value value="410605003"/>
-      </filter>
-    </include>
-    <include>
-      <system value="http://snomed.info/sct"/>
-      <filter>
-        <property value="concept"/>
-        <op value="is-a"/>
-        <value value="2931005"/>
-      </filter>
-    </include>
-    <include>
-      <system value="http://snomed.info/sct"/>
-      <filter>
-        <property value="concept"/>
-        <op value="is-a"/>
-        <value value="415684004"/>
-      </filter>
     </include>
   </compose>
 </ValueSet>
