@@ -88,9 +88,10 @@ ValueSet: VSCovidDiagnosis
 Id: vs-covid-diagnosis
 Title: "COVID Diagnosis list"
 Description: "COVID Diagnosis list"
-* include codes from system $SCT where concept is-a #410605003 "Confirmed"
-* include codes from system $SCT where concept is-a #2931005 "Probable"
-* include codes from system $SCT where concept is-a #415684004 "Suspect"
+// * include codes from system $SCT where concept is-a #410605003 "Confirmed"
+// * include codes from system $SCT where concept is-a #2931005 "Probable"
+// * include codes from system $SCT where concept is-a #415684004 "Suspect"
+* include codes from system $SCT
 
 ValueSet: VSConditionsComorbidity
 Id: vs-conditions-comorbidity
