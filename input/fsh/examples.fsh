@@ -95,7 +95,7 @@ Description: "Covid19 Organization example"
 * address[=].postalCode = "CARES postal code"
 * name = "Covid19 Organization"
 * identifier[+].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
-* identifier[=].value = "facility1"
+* identifier[=].value = "facility"
 
 Instance: Covid19PatientExample
 InstanceOf: Covid19Patient
@@ -120,7 +120,7 @@ Description: "Covid19 Patient example"
 * identifier[national].value = "NAT1234567"
 * identifier[national].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
 * identifier[pos].value = "EMR1234567"
-* identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility1"
+* identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
 * managingOrganization = Reference(Covid19OrganizationExample)
 * contact[0].relationship.coding.code = #N   //https://hl7.org/fhir/valueset-patient-contactrelationship.html
 * contact[0].relationship.coding.system =  "http://terminology.hl7.org/CodeSystem/v2-0131"
