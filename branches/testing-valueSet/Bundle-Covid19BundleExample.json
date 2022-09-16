@@ -1,0 +1,783 @@
+{
+  "resourceType": "Bundle",
+  "id": "Covid19BundleExample",
+  "type": "document",
+  "entry": [
+    {
+      "fullUrl": "Composition/Covid19CompositionExample",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "Covid19CompositionExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-composition"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"Covid19CompositionExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition \"Covid19CompositionExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-composition.html\">Covid19 Case Reporting Composition</a></p></div><p><b>identifier</b>: id: 1111</p><p><b>status</b>: final</p><p><b>type</b>: COVID-19 case report <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#95412-3)</span></p><p><b>date</b>: 2022-08-04</p><p><b>author</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>title</b>: Covid19 Case Report</p></div>"
+        },
+        "identifier": {
+          "system": "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-case-report",
+          "value": "1111"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "95412-3"
+            }
+          ]
+        },
+        "date": "2022-08-04",
+        "author": [
+          {
+            "reference": "Organization/Covid19OrganizationExample"
+          }
+        ],
+        "title": "Covid19 Case Report",
+        "section": [
+          {
+            "title": "Client registration",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-case-report-sections",
+                  "code": "CLIENT-REGISTRATION"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Patient/Covid19PatientExample"
+              }
+            ]
+          },
+          {
+            "title": "Covid19 Assessment Encounter",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-case-report-sections",
+                  "code": "COVID-ASSESSMENT"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Encounter/Covid19AssessmentEncounterExample"
+              },
+              {
+                "reference": "Covid19ReasonforAssessmentExample"
+              },
+              {
+                "reference": "Condition/Covid19PresentationExample"
+              },
+              {
+                "reference": "ClinicalImpression/Covid19SymptomExample"
+              },
+              {
+                "reference": "Condition/Covid19DiagnosisExample"
+              },
+              {
+                "reference": "Immunization/Covid19AssessmentVaccinationExample"
+              },
+              {
+                "reference": "Covid19PatientOutcomeExample"
+              }
+            ]
+          },
+          {
+            "title": "Lab Order Management",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-case-report-sections",
+                  "code": "LABORDER-MANAGEMENT"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "ServiceRequest/labOrderGuid"
+              },
+              {
+                "reference": "Specimen/Covid19SpecimenExample"
+              },
+              {
+                "reference": "Task/Covid19LabOrderCancellationExample"
+              },
+              {
+                "reference": "Covid19LabResultsExamples"
+              }
+            ]
+          },
+          {
+            "title": "Covid 19 Vaccination",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-case-report-sections",
+                  "code": "COVID-VACCINATION"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Immunization/Covid19VaccinationExample"
+              },
+              {
+                "reference": "Appointment/Covid19VaccinationAppointmentExample"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19PatientExample",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Covid19PatientExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Covid19PatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Covid19PatientExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-patient.html\">Covid19 Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567, id: EMR1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Smith (OFFICIAL)</p><p><b>telecom</b>: <a href=\"tel:+27825556666\">+27825556666</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><h3>Contacts</h3><table class=\"grid\"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/4.0.0/CodeSystem-v2-0131.html\">contactRole2</a>#N)</span></td><td>John </td><td>ph: -unknown-</td></tr></table><p><b>managingOrganization</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://openhie.org/fhir/covid19-casereporting/identifier/passport",
+            "value": "PASSPORT1234567"
+          },
+          {
+            "system": "http://openhie.org/fhir/covid19-casereporting/identifier/nid",
+            "value": "NAT1234567"
+          },
+          {
+            "system": "http://openhie.org/fhir/covid19-casereporting/identifier/facility",
+            "value": "EMR1234567"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Smith",
+            "given": [
+              "Jane"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+27825556666"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1986-06-04",
+        "address": [
+          {
+            "city": "Cape Town",
+            "district": "City of Cape Town",
+            "state": "Western Province",
+            "country": "South Africa"
+          }
+        ],
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                    "code": "N"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "family": "John"
+            },
+            "telecom": [
+              {
+                "system": "phone"
+              }
+            ]
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/Covid19OrganizationExample"
+        }
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19AssessmentEncounterExample",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Covid19AssessmentEncounterExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"Covid19AssessmentEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter \"Covid19AssessmentEncounterExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Covid19 Assessment Encounter</a></p></div><p><b>status</b>: finished</p><p><b>class</b>: SS (Details: [not stated] code SS = 'SS', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Other specified details <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Other)</span></p><h3>Diagnoses</h3><table class=\"grid\"><tr><td>-</td><td><b>Condition</b></td></tr><tr><td>*</td><td><a href=\"#Condition_Covid19PresentationExample\">See above (Condition/Covid19PresentationExample)</a></td></tr></table></div>"
+        },
+        "status": "finished",
+        "class": {
+          "code": "SS"
+        },
+        "subject": {
+          "reference": "Patient/Covid19PatientExample"
+        },
+        "period": {
+          "start": "2022-07-28",
+          "end": "2022-08-15"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "Other"
+              }
+            ],
+            "text": "Other specified details"
+          }
+        ],
+        "diagnosis": [
+          {
+            "condition": {
+              "reference": "Condition/Covid19PresentationExample"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19PresentationExample",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Covid19PresentationExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presentation"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"Covid19PresentationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition \"Covid19PresentationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-presentation.html\">Covid19 Presentation</a></p></div><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><h3>Evidences</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Asymptomatic <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#84387000)</span></td></tr></table></div>"
+        },
+        "subject": {
+          "reference": "Patient/Covid19PatientExample"
+        },
+        "encounter": {
+          "reference": "Encounter/Covid19AssessmentEncounterExample"
+        },
+        "evidence": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "84387000"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19SymptomExample",
+      "resource": {
+        "resourceType": "ClinicalImpression",
+        "id": "Covid19SymptomExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-symptom"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ClinicalImpression</b><a name=\"Covid19SymptomExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ClinicalImpression \"Covid19SymptomExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-symptom.html\">Covid19 Symptom</a></p></div><p><b>status</b>: completed</p><p><b>code</b>: Abdominal pain <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#21522001)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><h3>Investigations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>JointPain <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#JointPain)</span></td></tr></table></div>"
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "21522001"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Covid19PatientExample"
+        },
+        "encounter": {
+          "reference": "Encounter/Covid19AssessmentEncounterExample"
+        },
+        "investigation": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "JointPain"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19ConditionsComorbidityExample",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Covid19ConditionsComorbidityExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-comorbidity"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"Covid19ConditionsComorbidityExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition \"Covid19ConditionsComorbidityExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-conditions-comorbidity.html\">Covid19 Conditions or comorbidity</a></p></div><p><b>code</b>: Other <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Other)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>note</b>: Other condition details specified here</p></div>"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "Other"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Covid19PatientExample"
+        },
+        "encounter": {
+          "reference": "Encounter/Covid19AssessmentEncounterExample"
+        },
+        "note": [
+          {
+            "text": "Other condition details specified here"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19DiagnosisExample",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Covid19DiagnosisExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"Covid19DiagnosisExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition \"Covid19DiagnosisExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-diagnosis.html\">Covid19 Diagnosis</a></p></div><p><b>clinicalStatus</b>: Patient condition resolved (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#370996005)</span></p><p><b>verificationStatus</b>: 410605003 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#410605003)</span></p><p><b>code</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Confirmed)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>recordedDate</b>: 2022-07-28</p></div>"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "370996005"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "410605003"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "Confirmed"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Covid19PatientExample"
+        },
+        "encounter": {
+          "reference": "Encounter/Covid19AssessmentEncounterExample"
+        },
+        "recordedDate": "2022-07-28"
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19VaccineDoseReceivedExample",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Covid19VaccineDoseReceivedExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-received"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19VaccineDoseReceivedExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19VaccineDoseReceivedExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-vaccine-dose-received.html\">Covid19 Vaccine Dose Received</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Comorbid condition <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#75618-9)</span></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>value</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Yes)</span></p></div>"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "75618-9"
+            }
+          ]
+        },
+        "encounter": {
+          "reference": "Encounter/Covid19AssessmentEncounterExample"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "Yes"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19AssessmentVaccinationExample",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "Covid19AssessmentVaccinationExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Immunization</b><a name=\"Covid19AssessmentVaccinationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Immunization \"Covid19AssessmentVaccinationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-assessment-vaccination.html\">Covid19 Vaccination info included as part of the Assessment</a></p></div><p><b>status</b>: completed</p><p><b>vaccineCode</b>: XM8NQ0 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (mms#XM8NQ0)</span></p><p><b>patient</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>occurrence</b>: 2022-07-28</p><p><b>reportOrigin</b>: VaccineCard <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#VaccineCard)</span></p><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td>-</td><td><b>Series</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td>*</td><td>Booster</td><td>1</td></tr></table></div>"
+        },
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://id.who.int/icd11/mms",
+              "code": "XM8NQ0"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/Covid19PatientExample"
+        },
+        "encounter": {
+          "reference": "Encounter/Covid19AssessmentEncounterExample"
+        },
+        "occurrenceDateTime": "2022-07-28",
+        "reportOrigin": {
+          "coding": [
+            {
+              "code": "VaccineCard"
+            }
+          ]
+        },
+        "protocolApplied": [
+          {
+            "series": "Booster",
+            "doseNumberPositiveInt": 1
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19LabOrderExample",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "labOrderGuid",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"labOrderGuid\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest \"labOrderGuid\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order.html\">Covid19 Lab Order</a></p></div><p><b>identifier</b>: id: testOrderNumber</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#94558-4)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>authoredOn</b>: 2022-07-28</p><p><b>requester</b>: <a href=\"Practitioner-PractitionerExample.html\">Practitioner/PractitionerExample</a> \" SMITH\"</p><p><b>locationReference</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p><p><b>reasonCode</b>: Surveillance <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Surveillance)</span></p><p><b>specimen</b>: <a href=\"#Specimen_Covid19SpecimenExample\">See above (Specimen/Covid19SpecimenExample)</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://example.com/fhir/lab-integration/test-order-number",
+            "value": "testOrderNumber"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "94558-4"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Covid19PatientExample"
+        },
+        "encounter": {
+          "reference": "Encounter/Covid19AssessmentEncounterExample"
+        },
+        "authoredOn": "2022-07-28",
+        "requester": {
+          "reference": "Practitioner/PractitionerExample"
+        },
+        "locationReference": [
+          {
+            "reference": "Covid19Laboratory"
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "Surveillance"
+              }
+            ]
+          }
+        ],
+        "specimen": [
+          {
+            "reference": "Specimen/Covid19SpecimenExample"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19SpecimenExample",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "Covid19SpecimenExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Specimen</b><a name=\"Covid19SpecimenExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Specimen \"Covid19SpecimenExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-specimen.html\">Covid19 Specimen</a></p></div><p><b>identifier</b>: id: SPECIMEN109191879</p><p><b>type</b>: Nasopharyngeal swab <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#258500001)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td>-</td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td>2022-07-28</td></tr></table></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://covid19laborder.org/specimen",
+            "value": "SPECIMEN109191879"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "258500001"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Covid19PatientExample"
+        },
+        "collection": {
+          "collectedDateTime": "2022-07-28"
+        }
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19LabOrderCancellationExample",
+      "resource": {
+        "resourceType": "Task",
+        "id": "Covid19LabOrderCancellationExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order-cancellation"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"Covid19LabOrderCancellationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"Covid19LabOrderCancellationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order-cancellation.html\">Covid19 Lab Order Cancellation</a></p></div><p><b>basedOn</b>: <a href=\"#ServiceRequest_labOrderGuid\">See above (ServiceRequest/labOrderGuid)</a></p><p><b>status</b>: cancelled</p><p><b>statusReason</b>: Duplicate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Duplicate)</span></p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>owner</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p></div>"
+        },
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/labOrderGuid"
+          }
+        ],
+        "status": "cancelled",
+        "statusReason": {
+          "coding": [
+            {
+              "code": "Duplicate"
+            }
+          ]
+        },
+        "intent": "order",
+        "executionPeriod": {
+          "start": "2022-07-28"
+        },
+        "lastModified": "2015-02-07",
+        "requester": {
+          "reference": "Organization/Covid19OrganizationExample"
+        },
+        "owner": {
+          "reference": "Covid19Laboratory"
+        }
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19LabResultsDiagnosticReportExample",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "Covid19LabResultsDiagnosticReportExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-results"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b><a name=\"Covid19LabResultsDiagnosticReportExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport \"Covid19LabResultsDiagnosticReportExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-results.html\">Covid19 Lab Results Diagnostic Report</a></p></div><p><b>identifier</b>: id: ?ngen-9?</p><p><b>basedOn</b>: <a href=\"Covid19LabOrder\">Covid19LabOrder</a></p><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#100156-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>effective</b>: 2022-07-28</p><p><b>performer</b>: <a href=\"Practitioner-PractitionerExample.html\">Practitioner/PractitionerExample</a> \" SMITH\"</p><p><b>result</b>: <a href=\"#Observation_Covid19TestResultExample\">See above (Observation/Covid19TestResultExample)</a></p></div>"
+        },
+        "identifier": [
+          {
+            "id": "12341324"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "Covid19LabOrder"
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "100156-9"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Covid19PatientExample"
+        },
+        "effectiveDateTime": "2022-07-28",
+        "performer": [
+          {
+            "reference": "Practitioner/PractitionerExample"
+          }
+        ],
+        "result": [
+          {
+            "reference": "Observation/Covid19TestResultExample"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19TestResultExample",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Covid19TestResultExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19TestResultExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19TestResultExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-test-results.html\">Covid19 Lab Results</a></p></div><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#94558-4)</span></p><p><b>value</b>: Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#10828004)</span></p></div>"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "94558-4"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "10828004"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19VaccinationExample",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "Covid19VaccinationExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Immunization</b><a name=\"Covid19VaccinationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Immunization \"Covid19VaccinationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-vaccination.html\">Covid19 Vaccination</a></p></div><p><b>status</b>: completed</p><p><b>vaccineCode</b>: XM4YL8 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (mms#XM4YL8)</span></p><p><b>patient</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>occurrence</b>: 2022-07-28</p><p><b>lotNumber</b>: 1</p><p><b>expirationDate</b>: 2022-12-28</p><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td>-</td><td><b>Series</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td>*</td><td>Booster</td><td>1</td></tr></table></div>"
+        },
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://id.who.int/icd11/mms",
+              "code": "XM4YL8"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/Covid19PatientExample"
+        },
+        "occurrenceDateTime": "2022-07-28",
+        "lotNumber": "1",
+        "expirationDate": "2022-12-28",
+        "protocolApplied": [
+          {
+            "series": "Booster",
+            "doseNumberPositiveInt": 1
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Composition/Covid19VaccinationAppointmentExample",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "Covid19VaccinationAppointmentExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination-appointment"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Appointment</b><a name=\"Covid19VaccinationAppointmentExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Appointment \"Covid19VaccinationAppointmentExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-vaccination-appointment.html\">Covid19 Vaccination Appointment</a></p></div><p><b>status</b>: proposed</p><p><b>start</b>: Feb 7, 2015, 11:28:17 AM</p><h3>Participants</h3><table class=\"grid\"><tr><td>-</td><td><b>Actor</b></td><td><b>Status</b></td></tr><tr><td>*</td><td><a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></td><td>tentative</td></tr></table></div>"
+        },
+        "status": "proposed",
+        "start": "2015-02-07T13:28:17.239+02:00",
+        "participant": [
+          {
+            "actor": {
+              "reference": "Patient/Covid19PatientExample"
+            },
+            "status": "tentative"
+          }
+        ]
+      }
+    }
+  ]
+}

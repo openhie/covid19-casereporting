@@ -1,0 +1,60 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-test-types",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://loinc.org\"><code>http://loinc.org</code></a> where concept  is-a  94558-4 (SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay)</li><li>Include codes from <a href=\"http://loinc.org\"><code>http://loinc.org</code></a> where concept  is-a  94745-7 (SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection)</li></ul></div>"
+  },
+  "url": "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types",
+  "version": "0.1.0-test",
+  "name": "VSTestTypes",
+  "title": "Test Types",
+  "status": "active",
+  "date": "2022-09-16T18:48:28+00:00",
+  "publisher": "OpenHIE",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://xxhl7.org/Special/committees/[something]"
+        }
+      ]
+    }
+  ],
+  "description": "A list of Test Types",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "94558-4"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "94745-7"
+          }
+        ]
+      }
+    ]
+  }
+}
