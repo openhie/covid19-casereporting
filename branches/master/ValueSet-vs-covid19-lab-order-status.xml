@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="vs-covid19-lab-order-status"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  255594003 (Complete)</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  255594003 (Complete)</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  89925002 (Canceled (qualifier value))</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  385660001 (Not done (qualifier value))</li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/255594003">255594003</a></td><td>Pending</td></tr><tr><td><a href="http://snomed.info/id/89925002">89925002</a></td><td>Cancelled</td></tr><tr><td><a href="http://snomed.info/id/385660001">385660001</a></td><td>Not done</td></tr></table></li></ul></div>
   </text>
   <url value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-lab-order-status"/>
   <version value="0.1.0-test"/>
   <name value="VSLabOrderStatus"/>
   <title value="Covid19 Lab Order Status"/>
   <status value="active"/>
-  <date value="2022-09-16T19:44:32+00:00"/>
+  <date value="2022-09-16T20:08:29+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -28,35 +28,18 @@
   <compose>
     <include>
       <system value="http://snomed.info/sct"/>
-      <filter>
-        <property value="concept"/>
-        <op value="is-a"/>
-        <value value="255594003"/>
-      </filter>
-    </include>
-    <include>
-      <system value="http://snomed.info/sct"/>
-      <filter>
-        <property value="concept"/>
-        <op value="is-a"/>
-        <value value="255594003"/>
-      </filter>
-    </include>
-    <include>
-      <system value="http://snomed.info/sct"/>
-      <filter>
-        <property value="concept"/>
-        <op value="is-a"/>
-        <value value="89925002"/>
-      </filter>
-    </include>
-    <include>
-      <system value="http://snomed.info/sct"/>
-      <filter>
-        <property value="concept"/>
-        <op value="is-a"/>
-        <value value="385660001"/>
-      </filter>
+      <concept>
+        <code value="255594003"/>
+        <display value="Pending"/>
+      </concept>
+      <concept>
+        <code value="89925002"/>
+        <display value="Cancelled"/>
+      </concept>
+      <concept>
+        <code value="385660001"/>
+        <display value="Not done"/>
+      </concept>
     </include>
   </compose>
 </ValueSet>

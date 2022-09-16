@@ -3,14 +3,14 @@
   "id": "vs-covid19-reason-test-not-performed",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  441510007 (Blood specimen with anticoagulant)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  123840003 (Sample contaminated)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  397933008 (Equipment error/failure (finding))</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  281264009 (Inappropriate bottle or container for sample)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  281268007 (Insufficient sample)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  281265005 (Sample incorrectly labeled (finding))</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  419182006 (Supplies not available (finding))</li><li>Include all codes defined in <a href=\"CodeSystem-cs-other.html\"><code>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other</code></a></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/441510007\">441510007</a></td><td>Blood sample coagulated</td></tr><tr><td><a href=\"http://snomed.info/id/123840003\">123840003</a></td><td>Contaminated specimen</td></tr><tr><td><a href=\"http://snomed.info/id/397933008\">397933008</a></td><td>Equipment failure</td></tr><tr><td><a href=\"http://snomed.info/id/281264009\">281264009</a></td><td>Inappropriate sample container used</td></tr><tr><td><a href=\"http://snomed.info/id/281268007\">281268007</a></td><td>Insufficient sample</td></tr><tr><td><a href=\"http://snomed.info/id/281265005\">281265005</a></td><td>Specimen not labeled</td></tr><tr><td><a href=\"http://snomed.info/id/419182006\">419182006</a></td><td>Supplies not available</td></tr></table></li><li>Include all codes defined in <a href=\"CodeSystem-cs-other.html\"><code>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other</code></a></li></ul></div>"
   },
   "url": "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-test-not-performed",
   "version": "0.1.0-test",
   "name": "VSReasonTestNotPerformed",
   "title": "Covid19 Specimen Type",
   "status": "active",
-  "date": "2022-09-16T19:44:32+00:00",
+  "date": "2022-09-16T20:08:29+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -37,71 +37,34 @@
     "include": [
       {
         "system": "http://snomed.info/sct",
-        "filter": [
+        "concept": [
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "441510007"
-          }
-        ]
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "filter": [
+            "code": "441510007",
+            "display": "Blood sample coagulated"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "123840003"
-          }
-        ]
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "filter": [
+            "code": "123840003",
+            "display": "Contaminated specimen"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "397933008"
-          }
-        ]
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "filter": [
+            "code": "397933008",
+            "display": "Equipment failure"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "281264009"
-          }
-        ]
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "filter": [
+            "code": "281264009",
+            "display": "Inappropriate sample container used"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "281268007"
-          }
-        ]
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "filter": [
+            "code": "281268007",
+            "display": "Insufficient sample"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "281265005"
-          }
-        ]
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "filter": [
+            "code": "281265005",
+            "display": "Specimen not labeled"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "419182006"
+            "code": "419182006",
+            "display": "Supplies not available"
           }
         ]
       },

@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="vs-patient-outcome"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  370996005 (Patient condition resolved (finding))</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  419099009 (Dead (finding))</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  1119303003 (Post-acute COVID-19)</li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/370996005">370996005</a></td><td>Recovered (Symptoms resolved)</td></tr><tr><td><a href="http://snomed.info/id/419099009">419099009</a></td><td>Died</td></tr><tr><td><a href="http://snomed.info/id/1119303003">1119303003</a></td><td>Long COVID /Post-COVID</td></tr></table></li></ul></div>
   </text>
   <url value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome"/>
   <version value="0.1.0-test"/>
   <name value="VSPatientOutcome"/>
   <title value="Patient Outcome"/>
   <status value="active"/>
-  <date value="2022-09-16T19:44:32+00:00"/>
+  <date value="2022-09-16T20:08:29+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -28,27 +28,18 @@
   <compose>
     <include>
       <system value="http://snomed.info/sct"/>
-      <filter>
-        <property value="concept"/>
-        <op value="is-a"/>
-        <value value="370996005"/>
-      </filter>
-    </include>
-    <include>
-      <system value="http://snomed.info/sct"/>
-      <filter>
-        <property value="concept"/>
-        <op value="is-a"/>
-        <value value="419099009"/>
-      </filter>
-    </include>
-    <include>
-      <system value="http://snomed.info/sct"/>
-      <filter>
-        <property value="concept"/>
-        <op value="is-a"/>
-        <value value="1119303003"/>
-      </filter>
+      <concept>
+        <code value="370996005"/>
+        <display value="Recovered (Symptoms resolved)"/>
+      </concept>
+      <concept>
+        <code value="419099009"/>
+        <display value="Died"/>
+      </concept>
+      <concept>
+        <code value="1119303003"/>
+        <display value="Long COVID /Post-COVID"/>
+      </concept>
     </include>
   </compose>
 </ValueSet>

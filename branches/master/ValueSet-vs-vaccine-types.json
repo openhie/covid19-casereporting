@@ -3,14 +3,14 @@
   "id": "vs-vaccine-types",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM4YL8</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM6QV1</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM3DT5</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM8NQ0</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM8866</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM7HT3</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM1G90</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM9T65</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM5JC5</li><li>Include codes from <code>http://id.who.int/icd11/mms</code> where concept  is-a  XM1AG7</li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://id.who.int/icd11/mms</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>XM4YL8</td><td>AstraZeneca/Oxford vaccine</td></tr><tr><td>XM6QV1</td><td>Johnson and Johnson</td></tr><tr><td>XM3DT5</td><td>Moderna</td></tr><tr><td>XM8NQ0</td><td>Pfizer/BionTech</td></tr><tr><td>XM8866</td><td>Sinopharm</td></tr><tr><td>XM7HT3</td><td>Sinovac</td></tr><tr><td>XM1G90</td><td>COVAXIN</td></tr><tr><td>XM9T65</td><td>Covovax</td></tr><tr><td>XM5JC5</td><td>Nuvaxovid</td></tr><tr><td>XM1AG7</td><td>CanSino </td></tr></table></li></ul></div>"
   },
   "url": "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types",
   "version": "0.1.0-test",
   "name": "VSVaccineTypes",
   "title": "Vaccine Types",
   "status": "active",
-  "date": "2022-09-16T19:44:32+00:00",
+  "date": "2022-09-16T20:08:29+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -37,101 +37,46 @@
     "include": [
       {
         "system": "http://id.who.int/icd11/mms",
-        "filter": [
+        "concept": [
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "XM4YL8"
-          }
-        ]
-      },
-      {
-        "system": "http://id.who.int/icd11/mms",
-        "filter": [
+            "code": "XM4YL8",
+            "display": "AstraZeneca/Oxford vaccine"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "XM6QV1"
-          }
-        ]
-      },
-      {
-        "system": "http://id.who.int/icd11/mms",
-        "filter": [
+            "code": "XM6QV1",
+            "display": "Johnson and Johnson"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "XM3DT5"
-          }
-        ]
-      },
-      {
-        "system": "http://id.who.int/icd11/mms",
-        "filter": [
+            "code": "XM3DT5",
+            "display": "Moderna"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "XM8NQ0"
-          }
-        ]
-      },
-      {
-        "system": "http://id.who.int/icd11/mms",
-        "filter": [
+            "code": "XM8NQ0",
+            "display": "Pfizer/BionTech"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "XM8866"
-          }
-        ]
-      },
-      {
-        "system": "http://id.who.int/icd11/mms",
-        "filter": [
+            "code": "XM8866",
+            "display": "Sinopharm"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "XM7HT3"
-          }
-        ]
-      },
-      {
-        "system": "http://id.who.int/icd11/mms",
-        "filter": [
+            "code": "XM7HT3",
+            "display": "Sinovac"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "XM1G90"
-          }
-        ]
-      },
-      {
-        "system": "http://id.who.int/icd11/mms",
-        "filter": [
+            "code": "XM1G90",
+            "display": "COVAXIN"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "XM9T65"
-          }
-        ]
-      },
-      {
-        "system": "http://id.who.int/icd11/mms",
-        "filter": [
+            "code": "XM9T65",
+            "display": "Covovax"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "XM5JC5"
-          }
-        ]
-      },
-      {
-        "system": "http://id.who.int/icd11/mms",
-        "filter": [
+            "code": "XM5JC5",
+            "display": "Nuvaxovid"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "XM1AG7"
+            "code": "XM1AG7",
+            "display": "CanSino "
           }
         ]
       }

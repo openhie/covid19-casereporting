@@ -3,14 +3,14 @@
   "id": "vs-test-types",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://loinc.org\"><code>http://loinc.org</code></a> where concept  is-a  94558-4 (SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay)</li><li>Include codes from <a href=\"http://loinc.org\"><code>http://loinc.org</code></a> where concept  is-a  94745-7 (SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection)</li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/94558-4.html\">94558-4</a></td><td>Rapid Antigen Test</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/94745-7.html\">94745-7</a></td><td>Diagnostic PCR Test</td></tr></table></li></ul></div>"
   },
   "url": "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types",
   "version": "0.1.0-test",
   "name": "VSTestTypes",
   "title": "Test Types",
   "status": "active",
-  "date": "2022-09-16T19:44:32+00:00",
+  "date": "2022-09-16T20:08:29+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -37,21 +37,14 @@
     "include": [
       {
         "system": "http://loinc.org",
-        "filter": [
+        "concept": [
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "94558-4"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "filter": [
+            "code": "94558-4",
+            "display": "Rapid Antigen Test"
+          },
           {
-            "property": "concept",
-            "op": "is-a",
-            "value": "94745-7"
+            "code": "94745-7",
+            "display": "Diagnostic PCR Test"
           }
         ]
       }

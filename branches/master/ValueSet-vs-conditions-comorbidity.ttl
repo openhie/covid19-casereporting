@@ -10,14 +10,14 @@
   fhir:Resource.id [ fhir:value "vs-conditions-comorbidity"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  49601007 (Cardiovascular disorder)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  13645005 (Chronic obstructive lung disease)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  118940003 (Neurological disorder)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  77176002 (Smoker)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  46635009 (Diabetes mellitus type I)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  44054006 (Diabetes mellitus type II)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  73211009 (Diabetes mellitus)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  165816005 (HTLV-3 antibody positive)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  38341003 (High blood pressure)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  234532001 (Immunodeficiency disorder)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  76783007 (Chronic hepatitis)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  363346000 (Malignant tumor)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  709044004 (Chronic kidney disease)</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  56717001 (Tuberculosis)</li><li>Include all codes defined in <a href=\"CodeSystem-cs-other.html\"><code>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/49601007\">49601007</a></td><td>Cardiovascular disease e.g heart failure</td></tr><tr><td><a href=\"http://snomed.info/id/13645005\">13645005</a></td><td>Chronic Lung Disease</td></tr><tr><td><a href=\"http://snomed.info/id/118940003\">118940003</a></td><td>Chronic neurological or neuromuscular disease</td></tr><tr><td><a href=\"http://snomed.info/id/77176002\">77176002</a></td><td>Current smoker</td></tr><tr><td><a href=\"http://snomed.info/id/46635009\">46635009</a></td><td>Diabetes type 1</td></tr><tr><td><a href=\"http://snomed.info/id/44054006\">44054006</a></td><td>Diabetes type 2</td></tr><tr><td><a href=\"http://snomed.info/id/73211009\">73211009</a></td><td>Diabetes Type other or unspecified</td></tr><tr><td><a href=\"http://snomed.info/id/165816005\">165816005</a></td><td>HIV /AIDS</td></tr><tr><td><a href=\"http://snomed.info/id/38341003\">38341003</a></td><td>Hypertension</td></tr><tr><td><a href=\"http://snomed.info/id/234532001\">234532001</a></td><td>Immunodeficiency</td></tr><tr><td><a href=\"http://snomed.info/id/76783007\">76783007</a></td><td>Liver disease</td></tr><tr><td><a href=\"http://snomed.info/id/363346000\">363346000</a></td><td>Malignancy</td></tr><tr><td><a href=\"http://snomed.info/id/709044004\">709044004</a></td><td>Renal disease</td></tr><tr><td><a href=\"http://snomed.info/id/56717001\">56717001</a></td><td>TB</td></tr></table></li><li>Include all codes defined in <a href=\"CodeSystem-cs-other.html\"><code>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other</code></a></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity"];
   fhir:ValueSet.version [ fhir:value "0.1.0-test"];
   fhir:ValueSet.name [ fhir:value "VSConditionsComorbidity"];
   fhir:ValueSet.title [ fhir:value "List of Conditions / Comorbidity"];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2022-09-16T19:44:32+00:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2022-09-16T20:08:29+00:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "OpenHIE"];
   fhir:ValueSet.contact [
      fhir:index 0;
@@ -40,131 +40,65 @@
      fhir:ValueSet.compose.include [
        fhir:index 0;
        fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
+       fhir:ValueSet.compose.include.concept [
          fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "49601007" ]
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "49601007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cardiovascular disease e.g heart failure" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "13645005" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chronic Lung Disease" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "118940003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chronic neurological or neuromuscular disease" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "77176002" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Current smoker" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "46635009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Diabetes type 1" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "44054006" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Diabetes type 2" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "73211009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Diabetes Type other or unspecified" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "165816005" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HIV /AIDS" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "38341003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hypertension" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "234532001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Immunodeficiency" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "76783007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Liver disease" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "363346000" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Malignancy" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "709044004" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Renal disease" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "56717001" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "TB" ]
        ]
      ], [
        fhir:index 1;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "13645005" ]
-       ]
-     ], [
-       fhir:index 2;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "118940003" ]
-       ]
-     ], [
-       fhir:index 3;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "77176002" ]
-       ]
-     ], [
-       fhir:index 4;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "46635009" ]
-       ]
-     ], [
-       fhir:index 5;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "44054006" ]
-       ]
-     ], [
-       fhir:index 6;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "73211009" ]
-       ]
-     ], [
-       fhir:index 7;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "165816005" ]
-       ]
-     ], [
-       fhir:index 8;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "38341003" ]
-       ]
-     ], [
-       fhir:index 9;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "234532001" ]
-       ]
-     ], [
-       fhir:index 10;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "76783007" ]
-       ]
-     ], [
-       fhir:index 11;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "363346000" ]
-       ]
-     ], [
-       fhir:index 12;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "709044004" ]
-       ]
-     ], [
-       fhir:index 13;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "56717001" ]
-       ]
-     ], [
-       fhir:index 14;
        fhir:ValueSet.compose.include.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other" ]
      ]
   ] .
