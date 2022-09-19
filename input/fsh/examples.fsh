@@ -218,22 +218,22 @@ Description: "Covid19 Vaccine Type Administered example"
 * protocolApplied.series = #Booster
 * reportOrigin = #VaccineCard
 
-// Instance: Covid19LabOrderExample
-// InstanceOf: Covid19LabOrder
-// Usage: #example
-// Title: "Covid19 Lab Order example"
-// Description: "Covid19 Lab Order example"
-// * identifier.value = "ORDERNR109191879"
-// * identifier.system = "http://covid19laborder.org/order"
-// * encounter = Reference(Covid19AssessmentEncounterExample) 
-// * subject = Reference(Covid19PatientExample) 
-// * reasonCode  = #Surveillance
-// * authoredOn  = "2022-07-28"
-// * status = #completed
-// * code =  $LNC#94558-4 
-// * requester = Reference(Covid19OrganizationExample)
-// * locationReference = Reference(Covid19Laboratory) 
-// * specimen = Reference(Covid19SpecimenExample)
+Instance: Covid19LabOrderExample
+InstanceOf: Covid19LabOrder
+Usage: #example
+Title: "Covid19 Lab Order example"
+Description: "Covid19 Lab Order example"
+* identifier.value = "ORDERNR109191879"
+* identifier.system = "http://covid19laborder.org/order"
+* encounter = Reference(Covid19AssessmentEncounterExample) 
+* subject = Reference(Covid19PatientExample) 
+* reasonCode  = #Surveillance
+* authoredOn  = "2022-07-28"
+* status = #completed
+* code =  $LNC#94558-4 
+* requester = Reference(Covid19OrganizationExample)
+* locationReference = Reference(Covid19Laboratory) 
+* specimen = Reference(Covid19SpecimenExample)
 
 Instance: Covid19SpecimenExample
 InstanceOf: Covid19Specimen

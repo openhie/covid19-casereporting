@@ -255,17 +255,17 @@ Description: "This profile allows the exchange of a patient's hiv diagnosis"
 * code 1..1
 */
 
-// Profile: Covid19LabOrder
-// Parent: ServiceRequest
-// Id: covid19-lab-order
-// Title: "Covid19 Lab Order"
-// Description: "Covid19 Lab Order"
+Profile: Covid19LabOrder
+Parent: ServiceRequest
+Id: covid19-lab-order
+Title: "Covid19 Lab Order"
+Description: "Covid19 Lab Order"
 // * identifier 1..1 MS //
 // * subject 1..1 MS // Patient reference
-// * intent = #order 
+* intent = #order 
 // * reasonCode  1..* MS //Reason for testing
 // * reasonCode from VSAssessmentReason 
-// * note MS // for capturing other reasons for testing
+* note MS // for capturing other reasons for testing
 // * encounter 1..1 MS  
 // * requester MS // Provider name
 // * authoredOn 1..1 MS // Order time
