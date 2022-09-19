@@ -49,8 +49,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"3.44"}
-    h3,h4,h5,h6{--heading-prefix:"3.44"}</style>
+    <style type="text/css">h2{--heading-prefix:"3.42"}
+    h3,h4,h5,h6{--heading-prefix:"3.42"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -164,20 +164,20 @@
 <ul class="nav nav-tabs">
 
   <li>
-    <a href="ServiceRequest-labOrderGuid.html">Narrative Content</a>
+    <a href="ServiceRequest-Covid19LabOrderExample.html">Narrative Content</a>
   </li>
 
 
   
     <li>
-      <a href="ServiceRequest-labOrderGuid.xml.html">XML</a>
+      <a href="ServiceRequest-Covid19LabOrderExample.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="ServiceRequest-labOrderGuid.json.html">JSON</a>
+      <a href="ServiceRequest-Covid19LabOrderExample.json.html">JSON</a>
     </li>
   
 
@@ -211,7 +211,7 @@
   </table>
 
 
-<p><a href="ServiceRequest-labOrderGuid.ttl" no-download="true">Raw ttl</a> | <a href="ServiceRequest-labOrderGuid.ttl" download>Download</a></p>
+<p><a href="ServiceRequest-Covid19LabOrderExample.ttl" no-download="true">Raw ttl</a> | <a href="ServiceRequest-Covid19LabOrderExample.ttl" download>Download</a></p>
 
   <!-- insert intro if present -->
   
@@ -229,7 +229,7 @@
 
  a fhir:ServiceRequest;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
-  <a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;labOrderGuid&quot;];
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;Covid19LabOrderExample&quot;];
   <a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.meta">fhir:Resource.meta</a> [
      <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
        <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order&quot;;
@@ -238,14 +238,14 @@
   ];
   <a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.text">fhir:DomainResource.text</a> [
      <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: ServiceRequest&lt;/b&gt;&lt;a name=\&quot;labOrderGuid\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource ServiceRequest \&quot;labOrderGuid\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-covid19-lab-order.html\&quot;&gt;Covid19 Lab Order&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: testOrderNumber&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: order&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://loinc.org/\&quot;&gt;LOINC&lt;/a&gt;#94558-4)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-Covid19PatientExample.html\&quot;&gt;Patient/Covid19PatientExample&lt;/a&gt; \&quot; SMITH\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;a href=\&quot;Encounter-Covid19AssessmentEncounterExample.html\&quot;&gt;Encounter/Covid19AssessmentEncounterExample&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;authoredOn&lt;/b&gt;: 2022-07-28&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=\&quot;Practitioner-PractitionerExample.html\&quot;&gt;Practitioner/PractitionerExample&lt;/a&gt; \&quot; SMITH\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;locationReference&lt;/b&gt;: &lt;a href=\&quot;Covid19Laboratory\&quot;&gt;Covid19Laboratory&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: Surveillance &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; ([not stated]#Surveillance)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specimen&lt;/b&gt;: &lt;a href=\&quot;Specimen-Covid19SpecimenExample.html\&quot;&gt;Specimen/Covid19SpecimenExample&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: ServiceRequest&lt;/b&gt;&lt;a name=\&quot;Covid19LabOrderExample\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource ServiceRequest \&quot;Covid19LabOrderExample\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-covid19-lab-order.html\&quot;&gt;Covid19 Lab Order&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: ORDERNR109191879&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: order&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://loinc.org/\&quot;&gt;LOINC&lt;/a&gt;#94558-4)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-Covid19PatientExample.html\&quot;&gt;Patient/Covid19PatientExample&lt;/a&gt; \&quot; SMITH\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;a href=\&quot;Encounter-Covid19AssessmentEncounterExample.html\&quot;&gt;Encounter/Covid19AssessmentEncounterExample&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;authoredOn&lt;/b&gt;: 2022-07-28&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=\&quot;Organization-Covid19OrganizationExample.html\&quot;&gt;Organization/Covid19OrganizationExample&lt;/a&gt; \&quot;Covid19 Organization\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;locationReference&lt;/b&gt;: &lt;a href=\&quot;Covid19Laboratory\&quot;&gt;Covid19Laboratory&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: Surveillance &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; ([not stated]#Surveillance)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specimen&lt;/b&gt;: &lt;a href=\&quot;Specimen-Covid19SpecimenExample.html\&quot;&gt;Specimen/Covid19SpecimenExample&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&quot;
   ];
   <a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.identifier">fhir:ServiceRequest.identifier</a> [
      <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
-     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.com/fhir/lab-integration/test-order-number&quot; ];
-     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;testOrderNumber&quot; ]
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://covid19laborder.org/order&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;ORDERNR109191879&quot; ]
   ];
-  <a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.status">fhir:ServiceRequest.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot;];
+  <a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.status">fhir:ServiceRequest.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;completed&quot;];
   <a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.intent">fhir:ServiceRequest.intent</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;order&quot;];
   <a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.code">fhir:ServiceRequest.code</a> [
      <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
@@ -262,7 +262,7 @@
   ];
   <a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.authoredOn">fhir:ServiceRequest.authoredOn</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2022-07-28&quot;^^xsd:date];
   <a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.requester">fhir:ServiceRequest.requester</a> [
-     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Practitioner/PractitionerExample&quot; ]
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Organization/Covid19OrganizationExample&quot; ]
   ];
   <a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.locationReference">fhir:ServiceRequest.locationReference</a> [
      <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
@@ -316,7 +316,7 @@
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 16, 2022 20:08+0000">2022-09-16</span>
+          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 19, 2022 15:12+0000">2022-09-19</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

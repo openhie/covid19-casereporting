@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-09-16T20:08:29+00:00",
+  "date": "2022-09-19T15:12:26+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -393,6 +393,17 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ServiceRequest"
+          }
+        ],
+        "reference": {
+          "reference": "ServiceRequest/Covid19LabOrderExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ValueSet"
           }
         ],
@@ -473,17 +484,6 @@
           "reference": "CodeSystem/cs-other"
         },
         "name": "Covid19 Case Report Sections codesystem"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ServiceRequest"
-          }
-        ],
-        "reference": {
-          "reference": "ServiceRequest/labOrderGuid"
-        }
       },
       {
         "extension": [
@@ -1163,16 +1163,34 @@
       }
     ],
     "page": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl": "toc.html"
+        }
+      ],
       "nameUrl": "toc.html",
       "title": "Table of Contents",
       "generation": "html",
       "page": [
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "index.html"
+            }
+          ],
           "nameUrl": "index.html",
           "title": "Covid 19 Case Reporting and Lab Management",
           "generation": "html"
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "changes.html"
+            }
+          ],
           "nameUrl": "changes.html",
           "title": "IG Change History",
           "generation": "html"
