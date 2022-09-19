@@ -64,13 +64,13 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19LabOrderManagementSection].entry ^slicing.discriminator.path = "reference.resolve()"
 * section[covid19LabOrderManagementSection].entry ^slicing.rules = #closed
 * section[covid19LabOrderManagementSection].entry contains
-    covid19LabOrder 0..1 and
+    //covid19LabOrder 0..1 and
     covid19Specimen 0..1 and
     covid19LabOrderCancellation 0..1 and
     covid19LabResultsDiagnosticReport 0..1 and
     covid19TestResult 0..1 and
     covid19ReasonTestNotPerformed 0..1
-* section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
+//* section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
 * section[covid19LabOrderManagementSection].entry[covid19Specimen] only Reference(Covid19Specimen)
 * section[covid19LabOrderManagementSection].entry[covid19LabOrderCancellation] only Reference(Covid19LabOrderCancellation)
 * section[covid19LabOrderManagementSection].entry[covid19LabResultsDiagnosticReport] only Reference(Covid19LabResultsDiagnosticReport)
@@ -255,26 +255,26 @@ Description: "This profile allows the exchange of a patient's hiv diagnosis"
 * code 1..1
 */
 
-Profile: Covid19LabOrder
-Parent: ServiceRequest
-Id: covid19-lab-order
-Title: "Covid19 Lab Order"
-Description: "Covid19 Lab Order"
-* identifier 1..1 MS //
-* subject 1..1 MS // Patient reference
-* intent = #order 
-* reasonCode  1..* MS //Reason for testing
-* reasonCode from VSAssessmentReason 
-* note MS // for capturing other reasons for testing
-* encounter 1..1 MS  
-* requester MS // Provider name
-* authoredOn 1..1 MS // Order time
-* code from VSTestTypes
-* code 1..1 MS // Test request Code
-* locationReference MS //Reference Lab sample send to
-* status MS // Status of Lab Order
-* occurrenceDateTime MS // sample forwarded to reference lab; Yes = if there is a dateTime when sample was sent
-* specimen 1..1 MS //sample
+// Profile: Covid19LabOrder
+// Parent: ServiceRequest
+// Id: covid19-lab-order
+// Title: "Covid19 Lab Order"
+// Description: "Covid19 Lab Order"
+// * identifier 1..1 MS //
+// * subject 1..1 MS // Patient reference
+// * intent = #order 
+// * reasonCode  1..* MS //Reason for testing
+// * reasonCode from VSAssessmentReason 
+// * note MS // for capturing other reasons for testing
+// * encounter 1..1 MS  
+// * requester MS // Provider name
+// * authoredOn 1..1 MS // Order time
+// * code from VSTestTypes
+// * code 1..1 MS // Test request Code
+// * locationReference MS //Reference Lab sample send to
+// * status MS // Status of Lab Order
+// * occurrenceDateTime MS // sample forwarded to reference lab; Yes = if there is a dateTime when sample was sent
+// * specimen 1..1 MS //sample
 
 Profile: Covid19Specimen
 Parent: Specimen
