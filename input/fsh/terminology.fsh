@@ -168,7 +168,7 @@ Description: "A list of Cancellation Reasons"
 
 ValueSet: VSCancellationReason
 Id: vs-cancellation-reason
-Title: "Test Types"
+Title: "Cancellation Reasons"
 Description: "A list of Cancellation Reasons"
 * $SCT#281264009 "Improperly ordered" //need to double check the code from with CDC
 * $SCT#281266006 "No sample collected"
