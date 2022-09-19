@@ -223,16 +223,15 @@ InstanceOf: Covid19LabOrder
 Usage: #example
 Title: "Covid19 Lab Order example"
 Description: "Covid19 Lab Order example"
-* identifier.value = "testOrderNumber"
-* identifier.system = "http://example.com/fhir/lab-integration/test-order-number"
-* id = "labOrderGuid"
+* identifier.value = "ORDERNR109191879"
+* identifier.system = "http://covid19laborder.org/order"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
-* requester = Reference(PractitionerExample)
 * reasonCode  = #Surveillance
 * authoredOn  = "2022-07-28"
-* status = #active
+* status = #completed
 * code =  $LNC#94558-4 
+* requester = Reference(Covid19OrganizationExample)
 * locationReference = Reference(Covid19Laboratory) 
 * specimen = Reference(Covid19SpecimenExample)
 
