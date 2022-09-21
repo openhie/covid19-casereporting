@@ -228,7 +228,7 @@ Description: "Covid19 Lab Order example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
 * reasonCode  = #Surveillance
-* authoredOn  = "2022-07-28"
+* occurrenceDateTime = "2012-01-05"
 * status = #completed
 * code =  $SCT#9718006 
 * requester = Reference(Covid19OrganizationExample)
