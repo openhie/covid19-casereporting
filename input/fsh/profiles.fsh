@@ -28,7 +28,6 @@ Title: "Covid19 Case Reporting Composition"
 
 * section[covid19AssessmentSection].title = "Covid19 Assessment Encounter"
 * section[covid19AssessmentSection].code = CSCaseReportSections#COVID-ASSESSMENT
-//* section[covid19AssessmentSection].entry only Reference(Covid19AssessmentEncounter)
 * section[covid19AssessmentSection].entry ^slicing.discriminator.type = #profile
 * section[covid19AssessmentSection].entry ^slicing.discriminator.path = "reference.resolve()"
 * section[covid19AssessmentSection].entry ^slicing.rules = #closed
@@ -40,7 +39,6 @@ Title: "Covid19 Case Reporting Composition"
     covid19DateLastHospitalized 0..1 and
     covid19Admission 0..1 and
     covid19Symptom 0..* and 
-    //covid19ComorbidityPresent 1..1 and
     covid19ConditionsComorbidity 0..* and
     covid19Diagnosis 0..1 and
     hivDiagnosis 0..1 and
@@ -50,10 +48,8 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
 * section[covid19AssessmentSection].entry[covid19Presentation] only Reference(Covid19Presentation)
 * section[covid19AssessmentSection].entry[covid19Symptom] only Reference(Covid19Symptom)
-//* section[covid19AssessmentSection].entry[covid19ComorbidityPresent] only Reference(Covid19ComorbidityPresent)
 * section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
 * section[covid19AssessmentSection].entry[covid19Diagnosis] only Reference(Covid19Diagnosis)
-//* section[covid19AssessmentSection].entry[hivDiagnosis] only Reference(HIVDiagnosis)
 * section[covid19AssessmentSection].entry[covid19VaccineDoseReceived] only Reference(Covid19VaccineDoseReceived)  
 * section[covid19AssessmentSection].entry[covid19AssessmentVaccination] only Reference(Covid19AssessmentVaccination)
 * section[covid19AssessmentSection].entry[covid19MedicationRequest] only Reference(Covid19MedicationRequest)
@@ -64,13 +60,13 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19LabOrderManagementSection].entry ^slicing.discriminator.path = "reference.resolve()"
 * section[covid19LabOrderManagementSection].entry ^slicing.rules = #closed
 * section[covid19LabOrderManagementSection].entry contains
-    //covid19LabOrder 0..1 and
+    covid19LabOrder 0..1 and
     covid19Specimen 0..1 and
     covid19LabOrderCancellation 0..1 and
     covid19LabResultsDiagnosticReport 0..1 and
     covid19TestResult 0..1 and
     covid19ReasonTestNotPerformed 0..1
-//* section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
+* section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
 * section[covid19LabOrderManagementSection].entry[covid19Specimen] only Reference(Covid19Specimen)
 * section[covid19LabOrderManagementSection].entry[covid19LabOrderCancellation] only Reference(Covid19LabOrderCancellation)
 * section[covid19LabOrderManagementSection].entry[covid19LabResultsDiagnosticReport] only Reference(Covid19LabResultsDiagnosticReport)
@@ -114,7 +110,6 @@ Description: "This Patient profile allows the exchange of patient information, i
 //Next of kin contact details
 * contact.name MS
 * contact.telecom MS
-//* address 1..*
 * address.country MS    //Client Country  /  Nationality / Citizenship
 * address.state MS      //Client County / Province  / State
 * address.district MS   //Client SubCounty / District 
@@ -127,13 +122,10 @@ Description: "This Patient profile allows the exchange of patient information, i
 * identifier ^slicing.description = "Slice based on the type of identifier"
 
 * identifier contains
-    // art 0..* and
     passport 0..1 and
     national 0..1 and
     pos 0..1
 
-//* identifier[art].value 0..1
-//* identifier[art].system = "http://openhie.org/fhir/hiv-casereporting/identifier/art"
 * identifier[passport].value 0..1
 * identifier[passport].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport"
 * identifier[national].value 0..1
@@ -177,16 +169,6 @@ Description: "Covid19 Symptom"
 * investigation.code from VSSymptoms
 * investigation.code MS
 * note MS // other presenting symptoms
-
-/*
-Profile: Covid19ComorbidityPresent
-Parent: Observation
-Id: covid19-comorbidity-present
-Title: "Covid19 Comorbidity Present"
-Description: "Covid19 Comorbidity Present"
-//* value[x] only CodeableConcept
-* valueCodeableConcept from VSYesNoUnknown
-*/
 
 Profile: Covid19ConditionsComorbidity
 Parent: Condition
@@ -243,38 +225,27 @@ Description: "Covid19 Treatment dispensed or prescribed"
 * medicationCodeableConcept from VSTreatMentDispensedPrescribed 
 * medicationCodeableConcept.text MS // Other (specify) - details
 
-/*
-//Fields required from the CBS MDS for Covid Report indicators
-Profile: HIVDiagnosis
-Parent: Condition
-Id: hiv-diagnosis
-Title: "HIV Diagnosis"
-Description: "This profile allows the exchange of a patient's hiv diagnosis"
-* recordedDate 1..1
-* identifier 1..*
-* code 1..1
-*/
 
 Profile: Covid19LabOrder
 Parent: ServiceRequest
 Id: covid19-lab-order
 Title: "Covid19 Lab Order"
 Description: "Covid19 Lab Order"
-// * identifier 1..1 MS //
-// * subject 1..1 MS // Patient reference
+* identifier 1..1 MS //
+* subject 1..1 MS // Patient reference
 * intent = #order 
-// * reasonCode  1..* MS //Reason for testing
-// * reasonCode from VSAssessmentReason 
+* reasonCode  1..* MS //Reason for testing
+* reasonCode from VSAssessmentReason 
 * note MS // for capturing other reasons for testing
-// * encounter 1..1 MS  
-// * requester MS // Provider name
-// * authoredOn 1..1 MS // Order time
-// * code from VSTestTypes
-// * code 1..1 MS // Test request Code
-// * locationReference MS //Reference Lab sample send to
-// * status MS // Status of Lab Order
-// * occurrenceDateTime MS // sample forwarded to reference lab; Yes = if there is a dateTime when sample was sent
-// * specimen 1..1 MS //sample
+* encounter 1..1 MS  
+* requester MS // Provider name
+* authoredOn 1..1 MS // Order time
+* code from VSTestTypes
+* code 1..1 MS // Test request Code
+* locationReference MS //Reference Lab sample send to
+* status MS // Status of Lab Order
+* occurrenceDateTime MS // sample forwarded to reference lab; Yes = if there is a dateTime when sample was sent
+* specimen 1..1 MS //sample
 
 Profile: Covid19Specimen
 Parent: Specimen
