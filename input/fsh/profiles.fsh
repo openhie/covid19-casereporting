@@ -41,7 +41,6 @@ Title: "Covid19 Case Reporting Composition"
     covid19Symptom 0..* and 
     covid19ConditionsComorbidity 0..* and
     covid19Diagnosis 0..1 and
-    hivDiagnosis 0..1 and
     covid19VaccineDoseReceived 1..1 and
     covid19AssessmentVaccination 1..1 and
     covid19MedicationRequest 0..1
@@ -228,18 +227,6 @@ Title: "Covid19 Treatment dispensed or prescribed"
 Description: "Covid19 Treatment dispensed or prescribed"
 * medicationCodeableConcept from VSTreatMentDispensedPrescribed 
 * medicationCodeableConcept.text MS // Other (specify) - details
-
-/*
-//Fields required from the CBS MDS for Covid Report indicators
-Profile: HIVDiagnosis
-Parent: Condition
-Id: hiv-diagnosis
-Title: "HIV Diagnosis"
-Description: "This profile allows the exchange of a patient's hiv diagnosis"
-* recordedDate 1..1
-* identifier 1..*
-* code 1..1
-*/
 
 Profile: Covid19LabOrder
 Parent: ServiceRequest
