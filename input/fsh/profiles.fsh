@@ -239,7 +239,7 @@ Description: "Covid19 Lab Order"
 * note MS // for capturing other reasons for testing
 * encounter 1..1 MS  
 * requester MS // Provider name
-* authoredOn 1..1 MS // Order time
+* occurrenceDateTime 1..1
 * code from VSTestTypes
 * code 1..1 MS // Test request Code
 * locationReference MS //Reference Lab sample send to
