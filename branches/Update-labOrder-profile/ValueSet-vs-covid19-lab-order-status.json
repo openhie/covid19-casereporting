@@ -1,0 +1,57 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vs-covid19-lab-order-status",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/255594003\">255594003</a></td><td>Pending</td></tr><tr><td><a href=\"http://snomed.info/id/89925002\">89925002</a></td><td>Cancelled</td></tr><tr><td><a href=\"http://snomed.info/id/385660001\">385660001</a></td><td>Not done</td></tr></table></li></ul></div>"
+  },
+  "url": "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-lab-order-status",
+  "version": "0.1.0-test",
+  "name": "VSLabOrderStatus",
+  "title": "Covid19 Lab Order Status",
+  "status": "active",
+  "date": "2022-09-21T10:16:39+00:00",
+  "publisher": "OpenHIE",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://xxhl7.org/Special/committees/[something]"
+        }
+      ]
+    }
+  ],
+  "description": "Covid19 Lab Order Status",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "255594003",
+            "display": "Pending"
+          },
+          {
+            "code": "89925002",
+            "display": "Cancelled"
+          },
+          {
+            "code": "385660001",
+            "display": "Not done"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-source-of-info> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cs-source-of-info"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">PatientRecall<a name=\"cs-source-of-info-PatientRecall\"> </a></td><td>Patient Recall</td></tr><tr><td style=\"white-space:nowrap\">VaccineCard<a name=\"cs-source-of-info-VaccineCard\"> </a></td><td>Vaccine Card</td></tr><tr><td style=\"white-space:nowrap\">MobilePhoneNotification<a name=\"cs-source-of-info-MobilePhoneNotification\"> </a></td><td>Mobile Phone Notification</td></tr><tr><td style=\"white-space:nowrap\">VaccineAdministeredFromFacility<a name=\"cs-source-of-info-VaccineAdministeredFromFacility\"> </a></td><td>Vaccine Administered from this facility</td></tr><tr><td style=\"white-space:nowrap\">Other<a name=\"cs-source-of-info-Other\"> </a></td><td>Other</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0-test"];
+  fhir:CodeSystem.name [ fhir:value "CSSourceOfInfo"];
+  fhir:CodeSystem.title [ fhir:value "Source of information - codes"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2022-09-21T10:16:39+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "OpenHIE"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://xxhl7.org/Special/committees/[something]" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "Source of information - codes"];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "5"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "PatientRecall" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Patient Recall" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "VaccineCard" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Vaccine Card" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "MobilePhoneNotification" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Mobile Phone Notification" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "VaccineAdministeredFromFacility" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Vaccine Administered from this facility" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "Other" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Other" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-source-of-info.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
