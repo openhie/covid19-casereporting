@@ -34,13 +34,11 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry ^slicing.rules = #closed
 * section[covid19AssessmentSection].entry contains
     covid19AssessmentEncounter 1..1 and
-    covid19ReasonforAssessment 1..* and
     otherReasonforAssessment   0..1 and
     covid19Presentation 1..1 and
     covid19DateLastHospitalized 0..1 and
     covid19Admission 0..1 and
     covid19Symptom 0..* and 
-    //covid19ComorbidityPresent 1..1 and
     covid19ConditionsComorbidity 0..* and
     covid19Diagnosis 0..1 and
     hivDiagnosis 0..1 and
@@ -50,10 +48,8 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
 * section[covid19AssessmentSection].entry[covid19Presentation] only Reference(Covid19Presentation)
 * section[covid19AssessmentSection].entry[covid19Symptom] only Reference(Covid19Symptom)
-//* section[covid19AssessmentSection].entry[covid19ComorbidityPresent] only Reference(Covid19ComorbidityPresent)
 * section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
 * section[covid19AssessmentSection].entry[covid19Diagnosis] only Reference(Covid19Diagnosis)
-//* section[covid19AssessmentSection].entry[hivDiagnosis] only Reference(HIVDiagnosis)
 * section[covid19AssessmentSection].entry[covid19VaccineDoseReceived] only Reference(Covid19VaccineDoseReceived)  
 * section[covid19AssessmentSection].entry[covid19AssessmentVaccination] only Reference(Covid19AssessmentVaccination)
 * section[covid19AssessmentSection].entry[covid19MedicationRequest] only Reference(Covid19MedicationRequest)
