@@ -224,7 +224,7 @@
         
           Active
           
-            as of 2022-09-19
+            as of 2022-09-21
           
         
       </td>
@@ -257,6 +257,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>Request.subject</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>Request.encounter</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>Request.occurrence[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x] (occurrenceDateTime)</td><td>Request.occurrence[x]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>Request.authoredOn</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td>Request.requester</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;performerType</td><td>Request.performerType</td> </tr>
@@ -287,6 +288,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PID</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>PV1</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>TQ1/TQ2, OBR-7/OBR-8</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x] (occurrenceDateTime)</td><td>TQ1/TQ2, OBR-7/OBR-8</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>ORC.9,  RF1-7 / RF1-9</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td>ORC.12, PRT</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;performerType</td><td>PRT, RF!-3</td> </tr>
@@ -325,6 +327,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>.participation[typeCode=SBJ].role</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>.inboundRelationship(typeCode=COMP].source[classCode&lt;=PCPR, moodCode=EVN]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>.effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x] (occurrenceDateTime)</td><td>.effectiveTime</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;asNeeded[x]</td><td>boolean: precondition.negationInd (inversed - so negationInd = true means asNeeded=false CodeableConcept: precondition.observationEventCriterion[code=&quot;Assertion&quot;].value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>.participation[typeCode=AUT].time</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td>.participation[typeCode=AUT].role</td> </tr>
@@ -354,6 +357,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>FiveWs.context</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>FiveWs.planned</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x] (occurrenceDateTime)</td><td>FiveWs.planned</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>FiveWs.recorded</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td>FiveWs.author</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;performerType</td><td>FiveWs.actor</td> </tr>
@@ -373,6 +377,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>ClinicalStatement.subject</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>ClinicalStatement.encounter</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>Procedure.procedureSchedule</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x] (occurrenceDateTime)</td><td>Procedure.procedureSchedule</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;asNeeded[x]</td><td>Proposal.prnReason.reason</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>Proposal.proposedAtTime</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td>ClinicalStatement.statementAuthor</td> </tr>
@@ -433,7 +438,7 @@
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Sep 19, 2022 15:24+0000">2022-09-19</span>
+          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 21, 2022 08:04+0000">2022-09-21</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

@@ -22,7 +22,7 @@
   <name value="Covid19Diagnosis"/>
   <title value="Covid19 Diagnosis"/>
   <status value="active"/>
-  <date value="2022-09-19T15:24:10+00:00"/>
+  <date value="2022-09-21T08:04:14+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -953,7 +953,7 @@
           <path value="$this"/>
         </discriminator>
         <ordered value="false"/>
-        <rules value="closed"/>
+        <rules value="open"/>
       </slicing>
       <short value="When in resolution/remission"/>
       <definition value="The date or estimated date that the condition resolved or went into remission. This is called &quot;abatement&quot; because of the many overloaded connotations associated with &quot;remission&quot; or &quot;resolution&quot; - Conditions are never really resolved, but they can abate."/>
@@ -967,6 +967,18 @@
       </base>
       <type>
         <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Age"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <type>
+        <code value="Range"/>
+      </type>
+      <type>
+        <code value="string"/>
       </type>
       <condition value="con-4"/>
       <constraint>

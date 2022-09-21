@@ -21,7 +21,7 @@
   <name value="Covid19Presentation"/>
   <title value="Covid19 Presentation"/>
   <status value="active"/>
-  <date value="2022-09-19T15:24:10+00:00"/>
+  <date value="2022-09-21T08:04:14+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -905,7 +905,7 @@
           <path value="$this"/>
         </discriminator>
         <ordered value="false"/>
-        <rules value="closed"/>
+        <rules value="open"/>
       </slicing>
       <short value="Estimated or actual date,  date-time, or age"/>
       <definition value="Estimated or actual date or date-time  the condition began, in the opinion of the clinician."/>
@@ -919,6 +919,18 @@
       </base>
       <type>
         <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Age"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <type>
+        <code value="Range"/>
+      </type>
+      <type>
+        <code value="string"/>
       </type>
       <constraint>
         <key value="ele-1"/>

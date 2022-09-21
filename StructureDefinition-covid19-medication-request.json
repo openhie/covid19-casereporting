@@ -20,7 +20,7 @@
   "name": "Covid19MedicationRequest",
   "title": "Covid19 Treatment dispensed or prescribed",
   "status": "active",
-  "date": "2022-09-19T15:24:10+00:00",
+  "date": "2022-09-21T08:04:14+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -910,7 +910,7 @@
             }
           ],
           "ordered": false,
-          "rules": "closed"
+          "rules": "open"
         },
         "short": "Medication to be taken",
         "definition": "Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications.",
@@ -925,6 +925,12 @@
         "type": [
           {
             "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Medication"
+            ]
           }
         ],
         "constraint": [

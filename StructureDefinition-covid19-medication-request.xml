@@ -19,7 +19,7 @@
   <name value="Covid19MedicationRequest"/>
   <title value="Covid19 Treatment dispensed or prescribed"/>
   <status value="active"/>
-  <date value="2022-09-19T15:24:10+00:00"/>
+  <date value="2022-09-21T08:04:14+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -751,7 +751,7 @@
           <path value="$this"/>
         </discriminator>
         <ordered value="false"/>
-        <rules value="closed"/>
+        <rules value="open"/>
       </slicing>
       <short value="Medication to be taken"/>
       <definition value="Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications."/>
@@ -765,6 +765,10 @@
       </base>
       <type>
         <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication"/>
       </type>
       <constraint>
         <key value="ele-1"/>

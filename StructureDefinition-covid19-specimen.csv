@@ -117,9 +117,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Specimen.processing.additive","Specimen.processing.additive","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Substance]]}
 ","Material used in the processing step","Material used in the processing step.","","","","","","","","","",,,,,"",,,,"Specimen.processing.additive",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".participation[typeCode=CSM].role[classCode=ADTV].code","SPM-6"
-"Specimen.processing.time[x]","Specimen.processing.time[x]","","","",0,1,"","","","Period {[]} {[]}
-","Date and time of specimen processing","A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin.","","","","","","","","","",,,,,"","type:$this}
-","",,"closed","Specimen.processing.time[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"Specimen.processing.time[x]","Specimen.processing.time[x]","","","",0,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","Date and time of specimen processing","A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin.","","","","","","","","","",,,,,"","type:$this}
+","",,"open","Specimen.processing.time[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".effectiveTime"
 "Specimen.processing.time[x]:timePeriod","Specimen.processing.time[x]","timePeriod","","",0,1,"","","","Period {[]} {[]}
 ","Date and time of specimen processing","A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin.","","","","","","","","","",,,,,"",,,,"Specimen.processing.time[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}

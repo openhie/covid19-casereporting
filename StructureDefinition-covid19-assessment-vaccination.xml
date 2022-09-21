@@ -27,7 +27,7 @@
   <name value="Covid19AssessmentVaccination"/>
   <title value="Covid19 Vaccination info included as part of the Assessment"/>
   <status value="active"/>
-  <date value="2022-09-19T15:24:10+00:00"/>
+  <date value="2022-09-21T08:04:14+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -837,7 +837,7 @@
           <path value="$this"/>
         </discriminator>
         <ordered value="false"/>
-        <rules value="closed"/>
+        <rules value="open"/>
       </slicing>
       <short value="Vaccine administration date"/>
       <definition value="Date vaccine administered or was to be administered."/>
@@ -851,6 +851,9 @@
       </base>
       <type>
         <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="string"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -2723,7 +2726,7 @@
           <path value="$this"/>
         </discriminator>
         <ordered value="false"/>
-        <rules value="closed"/>
+        <rules value="open"/>
       </slicing>
       <short value="Dose number within series"/>
       <definition value="Nominal position in a series."/>
@@ -2737,6 +2740,9 @@
       </base>
       <type>
         <code value="positiveInt"/>
+      </type>
+      <type>
+        <code value="string"/>
       </type>
       <constraint>
         <key value="ele-1"/>

@@ -26,7 +26,7 @@
   fhir:StructureDefinition.name [ fhir:value "Covid19Specimen"];
   fhir:StructureDefinition.title [ fhir:value "Covid19 Specimen"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2022-09-19T15:24:10+00:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2022-09-21T08:04:14+00:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "OpenHIE"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -1813,7 +1813,7 @@
            fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "$this" ]
          ];
          fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ];
-         fhir:ElementDefinition.slicing.rules [ fhir:value "closed" ]
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
        ];
        fhir:ElementDefinition.short [ fhir:value "Date and time of specimen processing" ];
        fhir:ElementDefinition.definition [ fhir:value "A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin." ];
@@ -1826,6 +1826,9 @@
        ];
        fhir:ElementDefinition.type [
          fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "dateTime" ]
+       ], [
+         fhir:index 1;
          fhir:ElementDefinition.type.code [ fhir:value "Period" ]
        ];
        fhir:ElementDefinition.constraint [
