@@ -27,7 +27,7 @@
   <name value="Covid19Specimen"/>
   <title value="Covid19 Specimen"/>
   <status value="active"/>
-  <date value="2022-09-19T15:24:10+00:00"/>
+  <date value="2022-09-21T08:12:07+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -1399,7 +1399,7 @@
           <path value="$this"/>
         </discriminator>
         <ordered value="false"/>
-        <rules value="closed"/>
+        <rules value="open"/>
       </slicing>
       <short value="Date and time of specimen processing"/>
       <definition value="A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin."/>
@@ -1410,6 +1410,9 @@
         <min value="0"/>
         <max value="1"/>
       </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
       <type>
         <code value="Period"/>
       </type>
