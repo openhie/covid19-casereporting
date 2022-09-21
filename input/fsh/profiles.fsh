@@ -174,16 +174,6 @@ Description: "Covid19 Symptom"
 * investigation.code MS
 * note MS // other presenting symptoms
 
-/*
-Profile: Covid19ComorbidityPresent
-Parent: Observation
-Id: covid19-comorbidity-present
-Title: "Covid19 Comorbidity Present"
-Description: "Covid19 Comorbidity Present"
-//* value[x] only CodeableConcept
-* valueCodeableConcept from VSYesNoUnknown
-*/
-
 Profile: Covid19ConditionsComorbidity
 Parent: Condition
 Id: covid19-conditions-comorbidity
