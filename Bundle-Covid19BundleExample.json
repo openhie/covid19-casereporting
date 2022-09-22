@@ -69,22 +69,22 @@
                 "reference": "Encounter/Covid19AssessmentEncounterExample"
               },
               {
-                "reference": "Covid19ReasonforAssessmentExample"
-              },
-              {
                 "reference": "Condition/Covid19PresentationExample"
               },
               {
                 "reference": "ClinicalImpression/Covid19SymptomExample"
               },
               {
+                "reference": "Condition/Covid19ConditionsComorbidityExample"
+              },
+              {
                 "reference": "Condition/Covid19DiagnosisExample"
               },
               {
-                "reference": "Immunization/Covid19AssessmentVaccinationExample"
+                "reference": "Observation/Covid19VaccineDoseReceivedExample"
               },
               {
-                "reference": "Covid19PatientOutcomeExample"
+                "reference": "Immunization/Covid19AssessmentVaccinationExample"
               }
             ]
           },
@@ -109,7 +109,13 @@
                 "reference": "Task/Covid19LabOrderCancellationExample"
               },
               {
-                "reference": "Covid19LabResultsExamples"
+                "reference": "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
+              },
+              {
+                "reference": "Observation/Covid19TestResultExample"
+              },
+              {
+                "reference": "Observation/Covid19ReasonTestNotPerformedExample"
               }
             ]
           },
@@ -136,7 +142,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19PatientExample",
+      "fullUrl": "Patient/Covid19PatientExample",
       "resource": {
         "resourceType": "Patient",
         "id": "Covid19PatientExample",
@@ -217,7 +223,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19AssessmentEncounterExample",
+      "fullUrl": "Encounter/Covid19AssessmentEncounterExample",
       "resource": {
         "resourceType": "Encounter",
         "id": "Covid19AssessmentEncounterExample",
@@ -261,7 +267,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19PresentationExample",
+      "fullUrl": "Condition/Covid19PresentationExample",
       "resource": {
         "resourceType": "Condition",
         "id": "Covid19PresentationExample",
@@ -297,7 +303,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19SymptomExample",
+      "fullUrl": "Symptom/Covid19SymptomExample",
       "resource": {
         "resourceType": "ClinicalImpression",
         "id": "Covid19SymptomExample",
@@ -339,7 +345,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19ConditionsComorbidityExample",
+      "fullUrl": "Condition/Covid19ConditionsComorbidityExample",
       "resource": {
         "resourceType": "Condition",
         "id": "Covid19ConditionsComorbidityExample",
@@ -373,7 +379,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19DiagnosisExample",
+      "fullUrl": "Condition/Covid19DiagnosisExample",
       "resource": {
         "resourceType": "Condition",
         "id": "Covid19DiagnosisExample",
@@ -418,7 +424,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19VaccineDoseReceivedExample",
+      "fullUrl": "Observation/Covid19VaccineDoseReceivedExample",
       "resource": {
         "resourceType": "Observation",
         "id": "Covid19VaccineDoseReceivedExample",
@@ -453,7 +459,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19AssessmentVaccinationExample",
+      "fullUrl": "Immunization/Covid19AssessmentVaccinationExample",
       "resource": {
         "resourceType": "Immunization",
         "id": "Covid19AssessmentVaccinationExample",
@@ -498,7 +504,38 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19LabOrderExample",
+      "fullUrl": "Task/LabOrderTaskExample",
+      "resource": {
+        "resourceType": "Task",
+        "id": "LabOrderTaskExample",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"LabOrderTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"LabOrderTaskExample\" </p></div><p><b>identifier</b>: id: testOrderNumber</p><p><b>basedOn</b>: <a href=\"#ServiceRequest_Covid19LabOrderExample\">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>status</b>: requested</p><p><b>intent</b>: order</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>owner</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number",
+            "value": "testOrderNumber"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/Covid19LabOrderExample"
+          }
+        ],
+        "status": "requested",
+        "intent": "order",
+        "lastModified": "2015-02-07",
+        "requester": {
+          "reference": "Organization/Covid19OrganizationExample"
+        },
+        "owner": {
+          "reference": "Covid19Laboratory"
+        }
+      }
+    },
+    {
+      "fullUrl": "ServiceRequest/Covid19LabOrderExample",
       "resource": {
         "resourceType": "ServiceRequest",
         "id": "Covid19LabOrderExample",
@@ -559,7 +596,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19SpecimenExample",
+      "fullUrl": "Specimen/Covid19SpecimenExample",
       "resource": {
         "resourceType": "Specimen",
         "id": "Covid19SpecimenExample",
@@ -595,7 +632,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19LabOrderCancellationExample",
+      "fullUrl": "Task/Covid19LabOrderCancellationExample",
       "resource": {
         "resourceType": "Task",
         "id": "Covid19LabOrderCancellationExample",
@@ -635,7 +672,53 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19LabResultsDiagnosticReportExample",
+      "fullUrl": "Task/LabResultTaskExample",
+      "resource": {
+        "resourceType": "Task",
+        "id": "LabResultTaskExample",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"LabResultTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"LabResultTaskExample\" </p></div><p><b>identifier</b>: id: testOrderNumber</p><p><b>basedOn</b>: <a href=\"#ServiceRequest_Covid19LabOrderExample\">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>owner</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p><h3>Outputs</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>result <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (task-output#result)</span></td><td><a href=\"#DiagnosticReport_Covid19LabResultsDiagnosticReportExample\">See above (DiagnosticReport/Covid19LabResultsDiagnosticReportExample)</a></td></tr></table></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number",
+            "value": "testOrderNumber"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/Covid19LabOrderExample"
+          }
+        ],
+        "status": "completed",
+        "intent": "order",
+        "lastModified": "2015-02-07",
+        "requester": {
+          "reference": "Organization/Covid19OrganizationExample"
+        },
+        "owner": {
+          "reference": "Covid19Laboratory"
+        },
+        "output": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output",
+                  "code": "result"
+                }
+              ]
+            },
+            "valueReference": {
+              "reference": "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/Covid19LabResultsDiagnosticReportExample",
       "resource": {
         "resourceType": "DiagnosticReport",
         "id": "Covid19LabResultsDiagnosticReportExample",
@@ -684,7 +767,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19TestResultExample",
+      "fullUrl": "Observation/Covid19TestResultExample",
       "resource": {
         "resourceType": "Observation",
         "id": "Covid19TestResultExample",
@@ -717,7 +800,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19VaccinationExample",
+      "fullUrl": "Immunization/Covid19VaccinationExample",
       "resource": {
         "resourceType": "Immunization",
         "id": "Covid19VaccinationExample",
@@ -754,7 +837,7 @@
       }
     },
     {
-      "fullUrl": "Composition/Covid19VaccinationAppointmentExample",
+      "fullUrl": "Appointment/Covid19VaccinationAppointmentExample",
       "resource": {
         "resourceType": "Appointment",
         "id": "Covid19VaccinationAppointmentExample",

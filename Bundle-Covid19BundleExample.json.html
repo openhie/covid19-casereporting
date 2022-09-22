@@ -49,8 +49,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"3.64"}
-    h3,h4,h5,h6{--heading-prefix:"3.64"}</style>
+    <style type="text/css">h2{--heading-prefix:"3.65"}
+    h3,h4,h5,h6{--heading-prefix:"3.65"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -290,22 +290,22 @@
                 "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Encounter/Covid19AssessmentEncounterExample"
               },
               {
-                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Covid19ReasonforAssessmentExample"
-              },
-              {
                 "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Condition/Covid19PresentationExample"
               },
               {
                 "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "ClinicalImpression/Covid19SymptomExample"
               },
               {
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Condition/Covid19ConditionsComorbidityExample"
+              },
+              {
                 "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Condition/Covid19DiagnosisExample"
               },
               {
-                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Immunization/Covid19AssessmentVaccinationExample"
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/Covid19VaccineDoseReceivedExample"
               },
               {
-                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Covid19PatientOutcomeExample"
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Immunization/Covid19AssessmentVaccinationExample"
               }
             ]
           },
@@ -330,7 +330,13 @@
                 "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Task/Covid19LabOrderCancellationExample"
               },
               {
-                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Covid19LabResultsExamples"
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/Covid19TestResultExample"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/Covid19ReasonTestNotPerformedExample"
               }
             ]
           },
@@ -357,7 +363,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19PatientExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Patient/Covid19PatientExample",
       "<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/patient.html">resourceType</a>" : "Patient",
         "<a href="http://hl7.org/fhir/R4/patient.html#Patient.id">id</a>" : "Covid19PatientExample",
@@ -438,7 +444,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19AssessmentEncounterExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Encounter/Covid19AssessmentEncounterExample",
       "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/encounter.html">resourceType</a>" : "Encounter",
         "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.id">id</a>" : "Covid19AssessmentEncounterExample",
@@ -482,7 +488,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19PresentationExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Condition/Covid19PresentationExample",
       "<a href="http://hl7.org/fhir/R4/condition.html#Condition">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/condition.html">resourceType</a>" : "Condition",
         "<a href="http://hl7.org/fhir/R4/condition.html#Condition.id">id</a>" : "Covid19PresentationExample",
@@ -518,7 +524,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19SymptomExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Symptom/Covid19SymptomExample",
       "<a href="http://hl7.org/fhir/R4/clinicalimpression.html#ClinicalImpression">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/clinicalimpression.html">resourceType</a>" : "ClinicalImpression",
         "<a href="http://hl7.org/fhir/R4/clinicalimpression.html#ClinicalImpression.id">id</a>" : "Covid19SymptomExample",
@@ -560,7 +566,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19ConditionsComorbidityExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Condition/Covid19ConditionsComorbidityExample",
       "<a href="http://hl7.org/fhir/R4/condition.html#Condition">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/condition.html">resourceType</a>" : "Condition",
         "<a href="http://hl7.org/fhir/R4/condition.html#Condition.id">id</a>" : "Covid19ConditionsComorbidityExample",
@@ -594,7 +600,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19DiagnosisExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Condition/Covid19DiagnosisExample",
       "<a href="http://hl7.org/fhir/R4/condition.html#Condition">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/condition.html">resourceType</a>" : "Condition",
         "<a href="http://hl7.org/fhir/R4/condition.html#Condition.id">id</a>" : "Covid19DiagnosisExample",
@@ -639,7 +645,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19VaccineDoseReceivedExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Observation/Covid19VaccineDoseReceivedExample",
       "<a href="http://hl7.org/fhir/R4/observation.html#Observation">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/observation.html">resourceType</a>" : "Observation",
         "<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a>" : "Covid19VaccineDoseReceivedExample",
@@ -674,7 +680,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19AssessmentVaccinationExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Immunization/Covid19AssessmentVaccinationExample",
       "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/immunization.html">resourceType</a>" : "Immunization",
         "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.id">id</a>" : "Covid19AssessmentVaccinationExample",
@@ -719,7 +725,38 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19LabOrderExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Task/LabOrderTaskExample",
+      "<a href="http://hl7.org/fhir/R4/task.html#Task">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/task.html">resourceType</a>" : "Task",
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.id">id</a>" : "LabOrderTaskExample",
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Task&lt;/b&gt;&lt;a name=\&quot;LabOrderTaskExample\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Task \&quot;LabOrderTaskExample\&quot; &lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: testOrderNumber&lt;/p&gt;&lt;p&gt;&lt;b&gt;basedOn&lt;/b&gt;: &lt;a href=\&quot;#ServiceRequest_Covid19LabOrderExample\&quot;&gt;See above (ServiceRequest/Covid19LabOrderExample)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: requested&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: order&lt;/p&gt;&lt;p&gt;&lt;b&gt;lastModified&lt;/b&gt;: 2015-02-07&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=\&quot;Organization-Covid19OrganizationExample.html\&quot;&gt;Organization/Covid19OrganizationExample&lt;/a&gt; \&quot;Covid19 Organization\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;owner&lt;/b&gt;: &lt;a href=\&quot;Covid19Laboratory\&quot;&gt;Covid19Laboratory&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "testOrderNumber"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.basedOn">basedOn</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "ServiceRequest/Covid19LabOrderExample"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.status">status</a>" : "requested",
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.intent">intent</a>" : "order",
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.lastModified">lastModified</a>" : "2015-02-07",
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.requester">requester</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/Covid19OrganizationExample"
+        },
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.owner">owner</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Covid19Laboratory"
+        }
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "ServiceRequest/Covid19LabOrderExample",
       "<a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/servicerequest.html">resourceType</a>" : "ServiceRequest",
         "<a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.id">id</a>" : "Covid19LabOrderExample",
@@ -780,7 +817,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19SpecimenExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Specimen/Covid19SpecimenExample",
       "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/specimen.html">resourceType</a>" : "Specimen",
         "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.id">id</a>" : "Covid19SpecimenExample",
@@ -816,7 +853,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19LabOrderCancellationExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Task/Covid19LabOrderCancellationExample",
       "<a href="http://hl7.org/fhir/R4/task.html#Task">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/task.html">resourceType</a>" : "Task",
         "<a href="http://hl7.org/fhir/R4/task.html#Task.id">id</a>" : "Covid19LabOrderCancellationExample",
@@ -856,7 +893,53 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19LabResultsDiagnosticReportExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Task/LabResultTaskExample",
+      "<a href="http://hl7.org/fhir/R4/task.html#Task">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/task.html">resourceType</a>" : "Task",
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.id">id</a>" : "LabResultTaskExample",
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Task&lt;/b&gt;&lt;a name=\&quot;LabResultTaskExample\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Task \&quot;LabResultTaskExample\&quot; &lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: testOrderNumber&lt;/p&gt;&lt;p&gt;&lt;b&gt;basedOn&lt;/b&gt;: &lt;a href=\&quot;#ServiceRequest_Covid19LabOrderExample\&quot;&gt;See above (ServiceRequest/Covid19LabOrderExample)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: order&lt;/p&gt;&lt;p&gt;&lt;b&gt;lastModified&lt;/b&gt;: 2015-02-07&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=\&quot;Organization-Covid19OrganizationExample.html\&quot;&gt;Organization/Covid19OrganizationExample&lt;/a&gt; \&quot;Covid19 Organization\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;owner&lt;/b&gt;: &lt;a href=\&quot;Covid19Laboratory\&quot;&gt;Covid19Laboratory&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Outputs&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;result &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (task-output#result)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;#DiagnosticReport_Covid19LabResultsDiagnosticReportExample\&quot;&gt;See above (DiagnosticReport/Covid19LabResultsDiagnosticReportExample)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "testOrderNumber"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.basedOn">basedOn</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "ServiceRequest/Covid19LabOrderExample"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.status">status</a>" : "completed",
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.intent">intent</a>" : "order",
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.lastModified">lastModified</a>" : "2015-02-07",
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.requester">requester</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/Covid19OrganizationExample"
+        },
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.owner">owner</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Covid19Laboratory"
+        },
+        "<a href="http://hl7.org/fhir/R4/task.html#Task.output">output</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/task.html#Task.output.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "result"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/task.html#Task.output.value[x]">valueReference</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "DiagnosticReport/Covid19LabResultsDiagnosticReportExample",
       "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/diagnosticreport.html">resourceType</a>" : "DiagnosticReport",
         "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.id">id</a>" : "Covid19LabResultsDiagnosticReportExample",
@@ -905,7 +988,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19TestResultExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Observation/Covid19TestResultExample",
       "<a href="http://hl7.org/fhir/R4/observation.html#Observation">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/observation.html">resourceType</a>" : "Observation",
         "<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a>" : "Covid19TestResultExample",
@@ -938,7 +1021,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19VaccinationExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Immunization/Covid19VaccinationExample",
       "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/immunization.html">resourceType</a>" : "Immunization",
         "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.id">id</a>" : "Covid19VaccinationExample",
@@ -975,7 +1058,7 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Composition/Covid19VaccinationAppointmentExample",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Appointment/Covid19VaccinationAppointmentExample",
       "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/appointment.html">resourceType</a>" : "Appointment",
         "<a href="http://hl7.org/fhir/R4/appointment.html#Appointment.id">id</a>" : "Covid19VaccinationAppointmentExample",
@@ -1032,7 +1115,7 @@
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 21, 2022 10:21+0000">2022-09-21</span>
+          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Sep 22, 2022 07:37+0000">2022-09-22</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

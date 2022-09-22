@@ -54,22 +54,22 @@
             <reference value="Encounter/Covid19AssessmentEncounterExample"/>
           </entry>
           <entry>
-            <reference value="Covid19ReasonforAssessmentExample"/>
-          </entry>
-          <entry>
             <reference value="Condition/Covid19PresentationExample"/>
           </entry>
           <entry>
             <reference value="ClinicalImpression/Covid19SymptomExample"/>
           </entry>
           <entry>
+            <reference value="Condition/Covid19ConditionsComorbidityExample"/>
+          </entry>
+          <entry>
             <reference value="Condition/Covid19DiagnosisExample"/>
           </entry>
           <entry>
-            <reference value="Immunization/Covid19AssessmentVaccinationExample"/>
+            <reference value="Observation/Covid19VaccineDoseReceivedExample"/>
           </entry>
           <entry>
-            <reference value="Covid19PatientOutcomeExample"/>
+            <reference value="Immunization/Covid19AssessmentVaccinationExample"/>
           </entry>
         </section>
         <section>
@@ -90,7 +90,13 @@
             <reference value="Task/Covid19LabOrderCancellationExample"/>
           </entry>
           <entry>
-            <reference value="Covid19LabResultsExamples"/>
+            <reference value="DiagnosticReport/Covid19LabResultsDiagnosticReportExample"/>
+          </entry>
+          <entry>
+            <reference value="Observation/Covid19TestResultExample"/>
+          </entry>
+          <entry>
+            <reference value="Observation/Covid19ReasonTestNotPerformedExample"/>
           </entry>
         </section>
         <section>
@@ -112,7 +118,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19PatientExample"/>
+    <fullUrl value="Patient/Covid19PatientExample"/>
     <resource>
       <Patient>
         <id value="Covid19PatientExample"/>
@@ -173,7 +179,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19AssessmentEncounterExample"/>
+    <fullUrl value="Encounter/Covid19AssessmentEncounterExample"/>
     <resource>
       <Encounter>
         <id value="Covid19AssessmentEncounterExample"/>
@@ -209,7 +215,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19PresentationExample"/>
+    <fullUrl value="Condition/Covid19PresentationExample"/>
     <resource>
       <Condition>
         <id value="Covid19PresentationExample"/>
@@ -237,7 +243,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19SymptomExample"/>
+    <fullUrl value="Symptom/Covid19SymptomExample"/>
     <resource>
       <ClinicalImpression>
         <id value="Covid19SymptomExample"/>
@@ -271,7 +277,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19ConditionsComorbidityExample"/>
+    <fullUrl value="Condition/Covid19ConditionsComorbidityExample"/>
     <resource>
       <Condition>
         <id value="Covid19ConditionsComorbidityExample"/>
@@ -299,7 +305,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19DiagnosisExample"/>
+    <fullUrl value="Condition/Covid19DiagnosisExample"/>
     <resource>
       <Condition>
         <id value="Covid19DiagnosisExample"/>
@@ -336,7 +342,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19VaccineDoseReceivedExample"/>
+    <fullUrl value="Observation/Covid19VaccineDoseReceivedExample"/>
     <resource>
       <Observation>
         <id value="Covid19VaccineDoseReceivedExample"/>
@@ -365,7 +371,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19AssessmentVaccinationExample"/>
+    <fullUrl value="Immunization/Covid19AssessmentVaccinationExample"/>
     <resource>
       <Immunization>
         <id value="Covid19AssessmentVaccinationExample"/>
@@ -402,7 +408,34 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19LabOrderExample"/>
+    <fullUrl value="Task/LabOrderTaskExample"/>
+    <resource>
+      <Task>
+        <id value="LabOrderTaskExample"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Task</b><a name="LabOrderTaskExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Task "LabOrderTaskExample" </p></div><p><b>identifier</b>: id: testOrderNumber</p><p><b>basedOn</b>: <a href="#ServiceRequest_Covid19LabOrderExample">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>status</b>: requested</p><p><b>intent</b>: order</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> "Covid19 Organization"</p><p><b>owner</b>: <a href="Covid19Laboratory">Covid19Laboratory</a></p></div>
+        </text>
+        <identifier>
+          <system value="http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"/>
+          <value value="testOrderNumber"/>
+        </identifier>
+        <basedOn>
+          <reference value="ServiceRequest/Covid19LabOrderExample"/>
+        </basedOn>
+        <status value="requested"/>
+        <intent value="order"/>
+        <lastModified value="2015-02-07"/>
+        <requester>
+          <reference value="Organization/Covid19OrganizationExample"/>
+        </requester>
+        <owner>
+          <reference value="Covid19Laboratory"/>
+        </owner>
+      </Task>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="ServiceRequest/Covid19LabOrderExample"/>
     <resource>
       <ServiceRequest>
         <id value="Covid19LabOrderExample"/>
@@ -449,7 +482,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19SpecimenExample"/>
+    <fullUrl value="Specimen/Covid19SpecimenExample"/>
     <resource>
       <Specimen>
         <id value="Covid19SpecimenExample"/>
@@ -479,7 +512,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19LabOrderCancellationExample"/>
+    <fullUrl value="Task/Covid19LabOrderCancellationExample"/>
     <resource>
       <Task>
         <id value="Covid19LabOrderCancellationExample"/>
@@ -513,7 +546,45 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19LabResultsDiagnosticReportExample"/>
+    <fullUrl value="Task/LabResultTaskExample"/>
+    <resource>
+      <Task>
+        <id value="LabResultTaskExample"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Task</b><a name="LabResultTaskExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Task "LabResultTaskExample" </p></div><p><b>identifier</b>: id: testOrderNumber</p><p><b>basedOn</b>: <a href="#ServiceRequest_Covid19LabOrderExample">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> "Covid19 Organization"</p><p><b>owner</b>: <a href="Covid19Laboratory">Covid19Laboratory</a></p><h3>Outputs</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>result <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (task-output#result)</span></td><td><a href="#DiagnosticReport_Covid19LabResultsDiagnosticReportExample">See above (DiagnosticReport/Covid19LabResultsDiagnosticReportExample)</a></td></tr></table></div>
+        </text>
+        <identifier>
+          <system value="http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"/>
+          <value value="testOrderNumber"/>
+        </identifier>
+        <basedOn>
+          <reference value="ServiceRequest/Covid19LabOrderExample"/>
+        </basedOn>
+        <status value="completed"/>
+        <intent value="order"/>
+        <lastModified value="2015-02-07"/>
+        <requester>
+          <reference value="Organization/Covid19OrganizationExample"/>
+        </requester>
+        <owner>
+          <reference value="Covid19Laboratory"/>
+        </owner>
+        <output>
+          <type>
+            <coding>
+              <system value="http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output"/>
+              <code value="result"/>
+            </coding>
+          </type>
+          <valueReference>
+            <reference value="DiagnosticReport/Covid19LabResultsDiagnosticReportExample"/>
+          </valueReference>
+        </output>
+      </Task>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="DiagnosticReport/Covid19LabResultsDiagnosticReportExample"/>
     <resource>
       <DiagnosticReport>
         <id value="Covid19LabResultsDiagnosticReportExample"/>
@@ -548,7 +619,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19TestResultExample"/>
+    <fullUrl value="Observation/Covid19TestResultExample"/>
     <resource>
       <Observation>
         <id value="Covid19TestResultExample"/>
@@ -575,7 +646,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19VaccinationExample"/>
+    <fullUrl value="Immunization/Covid19VaccinationExample"/>
     <resource>
       <Immunization>
         <id value="Covid19VaccinationExample"/>
@@ -606,7 +677,7 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="Composition/Covid19VaccinationAppointmentExample"/>
+    <fullUrl value="Appointment/Covid19VaccinationAppointmentExample"/>
     <resource>
       <Appointment>
         <id value="Covid19VaccinationAppointmentExample"/>

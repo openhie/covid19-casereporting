@@ -71,26 +71,28 @@
        fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
      ], [
        fhir:index 1;
-       fhir:Reference.reference [ fhir:value "Covid19ReasonforAssessmentExample" ]
-     ], [
-       fhir:index 2;
        fhir:link <http://xxsomewhere.org/fhir/myig/Condition/Covid19PresentationExample>;
        fhir:Reference.reference [ fhir:value "Condition/Covid19PresentationExample" ]
      ], [
-       fhir:index 3;
+       fhir:index 2;
        fhir:link <http://xxsomewhere.org/fhir/myig/ClinicalImpression/Covid19SymptomExample>;
        fhir:Reference.reference [ fhir:value "ClinicalImpression/Covid19SymptomExample" ]
+     ], [
+       fhir:index 3;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Condition/Covid19ConditionsComorbidityExample>;
+       fhir:Reference.reference [ fhir:value "Condition/Covid19ConditionsComorbidityExample" ]
      ], [
        fhir:index 4;
        fhir:link <http://xxsomewhere.org/fhir/myig/Condition/Covid19DiagnosisExample>;
        fhir:Reference.reference [ fhir:value "Condition/Covid19DiagnosisExample" ]
      ], [
        fhir:index 5;
-       fhir:link <http://xxsomewhere.org/fhir/myig/Immunization/Covid19AssessmentVaccinationExample>;
-       fhir:Reference.reference [ fhir:value "Immunization/Covid19AssessmentVaccinationExample" ]
+       fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19VaccineDoseReceivedExample>;
+       fhir:Reference.reference [ fhir:value "Observation/Covid19VaccineDoseReceivedExample" ]
      ], [
        fhir:index 6;
-       fhir:Reference.reference [ fhir:value "Covid19PatientOutcomeExample" ]
+       fhir:link <http://xxsomewhere.org/fhir/myig/Immunization/Covid19AssessmentVaccinationExample>;
+       fhir:Reference.reference [ fhir:value "Immunization/Covid19AssessmentVaccinationExample" ]
      ]
   ], [
      fhir:index 2;
@@ -116,7 +118,16 @@
        fhir:Reference.reference [ fhir:value "Task/Covid19LabOrderCancellationExample" ]
      ], [
        fhir:index 3;
-       fhir:Reference.reference [ fhir:value "Covid19LabResultsExamples" ]
+       fhir:link <http://xxsomewhere.org/fhir/myig/DiagnosticReport/Covid19LabResultsDiagnosticReportExample>;
+       fhir:Reference.reference [ fhir:value "DiagnosticReport/Covid19LabResultsDiagnosticReportExample" ]
+     ], [
+       fhir:index 4;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19TestResultExample>;
+       fhir:Reference.reference [ fhir:value "Observation/Covid19TestResultExample" ]
+     ], [
+       fhir:index 5;
+       fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19ReasonTestNotPerformedExample>;
+       fhir:Reference.reference [ fhir:value "Observation/Covid19ReasonTestNotPerformedExample" ]
      ]
   ], [
      fhir:index 3;
