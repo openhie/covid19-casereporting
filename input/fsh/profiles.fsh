@@ -33,7 +33,6 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19AssessmentSection].entry ^slicing.rules = #closed
 * section[covid19AssessmentSection].entry contains
     covid19AssessmentEncounter 1..1 and
-    covid19ReasonforAssessment 1..* and
     otherReasonforAssessment   0..1 and
     covid19Presentation 1..1 and
     covid19DateLastHospitalized 0..1 and
@@ -41,7 +40,6 @@ Title: "Covid19 Case Reporting Composition"
     covid19Symptom 0..* and 
     covid19ConditionsComorbidity 0..* and
     covid19Diagnosis 0..1 and
-    hivDiagnosis 0..1 and
     covid19VaccineDoseReceived 1..1 and
     covid19AssessmentVaccination 1..1 and
     covid19MedicationRequest 0..1
@@ -224,7 +222,6 @@ Title: "Covid19 Treatment dispensed or prescribed"
 Description: "Covid19 Treatment dispensed or prescribed"
 * medicationCodeableConcept from VSTreatMentDispensedPrescribed 
 * medicationCodeableConcept.text MS // Other (specify) - details
-
 
 Profile: Covid19LabOrder
 Parent: ServiceRequest

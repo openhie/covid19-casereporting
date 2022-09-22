@@ -6,37 +6,39 @@ Description: "Example of a clinical bundle representing a case report"
 * type = #document
 * entry[+].fullUrl = "Composition/Covid19CompositionExample"
 * entry[=].resource = Covid19CompositionExample
-* entry[+].fullUrl = "Composition/Covid19PatientExample"
+* entry[+].fullUrl = "Patient/Covid19PatientExample"
 * entry[=].resource = Covid19PatientExample
-* entry[+].fullUrl = "Composition/Covid19AssessmentEncounterExample"
+* entry[+].fullUrl = "Encounter/Covid19AssessmentEncounterExample"
 * entry[=].resource = Covid19AssessmentEncounterExample
-* entry[+].fullUrl = "Composition/Covid19PresentationExample"
+* entry[+].fullUrl = "Condition/Covid19PresentationExample"
 * entry[=].resource = Covid19PresentationExample
-* entry[+].fullUrl = "Composition/Covid19SymptomExample"
+* entry[+].fullUrl = "Symptom/Covid19SymptomExample"
 * entry[=].resource = Covid19SymptomExample
-//* entry[+].fullUrl = "Composition/Covid19ComorbidityPresentExample"
-//* entry[=].resource = Covid19ComorbidityPresentExample
-* entry[+].fullUrl = "Composition/Covid19ConditionsComorbidityExample"
+* entry[+].fullUrl = "Condition/Covid19ConditionsComorbidityExample"
 * entry[=].resource = Covid19ConditionsComorbidityExample
-* entry[+].fullUrl = "Composition/Covid19DiagnosisExample"
+* entry[+].fullUrl = "Condition/Covid19DiagnosisExample"
 * entry[=].resource = Covid19DiagnosisExample 
-* entry[+].fullUrl = "Composition/Covid19VaccineDoseReceivedExample"
+* entry[+].fullUrl = "Observation/Covid19VaccineDoseReceivedExample"
 * entry[=].resource = Covid19VaccineDoseReceivedExample
-* entry[+].fullUrl = "Composition/Covid19AssessmentVaccinationExample"
+* entry[+].fullUrl = "Immunization/Covid19AssessmentVaccinationExample"
 * entry[=].resource = Covid19AssessmentVaccinationExample
-* entry[+].fullUrl = "Composition/Covid19LabOrderExample"
+* entry[+].fullUrl = "Task/LabOrderTaskExample"
+* entry[=].resource = LabOrderTaskExample
+* entry[+].fullUrl = "ServiceRequest/Covid19LabOrderExample"
 * entry[=].resource = Covid19LabOrderExample
-* entry[+].fullUrl = "Composition/Covid19SpecimenExample"
+* entry[+].fullUrl = "Specimen/Covid19SpecimenExample"
 * entry[=].resource = Covid19SpecimenExample
-* entry[+].fullUrl = "Composition/Covid19LabOrderCancellationExample"
+* entry[+].fullUrl = "Task/Covid19LabOrderCancellationExample"
 * entry[=].resource = Covid19LabOrderCancellationExample
-* entry[+].fullUrl = "Composition/Covid19LabResultsDiagnosticReportExample"
+* entry[+].fullUrl = "Task/LabResultTaskExample"
+* entry[=].resource = LabResultTaskExample
+* entry[+].fullUrl = "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
 * entry[=].resource = Covid19LabResultsDiagnosticReportExample
-* entry[+].fullUrl = "Composition/Covid19TestResultExample"
+* entry[+].fullUrl = "Observation/Covid19TestResultExample"
 * entry[=].resource = Covid19TestResultExample
-* entry[+].fullUrl = "Composition/Covid19VaccinationExample"
+* entry[+].fullUrl = "Immunization/Covid19VaccinationExample"
 * entry[=].resource = Covid19VaccinationExample
-* entry[+].fullUrl = "Composition/Covid19VaccinationAppointmentExample"
+* entry[+].fullUrl = "Appointment/Covid19VaccinationAppointmentExample"
 * entry[=].resource = Covid19VaccinationAppointmentExample
 
 Instance: Covid19CompositionExample
@@ -58,22 +60,21 @@ Description: "Basic Composition example"
 * section[+].title = "Covid19 Assessment Encounter"
 * section[=].code = CSCaseReportSections#COVID-ASSESSMENT
 * section[=].entry[+] = Reference(Covid19AssessmentEncounterExample)
-* section[=].entry[+] = Reference(Covid19ReasonforAssessmentExample)
 * section[=].entry[+] = Reference(Covid19PresentationExample)
 * section[=].entry[+] = Reference(Covid19SymptomExample)
-//* section[=].entry[+] = Reference(Covid19ComorbidityPresentExample) 
-//* section[=].entry[+] = Reference(Covid19ConditionsComorbidityExample) 
+* section[=].entry[+] = Reference(Covid19ConditionsComorbidityExample)
 * section[=].entry[+] = Reference(Covid19DiagnosisExample)   
-//* section[=].entry[+] = Reference(HIVDiagnosisExample) 
+* section[=].entry[+] = Reference(Covid19VaccineDoseReceivedExample)  
 * section[=].entry[+] = Reference(Covid19AssessmentVaccinationExample) 
-* section[=].entry[+] = Reference(Covid19PatientOutcomeExample) 
  
 * section[+].title = "Lab Order Management"
 * section[=].code = CSCaseReportSections#LABORDER-MANAGEMENT
 * section[=].entry[+] = Reference(Covid19LabOrderExample)
 * section[=].entry[+] = Reference(Covid19SpecimenExample)  
 * section[=].entry[+] = Reference(Covid19LabOrderCancellationExample ) 
-* section[=].entry[+] = Reference(Covid19LabResultsExamples) 
+* section[=].entry[+] = Reference(Covid19LabResultsDiagnosticReportExample) 
+* section[=].entry[+] = Reference(Covid19TestResultExample) 
+* section[=].entry[+] = Reference(Covid19ReasonTestNotPerformedExample)     
 
 * section[+].title = "Covid 19 Vaccination"
 * section[=].code = CSCaseReportSections#COVID-VACCINATION
@@ -322,7 +323,7 @@ Description: "Lab Order example"
 * basedOn = Reference(Covid19LabOrderExample)
 * requester = Reference(Covid19OrganizationExample)
 * owner = Reference(Covid19Laboratory)
-* identifier.system = "http://example.com/fhir/lab-integration/test-order-number"
+* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
 * identifier.value = "testOrderNumber"
 * intent = #order
 * status = #requested
@@ -346,11 +347,20 @@ Description: "Lab Result Task example"
 * basedOn = Reference(Covid19LabOrderExample)
 * requester = Reference(Covid19OrganizationExample)
 * owner = Reference(Covid19Laboratory)
-* identifier.system = "http://example.com/fhir/lab-integration/test-order-number"
+* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
 * identifier.value = "testOrderNumber"
 * intent = #order
 * status = #completed
 * lastModified = "2015-02-07"
-* output.type.coding.system = "http://example.com/fhir/lab-integration/task-output"
+* output.type.coding.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output"
 * output.type.coding.code = #result 
 * output.valueReference = Reference(Covid19LabResultsDiagnosticReportExample)
+
+Instance: Covid19ReasonTestNotPerformedExample
+InstanceOf: Covid19ReasonTestNotPerformed
+Usage: #example
+Title: "Covid19 Reason Test Not Performed Example"
+Description: "Covid19 reason test not peformed example"  
+* status = #final
+* code = $SCT#183944003
+* dataAbsentReason = $SCT#441510007
