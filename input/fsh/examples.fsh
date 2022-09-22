@@ -225,7 +225,7 @@ Usage: #example
 Title: "Covid19 Lab Order example"
 Description: "Covid19 Lab Order example"
 * identifier.value = "ORDERNR109191879"
-* identifier.system = "covid19laborder.org/order"
+* identifier.system = "http://covid19laborder.org/order"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
 * requester = Reference(PractitionerExample)
