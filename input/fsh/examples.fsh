@@ -224,9 +224,8 @@ InstanceOf: Covid19LabOrder
 Usage: #example
 Title: "Covid19 Lab Order example"
 Description: "Covid19 Lab Order example"
-* identifier.value = "testOrderNumber"
-* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
-//* id = "labOrderGuid"
+* identifier.value = "ORDERNR109191879"
+* identifier.system = "covid19laborder.org/order"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
 * requester = Reference(PractitionerExample)
