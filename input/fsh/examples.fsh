@@ -228,11 +228,11 @@ Description: "Covid19 Lab Order example"
 * identifier.system = "http://covid19laborder.org/order"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
-* requester = Reference(PractitionerExample)
 * reasonCode  = #Surveillance
-* authoredOn  = "2022-07-28"
-* status = #active
-* code =  $LNC#94558-4 
+* occurrenceDateTime = "2012-01-05"
+* status = #completed
+* code =  $SCT#9718006 
+* requester = Reference(Covid19OrganizationExample)
 * locationReference = Reference(Covid19Laboratory) 
 * specimen = Reference(Covid19SpecimenExample)
 

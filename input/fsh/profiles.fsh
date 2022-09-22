@@ -28,7 +28,6 @@ Title: "Covid19 Case Reporting Composition"
 
 * section[covid19AssessmentSection].title = "Covid19 Assessment Encounter"
 * section[covid19AssessmentSection].code = CSCaseReportSections#COVID-ASSESSMENT
-//* section[covid19AssessmentSection].entry only Reference(Covid19AssessmentEncounter)
 * section[covid19AssessmentSection].entry ^slicing.discriminator.type = #profile
 * section[covid19AssessmentSection].entry ^slicing.discriminator.path = "reference.resolve()"
 * section[covid19AssessmentSection].entry ^slicing.rules = #closed
@@ -109,7 +108,6 @@ Description: "This Patient profile allows the exchange of patient information, i
 //Next of kin contact details
 * contact.name MS
 * contact.telecom MS
-//* address 1..*
 * address.country MS    //Client Country  /  Nationality / Citizenship
 * address.state MS      //Client County / Province  / State
 * address.district MS   //Client SubCounty / District 
@@ -122,13 +120,10 @@ Description: "This Patient profile allows the exchange of patient information, i
 * identifier ^slicing.description = "Slice based on the type of identifier"
 
 * identifier contains
-    // art 0..* and
     passport 0..1 and
     national 0..1 and
     pos 0..1
 
-//* identifier[art].value 0..1
-//* identifier[art].system = "http://openhie.org/fhir/hiv-casereporting/identifier/art"
 * identifier[passport].value 0..1
 * identifier[passport].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport"
 * identifier[national].value 0..1
@@ -241,7 +236,7 @@ Description: "Covid19 Lab Order"
 * note MS // for capturing other reasons for testing
 * encounter 1..1 MS  
 * requester MS // Provider name
-* authoredOn 1..1 MS // Order time
+* occurrenceDateTime 1..1
 * code from VSTestTypes
 * code 1..1 MS // Test request Code
 * locationReference MS //Reference Lab sample send to
