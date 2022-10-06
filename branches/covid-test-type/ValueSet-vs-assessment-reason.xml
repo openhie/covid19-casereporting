@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-assessment-reason"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/428792000">428792000</a></td><td>Contact of a case</td></tr><tr><td><a href="http://snomed.info/id/171367005">171367005</a></td><td>Entry into a country</td></tr><tr><td><a href="http://snomed.info/id/308273005">308273005</a></td><td>Follow-up</td></tr><tr><td><a href="http://snomed.info/id/223366009">223366009</a></td><td>Health worker</td></tr><tr><td><a href="http://snomed.info/id/34325006">34325006</a></td><td>Other frontline worker</td></tr><tr><td><a href="http://snomed.info/id/168260004">168260004</a></td><td>Post-mortem</td></tr><tr><td><a href="http://snomed.info/id/170497006">170497006</a></td><td>Quarantine</td></tr><tr><td><a href="http://snomed.info/id/273407003">273407003</a></td><td>RDT confirmatory</td></tr><tr><td><a href="http://snomed.info/id/243790003">243790003</a></td><td>Surveillance</td></tr><tr><td><a href="http://snomed.info/id/264931009">264931009</a></td><td>Symptomatic/Illness</td></tr><tr><td><a href="http://snomed.info/id/255375007">255375007</a></td><td>Voluntary</td></tr></table></li><li>Include all codes defined in <a href="CodeSystem-cs-other.html"><code>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other</code></a></li></ul></div>
+  </text>
+  <url value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-assessment-reason"/>
+  <version value="0.1.0-test"/>
+  <name value="VSAssessmentReason"/>
+  <title value="Assessment Reason valueset"/>
+  <status value="active"/>
+  <date value="2022-10-06T09:32:01+00:00"/>
+  <publisher value="OpenHIE"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://xxhl7.org/Special/committees/[something]"/>
+    </telecom>
+  </contact>
+  <description value="Valueset - assessment reason"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="428792000"/>
+        <display value="Contact of a case"/>
+      </concept>
+      <concept>
+        <code value="171367005"/>
+        <display value="Entry into a country"/>
+      </concept>
+      <concept>
+        <code value="308273005"/>
+        <display value="Follow-up"/>
+      </concept>
+      <concept>
+        <code value="223366009"/>
+        <display value="Health worker"/>
+      </concept>
+      <concept>
+        <code value="34325006"/>
+        <display value="Other frontline worker"/>
+      </concept>
+      <concept>
+        <code value="168260004"/>
+        <display value="Post-mortem"/>
+      </concept>
+      <concept>
+        <code value="170497006"/>
+        <display value="Quarantine"/>
+      </concept>
+      <concept>
+        <code value="273407003"/>
+        <display value="RDT confirmatory"/>
+      </concept>
+      <concept>
+        <code value="243790003"/>
+        <display value="Surveillance"/>
+      </concept>
+      <concept>
+        <code value="264931009"/>
+        <display value="Symptomatic/Illness"/>
+      </concept>
+      <concept>
+        <code value="255375007"/>
+        <display value="Voluntary"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other"/>
+    </include>
+  </compose>
+</ValueSet>
