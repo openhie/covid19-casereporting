@@ -152,8 +152,8 @@ ValueSet: VSTestTypes
 Id: vs-test-types
 Title: "Test Types"
 Description: "A list of Test Types"
-* $SCT#1156860005 "Rapid Antigen Test"
-* $SCT#9718006 "Diagnostic PCR Test"
+* $LNC#94558-4 "Rapid immunoassay"
+* $LNC#94745-7 "NAA with probe detection"
 
 //double check with Marius
 CodeSystem: CSCancellationReason

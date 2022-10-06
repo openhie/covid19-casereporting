@@ -231,7 +231,7 @@ Description: "Covid19 Lab Order example"
 * reasonCode  = #Surveillance
 * occurrenceDateTime = "2012-01-05"
 * status = #completed
-* code =  $SCT#9718006 
+* code =  $LNC#94745-7
 * requester = Reference(Covid19OrganizationExample)
 * locationReference = Reference(Covid19Laboratory) 
 * specimen = Reference(Covid19SpecimenExample)
