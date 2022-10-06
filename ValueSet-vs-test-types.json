@@ -3,14 +3,14 @@
   "id": "vs-test-types",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/1156860005\">1156860005</a></td><td>Rapid Antigen Test</td></tr><tr><td><a href=\"http://snomed.info/id/9718006\">9718006</a></td><td>Diagnostic PCR Test</td></tr></table></li></ul></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/94558-4.html\">94558-4</a></td><td>Rapid immunoassay</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/94745-7.html\">94745-7</a></td><td>NAA with probe detection</td></tr></table></li></ul></div>"
   },
   "url": "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types",
   "version": "0.1.0-test",
   "name": "VSTestTypes",
   "title": "Test Types",
   "status": "active",
-  "date": "2022-09-22T08:03:20+00:00",
+  "date": "2022-10-06T09:32:01+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -36,15 +36,15 @@
   "compose": {
     "include": [
       {
-        "system": "http://snomed.info/sct",
+        "system": "http://loinc.org",
         "concept": [
           {
-            "code": "1156860005",
-            "display": "Rapid Antigen Test"
+            "code": "94558-4",
+            "display": "Rapid immunoassay"
           },
           {
-            "code": "9718006",
-            "display": "Diagnostic PCR Test"
+            "code": "94745-7",
+            "display": "NAA with probe detection"
           }
         ]
       }
