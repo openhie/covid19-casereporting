@@ -311,6 +311,9 @@ Description: "Covid19 Vaccination"
 * vaccineCode.text MS //other vaccine details
 * lotNumber  1..1 MS  //Vaccine lot number
 * note MS // notes
+* reportOrigin 1..1 MS 
+* reportOrigin from VSSourceOfInfo  // source of information
+* reportOrigin.text MS // Other Source of info details
 
 Profile: Covid19VaccinationAppointment
 Parent: Appointment

@@ -127,9 +127,10 @@ Description: "Covid19 Patient example"
 * contact[0].relationship.coding.system =  "http://terminology.hl7.org/CodeSystem/v2-0131"
 * contact[0].name.family = "John"
 * contact[0].telecom.system = #phone
+* contact[0].telecom.value = "+27825556667"
 
 Instance: Covid19AssessmentEncounterExample
-InstanceOf: Covid19AssessmentEncounter
+InstanceOf: Covid19AssessmentEncounter    
 Usage: #example
 Title: "Covid19 Assessment Encounter example"
 Description: "Covid19 Assessment Encounter  example"
@@ -138,9 +139,10 @@ Description: "Covid19 Assessment Encounter  example"
 * period.start =  "2022-07-28"  //Date of assessment
 * subject = Reference(Covid19PatientExample) //Patient reference
 * period.end  =  "2022-08-15"  //Date of death
+* reasonCode.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other"
 * reasonCode.coding.code = #Other
 * reasonCode.text = "Other specified details"
-* diagnosis.condition = Reference(Covid19PresentationExample)
+//* diagnosis.condition = Reference(Covid19PresentationExample) created circular referencing
 
 Instance: Covid19VaccineDoseReceivedExample
 InstanceOf: Covid19VaccineDoseReceived
@@ -169,8 +171,8 @@ Description: "Covid19 Symptom example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
 * status = #completed
-* code = $SCT#21522001 
-* investigation.code = #JointPain
+//* code =    #TODDO need a code
+* investigation.code = $SCT#21522001 
 
 Instance: Covid19ConditionsComorbidityExample
 InstanceOf: Covid19ConditionsComorbidity
@@ -192,7 +194,7 @@ Description: "Covid19 Diagnosis Example"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * clinicalStatus = $SCT#370996005 
-* verificationStatus = #410605003
+* verificationStatus = $SCT#410605003
 
 Instance: Covid19MedicationRequestExample
 InstanceOf: Covid19MedicationRequest
@@ -217,7 +219,8 @@ Description: "Covid19 Vaccine Type Administered example"
 * occurrenceDateTime = "2022-07-28"
 * protocolApplied.doseNumberPositiveInt = 1
 * protocolApplied.series = #Booster
-* reportOrigin = #VaccineCard
+* reportOrigin.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"
+* reportOrigin.coding.code = #VaccineCard
 
 Instance: Covid19LabOrderExample
 InstanceOf: Covid19LabOrder
@@ -228,7 +231,7 @@ Description: "Covid19 Lab Order example"
 * identifier.system = "http://covid19laborder.org/order"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
-* reasonCode  = #Surveillance
+* reasonCode  = $SCT#Surveillance
 * occurrenceDateTime = "2012-01-05"
 * status = #completed
 * code =  $LNC#94745-7
@@ -290,6 +293,7 @@ Description: "Covid19 Lab Results example"
 * code = $LNC#94558-4
 * valueDateTime = "2022-07-28"
 * valueCodeableConcept = $SCT#10828004
+* subject = Reference(Covid19PatientExample)
 
 Instance: Covid19VaccinationExample
 InstanceOf: Covid19Vaccination
@@ -304,6 +308,9 @@ Description: "Covid19 Vaccination example"
 * expirationDate = "2022-12-28"
 * vaccineCode = $ICD#XM4YL8
 * lotNumber = "1"
+* reportOrigin.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"
+* reportOrigin.coding.code = #VaccineCard
+* encounter = Reference(Covid19AssessmentEncounterExample) 
 
 Instance: Covid19VaccinationAppointmentExample
 InstanceOf: Covid19VaccinationAppointment
