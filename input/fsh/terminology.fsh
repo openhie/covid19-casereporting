@@ -1,8 +1,7 @@
 Alias: $SCT = http://snomed.info/sct
-Alias: $LNC = http://loinc.org
+Alias: $LNC = https://loinc.org
 Alias: $ICD = http://id.who.int/icd11/mms
-Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6 
-//Alias: $KEYPOPULATION = https://openhie.github.io/hiv-ig/ValueSet-vs-key-population
+//Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6 
 
 CodeSystem: CSCaseReportSections
 Id: cs-case-report-sections
@@ -13,7 +12,7 @@ Description: ""
 * #LABORDER-MANAGEMENT
 * #COVID-VACCINATION
 
-CodeSystem: CSOther
+CodeSystem: CSOther   //#TODO --> Other should not be an option, details specified per note
 Id: cs-other
 Title: "Covid19 Case Report Sections codesystem"
 Description: ""
@@ -35,7 +34,7 @@ Description:  "Valueset - assessment reason"
 * $SCT#264931009 "Symptomatic/Illness"
 * $SCT#171367005 "Travel out of country"
 * $SCT#255375007 "Voluntary"
-* include codes from system CSOther
+* include codes from system CSOther   //#TODO Remove as it does not have a real code and system
 
 ValueSet: VSPresentation
 Id: vs-presentation
@@ -82,7 +81,9 @@ ValueSet: VSYesNoUnknown
 Id: vs-yes-no
 Title: "Yes No Unknown"
 Description:  "Yes No Unknown"
-* include codes from system $LNC-LL3044-6
+* $SCT#373066001 "Yes"
+* $SCT#373067005 "No"
+* $SCT#261665006 "Unknown"
 
 ValueSet: VSCovidDiagnosis
 Id: vs-covid-diagnosis
@@ -138,7 +139,7 @@ Description: "A list of Vaccine Types"
 * $ICD#XM1G90 "COVAXIN"
 * $ICD#XM9T65  "Covovax"
 * $ICD#XM5JC5 "Nuvaxovid"
-* $ICD#XM1AG7 "CanSino "
+* $ICD#XM1AG7 "CanSino"
 
 ValueSet: VSPatientOutcome
 Id: vs-patient-outcome
@@ -152,8 +153,8 @@ ValueSet: VSTestTypes
 Id: vs-test-types
 Title: "Test Types"
 Description: "A list of Test Types"
-* $LNC#94558-4 "Rapid immunoassay"
-* $LNC#94745-7 "NAA with probe detection"
+* $LNC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"   
+* $LNC#94745-7 "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
 
 //double check with Marius
 CodeSystem: CSCancellationReason

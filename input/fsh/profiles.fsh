@@ -322,3 +322,11 @@ Title: "Covid19 Vaccination Appointment"
 Description: "Covid19 Vaccination Appointment"
 * participant.actor 1..1 MS // Patient Reference
 * start 1..1 MS // date of next vaccination
+
+Profile: Covid19ServiceRequestLocation
+Parent: Location
+Id: covid19-service-request-location
+Title: "Covid19 Service Request Location"
+Description: "Covid19 Service Request Location"
+* name MS
+* address MS

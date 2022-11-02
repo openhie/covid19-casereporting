@@ -1,46 +1,3 @@
-Instance: Covid19BundleExample
-InstanceOf: Bundle
-Usage: #example
-Title: "Covid19 Case Report - Full Bundle Example"
-Description: "Example of a clinical bundle representing a case report"
-* type = #document
-* entry[+].fullUrl = "Composition/Covid19CompositionExample"
-* entry[=].resource = Covid19CompositionExample
-* entry[+].fullUrl = "Patient/Covid19PatientExample"
-* entry[=].resource = Covid19PatientExample
-* entry[+].fullUrl = "Encounter/Covid19AssessmentEncounterExample"
-* entry[=].resource = Covid19AssessmentEncounterExample
-* entry[+].fullUrl = "Condition/Covid19PresentationExample"
-* entry[=].resource = Covid19PresentationExample
-* entry[+].fullUrl = "Symptom/Covid19SymptomExample"
-* entry[=].resource = Covid19SymptomExample
-* entry[+].fullUrl = "Condition/Covid19ConditionsComorbidityExample"
-* entry[=].resource = Covid19ConditionsComorbidityExample
-* entry[+].fullUrl = "Condition/Covid19DiagnosisExample"
-* entry[=].resource = Covid19DiagnosisExample 
-* entry[+].fullUrl = "Observation/Covid19VaccineDoseReceivedExample"
-* entry[=].resource = Covid19VaccineDoseReceivedExample
-* entry[+].fullUrl = "Immunization/Covid19AssessmentVaccinationExample"
-* entry[=].resource = Covid19AssessmentVaccinationExample
-* entry[+].fullUrl = "Task/LabOrderTaskExample"
-* entry[=].resource = LabOrderTaskExample
-* entry[+].fullUrl = "ServiceRequest/Covid19LabOrderExample"
-* entry[=].resource = Covid19LabOrderExample
-* entry[+].fullUrl = "Specimen/Covid19SpecimenExample"
-* entry[=].resource = Covid19SpecimenExample
-* entry[+].fullUrl = "Task/Covid19LabOrderCancellationExample"
-* entry[=].resource = Covid19LabOrderCancellationExample
-* entry[+].fullUrl = "Task/LabResultTaskExample"
-* entry[=].resource = LabResultTaskExample
-* entry[+].fullUrl = "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
-* entry[=].resource = Covid19LabResultsDiagnosticReportExample
-* entry[+].fullUrl = "Observation/Covid19TestResultExample"
-* entry[=].resource = Covid19TestResultExample
-* entry[+].fullUrl = "Immunization/Covid19VaccinationExample"
-* entry[=].resource = Covid19VaccinationExample
-* entry[+].fullUrl = "Appointment/Covid19VaccinationAppointmentExample"
-* entry[=].resource = Covid19VaccinationAppointmentExample
-
 Instance: Covid19CompositionExample
 InstanceOf: Covid19Composition
 Usage: #example
@@ -149,10 +106,11 @@ InstanceOf: Covid19VaccineDoseReceived
 Usage: #example
 Title: "Covid19 Vaccine Dose Received example"
 Description: "Covid19 Vaccine Dose Received example"
-* valueCodeableConcept = #Yes
+* valueCodeableConcept = $SCT#373066001
 * status = #final
 * code = $LNC#75618-9 // #TODO
 * encounter = Reference(Covid19AssessmentEncounterExample) 
+* subject = Reference(Covid19PatientExample) 
 
 Instance: Covid19PresentationExample
 InstanceOf: Covid19Presentation
@@ -171,7 +129,7 @@ Description: "Covid19 Symptom example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
 * status = #completed
-//* code =    #TODDO need a code
+//* code =    #TODDO need a code 
 * investigation.code = $SCT#21522001 
 
 Instance: Covid19ConditionsComorbidityExample
@@ -181,8 +139,7 @@ Title: "Covid19 Conditions or comorbidity example"
 Description: "Covid19 Conditions or comorbidity example"
 * subject = Reference(Covid19PatientExample) 
 * encounter = Reference(Covid19AssessmentEncounterExample) 
-* code = #Other
-* note.text = "Other condition details specified here"
+* code = $SCT#49601007
 
 Instance: Covid19DiagnosisExample
 InstanceOf: Covid19Diagnosis
@@ -291,9 +248,11 @@ Title: "Covid19 Lab Results example"
 Description: "Covid19 Lab Results example"
 * status = #final
 * code = $LNC#94558-4
-* valueDateTime = "2022-07-28"
+//* valueDateTime = "2022-07-28"
 * valueCodeableConcept = $SCT#10828004
 * subject = Reference(Covid19PatientExample)
+* encounter = Reference(Covid19AssessmentEncounterExample) 
+* effectiveDateTime = "2022-07-28"  //test result date
 
 Instance: Covid19VaccinationExample
 InstanceOf: Covid19Vaccination
@@ -366,8 +325,20 @@ Description: "Lab Result Task example"
 Instance: Covid19ReasonTestNotPerformedExample
 InstanceOf: Covid19ReasonTestNotPerformed
 Usage: #example
-Title: "Covid19 Reason Test Not Performed Example"
+Title: "Covid19 Reason Test Not Performed example"
 Description: "Covid19 reason test not peformed example"  
 * status = #final
 * code = $SCT#183944003
 * dataAbsentReason = $SCT#441510007
+
+Instance: Covid19ServiceRequestLocationExample
+InstanceOf: Covid19ServiceRequestLocation
+Usage: #example
+Title: "Covid19 Service Request Location example"
+Description: "Covid19 Service Request Location example"
+* status = #final
+* name = "Covid19 Location"
+* address.country = "Cares country 1"
+* address.state = "Cares state 1"
+* address.district = "Cares district 1"
+* address.city = "Cares city 1"
