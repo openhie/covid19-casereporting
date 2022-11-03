@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="Covid19AssessmentEncounterExample"/>
+  <meta>
+    <profile value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Encounter</b><a name="Covid19AssessmentEncounterExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Encounter "Covid19AssessmentEncounterExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-encounter.html">Covid19 Assessment Encounter</a></p></div><p><b>status</b>: finished</p><p><b>class</b>: SS (Details: [not stated] code SS = 'SS', stated as 'null')</p><p><b>subject</b>: <a href="Patient-Covid19PatientExample.html">Patient/Covid19PatientExample</a> " SMITH"</p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Person exposed to disease (person) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#428792000)</span></p></div>
+  </text>
+  <status value="finished"/>
+  <class>
+    <code value="SS"/>
+  </class>
+  <subject>
+    <reference value="Patient/Covid19PatientExample"/>
+  </subject>
+  <period>
+    <start value="2022-07-28"/>
+    <end value="2022-08-15"/>
+  </period>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="428792000"/>
+    </coding>
+  </reasonCode>
+</Encounter>

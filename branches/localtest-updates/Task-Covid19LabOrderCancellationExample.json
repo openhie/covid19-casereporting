@@ -1,0 +1,33 @@
+{
+  "resourceType": "Task",
+  "id": "Covid19LabOrderCancellationExample",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"Covid19LabOrderCancellationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"Covid19LabOrderCancellationExample\" </p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-Covid19LabOrderExample.html\">ServiceRequest/Covid19LabOrderExample</a></p><p><b>status</b>: rejected</p><p><b>statusReason</b>: Inappropriate bottle or container for sample <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#281264009)</span></p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: 2022-07-28 --&gt; (ongoing)</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>owner</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p></div>"
+  },
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/Covid19LabOrderExample"
+    }
+  ],
+  "status": "rejected",
+  "statusReason": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "281264009"
+      }
+    ]
+  },
+  "intent": "order",
+  "executionPeriod": {
+    "start": "2022-07-28"
+  },
+  "lastModified": "2015-02-07",
+  "requester": {
+    "reference": "Organization/Covid19OrganizationExample"
+  },
+  "owner": {
+    "reference": "Covid19Laboratory"
+  }
+}
