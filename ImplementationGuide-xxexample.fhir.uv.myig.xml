@@ -12,7 +12,7 @@
   <title value="Covid 19 Case Reporting and Lab Management"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-11-03T06:58:58+00:00"/>
+  <date value="2022-11-03T08:57:21+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -280,18 +280,20 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/covid19-service-request-location"/>
+      </reference>
+      <name value="Covid19 Service Request Location"/>
+      <description value="Covid19 Service Request Location"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/covid19-reason-test-not-performed"/>
       </reference>
       <name value="Covid19 Reason Test Not Performed"/>
       <description value="Covid19 reason test not peformed"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/Covid19BundleExample"/>
-      </reference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -425,12 +427,19 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
+        <valueString value="Bundle"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/cs-other"/>
+        <reference value="Bundle/CaresSubmitLabRejectionBundleExample"/>
       </reference>
-      <name value="Covid19 Case Report Sections codesystem"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/CaresSubmitLabResultBundleExample"/>
+      </reference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -467,16 +476,6 @@
       <reference>
         <reference value="Observation/Covid19TestResultExample"/>
       </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-treatment-dispensed-prescribed"/>
-      </reference>
-      <name value="COVID Treatmens dispensed or prescribed"/>
-      <description value="COVID Treatmens dispensed or prescribed"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -590,16 +589,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/cs-cancellation-reason"/>
-      </reference>
-      <name value="Cancellation Reasons"/>
-      <description value="A list of Cancellation Reasons"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Encounter"/>
       </extension>
       <reference>
@@ -629,16 +618,6 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/covid19-lab-order-cancellation"/>
-      </reference>
-      <name value="Covid19 Lab Order Cancellation"/>
-      <description value="Covid19 Lab Order Cancellation Task"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/covid19-encounter"/>
       </reference>
       <name value="Covid19 Assessment Encounter"/>
@@ -656,6 +635,14 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/CaresSubmitLaborderBundleExample"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Specimen"/>
       </extension>
       <reference>
@@ -668,6 +655,14 @@
       </extension>
       <reference>
         <reference value="Task/LabResultTaskExample"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/CaresBundleExample"/>
       </reference>
     </resource>
     <resource>
@@ -812,6 +807,14 @@
       </reference>
       <name value="Covid19 Lab Order"/>
       <description value="Covid19 Lab Order"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/Covid19ServiceRequestLocationExample"/>
+      </reference>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

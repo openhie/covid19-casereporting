@@ -18,17 +18,9 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ClinicalImpression</b><a name=\"Covid19SymptomExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ClinicalImpression \"Covid19SymptomExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-symptom.html\">Covid19 Symptom</a></p></div><p><b>status</b>: completed</p><p><b>code</b>: Abdominal pain <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#21522001)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><h3>Investigations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>JointPain <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#JointPain)</span></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ClinicalImpression</b><a name=\"Covid19SymptomExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ClinicalImpression \"Covid19SymptomExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-symptom.html\">Covid19 Symptom</a></p></div><p><b>status</b>: completed</p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><h3>Investigations</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Abdominal pain <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#21522001)</span></td></tr></table></div>"
   ];
   fhir:ClinicalImpression.status [ fhir:value "completed"];
-  fhir:ClinicalImpression.code [
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       a sct:21522001;
-       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:Coding.code [ fhir:value "21522001" ]
-     ]
-  ];
   fhir:ClinicalImpression.subject [
      fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
@@ -42,7 +34,9 @@
      fhir:ClinicalImpression.investigation.code [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         fhir:Coding.code [ fhir:value "JointPain" ]
+         a sct:21522001;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "21522001" ]
        ]
      ]
   ] .

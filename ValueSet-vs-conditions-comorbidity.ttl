@@ -10,14 +10,14 @@
   fhir:Resource.id [ fhir:value "vs-conditions-comorbidity"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/49601007\">49601007</a></td><td>Cardiovascular disease e.g heart failure</td></tr><tr><td><a href=\"http://snomed.info/id/13645005\">13645005</a></td><td>Chronic Lung Disease</td></tr><tr><td><a href=\"http://snomed.info/id/118940003\">118940003</a></td><td>Chronic neurological or neuromuscular disease</td></tr><tr><td><a href=\"http://snomed.info/id/77176002\">77176002</a></td><td>Current smoker</td></tr><tr><td><a href=\"http://snomed.info/id/46635009\">46635009</a></td><td>Diabetes type 1</td></tr><tr><td><a href=\"http://snomed.info/id/44054006\">44054006</a></td><td>Diabetes type 2</td></tr><tr><td><a href=\"http://snomed.info/id/73211009\">73211009</a></td><td>Diabetes Type other or unspecified</td></tr><tr><td><a href=\"http://snomed.info/id/165816005\">165816005</a></td><td>HIV /AIDS</td></tr><tr><td><a href=\"http://snomed.info/id/38341003\">38341003</a></td><td>Hypertension</td></tr><tr><td><a href=\"http://snomed.info/id/234532001\">234532001</a></td><td>Immunodeficiency</td></tr><tr><td><a href=\"http://snomed.info/id/76783007\">76783007</a></td><td>Liver disease</td></tr><tr><td><a href=\"http://snomed.info/id/363346000\">363346000</a></td><td>Malignancy</td></tr><tr><td><a href=\"http://snomed.info/id/709044004\">709044004</a></td><td>Renal disease</td></tr><tr><td><a href=\"http://snomed.info/id/56717001\">56717001</a></td><td>TB</td></tr></table></li><li>Include all codes defined in <a href=\"CodeSystem-cs-other.html\"><code>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/49601007\">49601007</a></td><td>Cardiovascular disease e.g heart failure</td></tr><tr><td><a href=\"http://snomed.info/id/13645005\">13645005</a></td><td>Chronic Lung Disease</td></tr><tr><td><a href=\"http://snomed.info/id/118940003\">118940003</a></td><td>Chronic neurological or neuromuscular disease</td></tr><tr><td><a href=\"http://snomed.info/id/77176002\">77176002</a></td><td>Current smoker</td></tr><tr><td><a href=\"http://snomed.info/id/46635009\">46635009</a></td><td>Diabetes type 1</td></tr><tr><td><a href=\"http://snomed.info/id/44054006\">44054006</a></td><td>Diabetes type 2</td></tr><tr><td><a href=\"http://snomed.info/id/73211009\">73211009</a></td><td>Diabetes Type other or unspecified</td></tr><tr><td><a href=\"http://snomed.info/id/165816005\">165816005</a></td><td>HIV /AIDS</td></tr><tr><td><a href=\"http://snomed.info/id/38341003\">38341003</a></td><td>Hypertension</td></tr><tr><td><a href=\"http://snomed.info/id/234532001\">234532001</a></td><td>Immunodeficiency</td></tr><tr><td><a href=\"http://snomed.info/id/76783007\">76783007</a></td><td>Liver disease</td></tr><tr><td><a href=\"http://snomed.info/id/363346000\">363346000</a></td><td>Malignancy</td></tr><tr><td><a href=\"http://snomed.info/id/709044004\">709044004</a></td><td>Renal disease</td></tr><tr><td><a href=\"http://snomed.info/id/56717001\">56717001</a></td><td>TB</td></tr></table></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity"];
   fhir:ValueSet.version [ fhir:value "0.1.0-test"];
   fhir:ValueSet.name [ fhir:value "VSConditionsComorbidity"];
   fhir:ValueSet.title [ fhir:value "List of Conditions / Comorbidity"];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2022-11-03T06:58:58+00:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2022-11-03T08:57:21+00:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "OpenHIE"];
   fhir:ValueSet.contact [
      fhir:index 0;
@@ -97,9 +97,6 @@
          fhir:ValueSet.compose.include.concept.code [ fhir:value "56717001" ];
          fhir:ValueSet.compose.include.concept.display [ fhir:value "TB" ]
        ]
-     ], [
-       fhir:index 1;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other" ]
      ]
   ] .
 

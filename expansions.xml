@@ -1,102 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="44d5ef48-6eaf-4530-a6dc-2aacdcb29214"/>
+  <id value="f4d71b06-7299-4797-9f69-e75945e25c71"/>
   <meta>
-    <lastUpdated value="2022-11-03T06:58:58.302+00:00"/>
+    <lastUpdated value="2022-11-03T08:57:21.713+00:00"/>
   </meta>
   <type value="collection"/>
-  <entry>
-    <fullUrl value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types"/>
-    <resource>
-      <ValueSet>
-        <id value="vs-test-types"/>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 2 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on Loinc v2.73</p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>System</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---loinc.org-94558-4"> </a>  
-                  <a href="http://details.loinc.org/LOINC/94558-4.html">94558-4</a>
-                </td>
-                <td>http://loinc.org</td>
-                <td>Rapid immunoassay</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---loinc.org-94745-7"> </a>  
-                  <a href="http://details.loinc.org/LOINC/94745-7.html">94745-7</a>
-                </td>
-                <td>http://loinc.org</td>
-                <td>NAA with probe detection</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types"/>
-        <version value="0.1.0-test"/>
-        <name value="VSTestTypes"/>
-        <title value="Test Types"/>
-        <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
-        <publisher value="OpenHIE"/>
-        <contact>
-          <telecom>
-            <system value="url"/>
-            <value value="http://xxhl7.org/Special/committees/[something]"/>
-          </telecom>
-        </contact>
-        <description value="A list of Test Types"/>
-        <jurisdiction>
-          <coding>
-            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-            <code value="001"/>
-          </coding>
-        </jurisdiction>
-        <expansion>
-          <identifier value="urn:uuid:2319fb10-4611-4eb7-be93-cf0a609022df"/>
-          <timestamp value="2022-11-03T06:59:38+00:00"/>
-          <total value="2"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="limitedExpansion"/>
-            <valueBoolean value="true"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://loinc.org|2.73"/>
-          </parameter>
-          <contains>
-            <system value="http://loinc.org"/>
-            <code value="94558-4"/>
-            <display value="Rapid immunoassay"/>
-          </contains>
-          <contains>
-            <system value="http://loinc.org"/>
-            <code value="94745-7"/>
-            <display value="NAA with probe detection"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
   <entry>
     <fullUrl value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis"/>
     <resource>
@@ -151,7 +60,7 @@
         <name value="VSCovidDiagnosis"/>
         <title value="COVID Diagnosis list"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -167,8 +76,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a9b3f310-4e99-4e53-bc97-6058ee5767d3"/>
-          <timestamp value="2022-11-03T06:59:40+00:00"/>
+          <identifier value="urn:uuid:49df8218-519d-4a75-ad98-260167618d2b"/>
+          <timestamp value="2022-11-03T08:58:29+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -209,16 +118,8 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 8 concepts</p>
-            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
-              <p>Expansion based on: </p>
-              <ul>
-                <li>
-                  <a href="CodeSystem-cs-other.html">Covid19 Case Report Sections codesystem v0.1.0-test (CodeSystem)</a>
-                </li>
-                <li>SNOMED CT International edition 31-Jul 2022</li>
-              </ul>
-            </div>
+            <p>This value set contains 7 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 31-Jul 2022</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -287,14 +188,6 @@
                 <td>http://snomed.info/sct</td>
                 <td>Supplies not available</td>
               </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-other-Other"> </a>  
-                  <a href="CodeSystem-cs-other.html#cs-other-Other">Other</a>
-                </td>
-                <td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other</td>
-                <td>Other (specify)</td>
-              </tr>
             </table>
           </div>
         </text>
@@ -303,7 +196,7 @@
         <name value="VSReasonTestNotPerformed"/>
         <title value="Covid19 Specimen Type"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -319,9 +212,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:39e8fbc0-372d-47ab-b911-df350a73d5eb"/>
-          <timestamp value="2022-11-03T06:59:41+00:00"/>
-          <total value="8"/>
+          <identifier value="urn:uuid:e6cbfc02-9f86-4212-a79c-cc40df99a682"/>
+          <timestamp value="2022-11-03T08:58:29+00:00"/>
+          <total value="7"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -333,10 +226,6 @@
           <parameter>
             <name value="version"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other|0.1.0-test"/>
           </parameter>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -372,11 +261,6 @@
             <system value="http://snomed.info/sct"/>
             <code value="419182006"/>
             <display value="Supplies not available"/>
-          </contains>
-          <contains>
-            <system value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other"/>
-            <code value="Other"/>
-            <display value="Other (specify)"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -436,7 +320,7 @@
         <name value="VSLabOrderStatus"/>
         <title value="Covid19 Lab Order Status"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -452,8 +336,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:7a8baeb4-6be7-4e96-a560-d438cc88ca6d"/>
-          <timestamp value="2022-11-03T06:59:41+00:00"/>
+          <identifier value="urn:uuid:2fa7bd35-40c4-484f-8374-8586cb584370"/>
+          <timestamp value="2022-11-03T08:58:30+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -558,7 +442,7 @@
         <name value="VSSourceOfInfo"/>
         <title value="Source of information - codes"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -574,8 +458,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:9984eb06-e6ca-4ca5-a4e5-c6de184bfc46"/>
-          <timestamp value="2022-11-03T06:59:42+00:00"/>
+          <identifier value="urn:uuid:f4e480cf-67cb-4709-bf4d-9c64c05ea6b1"/>
+          <timestamp value="2022-11-03T08:58:31+00:00"/>
           <total value="5"/>
           <parameter>
             <name value="excludeNested"/>
@@ -615,6 +499,110 @@
     </resource>
   </entry>
   <entry>
+    <fullUrl value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no"/>
+    <resource>
+      <ValueSet>
+        <id value="vs-yes-no"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 31-Jul 2022</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---snomed.info-sct-373066001"> </a>  
+                  <a href="http://snomed.info/id/373066001">373066001</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---snomed.info-sct-373067005"> </a>  
+                  <a href="http://snomed.info/id/373067005">373067005</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---snomed.info-sct-261665006"> </a>  
+                  <a href="http://snomed.info/id/261665006">261665006</a>
+                </td>
+                <td>http://snomed.info/sct</td>
+                <td>Unknown</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no"/>
+        <version value="0.1.0-test"/>
+        <name value="VSYesNoUnknown"/>
+        <title value="Yes No Unknown"/>
+        <status value="active"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
+        <publisher value="OpenHIE"/>
+        <contact>
+          <telecom>
+            <system value="url"/>
+            <value value="http://xxhl7.org/Special/committees/[something]"/>
+          </telecom>
+        </contact>
+        <description value="Yes No Unknown"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:3ed86fff-f50f-4244-b1fa-805cf99baf48"/>
+          <timestamp value="2022-11-03T08:58:31+00:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="limitedExpansion"/>
+            <valueBoolean value="true"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"/>
+          </parameter>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="373066001"/>
+            <display value="Yes"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="373067005"/>
+            <display value="No"/>
+          </contains>
+          <contains>
+            <system value="http://snomed.info/sct"/>
+            <code value="261665006"/>
+            <display value="Unknown"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
     <fullUrl value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-symptoms"/>
     <resource>
       <ValueSet>
@@ -622,16 +610,8 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 21 concepts</p>
-            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
-              <p>Expansion based on: </p>
-              <ul>
-                <li>
-                  <a href="CodeSystem-cs-other.html">Covid19 Case Report Sections codesystem v0.1.0-test (CodeSystem)</a>
-                </li>
-                <li>SNOMED CT International edition 31-Jul 2022</li>
-              </ul>
-            </div>
+            <p>This value set contains 20 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 31-Jul 2022</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -804,14 +784,6 @@
                 <td>http://snomed.info/sct</td>
                 <td>Tiredness</td>
               </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-other-Other"> </a>  
-                  <a href="CodeSystem-cs-other.html#cs-other-Other">Other</a>
-                </td>
-                <td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other</td>
-                <td>Other (specify)</td>
-              </tr>
             </table>
           </div>
         </text>
@@ -820,7 +792,7 @@
         <name value="VSSymptoms"/>
         <title value="Presenting symptoms"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -836,9 +808,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:dc047fc1-6d7a-4f1c-9a79-1f56479c7dac"/>
-          <timestamp value="2022-11-03T06:59:45+00:00"/>
-          <total value="21"/>
+          <identifier value="urn:uuid:3fb81ad9-9188-47d9-98d3-caa3dc01d3cd"/>
+          <timestamp value="2022-11-03T08:58:32+00:00"/>
+          <total value="20"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -850,10 +822,6 @@
           <parameter>
             <name value="version"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other|0.1.0-test"/>
           </parameter>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -955,11 +923,6 @@
             <code value="224960004"/>
             <display value="Tiredness"/>
           </contains>
-          <contains>
-            <system value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other"/>
-            <code value="Other"/>
-            <display value="Other (specify)"/>
-          </contains>
         </expansion>
       </ValueSet>
     </resource>
@@ -1010,7 +973,7 @@
         <name value="VSPresentation"/>
         <title value="Presentation valueset"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1026,8 +989,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5d433b11-765d-4203-a538-7c42aa728c0a"/>
-          <timestamp value="2022-11-03T06:59:47+00:00"/>
+          <identifier value="urn:uuid:c9e695d3-0453-494e-877f-85843aa591af"/>
+          <timestamp value="2022-11-03T08:58:34+00:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1063,10 +1026,8 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 2 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
-              <a href="CodeSystem-cs-treatment-dispensed-prescribed.html">COVID Treatmens dispensed or prescribed v0.1.0-test (CodeSystem)</a>
-            </p>
+            <p>This value set contains 1 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on RxNorm version ??</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -1081,19 +1042,10 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-treatment-dispensed-prescribed-Paxlovid"> </a>  
-                  <a href="CodeSystem-cs-treatment-dispensed-prescribed.html#cs-treatment-dispensed-prescribed-Paxlovid">Paxlovid</a>
+                  <a name="http---www.nlm.nih.gov-research-umls-rxnorm-2599543"> </a>  2599543
                 </td>
-                <td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-treatment-dispensed-prescribed</td>
+                <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
                 <td>Paxlovid</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-treatment-dispensed-prescribed-Other"> </a>  
-                  <a href="CodeSystem-cs-treatment-dispensed-prescribed.html#cs-treatment-dispensed-prescribed-Other">Other</a>
-                </td>
-                <td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-treatment-dispensed-prescribed</td>
-                <td>Other (specify)</td>
               </tr>
             </table>
           </div>
@@ -1103,7 +1055,7 @@
         <name value="VSTreatMentDispensedPrescribed"/>
         <title value="COVID Treatmens dispensed or prescribed"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1119,26 +1071,25 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:633a4dae-db5b-46c0-bb1b-b292496423b5"/>
-          <timestamp value="2022-11-03T06:59:48+00:00"/>
-          <total value="2"/>
+          <identifier value="urn:uuid:33f3195b-2927-4242-b94d-60c50c3b4424"/>
+          <timestamp value="2022-11-03T08:58:39+00:00"/>
+          <total value="1"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
           </parameter>
           <parameter>
+            <name value="limitedExpansion"/>
+            <valueBoolean value="true"/>
+          </parameter>
+          <parameter>
             <name value="version"/>
-            <valueUri value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-treatment-dispensed-prescribed|0.1.0-test"/>
+            <valueUri value="http://www.nlm.nih.gov/research/umls/rxnorm|??"/>
           </parameter>
           <contains>
-            <system value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-treatment-dispensed-prescribed"/>
-            <code value="Paxlovid"/>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="2599543"/>
             <display value="Paxlovid"/>
-          </contains>
-          <contains>
-            <system value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-treatment-dispensed-prescribed"/>
-            <code value="Other"/>
-            <display value="Other (specify)"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -1198,7 +1149,7 @@
         <name value="VSPatientOutcome"/>
         <title value="Patient Outcome"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1214,8 +1165,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0c22daa0-c3b8-4110-817d-34d6426201c9"/>
-          <timestamp value="2022-11-03T06:59:50+00:00"/>
+          <identifier value="urn:uuid:23a9b7f0-dcdf-4ed8-b2cb-ba1df3221e60"/>
+          <timestamp value="2022-11-03T08:58:41+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1256,16 +1207,8 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 12 concepts</p>
-            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
-              <p>Expansion based on: </p>
-              <ul>
-                <li>
-                  <a href="CodeSystem-cs-other.html">Covid19 Case Report Sections codesystem v0.1.0-test (CodeSystem)</a>
-                </li>
-                <li>SNOMED CT International edition 31-Jul 2022</li>
-              </ul>
-            </div>
+            <p>This value set contains 11 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 31-Jul 2022</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -1366,14 +1309,6 @@
                 <td>http://snomed.info/sct</td>
                 <td>Voluntary</td>
               </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-other-Other"> </a>  
-                  <a href="CodeSystem-cs-other.html#cs-other-Other">Other</a>
-                </td>
-                <td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other</td>
-                <td>Other (specify)</td>
-              </tr>
             </table>
           </div>
         </text>
@@ -1382,7 +1317,7 @@
         <name value="VSAssessmentReason"/>
         <title value="Assessment Reason valueset"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1398,9 +1333,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:94bc6911-a4bd-4ffd-b6fe-11a82c13c591"/>
-          <timestamp value="2022-11-03T06:59:54+00:00"/>
-          <total value="12"/>
+          <identifier value="urn:uuid:e8bb846e-0045-43ee-822d-c7873a15a3e5"/>
+          <timestamp value="2022-11-03T08:58:44+00:00"/>
+          <total value="11"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -1412,10 +1347,6 @@
           <parameter>
             <name value="version"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other|0.1.0-test"/>
           </parameter>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -1471,11 +1402,6 @@
             <system value="http://snomed.info/sct"/>
             <code value="255375007"/>
             <display value="Voluntary"/>
-          </contains>
-          <contains>
-            <system value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other"/>
-            <code value="Other"/>
-            <display value="Other (specify)"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -1535,7 +1461,7 @@
         <name value="VSAdmissionTypes"/>
         <title value="Admission Types"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1551,8 +1477,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:9b294e0c-5cf2-4470-850f-18457709aba1"/>
-          <timestamp value="2022-11-03T06:59:55+00:00"/>
+          <identifier value="urn:uuid:498fdfd5-fa0c-4008-8dec-57287a267283"/>
+          <timestamp value="2022-11-03T08:58:45+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1639,7 +1565,7 @@
         <name value="VSTestResult"/>
         <title value="Covid19 Test Result"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1655,8 +1581,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:46c0e3f7-6bd1-4907-830c-6800f3b4feb7"/>
-          <timestamp value="2022-11-03T06:59:56+00:00"/>
+          <identifier value="urn:uuid:81380fb0-4af2-41f9-a755-dd576de09d4a"/>
+          <timestamp value="2022-11-03T08:58:46+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1697,16 +1623,8 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 15 concepts</p>
-            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
-              <p>Expansion based on: </p>
-              <ul>
-                <li>
-                  <a href="CodeSystem-cs-other.html">Covid19 Case Report Sections codesystem v0.1.0-test (CodeSystem)</a>
-                </li>
-                <li>SNOMED CT International edition 31-Jul 2022</li>
-              </ul>
-            </div>
+            <p>This value set contains 14 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 31-Jul 2022</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -1831,14 +1749,6 @@
                 <td>http://snomed.info/sct</td>
                 <td>TB</td>
               </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-other-Other"> </a>  
-                  <a href="CodeSystem-cs-other.html#cs-other-Other">Other</a>
-                </td>
-                <td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other</td>
-                <td>Other (specify)</td>
-              </tr>
             </table>
           </div>
         </text>
@@ -1847,7 +1757,7 @@
         <name value="VSConditionsComorbidity"/>
         <title value="List of Conditions / Comorbidity"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1863,9 +1773,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:64e11a39-bdcb-433c-bdd1-ee588016ded0"/>
-          <timestamp value="2022-11-03T06:59:56+00:00"/>
-          <total value="15"/>
+          <identifier value="urn:uuid:48c1697b-3b37-4e55-9815-68297044457e"/>
+          <timestamp value="2022-11-03T08:58:47+00:00"/>
+          <total value="14"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -1877,10 +1787,6 @@
           <parameter>
             <name value="version"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other|0.1.0-test"/>
           </parameter>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -1952,11 +1858,6 @@
             <code value="56717001"/>
             <display value="TB"/>
           </contains>
-          <contains>
-            <system value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other"/>
-            <code value="Other"/>
-            <display value="Other (specify)"/>
-          </contains>
         </expansion>
       </ValueSet>
     </resource>
@@ -1969,16 +1870,8 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 4 concepts</p>
-            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
-              <p>Expansion based on: </p>
-              <ul>
-                <li>
-                  <a href="CodeSystem-cs-other.html">Covid19 Case Report Sections codesystem v0.1.0-test (CodeSystem)</a>
-                </li>
-                <li>SNOMED CT International edition 31-Jul 2022</li>
-              </ul>
-            </div>
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 31-Jul 2022</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -2015,14 +1908,6 @@
                 <td>http://snomed.info/sct</td>
                 <td>unknown</td>
               </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-other-Other"> </a>  
-                  <a href="CodeSystem-cs-other.html#cs-other-Other">Other</a>
-                </td>
-                <td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other</td>
-                <td>Other (specify)</td>
-              </tr>
             </table>
           </div>
         </text>
@@ -2031,7 +1916,7 @@
         <name value="VSCovid19SpecimenType"/>
         <title value="Covid19 Specimen Type"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -2047,9 +1932,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:4da27b0d-1f3b-4019-8b15-982ea10a743a"/>
-          <timestamp value="2022-11-03T06:59:57+00:00"/>
-          <total value="4"/>
+          <identifier value="urn:uuid:326de9ff-c9aa-4950-8cda-428ad77c47a3"/>
+          <timestamp value="2022-11-03T08:58:48+00:00"/>
+          <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -2061,10 +1946,6 @@
           <parameter>
             <name value="version"/>
             <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other|0.1.0-test"/>
           </parameter>
           <contains>
             <system value="http://snomed.info/sct"/>
@@ -2080,11 +1961,6 @@
             <system value="http://snomed.info/sct"/>
             <code value="119324002"/>
             <display value="unknown"/>
-          </contains>
-          <contains>
-            <system value="http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other"/>
-            <code value="Other"/>
-            <display value="Other (specify)"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -2144,7 +2020,7 @@
         <name value="VSCancellationReason"/>
         <title value="Cancellation Reasons"/>
         <status value="active"/>
-        <date value="2022-11-03T06:58:58+00:00"/>
+        <date value="2022-11-03T08:57:21+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -2160,8 +2036,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:6d58da4e-7946-4ec6-b83e-720fd7c7d3c5"/>
-          <timestamp value="2022-11-03T06:59:58+00:00"/>
+          <identifier value="urn:uuid:3d5504b7-32a8-43ec-ba30-14fdded75e87"/>
+          <timestamp value="2022-11-03T08:58:49+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>

@@ -1,6 +1,7 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # - resource -------------------------------------------------------------------
@@ -17,12 +18,14 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"Covid19ConditionsComorbidityExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition \"Covid19ConditionsComorbidityExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-conditions-comorbidity.html\">Covid19 Conditions or comorbidity</a></p></div><p><b>code</b>: Other <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Other)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>note</b>: Other condition details specified here</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"Covid19ConditionsComorbidityExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition \"Covid19ConditionsComorbidityExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-conditions-comorbidity.html\">Covid19 Conditions or comorbidity</a></p></div><p><b>code</b>: Cardiovascular disorder <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#49601007)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p></div>"
   ];
   fhir:Condition.code [
      fhir:CodeableConcept.coding [
        fhir:index 0;
-       fhir:Coding.code [ fhir:value "Other" ]
+       a sct:49601007;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "49601007" ]
      ]
   ];
   fhir:Condition.subject [
@@ -32,10 +35,6 @@
   fhir:Condition.encounter [
      fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
      fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
-  ];
-  fhir:Condition.note [
-     fhir:index 0;
-     fhir:Annotation.text [ fhir:value "Other condition details specified here" ]
   ] .
 
 # - ontology header ------------------------------------------------------------
