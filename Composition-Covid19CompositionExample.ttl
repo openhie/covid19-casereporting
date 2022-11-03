@@ -1,4 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -17,7 +18,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"Covid19CompositionExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition \"Covid19CompositionExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-composition.html\">Covid19 Case Reporting Composition</a></p></div><p><b>identifier</b>: id: 1111</p><p><b>status</b>: final</p><p><b>type</b>: 95412-3 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (loinc#95412-3)</span></p><p><b>date</b>: 2022-08-04</p><p><b>author</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>title</b>: Covid19 Case Report</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"Covid19CompositionExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition \"Covid19CompositionExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-composition.html\">Covid19 Case Reporting Composition</a></p></div><p><b>identifier</b>: id: 1111</p><p><b>status</b>: final</p><p><b>type</b>: COVID-19 case report <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#95412-3)</span></p><p><b>date</b>: 2022-08-04</p><p><b>author</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>title</b>: Covid19 Case Report</p></div>"
   ];
   fhir:Composition.identifier [
      fhir:Identifier.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-case-report" ];
@@ -27,7 +28,8 @@
   fhir:Composition.type [
      fhir:CodeableConcept.coding [
        fhir:index 0;
-       fhir:Coding.system [ fhir:value "http://loinc.org/loinc" ];
+       a loinc:95412-3;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
        fhir:Coding.code [ fhir:value "95412-3" ]
      ]
   ];
