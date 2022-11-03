@@ -1,8 +1,8 @@
 Alias: $SCT = http://snomed.info/sct
-Alias: $LNC = http://loinc.org
+Alias: $LNC = https://loinc.org
 Alias: $ICD = http://id.who.int/icd11/mms
-Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6 
-//Alias: $KEYPOPULATION = https://openhie.github.io/hiv-ig/ValueSet-vs-key-population
+Alias: $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
+
 
 CodeSystem: CSCaseReportSections
 Id: cs-case-report-sections
@@ -12,12 +12,6 @@ Description: ""
 * #COVID-ASSESSMENT
 * #LABORDER-MANAGEMENT
 * #COVID-VACCINATION
-
-CodeSystem: CSOther
-Id: cs-other
-Title: "Covid19 Case Report Sections codesystem"
-Description: ""
-* #Other "Other (specify)"
 
 ValueSet: VSAssessmentReason
 Id: vs-assessment-reason
@@ -34,8 +28,7 @@ Description:  "Valueset - assessment reason"
 * $SCT#243790003 "Surveillance"
 * $SCT#264931009 "Symptomatic/Illness"
 * $SCT#171367005 "Travel out of country"
-* $SCT#255375007 "Voluntary"
-* include codes from system CSOther
+* $SCT#255375007 "Voluntary" 
 
 ValueSet: VSPresentation
 Id: vs-presentation
@@ -68,7 +61,6 @@ Description:  "A list of symptoms"
 * $SCT#76067001 "Sneezing" 
 * $SCT#162397003 "Sore Throat" 
 * $SCT#224960004 "Tiredness"
-* include codes from system CSOther
 
 ValueSet: VSAdmissionTypes
 Id: vs-AdmissionTypes
@@ -82,7 +74,9 @@ ValueSet: VSYesNoUnknown
 Id: vs-yes-no
 Title: "Yes No Unknown"
 Description:  "Yes No Unknown"
-* include codes from system $LNC-LL3044-6
+* $SCT#373066001 "Yes"
+* $SCT#373067005 "No"
+* $SCT#261665006 "Unknown"
 
 ValueSet: VSCovidDiagnosis
 Id: vs-covid-diagnosis
@@ -110,20 +104,12 @@ Description:  "List of Conditions / Comorbidity"
 * $SCT#363346000 "Malignancy"
 * $SCT#709044004 "Renal disease"
 * $SCT#56717001 "TB"
-* include codes from system CSOther
-
-CodeSystem: CSTreatMentDispensedPrescribed
-Id: cs-treatment-dispensed-prescribed
-Title: "COVID Treatmens dispensed or prescribed"
-Description: "COVID Treatmens dispensed or prescribed"
-* #Paxlovid "Paxlovid"
-* #Other "Other (specify)"
 
 ValueSet: VSTreatMentDispensedPrescribed
 Id: vs-treatment-dispensed-prescribed
 Title: "COVID Treatmens dispensed or prescribed"
 Description: "COVID Treatmens dispensed or prescribed"
-* include codes from system CSTreatMentDispensedPrescribed
+* $RXN#2599543 "Paxlovid"
 
 ValueSet: VSVaccineTypes
 Id: vs-vaccine-types
@@ -138,7 +124,7 @@ Description: "A list of Vaccine Types"
 * $ICD#XM1G90 "COVAXIN"
 * $ICD#XM9T65  "Covovax"
 * $ICD#XM5JC5 "Nuvaxovid"
-* $ICD#XM1AG7 "CanSino "
+* $ICD#XM1AG7 "CanSino"
 
 ValueSet: VSPatientOutcome
 Id: vs-patient-outcome
@@ -152,19 +138,8 @@ ValueSet: VSTestTypes
 Id: vs-test-types
 Title: "Test Types"
 Description: "A list of Test Types"
-* $LNC#94558-4 "Rapid immunoassay"
-* $LNC#94745-7 "NAA with probe detection"
-
-//double check with Marius
-CodeSystem: CSCancellationReason
-Id: cs-cancellation-reason
-Title: "Cancellation Reasons"
-Description: "A list of Cancellation Reasons"
-* #Duplicate "duplicate orders" //find out from CDC the snomed code
-* #PCR "Improperly ordered" //find out from CDC the snomed code
-* #VOID "No longer required" //find out from CDC the snomed code
-* #NoSample "No sample collected"
-* #Old "Old order, Wrong entry" //find out from CDC the snomed code
+* $LNC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"   
+* $LNC#94745-7 "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
 
 ValueSet: VSCancellationReason
 Id: vs-cancellation-reason
@@ -181,7 +156,6 @@ Description: "A list of Covid19 Specimen Type"
 * $SCT#258500001 "Nasopharyngeal"
 * $SCT#461911000124106 "Oropharyngeal swab" //TODO: replaced with the correct code. MDS uses the wrong one: 461911000000000
 * $SCT#119324002 "unknown"
-* include codes from system CSOther
 
 ValueSet: VSReasonTestNotPerformed
 Id: vs-covid19-reason-test-not-performed
@@ -194,7 +168,6 @@ Description: "A list of Covid19 Specimen Type"
 * $SCT#281268007 "Insufficient sample"
 * $SCT#281265005 "Specimen not labeled"
 * $SCT#419182006 "Supplies not available"
-* include codes from system CSOther
 
 ValueSet: VSTestResult
 Id: vs-covid19-test-result

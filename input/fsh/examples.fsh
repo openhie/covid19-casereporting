@@ -1,46 +1,3 @@
-Instance: Covid19BundleExample
-InstanceOf: Bundle
-Usage: #example
-Title: "Covid19 Case Report - Full Bundle Example"
-Description: "Example of a clinical bundle representing a case report"
-* type = #document
-* entry[+].fullUrl = "Composition/Covid19CompositionExample"
-* entry[=].resource = Covid19CompositionExample
-* entry[+].fullUrl = "Patient/Covid19PatientExample"
-* entry[=].resource = Covid19PatientExample
-* entry[+].fullUrl = "Encounter/Covid19AssessmentEncounterExample"
-* entry[=].resource = Covid19AssessmentEncounterExample
-* entry[+].fullUrl = "Condition/Covid19PresentationExample"
-* entry[=].resource = Covid19PresentationExample
-* entry[+].fullUrl = "Symptom/Covid19SymptomExample"
-* entry[=].resource = Covid19SymptomExample
-* entry[+].fullUrl = "Condition/Covid19ConditionsComorbidityExample"
-* entry[=].resource = Covid19ConditionsComorbidityExample
-* entry[+].fullUrl = "Condition/Covid19DiagnosisExample"
-* entry[=].resource = Covid19DiagnosisExample 
-* entry[+].fullUrl = "Observation/Covid19VaccineDoseReceivedExample"
-* entry[=].resource = Covid19VaccineDoseReceivedExample
-* entry[+].fullUrl = "Immunization/Covid19AssessmentVaccinationExample"
-* entry[=].resource = Covid19AssessmentVaccinationExample
-* entry[+].fullUrl = "Task/LabOrderTaskExample"
-* entry[=].resource = LabOrderTaskExample
-* entry[+].fullUrl = "ServiceRequest/Covid19LabOrderExample"
-* entry[=].resource = Covid19LabOrderExample
-* entry[+].fullUrl = "Specimen/Covid19SpecimenExample"
-* entry[=].resource = Covid19SpecimenExample
-* entry[+].fullUrl = "Task/Covid19LabOrderCancellationExample"
-* entry[=].resource = Covid19LabOrderCancellationExample
-* entry[+].fullUrl = "Task/LabResultTaskExample"
-* entry[=].resource = LabResultTaskExample
-* entry[+].fullUrl = "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
-* entry[=].resource = Covid19LabResultsDiagnosticReportExample
-* entry[+].fullUrl = "Observation/Covid19TestResultExample"
-* entry[=].resource = Covid19TestResultExample
-* entry[+].fullUrl = "Immunization/Covid19VaccinationExample"
-* entry[=].resource = Covid19VaccinationExample
-* entry[+].fullUrl = "Appointment/Covid19VaccinationAppointmentExample"
-* entry[=].resource = Covid19VaccinationAppointmentExample
-
 Instance: Covid19CompositionExample
 InstanceOf: Covid19Composition
 Usage: #example
@@ -127,9 +84,10 @@ Description: "Covid19 Patient example"
 * contact[0].relationship.coding.system =  "http://terminology.hl7.org/CodeSystem/v2-0131"
 * contact[0].name.family = "John"
 * contact[0].telecom.system = #phone
+* contact[0].telecom.value = "+27825556667"
 
 Instance: Covid19AssessmentEncounterExample
-InstanceOf: Covid19AssessmentEncounter
+InstanceOf: Covid19AssessmentEncounter    
 Usage: #example
 Title: "Covid19 Assessment Encounter example"
 Description: "Covid19 Assessment Encounter  example"
@@ -138,19 +96,19 @@ Description: "Covid19 Assessment Encounter  example"
 * period.start =  "2022-07-28"  //Date of assessment
 * subject = Reference(Covid19PatientExample) //Patient reference
 * period.end  =  "2022-08-15"  //Date of death
-* reasonCode.coding.code = #Other
-* reasonCode.text = "Other specified details"
-* diagnosis.condition = Reference(Covid19PresentationExample)
+* reasonCode = $SCT#428792000
+//* diagnosis.condition = Reference(Covid19PresentationExample) created circular referencing
 
 Instance: Covid19VaccineDoseReceivedExample
 InstanceOf: Covid19VaccineDoseReceived
 Usage: #example
 Title: "Covid19 Vaccine Dose Received example"
 Description: "Covid19 Vaccine Dose Received example"
-* valueCodeableConcept = #Yes
+* valueCodeableConcept = $SCT#373066001
 * status = #final
 * code = $LNC#75618-9 // #TODO
 * encounter = Reference(Covid19AssessmentEncounterExample) 
+* subject = Reference(Covid19PatientExample) 
 
 Instance: Covid19PresentationExample
 InstanceOf: Covid19Presentation
@@ -169,8 +127,8 @@ Description: "Covid19 Symptom example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
 * status = #completed
-* code = $SCT#21522001 
-* investigation.code = #JointPain
+//* code =    #TODDO need a code 
+* investigation.code = $SCT#21522001 
 
 Instance: Covid19ConditionsComorbidityExample
 InstanceOf: Covid19ConditionsComorbidity
@@ -179,8 +137,7 @@ Title: "Covid19 Conditions or comorbidity example"
 Description: "Covid19 Conditions or comorbidity example"
 * subject = Reference(Covid19PatientExample) 
 * encounter = Reference(Covid19AssessmentEncounterExample) 
-* code = #Other
-* note.text = "Other condition details specified here"
+* code = $SCT#49601007
 
 Instance: Covid19DiagnosisExample
 InstanceOf: Covid19Diagnosis
@@ -192,7 +149,7 @@ Description: "Covid19 Diagnosis Example"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * clinicalStatus = $SCT#370996005 
-* verificationStatus = #410605003
+* verificationStatus = $SCT#410605003
 
 Instance: Covid19MedicationRequestExample
 InstanceOf: Covid19MedicationRequest
@@ -203,7 +160,7 @@ Description: "Covid19 Treatment dispensed or prescribed example"
 * intent = #proposal
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
-* medicationCodeableConcept = #Paxlovid
+* medicationCodeableConcept = $RXN#2599543
 
 Instance: Covid19AssessmentVaccinationExample
 InstanceOf: Covid19AssessmentVaccination
@@ -217,7 +174,8 @@ Description: "Covid19 Vaccine Type Administered example"
 * occurrenceDateTime = "2022-07-28"
 * protocolApplied.doseNumberPositiveInt = 1
 * protocolApplied.series = #Booster
-* reportOrigin = #VaccineCard
+* reportOrigin.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"
+* reportOrigin.coding.code = #VaccineCard
 
 Instance: Covid19LabOrderExample
 InstanceOf: Covid19LabOrder
@@ -228,7 +186,7 @@ Description: "Covid19 Lab Order example"
 * identifier.system = "http://covid19laborder.org/order"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
-* reasonCode  = #Surveillance
+* reasonCode  = $SCT#Surveillance
 * occurrenceDateTime = "2012-01-05"
 * status = #completed
 * code =  $LNC#94745-7
@@ -255,17 +213,18 @@ Description: "Covid19 Laboratory testing the specimen"
 * identifier.id = "Lab001"
 
 Instance: Covid19LabOrderCancellationExample
-InstanceOf: Covid19LabOrderCancellation
+InstanceOf: Task
 Usage: #example
 Title: "Covid19 Lab Order Cancellation  example"
 Description: "Covid19 Lab Order Cancellation Task example"
 * basedOn = Reference(Covid19LabOrderExample)
 * executionPeriod.start = "2022-07-28"
-* statusReason = #Duplicate
+* statusReason = $SCT#281264009 
 * requester = Reference(Covid19OrganizationExample)
 * owner = Reference(Covid19Laboratory)
 * lastModified = "2015-02-07"
-
+* intent = #order
+* status = #rejected
 
 Instance: Covid19LabResultsDiagnosticReportExample
 InstanceOf: Covid19LabResultsDiagnosticReport
@@ -276,10 +235,10 @@ Description: "Covid19 Lab Results Diagnostic Report example"
 * basedOn = Reference(Covid19LabOrder) 
 * subject = Reference(Covid19PatientExample) 
 * identifier.id = "12341324"
-* effectiveDateTime = "2022-07-28"
 * status = #final 
 * result = Reference(Covid19TestResultExample)
 * performer = Reference(PractitionerExample)
+* conclusion = "Some textual conclusion"
 
 Instance: Covid19TestResultExample
 InstanceOf: Covid19TestResult
@@ -288,8 +247,11 @@ Title: "Covid19 Lab Results example"
 Description: "Covid19 Lab Results example"
 * status = #final
 * code = $LNC#94558-4
-* valueDateTime = "2022-07-28"
+//* valueDateTime = "2022-07-28"
 * valueCodeableConcept = $SCT#10828004
+* subject = Reference(Covid19PatientExample)
+* encounter = Reference(Covid19AssessmentEncounterExample) 
+* effectiveDateTime = "2022-07-28"  //test result date
 
 Instance: Covid19VaccinationExample
 InstanceOf: Covid19Vaccination
@@ -304,6 +266,9 @@ Description: "Covid19 Vaccination example"
 * expirationDate = "2022-12-28"
 * vaccineCode = $ICD#XM4YL8
 * lotNumber = "1"
+* reportOrigin.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"
+* reportOrigin.coding.code = #VaccineCard
+* encounter = Reference(Covid19AssessmentEncounterExample) 
 
 Instance: Covid19VaccinationAppointmentExample
 InstanceOf: Covid19VaccinationAppointment
@@ -359,8 +324,19 @@ Description: "Lab Result Task example"
 Instance: Covid19ReasonTestNotPerformedExample
 InstanceOf: Covid19ReasonTestNotPerformed
 Usage: #example
-Title: "Covid19 Reason Test Not Performed Example"
+Title: "Covid19 Reason Test Not Performed example"
 Description: "Covid19 reason test not peformed example"  
 * status = #final
 * code = $SCT#183944003
 * dataAbsentReason = $SCT#441510007
+
+Instance: Covid19ServiceRequestLocationExample
+InstanceOf: Covid19ServiceRequestLocation
+Usage: #example
+Title: "Covid19 Service Request Location example"
+Description: "Covid19 Service Request Location example"
+* name = "Covid19 Location"
+* address.country = "Cares country 1"
+* address.state = "Cares state 1"
+* address.district = "Cares district 1"
+* address.city = "Cares city 1"
