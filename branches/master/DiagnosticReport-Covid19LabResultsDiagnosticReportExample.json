@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 100156-9}\">SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Jane Smith (OFFICIAL)</b> female, DoB: 1986-06-04 ( id: PASSPORT1234567)</td></tr><tr><td>When For</td><td>2022-07-28</td></tr><tr><td>Identifier:</td><td> id: ?ngen-9?</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href=\"Observation-Covid19TestResultExample.html\"><span title=\"Codes: {http://loinc.org 94558-4}\">SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 10828004}\">Positive</span></td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {https://loinc.org 100156-9}\">100156-9</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Jane Smith (OFFICIAL)</b> female, DoB: 1986-06-04 ( id: PASSPORT1234567)</td></tr><tr><td>Identifier:</td><td> id: ?ngen-9?</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-Covid19TestResultExample.html\"><span title=\"Codes: {https://loinc.org 94558-4}\">94558-4</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 10828004}\">Positive</span></td><td>2022-07-28</td></tr></table><p>Some textual conclusion</p></div>"
   },
   "identifier": [
     {
@@ -24,7 +24,7 @@
   "code": {
     "coding": [
       {
-        "system": "http://loinc.org",
+        "system": "https://loinc.org",
         "code": "100156-9"
       }
     ]
@@ -32,7 +32,6 @@
   "subject": {
     "reference": "Patient/Covid19PatientExample"
   },
-  "effectiveDateTime": "2022-07-28",
   "performer": [
     {
       "reference": "Practitioner/PractitionerExample"
@@ -42,5 +41,6 @@
     {
       "reference": "Observation/Covid19TestResultExample"
     }
-  ]
+  ],
+  "conclusion": "Some textual conclusion"
 }

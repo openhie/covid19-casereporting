@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-11-03T06:58:58+00:00",
+  "date": "2022-11-03T14:17:22+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -429,21 +429,23 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-reason-test-not-performed"
+          "reference": "StructureDefinition/covid19-service-request-location"
         },
-        "name": "Covid19 Reason Test Not Performed",
-        "description": "Covid19 reason test not peformed"
+        "name": "Covid19 Service Request Location",
+        "description": "Covid19 Service Request Location"
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Bundle"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
-          "reference": "Bundle/Covid19BundleExample"
-        }
+          "reference": "StructureDefinition/covid19-reason-test-not-performed"
+        },
+        "name": "Covid19 Reason Test Not Performed",
+        "description": "Covid19 reason test not peformed"
       },
       {
         "extension": [
@@ -621,13 +623,23 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
+            "valueString": "Bundle"
           }
         ],
         "reference": {
-          "reference": "CodeSystem/cs-other"
-        },
-        "name": "Covid19 Case Report Sections codesystem"
+          "reference": "Bundle/CaresSubmitLabRejectionBundleExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/CaresSubmitLabResultBundleExample"
+        }
       },
       {
         "extension": [
@@ -676,19 +688,6 @@
         "reference": {
           "reference": "Observation/Covid19TestResultExample"
         }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-treatment-dispensed-prescribed"
-        },
-        "name": "COVID Treatmens dispensed or prescribed",
-        "description": "COVID Treatmens dispensed or prescribed"
       },
       {
         "extension": [
@@ -840,19 +839,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-cancellation-reason"
-        },
-        "name": "Cancellation Reasons",
-        "description": "A list of Cancellation Reasons"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Encounter"
           }
         ],
@@ -892,19 +878,6 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-lab-order-cancellation"
-        },
-        "name": "Covid19 Lab Order Cancellation",
-        "description": "Covid19 Lab Order Cancellation Task"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
           "reference": "StructureDefinition/covid19-encounter"
         },
         "name": "Covid19 Assessment Encounter",
@@ -927,6 +900,17 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/CaresSubmitLaborderBundleExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Specimen"
           }
         ],
@@ -943,6 +927,17 @@
         ],
         "reference": {
           "reference": "Task/LabResultTaskExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/CaresBundleExample"
         }
       },
       {
@@ -1132,6 +1127,17 @@
         },
         "name": "Covid19 Lab Order",
         "description": "Covid19 Lab Order"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Location"
+          }
+        ],
+        "reference": {
+          "reference": "Location/Covid19ServiceRequestLocationExample"
+        }
       }
     ],
     "page": {

@@ -6,15 +6,9 @@
     <profile value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-symptom"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ClinicalImpression</b><a name="Covid19SymptomExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ClinicalImpression "Covid19SymptomExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-symptom.html">Covid19 Symptom</a></p></div><p><b>status</b>: completed</p><p><b>code</b>: Abdominal pain <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#21522001)</span></p><p><b>subject</b>: <a href="Patient-Covid19PatientExample.html">Patient/Covid19PatientExample</a> " SMITH"</p><p><b>encounter</b>: <a href="Encounter-Covid19AssessmentEncounterExample.html">Encounter/Covid19AssessmentEncounterExample</a></p><h3>Investigations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>JointPain <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#JointPain)</span></td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ClinicalImpression</b><a name="Covid19SymptomExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ClinicalImpression "Covid19SymptomExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-symptom.html">Covid19 Symptom</a></p></div><p><b>status</b>: completed</p><p><b>subject</b>: <a href="Patient-Covid19PatientExample.html">Patient/Covid19PatientExample</a> " SMITH"</p><p><b>encounter</b>: <a href="Encounter-Covid19AssessmentEncounterExample.html">Encounter/Covid19AssessmentEncounterExample</a></p><h3>Investigations</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Abdominal pain <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#21522001)</span></td></tr></table></div>
   </text>
   <status value="completed"/>
-  <code>
-    <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="21522001"/>
-    </coding>
-  </code>
   <subject>
     <reference value="Patient/Covid19PatientExample"/>
   </subject>
@@ -24,7 +18,8 @@
   <investigation>
     <code>
       <coding>
-        <code value="JointPain"/>
+        <system value="http://snomed.info/sct"/>
+        <code value="21522001"/>
       </coding>
     </code>
   </investigation>
