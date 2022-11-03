@@ -1,7 +1,7 @@
 Alias: $SCT = http://snomed.info/sct
-Alias: $LNC = http://loinc.org/loinc
+Alias: $LNC = http://loinc.org
 Alias: $ICD = http://id.who.int/icd11/mms
-//Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6 
+Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6 
 //Alias: $KEYPOPULATION = https://openhie.github.io/hiv-ig/ValueSet-vs-key-population
 
 CodeSystem: CSCaseReportSections
@@ -82,7 +82,7 @@ ValueSet: VSYesNoUnknown
 Id: vs-yes-no
 Title: "Yes No Unknown"
 Description:  "Yes No Unknown"
-* include codes from system $LNC
+* include codes from system $LNC-LL3044-6
 
 ValueSet: VSCovidDiagnosis
 Id: vs-covid-diagnosis
@@ -152,8 +152,8 @@ ValueSet: VSTestTypes
 Id: vs-test-types
 Title: "Test Types"
 Description: "A list of Test Types"
-* $LNC#94558-4 "Rapid immunoassay"
-* $LNC#94745-7 "NAA with probe detection"
+* $SCT#1156860005 "Rapid Antigen Test"
+* $SCT#9718006 "Diagnostic PCR Test"
 
 //double check with Marius
 CodeSystem: CSCancellationReason
