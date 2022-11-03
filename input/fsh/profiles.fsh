@@ -60,13 +60,11 @@ Title: "Covid19 Case Reporting Composition"
 * section[covid19LabOrderManagementSection].entry contains
     covid19LabOrder 0..1 and
     covid19Specimen 0..1 and
-    covid19LabOrderCancellation 0..1 and
     covid19LabResultsDiagnosticReport 0..1 and
     covid19TestResult 0..1 and
     covid19ReasonTestNotPerformed 0..1
 * section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
 * section[covid19LabOrderManagementSection].entry[covid19Specimen] only Reference(Covid19Specimen)
-* section[covid19LabOrderManagementSection].entry[covid19LabOrderCancellation] only Reference(Covid19LabOrderCancellation)
 * section[covid19LabOrderManagementSection].entry[covid19LabResultsDiagnosticReport] only Reference(Covid19LabResultsDiagnosticReport)
 * section[covid19LabOrderManagementSection].entry[covid19TestResult] only Reference(Covid19TestResult)
 * section[covid19LabOrderManagementSection].entry[covid19ReasonTestNotPerformed] only Reference(Covid19ReasonTestNotPerformed)
@@ -257,18 +255,6 @@ Description: "Covid19 Specimen"
 * processing.timePeriod.end MS   //Using the date to derive that the "Lab Test was Performed"
 * subject 1..1 MS // Patient reference
 
-Profile: Covid19LabOrderCancellation
-Parent: Task
-Id: covid19-lab-order-cancellation
-Title: "Covid19 Lab Order Cancellation"
-Description: "Covid19 Lab Order Cancellation Task"
-* intent = #order
-* basedOn 1..1 MS // Reference to the Lab Order (ServiceRequest)
-* executionPeriod 1..1 MS //Cancellation date
-* statusReason 1..1 MS
-* statusReason from VSCancellationReason
-* status = #cancelled
-
 Profile: Covid19LabResultsDiagnosticReport
 Parent: DiagnosticReport
 Id: covid19-lab-results
@@ -276,7 +262,7 @@ Title: "Covid19 Lab Results Diagnostic Report"
 Description: "Covid19 Lab Results Diagnostic Report"
 * subject 1..1 MS // Patient reference
 * basedOn 1..1 MS // Ref to ServiceRequest
-* result  MS //
+* result  MS 
 
 Profile: Covid19TestResult
 Parent: Observation

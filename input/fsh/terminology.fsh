@@ -156,17 +156,6 @@ Description: "A list of Test Types"
 * $LNC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"   
 * $LNC#94745-7 "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
 
-//double check with Marius
-CodeSystem: CSCancellationReason
-Id: cs-cancellation-reason
-Title: "Cancellation Reasons"
-Description: "A list of Cancellation Reasons"
-* #Duplicate "duplicate orders" //find out from CDC the snomed code
-* #PCR "Improperly ordered" //find out from CDC the snomed code
-* #VOID "No longer required" //find out from CDC the snomed code
-* #NoSample "No sample collected"
-* #Old "Old order, Wrong entry" //find out from CDC the snomed code
-
 ValueSet: VSCancellationReason
 Id: vs-cancellation-reason
 Title: "Cancellation Reasons"

@@ -215,17 +215,18 @@ Description: "Covid19 Laboratory testing the specimen"
 * identifier.id = "Lab001"
 
 Instance: Covid19LabOrderCancellationExample
-InstanceOf: Covid19LabOrderCancellation
+InstanceOf: Task
 Usage: #example
 Title: "Covid19 Lab Order Cancellation  example"
 Description: "Covid19 Lab Order Cancellation Task example"
 * basedOn = Reference(Covid19LabOrderExample)
 * executionPeriod.start = "2022-07-28"
-* statusReason = #Duplicate
+* statusReason = $SCT#281264009 
 * requester = Reference(Covid19OrganizationExample)
 * owner = Reference(Covid19Laboratory)
 * lastModified = "2015-02-07"
-
+* intent = #order
+* status = #rejected
 
 Instance: Covid19LabResultsDiagnosticReportExample
 InstanceOf: Covid19LabResultsDiagnosticReport
@@ -236,10 +237,10 @@ Description: "Covid19 Lab Results Diagnostic Report example"
 * basedOn = Reference(Covid19LabOrder) 
 * subject = Reference(Covid19PatientExample) 
 * identifier.id = "12341324"
-* effectiveDateTime = "2022-07-28"
 * status = #final 
 * result = Reference(Covid19TestResultExample)
 * performer = Reference(PractitionerExample)
+* conclusion = "Some textual conclusion"
 
 Instance: Covid19TestResultExample
 InstanceOf: Covid19TestResult
@@ -336,7 +337,7 @@ InstanceOf: Covid19ServiceRequestLocation
 Usage: #example
 Title: "Covid19 Service Request Location example"
 Description: "Covid19 Service Request Location example"
-* status = #final
+* status = #active
 * name = "Covid19 Location"
 * address.country = "Cares country 1"
 * address.state = "Cares state 1"
