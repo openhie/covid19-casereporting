@@ -96,9 +96,7 @@ Description: "Covid19 Assessment Encounter  example"
 * period.start =  "2022-07-28"  //Date of assessment
 * subject = Reference(Covid19PatientExample) //Patient reference
 * period.end  =  "2022-08-15"  //Date of death
-* reasonCode.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-other"
-* reasonCode.coding.code = #Other
-* reasonCode.text = "Other specified details"
+* reasonCode = $SCT#428792000
 //* diagnosis.condition = Reference(Covid19PresentationExample) created circular referencing
 
 Instance: Covid19VaccineDoseReceivedExample
@@ -162,7 +160,7 @@ Description: "Covid19 Treatment dispensed or prescribed example"
 * intent = #proposal
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
-* medicationCodeableConcept = #Paxlovid
+* medicationCodeableConcept = $RXN#2599543
 
 Instance: Covid19AssessmentVaccinationExample
 InstanceOf: Covid19AssessmentVaccination
@@ -337,7 +335,6 @@ InstanceOf: Covid19ServiceRequestLocation
 Usage: #example
 Title: "Covid19 Service Request Location example"
 Description: "Covid19 Service Request Location example"
-* status = #active
 * name = "Covid19 Location"
 * address.country = "Cares country 1"
 * address.state = "Cares state 1"

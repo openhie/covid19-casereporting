@@ -1,7 +1,8 @@
 Alias: $SCT = http://snomed.info/sct
 Alias: $LNC = https://loinc.org
 Alias: $ICD = http://id.who.int/icd11/mms
-//Alias: $LNC-LL3044-6 = https://loinc.org/LL3044-6 
+Alias: $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
+
 
 CodeSystem: CSCaseReportSections
 Id: cs-case-report-sections
@@ -11,12 +12,6 @@ Description: ""
 * #COVID-ASSESSMENT
 * #LABORDER-MANAGEMENT
 * #COVID-VACCINATION
-
-CodeSystem: CSOther   //#TODO --> Other should not be an option, details specified per note
-Id: cs-other
-Title: "Covid19 Case Report Sections codesystem"
-Description: ""
-* #Other "Other (specify)"
 
 ValueSet: VSAssessmentReason
 Id: vs-assessment-reason
@@ -33,8 +28,7 @@ Description:  "Valueset - assessment reason"
 * $SCT#243790003 "Surveillance"
 * $SCT#264931009 "Symptomatic/Illness"
 * $SCT#171367005 "Travel out of country"
-* $SCT#255375007 "Voluntary"
-* include codes from system CSOther   //#TODO Remove as it does not have a real code and system
+* $SCT#255375007 "Voluntary" 
 
 ValueSet: VSPresentation
 Id: vs-presentation
@@ -67,7 +61,6 @@ Description:  "A list of symptoms"
 * $SCT#76067001 "Sneezing" 
 * $SCT#162397003 "Sore Throat" 
 * $SCT#224960004 "Tiredness"
-* include codes from system CSOther
 
 ValueSet: VSAdmissionTypes
 Id: vs-AdmissionTypes
@@ -111,20 +104,12 @@ Description:  "List of Conditions / Comorbidity"
 * $SCT#363346000 "Malignancy"
 * $SCT#709044004 "Renal disease"
 * $SCT#56717001 "TB"
-* include codes from system CSOther
-
-CodeSystem: CSTreatMentDispensedPrescribed
-Id: cs-treatment-dispensed-prescribed
-Title: "COVID Treatmens dispensed or prescribed"
-Description: "COVID Treatmens dispensed or prescribed"
-* #Paxlovid "Paxlovid"
-* #Other "Other (specify)"
 
 ValueSet: VSTreatMentDispensedPrescribed
 Id: vs-treatment-dispensed-prescribed
 Title: "COVID Treatmens dispensed or prescribed"
 Description: "COVID Treatmens dispensed or prescribed"
-* include codes from system CSTreatMentDispensedPrescribed
+* $RXN#2599543 "Paxlovid"
 
 ValueSet: VSVaccineTypes
 Id: vs-vaccine-types
@@ -171,7 +156,6 @@ Description: "A list of Covid19 Specimen Type"
 * $SCT#258500001 "Nasopharyngeal"
 * $SCT#461911000124106 "Oropharyngeal swab" //TODO: replaced with the correct code. MDS uses the wrong one: 461911000000000
 * $SCT#119324002 "unknown"
-* include codes from system CSOther
 
 ValueSet: VSReasonTestNotPerformed
 Id: vs-covid19-reason-test-not-performed
@@ -184,7 +168,6 @@ Description: "A list of Covid19 Specimen Type"
 * $SCT#281268007 "Insufficient sample"
 * $SCT#281265005 "Specimen not labeled"
 * $SCT#419182006 "Supplies not available"
-* include codes from system CSOther
 
 ValueSet: VSTestResult
 Id: vs-covid19-test-result
