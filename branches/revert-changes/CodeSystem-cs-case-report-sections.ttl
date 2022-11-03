@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-case-report-sections> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cs-case-report-sections"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-case-report-sections</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">CLIENT-REGISTRATION<a name=\"cs-case-report-sections-CLIENT-REGISTRATION\"> </a></td></tr><tr><td style=\"white-space:nowrap\">COVID-ASSESSMENT<a name=\"cs-case-report-sections-COVID-ASSESSMENT\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LABORDER-MANAGEMENT<a name=\"cs-case-report-sections-LABORDER-MANAGEMENT\"> </a></td></tr><tr><td style=\"white-space:nowrap\">COVID-VACCINATION<a name=\"cs-case-report-sections-COVID-VACCINATION\"> </a></td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-case-report-sections"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0-test"];
+  fhir:CodeSystem.name [ fhir:value "CSCaseReportSections"];
+  fhir:CodeSystem.title [ fhir:value "Covid19 Case Report Sections codesystem"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2022-11-03T06:53:20+00:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "OpenHIE"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://xxhl7.org/Special/committees/[something]" ]
+     ]
+  ];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "4"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "CLIENT-REGISTRATION" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "COVID-ASSESSMENT" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "LABORDER-MANAGEMENT" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "COVID-VACCINATION" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/CodeSystem/cs-case-report-sections.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
