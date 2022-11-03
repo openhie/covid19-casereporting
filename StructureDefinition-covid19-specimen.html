@@ -51,8 +51,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"3.2"}
-    h3,h4,h5,h6{--heading-prefix:"3.2"}</style>
+    <style type="text/css">h2{--heading-prefix:"3.11"}
+    h3,h4,h5,h6{--heading-prefix:"3.11"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -166,7 +166,6 @@
 
 
 
-
 <ul class="nav nav-tabs">
 
   <li class="active">
@@ -216,81 +215,30 @@
 
 
   <a name="root"> </a>
-  <h2 id="root">Resource Profile:
+  <h2 id="root">Resource Profile: Covid19 Specimen</h2>
 
-    Covid19 Specimen
-
-
-
-
-
-  </h2>
-
-  <table class="colsi">
-
-    <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"/></span>
-      </td>
-      <td><i>Version</i>:
-      <span class="copy-text">0.1.0-test<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen|0.1.0-test"/></span>
-      </td>
-    </tr>
-
-    <tr>
+<table class="grid">
+<tbody>
+<tr><td>Defining URL:</td><td>http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen</td></tr>
+ <tr><td>Version:</td><td>0.1.0-test</td></tr>
+ <tr><td>Name:</td><td>Covid19Specimen</td></tr>
+ <tr><td>Title:</td><td>Covid19 Specimen</td></tr>
+ <tr><td>Status:</td><td>Active as of 2022-11-03 06:13:39+0000</td></tr>
+ <tr><td>Definition:</td><td><p>Covid19 Specimen</p>
+</td></tr>
+ <tr><td>Publisher:</td><td>OpenHIE</td></tr>
+ <tr><td>Source Resource:</td><td><a href="StructureDefinition-covid19-specimen.profile.xml.html">XML</a> / <a href="StructureDefinition-covid19-specimen.profile.json.html">JSON</a> / <a href="StructureDefinition-covid19-specimen.profile.ttl.html">Turtle</a></td></tr>
+</tbody></table>
 
 
-
-
-
-
-
-      <td colspan="2">
-        
-          Active
-          
-            as of 2022-10-06
-          
-        
-      </td>
-
-
-      <td>
-        <i>Responsible:</i> 
-
-        <a href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>
-
-      </td>
-
-
-      <td>
-        <i>Realm:</i> <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
-      </td>
-
-      <td><i>Computable Name</i>: <span style="font-family: monospace;">Covid19Specimen</span></td>
-    </tr>
-
-
-
-
-  </table>
-
-<p>
-<p>Covid19 Specimen</p>
-
-</p>
-
-
+  <p>
+  The official URL for this profile is:
+  </p>
+  <pre>http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen</pre>
 
 <!-- insert intro if present -->
 
 
-
-
-<p><b>Usage:</b></p>
-<ul>
- <li>Refer to this Resource Profile: </li>
- <li>Examples for this Resource Profile: <a href="Specimen-Covid19SpecimenExample.html">Specimen/Covid19SpecimenExample</a></li>
-</ul>
 
 
   <!-- no uri -->
@@ -486,7 +434,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     "<a href="StructureDefinition-covid19-specimen.html#Specimen.receivedTime" title="Time when specimen was received for processing or testing" class="dict"><span style="text-decoration: underline">receivedTime</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">The time when specimen was received for processing</span>
     "<a href="StructureDefinition-covid19-specimen.html#Specimen.parent" title="Reference to the parent (source) specimen which is used when the specimen was either derived from or a component of another specimen" class="dict"><span style="text-decoration: underline">parent</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/specimen.html">Specimen</a></span>)}], <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Specimen from which this specimen originated</span>
     "<a href="StructureDefinition-covid19-specimen.html#Specimen.request" title="Details concerning a service request that required a specimen to be collected" class="dict"><span style="text-decoration: underline">request</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a></span>)}], <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Why the specimen was collected</span>
-    "<a href="StructureDefinition-covid19-specimen.html#Specimen.collection" title="Details concerning the specimen collection" class="dict"><span style="text-decoration: underline">collection</span></a>" : { <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Collection details</span>
+    "<a href="StructureDefinition-covid19-specimen.html#Specimen.collection" title="Details concerning the specimen collection" class="dict"><span style="text-decoration: underline">collection</span></a>" : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Collection details</span>
       "extension": [
       ],
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.collection.collector" title="Person who collected the specimen" class="dict"><span style="text-decoration: underline">collector</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a></span>)}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Who collected the specimen</span>
@@ -503,14 +451,14 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.collection.fastingStatusCodeableConcept" title="Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection" class="dict"><span style="text-decoration: underline">fastingStatusCodeableConcept</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">Whether or how long patient abstained from food and/or drink</a></span>
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.collection.fastingStatusDuration" title="Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection" class="dict"><span style="text-decoration: underline">fastingStatusDuration</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#Duration">Duration</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">Whether or how long patient abstained from food and/or drink</a></span>
     },
-    "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing" title="Details concerning processing and processing steps for the specimen" class="dict"><span style="text-decoration: underline">processing</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Processing and processing step details</span>
+    "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing" title="Details concerning processing and processing steps for the specimen" class="dict"><span style="text-decoration: underline">processing</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Processing and processing step details</span>
       "extension": [
       ],
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing.description" title="Textual description of procedure" class="dict"><span style="text-decoration: underline">description</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Textual description of procedure</span>
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing.procedure" title="A coded value specifying the procedure used to process the specimen" class="dict"><span style="text-decoration: underline">procedure</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">Indicates the treatment step  applied to the specimen</a></span>
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing.additive" title="Material used in the processing step" class="dict"><span style="text-decoration: underline">additive</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/substance.html">Substance</a></span>)}], <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Material used in the processing step</span>
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing.timeDateTime" title="A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin" class="dict"><span style="text-decoration: underline">timeDateTime</span></a>" : [ <span style="color: navy">// sliced by type:$this  in the specified order Open</span>
-        { // <span style="color: navy; opacity: 0.8">Date and time of specimen processing</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span>
+        { // <span style="color: navy; opacity: 0.8">Date and time of specimen processing</span>
           "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing.timeDateTime.extension" title="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension" class="dict"><span style="text-decoration: underline">extension</span></a>" : [ <span style="color: navy">// sliced by value:url  in the specified order Open</span>
           ],
           "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing.timeDateTime.start" title="The start of the period. The boundary is inclusive" class="dict"><span style="text-decoration: underline">start</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Starting time with inclusive boundary</span>
@@ -720,7 +668,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     "<a href="StructureDefinition-covid19-specimen.html#Specimen.receivedTime" title="Time when specimen was received for processing or testing" class="dict"><span style="text-decoration: underline">receivedTime</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">The time when specimen was received for processing</span>
     "<a href="StructureDefinition-covid19-specimen.html#Specimen.parent" title="Reference to the parent (source) specimen which is used when the specimen was either derived from or a component of another specimen" class="dict"><span style="text-decoration: underline">parent</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/specimen.html">Specimen</a></span>)}], <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Specimen from which this specimen originated</span>
     "<a href="StructureDefinition-covid19-specimen.html#Specimen.request" title="Details concerning a service request that required a specimen to be collected" class="dict"><span style="text-decoration: underline">request</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a></span>)}], <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Why the specimen was collected</span>
-    "<a href="StructureDefinition-covid19-specimen.html#Specimen.collection" title="Details concerning the specimen collection" class="dict"><span style="text-decoration: underline">collection</span></a>" : { <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Collection details</span>
+    "<a href="StructureDefinition-covid19-specimen.html#Specimen.collection" title="Details concerning the specimen collection" class="dict"><span style="text-decoration: underline">collection</span></a>" : { <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Collection details</span>
       "extension": [
       ],
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.collection.collector" title="Person who collected the specimen" class="dict"><span style="text-decoration: underline">collector</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a></span>)}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Who collected the specimen</span>
@@ -737,14 +685,14 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.collection.fastingStatusCodeableConcept" title="Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection" class="dict"><span style="text-decoration: underline">fastingStatusCodeableConcept</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">Whether or how long patient abstained from food and/or drink</a></span>
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.collection.fastingStatusDuration" title="Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection" class="dict"><span style="text-decoration: underline">fastingStatusDuration</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#Duration">Duration</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">Whether or how long patient abstained from food and/or drink</a></span>
     },
-    "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing" title="Details concerning processing and processing steps for the specimen" class="dict"><span style="text-decoration: underline">processing</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Processing and processing step details</span>
+    "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing" title="Details concerning processing and processing steps for the specimen" class="dict"><span style="text-decoration: underline">processing</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Processing and processing step details</span>
       "extension": [
       ],
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing.description" title="Textual description of procedure" class="dict"><span style="text-decoration: underline">description</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Textual description of procedure</span>
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing.procedure" title="A coded value specifying the procedure used to process the specimen" class="dict"><span style="text-decoration: underline">procedure</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></span>}, <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8"><a href="http://hl7.org/fhir/R4/null.html" style="color: navy">Indicates the treatment step  applied to the specimen</a></span>
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing.additive" title="Material used in the processing step" class="dict"><span style="text-decoration: underline">additive</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/substance.html">Substance</a></span>)}], <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Material used in the processing step</span>
       "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing.timeDateTime" title="A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin" class="dict"><span style="text-decoration: underline">timeDateTime</span></a>" : [ <span style="color: navy">// sliced by type:$this  in the specified order Open</span>
-        { // <span style="color: navy; opacity: 0.8">Date and time of specimen processing</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span>
+        { // <span style="color: navy; opacity: 0.8">Date and time of specimen processing</span>
           "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing.timeDateTime.extension" title="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension" class="dict"><span style="text-decoration: underline">extension</span></a>" : [ <span style="color: navy">// sliced by value:url  in the specified order Open</span>
           ],
           "<a href="StructureDefinition-covid19-specimen.html#Specimen.processing.timeDateTime.start" title="The start of the period. The boundary is inclusive" class="dict"><span style="text-decoration: underline">start</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">dateTime</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Starting time with inclusive boundary</span>
@@ -793,7 +741,23 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   <h4>Terminology Bindings</h4>
 <table class="list">
 <tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
-<tr><td>Specimen.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><br/><a style="font-weight:bold" title="Max Value Set Extension" href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://hl7.org/fhir/R4/valueset-all-languages.html">AllLanguages</a></td></tr>
+<tr><td>Specimen.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><table class="grid">
+  <tr>
+    <td style="font-size: 11px">
+      <b>Additional Bindings</b>
+    </td>
+    <td style="font-size: 11px">Purpose</td>
+  </tr>
+  <tr>
+    <td style="font-size: 11px">
+      <a href="http://hl7.org/fhir/R4/valueset-all-languages.html" title="http://hl7.org/fhir/ValueSet/all-languages">AllLanguages</a>
+    </td>
+    <td style="font-size: 11px">
+      <a href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html" title="A required binding, for use when the binding strength is 'extensible' or 'preferred'">Max Binding</a>
+    </td>
+  </tr>
+</table>
+</td></tr>
 <tr><td>Specimen.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Codes providing the status/availability of a specimen."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-specimen-status.html">SpecimenStatus</a></td></tr>
 <tr><td>Specimen.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="ValueSet-vs-covid19-specimen-type.html">VSCovid19SpecimenType</a></td></tr>
 <tr><td>Specimen.collection.method</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="The  technique that is used to perform the procedure."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-specimen-collection-method.html">FHIRSpecimenCollectionMethod</a></td></tr>
@@ -813,71 +777,10 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     <!--Constraints  heading in the fragment -->
     <h4>Constraints</h4>
 <table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>dom-2</td><td>error</td><td>Specimen</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
-<tr><td>dom-3</td><td>error</td><td>Specimen</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
-<tr><td>dom-4</td><td>error</td><td>Specimen</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
-<tr><td>dom-5</td><td>error</td><td>Specimen</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
-<tr><td>dom-6</td><td>Best Practice</td><td>Specimen</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.meta</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.implicitRules</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.language</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.text</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Specimen.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.modifierExtension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Specimen.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.identifier</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.accessionIdentifier</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.status</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.type</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.subject</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.receivedTime</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.parent</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.request</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.collection</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.collection.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Specimen.collection.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.collection.modifierExtension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Specimen.collection.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.collection.collector</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.collection.collected[x]</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.collection.collected[x]:collectedDateTime</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.collection.duration</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.collection.quantity</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.collection.method</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.collection.bodySite</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.collection.fastingStatus[x]</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.processing</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.processing.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Specimen.processing.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.processing.modifierExtension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Specimen.processing.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.processing.description</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.processing.procedure</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.processing.additive</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.processing.time[x]</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.processing.time[x]:timePeriod</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.processing.time[x]:timePeriod.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Specimen.processing.time[x]:timePeriod.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.processing.time[x]:timePeriod.start</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.processing.time[x]:timePeriod.end</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.container</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.container.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Specimen.container.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.container.modifierExtension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>error</td><td>Specimen.container.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.container.identifier</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.container.description</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.container.type</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.container.capacity</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.container.specimenQuantity</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.container.additive[x]</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.condition</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ele-1</td><td>error</td><td>Specimen.note</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td width="60"><b>Id</b></td><td><b>Grade</b></td><td><b>Path(s)</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
+<tr><td>ele-1</td><td>error</td><td>**ALL** elements</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ext-1</td><td>error</td><td>**ALL** extensions</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 </table>
-
-  
 
   
 
@@ -933,7 +836,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Oct 6, 2022 11:22+0000">2022-10-06</span>
+          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 3, 2022 06:13+0000">2022-11-03</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
