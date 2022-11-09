@@ -3,23 +3,6 @@ Alias: $LNC = https://loinc.org
 Alias: $ICD = http://id.who.int/icd11/mms
 Alias: $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 
-ValueSet: VSAssessmentReason
-Id: vs-assessment-reason
-Title: "Assessment Reason valueset"
-Description:  "Valueset - assessment reason"
-* $SCT#428792000 "Contact of a case"
-* $SCT#171367005 "Entry into a country"
-* $SCT#308273005 "Follow-up"
-* $SCT#223366009 "Health worker"
-* $SCT#34325006 "Other frontline worker"
-* $SCT#168260004 "Post-mortem"
-* $SCT#170497006 "Quarantine"
-* $SCT#273407003 "RDT confirmatory"
-* $SCT#243790003 "Surveillance"
-* $SCT#264931009 "Symptomatic/Illness"
-* $SCT#171367005 "Travel out of country"
-* $SCT#255375007 "Voluntary" 
-
 ValueSet: VSPresentation
 Id: vs-presentation
 Title: "Presentation valueset"
@@ -128,8 +111,8 @@ ValueSet: VSTestTypes
 Id: vs-test-types
 Title: "Test Types"
 Description: "A list of Test Types"
-* $LNC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"   
-* $LNC#94745-7 "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
+* $LNC#100156-9 "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"   
+* $LNC#100157-7 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay']"
 
 ValueSet: VSCancellationReason
 Id: vs-cancellation-reason
@@ -147,17 +130,32 @@ Description: "A list of Covid19 Specimen Type"
 * $SCT#461911000124106 "Oropharyngeal swab" //TODO: replaced with the correct code. MDS uses the wrong one: 461911000000000
 * $SCT#119324002 "unknown"
 
-ValueSet: VSReasonTestNotPerformed
-Id: vs-covid19-reason-test-not-performed
-Title: "Covid19 Specimen Type"
-Description: "A list of Covid19 Specimen Type"
-* $SCT#441510007 "Blood sample coagulated" //TODO: CDC to clarify
+ValueSet: VSReasonForAssessmentOrTestNotPerformed
+Id: vs-covid19-reason-for-assessment-or-test-not-performed
+Title: "Covid19 Reason for Assessment or Test not performed"
+Description: "Covid19 Reason for Assessment or Test not performed"
+//Reasons for assessment
+* $SCT#428792000 "Contact of a case"
+* $SCT#171367005 "Entry into a country"
+* $SCT#308273005 "Follow-up"
+* $SCT#223366009 "Health worker"
+* $SCT#34325006 "Other frontline worker"
+* $SCT#168260004 "Post-mortem"
+* $SCT#170497006 "Quarantine"
+* $SCT#273407003 "RDT confirmatory"
+* $SCT#243790003 "Surveillance"
+* $SCT#264931009 "Symptomatic/Illness"
+* $SCT#171367005 "Travel out of country"
+* $SCT#255375007 "Voluntary" 
+//Reasons test not performed
+* $SCT#441510007 "Blood sample coagulated" 
 * $SCT#123840003 "Contaminated specimen"
 * $SCT#397933008 "Equipment failure"
 * $SCT#281264009 "Inappropriate sample container used"
 * $SCT#281268007 "Insufficient sample"
 * $SCT#281265005 "Specimen not labeled"
 * $SCT#419182006 "Supplies not available"
+
 
 ValueSet: VSTestResult
 Id: vs-covid19-test-result

@@ -49,6 +49,7 @@ Description: "This Patient profile allows the exchange of patient information, i
 //* extension contains KeyPopulation named keyPopulation 0..1 MS
 
 * managingOrganization 1..1
+* maritalStatus MS
 
 Profile: Covid19AssessmentEncounter
 Parent: Encounter
@@ -58,7 +59,7 @@ Description: "Covid19 Assessment Encounter"
 * period.start 1..1 MS  //Date of assessment
 * subject 1..1 MS //Patient reference
 * reasonCode 1..* MS  
-* reasonCode from VSAssessmentReason 
+* reasonCode from VSReasonForAssessmentOrTestNotPerformed 
 * reasonCode.text MS
 * location.physicalType from VSAdmissionTypes 
 * location.physicalType MS //Admission
@@ -66,13 +67,13 @@ Description: "Covid19 Assessment Encounter"
 * classHistory.period.start MS // Date Last Hospitalized --> To answer  "Ever Hospitalized due to Covid-19?" 
 * extension contains ExtNextVisit named nextVisit 0..1 MS
 
-Profile: Covid19Symptom
-Parent: ClinicalImpression
-Id: covid19-symptom
+Profile: Covid19PresentingSymptoms
+Parent: Observation
+Id: covid19-presenting-symptoms
 Title: "Covid19 Symptom"
 Description: "Covid19 Symptom"
-* investigation.code from VSSymptoms
-* investigation.code MS
+* code from VSSymptoms
+* code MS
 * note MS // other presenting symptoms
 
 Profile: Covid19ConditionsComorbidity
@@ -148,7 +149,7 @@ Description: "Covid19 Lab Order"
 * subject 1..1 MS // Patient reference
 * intent = #order 
 * reasonCode  1..* MS //Reason for testing
-* reasonCode from VSAssessmentReason 
+* reasonCode from VSReasonForAssessmentOrTestNotPerformed 
 * note MS // for capturing other reasons for testing
 * encounter 1..1 MS  
 * requester MS // Provider name
@@ -159,6 +160,9 @@ Description: "Covid19 Lab Order"
 * status MS // Status of Lab Order
 * occurrenceDateTime MS // sample forwarded to reference lab; Yes = if there is a dateTime when sample was sent
 * specimen 1..1 MS //sample
+* doNotPerform MS //If yes then a reason for test not performed to be provided in the reasonCode element
+
+//* dataAbsentReason from VSReasonTestNotPerformed  
 
 Profile: Covid19Specimen
 Parent: Specimen
@@ -182,6 +186,7 @@ Description: "Covid19 Lab Results"
 * valueCodeableConcept from VSTestResult
 * valueCodeableConcept MS //Result Code
 
+/*
 Profile: Covid19ReasonTestNotPerformed
 Parent: Observation
 Id: covid19-reason-test-not-performed
@@ -189,6 +194,7 @@ Title: "Covid19 Reason Test Not Performed"
 Description: "Covid19 reason test not peformed"
 * dataAbsentReason from VSReasonTestNotPerformed   
 * dataAbsentReason MS //Reason test not performed
+*/
 
 Profile: Covid19Vaccination
 Parent: Immunization

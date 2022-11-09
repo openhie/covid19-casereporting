@@ -45,6 +45,8 @@ Description: "Covid19 Patient example"
 * contact[0].name.family = "John"
 * contact[0].telecom.system = #phone
 * contact[0].telecom.value = "+27825556667"
+* maritalStatus.coding.code = #D
+* maritalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
 
 Instance: Covid19AssessmentEncounterExample
 InstanceOf: Covid19AssessmentEncounter    
@@ -67,20 +69,20 @@ Title: "Covid19 Vaccine Dose Received example"
 Description: "Covid19 Vaccine Dose Received example"
 * extension[vaccineDoseEverReceived].valueCodeableConcept = $SCT#373066001
 * status = #final
-* code = $LNC#75618-9 // #TODO
+* code = $LNC#100156-9 
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
 
-Instance: Covid19SymptomExample
-InstanceOf: Covid19Symptom
+Instance: Covid19PresentingSymptomsExample
+InstanceOf: Covid19PresentingSymptoms
 Usage: #example
 Title: "Covid19 Symptom example"
 Description: "Covid19 Symptom example"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
-* status = #completed
-//* code =    #TODDO need a code 
-* investigation.code = $SCT#21522001 
+* status = #final
+* code = $SCT#21522001 
+* effectiveDateTime = "2022-07-28"  
 
 Instance: Covid19ConditionsComorbidityExample
 InstanceOf: Covid19ConditionsComorbidity
@@ -139,13 +141,14 @@ Description: "Covid19 Lab Order example"
 * identifier.system = "http://covid19laborder.org/order"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
-* reasonCode  = $SCT#243790003
+* reasonCode  = $SCT#441510007
 * occurrenceDateTime = "2012-01-05"
-* status = #completed
-* code =  $LNC#94745-7
+* status = #revoked
+* code =  $LNC#100156-9
 * requester = Reference(PractitionerExample)
 * locationReference = Reference(Covid19ServiceRequestLocationExample) 
 * specimen = Reference(Covid19SpecimenExample)
+* doNotPerform = true  //refer to reasonCode if true
 
 Instance: Covid19SpecimenExample
 InstanceOf: Covid19Specimen
@@ -177,7 +180,7 @@ Usage: #example
 Title: "Covid19 Lab Order Cancellation  example"
 Description: "Covid19 Lab Order Cancellation Task example"
 * basedOn = Reference(Covid19LabOrderExample)
-* executionPeriod.start = "2022-07-28"
+* executionPeriod.end = "2022-07-28"
 * statusReason = $SCT#281264009 
 * requester = Reference(Covid19OrganizationExample)
 * owner = Reference(Covid19OrganizationExample)
@@ -273,6 +276,7 @@ Description: "Lab Result Task example"
 * output.valueReference = Reference(Covid19LabResultsDiagnosticReportExample)
 * executionPeriod.start = "2022-11-09"
 
+/*
 Instance: Covid19ReasonTestNotPerformedExample
 InstanceOf: Covid19ReasonTestNotPerformed
 Usage: #example
@@ -281,6 +285,7 @@ Description: "Covid19 reason test not peformed example"
 * status = #final
 * code = $SCT#183944003
 * dataAbsentReason = $SCT#441510007
+*/
 
 Instance: Covid19ServiceRequestLocationExample
 InstanceOf: Covid19ServiceRequestLocation
