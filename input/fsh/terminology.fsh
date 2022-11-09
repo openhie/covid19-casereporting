@@ -3,16 +3,6 @@ Alias: $LNC = https://loinc.org
 Alias: $ICD = http://id.who.int/icd11/mms
 Alias: $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 
-
-CodeSystem: CSCaseReportSections
-Id: cs-case-report-sections
-Title: "Covid19 Case Report Sections codesystem"
-Description: ""
-* #CLIENT-REGISTRATION
-* #COVID-ASSESSMENT
-* #LABORDER-MANAGEMENT
-* #COVID-VACCINATION
-
 ValueSet: VSAssessmentReason
 Id: vs-assessment-reason
 Title: "Assessment Reason valueset"

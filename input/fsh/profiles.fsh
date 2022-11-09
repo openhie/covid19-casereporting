@@ -1,86 +1,3 @@
-Profile: Covid19Composition
-Parent: Composition
-Id: covid19-composition
-Description: "Covid19 Case Reporting Composition"
-Title: "Covid19 Case Reporting Composition"
-* type = $LNC#95412-3
-* category = $LNC#75218-8
-* identifier.system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-case-report"
-
-* section ^slicing.discriminator.type = #pattern
-* section ^slicing.discriminator.path = "code"
-* section ^slicing.rules = #openAtEnd
-* section ^slicing.ordered = true
-* section ^slicing.description = "Slice of composition.section based on code"
-* section contains
-    covid19PatientSection 1..1 and
-    covid19AssessmentSection 0..1 and
-    covid19LabOrderManagementSection 0..1 and
-    covid19VaccinationSection 0..1
-* section[covid19PatientSection].title = "Client registration"
-* section[covid19PatientSection].code = CSCaseReportSections#CLIENT-REGISTRATION
-* section[covid19PatientSection].entry ^slicing.discriminator.type = #profile
-* section[covid19PatientSection].entry ^slicing.discriminator.path = "reference.resolve()"
-* section[covid19PatientSection].entry ^slicing.rules = #closed
-* section[covid19PatientSection].entry contains
-    covid19Patient 1..1 
-* section[covid19PatientSection].entry[covid19Patient] only Reference(Covid19Patient)
-
-* section[covid19AssessmentSection].title = "Covid19 Assessment Encounter"
-* section[covid19AssessmentSection].code = CSCaseReportSections#COVID-ASSESSMENT
-* section[covid19AssessmentSection].entry ^slicing.discriminator.type = #profile
-* section[covid19AssessmentSection].entry ^slicing.discriminator.path = "reference.resolve()"
-* section[covid19AssessmentSection].entry ^slicing.rules = #closed
-* section[covid19AssessmentSection].entry contains
-    covid19AssessmentEncounter 1..1 and
-    otherReasonforAssessment   0..1 and
-    covid19Presentation 1..1 and
-    covid19DateLastHospitalized 0..1 and
-    covid19Admission 0..1 and
-    covid19Symptom 0..* and 
-    covid19ConditionsComorbidity 0..* and
-    covid19Diagnosis 0..1 and
-    covid19VaccineDoseReceived 1..1 and
-    covid19AssessmentVaccination 1..1 and
-    covid19MedicationRequest 0..1
-* section[covid19AssessmentSection].entry[covid19AssessmentEncounter] only Reference(Covid19AssessmentEncounter)
-* section[covid19AssessmentSection].entry[covid19Presentation] only Reference(Covid19Presentation)
-* section[covid19AssessmentSection].entry[covid19Symptom] only Reference(Covid19Symptom)
-* section[covid19AssessmentSection].entry[covid19ConditionsComorbidity] only Reference(Covid19ConditionsComorbidity)
-* section[covid19AssessmentSection].entry[covid19Diagnosis] only Reference(Covid19Diagnosis)
-* section[covid19AssessmentSection].entry[covid19VaccineDoseReceived] only Reference(Covid19VaccineDoseReceived)  
-* section[covid19AssessmentSection].entry[covid19AssessmentVaccination] only Reference(Covid19AssessmentVaccination)
-* section[covid19AssessmentSection].entry[covid19MedicationRequest] only Reference(Covid19MedicationRequest)
-
-* section[covid19LabOrderManagementSection].title = "Lab Order Management"
-* section[covid19LabOrderManagementSection].code = CSCaseReportSections#LABORDER-MANAGEMENT
-* section[covid19LabOrderManagementSection].entry ^slicing.discriminator.type = #profile
-* section[covid19LabOrderManagementSection].entry ^slicing.discriminator.path = "reference.resolve()"
-* section[covid19LabOrderManagementSection].entry ^slicing.rules = #closed
-* section[covid19LabOrderManagementSection].entry contains
-    covid19LabOrder 0..1 and
-    covid19Specimen 0..1 and
-    covid19LabResultsDiagnosticReport 0..1 and
-    covid19TestResult 0..1 and
-    covid19ReasonTestNotPerformed 0..1
-* section[covid19LabOrderManagementSection].entry[covid19LabOrder] only Reference(Covid19LabOrder)
-* section[covid19LabOrderManagementSection].entry[covid19Specimen] only Reference(Covid19Specimen)
-* section[covid19LabOrderManagementSection].entry[covid19LabResultsDiagnosticReport] only Reference(Covid19LabResultsDiagnosticReport)
-* section[covid19LabOrderManagementSection].entry[covid19TestResult] only Reference(Covid19TestResult)
-* section[covid19LabOrderManagementSection].entry[covid19ReasonTestNotPerformed] only Reference(Covid19ReasonTestNotPerformed)
-
-* section[covid19VaccinationSection].title = "Covid 19 Vaccination"
-* section[covid19VaccinationSection].code = CSCaseReportSections#COVID-VACCINATION
-* section[covid19VaccinationSection].entry ^slicing.discriminator.type = #profile
-* section[covid19VaccinationSection].entry ^slicing.discriminator.path = "reference.resolve()"
-* section[covid19VaccinationSection].entry ^slicing.rules = #closed
-* section[covid19VaccinationSection].entry contains
-    covid19Vaccination 1..1 and
-    covid19VaccinationAppointment 0..1
-* section[covid19VaccinationSection].entry[covid19Vaccination] only Reference(Covid19Vaccination)
-* section[covid19VaccinationSection].entry[covid19VaccinationAppointment] only Reference(Covid19VaccinationAppointment)
-
-
 Profile: Covid19Organization
 Parent: Organization
 Id: covid19-organization
@@ -133,15 +50,6 @@ Description: "This Patient profile allows the exchange of patient information, i
 
 * managingOrganization 1..1
 
-Profile: Covid19Presentation
-Parent: Condition
-Id: covid19-presentation
-Title: "Covid19 Presentation"
-Description: "Covid19 Presentation"
-* encounter 1..1 MS
-* evidence.code from VSPresentation
-* onsetDateTime MS //date of onset of symptoms
-
 Profile: Covid19AssessmentEncounter
 Parent: Encounter
 Id: covid19-encounter
@@ -156,6 +64,7 @@ Description: "Covid19 Assessment Encounter"
 * location.physicalType MS //Admission
 * classHistory.class MS //determine ever hospitalized → if classHistory.class = IMP and classHistory.period.start   
 * classHistory.period.start MS // Date Last Hospitalized --> To answer  "Ever Hospitalized due to Covid-19?" 
+* extension contains ExtNextVisit named nextVisit 0..1 MS
 
 Profile: Covid19Symptom
 Parent: ClinicalImpression
@@ -175,13 +84,19 @@ Description: "Covid19 Conditions or comorbidity"
 * code from VSConditionsComorbidity 
 * note MS  //OtherConditions   #TODO: Conditional rule: mandatory if code = #Other
 
-Profile: Covid19VaccineDoseReceived
+Extension: ExtVaccineDoseReceived
+Id: ever-received-dose-of-vaccine
+Title: "Covid19 Vaccine Dose Received Extension"
+Description: "Covid19 Vaccine Dose Extension"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSYesNoUnknown
+
+Profile: Covid19VaccineDoseEverReceived
 Parent: Observation
 Id: covid19-vaccine-dose-received
 Title: "Covid19 Vaccine Dose Received"
 Description: "Covid19 Vaccine Dose Received"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSYesNoUnknown
+* extension contains ExtVaccineDoseReceived named vaccineDoseEverReceived 1..1 MS  //ever-received-dose-of-vaccine
 
 Profile: Covid19AssessmentVaccination
 Parent: Immunization
@@ -212,6 +127,9 @@ Description: "Covid19 Diagnosis"
 * clinicalStatus 1..1 MS // Patient Outcome
 * abatementDateTime 0..1 MS //Date recovered or date symptoms resolved / Date Died
 * note MS  // Long covid description and/or Additional notes
+* evidence.code from VSPresentation
+* evidence.code 1..1 MS
+* onsetDateTime MS //date of onset of symptoms
 
 Profile: Covid19MedicationRequest
 Parent: MedicationRequest
@@ -255,15 +173,6 @@ Description: "Covid19 Specimen"
 * processing.timePeriod.end MS   //Using the date to derive that the "Lab Test was Performed"
 * subject 1..1 MS // Patient reference
 
-Profile: Covid19LabResultsDiagnosticReport
-Parent: DiagnosticReport
-Id: covid19-lab-results
-Title: "Covid19 Lab Results Diagnostic Report"
-Description: "Covid19 Lab Results Diagnostic Report"
-* subject 1..1 MS // Patient reference
-* basedOn 1..1 MS // Ref to ServiceRequest
-* result  MS 
-
 Profile: Covid19TestResult
 Parent: Observation
 Id: covid19-test-results
@@ -301,13 +210,12 @@ Description: "Covid19 Vaccination"
 * reportOrigin from VSSourceOfInfo  // source of information
 * reportOrigin.text MS // Other Source of info details
 
-Profile: Covid19VaccinationAppointment
-Parent: Appointment
-Id: covid19-vaccination-appointment
-Title: "Covid19 Vaccination Appointment"
-Description: "Covid19 Vaccination Appointment"
-* participant.actor 1..1 MS // Patient Reference
-* start 1..1 MS // date of next vaccination
+Extension: ExtNextVisit
+Id: next-visit
+Title: "Covid19 date of next vaccination"
+Description: "Covid19 date of next vaccination"
+* value[x] only dateTime  //// date of next vaccination
+
 
 Profile: Covid19ServiceRequestLocation
 Parent: Location

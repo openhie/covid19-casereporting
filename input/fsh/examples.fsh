@@ -1,43 +1,3 @@
-Instance: Covid19CompositionExample
-InstanceOf: Covid19Composition
-Usage: #example
-Title: "Covid19 Case Report Composition Example"
-Description: "Basic Composition example"
-* status = #final
-* identifier.system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-case-report"
-* identifier.value = "1111"
-* date = "2022-08-04"
-* author = Reference(Covid19OrganizationExample)
-* title = "Covid19 Case Report"
-
-* section[+].title = "Client registration"
-* section[=].code = CSCaseReportSections#CLIENT-REGISTRATION
-* section[=].entry[+] = Reference(Covid19PatientExample)
-
-* section[+].title = "Covid19 Assessment Encounter"
-* section[=].code = CSCaseReportSections#COVID-ASSESSMENT
-* section[=].entry[+] = Reference(Covid19AssessmentEncounterExample)
-* section[=].entry[+] = Reference(Covid19PresentationExample)
-* section[=].entry[+] = Reference(Covid19SymptomExample)
-* section[=].entry[+] = Reference(Covid19ConditionsComorbidityExample)
-* section[=].entry[+] = Reference(Covid19DiagnosisExample)   
-* section[=].entry[+] = Reference(Covid19VaccineDoseReceivedExample)  
-* section[=].entry[+] = Reference(Covid19AssessmentVaccinationExample) 
- 
-* section[+].title = "Lab Order Management"
-* section[=].code = CSCaseReportSections#LABORDER-MANAGEMENT
-* section[=].entry[+] = Reference(Covid19LabOrderExample)
-* section[=].entry[+] = Reference(Covid19SpecimenExample)  
-* section[=].entry[+] = Reference(Covid19LabOrderCancellationExample ) 
-* section[=].entry[+] = Reference(Covid19LabResultsDiagnosticReportExample) 
-* section[=].entry[+] = Reference(Covid19TestResultExample) 
-* section[=].entry[+] = Reference(Covid19ReasonTestNotPerformedExample)     
-
-* section[+].title = "Covid 19 Vaccination"
-* section[=].code = CSCaseReportSections#COVID-VACCINATION
-* section[=].entry[+] = Reference(Covid19VaccinationExample)
-* section[=].entry[+] = Reference(Covid19VaccinationAppointmentExample)
-
 Instance: Covid19OrganizationExample
 InstanceOf: Covid19Organization
 Usage: #example
@@ -91,33 +51,25 @@ InstanceOf: Covid19AssessmentEncounter
 Usage: #example
 Title: "Covid19 Assessment Encounter example"
 Description: "Covid19 Assessment Encounter  example"
-* class = #SS                 //#TODO - Mandatory base resource field, make sure about this
+* class.code = #SS  
+* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * status = #finished
 * period.start =  "2022-07-28"  //Date of assessment
 * subject = Reference(Covid19PatientExample) //Patient reference
 * period.end  =  "2022-08-15"  //Date of death
 * reasonCode = $SCT#428792000
-//* diagnosis.condition = Reference(Covid19PresentationExample) created circular referencing
+* extension[nextVisit].valueDateTime = "2022-07-28" 
 
-Instance: Covid19VaccineDoseReceivedExample
-InstanceOf: Covid19VaccineDoseReceived
+Instance: Covid19VaccineDoseEverReceivedExample
+InstanceOf: Covid19VaccineDoseEverReceived
 Usage: #example
 Title: "Covid19 Vaccine Dose Received example"
 Description: "Covid19 Vaccine Dose Received example"
-* valueCodeableConcept = $SCT#373066001
+* extension[vaccineDoseEverReceived].valueCodeableConcept = $SCT#373066001
 * status = #final
 * code = $LNC#75618-9 // #TODO
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
-
-Instance: Covid19PresentationExample
-InstanceOf: Covid19Presentation
-Usage: #example
-Title: "Covid19 Presentation example"
-Description: "Covid19 Presentation example"
-* encounter = Reference(Covid19AssessmentEncounterExample) 
-* subject = Reference(Covid19PatientExample) 
-* evidence.code = $SCT#84387000
 
 Instance: Covid19SymptomExample
 InstanceOf: Covid19Symptom
@@ -144,12 +96,13 @@ InstanceOf: Covid19Diagnosis
 Usage: #example
 Title: "Covid19 Diagnosis Example"
 Description: "Covid19 Diagnosis Example"
-* code = #Confirmed
 * recordedDate = "2022-07-28"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * clinicalStatus = $SCT#370996005 
 * verificationStatus = $SCT#410605003
+* evidence.code = $SCT#84387000
+* onsetDateTime = "2022-07-28"
 
 Instance: Covid19MedicationRequestExample
 InstanceOf: Covid19MedicationRequest
@@ -182,16 +135,16 @@ InstanceOf: Covid19LabOrder
 Usage: #example
 Title: "Covid19 Lab Order example"
 Description: "Covid19 Lab Order example"
-* identifier.value = "ORDERNR109191879"
+* identifier.value = "ORDER12345"
 * identifier.system = "http://covid19laborder.org/order"
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
-* reasonCode  = $SCT#Surveillance
+* reasonCode  = $SCT#243790003
 * occurrenceDateTime = "2012-01-05"
 * status = #completed
 * code =  $LNC#94745-7
-* requester = Reference(Covid19OrganizationExample)
-* locationReference = Reference(Covid19Laboratory) 
+* requester = Reference(PractitionerExample)
+* locationReference = Reference(Covid19ServiceRequestLocationExample) 
 * specimen = Reference(Covid19SpecimenExample)
 
 Instance: Covid19SpecimenExample
@@ -205,12 +158,18 @@ Description: "Covid19 Specimen example"
 * type = $SCT#258500001  
 * subject = Reference(Covid19PatientExample)
 
-Instance: Covid19LaboratoryExample
-InstanceOf: Organization
+Instance: Covid19SpecimenLabResultExample
+InstanceOf: Covid19Specimen
 Usage: #example
-Title: "Covid19 Laboratory"
-Description: "Covid19 Laboratory testing the specimen"
-* identifier.id = "Lab001"
+Title: "Covid19 Specimen example"
+Description: "Covid19 Specimen example"
+* identifier.value = "SPECIMEN109191879"
+* identifier.system = "http://covid19laborder.org/specimen"
+* collection.collectedDateTime = "2022-07-28"
+* type = $SCT#258500001  
+* subject = Reference(Covid19PatientExample)
+* processing.timeDateTime = "2022-07-28"
+* receivedTime = "2022-07-28T13:28:17-05:00" 
 
 Instance: Covid19LabOrderCancellationExample
 InstanceOf: Task
@@ -221,20 +180,21 @@ Description: "Covid19 Lab Order Cancellation Task example"
 * executionPeriod.start = "2022-07-28"
 * statusReason = $SCT#281264009 
 * requester = Reference(Covid19OrganizationExample)
-* owner = Reference(Covid19Laboratory)
+* owner = Reference(Covid19OrganizationExample)
 * lastModified = "2015-02-07"
 * intent = #order
 * status = #rejected
+* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-numbers"
+* identifier.value = "ORDER12345"
 
 Instance: Covid19LabResultsDiagnosticReportExample
-InstanceOf: Covid19LabResultsDiagnosticReport
+InstanceOf: DiagnosticReport
 Usage: #example
 Title: "Covid19 Lab Results Diagnostic Report example"
 Description: "Covid19 Lab Results Diagnostic Report example"
-* code = $LNC#100156-9  
-* basedOn = Reference(Covid19LabOrder) 
+* code = $LNC#94558-4  
+* basedOn = Reference(Covid19LabOrderExample) 
 * subject = Reference(Covid19PatientExample) 
-* identifier.id = "12341324"
 * status = #final 
 * result = Reference(Covid19TestResultExample)
 * performer = Reference(PractitionerExample)
@@ -270,16 +230,6 @@ Description: "Covid19 Vaccination example"
 * reportOrigin.coding.code = #VaccineCard
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 
-Instance: Covid19VaccinationAppointmentExample
-InstanceOf: Covid19VaccinationAppointment
-Usage: #example
-Title: "Covid19 Vaccination Appointment example"
-Description: "Covid19 Vaccination Appointment example"
-* participant.actor  = Reference(Covid19PatientExample)
-* participant.status = #tentative
-* start = "2015-02-07T13:28:17.239+02:00"
-* status = #proposed
-
 Instance: LabOrderTaskExample
 InstanceOf: Task
 Usage: #example
@@ -287,12 +237,13 @@ Title: "Lab Order example"
 Description: "Lab Order example"
 * basedOn = Reference(Covid19LabOrderExample)
 * requester = Reference(Covid19OrganizationExample)
-* owner = Reference(Covid19Laboratory)
+* owner = Reference(Covid19OrganizationExample)
 * identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
-* identifier.value = "testOrderNumber"
+* identifier.value = "ORDER12345"
 * intent = #order
 * status = #requested
 * lastModified = "2015-02-07"
+* executionPeriod.start = "2022-11-09"
 
 Instance: PractitionerExample
 InstanceOf: Practitioner
@@ -311,15 +262,16 @@ Title: "Lab Result Task example"
 Description: "Lab Result Task example"
 * basedOn = Reference(Covid19LabOrderExample)
 * requester = Reference(Covid19OrganizationExample)
-* owner = Reference(Covid19Laboratory)
+* owner = Reference(Covid19OrganizationExample)
 * identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
-* identifier.value = "testOrderNumber"
+* identifier.value = "ORDER12345"
 * intent = #order
 * status = #completed
 * lastModified = "2015-02-07"
 * output.type.coding.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output"
 * output.type.coding.code = #result 
 * output.valueReference = Reference(Covid19LabResultsDiagnosticReportExample)
+* executionPeriod.start = "2022-11-09"
 
 Instance: Covid19ReasonTestNotPerformedExample
 InstanceOf: Covid19ReasonTestNotPerformed
