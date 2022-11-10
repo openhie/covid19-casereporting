@@ -3,7 +3,23 @@
   "version": "0.1.0-test",
   "fhirVersion": "4.0.1",
   "jurisdiction": "001",
-  "extensions": [],
+  "extensions": [
+    {
+      "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/ever-received-dose-of-vaccine",
+      "title": "Covid19 Vaccine Dose Received Extension",
+      "types": [
+        "CodeableConcept",
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit",
+      "title": "Covid19 date of next vaccination",
+      "types": [
+        "dateTime"
+      ]
+    }
+  ],
   "profiles": {
     "Immunization": [
       {
@@ -11,16 +27,14 @@
         "title": "Covid19 Vaccination"
       }
     ],
-    "Composition": [
-      {
-        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-composition",
-        "title": "Covid19 Case Reporting Composition"
-      }
-    ],
     "Condition": [
       {
-        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presentation",
-        "title": "Covid19 Presentation"
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-comorbidity",
+        "title": "Covid19 Conditions or comorbidity"
+      },
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis",
+        "title": "Covid19 Diagnosis"
       }
     ],
     "Encounter": [
@@ -33,12 +47,6 @@
       {
         "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order",
         "title": "Covid19 Lab Order"
-      }
-    ],
-    "DiagnosticReport": [
-      {
-        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-results",
-        "title": "Covid19 Lab Results Diagnostic Report"
       }
     ],
     "MedicationRequest": [
@@ -75,18 +83,6 @@
       {
         "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen",
         "title": "Covid19 Specimen"
-      }
-    ],
-    "ClinicalImpression": [
-      {
-        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-symptom",
-        "title": "Covid19 Symptom"
-      }
-    ],
-    "Appointment": [
-      {
-        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination-appointment",
-        "title": "Covid19 Vaccination Appointment"
       }
     ]
   },
@@ -137,8 +133,18 @@
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
       "ImplementationGuide.definition"
     ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/ever-received-dose-of-vaccine": [
+      "Observation"
+    ],
+    "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit": [
+      "Bundle.entry.resource",
+      "Encounter"
     ]
   }
 }

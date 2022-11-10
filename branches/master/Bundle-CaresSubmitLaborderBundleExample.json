@@ -10,12 +10,12 @@
         "id": "LabOrderTaskExample",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"LabOrderTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"LabOrderTaskExample\" </p></div><p><b>identifier</b>: id: testOrderNumber</p><p><b>basedOn</b>: <a href=\"#ServiceRequest_Covid19LabOrderExample\">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>status</b>: requested</p><p><b>intent</b>: order</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>owner</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"LabOrderTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"LabOrderTaskExample\" </p></div><p><b>identifier</b>: id: ORDER12345</p><p><b>basedOn</b>: <a href=\"#ServiceRequest_Covid19LabOrderExample\">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>status</b>: requested</p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: 2022-11-09 --&gt; (ongoing)</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>owner</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p></div>"
         },
         "identifier": [
           {
             "system": "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number",
-            "value": "testOrderNumber"
+            "value": "ORDER12345"
           }
         ],
         "basedOn": [
@@ -25,17 +25,20 @@
         ],
         "status": "requested",
         "intent": "order",
+        "executionPeriod": {
+          "start": "2022-11-09"
+        },
         "lastModified": "2015-02-07",
         "requester": {
           "reference": "Organization/Covid19OrganizationExample"
         },
         "owner": {
-          "reference": "Covid19Laboratory"
+          "reference": "Organization/Covid19OrganizationExample"
         }
       },
       "request": {
         "method": "PUT",
-        "url": "Task/"
+        "url": "Task/LabOrderTaskExample"
       }
     },
     {
@@ -49,11 +52,18 @@
           ]
         },
         "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"Covid19AssessmentEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter \"Covid19AssessmentEncounterExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Covid19 Assessment Encounter</a></p></div><p><b>status</b>: finished</p><p><b>class</b>: SS (Details: [not stated] code SS = 'SS', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Person exposed to disease (person) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#428792000)</span></p></div>"
+          "status": "extensions",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"Covid19AssessmentEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter \"Covid19AssessmentEncounterExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Covid19 Assessment Encounter</a></p></div><p><b>Covid19 date of next vaccination</b>: 2022-07-28</p><p><b>status</b>: finished</p><p><b>class</b>: short stay (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code SS = 'short stay', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Person exposed to disease (person) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#428792000)</span></p></div>"
         },
+        "extension": [
+          {
+            "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit",
+            "valueDateTime": "2022-07-28"
+          }
+        ],
         "status": "finished",
         "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
           "code": "SS"
         },
         "subject": {
@@ -76,7 +86,7 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Encounter/"
+        "url": "Encounter/Covid19AssessmentEncounterExample"
       }
     },
     {
@@ -103,7 +113,7 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Location/"
+        "url": "Location/Covid19ServiceRequestLocationExample"
       }
     },
     {
@@ -118,21 +128,22 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"Covid19LabOrderExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest \"Covid19LabOrderExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order.html\">Covid19 Lab Order</a></p></div><p><b>identifier</b>: id: ORDERNR109191879</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: 94745-7 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (loinc.org#94745-7)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>occurrence</b>: 2012-01-05</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>locationReference</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p><p><b>reasonCode</b>: Surveillance <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#Surveillance)</span></p><p><b>specimen</b>: <a href=\"#Specimen_Covid19SpecimenExample\">See above (Specimen/Covid19SpecimenExample)</a></p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"Covid19LabOrderExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest \"Covid19LabOrderExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order.html\">Covid19 Lab Order</a></p></div><p><b>identifier</b>: id: ORDER12345</p><p><b>status</b>: revoked</p><p><b>intent</b>: order</p><p><b>doNotPerform</b>: true</p><p><b>code</b>: 100156-9 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (loinc.org#100156-9)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>occurrence</b>: 2012-01-05</p><p><b>requester</b>: <a href=\"#Practitioner_PractitionerExample\">See above (Practitioner/PractitionerExample)</a></p><p><b>locationReference</b>: <a href=\"#Location_Covid19ServiceRequestLocationExample\">See above (Location/Covid19ServiceRequestLocationExample)</a></p><p><b>reasonCode</b>: Blood specimen with anticoagulant <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#441510007)</span></p><p><b>specimen</b>: <a href=\"#Specimen_Covid19SpecimenExample\">See above (Specimen/Covid19SpecimenExample)</a></p></div>"
         },
         "identifier": [
           {
             "system": "http://covid19laborder.org/order",
-            "value": "ORDERNR109191879"
+            "value": "ORDER12345"
           }
         ],
-        "status": "completed",
+        "status": "revoked",
         "intent": "order",
+        "doNotPerform": true,
         "code": {
           "coding": [
             {
               "system": "https://loinc.org",
-              "code": "94745-7"
+              "code": "100156-9"
             }
           ]
         },
@@ -144,11 +155,11 @@
         },
         "occurrenceDateTime": "2012-01-05",
         "requester": {
-          "reference": "Organization/Covid19OrganizationExample"
+          "reference": "Practitioner/PractitionerExample"
         },
         "locationReference": [
           {
-            "reference": "Covid19Laboratory"
+            "reference": "Location/Covid19ServiceRequestLocationExample"
           }
         ],
         "reasonCode": [
@@ -156,7 +167,7 @@
             "coding": [
               {
                 "system": "http://snomed.info/sct",
-                "code": "Surveillance"
+                "code": "441510007"
               }
             ]
           }
@@ -169,7 +180,7 @@
       },
       "request": {
         "method": "PUT",
-        "url": "ServiceRequest/"
+        "url": "ServiceRequest/Covid19LabOrderExample"
       }
     },
     {
@@ -198,7 +209,7 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Practitioner/"
+        "url": "Practitioner/PractitionerExample"
       }
     },
     {
@@ -213,7 +224,7 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Covid19PatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Covid19PatientExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-patient.html\">Covid19 Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567, id: EMR1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Smith (OFFICIAL)</p><p><b>telecom</b>: <a href=\"tel:+27825556666\">+27825556666</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><h3>Contacts</h3><table class=\"grid\"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/4.0.0/CodeSystem-v2-0131.html\">contactRole2</a>#N)</span></td><td>John </td><td><a href=\"tel:+27825556667\">+27825556667</a></td></tr></table><p><b>managingOrganization</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Covid19PatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Covid19PatientExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-patient.html\">Covid19 Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567, id: EMR1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Smith (OFFICIAL)</p><p><b>telecom</b>: <a href=\"tel:+27825556666\">+27825556666</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><p><b>maritalStatus</b>: Divorced <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-MaritalStatus.html\">MaritalStatus</a>#D)</span></p><h3>Contacts</h3><table class=\"grid\"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/4.0.0/CodeSystem-v2-0131.html\">contactRole2</a>#N)</span></td><td>John </td><td><a href=\"tel:+27825556667\">+27825556667</a></td></tr></table><p><b>managingOrganization</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p></div>"
         },
         "identifier": [
           {
@@ -255,6 +266,14 @@
             "country": "South Africa"
           }
         ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "D"
+            }
+          ]
+        },
         "contact": [
           {
             "relationship": [
@@ -284,7 +303,7 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Patient/"
+        "url": "Patient/Covid19PatientExample"
       }
     },
     {
@@ -324,7 +343,7 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Specimen/"
+        "url": "Specimen/Covid19SpecimenExample"
       }
     }
   ]

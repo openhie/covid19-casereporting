@@ -169,13 +169,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#1">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#2">Terminology: Value Sets</a>
+         <a href="#2">Structures: Extension Definitions</a>
       </li>
       <li>
-         <a href="#3">Terminology: Code Systems</a>
+         <a href="#3">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#4">Other</a>
+         <a href="#4">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#5">Other</a>
       </li>
    </ul>
 </div>
@@ -192,15 +195,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <table class="grid">
          <col style="width:20%"/>
          <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-covid19-vaccination-appointment.html"
-                     title="StructureDefinition/covid19-vaccination-appointment">Covid19 Vaccination Appointment</a>
-               </td>
-               <td>
-<p>Covid19 Vaccination Appointment</p>
-</td>
-            </tr>
             <tr>
                <td style="column-width:30%">
                   <a href="StructureDefinition-covid19-diagnosis.html"
@@ -221,15 +215,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-covid19-reason-test-not-performed.html"
-                     title="StructureDefinition/covid19-reason-test-not-performed">Covid19 Reason Test Not Performed</a>
-               </td>
-               <td>
-<p>Covid19 reason test not peformed</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
                   <a href="StructureDefinition-covid19-medication-request.html"
                      title="StructureDefinition/covid19-medication-request">Covid19 Treatment dispensed or prescribed</a>
                </td>
@@ -239,38 +224,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-covid19-symptom.html"
-                     title="StructureDefinition/covid19-symptom">Covid19 Symptom</a>
-               </td>
-               <td>
-<p>Covid19 Symptom</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-covid19-presentation.html"
-                     title="StructureDefinition/covid19-presentation">Covid19 Presentation</a>
-               </td>
-               <td>
-<p>Covid19 Presentation</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
                   <a href="StructureDefinition-covid19-conditions-comorbidity.html"
                      title="StructureDefinition/covid19-conditions-comorbidity">Covid19 Conditions or comorbidity</a>
                </td>
                <td>
 <p>Covid19 Conditions or comorbidity</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-covid19-lab-results.html"
-                     title="StructureDefinition/covid19-lab-results">Covid19 Lab Results Diagnostic Report</a>
-               </td>
-               <td>
-<p>Covid19 Lab Results Diagnostic Report</p>
 </td>
             </tr>
             <tr>
@@ -302,11 +260,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-covid19-composition.html"
-                     title="StructureDefinition/covid19-composition">Covid19 Case Reporting Composition</a>
+                  <a href="StructureDefinition-covid19-presenting-symptoms.html"
+                     title="StructureDefinition/covid19-presenting-symptoms">Covid19 Symptom</a>
                </td>
                <td>
-<p>Covid19 Case Reporting Composition</p>
+<p>Covid19 Symptom</p>
 </td>
             </tr>
             <tr>
@@ -367,6 +325,36 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </table>
    </p>
    <a name="2"> </a>
+   <h3>Structures: Extension Definitions </h3>
+   <p>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-next-visit.html"
+                     title="StructureDefinition/next-visit">Covid19 date of next vaccination</a>
+               </td>
+               <td>
+<p>Covid19 date of next vaccination</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-ever-received-dose-of-vaccine.html"
+                     title="StructureDefinition/ever-received-dose-of-vaccine">Covid19 Vaccine Dose Received Extension</a>
+               </td>
+               <td>
+<p>Covid19 Vaccine Dose Extension</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="3"> </a>
    <h3>Terminology: Value Sets </h3>
    <p>
     <p>These define sets of codes used by systems conforming to this implementation guide</p>
@@ -390,15 +378,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>COVID Diagnosis list</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="ValueSet-vs-covid19-reason-test-not-performed.html"
-                     title="ValueSet/vs-covid19-reason-test-not-performed">Covid19 Specimen Type</a>
-               </td>
-               <td>
-<p>A list of Covid19 Specimen Type</p>
 </td>
             </tr>
             <tr>
@@ -471,15 +450,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="ValueSet-vs-assessment-reason.html"
-                     title="ValueSet/vs-assessment-reason">Assessment Reason valueset</a>
-               </td>
-               <td>
-<p>Valueset - assessment reason</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
                   <a href="ValueSet-vs-AdmissionTypes.html"
                      title="ValueSet/vs-AdmissionTypes">Admission Types</a>
                </td>
@@ -523,10 +493,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>A list of Cancellation Reasons</p>
 </td>
             </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.html"
+                     title="ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed">Covid19 Reason for Assessment or Test not performed</a>
+               </td>
+               <td>
+<p>Covid19 Reason for Assessment or Test not performed</p>
+</td>
+            </tr>
          </tbody>
       </table>
    </p>
-   <a name="3"> </a>
+   <a name="4"> </a>
    <h3>Terminology: Code Systems </h3>
    <p>
     <p>These define new code systems used by systems conforming to this implementation guide</p>
@@ -544,19 +523,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Source of information - codes</p>
 </td>
             </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="CodeSystem-cs-case-report-sections.html"
-                     title="CodeSystem/cs-case-report-sections">Covid19 Case Report Sections codesystem</a>
-               </td>
-               <td>
-
-</td>
-            </tr>
          </tbody>
       </table>
    </p>
-   <a name="4"> </a>
+   <a name="5"> </a>
    <h3>Other </h3>
    <p>
     <p>These are resources that are used within this implementation guide that do not fit into one of the other categories</p>
@@ -565,18 +535,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <table class="grid">
          <col style="width:20%"/>
          <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Composition-Covid19CompositionExample.html"
-                     title="Composition/Covid19CompositionExample">Covid19 Case Report</a>
-               </td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Condition-Covid19PresentationExample.html"
-                     title="Condition/Covid19PresentationExample">Condition/Covid19PresentationExample</a>
-               </td>
-            </tr>
             <tr>
                <td style="column-width:30%">
                   <a href="Practitioner-PractitionerExample.html"
@@ -609,8 +567,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Observation-Covid19VaccineDoseReceivedExample.html"
-                     title="Observation/Covid19VaccineDoseReceivedExample">Observation/Covid19VaccineDoseReceivedExample</a>
+                  <a href="Observation-Covid19PresentingSymptomsExample.html"
+                     title="Observation/Covid19PresentingSymptomsExample">Observation/Covid19PresentingSymptomsExample</a>
                </td>
             </tr>
             <tr>
@@ -640,18 +598,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <td style="column-width:30%">
                   <a href="Observation-Covid19TestResultExample.html"
                      title="Observation/Covid19TestResultExample">Observation/Covid19TestResultExample</a>
-               </td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="ClinicalImpression-Covid19SymptomExample.html"
-                     title="ClinicalImpression/Covid19SymptomExample">ClinicalImpression/Covid19SymptomExample</a>
-               </td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Appointment-Covid19VaccinationAppointmentExample.html"
-                     title="Appointment/Covid19VaccinationAppointmentExample">Appointment/Covid19VaccinationAppointmentExample</a>
                </td>
             </tr>
             <tr>
@@ -703,25 +649,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="Specimen-Covid19SpecimenLabResultExample.html"
+                     title="Specimen/Covid19SpecimenLabResultExample">Specimen/Covid19SpecimenLabResultExample</a>
+               </td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Bundle-CaresBundleExample.html" title="Bundle/CaresBundleExample">Bundle/CaresBundleExample</a>
                </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Observation-Covid19ReasonTestNotPerformedExample.html"
-                     title="Observation/Covid19ReasonTestNotPerformedExample">Observation/Covid19ReasonTestNotPerformedExample</a>
+                  <a href="Observation-Covid19VaccineDoseEverReceivedExample.html"
+                     title="Observation/Covid19VaccineDoseEverReceivedExample">Observation/Covid19VaccineDoseEverReceivedExample</a>
                </td>
             </tr>
             <tr>
                <td style="column-width:30%">
                   <a href="Task-Covid19LabOrderCancellationExample.html"
                      title="Task/Covid19LabOrderCancellationExample">Task/Covid19LabOrderCancellationExample</a>
-               </td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Organization-Covid19LaboratoryExample.html"
-                     title="Organization/Covid19LaboratoryExample">Organization/Covid19LaboratoryExample</a>
                </td>
             </tr>
             <tr>
@@ -758,7 +704,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 3, 2022 14:17+0000">2022-11-03</span>
+          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Nov 10, 2022 06:12+0000">2022-11-10</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
