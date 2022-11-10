@@ -12,7 +12,7 @@
           <profile value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Patient</b><a name="Covid19PatientExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient "Covid19PatientExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-patient.html">Covid19 Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567, id: EMR1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Smith (OFFICIAL)</p><p><b>telecom</b>: <a href="tel:+27825556666">+27825556666</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><h3>Contacts</h3><table class="grid"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v2-0131.html">contactRole2</a>#N)</span></td><td>John </td><td><a href="tel:+27825556667">+27825556667</a></td></tr></table><p><b>managingOrganization</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> "Covid19 Organization"</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Patient</b><a name="Covid19PatientExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Patient "Covid19PatientExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-patient.html">Covid19 Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567, id: EMR1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Smith (OFFICIAL)</p><p><b>telecom</b>: <a href="tel:+27825556666">+27825556666</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><p><b>maritalStatus</b>: Divorced <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-MaritalStatus.html">MaritalStatus</a>#D)</span></p><h3>Contacts</h3><table class="grid"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v2-0131.html">contactRole2</a>#N)</span></td><td>John </td><td><a href="tel:+27825556667">+27825556667</a></td></tr></table><p><b>managingOrganization</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> "Covid19 Organization"</p></div>
         </text>
         <identifier>
           <system value="http://openhie.org/fhir/covid19-casereporting/identifier/passport"/>
@@ -44,6 +44,12 @@
           <state value="Western Province"/>
           <country value="South Africa"/>
         </address>
+        <maritalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+            <code value="D"/>
+          </coding>
+        </maritalStatus>
         <contact>
           <relationship>
             <coding>
@@ -78,10 +84,14 @@
           <profile value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Encounter</b><a name="Covid19AssessmentEncounterExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Encounter "Covid19AssessmentEncounterExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-encounter.html">Covid19 Assessment Encounter</a></p></div><p><b>status</b>: finished</p><p><b>class</b>: SS (Details: [not stated] code SS = 'SS', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Person exposed to disease (person) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#428792000)</span></p></div>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Encounter</b><a name="Covid19AssessmentEncounterExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Encounter "Covid19AssessmentEncounterExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-encounter.html">Covid19 Assessment Encounter</a></p></div><p><b>Covid19 date of next vaccination</b>: 2022-07-28</p><p><b>status</b>: finished</p><p><b>class</b>: short stay (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code SS = 'short stay', stated as 'null')</p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Person exposed to disease (person) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#428792000)</span></p></div>
         </text>
+        <extension url="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit">
+          <valueDateTime value="2022-07-28"/>
+        </extension>
         <status value="finished"/>
         <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
           <code value="SS"/>
         </class>
         <subject>
@@ -113,7 +123,7 @@
           <profile value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"/>
         </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Condition</b><a name="Covid19DiagnosisExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition "Covid19DiagnosisExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-diagnosis.html">Covid19 Diagnosis</a></p></div><p><b>clinicalStatus</b>: Patient condition resolved (finding) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#370996005)</span></p><p><b>verificationStatus</b>: Confirmed present (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#410605003)</span></p><p><b>code</b>: Confirmed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Confirmed)</span></p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>recordedDate</b>: 2022-07-28</p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Condition</b><a name="Covid19DiagnosisExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition "Covid19DiagnosisExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-diagnosis.html">Covid19 Diagnosis</a></p></div><p><b>clinicalStatus</b>: Patient condition resolved (finding) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#370996005)</span></p><p><b>verificationStatus</b>: Confirmed present (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#410605003)</span></p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>onset</b>: 2022-07-28</p><p><b>recordedDate</b>: 2022-07-28</p><h3>Evidences</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Asymptomatic <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#84387000)</span></td></tr></table></div>
         </text>
         <clinicalStatus>
           <coding>
@@ -127,18 +137,22 @@
             <code value="410605003"/>
           </coding>
         </verificationStatus>
-        <code>
-          <coding>
-            <code value="Confirmed"/>
-          </coding>
-        </code>
         <subject>
           <reference value="Patient/Covid19PatientExample"/>
         </subject>
         <encounter>
           <reference value="Encounter/Covid19AssessmentEncounterExample"/>
         </encounter>
+        <onsetDateTime value="2022-07-28"/>
         <recordedDate value="2022-07-28"/>
+        <evidence>
+          <code>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="84387000"/>
+            </coding>
+          </code>
+        </evidence>
       </Condition>
     </resource>
     <request>
@@ -230,155 +244,6 @@
     <request>
       <method value="PUT"/>
       <url value="Immunization/"/>
-    </request>
-  </entry>
-  <entry>
-    <fullUrl value="ServiceRequest/Covid19LabOrderExample"/>
-    <resource>
-      <ServiceRequest>
-        <id value="Covid19LabOrderExample"/>
-        <meta>
-          <profile value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"/>
-        </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ServiceRequest</b><a name="Covid19LabOrderExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ServiceRequest "Covid19LabOrderExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-lab-order.html">Covid19 Lab Order</a></p></div><p><b>identifier</b>: id: ORDERNR109191879</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: 94745-7 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (loinc.org#94745-7)</span></p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>occurrence</b>: 2012-01-05</p><p><b>requester</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> "Covid19 Organization"</p><p><b>locationReference</b>: <a href="Covid19Laboratory">Covid19Laboratory</a></p><p><b>reasonCode</b>: Surveillance <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#Surveillance)</span></p><p><b>specimen</b>: <a href="#Specimen_Covid19SpecimenExample">See above (Specimen/Covid19SpecimenExample)</a></p></div>
-        </text>
-        <identifier>
-          <system value="http://covid19laborder.org/order"/>
-          <value value="ORDERNR109191879"/>
-        </identifier>
-        <status value="completed"/>
-        <intent value="order"/>
-        <code>
-          <coding>
-            <system value="https://loinc.org"/>
-            <code value="94745-7"/>
-          </coding>
-        </code>
-        <subject>
-          <reference value="Patient/Covid19PatientExample"/>
-        </subject>
-        <encounter>
-          <reference value="Encounter/Covid19AssessmentEncounterExample"/>
-        </encounter>
-        <occurrenceDateTime value="2012-01-05"/>
-        <requester>
-          <reference value="Organization/Covid19OrganizationExample"/>
-        </requester>
-        <locationReference>
-          <reference value="Covid19Laboratory"/>
-        </locationReference>
-        <reasonCode>
-          <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="Surveillance"/>
-          </coding>
-        </reasonCode>
-        <specimen>
-          <reference value="Specimen/Covid19SpecimenExample"/>
-        </specimen>
-      </ServiceRequest>
-    </resource>
-    <request>
-      <method value="PUT"/>
-      <url value="ServiceRequest/"/>
-    </request>
-  </entry>
-  <entry>
-    <fullUrl value="Location/Covid19ServiceRequestLocationExample"/>
-    <resource>
-      <Location>
-        <id value="Covid19ServiceRequestLocationExample"/>
-        <meta>
-          <profile value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"/>
-        </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Location</b><a name="Covid19ServiceRequestLocationExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Location "Covid19ServiceRequestLocationExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-service-request-location.html">Covid19 Service Request Location</a></p></div><p><b>name</b>: Covid19 Location</p><p><b>address</b>: Cares city 1 Cares state 1 Cares country 1 </p></div>
-        </text>
-        <name value="Covid19 Location"/>
-        <address>
-          <city value="Cares city 1"/>
-          <district value="Cares district 1"/>
-          <state value="Cares state 1"/>
-          <country value="Cares country 1"/>
-        </address>
-      </Location>
-    </resource>
-    <request>
-      <method value="PUT"/>
-      <url value="Location/"/>
-    </request>
-  </entry>
-  <entry>
-    <fullUrl value="Specimen/Covid19SpecimenExample"/>
-    <resource>
-      <Specimen>
-        <id value="Covid19SpecimenExample"/>
-        <meta>
-          <profile value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"/>
-        </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Specimen</b><a name="Covid19SpecimenExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Specimen "Covid19SpecimenExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-specimen.html">Covid19 Specimen</a></p></div><p><b>identifier</b>: id: SPECIMEN109191879</p><p><b>type</b>: Nasopharyngeal swab <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#258500001)</span></p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><h3>Collections</h3><table class="grid"><tr><td>-</td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td>2022-07-28</td></tr></table></div>
-        </text>
-        <identifier>
-          <system value="http://covid19laborder.org/specimen"/>
-          <value value="SPECIMEN109191879"/>
-        </identifier>
-        <type>
-          <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="258500001"/>
-          </coding>
-        </type>
-        <subject>
-          <reference value="Patient/Covid19PatientExample"/>
-        </subject>
-        <collection>
-          <collectedDateTime value="2022-07-28"/>
-        </collection>
-      </Specimen>
-    </resource>
-    <request>
-      <method value="PUT"/>
-      <url value="Specimen/"/>
-    </request>
-  </entry>
-  <entry>
-    <fullUrl value="Observation/Covid19TestResultExample"/>
-    <resource>
-      <Observation>
-        <id value="Covid19TestResultExample"/>
-        <meta>
-          <profile value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results"/>
-        </meta>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="Covid19TestResultExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation "Covid19TestResultExample" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-test-results.html">Covid19 Lab Results</a></p></div><p><b>status</b>: final</p><p><b>code</b>: 94558-4 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (loinc.org#94558-4)</span></p><p><b>subject</b>: <a href="#Patient_Covid19PatientExample">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href="#Encounter_Covid19AssessmentEncounterExample">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>effective</b>: 2022-07-28</p><p><b>value</b>: Positive <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#10828004)</span></p></div>
-        </text>
-        <status value="final"/>
-        <code>
-          <coding>
-            <system value="https://loinc.org"/>
-            <code value="94558-4"/>
-          </coding>
-        </code>
-        <subject>
-          <reference value="Patient/Covid19PatientExample"/>
-        </subject>
-        <encounter>
-          <reference value="Encounter/Covid19AssessmentEncounterExample"/>
-        </encounter>
-        <effectiveDateTime value="2022-07-28"/>
-        <valueCodeableConcept>
-          <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="10828004"/>
-          </coding>
-        </valueCodeableConcept>
-      </Observation>
-    </resource>
-    <request>
-      <method value="PUT"/>
-      <url value="Observation/"/>
     </request>
   </entry>
 </Bundle>

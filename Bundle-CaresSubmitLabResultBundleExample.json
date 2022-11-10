@@ -10,12 +10,12 @@
         "id": "LabResultTaskExample",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"LabResultTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"LabResultTaskExample\" </p></div><p><b>identifier</b>: id: testOrderNumber</p><p><b>basedOn</b>: <a href=\"ServiceRequest-Covid19LabOrderExample.html\">ServiceRequest/Covid19LabOrderExample</a></p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>owner</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p><h3>Outputs</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>result <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (task-output#result)</span></td><td><a href=\"#DiagnosticReport_Covid19LabResultsDiagnosticReportExample\">See above (DiagnosticReport/Covid19LabResultsDiagnosticReportExample)</a></td></tr></table></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"LabResultTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"LabResultTaskExample\" </p></div><p><b>identifier</b>: id: ORDER12345</p><p><b>basedOn</b>: <a href=\"ServiceRequest-Covid19LabOrderExample.html\">ServiceRequest/Covid19LabOrderExample</a></p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: 2022-11-09 --&gt; (ongoing)</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>owner</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><h3>Outputs</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>result <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (task-output#result)</span></td><td><a href=\"#DiagnosticReport_Covid19LabResultsDiagnosticReportExample\">See above (DiagnosticReport/Covid19LabResultsDiagnosticReportExample)</a></td></tr></table></div>"
         },
         "identifier": [
           {
             "system": "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number",
-            "value": "testOrderNumber"
+            "value": "ORDER12345"
           }
         ],
         "basedOn": [
@@ -25,12 +25,15 @@
         ],
         "status": "completed",
         "intent": "order",
+        "executionPeriod": {
+          "start": "2022-11-09"
+        },
         "lastModified": "2015-02-07",
         "requester": {
           "reference": "Organization/Covid19OrganizationExample"
         },
         "owner": {
-          "reference": "Covid19Laboratory"
+          "reference": "Organization/Covid19OrganizationExample"
         },
         "output": [
           {
@@ -50,7 +53,7 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Task/"
+        "url": "Task/LabResultTaskExample"
       }
     },
     {
@@ -58,23 +61,13 @@
       "resource": {
         "resourceType": "DiagnosticReport",
         "id": "Covid19LabResultsDiagnosticReportExample",
-        "meta": {
-          "profile": [
-            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-results"
-          ]
-        },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b><a name=\"Covid19LabResultsDiagnosticReportExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport \"Covid19LabResultsDiagnosticReportExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-results.html\">Covid19 Lab Results Diagnostic Report</a></p></div><p><b>identifier</b>: id: ?ngen-9?</p><p><b>basedOn</b>: <a href=\"Covid19LabOrder\">Covid19LabOrder</a></p><p><b>status</b>: final</p><p><b>code</b>: 100156-9 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (loinc.org#100156-9)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>performer</b>: <a href=\"#Practitioner_PractitionerExample\">See above (Practitioner/PractitionerExample)</a></p><p><b>result</b>: <a href=\"#Observation_Covid19TestResultExample\">See above (Observation/Covid19TestResultExample)</a></p><p><b>conclusion</b>: Some textual conclusion</p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b><a name=\"Covid19LabResultsDiagnosticReportExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport \"Covid19LabResultsDiagnosticReportExample\" </p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-Covid19LabOrderExample.html\">ServiceRequest/Covid19LabOrderExample</a></p><p><b>status</b>: final</p><p><b>code</b>: 94558-4 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (loinc.org#94558-4)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>performer</b>: <a href=\"#Practitioner_PractitionerExample\">See above (Practitioner/PractitionerExample)</a></p><p><b>result</b>: <a href=\"#Observation_Covid19TestResultExample\">See above (Observation/Covid19TestResultExample)</a></p><p><b>conclusion</b>: Some textual conclusion</p></div>"
         },
-        "identifier": [
-          {
-            "id": "12341324"
-          }
-        ],
         "basedOn": [
           {
-            "reference": "Covid19LabOrder"
+            "reference": "ServiceRequest/Covid19LabOrderExample"
           }
         ],
         "status": "final",
@@ -82,7 +75,7 @@
           "coding": [
             {
               "system": "https://loinc.org",
-              "code": "100156-9"
+              "code": "94558-4"
             }
           ]
         },
@@ -103,7 +96,7 @@
       },
       "request": {
         "method": "PUT",
-        "url": "DiagnosticReport/"
+        "url": "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
       }
     },
     {
@@ -132,14 +125,14 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Practitioner/"
+        "url": "Practitioner/PractitionerExample"
       }
     },
     {
-      "fullUrl": "Specimen/Covid19SpecimenExample",
+      "fullUrl": "Specimen/Covid19SpecimenLabResultExample",
       "resource": {
         "resourceType": "Specimen",
-        "id": "Covid19SpecimenExample",
+        "id": "Covid19SpecimenLabResultExample",
         "meta": {
           "profile": [
             "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"
@@ -147,7 +140,7 @@
         },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Specimen</b><a name=\"Covid19SpecimenExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Specimen \"Covid19SpecimenExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-specimen.html\">Covid19 Specimen</a></p></div><p><b>identifier</b>: id: SPECIMEN109191879</p><p><b>type</b>: Nasopharyngeal swab <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#258500001)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><h3>Collections</h3><table class=\"grid\"><tr><td>-</td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td>2022-07-28</td></tr></table></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Specimen</b><a name=\"Covid19SpecimenLabResultExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Specimen \"Covid19SpecimenLabResultExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-specimen.html\">Covid19 Specimen</a></p></div><p><b>identifier</b>: id: SPECIMEN109191879</p><p><b>type</b>: Nasopharyngeal swab <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#258500001)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>receivedTime</b>: 2022-07-28 01:28:17-0500</p><h3>Collections</h3><table class=\"grid\"><tr><td>-</td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td>2022-07-28</td></tr></table><h3>Processings</h3><table class=\"grid\"><tr><td>-</td><td><b>Time[x]</b></td></tr><tr><td>*</td><td>2022-07-28</td></tr></table></div>"
         },
         "identifier": [
           {
@@ -166,13 +159,19 @@
         "subject": {
           "reference": "Patient/Covid19PatientExample"
         },
+        "receivedTime": "2022-07-28T13:28:17-05:00",
         "collection": {
           "collectedDateTime": "2022-07-28"
-        }
+        },
+        "processing": [
+          {
+            "timeDateTime": "2022-07-28"
+          }
+        ]
       },
       "request": {
         "method": "PUT",
-        "url": "Specimen/"
+        "url": "Specimen/Covid19SpecimenLabResultExample"
       }
     },
     {
@@ -216,7 +215,7 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Observation/"
+        "url": "Observation/Covid19TestResultExample"
       }
     }
   ]

@@ -112,6 +112,7 @@
     <sch:title>Condition.onset[x] 1</sch:title>
     <sch:rule context="f:Condition/f:onset[x]">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -179,10 +180,10 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:title>Condition.evidence</sch:title>
+    <sch:title>f:Condition/f:evidence</sch:title>
     <sch:rule context="f:Condition/f:evidence">
-      <sch:assert test="exists(f:code) or exists(f:detail)">evidence SHALL have code or details (inherited)</sch:assert>
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="count(f:code) &gt;= 1">code: minimum cardinality of 'code' is 1</sch:assert>
+      <sch:assert test="count(f:code) &lt;= 1">code: maximum cardinality of 'code' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

@@ -50,38 +50,6 @@
        fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
        fhir:Bundle.entry.request.url [ fhir:value "Immunization/" ]
      ]
-  ], [
-     fhir:index 5;
-     fhir:Bundle.entry.fullUrl [ fhir:value "ServiceRequest/Covid19LabOrderExample" ];
-     fhir:Bundle.entry.resource <ServiceRequest/Covid19LabOrderExample>;
-     fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
-       fhir:Bundle.entry.request.url [ fhir:value "ServiceRequest/" ]
-     ]
-  ], [
-     fhir:index 6;
-     fhir:Bundle.entry.fullUrl [ fhir:value "Location/Covid19ServiceRequestLocationExample" ];
-     fhir:Bundle.entry.resource <Location/Covid19ServiceRequestLocationExample>;
-     fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
-       fhir:Bundle.entry.request.url [ fhir:value "Location/" ]
-     ]
-  ], [
-     fhir:index 7;
-     fhir:Bundle.entry.fullUrl [ fhir:value "Specimen/Covid19SpecimenExample" ];
-     fhir:Bundle.entry.resource <Specimen/Covid19SpecimenExample>;
-     fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
-       fhir:Bundle.entry.request.url [ fhir:value "Specimen/" ]
-     ]
-  ], [
-     fhir:index 8;
-     fhir:Bundle.entry.fullUrl [ fhir:value "Observation/Covid19TestResultExample" ];
-     fhir:Bundle.entry.resource <Observation/Covid19TestResultExample>;
-     fhir:Bundle.entry.request [
-       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
-       fhir:Bundle.entry.request.url [ fhir:value "Observation/" ]
-     ]
   ] .
 
 <Patient/Covid19PatientExample> a fhir:Patient;
@@ -95,7 +63,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Covid19PatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Covid19PatientExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-patient.html\">Covid19 Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567, id: EMR1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Smith (OFFICIAL)</p><p><b>telecom</b>: <a href=\"tel:+27825556666\">+27825556666</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><h3>Contacts</h3><table class=\"grid\"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/4.0.0/CodeSystem-v2-0131.html\">contactRole2</a>#N)</span></td><td>John </td><td><a href=\"tel:+27825556667\">+27825556667</a></td></tr></table><p><b>managingOrganization</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Covid19PatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient \"Covid19PatientExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-patient.html\">Covid19 Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567, id: EMR1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Smith (OFFICIAL)</p><p><b>telecom</b>: <a href=\"tel:+27825556666\">+27825556666</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><p><b>maritalStatus</b>: Divorced <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-MaritalStatus.html\">MaritalStatus</a>#D)</span></p><h3>Contacts</h3><table class=\"grid\"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/4.0.0/CodeSystem-v2-0131.html\">contactRole2</a>#N)</span></td><td>John </td><td><a href=\"tel:+27825556667\">+27825556667</a></td></tr></table><p><b>managingOrganization</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p></div>"
   ];
   fhir:Patient.identifier [
      fhir:index 0;
@@ -134,6 +102,13 @@
      fhir:Address.state [ fhir:value "Western Province" ];
      fhir:Address.country [ fhir:value "South Africa" ]
   ];
+  fhir:Patient.maritalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus" ];
+       fhir:Coding.code [ fhir:value "D" ]
+     ]
+  ];
   fhir:Patient.contact [
      fhir:index 0;
      fhir:Patient.contact.relationship [
@@ -168,11 +143,17 @@
      ]
   ];
   fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"Covid19AssessmentEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter \"Covid19AssessmentEncounterExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Covid19 Assessment Encounter</a></p></div><p><b>status</b>: finished</p><p><b>class</b>: SS (Details: [not stated] code SS = 'SS', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Person exposed to disease (person) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#428792000)</span></p></div>"
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"Covid19AssessmentEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter \"Covid19AssessmentEncounterExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Covid19 Assessment Encounter</a></p></div><p><b>Covid19 date of next vaccination</b>: 2022-07-28</p><p><b>status</b>: finished</p><p><b>class</b>: short stay (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code SS = 'short stay', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Person exposed to disease (person) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#428792000)</span></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit" ];
+     fhir:Extension.valueDateTime [ fhir:value "2022-07-28"^^xsd:date ]
   ];
   fhir:Encounter.status [ fhir:value "finished"];
   fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
      fhir:Coding.code [ fhir:value "SS" ]
   ];
   fhir:Encounter.subject [
@@ -204,7 +185,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"Covid19DiagnosisExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition \"Covid19DiagnosisExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-diagnosis.html\">Covid19 Diagnosis</a></p></div><p><b>clinicalStatus</b>: Patient condition resolved (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#370996005)</span></p><p><b>verificationStatus</b>: Confirmed present (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#410605003)</span></p><p><b>code</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#Confirmed)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>recordedDate</b>: 2022-07-28</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"Covid19DiagnosisExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition \"Covid19DiagnosisExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-diagnosis.html\">Covid19 Diagnosis</a></p></div><p><b>clinicalStatus</b>: Patient condition resolved (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#370996005)</span></p><p><b>verificationStatus</b>: Confirmed present (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#410605003)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>onset</b>: 2022-07-28</p><p><b>recordedDate</b>: 2022-07-28</p><h3>Evidences</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Asymptomatic <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#84387000)</span></td></tr></table></div>"
   ];
   fhir:Condition.clinicalStatus [
      fhir:CodeableConcept.coding [
@@ -222,12 +203,6 @@
        fhir:Coding.code [ fhir:value "410605003" ]
      ]
   ];
-  fhir:Condition.code [
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.code [ fhir:value "Confirmed" ]
-     ]
-  ];
   fhir:Condition.subject [
      fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
@@ -236,7 +211,20 @@
      fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
      fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
   ];
-  fhir:Condition.recordedDate [ fhir:value "2022-07-28"^^xsd:date] .
+  fhir:Condition.onsetDateTime [ fhir:value "2022-07-28"^^xsd:date];
+  fhir:Condition.recordedDate [ fhir:value "2022-07-28"^^xsd:date];
+  fhir:Condition.evidence [
+     fhir:index 0;
+     fhir:Condition.evidence.code [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:84387000;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "84387000" ]
+       ]
+     ]
+  ] .
 
 <Immunization/Covid19AssessmentVaccinationExample> a fhir:Immunization;
   fhir:Resource.id [ fhir:value "Covid19AssessmentVaccinationExample"];
@@ -324,159 +312,6 @@
      fhir:index 0;
      fhir:Immunization.protocolApplied.series [ fhir:value "Booster" ];
      fhir:Immunization.protocolApplied.doseNumberPositiveInt [ fhir:value "1"^^xsd:positiveInteger ]
-  ] .
-
-<ServiceRequest/Covid19LabOrderExample> a fhir:ServiceRequest;
-  fhir:Resource.id [ fhir:value "Covid19LabOrderExample"];
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order";
-       fhir:index 0;
-       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order>
-     ]
-  ];
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"Covid19LabOrderExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest \"Covid19LabOrderExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order.html\">Covid19 Lab Order</a></p></div><p><b>identifier</b>: id: ORDERNR109191879</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>code</b>: 94745-7 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (loinc.org#94745-7)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>occurrence</b>: 2012-01-05</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>locationReference</b>: <a href=\"Covid19Laboratory\">Covid19Laboratory</a></p><p><b>reasonCode</b>: Surveillance <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#Surveillance)</span></p><p><b>specimen</b>: <a href=\"#Specimen_Covid19SpecimenExample\">See above (Specimen/Covid19SpecimenExample)</a></p></div>"
-  ];
-  fhir:ServiceRequest.identifier [
-     fhir:index 0;
-     fhir:Identifier.system [ fhir:value "http://covid19laborder.org/order" ];
-     fhir:Identifier.value [ fhir:value "ORDERNR109191879" ]
-  ];
-  fhir:ServiceRequest.status [ fhir:value "completed"];
-  fhir:ServiceRequest.intent [ fhir:value "order"];
-  fhir:ServiceRequest.code [
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "https://loinc.org" ];
-       fhir:Coding.code [ fhir:value "94745-7" ]
-     ]
-  ];
-  fhir:ServiceRequest.subject [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
-     fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
-  ];
-  fhir:ServiceRequest.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
-     fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
-  ];
-  fhir:ServiceRequest.occurrenceDateTime [ fhir:value "2012-01-05"^^xsd:date];
-  fhir:ServiceRequest.requester [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Organization/Covid19OrganizationExample>;
-     fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
-  ];
-  fhir:ServiceRequest.locationReference [
-     fhir:index 0;
-     fhir:Reference.reference [ fhir:value "Covid19Laboratory" ]
-  ];
-  fhir:ServiceRequest.reasonCode [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       a sct:Surveillance;
-       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:Coding.code [ fhir:value "Surveillance" ]
-     ]
-  ];
-  fhir:ServiceRequest.specimen [
-     fhir:index 0;
-     fhir:link <http://xxsomewhere.org/fhir/myig/Specimen/Covid19SpecimenExample>;
-     fhir:Reference.reference [ fhir:value "Specimen/Covid19SpecimenExample" ]
-  ] .
-
-<Location/Covid19ServiceRequestLocationExample> a fhir:Location;
-  fhir:Resource.id [ fhir:value "Covid19ServiceRequestLocationExample"];
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location";
-       fhir:index 0;
-       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location>
-     ]
-  ];
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"Covid19ServiceRequestLocationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location \"Covid19ServiceRequestLocationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-service-request-location.html\">Covid19 Service Request Location</a></p></div><p><b>name</b>: Covid19 Location</p><p><b>address</b>: Cares city 1 Cares state 1 Cares country 1 </p></div>"
-  ];
-  fhir:Location.name [ fhir:value "Covid19 Location"];
-  fhir:Location.address [
-     fhir:Address.city [ fhir:value "Cares city 1" ];
-     fhir:Address.district [ fhir:value "Cares district 1" ];
-     fhir:Address.state [ fhir:value "Cares state 1" ];
-     fhir:Address.country [ fhir:value "Cares country 1" ]
-  ] .
-
-<Specimen/Covid19SpecimenExample> a fhir:Specimen;
-  fhir:Resource.id [ fhir:value "Covid19SpecimenExample"];
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen";
-       fhir:index 0;
-       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen>
-     ]
-  ];
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Specimen</b><a name=\"Covid19SpecimenExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Specimen \"Covid19SpecimenExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-specimen.html\">Covid19 Specimen</a></p></div><p><b>identifier</b>: id: SPECIMEN109191879</p><p><b>type</b>: Nasopharyngeal swab <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#258500001)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td>-</td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td>2022-07-28</td></tr></table></div>"
-  ];
-  fhir:Specimen.identifier [
-     fhir:index 0;
-     fhir:Identifier.system [ fhir:value "http://covid19laborder.org/specimen" ];
-     fhir:Identifier.value [ fhir:value "SPECIMEN109191879" ]
-  ];
-  fhir:Specimen.type [
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       a sct:258500001;
-       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:Coding.code [ fhir:value "258500001" ]
-     ]
-  ];
-  fhir:Specimen.subject [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
-     fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
-  ];
-  fhir:Specimen.collection [
-     fhir:Specimen.collection.collectedDateTime [ fhir:value "2022-07-28"^^xsd:date ]
-  ] .
-
-<Observation/Covid19TestResultExample> a fhir:Observation;
-  fhir:Resource.id [ fhir:value "Covid19TestResultExample"];
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results";
-       fhir:index 0;
-       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results>
-     ]
-  ];
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19TestResultExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19TestResultExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-test-results.html\">Covid19 Lab Results</a></p></div><p><b>status</b>: final</p><p><b>code</b>: 94558-4 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (loinc.org#94558-4)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>effective</b>: 2022-07-28</p><p><b>value</b>: Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#10828004)</span></p></div>"
-  ];
-  fhir:Observation.status [ fhir:value "final"];
-  fhir:Observation.code [
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "https://loinc.org" ];
-       fhir:Coding.code [ fhir:value "94558-4" ]
-     ]
-  ];
-  fhir:Observation.subject [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
-     fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
-  ];
-  fhir:Observation.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
-     fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
-  ];
-  fhir:Observation.effectiveDateTime [ fhir:value "2022-07-28"^^xsd:date];
-  fhir:Observation.valueCodeableConcept [
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       a sct:10828004;
-       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:Coding.code [ fhir:value "10828004" ]
-     ]
   ] .
 
 # - ontology header ------------------------------------------------------------
