@@ -7,4 +7,4 @@ Description: "Cares Submit Lab Rejection Bundle Example"
 * entry[+].fullUrl = "Task/Covid19LabOrderCancellationExample"
 * entry[=].resource = Covid19LabOrderCancellationExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Task/"
+* entry[=].request.url = "Task/Covid19LabOrderCancellationExample"
