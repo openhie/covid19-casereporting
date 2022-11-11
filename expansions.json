@@ -1,11 +1,69 @@
 {
   "resourceType" : "Bundle",
-  "id" : "4db8a0f0-e1c4-46c9-b7ce-bf836b03439f",
+  "id" : "5b0d1320-e869-4127-a36f-da667f4544fc",
   "meta" : {
-    "lastUpdated" : "2022-11-11T06:34:01.728+00:00"
+    "lastUpdated" : "2022-11-11T09:59:39.076+00:00"
   },
   "type" : "collection",
   "entry" : [{
+    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "vs-test-types",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-1156860005\"> </a>  <a href=\"http://snomed.info/id/1156860005\">1156860005</a></td><td>http://snomed.info/sct</td><td>Rapid antigen detection immunoassay technique (qualifier value)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-9718006\"> </a>  <a href=\"http://snomed.info/id/9718006\">9718006</a></td><td>http://snomed.info/sct</td><td>Polymerase chain reaction analysis (procedure)</td></tr></table></div>"
+      },
+      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types",
+      "version" : "0.1.0-test",
+      "name" : "VSTestTypes",
+      "title" : "Test Types",
+      "status" : "active",
+      "date" : "2022-11-11T09:59:39+00:00",
+      "publisher" : "OpenHIE",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://xxhl7.org/Special/committees/[something]"
+        }]
+      }],
+      "description" : "A list of Test Types",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:4e47057b-b866-435a-9dea-00e77a4211d2",
+        "timestamp" : "2022-11-11T10:00:20+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "1156860005",
+          "display" : "Rapid antigen detection immunoassay technique (qualifier value)"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "9718006",
+          "display" : "Polymerase chain reaction analysis (procedure)"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -19,7 +77,7 @@
       "name" : "VSCovidDiagnosis",
       "title" : "COVID Diagnosis list",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -35,8 +93,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:ecb61376-4571-4e07-b932-9b9cb68b4651",
-        "timestamp" : "2022-11-11T06:34:32+00:00",
+        "identifier" : "urn:uuid:86e6a83b-3527-4910-bedf-54d312d83cc3",
+        "timestamp" : "2022-11-11T10:00:25+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -82,7 +140,7 @@
       "name" : "VSLabOrderStatus",
       "title" : "Covid19 Lab Order Status",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -98,8 +156,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:8826ef56-bdca-4fa2-a1c3-e44a91081497",
-        "timestamp" : "2022-11-11T06:34:32+00:00",
+        "identifier" : "urn:uuid:dfe9e7d7-9144-4e70-917d-8fa5cbd0b9ee",
+        "timestamp" : "2022-11-11T10:00:25+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -145,7 +203,7 @@
       "name" : "VSSourceOfInfo",
       "title" : "Source of information - codes",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -161,8 +219,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:b39b1a0d-c509-4149-8248-22d444acb097",
-        "timestamp" : "2022-11-11T06:34:32+00:00",
+        "identifier" : "urn:uuid:c6b576b8-eadc-4468-9c26-92db8d396316",
+        "timestamp" : "2022-11-11T10:00:25+00:00",
         "total" : 5,
         "parameter" : [{
           "name" : "excludeNested",
@@ -214,7 +272,7 @@
       "name" : "VSYesNoUnknown",
       "title" : "Yes No Unknown",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -230,8 +288,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:f39fb231-c7dd-41e5-bc75-f0786891b8af",
-        "timestamp" : "2022-11-11T06:34:32+00:00",
+        "identifier" : "urn:uuid:17f762af-c7a3-4824-8407-97af4fdb2d6a",
+        "timestamp" : "2022-11-11T10:00:25+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -277,7 +335,7 @@
       "name" : "VSSymptoms",
       "title" : "Presenting symptoms",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -293,8 +351,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:57927350-2840-4ea8-afc2-9df451512f03",
-        "timestamp" : "2022-11-11T06:34:33+00:00",
+        "identifier" : "urn:uuid:48e1051a-0b02-4b4b-bbb3-26460e2ee8c0",
+        "timestamp" : "2022-11-11T10:00:26+00:00",
         "total" : 20,
         "parameter" : [{
           "name" : "excludeNested",
@@ -425,7 +483,7 @@
       "name" : "VSPresentation",
       "title" : "Presentation valueset",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -441,8 +499,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:74dbfe1d-36ed-46d4-8534-aac5acaeb98d",
-        "timestamp" : "2022-11-11T06:34:34+00:00",
+        "identifier" : "urn:uuid:39e0575f-4e31-44f3-b329-d24129b49257",
+        "timestamp" : "2022-11-11T10:00:28+00:00",
         "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
@@ -483,7 +541,7 @@
       "name" : "VSTreatMentDispensedPrescribed",
       "title" : "COVID Treatmens dispensed or prescribed",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -499,8 +557,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:84a24b0f-71a8-4157-96e3-0e7b0adb9c43",
-        "timestamp" : "2022-11-11T06:34:35+00:00",
+        "identifier" : "urn:uuid:69554020-160e-45bf-a263-4e6d2b2483bc",
+        "timestamp" : "2022-11-11T10:00:31+00:00",
         "total" : 1,
         "parameter" : [{
           "name" : "excludeNested",
@@ -536,7 +594,7 @@
       "name" : "VSPatientOutcome",
       "title" : "Patient Outcome",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -552,8 +610,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:9e10cf35-2540-4fe4-9e5c-a409084dc51c",
-        "timestamp" : "2022-11-11T06:34:36+00:00",
+        "identifier" : "urn:uuid:ebe739e3-a3c7-407b-95f6-bfd001bc2b0d",
+        "timestamp" : "2022-11-11T10:00:33+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -599,7 +657,7 @@
       "name" : "VSAdmissionTypes",
       "title" : "Admission Types",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -615,8 +673,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:694b00e6-3cc6-4064-9a22-3e441b7fb55f",
-        "timestamp" : "2022-11-11T06:34:38+00:00",
+        "identifier" : "urn:uuid:0ff49010-de18-44c7-91ac-d360d764d39c",
+        "timestamp" : "2022-11-11T10:00:37+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -662,7 +720,7 @@
       "name" : "VSTestResult",
       "title" : "Covid19 Test Result",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -678,8 +736,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:60fe4307-ca38-4d49-aed7-8f0e90234043",
-        "timestamp" : "2022-11-11T06:34:39+00:00",
+        "identifier" : "urn:uuid:8d296845-2124-4cc9-a1cf-b85ad89f3c70",
+        "timestamp" : "2022-11-11T10:00:39+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -725,7 +783,7 @@
       "name" : "VSConditionsComorbidity",
       "title" : "List of Conditions / Comorbidity",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -741,8 +799,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:f04d06da-37e2-4940-a3fe-4d011e74fc7c",
-        "timestamp" : "2022-11-11T06:34:39+00:00",
+        "identifier" : "urn:uuid:42bc9c2f-09f1-425e-820b-4dfdb07bf321",
+        "timestamp" : "2022-11-11T10:00:39+00:00",
         "total" : 14,
         "parameter" : [{
           "name" : "excludeNested",
@@ -843,7 +901,7 @@
       "name" : "VSCovid19SpecimenType",
       "title" : "Covid19 Specimen Type",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -859,8 +917,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:ff7a3d68-406d-4127-91c0-42dd2d1c03be",
-        "timestamp" : "2022-11-11T06:34:40+00:00",
+        "identifier" : "urn:uuid:1f45b974-c8d1-435f-997e-56e964ebe866",
+        "timestamp" : "2022-11-11T10:00:41+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -906,7 +964,7 @@
       "name" : "VSCancellationReason",
       "title" : "Cancellation Reasons",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -922,8 +980,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:40734b3d-ceb8-4965-a83e-5e144197e03e",
-        "timestamp" : "2022-11-11T06:34:40+00:00",
+        "identifier" : "urn:uuid:da966e7a-a110-4271-9c30-a9ad813f0677",
+        "timestamp" : "2022-11-11T10:00:42+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -969,7 +1027,7 @@
       "name" : "VSReasonForAssessmentOrTestNotPerformed",
       "title" : "Covid19 Reason for Assessment or Test not performed",
       "status" : "active",
-      "date" : "2022-11-11T06:34:01+00:00",
+      "date" : "2022-11-11T09:59:39+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -985,8 +1043,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:4686ed65-958e-43c7-8108-43fb3849b0f2",
-        "timestamp" : "2022-11-11T06:34:41+00:00",
+        "identifier" : "urn:uuid:500d9eba-9242-4003-8d69-39ed65774250",
+        "timestamp" : "2022-11-11T10:00:43+00:00",
         "total" : 18,
         "parameter" : [{
           "name" : "excludeNested",

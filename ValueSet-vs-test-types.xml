@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="vs-test-types"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <code>https://loinc.org</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>100156-9</td><td>SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection</td></tr><tr><td>100157-7</td><td>SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay']</td></tr></table></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/1156860005">1156860005</a></td><td>Rapid antigen detection immunoassay technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/9718006">9718006</a></td><td>Polymerase chain reaction analysis (procedure)</td></tr></table></li></ul></div>
   </text>
   <url value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types"/>
   <version value="0.1.0-test"/>
   <name value="VSTestTypes"/>
   <title value="Test Types"/>
   <status value="active"/>
-  <date value="2022-11-11T06:34:01+00:00"/>
+  <date value="2022-11-11T09:59:39+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -27,14 +27,14 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="https://loinc.org"/>
+      <system value="http://snomed.info/sct"/>
       <concept>
-        <code value="100156-9"/>
-        <display value="SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"/>
+        <code value="1156860005"/>
+        <display value="Rapid antigen detection immunoassay technique (qualifier value)"/>
       </concept>
       <concept>
-        <code value="100157-7"/>
-        <display value="SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay']"/>
+        <code value="9718006"/>
+        <display value="Polymerase chain reaction analysis (procedure)"/>
       </concept>
     </include>
   </compose>

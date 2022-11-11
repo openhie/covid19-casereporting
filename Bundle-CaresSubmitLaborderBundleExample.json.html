@@ -248,54 +248,6 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Encounter/Covid19AssessmentEncounterExample",
-      "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter">resource</a>" : {
-        "<a href="http://hl7.org/fhir/R4/encounter.html">resourceType</a>" : "Encounter",
-        "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.id">id</a>" : "Covid19AssessmentEncounterExample",
-        "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.meta">meta</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"
-          ]
-        },
-        "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.text">text</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Encounter&lt;/b&gt;&lt;a name=\&quot;Covid19AssessmentEncounterExample\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Encounter \&quot;Covid19AssessmentEncounterExample\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-covid19-encounter.html\&quot;&gt;Covid19 Assessment Encounter&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;Covid19 date of next vaccination&lt;/b&gt;: 2022-07-28&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: finished&lt;/p&gt;&lt;p&gt;&lt;b&gt;class&lt;/b&gt;: short stay (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code SS = 'short stay', stated as 'null')&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;#Patient_Covid19PatientExample\&quot;&gt;See above (Patient/Covid19PatientExample)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: 2022-07-28 --&amp;gt; 2022-08-15&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: Person exposed to disease (person) &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://browser.ihtsdotools.org/\&quot;&gt;SNOMED CT&lt;/a&gt;#428792000)&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
-        },
-        "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.extension">extension</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueDateTime</a>" : "2022-07-28"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.status">status</a>" : "finished",
-        "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.class">class</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "SS"
-        },
-        "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.subject">subject</a>" : {
-          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/Covid19PatientExample"
-        },
-        "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.period">period</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2022-07-28",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2022-08-15"
-        },
-        "<a href="http://hl7.org/fhir/R4/encounter.html#Encounter.reasonCode">reasonCode</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-              {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "428792000"
-              }
-            ]
-          }
-        ]
-      },
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
-        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "PUT",
-        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "Encounter/Covid19AssessmentEncounterExample"
-      }
-    },
-    {
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Location/Covid19ServiceRequestLocationExample",
       "<a href="http://hl7.org/fhir/R4/location.html#Location">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/location.html">resourceType</a>" : "Location",
@@ -334,7 +286,7 @@
         },
         "<a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.text">text</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: ServiceRequest&lt;/b&gt;&lt;a name=\&quot;Covid19LabOrderExample\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource ServiceRequest \&quot;Covid19LabOrderExample\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-covid19-lab-order.html\&quot;&gt;Covid19 Lab Order&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: ORDER12345&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: revoked&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: order&lt;/p&gt;&lt;p&gt;&lt;b&gt;doNotPerform&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: 100156-9 &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (loinc.org#100156-9)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;#Patient_Covid19PatientExample\&quot;&gt;See above (Patient/Covid19PatientExample)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;a href=\&quot;#Encounter_Covid19AssessmentEncounterExample\&quot;&gt;See above (Encounter/Covid19AssessmentEncounterExample)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;occurrence&lt;/b&gt;: 2012-01-05&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=\&quot;#Practitioner_PractitionerExample\&quot;&gt;See above (Practitioner/PractitionerExample)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;locationReference&lt;/b&gt;: &lt;a href=\&quot;#Location_Covid19ServiceRequestLocationExample\&quot;&gt;See above (Location/Covid19ServiceRequestLocationExample)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: Blood specimen with anticoagulant &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://browser.ihtsdotools.org/\&quot;&gt;SNOMED CT&lt;/a&gt;#441510007)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specimen&lt;/b&gt;: &lt;a href=\&quot;#Specimen_Covid19SpecimenExample\&quot;&gt;See above (Specimen/Covid19SpecimenExample)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: ServiceRequest&lt;/b&gt;&lt;a name=\&quot;Covid19LabOrderExample\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource ServiceRequest \&quot;Covid19LabOrderExample\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-covid19-lab-order.html\&quot;&gt;Covid19 Lab Order&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: ORDER12345&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: revoked&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: order&lt;/p&gt;&lt;p&gt;&lt;b&gt;doNotPerform&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Rapid antigen detection immunoassay technique (qualifier value) &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://browser.ihtsdotools.org/\&quot;&gt;SNOMED CT&lt;/a&gt;#1156860005)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-Covid19PatientExample.html\&quot;&gt;Patient/Covid19PatientExample&lt;/a&gt; \&quot; SMITH\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;a href=\&quot;Encounter-Covid19AssessmentEncounterExample.html\&quot;&gt;Encounter/Covid19AssessmentEncounterExample&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;occurrence&lt;/b&gt;: 2012-01-05&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=\&quot;#Practitioner_PractitionerExample\&quot;&gt;See above (Practitioner/PractitionerExample)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;locationReference&lt;/b&gt;: &lt;a href=\&quot;#Location_Covid19ServiceRequestLocationExample\&quot;&gt;See above (Location/Covid19ServiceRequestLocationExample)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;reasonCode&lt;/b&gt;: Blood specimen with anticoagulant &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://browser.ihtsdotools.org/\&quot;&gt;SNOMED CT&lt;/a&gt;#441510007)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specimen&lt;/b&gt;: &lt;a href=\&quot;#Specimen_Covid19SpecimenExample\&quot;&gt;See above (Specimen/Covid19SpecimenExample)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
         },
         "<a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.identifier">identifier</a>" : [
           {
@@ -348,8 +300,8 @@
         "<a href="http://hl7.org/fhir/R4/servicerequest.html#ServiceRequest.code">code</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
             {
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "https://loinc.org",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "100156-9"
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "1156860005"
             }
           ]
         },
@@ -419,100 +371,6 @@
       }
     },
     {
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Patient/Covid19PatientExample",
-      "<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>" : {
-        "<a href="http://hl7.org/fhir/R4/patient.html">resourceType</a>" : "Patient",
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.id">id</a>" : "Covid19PatientExample",
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.meta">meta</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
-            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient"
-          ]
-        },
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.text">text</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Patient&lt;/b&gt;&lt;a name=\&quot;Covid19PatientExample\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Patient \&quot;Covid19PatientExample\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-covid19-patient.html\&quot;&gt;Covid19 Patient&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: PASSPORT1234567, id: NAT1234567, id: EMR1234567&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Jane Smith (OFFICIAL)&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+27825556666\&quot;&gt;+27825556666&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: female&lt;/p&gt;&lt;p&gt;&lt;b&gt;birthDate&lt;/b&gt;: 1986-06-04&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: Cape Town Western Province South Africa &lt;/p&gt;&lt;p&gt;&lt;b&gt;maritalStatus&lt;/b&gt;: Divorced &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/4.0.0/CodeSystem-v3-MaritalStatus.html\&quot;&gt;MaritalStatus&lt;/a&gt;#D)&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;Contacts&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Relationship&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Telecom&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Next-of-Kin &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/4.0.0/CodeSystem-v2-0131.html\&quot;&gt;contactRole2&lt;/a&gt;#N)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;John &lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;tel:+27825556667\&quot;&gt;+27825556667&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;Organization-Covid19OrganizationExample.html\&quot;&gt;Organization/Covid19OrganizationExample&lt;/a&gt; \&quot;Covid19 Organization\&quot;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
-        },
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://openhie.org/fhir/covid19-casereporting/identifier/passport",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "PASSPORT1234567"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://openhie.org/fhir/covid19-casereporting/identifier/nid",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "NAT1234567"
-          },
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://openhie.org/fhir/covid19-casereporting/identifier/facility",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "EMR1234567"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.active">active</a>" : true,
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">use</a>" : "official",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "Smith",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
-              "Jane"
-            ]
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.telecom">telecom</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "+27825556666"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">gender</a>" : "female",
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a>" : "1986-06-04",
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "Cape Town",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.district">district</a>" : "City of Cape Town",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a>" : "Western Province",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.country">country</a>" : "South Africa"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.maritalStatus">maritalStatus</a>" : {
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "D"
-            }
-          ]
-        },
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.contact">contact</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/patient.html#Patient.contact.relationship">relationship</a>" : [
-              {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-                  {
-                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0131",
-                    "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "N"
-                  }
-                ]
-              }
-            ],
-            "<a href="http://hl7.org/fhir/R4/patient.html#Patient.contact.name">name</a>" : {
-              "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "John"
-            },
-            "<a href="http://hl7.org/fhir/R4/patient.html#Patient.contact.telecom">telecom</a>" : [
-              {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "+27825556667"
-              }
-            ]
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.managingOrganization">managingOrganization</a>" : {
-          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/Covid19OrganizationExample"
-        }
-      },
-      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request">request</a>" : {
-        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.method">method</a>" : "PUT",
-        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.request.url">url</a>" : "Patient/Covid19PatientExample"
-      }
-    },
-    {
       "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "Specimen/Covid19SpecimenExample",
       "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen">resource</a>" : {
         "<a href="http://hl7.org/fhir/R4/specimen.html">resourceType</a>" : "Specimen",
@@ -524,7 +382,7 @@
         },
         "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.text">text</a>" : {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Specimen&lt;/b&gt;&lt;a name=\&quot;Covid19SpecimenExample\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Specimen \&quot;Covid19SpecimenExample\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-covid19-specimen.html\&quot;&gt;Covid19 Specimen&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: SPECIMEN109191879&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Nasopharyngeal swab &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://browser.ihtsdotools.org/\&quot;&gt;SNOMED CT&lt;/a&gt;#258500001)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;#Patient_Covid19PatientExample\&quot;&gt;See above (Patient/Covid19PatientExample)&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Collections&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Collected[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;2022-07-28&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Specimen&lt;/b&gt;&lt;a name=\&quot;Covid19SpecimenExample\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Specimen \&quot;Covid19SpecimenExample\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-covid19-specimen.html\&quot;&gt;Covid19 Specimen&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: SPECIMEN109191879&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Nasopharyngeal swab &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://browser.ihtsdotools.org/\&quot;&gt;SNOMED CT&lt;/a&gt;#258500001)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-Covid19PatientExample.html\&quot;&gt;Patient/Covid19PatientExample&lt;/a&gt; \&quot; SMITH\&quot;&lt;/p&gt;&lt;h3&gt;Collections&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Collected[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;2022-07-28&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
         },
         "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.identifier">identifier</a>" : [
           {
@@ -584,7 +442,7 @@
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 11, 2022 06:34+0000">2022-11-11</span>
+          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 11, 2022 09:59+0000">2022-11-11</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
