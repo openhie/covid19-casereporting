@@ -113,9 +113,9 @@ Title: "Test Types"
 Description: "A list of Test Types"
 //* $SCT#1156860005 "Rapid antigen detection immunoassay technique (qualifier value)"
 //* $SCT#9718006 "Polymerase chain reaction analysis (procedure)"
-* $LNC#100156-9 "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"   
-* $LNC#100157-7 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay']"
-
+* $LNC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"   
+* $LNC#94745-7 "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
+ 
 ValueSet: VSCancellationReason
 Id: vs-cancellation-reason
 Title: "Cancellation Reasons"
