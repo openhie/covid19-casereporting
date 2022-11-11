@@ -101,7 +101,7 @@
   fhir:Resource.id [ fhir:value "Covid19LabResultsDiagnosticReportExample"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b><a name=\"Covid19LabResultsDiagnosticReportExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport \"Covid19LabResultsDiagnosticReportExample\" </p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-Covid19LabOrderExample.html\">ServiceRequest/Covid19LabOrderExample</a></p><p><b>status</b>: final</p><p><b>code</b>: Rapid antigen detection immunoassay technique (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1156860005)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>performer</b>: <a href=\"#Practitioner_PractitionerExample\">See above (Practitioner/PractitionerExample)</a></p><p><b>result</b>: <a href=\"#Observation_Covid19TestResultExample\">See above (Observation/Covid19TestResultExample)</a></p><p><b>conclusion</b>: Some textual conclusion</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b><a name=\"Covid19LabResultsDiagnosticReportExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport \"Covid19LabResultsDiagnosticReportExample\" </p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-Covid19LabOrderExample.html\">ServiceRequest/Covid19LabOrderExample</a></p><p><b>status</b>: final</p><p><b>code</b>: 100156-9 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (loinc.org#100156-9)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>performer</b>: <a href=\"#Practitioner_PractitionerExample\">See above (Practitioner/PractitionerExample)</a></p><p><b>result</b>: <a href=\"#Observation_Covid19TestResultExample\">See above (Observation/Covid19TestResultExample)</a></p><p><b>conclusion</b>: Some textual conclusion</p></div>"
   ];
   fhir:DiagnosticReport.basedOn [
      fhir:index 0;
@@ -112,9 +112,8 @@
   fhir:DiagnosticReport.code [
      fhir:CodeableConcept.coding [
        fhir:index 0;
-       a sct:1156860005;
-       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:Coding.code [ fhir:value "1156860005" ]
+       fhir:Coding.system [ fhir:value "https://loinc.org" ];
+       fhir:Coding.code [ fhir:value "100156-9" ]
      ]
   ];
   fhir:DiagnosticReport.subject [
@@ -203,15 +202,14 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19TestResultExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19TestResultExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-test-results.html\">Covid19 Lab Results</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Rapid antigen detection immunoassay technique (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1156860005)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>effective</b>: 2022-07-28</p><p><b>value</b>: Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#10828004)</span></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19TestResultExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19TestResultExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-test-results.html\">Covid19 Lab Results</a></p></div><p><b>status</b>: final</p><p><b>code</b>: 100156-9 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (loinc.org#100156-9)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>effective</b>: 2022-07-28</p><p><b>value</b>: Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#10828004)</span></p></div>"
   ];
   fhir:Observation.status [ fhir:value "final"];
   fhir:Observation.code [
      fhir:CodeableConcept.coding [
        fhir:index 0;
-       a sct:1156860005;
-       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:Coding.code [ fhir:value "1156860005" ]
+       fhir:Coding.system [ fhir:value "https://loinc.org" ];
+       fhir:Coding.code [ fhir:value "100156-9" ]
      ]
   ];
   fhir:Observation.subject [
