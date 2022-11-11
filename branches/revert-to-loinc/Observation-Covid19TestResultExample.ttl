@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/Observation/Covid19TestResultExample> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Covid19TestResultExample"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results";
+       fhir:index 0;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19TestResultExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation \"Covid19TestResultExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-test-results.html\">Covid19 Lab Results</a></p></div><p><b>status</b>: final</p><p><b>code</b>: 100156-9 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (loinc.org#100156-9)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>effective</b>: 2022-07-28</p><p><b>value</b>: Positive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#10828004)</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://loinc.org" ];
+       fhir:Coding.code [ fhir:value "100156-9" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
+     fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
+  ];
+  fhir:Observation.encounter [
+     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
+     fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2022-07-28"^^xsd:date];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:10828004;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "10828004" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/Observation/Covid19TestResultExample.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

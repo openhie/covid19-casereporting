@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="Covid19LabResultsDiagnosticReportExample"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2><span title="Codes: {https://loinc.org 100156-9}">100156-9</span> </h2><table class="grid"><tr><td>Subject</td><td><b>Jane Smith (OFFICIAL)</b> female, DoB: 1986-06-04 ( id: PASSPORT1234567)</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>When For</b></td></tr><tr><td><a href="Observation-Covid19TestResultExample.html"><span title="Codes: {https://loinc.org 100156-9}">100156-9</span></a></td><td><span title="Codes: {http://snomed.info/sct 10828004}">Positive</span></td><td>2022-07-28</td></tr></table><p>Some textual conclusion</p></div>
+  </text>
+  <basedOn>
+    <reference value="ServiceRequest/Covid19LabOrderExample"/>
+  </basedOn>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="https://loinc.org"/>
+      <code value="100156-9"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Covid19PatientExample"/>
+  </subject>
+  <performer>
+    <reference value="Practitioner/PractitionerExample"/>
+  </performer>
+  <result>
+    <reference value="Observation/Covid19TestResultExample"/>
+  </result>
+  <conclusion value="Some textual conclusion"/>
+</DiagnosticReport>
