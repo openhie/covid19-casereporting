@@ -3,7 +3,7 @@
 
 err = 104, warn = 57, info = 13
 IG Publisher Version: 1.2.14
-Generated Fri Nov 11 14:18:35 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Fri Nov 11 15:00:42 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 24 / 29 / 0
  /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 2 / 2 / 14
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 2
@@ -129,7 +129,7 @@ WARNING: Bundle/CaresBundleExample: Bundle.entry[4].resource.ofType(Immunization
 == fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json ==
 INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[0].resource.ofType(Task).output[0].type.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output' is unknown so the code cannot be validated
-INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[1].resource.ofType(DiagnosticReport).code: None of the codings provided are in the value set 'LOINC Diagnostic Report Codes' (http://hl7.org/fhir/ValueSet/report-codes), and a coding is recommended to come from this value set) (codes = https://loinc.org#100156-9)
+INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[1].resource.ofType(DiagnosticReport).code: None of the codings provided are in the value set 'LOINC Diagnostic Report Codes' (http://hl7.org/fhir/ValueSet/report-codes), and a coding is recommended to come from this value set) (codes = https://loinc.org#94558-4)
 ERROR: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[1].resource.ofType(DiagnosticReport).code.coding[0]: The system URL 'https://loinc.org' wrongly starts with https: not http:
 INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[1].resource.ofType(DiagnosticReport).result[0]: Details for Observation/Covid19TestResultExample matching against Profile http://hl7.org/fhir/StructureDefinition/Observation
 INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[3].resource.ofType(Specimen).processing[0].time.ofType(dateTime): This element does not match any known slice defined in the profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen
@@ -146,7 +146,7 @@ ERROR: /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info: U
 == fsh-generated/resources/Condition-Covid19ConditionsComorbidityExample.json ==
 == fsh-generated/resources/Condition-Covid19DiagnosisExample.json ==
 == fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.json ==
-INFORMATION: DiagnosticReport/Covid19LabResultsDiagnosticReportExample: DiagnosticReport.code: None of the codings provided are in the value set 'LOINC Diagnostic Report Codes' (http://hl7.org/fhir/ValueSet/report-codes), and a coding is recommended to come from this value set) (codes = https://loinc.org#100156-9)
+INFORMATION: DiagnosticReport/Covid19LabResultsDiagnosticReportExample: DiagnosticReport.code: None of the codings provided are in the value set 'LOINC Diagnostic Report Codes' (http://hl7.org/fhir/ValueSet/report-codes), and a coding is recommended to come from this value set) (codes = https://loinc.org#94558-4)
 ERROR: DiagnosticReport/Covid19LabResultsDiagnosticReportExample: DiagnosticReport.code.coding[0]: The system URL 'https://loinc.org' wrongly starts with https: not http:
 == fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json ==
 == fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json ==
