@@ -144,7 +144,7 @@ Description: "Covid19 Lab Order example"
 * reasonCode  = $SCT#441510007
 * occurrenceDateTime = "2012-01-05"
 * status = #revoked
-* code =  $SCT#1156860005
+* code =  $LNC#100156-9
 * requester = Reference(PractitionerExample)
 * locationReference = Reference(Covid19ServiceRequestLocationExample) 
 * specimen = Reference(Covid19SpecimenExample)
@@ -195,7 +195,7 @@ InstanceOf: DiagnosticReport
 Usage: #example
 Title: "Covid19 Lab Results Diagnostic Report example"
 Description: "Covid19 Lab Results Diagnostic Report example"
-* code = $SCT#1156860005 
+* code = $LNC#100156-9 
 * basedOn = Reference(Covid19LabOrderExample) 
 * subject = Reference(Covid19PatientExample) 
 * status = #final 
@@ -209,7 +209,7 @@ Usage: #example
 Title: "Covid19 Lab Results example"
 Description: "Covid19 Lab Results example"
 * status = #final
-* code = $SCT#1156860005
+* code = $LNC#100156-9
 //* valueDateTime = "2022-07-28"
 * valueCodeableConcept = $SCT#10828004
 * subject = Reference(Covid19PatientExample)
