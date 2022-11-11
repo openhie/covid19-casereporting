@@ -1,0 +1,208 @@
+{
+  "resourceType": "Bundle",
+  "id": "CaresSubmitLaborderBundleExample",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "Task/LabOrderTaskExample",
+      "resource": {
+        "resourceType": "Task",
+        "id": "LabOrderTaskExample",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"LabOrderTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task \"LabOrderTaskExample\" </p></div><p><b>identifier</b>: id: ORDER12345</p><p><b>basedOn</b>: <a href=\"#ServiceRequest_Covid19LabOrderExample\">See above (ServiceRequest/Covid19LabOrderExample)</a></p><p><b>status</b>: requested</p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: 2022-11-09 --&gt; (ongoing)</p><p><b>lastModified</b>: 2015-02-07</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p><p><b>owner</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> \"Covid19 Organization\"</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number",
+            "value": "ORDER12345"
+          }
+        ],
+        "basedOn": [
+          {
+            "reference": "ServiceRequest/Covid19LabOrderExample"
+          }
+        ],
+        "status": "requested",
+        "intent": "order",
+        "executionPeriod": {
+          "start": "2022-11-09"
+        },
+        "lastModified": "2015-02-07",
+        "requester": {
+          "reference": "Organization/Covid19OrganizationExample"
+        },
+        "owner": {
+          "reference": "Organization/Covid19OrganizationExample"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Task/LabOrderTaskExample"
+      }
+    },
+    {
+      "fullUrl": "Location/Covid19ServiceRequestLocationExample",
+      "resource": {
+        "resourceType": "Location",
+        "id": "Covid19ServiceRequestLocationExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"Covid19ServiceRequestLocationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location \"Covid19ServiceRequestLocationExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-service-request-location.html\">Covid19 Service Request Location</a></p></div><p><b>name</b>: Covid19 Location</p><p><b>address</b>: Cares city 1 Cares state 1 Cares country 1 </p></div>"
+        },
+        "name": "Covid19 Location",
+        "address": {
+          "city": "Cares city 1",
+          "district": "Cares district 1",
+          "state": "Cares state 1",
+          "country": "Cares country 1"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Location/Covid19ServiceRequestLocationExample"
+      }
+    },
+    {
+      "fullUrl": "ServiceRequest/Covid19LabOrderExample",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "Covid19LabOrderExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"Covid19LabOrderExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest \"Covid19LabOrderExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order.html\">Covid19 Lab Order</a></p></div><p><b>identifier</b>: id: ORDER12345</p><p><b>status</b>: revoked</p><p><b>intent</b>: order</p><p><b>doNotPerform</b>: true</p><p><b>code</b>: Rapid antigen detection immunoassay technique (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1156860005)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>occurrence</b>: 2012-01-05</p><p><b>requester</b>: <a href=\"#Practitioner_PractitionerExample\">See above (Practitioner/PractitionerExample)</a></p><p><b>locationReference</b>: <a href=\"#Location_Covid19ServiceRequestLocationExample\">See above (Location/Covid19ServiceRequestLocationExample)</a></p><p><b>reasonCode</b>: Blood specimen with anticoagulant <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#441510007)</span></p><p><b>specimen</b>: <a href=\"#Specimen_Covid19SpecimenExample\">See above (Specimen/Covid19SpecimenExample)</a></p></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://covid19laborder.org/order",
+            "value": "ORDER12345"
+          }
+        ],
+        "status": "revoked",
+        "intent": "order",
+        "doNotPerform": true,
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "1156860005"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Covid19PatientExample"
+        },
+        "encounter": {
+          "reference": "Encounter/Covid19AssessmentEncounterExample"
+        },
+        "occurrenceDateTime": "2012-01-05",
+        "requester": {
+          "reference": "Practitioner/PractitionerExample"
+        },
+        "locationReference": [
+          {
+            "reference": "Location/Covid19ServiceRequestLocationExample"
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "441510007"
+              }
+            ]
+          }
+        ],
+        "specimen": [
+          {
+            "reference": "Specimen/Covid19SpecimenExample"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/Covid19LabOrderExample"
+      }
+    },
+    {
+      "fullUrl": "Practitioner/PractitionerExample",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "PractitionerExample",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"PractitionerExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner \"PractitionerExample\" </p></div><p><b>name</b>: Joe Smith </p><p><b>telecom</b>: ph: 27 53 765 2509</p></div>"
+        },
+        "name": [
+          {
+            "family": "Smith",
+            "given": [
+              "Joe"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "27 53 765 2509"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/PractitionerExample"
+      }
+    },
+    {
+      "fullUrl": "Specimen/Covid19SpecimenExample",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "Covid19SpecimenExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Specimen</b><a name=\"Covid19SpecimenExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Specimen \"Covid19SpecimenExample\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-specimen.html\">Covid19 Specimen</a></p></div><p><b>identifier</b>: id: SPECIMEN109191879</p><p><b>type</b>: Nasopharyngeal swab <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#258500001)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> \" SMITH\"</p><h3>Collections</h3><table class=\"grid\"><tr><td>-</td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td>2022-07-28</td></tr></table></div>"
+        },
+        "identifier": [
+          {
+            "system": "http://covid19laborder.org/specimen",
+            "value": "SPECIMEN109191879"
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "258500001"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Covid19PatientExample"
+        },
+        "collection": {
+          "collectedDateTime": "2022-07-28"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Specimen/Covid19SpecimenExample"
+      }
+    }
+  ]
+}

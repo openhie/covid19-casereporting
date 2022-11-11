@@ -1,0 +1,125 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "vs-covid19-reason-for-assessment-or-test-not-performed"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/428792000\">428792000</a></td><td>Contact of a case</td></tr><tr><td><a href=\"http://snomed.info/id/171367005\">171367005</a></td><td>Entry into a country</td></tr><tr><td><a href=\"http://snomed.info/id/308273005\">308273005</a></td><td>Follow-up</td></tr><tr><td><a href=\"http://snomed.info/id/223366009\">223366009</a></td><td>Health worker</td></tr><tr><td><a href=\"http://snomed.info/id/34325006\">34325006</a></td><td>Other frontline worker</td></tr><tr><td><a href=\"http://snomed.info/id/168260004\">168260004</a></td><td>Post-mortem</td></tr><tr><td><a href=\"http://snomed.info/id/170497006\">170497006</a></td><td>Quarantine</td></tr><tr><td><a href=\"http://snomed.info/id/273407003\">273407003</a></td><td>RDT confirmatory</td></tr><tr><td><a href=\"http://snomed.info/id/243790003\">243790003</a></td><td>Surveillance</td></tr><tr><td><a href=\"http://snomed.info/id/264931009\">264931009</a></td><td>Symptomatic/Illness</td></tr><tr><td><a href=\"http://snomed.info/id/255375007\">255375007</a></td><td>Voluntary</td></tr><tr><td><a href=\"http://snomed.info/id/441510007\">441510007</a></td><td>Blood sample coagulated</td></tr><tr><td><a href=\"http://snomed.info/id/123840003\">123840003</a></td><td>Contaminated specimen</td></tr><tr><td><a href=\"http://snomed.info/id/397933008\">397933008</a></td><td>Equipment failure</td></tr><tr><td><a href=\"http://snomed.info/id/281264009\">281264009</a></td><td>Inappropriate sample container used</td></tr><tr><td><a href=\"http://snomed.info/id/281268007\">281268007</a></td><td>Insufficient sample</td></tr><tr><td><a href=\"http://snomed.info/id/281265005\">281265005</a></td><td>Specimen not labeled</td></tr><tr><td><a href=\"http://snomed.info/id/419182006\">419182006</a></td><td>Supplies not available</td></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"];
+  fhir:ValueSet.version [ fhir:value "0.1.0-test"];
+  fhir:ValueSet.name [ fhir:value "VSReasonForAssessmentOrTestNotPerformed"];
+  fhir:ValueSet.title [ fhir:value "Covid19 Reason for Assessment or Test not performed"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2022-11-11T09:59:39+00:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "OpenHIE"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://xxhl7.org/Special/committees/[something]" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "Covid19 Reason for Assessment or Test not performed"];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "428792000" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Contact of a case" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "171367005" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Entry into a country" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "308273005" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Follow-up" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "223366009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Health worker" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "34325006" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other frontline worker" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "168260004" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Post-mortem" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "170497006" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Quarantine" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "273407003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "RDT confirmatory" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "243790003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Surveillance" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "264931009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Symptomatic/Illness" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "255375007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Voluntary" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "441510007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Blood sample coagulated" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "123840003" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Contaminated specimen" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "397933008" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Equipment failure" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "281264009" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Inappropriate sample container used" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "281268007" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Insufficient sample" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "281265005" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Specimen not labeled" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "419182006" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Supplies not available" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
