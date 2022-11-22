@@ -1,0 +1,29 @@
+{
+  "resourceType": "Observation",
+  "id": "Covid19RecoveredOrSymptomsResolvedExample",
+  "meta": {
+    "profile": [
+      "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19RecoveredOrSymptomsResolvedExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;Covid19RecoveredOrSymptomsResolvedExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-recovered-or-symptoms-resolved.html\">Covid19 Recovered Or Symptoms Resolved</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Date of event (observable entity) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#439771001)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Covid19AssessmentEncounter\">Covid19AssessmentEncounter</a></p><p><b>effective</b>: 2022-11-09</p></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "439771001"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Covid19PatientExample"
+  },
+  "encounter": {
+    "reference": "Covid19AssessmentEncounter"
+  },
+  "effectiveDateTime": "2022-11-09"
+}
