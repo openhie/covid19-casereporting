@@ -343,7 +343,7 @@ Title: "Covid19 Recovered Or Symptoms Resolved"
 Description: "Covid19 Recovered Or Symptoms Resolved"
 * status = #final
 * subject = Reference(Covid19PatientExample)
-* encounter = Reference(Covid19AssessmentEncounter)
+* encounter = Reference(Covid19AssessmentEncounterExample)
 * code = $SCT#439771001
 * effectiveDateTime = "2022-11-09"
 
@@ -354,6 +354,6 @@ Title: "Covid19 Death"
 Description: "Covid19 Death"
 * status = #final
 * subject = Reference(Covid19PatientExample)
-* encounter = Reference(Covid19AssessmentEncounter)
+* encounter = Reference(Covid19AssessmentEncounterExample)
 * code = $SCT#399753006
 * effectiveDateTime =  "2022-11-09"
