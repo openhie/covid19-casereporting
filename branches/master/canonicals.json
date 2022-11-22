@@ -7,6 +7,13 @@
     "name": "CSSourceOfInfo"
   },
   {
+    "id": "covid19-admission-location",
+    "type": "StructureDefinition",
+    "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location",
+    "version": "0.1.0-test",
+    "name": "Covid19AdmissionLocation"
+  },
+  {
     "id": "covid19-assessment-vaccination",
     "type": "StructureDefinition",
     "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination",
@@ -14,11 +21,32 @@
     "name": "Covid19AssessmentVaccination"
   },
   {
-    "id": "covid19-conditions-comorbidity",
+    "id": "covid19-conditions-or-comorbidities-present",
     "type": "StructureDefinition",
-    "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-comorbidity",
+    "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present",
     "version": "0.1.0-test",
-    "name": "Covid19ConditionsComorbidity"
+    "name": "ExtCovid19ConditionsOrComorbiditiesPresent"
+  },
+  {
+    "id": "covid19-conditions-or-comorbidity",
+    "type": "StructureDefinition",
+    "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidity",
+    "version": "0.1.0-test",
+    "name": "Covid19ConditionsOrComorbidity"
+  },
+  {
+    "id": "covid19-date-last-hospitalised",
+    "type": "StructureDefinition",
+    "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised",
+    "version": "0.1.0-test",
+    "name": "ExtCovid19DateLastHospitalised"
+  },
+  {
+    "id": "covid19-death",
+    "type": "StructureDefinition",
+    "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death",
+    "version": "0.1.0-test",
+    "name": "Covid19Death"
   },
   {
     "id": "covid19-diagnosis",
@@ -33,6 +61,13 @@
     "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter",
     "version": "0.1.0-test",
     "name": "Covid19AssessmentEncounter"
+  },
+  {
+    "id": "covid19-ever-hospitalised",
+    "type": "StructureDefinition",
+    "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised",
+    "version": "0.1.0-test",
+    "name": "ExtCovid19EverHospitalised"
   },
   {
     "id": "covid19-lab-order",
@@ -70,6 +105,13 @@
     "name": "Covid19PresentingSymptoms"
   },
   {
+    "id": "covid19-recovered-or-symptoms-resolved",
+    "type": "StructureDefinition",
+    "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved",
+    "version": "0.1.0-test",
+    "name": "Covid19RecoveredOrSymptomsResolved"
+  },
+  {
     "id": "covid19-service-request-location",
     "type": "StructureDefinition",
     "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location",
@@ -98,9 +140,9 @@
     "name": "Covid19Vaccination"
   },
   {
-    "id": "covid19-vaccine-dose-received",
+    "id": "covid19-vaccine-dose-ever-received",
     "type": "StructureDefinition",
-    "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-received",
+    "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received",
     "version": "0.1.0-test",
     "name": "Covid19VaccineDoseEverReceived"
   },
@@ -145,13 +187,6 @@
     "url": "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis",
     "version": "0.1.0-test",
     "name": "VSCovidDiagnosis"
-  },
-  {
-    "id": "vs-covid19-lab-order-status",
-    "type": "ValueSet",
-    "url": "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-lab-order-status",
-    "version": "0.1.0-test",
-    "name": "VSLabOrderStatus"
   },
   {
     "id": "vs-covid19-reason-for-assessment-or-test-not-performed",

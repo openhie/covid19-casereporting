@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-11-11T14:59:33+00:00",
+  "date": "2022-11-22T11:12:53+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -347,6 +347,17 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/Covid19DeathExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Practitioner"
           }
         ],
@@ -443,17 +454,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Condition"
-          }
-        ],
-        "reference": {
-          "reference": "Condition/Covid19ConditionsComorbidityExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Observation"
           }
         ],
@@ -478,14 +478,14 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
-          "reference": "ValueSet/vs-covid19-lab-order-status"
+          "reference": "StructureDefinition/covid19-recovered-or-symptoms-resolved"
         },
-        "name": "Covid19 Lab Order Status",
-        "description": "Covid19 Lab Order Status"
+        "name": "Covid19 Recovered Or Symptoms Resolved",
+        "description": "Covid19 Recovered Or Symptoms Resolved"
       },
       {
         "extension": [
@@ -528,14 +528,12 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
+            "valueString": "Location"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-conditions-comorbidity"
-        },
-        "name": "Covid19 Conditions or comorbidity",
-        "description": "Covid19 Conditions or comorbidity"
+          "reference": "Location/Covid19AdmissionLocationExample"
+        }
       },
       {
         "extension": [
@@ -547,6 +545,19 @@
         "reference": {
           "reference": "Bundle/CaresSubmitLabRejectionBundleExample"
         }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-admission-location"
+        },
+        "name": "Covid19 Service Request Location",
+        "description": "Covid19 Service Request Location"
       },
       {
         "extension": [
@@ -624,6 +635,17 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Condition"
+          }
+        ],
+        "reference": {
+          "reference": "Condition/Covid19ConditionsOrComorbidityExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ValueSet"
           }
         ],
@@ -645,6 +667,19 @@
         },
         "name": "Vaccine Types",
         "description": "A list of Vaccine Types"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-date-last-hospitalised"
+        },
+        "name": "Covid19 Date Last Hospitalised",
+        "description": "Covid19 Date Last Hospitalised"
       },
       {
         "extension": [
@@ -676,6 +711,19 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-conditions-or-comorbidity"
+        },
+        "name": "Covid19 Conditions or comorbidity",
+        "description": "Covid19 Conditions or comorbidity"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:extension"
           }
         ],
@@ -697,6 +745,19 @@
         },
         "name": "Patient Outcome",
         "description": "A list of Patient Outcomes"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-conditions-or-comorbidities-present"
+        },
+        "name": "Covid19 Conditions or Comorbidities Present",
+        "description": "Covid19 Conditions or Comorbidities Present"
       },
       {
         "extension": [
@@ -796,6 +857,19 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-death"
+        },
+        "name": "Covid19 Death",
+        "description": "Covid19 Death"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Bundle"
           }
         ],
@@ -840,6 +914,19 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-vaccine-dose-ever-received"
+        },
+        "name": "Covid19 Vaccine Dose Received",
+        "description": "Covid19 Vaccine Dose Received"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Bundle"
           }
         ],
@@ -855,21 +942,19 @@
           }
         ],
         "reference": {
-          "reference": "Observation/Covid19VaccineDoseEverReceivedExample"
+          "reference": "Observation/Covid19RecoveredOrSymptomsResolvedExample"
         }
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
+            "valueString": "Observation"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-vaccine-dose-received"
-        },
-        "name": "Covid19 Vaccine Dose Received",
-        "description": "Covid19 Vaccine Dose Received"
+          "reference": "Observation/Covid19VaccineDoseEverReceivedExample"
+        }
       },
       {
         "extension": [
@@ -1022,6 +1107,19 @@
         "reference": {
           "reference": "Location/Covid19ServiceRequestLocationExample"
         }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-ever-hospitalised"
+        },
+        "name": "Covid19 Ever Hospitalized",
+        "description": "Covid19 Ever Hospitalized"
       },
       {
         "extension": [

@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.title [ fhir:value "Covid 19 Case Reporting and Lab Management"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
   fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean];
-  fhir:ImplementationGuide.date [ fhir:value "2022-11-11T14:59:33+00:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2022-11-22T11:12:53+00:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "OpenHIE"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -329,6 +329,17 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19DeathExample>;
+         fhir:Reference.reference [ fhir:value "Observation/Covid19DeathExample" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "Practitioner" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -336,7 +347,7 @@
          fhir:Reference.reference [ fhir:value "Practitioner/PractitionerExample" ]
        ]
      ], [
-       fhir:index 1;
+       fhir:index 2;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -347,7 +358,7 @@
          fhir:Reference.reference [ fhir:value "Immunization/Covid19VaccinationExample" ]
        ]
      ], [
-       fhir:index 2;
+       fhir:index 3;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -360,7 +371,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Test Types" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A list of Test Types" ]
      ], [
-       fhir:index 3;
+       fhir:index 4;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -373,7 +384,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Diagnosis" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Diagnosis" ]
      ], [
-       fhir:index 4;
+       fhir:index 5;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -386,7 +397,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Service Request Location" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Service Request Location" ]
      ], [
-       fhir:index 5;
+       fhir:index 6;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -397,7 +408,7 @@
          fhir:Reference.reference [ fhir:value "Immunization/Covid19AssessmentVaccinationExample" ]
        ]
      ], [
-       fhir:index 6;
+       fhir:index 7;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -408,7 +419,7 @@
          fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
        ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -420,17 +431,6 @@
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Treatment dispensed or prescribed" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Treatment dispensed or prescribed" ]
-     ], [
-       fhir:index 8;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Condition" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://xxsomewhere.org/fhir/myig/Condition/Covid19ConditionsComorbidityExample>;
-         fhir:Reference.reference [ fhir:value "Condition/Covid19ConditionsComorbidityExample" ]
-       ]
      ], [
        fhir:index 9;
        fhir:Element.extension [
@@ -460,14 +460,14 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-lab-order-status>;
-         fhir:Reference.reference [ fhir:value "ValueSet/vs-covid19-lab-order-status" ]
+         fhir:link <http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-recovered-or-symptoms-resolved>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/covid19-recovered-or-symptoms-resolved" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Lab Order Status" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Lab Order Status" ]
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Recovered Or Symptoms Resolved" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Recovered Or Symptoms Resolved" ]
      ], [
        fhir:index 12;
        fhir:Element.extension [
@@ -510,14 +510,12 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+         fhir:Extension.valueString [ fhir:value "Location" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-comorbidity>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/covid19-conditions-comorbidity" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Conditions or comorbidity" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Conditions or comorbidity" ]
+         fhir:link <http://xxsomewhere.org/fhir/myig/Location/Covid19AdmissionLocationExample>;
+         fhir:Reference.reference [ fhir:value "Location/Covid19AdmissionLocationExample" ]
+       ]
      ], [
        fhir:index 16;
        fhir:Element.extension [
@@ -534,6 +532,19 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-admission-location>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/covid19-admission-location" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Service Request Location" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Service Request Location" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -543,7 +554,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 date of next vaccination" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 date of next vaccination" ]
      ], [
-       fhir:index 18;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -554,7 +565,7 @@
          fhir:Reference.reference [ fhir:value "Bundle/CaresSubmitLabResultBundleExample" ]
        ]
      ], [
-       fhir:index 19;
+       fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -567,7 +578,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Presenting symptoms" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A list of symptoms" ]
      ], [
-       fhir:index 20;
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -578,7 +589,7 @@
          fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
        ]
      ], [
-       fhir:index 21;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -589,7 +600,7 @@
          fhir:Reference.reference [ fhir:value "Observation/Covid19TestResultExample" ]
        ]
      ], [
-       fhir:index 22;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -602,7 +613,18 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Vaccination" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Vaccination" ]
      ], [
-       fhir:index 23;
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://xxsomewhere.org/fhir/myig/Condition/Covid19ConditionsOrComorbidityExample>;
+         fhir:Reference.reference [ fhir:value "Condition/Covid19ConditionsOrComorbidityExample" ]
+       ]
+     ], [
+       fhir:index 25;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -615,7 +637,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Presentation valueset" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Valueset - presentation" ]
      ], [
-       fhir:index 24;
+       fhir:index 26;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -628,7 +650,20 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Vaccine Types" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A list of Vaccine Types" ]
      ], [
-       fhir:index 25;
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-date-last-hospitalised>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/covid19-date-last-hospitalised" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Date Last Hospitalised" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Date Last Hospitalised" ]
+     ], [
+       fhir:index 28;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -641,7 +676,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "COVID Treatmens dispensed or prescribed" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "COVID Treatmens dispensed or prescribed" ]
      ], [
-       fhir:index 26;
+       fhir:index 29;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -654,7 +689,20 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Patient" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Patient profile allows the exchange of patient information, including all the data associated with Covid19 patients" ]
      ], [
-       fhir:index 27;
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidity>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/covid19-conditions-or-comorbidity" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Conditions or comorbidity" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Conditions or comorbidity" ]
+     ], [
+       fhir:index 31;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -667,7 +715,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Vaccine Dose Received Extension" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Vaccine Dose Extension" ]
      ], [
-       fhir:index 28;
+       fhir:index 32;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -680,7 +728,20 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient Outcome" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A list of Patient Outcomes" ]
      ], [
-       fhir:index 29;
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidities-present>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/covid19-conditions-or-comorbidities-present" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Conditions or Comorbidities Present" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Conditions or Comorbidities Present" ]
+     ], [
+       fhir:index 34;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -691,7 +752,7 @@
          fhir:Reference.reference [ fhir:value "MedicationRequest/Covid19MedicationRequestExample" ]
        ]
      ], [
-       fhir:index 30;
+       fhir:index 35;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -702,7 +763,7 @@
          fhir:Reference.reference [ fhir:value "DiagnosticReport/Covid19LabResultsDiagnosticReportExample" ]
        ]
      ], [
-       fhir:index 31;
+       fhir:index 36;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -715,7 +776,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Specimen" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Specimen" ]
      ], [
-       fhir:index 32;
+       fhir:index 37;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -728,7 +789,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Symptom" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Symptom" ]
      ], [
-       fhir:index 33;
+       fhir:index 38;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -739,7 +800,7 @@
          fhir:Reference.reference [ fhir:value "ServiceRequest/Covid19LabOrderExample" ]
        ]
      ], [
-       fhir:index 34;
+       fhir:index 39;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -750,7 +811,7 @@
          fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
        ]
      ], [
-       fhir:index 35;
+       fhir:index 40;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -761,7 +822,7 @@
          fhir:Reference.reference [ fhir:value "Condition/Covid19DiagnosisExample" ]
        ]
      ], [
-       fhir:index 36;
+       fhir:index 41;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -774,7 +835,20 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Assessment Encounter" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Assessment Encounter" ]
      ], [
-       fhir:index 37;
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-death>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/covid19-death" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Death" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Death" ]
+     ], [
+       fhir:index 43;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -785,7 +859,7 @@
          fhir:Reference.reference [ fhir:value "Bundle/CaresSubmitLaborderBundleExample" ]
        ]
      ], [
-       fhir:index 38;
+       fhir:index 44;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -796,7 +870,7 @@
          fhir:Reference.reference [ fhir:value "Specimen/Covid19SpecimenExample" ]
        ]
      ], [
-       fhir:index 39;
+       fhir:index 45;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -807,7 +881,7 @@
          fhir:Reference.reference [ fhir:value "Task/LabResultTaskExample" ]
        ]
      ], [
-       fhir:index 40;
+       fhir:index 46;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -818,7 +892,20 @@
          fhir:Reference.reference [ fhir:value "Specimen/Covid19SpecimenLabResultExample" ]
        ]
      ], [
-       fhir:index 41;
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccine-dose-ever-received>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/covid19-vaccine-dose-ever-received" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Vaccine Dose Received" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Vaccine Dose Received" ]
+     ], [
+       fhir:index 48;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -829,7 +916,18 @@
          fhir:Reference.reference [ fhir:value "Bundle/CaresBundleExample" ]
        ]
      ], [
-       fhir:index 42;
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19RecoveredOrSymptomsResolvedExample>;
+         fhir:Reference.reference [ fhir:value "Observation/Covid19RecoveredOrSymptomsResolvedExample" ]
+       ]
+     ], [
+       fhir:index 50;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -840,20 +938,7 @@
          fhir:Reference.reference [ fhir:value "Observation/Covid19VaccineDoseEverReceivedExample" ]
        ]
      ], [
-       fhir:index 43;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccine-dose-received>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/covid19-vaccine-dose-received" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Vaccine Dose Received" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Vaccine Dose Received" ]
-     ], [
-       fhir:index 44;
+       fhir:index 51;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -866,7 +951,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Admission Types" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A list of Admission Types" ]
      ], [
-       fhir:index 45;
+       fhir:index 52;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -879,7 +964,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Lab Results" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Lab Results" ]
      ], [
-       fhir:index 46;
+       fhir:index 53;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -892,7 +977,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Test Result" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Test Result" ]
      ], [
-       fhir:index 47;
+       fhir:index 54;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -903,7 +988,7 @@
          fhir:Reference.reference [ fhir:value "Task/Covid19LabOrderCancellationExample" ]
        ]
      ], [
-       fhir:index 48;
+       fhir:index 55;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -916,7 +1001,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "List of Conditions / Comorbidity" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "List of Conditions / Comorbidity" ]
      ], [
-       fhir:index 49;
+       fhir:index 56;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -929,7 +1014,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Source of information - codes" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Source of information - codes" ]
      ], [
-       fhir:index 50;
+       fhir:index 57;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -942,7 +1027,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Vaccination info included as part of the Assessment" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Vaccination info included as part of the Assessment" ]
      ], [
-       fhir:index 51;
+       fhir:index 58;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -955,7 +1040,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Specimen Type" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A list of Covid19 Specimen Type" ]
      ], [
-       fhir:index 52;
+       fhir:index 59;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -968,7 +1053,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Organization" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Organization for case report - this represents a health facility" ]
      ], [
-       fhir:index 53;
+       fhir:index 60;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -981,7 +1066,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancellation Reasons" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "A list of Cancellation Reasons" ]
      ], [
-       fhir:index 54;
+       fhir:index 61;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -994,7 +1079,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Lab Order" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Lab Order" ]
      ], [
-       fhir:index 55;
+       fhir:index 62;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -1005,7 +1090,20 @@
          fhir:Reference.reference [ fhir:value "Location/Covid19ServiceRequestLocationExample" ]
        ]
      ], [
-       fhir:index 56;
+       fhir:index 63;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-ever-hospitalised>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/covid19-ever-hospitalised" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Covid19 Ever Hospitalized" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Covid19 Ever Hospitalized" ]
+     ], [
+       fhir:index 64;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
