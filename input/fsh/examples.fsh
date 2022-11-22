@@ -64,6 +64,8 @@ Description: "Covid19 Assessment Encounter  example"
 * extension[nextVisit].valueDateTime = "2022-07-28" 
 * location.location  = Reference(Covid19AdmissionLocationExample)
 * location.physicalType = $SCT#225746001 "Ward"
+* extension[extCovid19EverHospitalised].valueCodeableConcept = $SCT#373066001 "Yes"
+* extension[extCovid19DateLastHospitalised].valueDateTime = "2022-07-28" 
 
 Instance: Covid19VaccineDoseEverReceivedExample
 InstanceOf: Covid19VaccineDoseEverReceived
@@ -165,6 +167,9 @@ Description: "Covid19 Lab Order example"
 * locationReference = Reference(Covid19ServiceRequestLocationExample) 
 * specimen = Reference(Covid19SpecimenExample)
 * doNotPerform = true  //refer to reasonCode if true
+* note.authorReference = Reference(Covid19OrganizationExample)
+* note.text = "additional notes here"
+* note.time = "2015-02-07T13:28:17-05:00" //Covdi19SpecimenNoteDate
 
 Instance: Covid19SpecimenExample
 InstanceOf: Covid19Specimen
@@ -192,6 +197,9 @@ Description: "Covid19 Specimen example"
 * subject = Reference(Covid19PatientExample)
 * processing.timeDateTime = "2022-07-28"
 * receivedTime = "2022-07-28T13:28:17-05:00" 
+* note.authorReference = Reference(Covid19OrganizationExample)
+* note.text = "additional notes here"
+* note.time = "2015-02-07T13:28:17-05:00" //Covdi19SpecimenNoteDate
 
 Instance: Covid19LabOrderCancellationExample
 InstanceOf: Task
@@ -205,8 +213,8 @@ Description: "Covid19 Lab Order Cancellation Task example"
 * owner = Reference(Covid19OrganizationExample)
 * lastModified = "2015-02-07"
 * intent = #order
-* status = #rejected
-* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-numbers"
+* status = #cancelled
+* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
 * identifier.value = "ORDER12345"
 
 Instance: Covid19LabResultsDiagnosticReportExample

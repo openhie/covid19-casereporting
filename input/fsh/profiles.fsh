@@ -46,10 +46,21 @@ Description: "This Patient profile allows the exchange of patient information, i
 * identifier[pos].value 1..1
 * identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
 
-//* extension contains KeyPopulation named keyPopulation 0..1 MS
-
 * managingOrganization 1..1
 * maritalStatus MS
+
+Extension: ExtCovid19EverHospitalised
+Id: covid19-ever-hospitalised
+Title: "Covid19 Ever Hospitalized"
+Description: "Covid19 Ever Hospitalized"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSYesNoUnknown
+
+Extension: ExtCovid19DateLastHospitalised
+Id: covid19-date-last-hospitalised
+Title: "Covid19 Date Last Hospitalised"
+Description: "Covid19 Date Last Hospitalised"
+* value[x] only dateTime 
 
 Profile: Covid19AssessmentEncounter
 Parent: Encounter
@@ -63,9 +74,10 @@ Description: "Covid19 Assessment Encounter"
 * reasonCode.text MS
 * location.physicalType from VSAdmissionTypes 
 * location.physicalType MS //Admission
-* classHistory.class MS //determine ever hospitalized → if classHistory.class = IMP and classHistory.period.start   
-* classHistory.period.start MS // Date Last Hospitalized --> To answer  "Ever Hospitalized due to Covid-19?" 
 * extension contains ExtNextVisit named nextVisit 0..1 MS
+* extension contains ExtCovid19EverHospitalised named extCovid19EverHospitalised 1..1 MS
+* extension contains ExtCovid19DateLastHospitalised named extCovid19DateLastHospitalised 0..1 MS
+
 
 Profile: Covid19PresentingSymptoms
 Parent: Observation
@@ -193,16 +205,6 @@ Description: "Covid19 Lab Results"
 * valueDateTime MS //Test result date-time
 * valueCodeableConcept from VSTestResult
 * valueCodeableConcept MS //Result Code
-
-/*
-Profile: Covid19ReasonTestNotPerformed
-Parent: Observation
-Id: covid19-reason-test-not-performed
-Title: "Covid19 Reason Test Not Performed"
-Description: "Covid19 reason test not peformed"
-* dataAbsentReason from VSReasonTestNotPerformed   
-* dataAbsentReason MS //Reason test not performed
-*/
 
 Profile: Covid19Vaccination
 Parent: Immunization

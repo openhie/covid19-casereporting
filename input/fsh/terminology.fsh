@@ -116,7 +116,7 @@ Description: "A list of Test Types"
 * $LNC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"   
 * $LNC#94745-7 "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
  
-ValueSet: VSCancellationReason
+ValueSet: VSCancellationReason //no binding currently because the Task resource is not profiled -usefull as a reference
 Id: vs-cancellation-reason
 Title: "Cancellation Reasons"
 Description: "A list of Cancellation Reasons"
@@ -158,7 +158,6 @@ Description: "Covid19 Reason for Assessment or Test not performed"
 * $SCT#281265005 "Specimen not labeled"
 * $SCT#419182006 "Supplies not available"
 
-
 ValueSet: VSTestResult
 Id: vs-covid19-test-result
 Title: "Covid19 Test Result"
@@ -166,15 +165,6 @@ Description: "Covid19 Test Result"
 * $SCT#10828004 "Positive"
 * $SCT#260385009 "Negative"
 * $SCT#419984006 "Inconclusive"
-
-ValueSet: VSLabOrderStatus
-Id: vs-covid19-lab-order-status
-Title: "Covid19 Lab Order Status"
-Description: "Covid19 Lab Order Status"
-* $SCT#255594003 "Pending" //no code provided in the google sheet. added a duplication of complete code
-* $SCT#255594003 "Complete"
-* $SCT#89925002 "Cancelled"
-* $SCT#385660001 "Not done"
 
 CodeSystem: CSSourceOfInfo
 Id: cs-source-of-info
@@ -191,10 +181,3 @@ Id: vs-source-of-info
 Title: "Source of information - codes"
 Description: "Source of information - codes"
 * include codes from system CSSourceOfInfo
-/*
-ValueSet: VSKeyPopulation
-Id: vs-key-population
-Title: "Key population"
-Description: "A list of key population types"
-* include codes from system $KEYPOPULATION
-*/
