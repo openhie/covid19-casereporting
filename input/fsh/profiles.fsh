@@ -173,7 +173,7 @@ Description: "Covid19 Lab Order"
 * encounter 1..1 MS  
 * requester MS // Provider name
 * occurrenceDateTime 1..1
-* code from VSTestTypes
+//* code from VSTestTypes ---  Binding relaxed to allow for testing refer to: https://chat.fhir.org/#narrow/stream/179167-hapi/topic/HAPI.20FHIR.20.26.20LOINC
 * code 1..1 MS // Test request Code
 * locationReference MS //Reference Lab sample send to
 * status MS // Status of Lab Order
