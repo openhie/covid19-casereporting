@@ -78,7 +78,6 @@ Description: "Covid19 Assessment Encounter"
 * extension contains ExtCovid19EverHospitalised named extCovid19EverHospitalised 1..1 MS
 * extension contains ExtCovid19DateLastHospitalised named extCovid19DateLastHospitalised 0..1 MS
 
-
 Profile: Covid19PresentingSymptoms
 Parent: Observation
 Id: covid19-presenting-symptoms 
