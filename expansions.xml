@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="2d4db21e-fa64-41cc-952e-4f4e23b213fc"/>
+  <id value="3bf17015-31c3-411d-abe0-6a1b7b53b9b1"/>
   <meta>
-    <lastUpdated value="2022-11-11T14:59:33.171+00:00"/>
+    <lastUpdated value="2022-11-22T11:06:48.506+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -60,7 +60,7 @@
         <name value="VSCovidDiagnosis"/>
         <title value="COVID Diagnosis list"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -76,8 +76,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:d0822c17-2c08-49d6-8a37-ccba2706adf4"/>
-          <timestamp value="2022-11-11T15:00:07+00:00"/>
+          <identifier value="urn:uuid:ea115f58-18e3-4525-9a81-99e8e3ed697b"/>
+          <timestamp value="2022-11-22T11:07:31+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -105,110 +105,6 @@
             <system value="http://snomed.info/sct"/>
             <code value="415684004"/>
             <display value="Suspect"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-lab-order-status"/>
-    <resource>
-      <ValueSet>
-        <id value="vs-covid19-lab-order-status"/>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 3 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 31-Jul 2022</p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>System</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---snomed.info-sct-255594003"> </a>  
-                  <a href="http://snomed.info/id/255594003">255594003</a>
-                </td>
-                <td>http://snomed.info/sct</td>
-                <td>Pending</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---snomed.info-sct-89925002"> </a>  
-                  <a href="http://snomed.info/id/89925002">89925002</a>
-                </td>
-                <td>http://snomed.info/sct</td>
-                <td>Cancelled</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---snomed.info-sct-385660001"> </a>  
-                  <a href="http://snomed.info/id/385660001">385660001</a>
-                </td>
-                <td>http://snomed.info/sct</td>
-                <td>Not done</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-lab-order-status"/>
-        <version value="0.1.0-test"/>
-        <name value="VSLabOrderStatus"/>
-        <title value="Covid19 Lab Order Status"/>
-        <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
-        <publisher value="OpenHIE"/>
-        <contact>
-          <telecom>
-            <system value="url"/>
-            <value value="http://xxhl7.org/Special/committees/[something]"/>
-          </telecom>
-        </contact>
-        <description value="Covid19 Lab Order Status"/>
-        <jurisdiction>
-          <coding>
-            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-            <code value="001"/>
-          </coding>
-        </jurisdiction>
-        <expansion>
-          <identifier value="urn:uuid:f7de2c93-2721-44dc-89b3-0faa58c3e21c"/>
-          <timestamp value="2022-11-11T15:00:08+00:00"/>
-          <total value="3"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="limitedExpansion"/>
-            <valueBoolean value="true"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"/>
-          </parameter>
-          <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="255594003"/>
-            <display value="Pending"/>
-          </contains>
-          <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="89925002"/>
-            <display value="Cancelled"/>
-          </contains>
-          <contains>
-            <system value="http://snomed.info/sct"/>
-            <code value="385660001"/>
-            <display value="Not done"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -286,7 +182,7 @@
         <name value="VSSourceOfInfo"/>
         <title value="Source of information - codes"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -302,8 +198,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5fe87e6f-d78a-45a2-9a29-2b4bf42a0877"/>
-          <timestamp value="2022-11-11T15:00:08+00:00"/>
+          <identifier value="urn:uuid:8bd03140-0426-4b6f-bfd1-99344f7f3b43"/>
+          <timestamp value="2022-11-22T11:07:32+00:00"/>
           <total value="5"/>
           <parameter>
             <name value="excludeNested"/>
@@ -396,7 +292,7 @@
         <name value="VSYesNoUnknown"/>
         <title value="Yes No Unknown"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -412,8 +308,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:854e7dc9-0121-4e16-ac94-922d2ae7769c"/>
-          <timestamp value="2022-11-11T15:00:08+00:00"/>
+          <identifier value="urn:uuid:4b8c39cb-6e11-4ff3-bb65-98a8bf8e33e1"/>
+          <timestamp value="2022-11-22T11:07:33+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -636,7 +532,7 @@
         <name value="VSSymptoms"/>
         <title value="Presenting symptoms"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -652,8 +548,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:36071215-d292-450d-9b20-3f30969e5c5a"/>
-          <timestamp value="2022-11-11T15:00:09+00:00"/>
+          <identifier value="urn:uuid:7e82013e-4e5e-4fa7-8fe5-cf922b246e53"/>
+          <timestamp value="2022-11-22T11:07:34+00:00"/>
           <total value="20"/>
           <parameter>
             <name value="excludeNested"/>
@@ -817,7 +713,7 @@
         <name value="VSPresentation"/>
         <title value="Presentation valueset"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -833,8 +729,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:c94a4a4f-06c3-48ae-bd85-8cb827746e42"/>
-          <timestamp value="2022-11-11T15:00:10+00:00"/>
+          <identifier value="urn:uuid:7f6b9fbf-d997-4f99-aeec-835014f9e487"/>
+          <timestamp value="2022-11-22T11:07:35+00:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -899,7 +795,7 @@
         <name value="VSTreatMentDispensedPrescribed"/>
         <title value="COVID Treatmens dispensed or prescribed"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -915,8 +811,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:afd8bedd-b055-4256-8baa-53f9ea8b752b"/>
-          <timestamp value="2022-11-11T15:00:11+00:00"/>
+          <identifier value="urn:uuid:1399ca93-2e34-4db3-9c31-4eff83dc1167"/>
+          <timestamp value="2022-11-22T11:07:36+00:00"/>
           <total value="1"/>
           <parameter>
             <name value="excludeNested"/>
@@ -993,7 +889,7 @@
         <name value="VSPatientOutcome"/>
         <title value="Patient Outcome"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1009,8 +905,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:69bfd371-e739-466e-8fe0-1dc770d59cef"/>
-          <timestamp value="2022-11-11T15:00:13+00:00"/>
+          <identifier value="urn:uuid:02c0d264-324f-446f-8434-e5a15a233bc8"/>
+          <timestamp value="2022-11-22T11:07:38+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1097,7 +993,7 @@
         <name value="VSAdmissionTypes"/>
         <title value="Admission Types"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1113,8 +1009,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:1a4107dc-e431-4684-ad29-89075720d5ee"/>
-          <timestamp value="2022-11-11T15:00:18+00:00"/>
+          <identifier value="urn:uuid:94a3dfd9-27f8-4036-8425-2795b94d9891"/>
+          <timestamp value="2022-11-22T11:07:43+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1201,7 +1097,7 @@
         <name value="VSTestResult"/>
         <title value="Covid19 Test Result"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1217,8 +1113,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:fc8d492e-ce8e-46ea-a0fd-f6cdfb7e376d"/>
-          <timestamp value="2022-11-11T15:00:19+00:00"/>
+          <identifier value="urn:uuid:6ca73b82-2dcc-4cd4-92af-e4e7bd4d8460"/>
+          <timestamp value="2022-11-22T11:07:44+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1393,7 +1289,7 @@
         <name value="VSConditionsComorbidity"/>
         <title value="List of Conditions / Comorbidity"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1409,8 +1305,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:43947fa1-4740-441a-8146-1c80169d40f7"/>
-          <timestamp value="2022-11-11T15:00:19+00:00"/>
+          <identifier value="urn:uuid:144987fe-80e6-40f2-b883-98962fa81787"/>
+          <timestamp value="2022-11-22T11:07:44+00:00"/>
           <total value="14"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1552,7 +1448,7 @@
         <name value="VSCovid19SpecimenType"/>
         <title value="Covid19 Specimen Type"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1568,8 +1464,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:71a9544e-ef8c-4497-b8a1-3c30b115e5f0"/>
-          <timestamp value="2022-11-11T15:00:20+00:00"/>
+          <identifier value="urn:uuid:1c51068d-8b41-43d7-97f8-1bfacbd0e5ba"/>
+          <timestamp value="2022-11-22T11:07:45+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1656,7 +1552,7 @@
         <name value="VSCancellationReason"/>
         <title value="Cancellation Reasons"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1672,8 +1568,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:e31847a6-eb14-44cf-9f6d-842d90dd6d6f"/>
-          <timestamp value="2022-11-11T15:00:21+00:00"/>
+          <identifier value="urn:uuid:d7b32fb2-118b-49f2-8449-488831a719b8"/>
+          <timestamp value="2022-11-22T11:07:46+00:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -1880,7 +1776,7 @@
         <name value="VSReasonForAssessmentOrTestNotPerformed"/>
         <title value="Covid19 Reason for Assessment or Test not performed"/>
         <status value="active"/>
-        <date value="2022-11-11T14:59:33+00:00"/>
+        <date value="2022-11-22T11:06:48+00:00"/>
         <publisher value="OpenHIE"/>
         <contact>
           <telecom>
@@ -1896,8 +1792,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0c24bbfc-2f40-4729-a680-0e0731fed107"/>
-          <timestamp value="2022-11-11T15:00:22+00:00"/>
+          <identifier value="urn:uuid:9d3d42e5-d8f0-4b34-97a3-42bb7db4d651"/>
+          <timestamp value="2022-11-22T11:07:47+00:00"/>
           <total value="18"/>
           <parameter>
             <name value="excludeNested"/>

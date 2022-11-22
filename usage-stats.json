@@ -5,6 +5,29 @@
   "jurisdiction": "001",
   "extensions": [
     {
+      "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present",
+      "title": "Covid19 Conditions or Comorbidities Present",
+      "types": [
+        "CodeableConcept",
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised",
+      "title": "Covid19 Date Last Hospitalised",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised",
+      "title": "Covid19 Ever Hospitalized",
+      "types": [
+        "CodeableConcept",
+        "CodeableConcept"
+      ]
+    },
+    {
       "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/ever-received-dose-of-vaccine",
       "title": "Covid19 Vaccine Dose Received Extension",
       "types": [
@@ -21,6 +44,12 @@
     }
   ],
   "profiles": {
+    "Location": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location",
+        "title": "Covid19 Service Request Location"
+      }
+    ],
     "Immunization": [
       {
         "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination",
@@ -29,12 +58,14 @@
     ],
     "Condition": [
       {
-        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-comorbidity",
-        "title": "Covid19 Conditions or comorbidity"
-      },
-      {
         "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis",
         "title": "Covid19 Diagnosis"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received",
+        "title": "Covid19 Vaccine Dose Received"
       }
     ],
     "Encounter": [
@@ -65,18 +96,6 @@
       {
         "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient",
         "title": "Covid19 Patient"
-      }
-    ],
-    "Observation": [
-      {
-        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-received",
-        "title": "Covid19 Vaccine Dose Received"
-      }
-    ],
-    "Location": [
-      {
-        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location",
-        "title": "Covid19 Service Request Location"
       }
     ],
     "Specimen": [
@@ -139,7 +158,20 @@
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
     ],
+    "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present": [
+      "Bundle.entry.resource",
+      "Condition"
+    ],
+    "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised": [
+      "Bundle.entry.resource",
+      "Encounter"
+    ],
+    "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised": [
+      "Bundle.entry.resource",
+      "Encounter"
+    ],
     "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/ever-received-dose-of-vaccine": [
+      "Bundle.entry.resource",
       "Observation"
     ],
     "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit": [
