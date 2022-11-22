@@ -23,6 +23,7 @@ Description: "Covid19 Patient example"
 * active = true
 * name.use = #official
 * name.given = "Jane"
+* name.given[1] = "Maria" //middle name
 * name.family = "Smith"
 * gender = #female
 //* extension[keyPopulation].valueCodeableConcept = #GENERAL-POPULATION
@@ -61,6 +62,8 @@ Description: "Covid19 Assessment Encounter  example"
 * period.end  =  "2022-08-15"  //Date of death
 * reasonCode = $SCT#428792000
 * extension[nextVisit].valueDateTime = "2022-07-28" 
+* location.location  = Reference(Covid19AdmissionLocationExample)
+* location.physicalType = $SCT#225746001 "Ward"
 
 Instance: Covid19VaccineDoseEverReceivedExample
 InstanceOf: Covid19VaccineDoseEverReceived
@@ -83,15 +86,22 @@ Description: "Covid19 Symptom example"
 * status = #final
 * code = $SCT#21522001 
 * effectiveDateTime = "2022-07-28"  
+* note.authorReference = Reference(Covid19OrganizationExample)
+* note.text = "Other symptoms here"
+* note.time = "2015-02-07T13:28:17-05:00" //presentingSymptomdate
 
-Instance: Covid19ConditionsComorbidityExample
-InstanceOf: Covid19ConditionsComorbidity
+Instance: Covid19ConditionsOrComorbidityExample
+InstanceOf: Covid19ConditionsOrComorbidity
 Usage: #example
 Title: "Covid19 Conditions or comorbidity example"
 Description: "Covid19 Conditions or comorbidity example"
 * subject = Reference(Covid19PatientExample) 
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * code = $SCT#49601007
+* note.authorReference = Reference(Covid19OrganizationExample)
+* note.text = "Other conditionss or comorbidities here"
+* note.time = "2015-02-07T13:28:17-05:00" //ConditionsOrComorbiditiesDate
+* extension[extCovid19ConditionsOrComorbiditiesPresent].valueCodeableConcept = $SCT#373066001  
 
 Instance: Covid19DiagnosisExample
 InstanceOf: Covid19Diagnosis
@@ -105,6 +115,9 @@ Description: "Covid19 Diagnosis Example"
 * verificationStatus = $SCT#410605003
 * evidence.code = $SCT#84387000
 * onsetDateTime = "2022-07-28"
+* note.authorReference = Reference(Covid19OrganizationExample)
+* note.text = "additional notes here"
+* note.time = "2015-02-07T13:28:17-05:00"
 
 Instance: Covid19MedicationRequestExample
 InstanceOf: Covid19MedicationRequest
@@ -112,10 +125,13 @@ Usage: #example
 Title: "Covid19 Treatment dispensed or prescribed example"
 Description: "Covid19 Treatment dispensed or prescribed example"
 * status = #active
-* intent = #proposal
+* intent = #order
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * medicationCodeableConcept = $RXN#2599543
+* note.authorReference = Reference(Covid19OrganizationExample)
+* note.text = "additional notes here"
+* note.time = "2015-02-07T13:28:17-05:00" //Medication Request Date
 
 Instance: Covid19AssessmentVaccinationExample
 InstanceOf: Covid19AssessmentVaccination
@@ -160,6 +176,9 @@ Description: "Covid19 Specimen example"
 * collection.collectedDateTime = "2022-07-28"
 * type = $SCT#258500001  
 * subject = Reference(Covid19PatientExample)
+* note.authorReference = Reference(Covid19OrganizationExample)
+* note.text = "additional notes here"
+* note.time = "2015-02-07T13:28:17-05:00" //Covdi19SpecimenNoteDate
 
 Instance: Covid19SpecimenLabResultExample
 InstanceOf: Covid19Specimen
@@ -297,3 +316,36 @@ Description: "Covid19 Service Request Location example"
 * address.state = "Cares state 1"
 * address.district = "Cares district 1"
 * address.city = "Cares city 1"
+
+Instance: Covid19AdmissionLocationExample
+InstanceOf: Covid19AdmissionLocation
+Usage: #example
+Title: "Covid19 Admission Location example"
+Description: "Covid19 Admission Location example"
+* name = "Covid19 Location"
+* address.country = "Cares country 1"
+* address.state = "Cares state 1"
+* address.district = "Cares district 1"
+* address.city = "Cares city 1"
+
+Instance: Covid19RecoveredOrSymptomsResolvedExample
+InstanceOf: Covid19RecoveredOrSymptomsResolved
+Usage: #example
+Title: "Covid19 Recovered Or Symptoms Resolved"
+Description: "Covid19 Recovered Or Symptoms Resolved"
+* status = #final
+* subject = Reference(Covid19PatientExample)
+* encounter = Reference(Covid19AssessmentEncounter)
+* code = $SCT#439771001
+* effectiveDateTime = "2022-11-09"
+
+Instance: Covid19DeathExample
+InstanceOf: Covid19Death
+Usage: #example
+Title: "Covid19 Death"
+Description: "Covid19 Death"
+* status = #final
+* subject = Reference(Covid19PatientExample)
+* encounter = Reference(Covid19AssessmentEncounter)
+* code = $SCT#399753006
+* effectiveDateTime =  "2022-11-09"

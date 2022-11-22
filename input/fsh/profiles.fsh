@@ -69,21 +69,29 @@ Description: "Covid19 Assessment Encounter"
 
 Profile: Covid19PresentingSymptoms
 Parent: Observation
-Id: covid19-presenting-symptoms
+Id: covid19-presenting-symptoms 
 Title: "Covid19 Symptom"
 Description: "Covid19 Symptom"
 * code from VSSymptoms
 * code MS
 * note MS // other presenting symptoms
 
-Profile: Covid19ConditionsComorbidity
+Extension: ExtCovid19ConditionsOrComorbiditiesPresent
+Id: covid19-conditions-or-comorbidities-present
+Title: "Covid19 Conditions or Comorbidities Present"
+Description: "Covid19 Conditions or Comorbidities Present"
+* value[x] only CodeableConcept
+* valueCodeableConcept from VSYesNoUnknown
+
+Profile: Covid19ConditionsOrComorbidity
 Parent: Condition
-Id: covid19-conditions-comorbidity
+Id: covid19-conditions-or-comorbidity
 Title: "Covid19 Conditions or comorbidity"
 Description: "Covid19 Conditions or comorbidity"
 * code MS
-* code from VSConditionsComorbidity 
+* code from VSConditionsComorbidity  // 
 * note MS  //OtherConditions   #TODO: Conditional rule: mandatory if code = #Other
+* extension contains ExtCovid19ConditionsOrComorbiditiesPresent named extCovid19ConditionsOrComorbiditiesPresent 1..1 MS 
 
 Extension: ExtVaccineDoseReceived
 Id: ever-received-dose-of-vaccine
@@ -94,7 +102,7 @@ Description: "Covid19 Vaccine Dose Extension"
 
 Profile: Covid19VaccineDoseEverReceived
 Parent: Observation
-Id: covid19-vaccine-dose-received
+Id: covid19-vaccine-dose-ever-received
 Title: "Covid19 Vaccine Dose Received"
 Description: "Covid19 Vaccine Dose Received"
 * extension contains ExtVaccineDoseReceived named vaccineDoseEverReceived 1..1 MS  //ever-received-dose-of-vaccine
@@ -222,7 +230,6 @@ Title: "Covid19 date of next vaccination"
 Description: "Covid19 date of next vaccination"
 * value[x] only dateTime  //// date of next vaccination
 
-
 Profile: Covid19ServiceRequestLocation
 Parent: Location
 Id: covid19-service-request-location
@@ -230,3 +237,25 @@ Title: "Covid19 Service Request Location"
 Description: "Covid19 Service Request Location"
 * name MS
 * address MS
+
+Profile: Covid19AdmissionLocation
+Parent: Location
+Id: covid19-admission-location
+Title: "Covid19 Service Request Location"
+Description: "Covid19 Service Request Location"
+* name MS
+* address MS
+
+Profile: Covid19RecoveredOrSymptomsResolved
+Parent: Observation
+Id: covid19-recovered-or-symptoms-resolved 
+Title: "Covid19 Recovered Or Symptoms Resolved"
+Description: "Covid19 Recovered Or Symptoms Resolved"
+* effectiveDateTime MS
+
+Profile: Covid19Death
+Parent: Observation
+Id: covid19-death 
+Title: "Covid19 Death"
+Description: "Covid19 Death"
+* effectiveDateTime 1..1 MS  //Covid19DeathDate
