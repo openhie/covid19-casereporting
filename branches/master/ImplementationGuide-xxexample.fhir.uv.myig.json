@@ -11,7 +11,7 @@
   "title": "Covid 19 Case Reporting and Lab Management",
   "status": "draft",
   "experimental": false,
-  "date": "2022-11-22T14:31:57+00:00",
+  "date": "2022-11-23T06:27:07+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -347,23 +347,51 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Observation"
+            "valueString": "Task"
           }
         ],
         "reference": {
-          "reference": "Observation/Covid19DeathExample"
+          "reference": "Task/Covid19LabOrderCancellationExample"
         }
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Practitioner"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
-          "reference": "Practitioner/PractitionerExample"
-        }
+          "reference": "StructureDefinition/covid19-assessment-vaccination"
+        },
+        "name": "Covid19 Vaccination info included as part of the Assessment",
+        "description": "Covid19 Vaccination info included as part of the Assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-recovered-or-symptoms-resolved"
+        },
+        "name": "Covid19 Recovered Or Symptoms Resolved",
+        "description": "Covid19 Recovered Or Symptoms Resolved"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/vs-cancellation-reason"
+        },
+        "name": "Cancellation Reasons",
+        "description": "A list of Cancellation Reasons"
       },
       {
         "extension": [
@@ -373,8 +401,239 @@
           }
         ],
         "reference": {
-          "reference": "Immunization/Covid19VaccinationExample"
+          "reference": "Immunization/Covid19AssessmentVaccinationExample"
         }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "DiagnosticReport"
+          }
+        ],
+        "reference": {
+          "reference": "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/vs-covid19-specimen-type"
+        },
+        "name": "Covid19 Specimen Type",
+        "description": "A list of Covid19 Specimen Type"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/vs-covid19-test-result"
+        },
+        "name": "Covid19 Test Result",
+        "description": "Covid19 Test Result"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-vaccine-dose-ever-received"
+        },
+        "name": "Covid19 Vaccine Dose Received",
+        "description": "Covid19 Vaccine Dose Received"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"
+        },
+        "name": "Covid19 Reason for Assessment or Test not performed",
+        "description": "Covid19 Reason for Assessment or Test not performed"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/vs-symptoms"
+        },
+        "name": "Presenting symptoms",
+        "description": "A list of symptoms"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Location"
+          }
+        ],
+        "reference": {
+          "reference": "Location/Covid19ServiceRequestLocationExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/Covid19OrganizationExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/CaresSubmitLaborderBundleExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-lab-order"
+        },
+        "name": "Covid19 Lab Order",
+        "description": "Covid19 Lab Order"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-admission-location"
+        },
+        "name": "Covid19 Service Request Location",
+        "description": "Covid19 Service Request Location"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Task"
+          }
+        ],
+        "reference": {
+          "reference": "Task/LabResultTaskExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-ever-hospitalised"
+        },
+        "name": "Covid19 Ever Hospitalized",
+        "description": "Covid19 Ever Hospitalized"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Encounter"
+          }
+        ],
+        "reference": {
+          "reference": "Encounter/Covid19AssessmentEncounterExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/vs-source-of-info"
+        },
+        "name": "Source of information - codes",
+        "description": "Source of information - codes"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/Covid19TestResultExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/Covid19VaccineDoseEverReceivedExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/cs-source-of-info"
+        },
+        "name": "Source of information - codes",
+        "description": "Source of information - codes"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/vs-AdmissionTypes"
+        },
+        "name": "Admission Types",
+        "description": "A list of Admission Types"
       },
       {
         "extension": [
@@ -393,6 +652,30 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/vs-yes-no"
+        },
+        "name": "Yes No Unknown",
+        "description": "Yes No Unknown"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/Covid19PatientExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           }
         ],
@@ -406,49 +689,36 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
+            "valueString": "Observation"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-service-request-location"
-        },
-        "name": "Covid19 Service Request Location",
-        "description": "Covid19 Service Request Location"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Immunization"
-          }
-        ],
-        "reference": {
-          "reference": "Immunization/Covid19AssessmentVaccinationExample"
+          "reference": "Observation/Covid19DeathExample"
         }
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Organization"
+            "valueString": "Location"
           }
         ],
         "reference": {
-          "reference": "Organization/Covid19OrganizationExample"
+          "reference": "Location/Covid19AdmissionLocationExample"
         }
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
+            "valueString": "ValueSet"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-medication-request"
+          "reference": "ValueSet/vs-presentation"
         },
-        "name": "Covid19 Treatment dispensed or prescribed",
-        "description": "Covid19 Treatment dispensed or prescribed"
+        "name": "Presentation valueset",
+        "description": "Valueset - presentation"
       },
       {
         "extension": [
@@ -478,158 +748,36 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/covid19-recovered-or-symptoms-resolved"
-        },
-        "name": "Covid19 Recovered Or Symptoms Resolved",
-        "description": "Covid19 Recovered Or Symptoms Resolved"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          }
-        ],
-        "reference": {
-          "reference": "ValueSet/vs-source-of-info"
-        },
-        "name": "Source of information - codes",
-        "description": "Source of information - codes"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Task"
-          }
-        ],
-        "reference": {
-          "reference": "Task/LabOrderTaskExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          }
-        ],
-        "reference": {
-          "reference": "ValueSet/vs-yes-no"
-        },
-        "name": "Yes No Unknown",
-        "description": "Yes No Unknown"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Location"
-          }
-        ],
-        "reference": {
-          "reference": "Location/Covid19AdmissionLocationExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Bundle"
-          }
-        ],
-        "reference": {
-          "reference": "Bundle/CaresSubmitLabRejectionBundleExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/covid19-admission-location"
-        },
-        "name": "Covid19 Service Request Location",
-        "description": "Covid19 Service Request Location"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:extension"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/next-visit"
+          "reference": "StructureDefinition/ever-received-dose-of-vaccine"
         },
-        "name": "Covid19 date of next vaccination",
-        "description": "Covid19 date of next vaccination"
+        "name": "Covid19 Vaccine Dose Received Extension",
+        "description": "Covid19 Vaccine Dose Extension"
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Bundle"
+            "valueString": "ServiceRequest"
           }
         ],
         "reference": {
-          "reference": "Bundle/CaresSubmitLabResultBundleExample"
+          "reference": "ServiceRequest/Covid19LabOrderExample"
         }
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
+            "valueString": "Specimen"
           }
         ],
         "reference": {
-          "reference": "ValueSet/vs-symptoms"
-        },
-        "name": "Presenting symptoms",
-        "description": "A list of symptoms"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Patient"
-          }
-        ],
-        "reference": {
-          "reference": "Patient/Covid19PatientExample"
+          "reference": "Specimen/Covid19SpecimenLabResultExample"
         }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Observation"
-          }
-        ],
-        "reference": {
-          "reference": "Observation/Covid19TestResultExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/covid19-vaccination"
-        },
-        "name": "Covid19 Vaccination",
-        "description": "Covid19 Vaccination"
       },
       {
         "extension": [
@@ -646,40 +794,12 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
+            "valueString": "Condition"
           }
         ],
         "reference": {
-          "reference": "ValueSet/vs-presentation"
-        },
-        "name": "Presentation valueset",
-        "description": "Valueset - presentation"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          }
-        ],
-        "reference": {
-          "reference": "ValueSet/vs-vaccine-types"
-        },
-        "name": "Vaccine Types",
-        "description": "A list of Vaccine Types"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/covid19-date-last-hospitalised"
-        },
-        "name": "Covid19 Date Last Hospitalised",
-        "description": "Covid19 Date Last Hospitalised"
+          "reference": "Condition/Covid19DiagnosisExample"
+        }
       },
       {
         "extension": [
@@ -698,53 +818,12 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
+            "valueString": "Immunization"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-patient"
-        },
-        "name": "Covid19 Patient",
-        "description": "This Patient profile allows the exchange of patient information, including all the data associated with Covid19 patients"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/covid19-conditions-or-comorbidity"
-        },
-        "name": "Covid19 Conditions or comorbidity",
-        "description": "Covid19 Conditions or comorbidity"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/ever-received-dose-of-vaccine"
-        },
-        "name": "Covid19 Vaccine Dose Received Extension",
-        "description": "Covid19 Vaccine Dose Extension"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          }
-        ],
-        "reference": {
-          "reference": "ValueSet/vs-patient-outcome"
-        },
-        "name": "Patient Outcome",
-        "description": "A list of Patient Outcomes"
+          "reference": "Immunization/Covid19VaccinationExample"
+        }
       },
       {
         "extension": [
@@ -763,23 +842,25 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "MedicationRequest"
+            "valueString": "Practitioner"
           }
         ],
         "reference": {
-          "reference": "MedicationRequest/Covid19MedicationRequestExample"
+          "reference": "Practitioner/PractitionerExample"
         }
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "DiagnosticReport"
+            "valueString": "ValueSet"
           }
         ],
         "reference": {
-          "reference": "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
-        }
+          "reference": "ValueSet/vs-patient-outcome"
+        },
+        "name": "Patient Outcome",
+        "description": "A list of Patient Outcomes"
       },
       {
         "extension": [
@@ -802,42 +883,70 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-presenting-symptoms"
+          "reference": "StructureDefinition/covid19-patient"
         },
-        "name": "Covid19 Symptom",
-        "description": "Covid19 Symptom"
+        "name": "Covid19 Patient",
+        "description": "This Patient profile allows the exchange of patient information, including all the data associated with Covid19 patients"
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ServiceRequest"
+            "valueString": "Task"
           }
         ],
         "reference": {
-          "reference": "ServiceRequest/Covid19LabOrderExample"
+          "reference": "Task/LabOrderTaskExample"
         }
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Encounter"
+            "valueString": "ValueSet"
           }
         ],
         "reference": {
-          "reference": "Encounter/Covid19AssessmentEncounterExample"
-        }
+          "reference": "ValueSet/vs-conditions-comorbidity"
+        },
+        "name": "List of Conditions / Comorbidity",
+        "description": "List of Conditions / Comorbidity"
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Condition"
+            "valueString": "StructureDefinition:extension"
           }
         ],
         "reference": {
-          "reference": "Condition/Covid19DiagnosisExample"
+          "reference": "StructureDefinition/next-visit"
+        },
+        "name": "Covid19 date of next vaccination",
+        "description": "Covid19 date of next vaccination"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/vs-vaccine-types"
+        },
+        "name": "Vaccine Types",
+        "description": "A list of Vaccine Types"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/CaresSubmitLabResultBundleExample"
         }
       },
       {
@@ -861,113 +970,10 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-death"
+          "reference": "StructureDefinition/covid19-service-request-location"
         },
-        "name": "Covid19 Death",
-        "description": "Covid19 Death"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Bundle"
-          }
-        ],
-        "reference": {
-          "reference": "Bundle/CaresSubmitLaborderBundleExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Specimen"
-          }
-        ],
-        "reference": {
-          "reference": "Specimen/Covid19SpecimenExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Task"
-          }
-        ],
-        "reference": {
-          "reference": "Task/LabResultTaskExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Specimen"
-          }
-        ],
-        "reference": {
-          "reference": "Specimen/Covid19SpecimenLabResultExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/covid19-vaccine-dose-ever-received"
-        },
-        "name": "Covid19 Vaccine Dose Received",
-        "description": "Covid19 Vaccine Dose Received"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Bundle"
-          }
-        ],
-        "reference": {
-          "reference": "Bundle/CaresBundleExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Observation"
-          }
-        ],
-        "reference": {
-          "reference": "Observation/Covid19RecoveredOrSymptomsResolvedExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Observation"
-          }
-        ],
-        "reference": {
-          "reference": "Observation/Covid19VaccineDoseEverReceivedExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          }
-        ],
-        "reference": {
-          "reference": "ValueSet/vs-AdmissionTypes"
-        },
-        "name": "Admission Types",
-        "description": "A list of Admission Types"
+        "name": "Covid19 Service Request Location",
+        "description": "Covid19 Service Request Location"
       },
       {
         "extension": [
@@ -986,51 +992,14 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
-          "reference": "ValueSet/vs-covid19-test-result"
+          "reference": "StructureDefinition/covid19-vaccination"
         },
-        "name": "Covid19 Test Result",
-        "description": "Covid19 Test Result"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Task"
-          }
-        ],
-        "reference": {
-          "reference": "Task/Covid19LabOrderCancellationExample"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          }
-        ],
-        "reference": {
-          "reference": "ValueSet/vs-conditions-comorbidity"
-        },
-        "name": "List of Conditions / Comorbidity",
-        "description": "List of Conditions / Comorbidity"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/cs-source-of-info"
-        },
-        "name": "Source of information - codes",
-        "description": "Source of information - codes"
+        "name": "Covid19 Vaccination",
+        "description": "Covid19 Vaccination"
       },
       {
         "extension": [
@@ -1040,23 +1009,49 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-assessment-vaccination"
+          "reference": "StructureDefinition/covid19-death"
         },
-        "name": "Covid19 Vaccination info included as part of the Assessment",
-        "description": "Covid19 Vaccination info included as part of the Assessment"
+        "name": "Covid19 Death",
+        "description": "Covid19 Death"
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
-          "reference": "ValueSet/vs-covid19-specimen-type"
+          "reference": "StructureDefinition/covid19-conditions-or-comorbidity"
         },
-        "name": "Covid19 Specimen Type",
-        "description": "A list of Covid19 Specimen Type"
+        "name": "Covid19 Conditions or comorbidity",
+        "description": "Covid19 Conditions or comorbidity"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-presenting-symptoms"
+        },
+        "name": "Covid19 Symptom",
+        "description": "Covid19 Symptom"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-medication-request"
+        },
+        "name": "Covid19 Treatment dispensed or prescribed",
+        "description": "Covid19 Treatment dispensed or prescribed"
       },
       {
         "extension": [
@@ -1075,37 +1070,44 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
+            "valueString": "MedicationRequest"
           }
         ],
         "reference": {
-          "reference": "ValueSet/vs-cancellation-reason"
-        },
-        "name": "Cancellation Reasons",
-        "description": "A list of Cancellation Reasons"
+          "reference": "MedicationRequest/Covid19MedicationRequestExample"
+        }
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
+            "valueString": "Specimen"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-lab-order"
-        },
-        "name": "Covid19 Lab Order",
-        "description": "Covid19 Lab Order"
+          "reference": "Specimen/Covid19SpecimenExample"
+        }
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Location"
+            "valueString": "Bundle"
           }
         ],
         "reference": {
-          "reference": "Location/Covid19ServiceRequestLocationExample"
+          "reference": "Bundle/CaresSubmitLabRejectionBundleExample"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/CaresBundleExample"
         }
       },
       {
@@ -1116,23 +1118,21 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-ever-hospitalised"
+          "reference": "StructureDefinition/covid19-date-last-hospitalised"
         },
-        "name": "Covid19 Ever Hospitalized",
-        "description": "Covid19 Ever Hospitalized"
+        "name": "Covid19 Date Last Hospitalised",
+        "description": "Covid19 Date Last Hospitalised"
       },
       {
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
+            "valueString": "Observation"
           }
         ],
         "reference": {
-          "reference": "ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"
-        },
-        "name": "Covid19 Reason for Assessment or Test not performed",
-        "description": "Covid19 Reason for Assessment or Test not performed"
+          "reference": "Observation/Covid19RecoveredOrSymptomsResolvedExample"
+        }
       }
     ],
     "page": {
