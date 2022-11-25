@@ -12,8 +12,8 @@
   <sch:pattern>
     <sch:title>f:Observation</sch:title>
     <sch:rule context="f:Observation">
-      <sch:assert test="count(f:extension[@url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/ever-received-dose-of-vaccine']) &gt;= 1">extension with URL = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/ever-received-dose-of-vaccine': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/ever-received-dose-of-vaccine']) &lt;= 1">extension with URL = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/ever-received-dose-of-vaccine': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/ever-received-dose-of-vaccine']) &gt;= 1">extension with URL = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/ever-received-dose-of-vaccine': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/ever-received-dose-of-vaccine']) &lt;= 1">extension with URL = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/ever-received-dose-of-vaccine': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
