@@ -1,5 +1,5 @@
 Alias: $SCT = http://snomed.info/sct
-Alias: $LNC = https://loinc.org
+Alias: $LNC = http://loinc.org
 Alias: $ICD = http://id.who.int/icd11/mms
 Alias: $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 

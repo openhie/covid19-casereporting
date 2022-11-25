@@ -173,8 +173,8 @@ Description: "Covid19 Lab Order"
 * encounter 1..1 MS  
 * requester MS // Provider name
 * occurrenceDateTime 1..1
-//* code from VSTestTypes ---  Binding relaxed to allow for testing refer to: https://chat.fhir.org/#narrow/stream/179167-hapi/topic/HAPI.20FHIR.20.26.20LOINC
 * code 1..1 MS // Test request Code
+* code from VSTestTypes    //---  Binding relaxed to allow for testing refer to: https://chat.fhir.org/#narrow/stream/179167-hapi/topic/HAPI.20FHIR.20.26.20LOINC
 * locationReference MS //Reference Lab sample send to
 * status MS // Status of Lab Order
 * occurrenceDateTime MS // sample forwarded to reference lab; Yes = if there is a dateTime when sample was sent
