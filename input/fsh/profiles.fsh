@@ -159,7 +159,7 @@ Description: "Covid19 Treatment dispensed or prescribed"
 * medicationCodeableConcept from VSTreatMentDispensedPrescribed 
 * medicationCodeableConcept.text MS // Other (specify) - details
 
-Profile: Covid19LabOrder
+Profile: Covid19LabOrder 
 Parent: ServiceRequest
 Id: covid19-lab-order
 Title: "Covid19 Lab Order"
