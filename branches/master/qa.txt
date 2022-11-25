@@ -1,18 +1,18 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 118, warn = 57, info = 13
+err = 110, warn = 55, info = 10
 IG Publisher Version: 1.2.19
-Generated Wed Nov 23 06:28:37 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
+Generated Fri Nov 25 10:32:56 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
  Build Errors : 27 / 32 / 0
- /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 3 / 2 / 28
+ /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 2 / 2 / 28
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 2
- /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 2 / 0 / 12
- /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample : 1 / 0 / 9
+ /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 10
+ /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info : 2 / 2 / 2
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 1 / 0 / 2
+ /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 0 / 1 / 2
  /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 0 / 1 / 2
@@ -22,12 +22,12 @@ Generated Wed Nov 23 06:28:37 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Observation-Covid19DeathExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19PresentingSymptomsExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19RecoveredOrSymptomsResolvedExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Observation-Covid19TestResultExample : 1 / 0 / 1
- /github/workspace/fsh-generated/resources/Observation-Covid19VaccineDoseEverReceivedExample : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-Covid19TestResultExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-Covid19VaccineDoseEverReceivedExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Organization-Covid19OrganizationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Covid19PatientExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Practitioner-PractitionerExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ServiceRequest-Covid19LabOrderExample : 1 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-Covid19LabOrderExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenLabResultExample : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission-location : 2 / 0 / 1
@@ -66,7 +66,7 @@ Generated Wed Nov 23 06:28:37 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/ValueSet-vs-presentation : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms : 2 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-test-types : 2 / 3 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-test-types : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types : 2 / 3 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no : 2 / 1 / 1
@@ -140,17 +140,11 @@ INFORMATION: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immuniza
 WARNING: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
 WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
-ERROR: Bundle/CaresBundleExample: Bundle.entry[9].resource.ofType(Observation).code.coding[0]: The system URL 'https://loinc.org' wrongly starts with https: not http:
 == fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json ==
 INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[0].resource.ofType(Task).output[0].type.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output' is unknown so the code cannot be validated
-INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[1].resource.ofType(DiagnosticReport).code: None of the codings provided are in the value set 'LOINC Diagnostic Report Codes' (http://hl7.org/fhir/ValueSet/report-codes|4.0.1), and a coding is recommended to come from this value set) (codes = https://loinc.org#94558-4)
-ERROR: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[1].resource.ofType(DiagnosticReport).code.coding[0]: The system URL 'https://loinc.org' wrongly starts with https: not http:
-INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[1].resource.ofType(DiagnosticReport).result[0]: Details for Observation/Covid19TestResultExample matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[3].resource.ofType(Specimen).processing[0].time.ofType(dateTime): This element does not match any known slice defined in the profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen|0.1.0-test
-ERROR: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[4].resource.ofType(Observation).code.coding[0]: The system URL 'https://loinc.org' wrongly starts with https: not http:
 == fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample.json ==
-ERROR: Bundle/CaresSubmitLaborderBundleExample: Bundle.entry[2].resource.ofType(ServiceRequest).code.coding[0]: The system URL 'https://loinc.org' wrongly starts with https: not http:
 == fsh-generated/resources/CodeSystem-cs-source-of-info.json ==
 ERROR: CodeSystem.where(url = 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info'): Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info.json - the canonical URL (http://xxsomewhere.org/fhir/myig/CodeSystem/cs-source-of-info) does not match the URL (http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info)
 INFORMATION: CodeSystem/cs-source-of-info: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
@@ -160,8 +154,6 @@ ERROR: /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info: U
 == fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample.json ==
 == fsh-generated/resources/Condition-Covid19DiagnosisExample.json ==
 == fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.json ==
-INFORMATION: DiagnosticReport/Covid19LabResultsDiagnosticReportExample: DiagnosticReport.code: None of the codings provided are in the value set 'LOINC Diagnostic Report Codes' (http://hl7.org/fhir/ValueSet/report-codes|4.0.1), and a coding is recommended to come from this value set) (codes = https://loinc.org#94558-4)
-ERROR: DiagnosticReport/Covid19LabResultsDiagnosticReportExample: DiagnosticReport.code.coding[0]: The system URL 'https://loinc.org' wrongly starts with https: not http:
 == fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json ==
 == fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json ==
 WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
@@ -176,14 +168,11 @@ INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.co
 == fsh-generated/resources/Observation-Covid19PresentingSymptomsExample.json ==
 == fsh-generated/resources/Observation-Covid19RecoveredOrSymptomsResolvedExample.json ==
 == fsh-generated/resources/Observation-Covid19TestResultExample.json ==
-ERROR: Observation/Covid19TestResultExample: Observation.code.coding[0]: The system URL 'https://loinc.org' wrongly starts with https: not http:
 == fsh-generated/resources/Observation-Covid19VaccineDoseEverReceivedExample.json ==
-ERROR: Observation/Covid19VaccineDoseEverReceivedExample: Observation.code.coding[0]: The system URL 'https://loinc.org' wrongly starts with https: not http:
 == fsh-generated/resources/Organization-Covid19OrganizationExample.json ==
 == fsh-generated/resources/Patient-Covid19PatientExample.json ==
 == fsh-generated/resources/Practitioner-PractitionerExample.json ==
 == fsh-generated/resources/ServiceRequest-Covid19LabOrderExample.json ==
-ERROR: ServiceRequest/Covid19LabOrderExample: ServiceRequest.code.coding[0]: The system URL 'https://loinc.org' wrongly starts with https: not http:
 == fsh-generated/resources/Specimen-Covid19SpecimenExample.json ==
 == fsh-generated/resources/Specimen-Covid19SpecimenLabResultExample.json ==
 INFORMATION: Specimen/Covid19SpecimenLabResultExample: Specimen.processing[0].time.ofType(dateTime): This element does not match any known slice defined in the profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen|0.1.0-test
@@ -308,9 +297,7 @@ WARNING: ValueSet/vs-symptoms: ValueSet: The ShareableValueSet profile says that
 ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms: URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-symptoms vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-symptoms
 == fsh-generated/resources/ValueSet-vs-test-types.json ==
 ERROR: ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-test-types.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-test-types) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types)
-WARNING: ValueSet/vs-test-types: ValueSet.compose[0].include[0]: Unknown System 'https://loinc.org' specified, so Concepts and Filters can't be checked (Details: Code System URI 'https://loinc.org' is unknown so the code cannot be validated)
 WARNING: ValueSet/vs-test-types: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
-WARNING: ValueSet.where(id = 'vs-test-types'): Error from server: Unable to provide support for code system https://loinc.org
 ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-test-types: URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-test-types vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types
 == fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json ==
 ERROR: ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-treatment-dispensed-prescribed) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed)
