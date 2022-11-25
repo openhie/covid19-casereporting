@@ -12,8 +12,8 @@
   <sch:pattern>
     <sch:title>f:Condition</sch:title>
     <sch:rule context="f:Condition">
-      <sch:assert test="count(f:extension[@url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present']) &gt;= 1">extension with URL = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present']) &lt;= 1">extension with URL = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities-present']) &gt;= 1">extension with URL = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities-present': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities-present']) &lt;= 1">extension with URL = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities-present': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
