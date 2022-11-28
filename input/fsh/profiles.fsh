@@ -134,9 +134,9 @@ Id: covid19-diagnosis
 Title: "Covid19 Diagnosis"
 Description: "Covid19 Diagnosis"
 * recordedDate MS // Date of Diagnosis
-* verificationStatus 1..1 MS
-* verificationStatus from VSCovidDiagnosis (required) //Covid Diagnosis
-* clinicalStatus from VSPatientOutcome (required)
+* verificationStatus MS //1..1 MS
+//* verificationStatus from VSCovidDiagnosis //Covid Diagnosis
+* clinicalStatus from VSPatientOutcome
 * clinicalStatus 1..1 MS // Patient Outcome
 * abatementDateTime 0..1 MS //Date recovered or date symptoms resolved / Date Died
 * note MS  // Long covid description and/or Additional notes

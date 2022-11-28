@@ -51,13 +51,13 @@ Description:  "Yes No Unknown"
 * $SCT#373067005 "No"
 * $SCT#261665006 "Unknown"
 
-ValueSet: VSCovidDiagnosis
+/*ValueSet: VSCovidDiagnosis
 Id: vs-covid-diagnosis
 Title: "COVID Diagnosis list"
 Description: "COVID Diagnosis list"
 * $SCT#410605003 "Confirmed"
 * $SCT#2931005 "Probable"
-* $SCT#415684004 "Suspect"
+* $SCT#415684004 "Suspect"*/
 
 ValueSet: VSConditionsComorbidity
 Id: vs-conditions-comorbidity
