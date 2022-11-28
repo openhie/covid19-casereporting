@@ -11,7 +11,7 @@
   "title": "COVID19 Case Reporting",
   "status": "draft",
   "experimental": false,
-  "date": "2022-11-28T09:07:59+00:00",
+  "date": "2022-11-28T09:59:43+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -770,19 +770,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/ever-received-dose-of-vaccine"
-        },
-        "name": "Covid19 Vaccine Dose Received Extension",
-        "description": "Covid19 Vaccine Dose Extension"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ServiceRequest"
           }
         ],
@@ -816,7 +803,7 @@
           "reference": "Condition/Covid19ConditionsOrComorbidityExample"
         },
         "name": "Example Condition - Covid19ConditionsOrComorbidityExample",
-        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidity"
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities"
       },
       {
         "extension": [
@@ -830,6 +817,19 @@
         },
         "name": "Example Condition - Covid19DiagnosisExample",
         "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-conditions-or-comorbidities"
+        },
+        "name": "Covid19 Conditions or comorbidity",
+        "description": "Covid19 Conditions or comorbidity"
       },
       {
         "extension": [
@@ -948,19 +948,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/next-visit"
-        },
-        "name": "Covid19 date of next vaccination",
-        "description": "Covid19 date of next vaccination"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ValueSet"
           }
         ],
@@ -1056,19 +1043,6 @@
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/covid19-conditions-or-comorbidity"
-        },
-        "name": "Covid19 Conditions or comorbidity",
-        "description": "Covid19 Conditions or comorbidity"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
           "reference": "StructureDefinition/covid19-presenting-symptoms"
         },
         "name": "Covid19 Symptom",
@@ -1136,6 +1110,19 @@
         "reference": {
           "reference": "Bundle/CaresSubmitLabRejectionBundleExample"
         }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-next-vaccination"
+        },
+        "name": "Covid19 date of next vaccination",
+        "description": "Covid19 date of next vaccination"
       },
       {
         "extension": [

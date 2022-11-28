@@ -12,7 +12,7 @@
   <title value="COVID19 Case Reporting"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-11-28T09:07:59+00:00"/>
+  <date value="2022-11-28T09:59:43+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -541,16 +541,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/ever-received-dose-of-vaccine"/>
-      </reference>
-      <name value="Covid19 Vaccine Dose Received Extension"/>
-      <description value="Covid19 Vaccine Dose Extension"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ServiceRequest"/>
       </extension>
       <reference>
@@ -577,7 +567,7 @@
         <reference value="Condition/Covid19ConditionsOrComorbidityExample"/>
       </reference>
       <name value="Example Condition - Covid19ConditionsOrComorbidityExample"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidity"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -588,6 +578,16 @@
       </reference>
       <name value="Example Condition - Covid19DiagnosisExample"/>
       <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-conditions-or-comorbidities"/>
+      </reference>
+      <name value="Covid19 Conditions or comorbidity"/>
+      <description value="Covid19 Conditions or comorbidity"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -677,16 +677,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/next-visit"/>
-      </reference>
-      <name value="Covid19 date of next vaccination"/>
-      <description value="Covid19 date of next vaccination"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -760,16 +750,6 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/covid19-conditions-or-comorbidity"/>
-      </reference>
-      <name value="Covid19 Conditions or comorbidity"/>
-      <description value="Covid19 Conditions or comorbidity"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/covid19-presenting-symptoms"/>
       </reference>
       <name value="Covid19 Symptom"/>
@@ -822,6 +802,16 @@
       <reference>
         <reference value="Bundle/CaresSubmitLabRejectionBundleExample"/>
       </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-next-vaccination"/>
+      </reference>
+      <name value="Covid19 date of next vaccination"/>
+      <description value="Covid19 date of next vaccination"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
