@@ -46,8 +46,6 @@ Description: "Covid19 Patient example"
 * contact[0].name.family = "John"
 * contact[0].telecom.system = #phone
 * contact[0].telecom.value = "+27825556667"
-* maritalStatus.coding.code = #D
-* maritalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
 
 Instance: Covid19AssessmentEncounterExample
 InstanceOf: Covid19AssessmentEncounter    
@@ -72,9 +70,8 @@ InstanceOf: Covid19VaccineDoseEverReceived
 Usage: #example
 Title: "Covid19 Vaccine Dose Received example"
 Description: "Covid19 Vaccine Dose Received example"
-* extension[vaccineDoseEverReceived].valueCodeableConcept = $SCT#373066001
 * status = #final
-* code = $LNC#94558-4 
+* code = $SCT#373066001
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
 
