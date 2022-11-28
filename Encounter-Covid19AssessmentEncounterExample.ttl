@@ -11,9 +11,9 @@
   fhir:Resource.id [ fhir:value "Covid19AssessmentEncounterExample"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-encounter";
+       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter";
        fhir:index 0;
-       fhir:link <https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-encounter>
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter>
      ]
   ];
   fhir:DomainResource.text [
@@ -22,7 +22,7 @@
   ];
   fhir:DomainResource.extension [
      fhir:index 0;
-     fhir:Extension.url [ fhir:value "https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-ever-hospitalised" ];
+     fhir:Extension.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised" ];
      fhir:Extension.valueCodeableConcept [
        fhir:CodeableConcept.coding [
          fhir:index 0;
@@ -34,11 +34,11 @@
      ]
   ], [
      fhir:index 1;
-     fhir:Extension.url [ fhir:value "https://openhie.github.io/cares-covid-ig/StructureDefinition/next-visit" ];
+     fhir:Extension.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit" ];
      fhir:Extension.valueDateTime [ fhir:value "2022-07-28"^^xsd:date ]
   ], [
      fhir:index 2;
-     fhir:Extension.url [ fhir:value "https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-date-last-hospitalised" ];
+     fhir:Extension.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised" ];
      fhir:Extension.valueDateTime [ fhir:value "2022-07-28"^^xsd:date ]
   ];
   fhir:Encounter.status [ fhir:value "finished"];
