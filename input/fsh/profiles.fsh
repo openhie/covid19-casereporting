@@ -135,8 +135,8 @@ Title: "Covid19 Diagnosis"
 Description: "Covid19 Diagnosis"
 * recordedDate MS // Date of Diagnosis
 * verificationStatus 1..1 MS
-* verificationStatus from VSCovidDiagnosis //Covid Diagnosis
-* clinicalStatus from VSPatientOutcome
+* verificationStatus from VSCovidDiagnosis (required) //Covid Diagnosis
+* clinicalStatus from VSPatientOutcome (required)
 * clinicalStatus 1..1 MS // Patient Outcome
 * abatementDateTime 0..1 MS //Date recovered or date symptoms resolved / Date Died
 * note MS  // Long covid description and/or Additional notes
@@ -167,7 +167,7 @@ Description: "Covid19 Lab Order"
 * requester MS // Provider name
 * occurrenceDateTime 1..1
 * code 1..1 MS // Test request Code
-* code from VSTestTypes (required)  
+* code from VSTestTypes
 * locationReference MS //Reference Lab sample send to
 * status MS // Status of Lab Order
 * occurrenceDateTime MS // sample forwarded to reference lab; Yes = if there is a dateTime when sample was sent
