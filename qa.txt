@@ -1,17 +1,17 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 13, warn = 55, info = 10
+err = 12, warn = 56, info = 10
 IG Publisher Version: 1.2.19
-Generated Mon Nov 28 13:42:26 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
+Generated Mon Nov 28 14:52:23 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
  Build Errors : 6 / 32 / 0
- /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 2 / 2 / 28
+ /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 2 / 3 / 28
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 10
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info : 0 / 2 / 2
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 0 / 1 / 2
@@ -36,7 +36,7 @@ Generated Mon Nov 28 13:42:26 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-death : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis : 4 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order : 0 / 0 / 1
@@ -57,7 +57,6 @@ Generated Mon Nov 28 13:42:26 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-covid-diagnosis : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result : 0 / 1 / 1
@@ -113,7 +112,8 @@ WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in 
 == fsh-generated/resources/Bundle-CaresBundleExample.json ==
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#428792000)
 ERROR: Bundle/CaresBundleExample: Bundle.entry[4].resource.ofType(Condition).clinicalStatus: None of the codings provided are in the value set 'Condition Clinical Status Codes' (http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1), and a coding from this value set is required) (codes = http://snomed.info/sct#370996005)
-ERROR: Bundle/CaresBundleExample: Bundle.entry[4].resource.ofType(Condition).verificationStatus: None of the codings provided are in the value set 'ConditionVerificationStatus' (http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1), and a coding from this value set is required) (codes = http://snomed.info/sct#410605003)
+ERROR: Bundle/CaresBundleExample: Bundle.entry[4].resource.ofType(Condition).verificationStatus: None of the codings provided are in the value set 'ConditionVerificationStatus' (http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1), and a coding from this value set is required) (codes = null#confirmed)
+WARNING: Bundle/CaresBundleExample: Bundle.entry[4].resource.ofType(Condition).verificationStatus.coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
 WARNING: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
@@ -129,6 +129,8 @@ WARNING: CodeSystem/cs-source-of-info: CodeSystem: The ShareableCodeSystem profi
 WARNING: CodeSystem/cs-source-of-info: CodeSystem: The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile
 == fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample.json ==
 == fsh-generated/resources/Condition-Covid19DiagnosisExample.json ==
+ERROR: Condition/Covid19DiagnosisExample: Condition.verificationStatus: None of the codings provided are in the value set 'ConditionVerificationStatus' (http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1), and a coding from this value set is required) (codes = null#confirmed)
+WARNING: Condition/Covid19DiagnosisExample: Condition.verificationStatus.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.json ==
 == fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json ==
 == fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json ==
@@ -160,9 +162,7 @@ INFORMATION: Specimen/Covid19SpecimenLabResultExample: Specimen.processing[0].ti
 == fsh-generated/resources/StructureDefinition-covid19-death.json ==
 == fsh-generated/resources/StructureDefinition-covid19-diagnosis.json ==
 ERROR: Covid19 Diagnosis.Condition.clinicalStatus: Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome is not a subset of binding http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1
-ERROR: Covid19 Diagnosis.Condition.verificationStatus: Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis is not a subset of binding http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1
 ERROR: StructureDefinition/covid19-diagnosis: StructureDefinition: Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome is not a subset of binding http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1
-ERROR: StructureDefinition/covid19-diagnosis: StructureDefinition: Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis is not a subset of binding http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1
 == fsh-generated/resources/StructureDefinition-covid19-encounter.json ==
 == fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised.json ==
 == fsh-generated/resources/StructureDefinition-covid19-lab-order.json ==
@@ -188,8 +188,6 @@ WARNING: ValueSet/vs-AdmissionTypes: ValueSet: The ShareableValueSet profile say
 WARNING: ValueSet/vs-cancellation-reason: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-conditions-comorbidity.json ==
 WARNING: ValueSet/vs-conditions-comorbidity: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
-== fsh-generated/resources/ValueSet-vs-covid-diagnosis.json ==
-WARNING: ValueSet/vs-covid-diagnosis: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.json ==
 WARNING: ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-covid19-specimen-type.json ==
