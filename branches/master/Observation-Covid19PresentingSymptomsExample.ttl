@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Observation/Covid19PresentingSymptomsExample> a fhir:Observation;
+<http://openhie.org/fhir/covid19-casereporting/Observation/Covid19PresentingSymptomsExample> a fhir:Observation;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Covid19PresentingSymptomsExample"];
   fhir:Resource.meta [
@@ -30,18 +30,18 @@
      ]
   ];
   fhir:Observation.subject [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample>;
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
   ];
   fhir:Observation.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample>;
      fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
   ];
   fhir:Observation.effectiveDateTime [ fhir:value "2022-07-28"^^xsd:date];
   fhir:Observation.note [
      fhir:index 0;
      fhir:Annotation.authorReference [
-       fhir:link <http://xxsomewhere.org/fhir/myig/Organization/Covid19OrganizationExample>;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
        fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
      ];
      fhir:Annotation.time [ fhir:value "2015-02-07T13:28:17-05:00"^^xsd:dateTime ];
@@ -50,7 +50,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Observation/Covid19PresentingSymptomsExample.ttl> a owl:Ontology;
+<http://openhie.org/fhir/covid19-casereporting/Observation/Covid19PresentingSymptomsExample.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

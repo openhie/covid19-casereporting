@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Specimen/Covid19SpecimenLabResultExample> a fhir:Specimen;
+<http://openhie.org/fhir/covid19-casereporting/Specimen/Covid19SpecimenLabResultExample> a fhir:Specimen;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Covid19SpecimenLabResultExample"];
   fhir:Resource.meta [
@@ -34,7 +34,7 @@
      ]
   ];
   fhir:Specimen.subject [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample>;
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
   ];
   fhir:Specimen.receivedTime [ fhir:value "2022-07-28T13:28:17-05:00"^^xsd:dateTime];
@@ -48,7 +48,7 @@
   fhir:Specimen.note [
      fhir:index 0;
      fhir:Annotation.authorReference [
-       fhir:link <http://xxsomewhere.org/fhir/myig/Organization/Covid19OrganizationExample>;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
        fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
      ];
      fhir:Annotation.time [ fhir:value "2015-02-07T13:28:17-05:00"^^xsd:dateTime ];
@@ -57,7 +57,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Specimen/Covid19SpecimenLabResultExample.ttl> a owl:Ontology;
+<http://openhie.org/fhir/covid19-casereporting/Specimen/Covid19SpecimenLabResultExample.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

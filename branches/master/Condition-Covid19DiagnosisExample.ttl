@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Condition/Covid19DiagnosisExample> a fhir:Condition;
+<http://openhie.org/fhir/covid19-casereporting/Condition/Covid19DiagnosisExample> a fhir:Condition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Covid19DiagnosisExample"];
   fhir:Resource.meta [
@@ -37,11 +37,11 @@
      ]
   ];
   fhir:Condition.subject [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample>;
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
   ];
   fhir:Condition.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample>;
      fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
   ];
   fhir:Condition.onsetDateTime [ fhir:value "2022-07-28"^^xsd:date];
@@ -61,7 +61,7 @@
   fhir:Condition.note [
      fhir:index 0;
      fhir:Annotation.authorReference [
-       fhir:link <http://xxsomewhere.org/fhir/myig/Organization/Covid19OrganizationExample>;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
        fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
      ];
      fhir:Annotation.time [ fhir:value "2015-02-07T13:28:17-05:00"^^xsd:dateTime ];
@@ -70,7 +70,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Condition/Covid19DiagnosisExample.ttl> a owl:Ontology;
+<http://openhie.org/fhir/covid19-casereporting/Condition/Covid19DiagnosisExample.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

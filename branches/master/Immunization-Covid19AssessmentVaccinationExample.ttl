@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Immunization/Covid19AssessmentVaccinationExample> a fhir:Immunization;
+<http://openhie.org/fhir/covid19-casereporting/Immunization/Covid19AssessmentVaccinationExample> a fhir:Immunization;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Covid19AssessmentVaccinationExample"];
   fhir:Resource.meta [
@@ -28,11 +28,11 @@
      ]
   ];
   fhir:Immunization.patient [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample>;
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
   ];
   fhir:Immunization.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample>;
      fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
   ];
   fhir:Immunization.occurrenceDateTime [ fhir:value "2022-07-28"^^xsd:date];
@@ -51,7 +51,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Immunization/Covid19AssessmentVaccinationExample.ttl> a owl:Ontology;
+<http://openhie.org/fhir/covid19-casereporting/Immunization/Covid19AssessmentVaccinationExample.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

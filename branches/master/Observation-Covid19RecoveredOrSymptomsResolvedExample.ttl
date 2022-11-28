@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Observation/Covid19RecoveredOrSymptomsResolvedExample> a fhir:Observation;
+<http://openhie.org/fhir/covid19-casereporting/Observation/Covid19RecoveredOrSymptomsResolvedExample> a fhir:Observation;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Covid19RecoveredOrSymptomsResolvedExample"];
   fhir:Resource.meta [
@@ -30,18 +30,18 @@
      ]
   ];
   fhir:Observation.subject [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample>;
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
   ];
   fhir:Observation.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample>;
      fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
   ];
   fhir:Observation.effectiveDateTime [ fhir:value "2022-11-09"^^xsd:date] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Observation/Covid19RecoveredOrSymptomsResolvedExample.ttl> a owl:Ontology;
+<http://openhie.org/fhir/covid19-casereporting/Observation/Covid19RecoveredOrSymptomsResolvedExample.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
