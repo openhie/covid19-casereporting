@@ -111,7 +111,7 @@ Description: "Covid19 Diagnosis Example"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * clinicalStatus = $SCT#370996005 
-* verificationStatus = $SCT#410605003
+* verificationStatus = #confirmed
 * evidence.code = $SCT#84387000
 * onsetDateTime = "2022-07-28"
 * note.authorReference = Reference(Covid19OrganizationExample)
