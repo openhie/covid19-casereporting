@@ -96,27 +96,20 @@ Description: "Covid19 Conditions or Comorbidities Present"
 
 Profile: Covid19ConditionsOrComorbidity
 Parent: Condition
-Id: covid19-conditions-or-comorbidity
+Id: covid19-conditions-or-comorbidities
 Title: "Covid19 Conditions or comorbidity"
 Description: "Covid19 Conditions or comorbidity"
 * code MS
 * code from VSConditionsComorbidity  // 
-* note MS  //OtherConditions   #TODO: Conditional rule: mandatory if code = #Other
+* note MS  //OtherConditions   
 * extension contains ExtCovid19ConditionsOrComorbiditiesPresent named extCovid19ConditionsOrComorbiditiesPresent 1..1 MS 
-
-Extension: ExtVaccineDoseReceived
-Id: ever-received-dose-of-vaccine
-Title: "Covid19 Vaccine Dose Received Extension"
-Description: "Covid19 Vaccine Dose Extension"
-* value[x] only CodeableConcept
-* valueCodeableConcept from VSYesNoUnknown
 
 Profile: Covid19VaccineDoseEverReceived
 Parent: Observation
 Id: covid19-vaccine-dose-ever-received
 Title: "Covid19 Vaccine Dose Received"
 Description: "Covid19 Vaccine Dose Received"
-* extension contains ExtVaccineDoseReceived named vaccineDoseEverReceived 1..1 MS  //ever-received-dose-of-vaccine
+* code from VSYesNoUnknown
 
 Profile: Covid19AssessmentVaccination
 Parent: Immunization
@@ -174,7 +167,7 @@ Description: "Covid19 Lab Order"
 * requester MS // Provider name
 * occurrenceDateTime 1..1
 * code 1..1 MS // Test request Code
-* code from VSTestTypes (required)   //---  Binding relaxed to allow for testing refer to: https://chat.fhir.org/#narrow/stream/179167-hapi/topic/HAPI.20FHIR.20.26.20LOINC
+* code from VSTestTypes (required)  
 * locationReference MS //Reference Lab sample send to
 * status MS // Status of Lab Order
 * occurrenceDateTime MS // sample forwarded to reference lab; Yes = if there is a dateTime when sample was sent
@@ -226,7 +219,7 @@ Description: "Covid19 Vaccination"
 * reportOrigin.text MS // Other Source of info details
 
 Extension: ExtNextVisit
-Id: next-visit
+Id: covid19-next-vaccination
 Title: "Covid19 date of next vaccination"
 Description: "Covid19 date of next vaccination"
 * value[x] only dateTime  //// date of next vaccination
