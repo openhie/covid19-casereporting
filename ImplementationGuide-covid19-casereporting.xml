@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="xxexample.fhir.uv.myig"/>
+  <id value="covid19-casereporting"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Covid19CaseReporting</h2><p>The official URL for this implementation guide is: </p><pre>http://xxsomewhere.org/fhir/myig/ImplementationGuide/xxexample.fhir.uv.myig</pre><div><p>Covid 19 Case Reporting and Lab Management</p>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Covid19CaseReporting</h2><p>The official URL for this implementation guide is: </p><pre>http://openhie.org/fhir/covid19-casereporting/ImplementationGuide/covid19-casereporting</pre><div><p>COVID19 Case Reporting</p>
 </div></div>
   </text>
-  <url value="http://xxsomewhere.org/fhir/myig/ImplementationGuide/xxexample.fhir.uv.myig"/>
+  <url value="http://openhie.org/fhir/covid19-casereporting/ImplementationGuide/covid19-casereporting"/>
   <version value="0.1.0-test"/>
   <name value="Covid19CaseReporting"/>
-  <title value="Covid 19 Case Reporting and Lab Management"/>
+  <title value="COVID19 Case Reporting"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-11-28T06:50:59+00:00"/>
+  <date value="2022-11-28T08:05:02+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -20,7 +20,7 @@
       <value value="http://xxhl7.org/Special/committees/[something]"/>
     </telecom>
   </contact>
-  <description value="Covid 19 Case Reporting and Lab Management"/>
+  <description value="COVID19 Case Reporting"/>
   <jurisdiction>
     <coding>
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
@@ -132,7 +132,7 @@
         <valueString value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="http://xxsomewhere.org/fhir/myig/history.html"/>
+        <valueString value="http://openhie.org/fhir/covid19-casereporting/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -260,6 +260,8 @@
       <reference>
         <reference value="Immunization/Covid19AssessmentVaccinationExample"/>
       </reference>
+      <name value="Example Immunization - Covid19AssessmentVaccinationExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -326,6 +328,8 @@
       <reference>
         <reference value="Location/Covid19ServiceRequestLocationExample"/>
       </reference>
+      <name value="Example Location - Covid19ServiceRequestLocationExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -334,6 +338,8 @@
       <reference>
         <reference value="Organization/Covid19OrganizationExample"/>
       </reference>
+      <name value="Example Organization - Covid19OrganizationExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -342,6 +348,8 @@
       <reference>
         <reference value="Bundle/CaresSubmitLaborderBundleExample"/>
       </reference>
+      <name value="Example Bundle - CaresSubmitLaborderBundleExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -388,6 +396,8 @@
       <reference>
         <reference value="Encounter/Covid19AssessmentEncounterExample"/>
       </reference>
+      <name value="Example Encounter - Covid19AssessmentEncounterExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -406,6 +416,8 @@
       <reference>
         <reference value="Observation/Covid19TestResultExample"/>
       </reference>
+      <name value="Example Observation - Covid19TestResultExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -414,6 +426,8 @@
       <reference>
         <reference value="Observation/Covid19VaccineDoseEverReceivedExample"/>
       </reference>
+      <name value="Example Observation - Covid19VaccineDoseEverReceivedExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -462,6 +476,8 @@
       <reference>
         <reference value="Patient/Covid19PatientExample"/>
       </reference>
+      <name value="Example Patient - Covid19PatientExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -480,6 +496,8 @@
       <reference>
         <reference value="Observation/Covid19DeathExample"/>
       </reference>
+      <name value="Example Observation - Covid19DeathExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -488,6 +506,8 @@
       <reference>
         <reference value="Location/Covid19AdmissionLocationExample"/>
       </reference>
+      <name value="Example Location - Covid19AdmissionLocationExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -506,6 +526,8 @@
       <reference>
         <reference value="Observation/Covid19PresentingSymptomsExample"/>
       </reference>
+      <name value="Example Observation - Covid19PresentingSymptomsExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -534,6 +556,8 @@
       <reference>
         <reference value="ServiceRequest/Covid19LabOrderExample"/>
       </reference>
+      <name value="Example ServiceRequest - Covid19LabOrderExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -542,6 +566,8 @@
       <reference>
         <reference value="Specimen/Covid19SpecimenLabResultExample"/>
       </reference>
+      <name value="Example Specimen - Covid19SpecimenLabResultExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -550,6 +576,8 @@
       <reference>
         <reference value="Condition/Covid19ConditionsOrComorbidityExample"/>
       </reference>
+      <name value="Example Condition - Covid19ConditionsOrComorbidityExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidity"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -558,6 +586,8 @@
       <reference>
         <reference value="Condition/Covid19DiagnosisExample"/>
       </reference>
+      <name value="Example Condition - Covid19DiagnosisExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -576,6 +606,8 @@
       <reference>
         <reference value="Immunization/Covid19VaccinationExample"/>
       </reference>
+      <name value="Example Immunization - Covid19VaccinationExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -670,6 +702,8 @@
       <reference>
         <reference value="Bundle/CaresSubmitLabResultBundleExample"/>
       </reference>
+      <name value="Example Bundle - CaresSubmitLabResultBundleExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -768,6 +802,8 @@
       <reference>
         <reference value="MedicationRequest/Covid19MedicationRequestExample"/>
       </reference>
+      <name value="Example MedicationRequest - Covid19MedicationRequestExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -776,6 +812,8 @@
       <reference>
         <reference value="Specimen/Covid19SpecimenExample"/>
       </reference>
+      <name value="Example Specimen - Covid19SpecimenExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -792,6 +830,8 @@
       <reference>
         <reference value="Bundle/CaresBundleExample"/>
       </reference>
+      <name value="Example Bundle - CaresBundleExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -810,6 +850,8 @@
       <reference>
         <reference value="Observation/Covid19RecoveredOrSymptomsResolvedExample"/>
       </reference>
+      <name value="Example Observation - Covid19RecoveredOrSymptomsResolvedExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -823,7 +865,7 @@
           <valueUrl value="index.html"/>
         </extension>
         <nameUrl value="index.html"/>
-        <title value="Covid 19 Case Reporting and Lab Management"/>
+        <title value="COVID19 Case Reporting"/>
         <generation value="html"/>
       </page>
       <page>

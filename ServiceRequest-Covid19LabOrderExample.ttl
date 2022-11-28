@@ -7,7 +7,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/ServiceRequest/Covid19LabOrderExample> a fhir:ServiceRequest;
+<http://openhie.org/fhir/covid19-casereporting/ServiceRequest/Covid19LabOrderExample> a fhir:ServiceRequest;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Covid19LabOrderExample"];
   fhir:Resource.meta [
@@ -38,21 +38,21 @@
      ]
   ];
   fhir:ServiceRequest.subject [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample>;
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
   ];
   fhir:ServiceRequest.encounter [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Encounter/Covid19AssessmentEncounterExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample>;
      fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
   ];
   fhir:ServiceRequest.occurrenceDateTime [ fhir:value "2012-01-05"^^xsd:date];
   fhir:ServiceRequest.requester [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Practitioner/PractitionerExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Practitioner/PractitionerExample>;
      fhir:Reference.reference [ fhir:value "Practitioner/PractitionerExample" ]
   ];
   fhir:ServiceRequest.locationReference [
      fhir:index 0;
-     fhir:link <http://xxsomewhere.org/fhir/myig/Location/Covid19ServiceRequestLocationExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Location/Covid19ServiceRequestLocationExample>;
      fhir:Reference.reference [ fhir:value "Location/Covid19ServiceRequestLocationExample" ]
   ];
   fhir:ServiceRequest.reasonCode [
@@ -66,13 +66,13 @@
   ];
   fhir:ServiceRequest.specimen [
      fhir:index 0;
-     fhir:link <http://xxsomewhere.org/fhir/myig/Specimen/Covid19SpecimenExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Specimen/Covid19SpecimenExample>;
      fhir:Reference.reference [ fhir:value "Specimen/Covid19SpecimenExample" ]
   ];
   fhir:ServiceRequest.note [
      fhir:index 0;
      fhir:Annotation.authorReference [
-       fhir:link <http://xxsomewhere.org/fhir/myig/Organization/Covid19OrganizationExample>;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
        fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
      ];
      fhir:Annotation.time [ fhir:value "2015-02-07T13:28:17-05:00"^^xsd:dateTime ];
@@ -81,7 +81,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/ServiceRequest/Covid19LabOrderExample.ttl> a owl:Ontology;
+<http://openhie.org/fhir/covid19-casereporting/ServiceRequest/Covid19LabOrderExample.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample> a fhir:Patient;
+<http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> a fhir:Patient;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Covid19PatientExample"];
   fhir:Resource.meta [
@@ -86,13 +86,13 @@
      ]
   ];
   fhir:Patient.managingOrganization [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Organization/Covid19OrganizationExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
      fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample.ttl> a owl:Ontology;
+<http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

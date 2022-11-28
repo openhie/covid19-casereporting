@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Bundle/CaresSubmitLabRejectionBundleExample> a fhir:Bundle;
+<http://openhie.org/fhir/covid19-casereporting/Bundle/CaresSubmitLabRejectionBundleExample> a fhir:Bundle;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "CaresSubmitLabRejectionBundleExample"];
   fhir:Bundle.type [ fhir:value "transaction"];
@@ -33,7 +33,7 @@
   ];
   fhir:Task.basedOn [
      fhir:index 0;
-     fhir:link <http://xxsomewhere.org/fhir/myig/ServiceRequest/Covid19LabOrderExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/ServiceRequest/Covid19LabOrderExample>;
      fhir:Reference.reference [ fhir:value "ServiceRequest/Covid19LabOrderExample" ]
   ];
   fhir:Task.status [ fhir:value "cancelled"];
@@ -51,17 +51,17 @@
   ];
   fhir:Task.lastModified [ fhir:value "2015-02-07"^^xsd:date];
   fhir:Task.requester [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Organization/Covid19OrganizationExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
      fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
   ];
   fhir:Task.owner [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Organization/Covid19OrganizationExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
      fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/Bundle/CaresSubmitLabRejectionBundleExample.ttl> a owl:Ontology;
+<http://openhie.org/fhir/covid19-casereporting/Bundle/CaresSubmitLabRejectionBundleExample.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

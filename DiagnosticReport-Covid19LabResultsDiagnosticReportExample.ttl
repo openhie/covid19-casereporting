@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/DiagnosticReport/Covid19LabResultsDiagnosticReportExample> a fhir:DiagnosticReport;
+<http://openhie.org/fhir/covid19-casereporting/DiagnosticReport/Covid19LabResultsDiagnosticReportExample> a fhir:DiagnosticReport;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Covid19LabResultsDiagnosticReportExample"];
   fhir:DomainResource.text [
@@ -15,7 +15,7 @@
   ];
   fhir:DiagnosticReport.basedOn [
      fhir:index 0;
-     fhir:link <http://xxsomewhere.org/fhir/myig/ServiceRequest/Covid19LabOrderExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/ServiceRequest/Covid19LabOrderExample>;
      fhir:Reference.reference [ fhir:value "ServiceRequest/Covid19LabOrderExample" ]
   ];
   fhir:DiagnosticReport.status [ fhir:value "final"];
@@ -28,24 +28,24 @@
      ]
   ];
   fhir:DiagnosticReport.subject [
-     fhir:link <http://xxsomewhere.org/fhir/myig/Patient/Covid19PatientExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample>;
      fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
   ];
   fhir:DiagnosticReport.performer [
      fhir:index 0;
-     fhir:link <http://xxsomewhere.org/fhir/myig/Practitioner/PractitionerExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Practitioner/PractitionerExample>;
      fhir:Reference.reference [ fhir:value "Practitioner/PractitionerExample" ]
   ];
   fhir:DiagnosticReport.result [
      fhir:index 0;
-     fhir:link <http://xxsomewhere.org/fhir/myig/Observation/Covid19TestResultExample>;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Observation/Covid19TestResultExample>;
      fhir:Reference.reference [ fhir:value "Observation/Covid19TestResultExample" ]
   ];
   fhir:DiagnosticReport.conclusion [ fhir:value "Some textual conclusion"] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://xxsomewhere.org/fhir/myig/DiagnosticReport/Covid19LabResultsDiagnosticReportExample.ttl> a owl:Ontology;
+<http://openhie.org/fhir/covid19-casereporting/DiagnosticReport/Covid19LabResultsDiagnosticReportExample.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
