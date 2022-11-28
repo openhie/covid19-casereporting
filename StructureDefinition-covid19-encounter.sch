@@ -12,7 +12,7 @@
   <sch:pattern>
     <sch:title>f:Encounter</sch:title>
     <sch:rule context="f:Encounter">
-      <sch:assert test="count(f:extension[@url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit']) &lt;= 1">extension with URL = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination']) &lt;= 1">extension with URL = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised']) &gt;= 1">extension with URL = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised']) &lt;= 1">extension with URL = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised']) &lt;= 1">extension with URL = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised': maximum cardinality of 'extension' is 1</sch:assert>
