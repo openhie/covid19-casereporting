@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = errors = 114, warn = 55, info = 14, 0 -->
+<!-- broken links = errors = 110, warn = 55, info = 10, 0 -->
 <head>
   <title>Covid19CaseReporting : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Covid19CaseReporting</h1>
- <p>Generated Fri Nov 25 14:17:57 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://xxsomewhere.org/fhir/myig">http://xxsomewhere.org/fhir/myig</a> (<a href="http://xxsomewhere.org/fhir/myig/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Mon Nov 28 06:52:07 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://xxsomewhere.org/fhir/myig">http://xxsomewhere.org/fhir/myig</a> (<a href="http://xxsomewhere.org/fhir/myig/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.2.19</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = openhie.fhir.covid, Canonical = http://xxsomewhere.org/fhir/myig</td></tr>
@@ -57,7 +57,7 @@
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://xxsomewhere.org/fhir/myig (Problem #1 with package-list.json at http://xxsomewhere.org/fhir/myig: xxsomewhere.org)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 114, warn = 55, info = 14, broken links = 0</td></tr>
+ <tr><td>Summary:</td><td> errors = 110, warn = 55, info = 10, broken links = 0</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -67,16 +67,16 @@
      <td><a href="#internal"><b>Build Errors</b></a></td><td><b>27</b></td><td><b>32</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-CaresBundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-CaresBundleExample</b></a></td><td><b>4</b></td><td><b>2</b></td><td><b>5</b></td>
+     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-CaresBundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-CaresBundleExample</b></a></td><td><b>2</b></td><td><b>2</b></td><td><b>3</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_CodeSystem-cs-source-of-info"><b>/github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info</b></a></td><td><b>2</b></td><td><b>2</b></td><td><b>1</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19AssessmentVaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample</b></a></td><td><b>1</b></td><td><b>1</b></td><td><b>2</b></td>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19AssessmentVaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19VaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample</b></a></td><td><b>1</b></td><td><b>1</b></td><td><b>2</b></td>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19VaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><a href="#_github_workspace_fsh-generated_resources_StructureDefinition-covid19-admission-location"><b>/github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission-location</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -394,26 +394,14 @@
    <tr style="background-color: #ffffe6">
      <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0] (l371/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[6].resource.ofType(Immunization).reportOrigin.coding[0] (l386/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info' is unknown so the code cannot be validated</b></td>
-   </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode (l370/c22)</b></td><td><b>warning</b></td><td title="[Unable to determine whether the provided codes are in the value set https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Unable to determine whether the provided codes are in the value set https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[6].resource.ofType(Immunization).reportOrigin (l385/c22)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Source of information - codes' (https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info#VaccineCard)</b></td>
+     <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode (l370/c22)</b></td><td><b>warning</b></td><td title="[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0] (l422/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[7].resource.ofType(Immunization).reportOrigin.coding[0] (l431/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info' is unknown so the code cannot be validated</b></td>
-   </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode (l421/c22)</b></td><td><b>warning</b></td><td title="[Unable to determine whether the provided codes are in the value set https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Unable to determine whether the provided codes are in the value set https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[7].resource.ofType(Immunization).reportOrigin (l430/c22)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Source of information - codes' (https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info#VaccineCard)</b></td>
+     <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode (l421/c22)</b></td><td><b>warning</b></td><td title="[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
    </tr>
 </table>
 <hr/>
@@ -426,7 +414,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CodeSystem.where(url = 'https://openhie.github.io/cares-covid-ig/CodeSystem/cs-source-of-info')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info.json - the canonical URL (http://xxsomewhere.org/fhir/myig/CodeSystem/cs-source-of-info) does not match the URL (https://openhie.github.io/cares-covid-ig/CodeSystem/cs-source-of-info)</b></td>
+     <td><b>CodeSystem.where(url = 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info.json - the canonical URL (http://xxsomewhere.org/fhir/myig/CodeSystem/cs-source-of-info) does not match the URL (http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info)</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>CodeSystem</b></td><td><b>information</b></td><td title=""><b>CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly</b></td>
@@ -438,7 +426,7 @@
      <td><b>CodeSystem</b></td><td><b>warning</b></td><td title="CODESYSTEM_SHAREABLE_MISSING"><b>The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/CodeSystem-cs-source-of-info</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/CodeSystem/cs-source-of-info vs https://openhie.github.io/cares-covid-ig/CodeSystem/cs-source-of-info</b></td>
+     <td><b>fsh-generated/resources/CodeSystem-cs-source-of-info</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/CodeSystem/cs-source-of-info vs http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</b></td>
    </tr>
 </table>
 <hr/>
@@ -451,16 +439,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Immunization.vaccineCode (l17/c16)</b></td><td><b>warning</b></td><td title="[Unable to determine whether the provided codes are in the value set https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Unable to determine whether the provided codes are in the value set https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
+     <td><b>Immunization.vaccineCode (l17/c16)</b></td><td><b>warning</b></td><td title="[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Immunization.vaccineCode.coding[0] (l18/c8)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Immunization.reportOrigin (l32/c16)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Source of information - codes' (https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info#VaccineCard)</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Immunization.reportOrigin.coding[0] (l33/c8)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info' is unknown so the code cannot be validated</b></td>
    </tr>
 </table>
 <hr/>
@@ -473,16 +455,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Immunization.vaccineCode (l22/c16)</b></td><td><b>warning</b></td><td title="[Unable to determine whether the provided codes are in the value set https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Unable to determine whether the provided codes are in the value set https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
+     <td><b>Immunization.vaccineCode (l22/c16)</b></td><td><b>warning</b></td><td title="[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Immunization.vaccineCode.coding[0] (l23/c8)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Immunization.reportOrigin (l31/c16)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Source of information - codes' (https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info#VaccineCard)</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Immunization.reportOrigin.coding[0] (l32/c8)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info' is unknown so the code cannot be validated</b></td>
    </tr>
 </table>
 <hr/>
@@ -495,10 +471,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-admission-location')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission-location.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-admission-location) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-admission-location)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission-location.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-admission-location) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-admission-location</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-admission-location vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-admission-location</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-admission-location</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-admission-location vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location</b></td>
    </tr>
 </table>
 <hr/>
@@ -511,10 +487,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-assessment-vaccination')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-assessment-vaccination) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-assessment-vaccination)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-assessment-vaccination) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-assessment-vaccination vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-assessment-vaccination</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-assessment-vaccination vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination</b></td>
    </tr>
 </table>
 <hr/>
@@ -527,10 +503,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities-present')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidities-present) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities-present)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidities-present) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidities-present vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities-present</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidities-present vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present</b></td>
    </tr>
 </table>
 <hr/>
@@ -543,10 +519,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidity')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidity.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidity) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidity)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidity')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidity.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidity) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidity)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidity</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidity vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidity</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidity</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidity vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidity</b></td>
    </tr>
 </table>
 <hr/>
@@ -559,10 +535,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-date-last-hospitalised')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-date-last-hospitalised) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-date-last-hospitalised)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-date-last-hospitalised) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-date-last-hospitalised vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-date-last-hospitalised</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-date-last-hospitalised vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised</b></td>
    </tr>
 </table>
 <hr/>
@@ -575,10 +551,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-death')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-death.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-death) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-death)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-death.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-death) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-death</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-death vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-death</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-death</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-death vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death</b></td>
    </tr>
 </table>
 <hr/>
@@ -591,22 +567,22 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-diagnosis')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-diagnosis) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-diagnosis)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-diagnosis) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Covid19 Diagnosis.Condition.clinicalStatus</b></td><td><b>error</b></td><td title=""><b>Binding https://openhie.github.io/cares-covid-ig/ValueSet/vs-patient-outcome is not a subset of binding http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1</b></td>
+     <td><b>Covid19 Diagnosis.Condition.clinicalStatus</b></td><td><b>error</b></td><td title=""><b>Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome is not a subset of binding http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Covid19 Diagnosis.Condition.verificationStatus</b></td><td><b>error</b></td><td title=""><b>Binding https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid-diagnosis is not a subset of binding http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1</b></td>
+     <td><b>Covid19 Diagnosis.Condition.verificationStatus</b></td><td><b>error</b></td><td title=""><b>Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis is not a subset of binding http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition</b></td><td><b>error</b></td><td title=""><b>Binding https://openhie.github.io/cares-covid-ig/ValueSet/vs-patient-outcome is not a subset of binding http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1</b></td>
+     <td><b>StructureDefinition</b></td><td><b>error</b></td><td title=""><b>Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome is not a subset of binding http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition</b></td><td><b>error</b></td><td title=""><b>Binding https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid-diagnosis is not a subset of binding http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1</b></td>
+     <td><b>StructureDefinition</b></td><td><b>error</b></td><td title=""><b>Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis is not a subset of binding http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-diagnosis</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-diagnosis vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-diagnosis</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-diagnosis</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-diagnosis vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis</b></td>
    </tr>
 </table>
 <hr/>
@@ -619,10 +595,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-encounter')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-encounter) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-encounter)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-encounter) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-encounter</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-encounter vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-encounter</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-encounter</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-encounter vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter</b></td>
    </tr>
 </table>
 <hr/>
@@ -635,10 +611,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-ever-hospitalised')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-ever-hospitalised) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-ever-hospitalised)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-ever-hospitalised) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-ever-hospitalised vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-ever-hospitalised</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-ever-hospitalised vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised</b></td>
    </tr>
 </table>
 <hr/>
@@ -651,10 +627,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-lab-order')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-lab-order) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-lab-order)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-lab-order) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-lab-order</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-lab-order vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-lab-order</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-lab-order</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-lab-order vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order</b></td>
    </tr>
 </table>
 <hr/>
@@ -667,10 +643,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-medication-request')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-medication-request.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-medication-request) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-medication-request)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-medication-request.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-medication-request) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-medication-request</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-medication-request vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-medication-request</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-medication-request</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-medication-request vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request</b></td>
    </tr>
 </table>
 <hr/>
@@ -683,10 +659,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-organization')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-organization) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-organization)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-organization) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-organization</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-organization vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-organization</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-organization</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-organization vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization</b></td>
    </tr>
 </table>
 <hr/>
@@ -699,10 +675,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-patient')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-patient.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-patient) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-patient)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-patient.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-patient) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-patient</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-patient vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-patient</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-patient</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-patient vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient</b></td>
    </tr>
 </table>
 <hr/>
@@ -715,10 +691,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-presenting-symptoms')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-presenting-symptoms) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-presenting-symptoms)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-presenting-symptoms) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-presenting-symptoms vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-presenting-symptoms</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-presenting-symptoms vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms</b></td>
    </tr>
 </table>
 <hr/>
@@ -731,10 +707,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-recovered-or-symptoms-resolved')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-recovered-or-symptoms-resolved) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-recovered-or-symptoms-resolved)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-recovered-or-symptoms-resolved) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-recovered-or-symptoms-resolved vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-recovered-or-symptoms-resolved</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-recovered-or-symptoms-resolved vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved</b></td>
    </tr>
 </table>
 <hr/>
@@ -747,10 +723,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-service-request-location')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-service-request-location.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-service-request-location) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-service-request-location)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-service-request-location.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-service-request-location) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-service-request-location</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-service-request-location vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-service-request-location</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-service-request-location</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-service-request-location vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location</b></td>
    </tr>
 </table>
 <hr/>
@@ -763,10 +739,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-specimen')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-specimen) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-specimen)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-specimen) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-specimen</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-specimen vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-specimen</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-specimen</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-specimen vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen</b></td>
    </tr>
 </table>
 <hr/>
@@ -779,13 +755,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-test-results')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-test-results.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-test-results) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-test-results)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-test-results.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-test-results) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-test-results')</b></td><td><b>error</b></td><td title=""><b>The element Observation.valueDateTime is out of order (and maybe others after it)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results')</b></td><td><b>error</b></td><td title=""><b>The element Observation.valueDateTime is out of order (and maybe others after it)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-test-results</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-test-results vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-test-results</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-test-results</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-test-results vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results</b></td>
    </tr>
 </table>
 <hr/>
@@ -798,10 +774,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccination')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccination.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccination) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccination)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccination.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccination) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-vaccination</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccination vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccination</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-vaccination</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccination vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination</b></td>
    </tr>
 </table>
 <hr/>
@@ -814,10 +790,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccine-dose-ever-received')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccine-dose-ever-received) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccine-dose-ever-received)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccine-dose-ever-received) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccine-dose-ever-received vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccine-dose-ever-received</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccine-dose-ever-received vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received</b></td>
    </tr>
 </table>
 <hr/>
@@ -830,10 +806,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/ever-received-dose-of-vaccine')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-ever-received-dose-of-vaccine.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/ever-received-dose-of-vaccine) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/ever-received-dose-of-vaccine)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/ever-received-dose-of-vaccine')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-ever-received-dose-of-vaccine.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/ever-received-dose-of-vaccine) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/ever-received-dose-of-vaccine)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-ever-received-dose-of-vaccine</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/ever-received-dose-of-vaccine vs https://openhie.github.io/cares-covid-ig/StructureDefinition/ever-received-dose-of-vaccine</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-ever-received-dose-of-vaccine</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/ever-received-dose-of-vaccine vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/ever-received-dose-of-vaccine</b></td>
    </tr>
 </table>
 <hr/>
@@ -846,10 +822,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/next-visit')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-next-visit.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/next-visit) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/next-visit)</b></td>
+     <td><b>StructureDefinition.where(url = 'http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-next-visit.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/next-visit) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/StructureDefinition-next-visit</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/next-visit vs https://openhie.github.io/cares-covid-ig/StructureDefinition/next-visit</b></td>
+     <td><b>fsh-generated/resources/StructureDefinition-next-visit</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/StructureDefinition/next-visit vs http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit</b></td>
    </tr>
 </table>
 <hr/>
@@ -862,13 +838,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-AdmissionTypes')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-AdmissionTypes) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-AdmissionTypes)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-AdmissionTypes')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-AdmissionTypes) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-AdmissionTypes)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-AdmissionTypes</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-AdmissionTypes vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-AdmissionTypes</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-AdmissionTypes</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-AdmissionTypes vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-AdmissionTypes</b></td>
    </tr>
 </table>
 <hr/>
@@ -881,13 +857,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-cancellation-reason')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-cancellation-reason) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-cancellation-reason)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-cancellation-reason')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-cancellation-reason) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-cancellation-reason)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-cancellation-reason</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-cancellation-reason vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-cancellation-reason</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-cancellation-reason</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-cancellation-reason vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-cancellation-reason</b></td>
    </tr>
 </table>
 <hr/>
@@ -900,13 +876,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-conditions-comorbidity')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-conditions-comorbidity) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-conditions-comorbidity)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-conditions-comorbidity) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-conditions-comorbidity</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-conditions-comorbidity vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-conditions-comorbidity</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-conditions-comorbidity</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-conditions-comorbidity vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity</b></td>
    </tr>
 </table>
 <hr/>
@@ -919,13 +895,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid-diagnosis')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid-diagnosis.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid-diagnosis) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid-diagnosis)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid-diagnosis.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid-diagnosis) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-covid-diagnosis</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid-diagnosis vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid-diagnosis</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-covid-diagnosis</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid-diagnosis vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis</b></td>
    </tr>
 </table>
 <hr/>
@@ -938,13 +914,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed</b></td>
    </tr>
 </table>
 <hr/>
@@ -957,13 +933,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-specimen-type')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-specimen-type) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-specimen-type)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-specimen-type) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-covid19-specimen-type</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-specimen-type vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-specimen-type</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-covid19-specimen-type</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-specimen-type vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type</b></td>
    </tr>
 </table>
 <hr/>
@@ -976,13 +952,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-test-result')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-test-result) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-test-result)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-test-result) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-covid19-test-result</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-test-result vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-test-result</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-covid19-test-result</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-test-result vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result</b></td>
    </tr>
 </table>
 <hr/>
@@ -995,13 +971,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-patient-outcome')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-patient-outcome.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-patient-outcome) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-patient-outcome)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-patient-outcome.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-patient-outcome) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-patient-outcome</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-patient-outcome vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-patient-outcome</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-patient-outcome</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-patient-outcome vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome</b></td>
    </tr>
 </table>
 <hr/>
@@ -1014,13 +990,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-presentation')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-presentation.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-presentation) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-presentation)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-presentation')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-presentation.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-presentation) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-presentation)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-presentation</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-presentation vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-presentation</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-presentation</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-presentation vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-presentation</b></td>
    </tr>
 </table>
 <hr/>
@@ -1033,13 +1009,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-source-of-info) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-source-of-info) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-source-of-info</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-source-of-info vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-source-of-info</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-source-of-info vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info</b></td>
    </tr>
 </table>
 <hr/>
@@ -1052,13 +1028,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-symptoms')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-symptoms) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-symptoms)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-symptoms')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-symptoms) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-symptoms)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-symptoms</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-symptoms vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-symptoms</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-symptoms</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-symptoms vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-symptoms</b></td>
    </tr>
 </table>
 <hr/>
@@ -1071,13 +1047,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-test-types.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-test-types) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-test-types.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-test-types) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-test-types</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-test-types vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-test-types</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-test-types vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types</b></td>
    </tr>
 </table>
 <hr/>
@@ -1090,13 +1066,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-treatment-dispensed-prescribed')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-treatment-dispensed-prescribed) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-treatment-dispensed-prescribed)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-treatment-dispensed-prescribed) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-treatment-dispensed-prescribed vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-treatment-dispensed-prescribed</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-treatment-dispensed-prescribed vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed</b></td>
    </tr>
 </table>
 <hr/>
@@ -1109,7 +1085,7 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-vaccine-types) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-vaccine-types) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet.compose[0].include[0]</b></td><td><b>warning</b></td><td title=""><b>Unknown System 'http://id.who.int/icd11/mms' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated)</b></td>
@@ -1118,10 +1094,10 @@
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.where(id = 'vs-vaccine-types')</b></td><td><b>warning</b></td><td><b>Error from server: Unable to provide support for code system http://id.who.int/icd11/mms</b> (<a href="qa-tx.html#l116">see Tx log</a>)</td>
+     <td><b>ValueSet.where(id = 'vs-vaccine-types')</b></td><td><b>warning</b></td><td><b>Error from server: Unable to provide support for code system http://id.who.int/icd11/mms</b> (<a href="qa-tx.html#l115">see Tx log</a>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-vaccine-types</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-vaccine-types vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-vaccine-types</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-vaccine-types vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types</b></td>
    </tr>
 </table>
 <hr/>
@@ -1134,13 +1110,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-yes-no')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-yes-no) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-yes-no)</b></td>
+     <td><b>ValueSet.where(url = 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-yes-no) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>ValueSet</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>fsh-generated/resources/ValueSet-vs-yes-no</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-yes-no vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-yes-no</b></td>
+     <td><b>fsh-generated/resources/ValueSet-vs-yes-no</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://xxsomewhere.org/fhir/myig/ValueSet/vs-yes-no vs http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no</b></td>
    </tr>
 </table>
 <a name="suppressed"> </a>
@@ -1163,118 +1139,118 @@
 <h2>RESOURCE_CANONICAL_MISMATCH</h2>
  <table class="grid">
    <tr style="background-color: #ffeeee">
-     <td><a href="CodeSystem-cs-source-of-info.html">fsh-generated/resources/CodeSystem-cs-source-of-info.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info.json - the canonical URL (http://xxsomewhere.org/fhir/myig/CodeSystem/cs-source-of-info) does not match the URL (https://openhie.github.io/cares-covid-ig/CodeSystem/cs-source-of-info)</b></td>
+     <td><a href="CodeSystem-cs-source-of-info.html">fsh-generated/resources/CodeSystem-cs-source-of-info.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info.json - the canonical URL (http://xxsomewhere.org/fhir/myig/CodeSystem/cs-source-of-info) does not match the URL (http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-admission-location.html">fsh-generated/resources/StructureDefinition-covid19-admission-location.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission-location.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-admission-location) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-admission-location)</b></td>
+     <td><a href="StructureDefinition-covid19-admission-location.html">fsh-generated/resources/StructureDefinition-covid19-admission-location.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission-location.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-admission-location) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-assessment-vaccination.html">fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-assessment-vaccination) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-assessment-vaccination)</b></td>
+     <td><a href="StructureDefinition-covid19-assessment-vaccination.html">fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-assessment-vaccination) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-conditions-or-comorbidities-present.html">fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidities-present) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities-present)</b></td>
+     <td><a href="StructureDefinition-covid19-conditions-or-comorbidities-present.html">fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidities-present) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-conditions-or-comorbidity.html">fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidity.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidity.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidity) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidity)</b></td>
+     <td><a href="StructureDefinition-covid19-conditions-or-comorbidity.html">fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidity.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidity.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-conditions-or-comorbidity) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidity)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-date-last-hospitalised.html">fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-date-last-hospitalised) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-date-last-hospitalised)</b></td>
+     <td><a href="StructureDefinition-covid19-date-last-hospitalised.html">fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-date-last-hospitalised) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-death.html">fsh-generated/resources/StructureDefinition-covid19-death.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-death.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-death) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-death)</b></td>
+     <td><a href="StructureDefinition-covid19-death.html">fsh-generated/resources/StructureDefinition-covid19-death.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-death.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-death) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-diagnosis.html">fsh-generated/resources/StructureDefinition-covid19-diagnosis.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-diagnosis) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-diagnosis)</b></td>
+     <td><a href="StructureDefinition-covid19-diagnosis.html">fsh-generated/resources/StructureDefinition-covid19-diagnosis.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-diagnosis) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-encounter.html">fsh-generated/resources/StructureDefinition-covid19-encounter.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-encounter) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-encounter)</b></td>
+     <td><a href="StructureDefinition-covid19-encounter.html">fsh-generated/resources/StructureDefinition-covid19-encounter.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-encounter) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-ever-hospitalised.html">fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-ever-hospitalised) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-ever-hospitalised)</b></td>
+     <td><a href="StructureDefinition-covid19-ever-hospitalised.html">fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-ever-hospitalised) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-lab-order.html">fsh-generated/resources/StructureDefinition-covid19-lab-order.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-lab-order) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-lab-order)</b></td>
+     <td><a href="StructureDefinition-covid19-lab-order.html">fsh-generated/resources/StructureDefinition-covid19-lab-order.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-lab-order) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-medication-request.html">fsh-generated/resources/StructureDefinition-covid19-medication-request.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-medication-request.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-medication-request) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-medication-request)</b></td>
+     <td><a href="StructureDefinition-covid19-medication-request.html">fsh-generated/resources/StructureDefinition-covid19-medication-request.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-medication-request.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-medication-request) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-organization.html">fsh-generated/resources/StructureDefinition-covid19-organization.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-organization) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-organization)</b></td>
+     <td><a href="StructureDefinition-covid19-organization.html">fsh-generated/resources/StructureDefinition-covid19-organization.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-organization) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-patient.html">fsh-generated/resources/StructureDefinition-covid19-patient.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-patient.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-patient) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-patient)</b></td>
+     <td><a href="StructureDefinition-covid19-patient.html">fsh-generated/resources/StructureDefinition-covid19-patient.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-patient.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-patient) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-presenting-symptoms.html">fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-presenting-symptoms) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-presenting-symptoms)</b></td>
+     <td><a href="StructureDefinition-covid19-presenting-symptoms.html">fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-presenting-symptoms) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-recovered-or-symptoms-resolved.html">fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-recovered-or-symptoms-resolved) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-recovered-or-symptoms-resolved)</b></td>
+     <td><a href="StructureDefinition-covid19-recovered-or-symptoms-resolved.html">fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-recovered-or-symptoms-resolved) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-service-request-location.html">fsh-generated/resources/StructureDefinition-covid19-service-request-location.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-service-request-location.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-service-request-location) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-service-request-location)</b></td>
+     <td><a href="StructureDefinition-covid19-service-request-location.html">fsh-generated/resources/StructureDefinition-covid19-service-request-location.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-service-request-location.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-service-request-location) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-specimen.html">fsh-generated/resources/StructureDefinition-covid19-specimen.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-specimen) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-specimen)</b></td>
+     <td><a href="StructureDefinition-covid19-specimen.html">fsh-generated/resources/StructureDefinition-covid19-specimen.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-specimen) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-test-results.html">fsh-generated/resources/StructureDefinition-covid19-test-results.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-test-results.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-test-results) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-test-results)</b></td>
+     <td><a href="StructureDefinition-covid19-test-results.html">fsh-generated/resources/StructureDefinition-covid19-test-results.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-test-results.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-test-results) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-vaccination.html">fsh-generated/resources/StructureDefinition-covid19-vaccination.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccination.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccination) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccination)</b></td>
+     <td><a href="StructureDefinition-covid19-vaccination.html">fsh-generated/resources/StructureDefinition-covid19-vaccination.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccination.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccination) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-covid19-vaccine-dose-ever-received.html">fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccine-dose-ever-received) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccine-dose-ever-received)</b></td>
+     <td><a href="StructureDefinition-covid19-vaccine-dose-ever-received.html">fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/covid19-vaccine-dose-ever-received) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-ever-received-dose-of-vaccine.html">fsh-generated/resources/StructureDefinition-ever-received-dose-of-vaccine.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-ever-received-dose-of-vaccine.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/ever-received-dose-of-vaccine) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/ever-received-dose-of-vaccine)</b></td>
+     <td><a href="StructureDefinition-ever-received-dose-of-vaccine.html">fsh-generated/resources/StructureDefinition-ever-received-dose-of-vaccine.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-ever-received-dose-of-vaccine.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/ever-received-dose-of-vaccine) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/ever-received-dose-of-vaccine)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="StructureDefinition-next-visit.html">fsh-generated/resources/StructureDefinition-next-visit.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-next-visit.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/next-visit) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/next-visit)</b></td>
+     <td><a href="StructureDefinition-next-visit.html">fsh-generated/resources/StructureDefinition-next-visit.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-next-visit.json - the canonical URL (http://xxsomewhere.org/fhir/myig/StructureDefinition/next-visit) does not match the URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/next-visit)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-AdmissionTypes.html">fsh-generated/resources/ValueSet-vs-AdmissionTypes.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-AdmissionTypes) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-AdmissionTypes)</b></td>
+     <td><a href="ValueSet-vs-AdmissionTypes.html">fsh-generated/resources/ValueSet-vs-AdmissionTypes.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-AdmissionTypes) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-AdmissionTypes)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-cancellation-reason.html">fsh-generated/resources/ValueSet-vs-cancellation-reason.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-cancellation-reason) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-cancellation-reason)</b></td>
+     <td><a href="ValueSet-vs-cancellation-reason.html">fsh-generated/resources/ValueSet-vs-cancellation-reason.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-cancellation-reason) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-cancellation-reason)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-conditions-comorbidity.html">fsh-generated/resources/ValueSet-vs-conditions-comorbidity.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-conditions-comorbidity) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-conditions-comorbidity)</b></td>
+     <td><a href="ValueSet-vs-conditions-comorbidity.html">fsh-generated/resources/ValueSet-vs-conditions-comorbidity.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-conditions-comorbidity) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-covid-diagnosis.html">fsh-generated/resources/ValueSet-vs-covid-diagnosis.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid-diagnosis.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid-diagnosis) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid-diagnosis)</b></td>
+     <td><a href="ValueSet-vs-covid-diagnosis.html">fsh-generated/resources/ValueSet-vs-covid-diagnosis.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid-diagnosis.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid-diagnosis) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid-diagnosis)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.html">fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed)</b></td>
+     <td><a href="ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.html">fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-covid19-specimen-type.html">fsh-generated/resources/ValueSet-vs-covid19-specimen-type.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-specimen-type) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-specimen-type)</b></td>
+     <td><a href="ValueSet-vs-covid19-specimen-type.html">fsh-generated/resources/ValueSet-vs-covid19-specimen-type.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-specimen-type) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-covid19-test-result.html">fsh-generated/resources/ValueSet-vs-covid19-test-result.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-test-result) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-test-result)</b></td>
+     <td><a href="ValueSet-vs-covid19-test-result.html">fsh-generated/resources/ValueSet-vs-covid19-test-result.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-covid19-test-result) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-patient-outcome.html">fsh-generated/resources/ValueSet-vs-patient-outcome.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-patient-outcome.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-patient-outcome) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-patient-outcome)</b></td>
+     <td><a href="ValueSet-vs-patient-outcome.html">fsh-generated/resources/ValueSet-vs-patient-outcome.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-patient-outcome.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-patient-outcome) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-presentation.html">fsh-generated/resources/ValueSet-vs-presentation.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-presentation.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-presentation) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-presentation)</b></td>
+     <td><a href="ValueSet-vs-presentation.html">fsh-generated/resources/ValueSet-vs-presentation.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-presentation.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-presentation) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-presentation)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-source-of-info.html">fsh-generated/resources/ValueSet-vs-source-of-info.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-source-of-info) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info)</b></td>
+     <td><a href="ValueSet-vs-source-of-info.html">fsh-generated/resources/ValueSet-vs-source-of-info.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-source-of-info) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-symptoms.html">fsh-generated/resources/ValueSet-vs-symptoms.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-symptoms) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-symptoms)</b></td>
+     <td><a href="ValueSet-vs-symptoms.html">fsh-generated/resources/ValueSet-vs-symptoms.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-symptoms) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-symptoms)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-test-types.html">fsh-generated/resources/ValueSet-vs-test-types.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-test-types.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-test-types) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types)</b></td>
+     <td><a href="ValueSet-vs-test-types.html">fsh-generated/resources/ValueSet-vs-test-types.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-test-types.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-test-types) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-treatment-dispensed-prescribed.html">fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-treatment-dispensed-prescribed) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-treatment-dispensed-prescribed)</b></td>
+     <td><a href="ValueSet-vs-treatment-dispensed-prescribed.html">fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-treatment-dispensed-prescribed) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-vaccine-types.html">fsh-generated/resources/ValueSet-vs-vaccine-types.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-vaccine-types) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types)</b></td>
+     <td><a href="ValueSet-vs-vaccine-types.html">fsh-generated/resources/ValueSet-vs-vaccine-types.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-vaccine-types) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types)</b></td>
    </tr>
    <tr style="background-color: #ffeeee">
-     <td><a href="ValueSet-vs-yes-no.html">fsh-generated/resources/ValueSet-vs-yes-no.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-yes-no) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-yes-no)</b></td>
+     <td><a href="ValueSet-vs-yes-no.html">fsh-generated/resources/ValueSet-vs-yes-no.json</a></td><td><b>Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no.json - the canonical URL (http://xxsomewhere.org/fhir/myig/ValueSet/vs-yes-no) does not match the URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no)</b></td>
    </tr>
 </table>
 <hr/>
@@ -1286,18 +1262,6 @@
    </tr>
    <tr style="background-color: #ffeeee">
      <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>None of the codings provided are in the value set 'ConditionVerificationStatus' (http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1), and a coding from this value set is required) (codes = http://snomed.info/sct#410605003)</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>None of the codings provided are in the value set 'Source of information - codes' (https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info#VaccineCard)</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>None of the codings provided are in the value set 'Source of information - codes' (https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info#VaccineCard)</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a></td><td><b>None of the codings provided are in the value set 'Source of information - codes' (https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info#VaccineCard)</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a></td><td><b>None of the codings provided are in the value set 'Source of information - codes' (https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info#VaccineCard)</b></td>
    </tr>
 </table>
 <hr/>
@@ -1316,13 +1280,7 @@
      <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info' is unknown so the code cannot be validated</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
      <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="Bundle-CaresSubmitLabResultBundleExample.html">fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json</a></td><td><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output' is unknown so the code cannot be validated</b></td>
@@ -1331,13 +1289,7 @@
      <td><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #fffff2">
-     <td><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a></td><td><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info' is unknown so the code cannot be validated</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
      <td><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a></td><td><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="Task-LabResultTaskExample.html">fsh-generated/resources/Task-LabResultTaskExample.json</a></td><td><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output' is unknown so the code cannot be validated</b></td>
