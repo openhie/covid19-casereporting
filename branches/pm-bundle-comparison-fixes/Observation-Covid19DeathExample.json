@@ -1,0 +1,29 @@
+{
+  "resourceType": "Observation",
+  "id": "Covid19DeathExample",
+  "meta": {
+    "profile": [
+      "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19DeathExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;Covid19DeathExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-death.html\">Covid19 Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Date of death (observable entity) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#399753006)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>effective</b>: 2022-11-09</p></div>"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "399753006"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/Covid19PatientExample"
+  },
+  "encounter": {
+    "reference": "Encounter/Covid19AssessmentEncounterExample"
+  },
+  "effectiveDateTime": "2022-11-09"
+}
