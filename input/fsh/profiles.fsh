@@ -158,37 +158,34 @@ Parent: ServiceRequest
 Id: covid19-lab-order
 Title: "Covid19 Lab Order"
 Description: "Covid19 Lab Order"
-* identifier 1..1 MS //
-* subject 1..1 MS // Patient reference
-* intent = #order 
-* reasonCode  1..* MS //Reason for testing
-* reasonCode from VSReasonForAssessmentOrTestNotPerformed 
-* note MS // for capturing other reasons for testing
-* encounter 1..1 MS  
-* requester MS // Provider name
+* identifier 1..1
+* status 1..1
+* intent = #order
+* code from VSTestTypes (required)
+* subject only Reference(Patient)
+* subject 1..1
+* encounter 1..1
 * occurrenceDateTime 1..1
-* code 1..1 MS // Test request Code
-* code from VSTestTypes
-* locationReference MS //Reference Lab sample send to
-* status MS // Status of Lab Order
-* occurrenceDateTime MS // sample forwarded to reference lab; Yes = if there is a dateTime when sample was sent
-* specimen 1..1 MS //sample
-* doNotPerform MS //If yes then a reason for test not performed to be provided in the reasonCode element
-
-//* dataAbsentReason from VSReasonTestNotPerformed  
-
+* requester 1..1
+* locationReference 1..1
+* doNotPerform 0..1
+* reasonCode from VSReasonForAssessmentOrTestNotPerformed (required)
+* specimen 1..1
+* note.authorReference only Reference(Organization)
+* note 0..1
+ 
 Profile: Covid19Specimen
 Parent: Specimen
 Id: covid19-specimen
 Title: "Covid19 Specimen"
 Description: "Covid19 Specimen"
-* identifier 1..1 MS //Sample ID
-* type 1..1 MS 
-* type from VSCovid19SpecimenType
-* collection.collectedDateTime 1..1 MS  // Date specimen collected
-* note MS // Other Sample Type
-* processing.timePeriod.end MS   //Using the date to derive that the "Lab Test was Performed"
-* subject 1..1 MS // Patient reference
+* identifier 1..1
+* type from VSCovid19SpecimenType (required)
+* subject only Reference(Patient)
+* subject 1..1
+* collection.collectedDateTime 1..1
+* note.authorReference only Reference(Organization)
+* note 0..1
 
 Profile: Covid19TestResult
 Parent: Observation

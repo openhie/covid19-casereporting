@@ -159,19 +159,20 @@ Title: "Covid19 Lab Order example"
 Description: "Covid19 Lab Order example"
 * identifier.value = "ORDER12345"
 * identifier.system = "http://covid19laborder.org/order"
-* encounter = Reference(Covid19AssessmentEncounterExample) 
-* subject = Reference(Covid19PatientExample) 
-* reasonCode  = $SCT#441510007
+* status = #completed
+* intent = #order
+* code = $LNC#94558-4
+* subject = Reference(Covid19PatientExample)
+* encounter = Reference(Covid19AssessmentEncounterExample)
 * occurrenceDateTime = "2012-01-05"
-* status = #revoked
-* code =  $LNC#94558-4
 * requester = Reference(PractitionerExample)
-* locationReference = Reference(Covid19ServiceRequestLocationExample) 
+* locationReference = Reference(Covid19ServiceRequestLocationExample)
+* doNotPerform = false
+* reasonCode = $SCT#397933008
 * specimen = Reference(Covid19SpecimenExample)
-* doNotPerform = true  //refer to reasonCode if true
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "additional notes here"
-* note.time = "2015-02-07T13:28:17-05:00" //Covdi19SpecimenNoteDate
+* note.time = "2015-02-07T13:28:17-05:00"
 
 Instance: Covid19SpecimenExample
 InstanceOf: Covid19Specimen
@@ -181,11 +182,11 @@ Description: "Covid19 Specimen example"
 * identifier.value = "SPECIMEN109191879"
 * identifier.system = "http://covid19laborder.org/specimen"
 * collection.collectedDateTime = "2022-07-28"
-* type = $SCT#258500001  
+* type = $SCT#258500001
 * subject = Reference(Covid19PatientExample)
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "additional notes here"
-* note.time = "2015-02-07T13:28:17-05:00" //Covdi19SpecimenNoteDate
+* note.time = "2015-02-07T13:28:17-05:00"
 
 Instance: Covid19SpecimenLabResultExample
 InstanceOf: Covid19Specimen
