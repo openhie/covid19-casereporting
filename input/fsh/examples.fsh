@@ -137,15 +137,20 @@ InstanceOf: Covid19AssessmentVaccination
 Usage: #example
 Title: "Covid19 Vaccine Type Administered example"
 Description: "Covid19 Vaccine Type Administered example"
-* patient = Reference(Covid19PatientExample) 
-* encounter = Reference(Covid19AssessmentEncounterExample) 
 * status = #completed
-* vaccineCode = $ICD#XM8NQ0 
+* vaccineCode = $ICD#XM8NQ0
+* patient = Reference(Covid19PatientExample)
+* encounter = Reference(Covid19AssessmentEncounterExample) 
 * occurrenceDateTime = "2022-07-28"
-* protocolApplied.doseNumberPositiveInt = 1
-* protocolApplied.series = #Booster
 * reportOrigin.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"
 * reportOrigin.coding.code = #VaccineCard
+* lotNumber = "1"
+* expirationDate = "2022-12-28"
+* protocolApplied.series = "Primary"
+* protocolApplied.doseNumberPositiveInt = 1 
+* note.authorReference = Reference(Covid19OrganizationExample)
+* note.text = "Some other text..."
+* note.time = "2015-02-07T13:28:17-05:00"
 
 Instance: Covid19LabOrderExample
 InstanceOf: Covid19LabOrder
@@ -246,16 +251,20 @@ Usage: #example
 Title: "Covid19 Vaccination example"
 Description: "Covid19 Vaccination example"
 * status = #completed
-* patient = Reference(Covid19PatientExample)
-* occurrenceDateTime = "2022-07-28"
-* protocolApplied.doseNumberPositiveInt = 1    //#TODO : min=1, max = 9
-* protocolApplied.series = #Booster
-* expirationDate = "2022-12-28"
 * vaccineCode = $ICD#XM4YL8
-* lotNumber = "1"
+* patient = Reference(Covid19PatientExample)
+* encounter = Reference(Covid19AssessmentEncounterExample) 
+* occurrenceDateTime = "2022-07-28"
 * reportOrigin.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"
 * reportOrigin.coding.code = #VaccineCard
-* encounter = Reference(Covid19AssessmentEncounterExample) 
+* lotNumber = "1"
+* expirationDate = "2022-12-28"
+* protocolApplied.series = "Booster"
+* protocolApplied.doseNumberPositiveInt = 1 
+* note.authorReference = Reference(Covid19OrganizationExample)
+* note.text = "Some other text..."
+* note.time = "2015-02-07T13:28:17-05:00"
+
 
 Instance: LabOrderTaskExample
 InstanceOf: Task
