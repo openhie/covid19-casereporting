@@ -1,17 +1,17 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 10, warn = 56, info = 8
+err = 8, warn = 54, info = 8
 IG Publisher Version: 1.2.19
-Generated Tue Nov 29 15:20:48 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
+Generated Tue Nov 29 15:47:38 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
  Build Errors : 6 / 33 / 0
- /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 2 / 3 / 30
+ /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 1 / 2 / 30
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info : 0 / 2 / 2
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 2 / 1 / 1
+ /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 1 / 0 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 0 / 1 / 2
@@ -114,8 +114,6 @@ WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in 
 == fsh-generated/resources/Bundle-CaresBundleExample.json ==
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#428792000)
 ERROR: Bundle/CaresBundleExample: Bundle.entry[4].resource.ofType(Condition): Rule con-4: 'If condition is abated, then clinicalStatus must be either inactive, resolved, or remission' Failed
-ERROR: Bundle/CaresBundleExample: Bundle.entry[4].resource.ofType(Condition).verificationStatus: None of the codings provided are in the value set 'ConditionVerificationStatus' (http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1), and a coding from this value set is required) (codes = null#confirmed)
-WARNING: Bundle/CaresBundleExample: Bundle.entry[4].resource.ofType(Condition).verificationStatus.coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
 WARNING: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
@@ -131,8 +129,6 @@ WARNING: CodeSystem/cs-source-of-info: CodeSystem: The ShareableCodeSystem profi
 == fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample.json ==
 == fsh-generated/resources/Condition-Covid19DiagnosisExample.json ==
 ERROR: Condition/Covid19DiagnosisExample: Condition: Rule con-4: 'If condition is abated, then clinicalStatus must be either inactive, resolved, or remission' Failed
-ERROR: Condition/Covid19DiagnosisExample: Condition.verificationStatus: None of the codings provided are in the value set 'ConditionVerificationStatus' (http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1), and a coding from this value set is required) (codes = null#confirmed)
-WARNING: Condition/Covid19DiagnosisExample: Condition.verificationStatus.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.json ==
 == fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json ==
 == fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json ==
