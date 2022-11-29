@@ -107,13 +107,13 @@ InstanceOf: Covid19Diagnosis
 Usage: #example
 Title: "Covid19 Diagnosis Example"
 Description: "Covid19 Diagnosis Example"
-* recordedDate = "2022-07-28"
+* verificationStatus = #confirmed
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
-//* clinicalStatus = $SCT#370996005 
-* verificationStatus = #confirmed
-* evidence.code = $SCT#84387000
 * onsetDateTime = "2022-07-28"
+* recordedDate = "2022-07-28"
+* abatementDateTime = "2022-07-28"
+* evidence.code = $SCT#84387000
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "additional notes here"
 * note.time = "2015-02-07T13:28:17-05:00"

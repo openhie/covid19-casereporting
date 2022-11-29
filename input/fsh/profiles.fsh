@@ -134,24 +134,30 @@ Parent: Condition
 Id: covid19-diagnosis
 Title: "Covid19 Diagnosis"
 Description: "Covid19 Diagnosis"
-* recordedDate MS // Date of Diagnosis
-* verificationStatus MS //1..1 MS
-//* verificationStatus from VSCovidDiagnosis //Covid Diagnosis
-//* clinicalStatus from VSPatientOutcome
-//* clinicalStatus 1..1 MS // Patient Outcome
-* abatementDateTime 0..1 MS //Date recovered or date symptoms resolved / Date Died
-* note MS  // Long covid description and/or Additional notes
-* evidence.code from VSPresentation
-* evidence.code 1..1 MS
-* onsetDateTime MS //date of onset of symptoms
+* verificationStatus 1..1
+* subject only Reference(Patient)
+* subject 1..1
+* encounter 1..1
+* onsetDateTime 1..1
+* recordedDate 1..1
+* abatementDateTime 0..1
+* evidence.code from VSPresentation (required)
+* note.authorReference only Reference(Organization)
+* note 0..1
 
 Profile: Covid19MedicationRequest
 Parent: MedicationRequest
 Id: covid19-medication-request
 Title: "Covid19 Treatment dispensed or prescribed"
 Description: "Covid19 Treatment dispensed or prescribed"
-* medicationCodeableConcept from VSTreatMentDispensedPrescribed 
-* medicationCodeableConcept.text MS // Other (specify) - details
+* status = #active
+* intent = #order
+* subject only Reference(Patient)
+* subject 1..1
+* encounter 1..1
+* medicationCodeableConcept from VSTreatMentDispensedPrescribed (required)
+* note.authorReference only Reference(Organization)
+* note 0..1
 
 Profile: Covid19LabOrder 
 Parent: ServiceRequest
