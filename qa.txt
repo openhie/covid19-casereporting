@@ -1,13 +1,13 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 8, warn = 56, info = 10
+err = 8, warn = 56, info = 8
 IG Publisher Version: 1.2.19
-Generated Tue Nov 29 13:45:14 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
+Generated Tue Nov 29 14:54:10 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
  Build Errors : 6 / 33 / 0
  /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 1 / 3 / 30
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 2
- /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 10
+ /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample : 0 / 0 / 9
  /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info : 0 / 2 / 2
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample : 0 / 0 / 1
@@ -30,7 +30,7 @@ Generated Tue Nov 29 13:45:14 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Practitioner-PractitionerExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ServiceRequest-Covid19LabOrderExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenLabResultExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenLabResultExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission-location : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities : 0 / 0 / 1
@@ -122,7 +122,6 @@ WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization
 == fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json ==
 INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[0].resource.ofType(Task).output[0].type.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output' is unknown so the code cannot be validated
-INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[3].resource.ofType(Specimen).processing[0].time.ofType(dateTime): This element does not match any known slice defined in the profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen|0.1.0-test
 == fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample.json ==
 == fsh-generated/resources/CodeSystem-cs-source-of-info.json ==
 INFORMATION: CodeSystem/cs-source-of-info: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
@@ -155,7 +154,6 @@ INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.co
 == fsh-generated/resources/ServiceRequest-Covid19LabOrderExample.json ==
 == fsh-generated/resources/Specimen-Covid19SpecimenExample.json ==
 == fsh-generated/resources/Specimen-Covid19SpecimenLabResultExample.json ==
-INFORMATION: Specimen/Covid19SpecimenLabResultExample: Specimen.processing[0].time.ofType(dateTime): This element does not match any known slice defined in the profile http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen|0.1.0-test
 == fsh-generated/resources/StructureDefinition-covid19-admission-location.json ==
 == fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination.json ==
 == fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities.json ==
