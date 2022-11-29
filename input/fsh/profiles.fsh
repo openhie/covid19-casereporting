@@ -121,11 +121,11 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 * encounter 1..1
 * occurrenceDateTime 1..1
 * reportOrigin from VSSourceOfInfo (required)
-* lotNumber  1..1
+* lotNumber 1..1
 * expirationDate 0..1
 * protocolApplied 1..1
-* protocolApplied.series MS
-* protocolApplied.doseNumberPositiveInt MS
+* protocolApplied.series 1..1
+* protocolApplied.doseNumberPositiveInt 1..1
 * note.authorReference only Reference(Organization)
 * note 0..1
 
@@ -210,11 +210,11 @@ Description: "Covid19 Vaccination"
 * encounter 1..1
 * occurrenceDateTime 1..1
 * reportOrigin from VSSourceOfInfo (required)
-* lotNumber  1..1
+* lotNumber 1..1
 * expirationDate 0..1
 * protocolApplied 1..1
-* protocolApplied.series MS
-* protocolApplied.doseNumberPositiveInt MS
+* protocolApplied.series 1..1
+* protocolApplied.doseNumberPositiveInt 1..1
 * note.authorReference only Reference(Organization)
 * note 0..1
 
