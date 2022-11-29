@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Covid19CaseReporting</h1>
- <p>Generated Tue Nov 29 15:54:14 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://openhie.org/fhir/covid19-casereporting">http://openhie.org/fhir/covid19-casereporting</a> (<a href="http://openhie.org/fhir/covid19-casereporting/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Tue Nov 29 16:20:06 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://openhie.org/fhir/covid19-casereporting">http://openhie.org/fhir/covid19-casereporting</a> (<a href="http://openhie.org/fhir/covid19-casereporting/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.2.19</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = openhie.fhir.covid, Canonical = http://openhie.org/fhir/covid19-casereporting</td></tr>
@@ -257,19 +257,19 @@
      <td><b>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0] (l134/c12)</b></td><td><b>information</b></td><td title="Terminology_TX_NoValid_3_CC"><b>None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#428792000)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[4].resource.ofType(Condition) (l250/c23)</b></td><td><b>error</b></td><td title="Rule con-4: 'If condition is abated, then clinicalStatus must be either inactive, resolved, or remission' Failed"><b>Rule con-4: 'If condition is abated, then clinicalStatus must be either inactive, resolved, or remission' Failed</b></td>
+     <td><b>Bundle.entry[4].resource.ofType(Condition) (l258/c23)</b></td><td><b>error</b></td><td title="Rule con-4: 'If condition is abated, then clinicalStatus must be either inactive, resolved, or remission' Failed"><b>Rule con-4: 'If condition is abated, then clinicalStatus must be either inactive, resolved, or remission' Failed</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0] (l350/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
+     <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0] (l358/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode (l349/c22)</b></td><td><b>warning</b></td><td title="[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
+     <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode (l357/c22)</b></td><td><b>warning</b></td><td title="[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0] (l407/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
+     <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0] (l415/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode (l406/c22)</b></td><td><b>warning</b></td><td title="[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
+     <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode (l414/c22)</b></td><td><b>warning</b></td><td title="[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
    </tr>
 </table>
 <hr/>
