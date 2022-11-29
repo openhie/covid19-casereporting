@@ -257,16 +257,12 @@
  <tr><td colspan="3"><b>Covid19Vaccination</b></td></tr>
  <tr><td>Immunization</td><td>VXU_V04</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>RXA-5</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>C*E.1-8, C*E.10-22</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>C*E.9. But note many systems use C*E.2 for this</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>PID-3</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>PV1-19</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>RXA-3</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x] (occurrenceDateTime)</td><td>RXA-3</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;primarySource</td><td>RXA-9</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reportOrigin</td><td>RXA-9</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>C*E.1-8, C*E.10-22</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>C*E.9. But note many systems use C*E.2 for this</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>RXA-27  (or RXA-11, deprecated as of v2.7)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;manufacturer</td><td>RXA-17</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;lotNumber</td><td>RXA-15</td> </tr>
@@ -276,6 +272,10 @@
  <tr><td>&nbsp;&nbsp;&nbsp;doseQuantity</td><td>RXA-6 / RXA-7</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>ORC-12 / RXA-10</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>OBX-5 : OBX-3 = 48767-8</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author[x]</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author[x] (authorReference)</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;isSubpotent</td><td>RXA-20 = PA (partial administration)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;education</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;documentType</td><td>OBX-5 : OBX-3 = 69764-9</td> </tr>
@@ -298,10 +298,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>statusCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td>.inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN].reasonCOde</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>.code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>union(., ./translation)</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>.partipication[ttypeCode=].role</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>component-&gt;EncounterEvent</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>.effectiveTime</td> </tr>
@@ -309,10 +305,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td>.participation[typeCode=AUT].time</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;primarySource</td><td>immunization.uncertaintycode (if primary source=false, uncertainty=U)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reportOrigin</td><td>.participation[typeCode=INF].role[classCode=PAT] (this syntax for self-reported) .participation[typeCode=INF].role[classCode=LIC] (this syntax for health care professional) .participation[typeCode=INF].role[classCode=PRS] (this syntax for family member)</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>union(., ./translation)</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>.participation[typeCode=LOC].COCT_MT240000UV</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;manufacturer</td><td>.participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=ORG]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;lotNumber</td><td>.participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].id</td> </tr>
@@ -327,6 +319,12 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</td><td>.participation.functionCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td>.player</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>note</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author[x]</td><td>Act.participant[typeCode=AUT].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;author[x] (authorReference)</td><td>Act.participant[typeCode=AUT].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time</td><td>Act.effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>Act.text</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>[actionNegationInd=false].reasonCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;isSubpotent</td><td>N/A</td> </tr>
@@ -442,7 +440,7 @@
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Nov 29, 2022 10:15+0000">2022-11-29</span>
+          IG &#169; 2019+ <a style="color: #81BEF7" href="http://xxhl7.org/Special/committees/[something]">OpenHIE</a>.  Package openhie.fhir.covid#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Nov 29, 2022 13:15+0000">2022-11-29</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
