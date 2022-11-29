@@ -195,9 +195,13 @@ Parent: Observation
 Id: covid19-test-results
 Title: "Covid19 Lab Results"
 Description: "Covid19 Lab Results"
-* valueDateTime MS //Test result date-time
-* valueCodeableConcept from VSTestResult
-* valueCodeableConcept MS //Result Code
+* status = #final
+* code from VSTestTypes (required)
+* subject only Reference(Patient)
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* valueCodeableConcept from VSTestResult (required)
 
 Profile: Covid19Vaccination
 Parent: Immunization
@@ -245,7 +249,7 @@ Parent: Observation
 Id: covid19-recovered-or-symptoms-resolved 
 Title: "Covid19 Recovered Or Symptoms Resolved"
 Description: "Covid19 Recovered Or Symptoms Resolved"
-* status 1..1
+* status = #final
 * code = $SCT#370996005
 * subject only Reference(Patient)
 * subject 1..1
@@ -259,7 +263,7 @@ Parent: Observation
 Id: covid19-death 
 Title: "Covid19 Death"
 Description: "Covid19 Death"
-* status 1..1
+* status = #final
 * code = $SCT#419099009
 * subject only Reference(Patient)
 * subject 1..1
@@ -273,7 +277,7 @@ Parent: Observation
 Id: covid19-long-covid-post-covid
 Title: "Covid19 Long Covid / Post-Covid"
 Description: "Covid19 Long Covid / Post-Covid"
-* status 1..1
+* status = #final
 * code = $SCT#1119303003
 * subject only Reference(Patient)
 * subject 1..1
