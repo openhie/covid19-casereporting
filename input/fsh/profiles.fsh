@@ -124,8 +124,8 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 * lotNumber  1..1
 * expirationDate 0..1
 * protocolApplied 1..1
-* protocolApplied.series 1..1
-* protocolApplied.doseNumberPositiveInt
+* protocolApplied.series MS
+* protocolApplied.doseNumberPositiveInt MS
 * note.authorReference only Reference(Organization)
 * note 0..1
 
@@ -213,8 +213,8 @@ Description: "Covid19 Vaccination"
 * lotNumber  1..1
 * expirationDate 0..1
 * protocolApplied 1..1
-* protocolApplied.series 1..1
-* protocolApplied.doseNumberPositiveInt
+* protocolApplied.series MS
+* protocolApplied.doseNumberPositiveInt MS
 * note.authorReference only Reference(Organization)
 * note 0..1
 
