@@ -226,7 +226,7 @@ Extension: ExtNextVisit
 Id: covid19-next-vaccination
 Title: "Covid19 date of next vaccination"
 Description: "Covid19 date of next vaccination"
-* value[x] only dateTime 1..1
+* value[x] only dateTime MS
 
 Profile: Covid19ServiceRequestLocation
 Parent: Location
