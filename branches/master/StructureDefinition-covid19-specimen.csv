@@ -28,7 +28,7 @@ user content","",0,*,"","Y","","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"DomainResource.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
-"Specimen.identifier","Specimen.identifier","","","",1,1,"Y","","Y","Identifier {[]} {[]}
+"Specimen.identifier","Specimen.identifier","","","",1,1,"","","Y","Identifier {[]} {[]}
 ","External Identifier","Id for specimen.","","","","","","","","","",,,,,"",,,,"Specimen.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".id","FiveWs.identifier","SPM-2"
 "Specimen.accessionIdentifier","Specimen.accessionIdentifier","","","",0,1,"","","Y","Identifier {[]} {[]}
@@ -37,10 +37,10 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Specimen.status","Specimen.status","","","",0,1,"","Y","Y","code {[]} {[]}
 ","available | unavailable | unsatisfactory | entered-in-error","The availability of the specimen.","This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.","","","","","","","","",,"required","Codes providing the status/availability of a specimen.","http://hl7.org/fhir/ValueSet/specimen-status|4.0.1","",,,,"Specimen.status",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","status","FiveWs.status","SPM-20"
-"Specimen.type","Specimen.type","","","",1,1,"Y","","Y","CodeableConcept {[]} {[]}
+"Specimen.type","Specimen.type","","","",0,1,"","","Y","CodeableConcept {[]} {[]}
 ","Kind of material that forms the specimen","The kind of material that forms the specimen.","The type can change the way that a specimen is handled and drives what kind of analyses can properly be performed on the specimen. It is frequently used in diagnostic work flow decision making systems.","","","","","","","","",,"required","","http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type","",,,,"Specimen.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".code","FiveWs.what[x]","SPM-4 and possibly SPM-5"
-"Specimen.subject","Specimen.subject","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Group], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/Substance], CanonicalType[http://hl7.org/fhir/StructureDefinition/Location]]}
+"Specimen.subject","Specimen.subject","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient]]}
 ","Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance or a device","Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance or a device.","","Must know the subject context.","","","","","","","",,,,,"",,,,"Specimen.subject",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".scoper  or  .scoper.playsRole","FiveWs.subject[x]","FiveWs.subject"
 "Specimen.receivedTime","Specimen.receivedTime","","","",0,1,"","","Y","dateTime {[]} {[]}
@@ -53,7 +53,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Why the specimen was collected","Details concerning a service request that required a specimen to be collected.","The request may be explicit or implied such with a ServiceRequest that requires a blood draw.","","","","","","","","",,,,,"",,,,"Specimen.request",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","outboundRelationship[typeCode=FLFS].target","FiveWs.why[x]","ORC? OBR-2/3?"
 "Specimen.collection","Specimen.collection","","","",0,1,"","","","BackboneElement {[]} {[]}
-","Collection details","Details concerning the specimen collection.","","","","","","","","","",,,,,"",,,,"Specimen.collection",0,1,"","",".participation[typeCode=SBJ].act[classCode=SPECCOLLECT, moodCode=EVN]","SPM-14"
+","Collection details","Details concerning the specimen collection.","","","","","","","","","",,,,,"",,,,"Specimen.collection",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".participation[typeCode=SBJ].act[classCode=SPECCOLLECT, moodCode=EVN]","SPM-14"
 "Specimen.collection.id","Specimen.collection.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Specimen.collection.extension","Specimen.collection.extension","","extensions
@@ -73,7 +74,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Collection time","Time when specimen was collected from subject - the physiologically relevant time.","","","","","","","","","",,,,,"","type:$this}
 ","",,"closed","Specimen.collection.collected[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".effectiveTime","FiveWs.init","SPM-17"
-"Specimen.collection.collected[x]:collectedDateTime","Specimen.collection.collected[x]","collectedDateTime","","",1,1,"Y","","Y","dateTime {[]} {[]}
+"Specimen.collection.collected[x]:collectedDateTime","Specimen.collection.collected[x]","collectedDateTime","","",1,1,"","","Y","dateTime {[]} {[]}
 ","Collection time","Time when specimen was collected from subject - the physiologically relevant time.","","","","","","","","","",,,,,"",,,,"Specimen.collection.collected[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".effectiveTime","FiveWs.init","SPM-17"
 "Specimen.collection.duration","Specimen.collection.duration","","","",0,1,"","","Y","Duration {[]} {[]}
@@ -92,7 +93,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 Duration {[]} {[]}","Whether or how long patient abstained from food and/or drink","Abstinence or reduction from some or all food, drink, or both, for a period of time prior to sample collection.","Representing fasting status using this element is preferred to representing it with an observation using a 'pre-coordinated code'  such as  LOINC 2005-7 (Calcium [Moles/​time] in 2 hour Urine --12 hours fasting), or  using  a component observation ` such as `Observation.component code`  = LOINC 49541-6 (Fasting status - Reported).","Many diagnostic tests require fasting  to facilitate accurate interpretation.","","","","","","","",,"extensible","Codes describing the fasting status of the patient.","http://terminology.hl7.org/ValueSet/v2-0916","",,,,"Specimen.collection.fastingStatus[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","OBR-"
 "Specimen.processing","Specimen.processing","","","",0,*,"","","","BackboneElement {[]} {[]}
-","Processing and processing step details","Details concerning processing and processing steps for the specimen.","","","","","","","","","",,,,,"",,,,"Specimen.processing",0,*,"","",".participation[typeCode=SBJ].act[code=SPCTRT, moodCode=EVN]"
+","Processing and processing step details","Details concerning processing and processing steps for the specimen.","","","","","","","","","",,,,,"",,,,"Specimen.processing",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+",".participation[typeCode=SBJ].act[code=SPCTRT, moodCode=EVN]"
 "Specimen.processing.id","Specimen.processing.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
 "Specimen.processing.extension","Specimen.processing.extension","","extensions
@@ -115,26 +117,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Material used in the processing step","Material used in the processing step.","","","","","","","","","",,,,,"",,,,"Specimen.processing.additive",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".participation[typeCode=CSM].role[classCode=ADTV].code","SPM-6"
 "Specimen.processing.time[x]","Specimen.processing.time[x]","","","",0,1,"","","","dateTime {[]} {[]}
-Period {[]} {[]}","Date and time of specimen processing","A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin.","","","","","","","","","",,,,,"","type:$this}
-","",,"open","Specimen.processing.time[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+Period {[]} {[]}","Date and time of specimen processing","A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin.","","","","","","","","","",,,,,"",,,,"Specimen.processing.time[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".effectiveTime"
-"Specimen.processing.time[x]:timePeriod","Specimen.processing.time[x]","timePeriod","","",0,1,"","","","Period {[]} {[]}
-","Date and time of specimen processing","A record of the time or period when the specimen processing occurred.  For example the time of sample fixation or the period of time the sample was in formalin.","","","","","","","","","",,,,,"",,,,"Specimen.processing.time[x]",0,1,"","",".effectiveTime"
-"Specimen.processing.time[x]:timePeriod.id","Specimen.processing.time[x].id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"Specimen.processing.time[x]:timePeriod.extension","Specimen.processing.time[x].extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
-"Specimen.processing.time[x]:timePeriod.start","Specimen.processing.time[x].start","","","",0,1,"","","Y","dateTime {[]} {[]}
-","Starting time with inclusive boundary","The start of the period. The boundary is inclusive.","If the low element is missing, the meaning is that the low boundary is not known.","","","","","","","","",,,,,"",,,,"Period.start",0,1,"per-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","./low","DR.1"
-"Specimen.processing.time[x]:timePeriod.end","Specimen.processing.time[x].end","","","",0,1,"Y","","Y","dateTime {[]} {[]}
-","End time with inclusive boundary, if not ongoing","The end of the period. If the end of the period is missing, it means no end was known or planned at the time the instance was created. The start may be in the past, and the end date in the future, which means that period is expected/planned to end at that time.","The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.","","","If the end of the period is missing, it means that the period is ongoing","","","","","",,,,,"",,,,"Period.end",0,1,"per-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-","./high","DR.2"
 "Specimen.container","Specimen.container","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","Direct container of specimen (tube/slide, etc.)","The container holding the specimen.  The recursive nature of containers; i.e. blood in tube in tray in rack is not addressed here.","","","","","","","","","",,,,,"",,,,"Specimen.container",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".player.scopingRole[classCode=CONT].scoper"
@@ -171,6 +155,26 @@ Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Substance
 "Specimen.condition","Specimen.condition","","","",0,*,"","","Y","CodeableConcept {[]} {[]}
 ","State of the specimen","A mode or state of being that describes the nature of the specimen.","Specimen condition is an observation made about the specimen.  It's a point-in-time assessment.  It can be used to assess its quality or appropriateness for a specific test.","The specimen condition can be used to assess its quality or appropriateness for a specific test.","","","","","","","",,"extensible","Codes describing the state of the specimen.","http://terminology.hl7.org/ValueSet/v2-0493","",,,,"Specimen.condition",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","SPM-24"
-"Specimen.note","Specimen.note","","","",0,*,"Y","","","Annotation {[]} {[]}
+"Specimen.note","Specimen.note","","","",0,1,"","","","Annotation {[]} {[]}
 ","Comments","To communicate any details or issues about the specimen or during the specimen collection. (for example: broken vial, sent with patient, frozen).","","","","","","","","","",,,,,"",,,,"Specimen.note",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ",".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=""annotation""].value","OBX"
+"Specimen.note.id","Specimen.note.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
+"Specimen.note.extension","Specimen.note.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"Specimen.note.author[x]","Specimen.note.author[x]","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+string {[]} {[]}","Individual responsible for the annotation","The individual responsible for making the annotation.","Organization is used when there's no need for specific attribution as to who made the comment.","","","","","","","","",,,,,"","type:$this}
+","",,"open","Annotation.author[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Act.participant[typeCode=AUT].role","N/A"
+"Specimen.note.author[x]:authorReference","Specimen.note.author[x]","authorReference","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+","Individual responsible for the annotation","The individual responsible for making the annotation.","Organization is used when there's no need for specific attribution as to who made the comment.","","","","","","","","",,,,,"",,,,"Annotation.author[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Act.participant[typeCode=AUT].role","N/A"
+"Specimen.note.time","Specimen.note.time","","","",0,1,"","","Y","dateTime {[]} {[]}
+","When the annotation was made","Indicates when this particular annotation was made.","","","","","","","","","",,,,,"",,,,"Annotation.time",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Act.effectiveTime","N/A"
+"Specimen.note.text","Specimen.note.text","","","",1,1,"","","Y","markdown {[]} {[]}
+","The annotation  - text content (as markdown)","The text of the annotation in markdown format.","","","","","","","","","",,,,,"",,,,"Annotation.text",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Act.text","N/A"
