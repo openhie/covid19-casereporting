@@ -127,7 +127,7 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 * expirationDate 0..1
 * protocolApplied 1..1
 * protocolApplied.series 1..1
-* protocolApplied.doseNumberPositiveInt 1..1
+* protocolApplied.doseNumberPositiveInt
 * note.authorReference only Reference(Organization)
 * note 0..1
 
@@ -218,7 +218,7 @@ Description: "Covid19 Vaccination"
 * expirationDate 0..1
 * protocolApplied 1..1
 * protocolApplied.series 1..1
-* protocolApplied.doseNumberPositiveInt 1..1
+* protocolApplied.doseNumberPositiveInt
 * note.authorReference only Reference(Organization)
 * note 0..1
 
@@ -226,7 +226,7 @@ Extension: ExtNextVisit
 Id: covid19-next-vaccination
 Title: "Covid19 date of next vaccination"
 Description: "Covid19 date of next vaccination"
-* value[x] only dateTime MS
+* value[x] only dateTime 1..1
 
 Profile: Covid19ServiceRequestLocation
 Parent: Location
