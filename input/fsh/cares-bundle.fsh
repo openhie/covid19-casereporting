@@ -63,3 +63,8 @@ Description: "Example of a clinical bundle representing a case report"
 * entry[=].resource = Covid19DeathExample
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Observation/Covid19DeathExample"
+
+* entry[+].fullUrl = "Observation/Covid19LongCovidPostCovidExample"
+* entry[=].resource = Covid19LongCovidPostCovidExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Observation/Covid19LongCovidPostCovidExample"
