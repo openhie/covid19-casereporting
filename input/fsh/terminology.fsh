@@ -51,14 +51,6 @@ Description:  "Yes No Unknown"
 * $SCT#373067005 "No"
 * $SCT#261665006 "Unknown"
 
-/*ValueSet: VSCovidDiagnosis
-Id: vs-covid-diagnosis
-Title: "COVID Diagnosis list"
-Description: "COVID Diagnosis list"
-* $SCT#410605003 "Confirmed"
-* $SCT#2931005 "Probable"
-* $SCT#415684004 "Suspect"*/
-
 ValueSet: VSConditionsComorbidity
 Id: vs-conditions-comorbidity
 Title: "List of Conditions / Comorbidity"
@@ -99,20 +91,10 @@ Description: "A list of Vaccine Types"
 * $ICD#XM5JC5 "Nuvaxovid"
 * $ICD#XM1AG7 "CanSino"
 
-/*ValueSet: VSPatientOutcome
-Id: vs-patient-outcome
-Title: "Patient Outcome"
-Description: "A list of Patient Outcomes"
-* $SCT#370996005 "Recovered (Symptoms resolved)"
-* $SCT#419099009 "Died"
-* $SCT#1119303003 "Long COVID /Post-COVID"*/
-
 ValueSet: VSTestTypes
 Id: vs-test-types
 Title: "Test Types"
 Description: "A list of Test Types"
-//* $SCT#1156860005 "Rapid antigen detection immunoassay technique (qualifier value)"
-//* $SCT#9718006 "Polymerase chain reaction analysis (procedure)"
 * $LNC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"   
 * $LNC#94745-7 "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
  
