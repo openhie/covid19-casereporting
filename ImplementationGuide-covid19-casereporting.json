@@ -11,7 +11,7 @@
   "title": "COVID19 Case Reporting",
   "status": "draft",
   "experimental": false,
-  "date": "2022-11-28T14:56:48+00:00",
+  "date": "2022-11-29T10:15:59+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -575,6 +575,19 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-long-covid-post-covid"
+        },
+        "name": "Covid19 Long Covid / Post-Covid",
+        "description": "Covid19 Long Covid / Post-Covid"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Encounter"
           }
         ],
@@ -796,6 +809,19 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/Covid19LongCovidPostCovidExample"
+        },
+        "name": "Example Observation - Covid19LongCovidPostCovidExample",
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Condition"
           }
         ],
@@ -867,19 +893,6 @@
         "reference": {
           "reference": "Practitioner/PractitionerExample"
         }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          }
-        ],
-        "reference": {
-          "reference": "ValueSet/vs-patient-outcome"
-        },
-        "name": "Patient Outcome",
-        "description": "A list of Patient Outcomes"
       },
       {
         "extension": [
@@ -1122,7 +1135,7 @@
           "reference": "Bundle/CaresBundleExample"
         },
         "name": "Example Bundle - CaresBundleExample",
-        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"
       },
       {
         "extension": [
