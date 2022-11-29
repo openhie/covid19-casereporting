@@ -142,6 +142,7 @@ Description: "Covid19 Diagnosis"
 * onsetDateTime 1..1
 * recordedDate 1..1
 * abatementDateTime 0..1
+* evidence 1..1
 * evidence.code from VSPresentation (required)
 * note.authorReference only Reference(Organization)
 * note 0..1
