@@ -110,7 +110,7 @@ Description: "Covid19 Diagnosis Example"
 * recordedDate = "2022-07-28"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
-* clinicalStatus = $SCT#370996005 
+//* clinicalStatus = $SCT#370996005 
 * verificationStatus = #confirmed
 * evidence.code = $SCT#84387000
 * onsetDateTime = "2022-07-28"
@@ -339,10 +339,13 @@ Usage: #example
 Title: "Covid19 Recovered Or Symptoms Resolved"
 Description: "Covid19 Recovered Or Symptoms Resolved"
 * status = #final
+* code = $SCT#370996005
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
-* code = $SCT#439771001
-* effectiveDateTime = "2022-11-09"
+* effectiveDateTime =  "2022-11-09"
+* note.authorReference = Reference(Covid19OrganizationExample)
+* note.text = "Some other text..."
+* note.time = "2015-02-07T13:28:17-05:00"
 
 Instance: Covid19DeathExample
 InstanceOf: Covid19Death
@@ -350,7 +353,24 @@ Usage: #example
 Title: "Covid19 Death"
 Description: "Covid19 Death"
 * status = #final
+* code = $SCT#419099009
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
-* code = $SCT#399753006
 * effectiveDateTime =  "2022-11-09"
+* note.authorReference = Reference(Covid19OrganizationExample)
+* note.text = "Some other text..."
+* note.time = "2015-02-07T13:28:17-05:00"
+
+Instance: Covid19LongCovidPostCovidExample
+InstanceOf: Covid19LongCovidPostCovid
+Usage: #example
+Title: "Covid19 Long Covid / Post-Covid"
+Description: "Covid19 Long Covid / Post-Covid"
+* status = #final
+* code = $SCT#1119303003
+* subject = Reference(Covid19PatientExample)
+* encounter = Reference(Covid19AssessmentEncounterExample)
+* effectiveDateTime =  "2022-11-09"
+* note.authorReference = Reference(Covid19OrganizationExample)
+* note.text = "Some other text..."
+* note.time = "2015-02-07T13:28:17-05:00"

@@ -47,7 +47,6 @@ Description: "This Patient profile allows the exchange of patient information, i
 * identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
 
 * managingOrganization 1..1
-* maritalStatus MS
 
 Extension: ExtCovid19EverHospitalised
 Id: covid19-ever-hospitalised
@@ -136,8 +135,8 @@ Description: "Covid19 Diagnosis"
 * recordedDate MS // Date of Diagnosis
 * verificationStatus MS //1..1 MS
 //* verificationStatus from VSCovidDiagnosis //Covid Diagnosis
-* clinicalStatus from VSPatientOutcome
-* clinicalStatus 1..1 MS // Patient Outcome
+//* clinicalStatus from VSPatientOutcome
+//* clinicalStatus 1..1 MS // Patient Outcome
 * abatementDateTime 0..1 MS //Date recovered or date symptoms resolved / Date Died
 * note MS  // Long covid description and/or Additional notes
 * evidence.code from VSPresentation
@@ -245,11 +244,39 @@ Parent: Observation
 Id: covid19-recovered-or-symptoms-resolved 
 Title: "Covid19 Recovered Or Symptoms Resolved"
 Description: "Covid19 Recovered Or Symptoms Resolved"
-* effectiveDateTime MS
+* status 1..1
+* code = $SCT#370996005
+* subject only Reference(Patient)
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* note.authorReference only Reference(Organization)
+* note 1..1
 
 Profile: Covid19Death
 Parent: Observation
 Id: covid19-death 
 Title: "Covid19 Death"
 Description: "Covid19 Death"
-* effectiveDateTime 1..1 MS  //Covid19DeathDate
+* status 1..1
+* code = $SCT#419099009
+* subject only Reference(Patient)
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* note.authorReference only Reference(Organization)
+* note 1..1
+
+Profile: Covid19LongCovidPostCovid
+Parent: Observation
+Id: covid19-long-covid-post-covid
+Title: "Covid19 Long Covid / Post-Covid"
+Description: "Covid19 Long Covid / Post-Covid"
+* status 1..1
+* code = $SCT#1119303003
+* subject only Reference(Patient)
+* subject 1..1
+* encounter 1..1
+* effectiveDateTime 1..1
+* note.authorReference only Reference(Organization)
+* note 1..1

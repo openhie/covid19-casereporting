@@ -99,13 +99,13 @@ Description: "A list of Vaccine Types"
 * $ICD#XM5JC5 "Nuvaxovid"
 * $ICD#XM1AG7 "CanSino"
 
-ValueSet: VSPatientOutcome
+/*ValueSet: VSPatientOutcome
 Id: vs-patient-outcome
 Title: "Patient Outcome"
 Description: "A list of Patient Outcomes"
 * $SCT#370996005 "Recovered (Symptoms resolved)"
 * $SCT#419099009 "Died"
-* $SCT#1119303003 "Long COVID /Post-COVID"
+* $SCT#1119303003 "Long COVID /Post-COVID"*/
 
 ValueSet: VSTestTypes
 Id: vs-test-types
