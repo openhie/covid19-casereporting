@@ -14,8 +14,8 @@
     <sch:rule context="f:Specimen">
       <sch:assert test="count(f:identifier) &gt;= 1">identifier: minimum cardinality of 'identifier' is 1</sch:assert>
       <sch:assert test="count(f:identifier) &lt;= 1">identifier: maximum cardinality of 'identifier' is 1</sch:assert>
-      <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:subject) &gt;= 1">subject: minimum cardinality of 'subject' is 1</sch:assert>
+      <sch:assert test="count(f:note) &lt;= 1">note: maximum cardinality of 'note' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -105,6 +105,12 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:title>Specimen.collection</sch:title>
+    <sch:rule context="f:Specimen/f:collection">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>Specimen.collection.extension</sch:title>
     <sch:rule context="f:Specimen/f:collection/f:extension">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
@@ -162,6 +168,12 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:title>Specimen.processing</sch:title>
+    <sch:rule context="f:Specimen/f:processing">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>Specimen.processing.extension</sch:title>
     <sch:rule context="f:Specimen/f:processing/f:extension">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
@@ -196,25 +208,6 @@
   <sch:pattern>
     <sch:title>Specimen.processing.time[x] 1</sch:title>
     <sch:rule context="f:Specimen/f:processing/f:time[x]">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>Specimen.processing.time[x].extension 1</sch:title>
-    <sch:rule context="f:Specimen/f:processing/f:time[x]/f:extension">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
-      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])">Must have either extensions or value[x], not both</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>Specimen.processing.time[x].start 1</sch:title>
-    <sch:rule context="f:Specimen/f:processing/f:time[x]/f:start">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>Specimen.processing.time[x].end 1</sch:title>
-    <sch:rule context="f:Specimen/f:processing/f:time[x]/f:end">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -281,8 +274,43 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:title>f:Specimen/f:note</sch:title>
+    <sch:rule context="f:Specimen/f:note">
+      <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:time) &lt;= 1">time: maximum cardinality of 'time' is 1</sch:assert>
+      <sch:assert test="count(f:text) &gt;= 1">text: minimum cardinality of 'text' is 1</sch:assert>
+      <sch:assert test="count(f:text) &lt;= 1">text: maximum cardinality of 'text' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>Specimen.note</sch:title>
     <sch:rule context="f:Specimen/f:note">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Specimen.note.extension</sch:title>
+    <sch:rule context="f:Specimen/f:note/f:extension">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
+      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])">Must have either extensions or value[x], not both</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Specimen.note.author[x] 1</sch:title>
+    <sch:rule context="f:Specimen/f:note/f:author[x]">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Specimen.note.time</sch:title>
+    <sch:rule context="f:Specimen/f:note/f:time">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Specimen.note.text</sch:title>
+    <sch:rule context="f:Specimen/f:note/f:text">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
