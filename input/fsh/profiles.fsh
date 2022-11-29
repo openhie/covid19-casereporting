@@ -115,17 +115,19 @@ Parent: Immunization
 Id: covid19-assessment-vaccination
 Title: "Covid19 Vaccination info included as part of the Assessment"
 Description: "Covid19 Vaccination info included as part of the Assessment"
-* patient MS // Patient ref
-* encounter MS //Covid19Assessment ref
-* vaccineCode MS
-* vaccineCode from VSVaccineTypes 
-* protocolApplied.doseNumberPositiveInt MS
-* protocolApplied.series 1..1 MS //  VSVaccineSeries  #TODO conditional validation for aplying binding validation
-* vaccineCode.text 0..1 MS //Other vaccine
-* occurrenceDateTime  MS // Vaccination date    #TODO - check all required fields
-* reportOrigin 1..1 MS 
-* reportOrigin from VSSourceOfInfo  // source of information
-* reportOrigin.text MS // Other Source of info details
+* status = #completed
+* vaccineCode from VSVaccineTypes (required)
+* patient 1..1
+* encounter 1..1
+* occurrenceDateTime 1..1
+* reportOrigin from VSSourceOfInfo (required)
+* lotNumber 1..1
+* expirationDate 0..1
+* protocolApplied 1..1
+* protocolApplied.series 1..1
+* protocolApplied.doseNumberPositiveInt 1..1
+* note.authorReference only Reference(Organization)
+* note 0..1
 
 Profile: Covid19Diagnosis
 Parent: Condition
@@ -202,42 +204,41 @@ Parent: Immunization
 Id: covid19-vaccination
 Title: "Covid19 Vaccination"
 Description: "Covid19 Vaccination"
-* patient MS // Patient reference
-* occurrenceDateTime 1..1 MS //Vaccination date
-* protocolApplied 1..1 MS
-* protocolApplied.series 1..1 MS //  VSVaccineSeries  #TODO conditional validation for aplying binding validation
-* protocolApplied.doseNumberPositiveInt 1..1  MS 
-* expirationDate MS    //Vaccine expiration date
-* vaccineCode MS    //Vaccine administered  
-* vaccineCode from VSVaccineTypes
-* vaccineCode.text MS //other vaccine details
-* lotNumber  1..1 MS  //Vaccine lot number
-* note MS // notes
-* reportOrigin 1..1 MS 
-* reportOrigin from VSSourceOfInfo  // source of information
-* reportOrigin.text MS // Other Source of info details
+* status = #completed
+* vaccineCode from VSVaccineTypes (required)
+* patient 1..1
+* encounter 1..1
+* occurrenceDateTime 1..1
+* reportOrigin from VSSourceOfInfo (required)
+* lotNumber 1..1
+* expirationDate 0..1
+* protocolApplied 1..1
+* protocolApplied.series 1..1
+* protocolApplied.doseNumberPositiveInt 1..1
+* note.authorReference only Reference(Organization)
+* note 0..1
 
 Extension: ExtNextVisit
 Id: covid19-next-vaccination
 Title: "Covid19 date of next vaccination"
 Description: "Covid19 date of next vaccination"
-* value[x] only dateTime  //// date of next vaccination
+* value[x] only dateTime
 
 Profile: Covid19ServiceRequestLocation
 Parent: Location
 Id: covid19-service-request-location
 Title: "Covid19 Service Request Location"
 Description: "Covid19 Service Request Location"
-* name MS
-* address MS
+* name 1..1
+* address 1..1
 
 Profile: Covid19AdmissionLocation
 Parent: Location
 Id: covid19-admission-location
 Title: "Covid19 Service Request Location"
 Description: "Covid19 Service Request Location"
-* name MS
-* address MS
+* name 1..1
+* address 1..1
 
 Profile: Covid19RecoveredOrSymptomsResolved
 Parent: Observation
