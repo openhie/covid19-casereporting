@@ -12,7 +12,7 @@
   <title value="COVID19 Case Reporting"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-11-28T14:56:48+00:00"/>
+  <date value="2022-11-29T10:50:32+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -391,6 +391,16 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-long-covid-post-covid"/>
+      </reference>
+      <name value="Covid19 Long Covid / Post-Covid"/>
+      <description value="Covid19 Long Covid / Post-Covid"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Encounter"/>
       </extension>
       <reference>
@@ -561,6 +571,16 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/Covid19LongCovidPostCovidExample"/>
+      </reference>
+      <name value="Example Observation - Covid19LongCovidPostCovidExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Condition"/>
       </extension>
       <reference>
@@ -616,16 +636,6 @@
       <reference>
         <reference value="Practitioner/PractitionerExample"/>
       </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/vs-patient-outcome"/>
-      </reference>
-      <name value="Patient Outcome"/>
-      <description value="A list of Patient Outcomes"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -811,7 +821,7 @@
         <reference value="Bundle/CaresBundleExample"/>
       </reference>
       <name value="Example Bundle - CaresBundleExample"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

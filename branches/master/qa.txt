@@ -1,11 +1,11 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 12, warn = 56, info = 10
+err = 9, warn = 56, info = 10
 IG Publisher Version: 1.2.19
-Generated Mon Nov 28 14:58:36 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
- Build Errors : 6 / 32 / 0
- /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 2 / 3 / 28
+Generated Tue Nov 29 10:51:37 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
+ Build Errors : 6 / 33 / 0
+ /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 1 / 3 / 30
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 10
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample : 0 / 0 / 9
@@ -20,6 +20,7 @@ Generated Mon Nov 28 14:58:36 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Location-Covid19ServiceRequestLocationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19DeathExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Observation-Covid19LongCovidPostCovidExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19PresentingSymptomsExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19RecoveredOrSymptomsResolvedExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Observation-Covid19TestResultExample : 0 / 0 / 1
@@ -36,10 +37,11 @@ Generated Mon Nov 28 14:58:36 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-death : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-long-covid-post-covid : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-medication-request : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-next-vaccination : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization : 0 / 0 / 1
@@ -60,7 +62,6 @@ Generated Mon Nov 28 14:58:36 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-patient-outcome : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-presentation : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info : 0 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms : 0 / 1 / 1
@@ -92,6 +93,7 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ServiceRequest/Covid19LabOrderExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Specimen/Covid19SpecimenLabResultExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Condition/Covid19ConditionsOrComorbidityExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19LongCovidPostCovidExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Condition/Covid19DiagnosisExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Immunization/Covid19VaccinationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Practitioner/PractitionerExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
@@ -111,7 +113,6 @@ WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-ta
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/Bundle-CaresBundleExample.json ==
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#428792000)
-ERROR: Bundle/CaresBundleExample: Bundle.entry[4].resource.ofType(Condition).clinicalStatus: None of the codings provided are in the value set 'Condition Clinical Status Codes' (http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1), and a coding from this value set is required) (codes = http://snomed.info/sct#370996005)
 ERROR: Bundle/CaresBundleExample: Bundle.entry[4].resource.ofType(Condition).verificationStatus: None of the codings provided are in the value set 'ConditionVerificationStatus' (http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.1), and a coding from this value set is required) (codes = null#confirmed)
 WARNING: Bundle/CaresBundleExample: Bundle.entry[4].resource.ofType(Condition).verificationStatus.coding[0]: A code with no system has no defined meaning. A system should be provided
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
@@ -143,6 +144,7 @@ INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.co
 == fsh-generated/resources/Location-Covid19ServiceRequestLocationExample.json ==
 == fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample.json ==
 == fsh-generated/resources/Observation-Covid19DeathExample.json ==
+== fsh-generated/resources/Observation-Covid19LongCovidPostCovidExample.json ==
 == fsh-generated/resources/Observation-Covid19PresentingSymptomsExample.json ==
 == fsh-generated/resources/Observation-Covid19RecoveredOrSymptomsResolvedExample.json ==
 == fsh-generated/resources/Observation-Covid19TestResultExample.json ==
@@ -161,11 +163,10 @@ INFORMATION: Specimen/Covid19SpecimenLabResultExample: Specimen.processing[0].ti
 == fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised.json ==
 == fsh-generated/resources/StructureDefinition-covid19-death.json ==
 == fsh-generated/resources/StructureDefinition-covid19-diagnosis.json ==
-ERROR: Covid19 Diagnosis.Condition.clinicalStatus: Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome is not a subset of binding http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1
-ERROR: StructureDefinition/covid19-diagnosis: StructureDefinition: Binding http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-patient-outcome is not a subset of binding http://hl7.org/fhir/ValueSet/condition-clinical|4.0.1
 == fsh-generated/resources/StructureDefinition-covid19-encounter.json ==
 == fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised.json ==
 == fsh-generated/resources/StructureDefinition-covid19-lab-order.json ==
+== fsh-generated/resources/StructureDefinition-covid19-long-covid-post-covid.json ==
 == fsh-generated/resources/StructureDefinition-covid19-medication-request.json ==
 == fsh-generated/resources/StructureDefinition-covid19-next-vaccination.json ==
 == fsh-generated/resources/StructureDefinition-covid19-organization.json ==
@@ -194,8 +195,6 @@ WARNING: ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed: ValueS
 WARNING: ValueSet/vs-covid19-specimen-type: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-covid19-test-result.json ==
 WARNING: ValueSet/vs-covid19-test-result: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
-== fsh-generated/resources/ValueSet-vs-patient-outcome.json ==
-WARNING: ValueSet/vs-patient-outcome: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-presentation.json ==
 WARNING: ValueSet/vs-presentation: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-source-of-info.json ==
