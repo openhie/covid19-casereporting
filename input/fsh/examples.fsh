@@ -239,11 +239,10 @@ Title: "Covid19 Lab Results example"
 Description: "Covid19 Lab Results example"
 * status = #final
 * code = $LNC#94558-4
-//* valueDateTime = "2022-07-28"
-* valueCodeableConcept = $SCT#10828004
 * subject = Reference(Covid19PatientExample)
-* encounter = Reference(Covid19AssessmentEncounterExample) 
-* effectiveDateTime = "2022-07-28"  //test result date
+* encounter = Reference(Covid19AssessmentEncounterExample)
+* effectiveDateTime = "2022-07-28"
+* valueCodeableConcept = $SCT#10828004
 
 Instance: Covid19VaccinationExample
 InstanceOf: Covid19Vaccination
