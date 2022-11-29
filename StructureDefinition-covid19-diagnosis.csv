@@ -126,7 +126,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Condition.stage.type","Condition.stage.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Kind of staging","The kind of staging, such as pathological or clinical staging.","","","","","","","","","",,"example","Codes describing the kind of condition staging (e.g. clinical or pathological).","http://hl7.org/fhir/ValueSet/condition-stage-type","",,,,"Condition.stage.type",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=""stage type""]"
-"Condition.evidence","Condition.evidence","","","",0,*,"","","","BackboneElement {[]} {[]}
+"Condition.evidence","Condition.evidence","","","",1,1,"","","","BackboneElement {[]} {[]}
 ","Supporting evidence","Supporting evidence / manifestations that are the basis of the Condition's verification status, such as evidence that confirmed or refuted the condition.","The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.","","","","","","","","",,,,,"",,,,"Condition.evidence",0,*,"","con-2:evidence SHALL have code or details {code.exists() or detail.exists()}
 ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}",".outboundRelationship[typeCode=SPRT].target[classCode=OBS, moodCode=EVN]"
 "Condition.evidence.id","Condition.evidence.id","","","",0,1,"","","","string {[]} {[]}

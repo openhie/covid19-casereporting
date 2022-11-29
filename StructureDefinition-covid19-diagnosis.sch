@@ -15,6 +15,8 @@
       <sch:assert test="count(f:verificationStatus) &gt;= 1">verificationStatus: minimum cardinality of 'verificationStatus' is 1</sch:assert>
       <sch:assert test="count(f:encounter) &gt;= 1">encounter: minimum cardinality of 'encounter' is 1</sch:assert>
       <sch:assert test="count(f:recordedDate) &gt;= 1">recordedDate: minimum cardinality of 'recordedDate' is 1</sch:assert>
+      <sch:assert test="count(f:evidence) &gt;= 1">evidence: minimum cardinality of 'evidence' is 1</sch:assert>
+      <sch:assert test="count(f:evidence) &lt;= 1">evidence: maximum cardinality of 'evidence' is 1</sch:assert>
       <sch:assert test="count(f:note) &lt;= 1">note: maximum cardinality of 'note' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
