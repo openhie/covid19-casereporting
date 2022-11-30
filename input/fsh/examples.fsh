@@ -103,7 +103,6 @@ Description: "Covid19 Conditions or comorbidity example"
 * note.text = "Other conditionss or comorbidities here"
 * note.time = "2015-02-07T13:28:17-05:00"
   
-
 Instance: Covid19DiagnosisExample
 InstanceOf: Covid19Diagnosis
 Usage: #example
@@ -132,7 +131,7 @@ Description: "Covid19 Treatment dispensed or prescribed example"
 * medicationCodeableConcept = $RXN#2599543
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "additional notes here"
-* note.time = "2015-02-07T13:28:17-05:00" //Medication Request Date
+* note.time = "2015-02-07T13:28:17-05:00"
 
 Instance: Covid19AssessmentVaccinationExample
 InstanceOf: Covid19AssessmentVaccination
@@ -325,7 +324,7 @@ Description: "Covid19 Long Covid / Post-Covid"
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
 
-Instance: CaresSubmitLabRejectionBundleExample
+Instance: CaresSubmitLabRejectionExample
 InstanceOf: Covid19LabTask
 Usage: #example
 Title: "Covid19 Lab Order Cancellation  example"
