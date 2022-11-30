@@ -63,7 +63,7 @@ Description: "Covid19 Assessment Encounter example"
 * subject = Reference(Covid19PatientExample)
 * period.start = "2022-07-28"
 * period.end  = "2022-08-15"
-* reasonCode.code = $SCT#428792000
+* reasonCode = $SCT#428792000
 * location.location = Reference(Covid19AdmissionLocationExample)
 * location.physicalType = $SCT#225746001
 
@@ -140,7 +140,7 @@ Usage: #example
 Title: "Covid19 Vaccine Type Administered example"
 Description: "Covid19 Vaccine Type Administered example"
 * status = #completed
-* vaccineCode.code = $ICD#XM8NQ0
+* vaccineCode = $ICD#XM8NQ0
 * patient = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * occurrenceDateTime = "2022-07-28"
@@ -170,7 +170,7 @@ Description: "Covid19 Lab Order example"
 * requester = Reference(PractitionerExample)
 * locationReference = Reference(Covid19ServiceRequestLocationExample)
 * doNotPerform = false
-* reasonCode.code = $SCT#397933008
+* reasonCode = $SCT#397933008
 * specimen = Reference(Covid19SpecimenExample)
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "additional notes here"
@@ -237,7 +237,7 @@ Usage: #example
 Title: "Covid19 Vaccination example"
 Description: "Covid19 Vaccination example"
 * status = #completed
-* vaccineCode.code = $ICD#XM4YL8
+* vaccineCode = $ICD#XM4YL8
 * patient = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * occurrenceDateTime = "2022-07-28"
