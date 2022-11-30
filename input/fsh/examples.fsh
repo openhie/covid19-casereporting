@@ -3,8 +3,8 @@ InstanceOf: Covid19Organization
 Usage: #example
 Title: "Covid19 Organization example"
 Description: "Covid19 Organization example"
-* identifier[PRN].value = "facility1"
-* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
+* identifier[prn].value = "facility1"
+* identifier[prn].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
 * name = "Covid19 Organization"
 * address[0].country = "Country"
 * address[0].state = "State"
