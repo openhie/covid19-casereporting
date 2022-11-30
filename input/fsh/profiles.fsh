@@ -66,25 +66,32 @@ Parent: Encounter
 Id: covid19-encounter
 Title: "Covid19 Assessment Encounter"
 Description: "Covid19 Assessment Encounter"
-* period.start 1..1 MS  //Date of assessment
-* subject 1..1 MS //Patient reference
-* reasonCode 1..* MS  
-* reasonCode from VSReasonForAssessmentOrTestNotPerformed 
-* reasonCode.text MS
-* location.physicalType from VSAdmissionTypes 
-* location.physicalType MS //Admission
-* extension contains ExtNextVisit named nextVisit 0..1 MS
-* extension contains ExtCovid19EverHospitalised named extCovid19EverHospitalised 1..1 MS
-* extension contains ExtCovid19DateLastHospitalised named extCovid19DateLastHospitalised 0..1 MS
+* extension contains ExtNextVisit named nextVisit 0..1
+* extension contains ExtCovid19EverHospitalised named extCovid19EverHospitalised 0..1
+* extension contains ExtCovid19DateLastHospitalised named extCovid19DateLastHospitalised 0..1
+* status = #finished
+* class 1..1
+* subject only Reference(Patient)
+* subject 1..1
+* period 1..1
+* reasonCode from VSReasonForAssessmentOrTestNotPerformed (required)
+* location 1..1
+* location.location 1..1
+* location.physicalType from VSAdmissionTypes (required)
 
 Profile: Covid19PresentingSymptoms
 Parent: Observation
 Id: covid19-presenting-symptoms 
 Title: "Covid19 Symptom"
 Description: "Covid19 Symptom"
-* code from VSSymptoms
-* code MS
-* note MS // other presenting symptoms
+* status = #final
+* subject only Reference(Patient)
+* subject 1..1
+* encounter 1..1
+* code from VSSymptoms (required)
+* effectiveDateTime 1..1
+* note.authorReference only Reference(Organization)
+* note 0..1
 
 Extension: ExtCovid19ConditionsOrComorbiditiesPresent
 Id: covid19-conditions-or-comorbidities-present
@@ -98,17 +105,24 @@ Parent: Condition
 Id: covid19-conditions-or-comorbidities
 Title: "Covid19 Conditions or comorbidity"
 Description: "Covid19 Conditions or comorbidity"
-* code MS
-* code from VSConditionsComorbidity  // 
-* note MS  //OtherConditions   
-* extension contains ExtCovid19ConditionsOrComorbiditiesPresent named extCovid19ConditionsOrComorbiditiesPresent 1..1 MS 
+* extension contains ExtCovid19ConditionsOrComorbiditiesPresent named extCovid19ConditionsOrComorbiditiesPresent 1..1
+* code from VSConditionsComorbidity (required)
+* subject only Reference(Patient)
+* subject 1..1
+* encounter 1..1
+* note.authorReference only Reference(Organization)
+* note 0..1
 
 Profile: Covid19VaccineDoseEverReceived
 Parent: Observation
 Id: covid19-vaccine-dose-ever-received
 Title: "Covid19 Vaccine Dose Received"
 Description: "Covid19 Vaccine Dose Received"
-* code from VSYesNoUnknown
+* status = #final
+* code from VSYesNoUnknown (required)
+* subject only Reference(Patient)
+* subject 1..1
+* encounter 1..1
 
 Profile: Covid19AssessmentVaccination
 Parent: Immunization
