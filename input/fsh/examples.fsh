@@ -113,7 +113,6 @@ Description: "Covid19 Diagnosis Example"
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * onsetDateTime = "2022-07-28"
 * recordedDate = "2022-07-28"
-* abatementDateTime = "2022-07-28"
 * evidence.code = $SCT#84387000
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "additional notes here"
