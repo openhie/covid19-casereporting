@@ -1,14 +1,15 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 6, warn = 54, info = 8
+err = 2, warn = 56, info = 8
 IG Publisher Version: 1.2.19
-Generated Wed Nov 30 09:14:10 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
- Build Errors : 6 / 33 / 0
+Generated Wed Nov 30 11:31:04 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
+ Build Errors : 2 / 35 / 0
  /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 0 / 2 / 30
- /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 2
- /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 9
- /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample : 0 / 0 / 9
+ /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 3
+ /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 10
+ /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample : 0 / 0 / 10
  /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info : 0 / 2 / 2
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 0 / 0 / 1
@@ -28,7 +29,7 @@ Generated Wed Nov 30 09:14:10 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Organization-Covid19OrganizationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Patient-Covid19PatientExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Practitioner-PractitionerExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ServiceRequest-Covid19LabOrderExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ServiceRequest-Covid19ServiceRequestExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenLabResultExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission-location : 0 / 0 / 1
@@ -41,6 +42,7 @@ Generated Wed Nov 30 09:14:10 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-task : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-long-covid-post-covid : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-medication-request : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-next-vaccination : 0 / 0 / 1
@@ -54,6 +56,7 @@ Generated Wed Nov 30 09:14:10 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccination : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-Covid19LabOrderCancellationExample : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Task-Covid19LabOrderRejectionExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-LabOrderTaskExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-LabResultTaskExample : 0 / 0 / 2
  /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes : 0 / 1 / 1
@@ -73,7 +76,6 @@ Generated Wed Nov 30 09:14:10 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
 </table>
 == n/a ==
 WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be openhie.fhir.covid
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Task/Covid19LabOrderCancellationExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Task/Covid19LabOrderCancellationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Immunization/Covid19AssessmentVaccinationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource DiagnosticReport/Covid19LabResultsDiagnosticReportExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
@@ -81,16 +83,15 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Location/Covid19ServiceRequestLocationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Covid19OrganizationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/CaresSubmitLaborderBundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Task/LabResultTaskExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Task/LabResultTaskExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Encounter/Covid19AssessmentEncounterExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/CaresSubmitLabCancellationBundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19TestResultExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19VaccineDoseEverReceivedExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/Covid19PatientExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19DeathExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Location/Covid19AdmissionLocationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19PresentingSymptomsExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ServiceRequest/Covid19LabOrderExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Specimen/Covid19SpecimenLabResultExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Condition/Covid19ConditionsOrComorbidityExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19LongCovidPostCovidExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
@@ -98,12 +99,12 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Immunization/Covid19VaccinationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Practitioner/PractitionerExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/PractitionerExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Task/LabOrderTaskExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Task/LabOrderTaskExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/CaresSubmitLabResultBundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Task/Covid19LabOrderRejectionExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ServiceRequest/Covid19ServiceRequestExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource MedicationRequest/Covid19MedicationRequestExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Specimen/Covid19SpecimenExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/CaresSubmitLabRejectionBundleExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/CaresSubmitLabRejectionBundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/CaresBundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19RecoveredOrSymptomsResolvedExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
@@ -117,6 +118,7 @@ INFORMATION: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immuniza
 WARNING: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
 WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
+== fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json ==
 INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[0].resource.ofType(Task).output[0].type.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output' is unknown so the code cannot be validated
@@ -147,7 +149,7 @@ INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.co
 == fsh-generated/resources/Organization-Covid19OrganizationExample.json ==
 == fsh-generated/resources/Patient-Covid19PatientExample.json ==
 == fsh-generated/resources/Practitioner-PractitionerExample.json ==
-== fsh-generated/resources/ServiceRequest-Covid19LabOrderExample.json ==
+== fsh-generated/resources/ServiceRequest-Covid19ServiceRequestExample.json ==
 == fsh-generated/resources/Specimen-Covid19SpecimenExample.json ==
 == fsh-generated/resources/Specimen-Covid19SpecimenLabResultExample.json ==
 == fsh-generated/resources/StructureDefinition-covid19-admission-location.json ==
@@ -160,6 +162,7 @@ INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.co
 == fsh-generated/resources/StructureDefinition-covid19-encounter.json ==
 == fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised.json ==
 == fsh-generated/resources/StructureDefinition-covid19-lab-order.json ==
+== fsh-generated/resources/StructureDefinition-covid19-lab-task.json ==
 == fsh-generated/resources/StructureDefinition-covid19-long-covid-post-covid.json ==
 == fsh-generated/resources/StructureDefinition-covid19-medication-request.json ==
 == fsh-generated/resources/StructureDefinition-covid19-next-vaccination.json ==
@@ -173,6 +176,7 @@ INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.co
 == fsh-generated/resources/StructureDefinition-covid19-vaccination.json ==
 == fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received.json ==
 == fsh-generated/resources/Task-Covid19LabOrderCancellationExample.json ==
+== fsh-generated/resources/Task-Covid19LabOrderRejectionExample.json ==
 == fsh-generated/resources/Task-LabOrderTaskExample.json ==
 == fsh-generated/resources/Task-LabResultTaskExample.json ==
 INFORMATION: Task/LabResultTaskExample: Task.output[0].type.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output' is unknown so the code cannot be validated
