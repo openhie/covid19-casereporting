@@ -20,32 +20,33 @@ InstanceOf: Covid19Patient
 Usage: #example
 Title: "Covid19 Patient example"
 Description: "Covid19 Patient example"
-* active = true
-* name.use = #official
-* name.given = "Jane"
-* name.given[1] = "Maria" //middle name
-* name.family = "Smith"
-* gender = #female
-//* extension[keyPopulation].valueCodeableConcept = #GENERAL-POPULATION
-* birthDate = "1986-06-04"
-* telecom.system = #phone
-* telecom.value = "+27825556666"
-* address.country = "South Africa"
-* address.state = "Western Province"
-* address.district = "City of Cape Town"
-* address.city = "Cape Town"
 * identifier[passport].value = "PASSPORT1234567"
 * identifier[passport].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport"
 * identifier[national].value = "NAT1234567"
 * identifier[national].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
 * identifier[pos].value = "EMR1234567"
 * identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
-* managingOrganization = Reference(Covid19OrganizationExample)
-* contact[0].relationship.coding.code = #N   //https://hl7.org/fhir/valueset-patient-contactrelationship.html
-* contact[0].relationship.coding.system =  "http://terminology.hl7.org/CodeSystem/v2-0131"
-* contact[0].name.family = "John"
+* active = true
+* name.use = #official
+* name.family = "Smith"
+* name.given[0] = "Jane"
+* name.given[1] = "Maria"
+* telecom.system = #phone
+* telecom.value = "+27825556666"
+* telecom.system = #email
+* telecom.value = "someone@example.com"
+* gender = #female
+* birthDate = "1986-06-04"
+* address.country = "South Africa"
+* address.state = "Western Province"
+* address.district = "City of Cape Town"
+* address.city = "Cape Town"
+* contact[0].relationship.coding.code = #N
+* contact[0].relationship.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0131"
+* contact[0].name.family = "Doe"
 * contact[0].telecom.system = #phone
-* contact[0].telecom.value = "+27825556667"
+* contact[0].telecom.value = "+27829999999"
+* managingOrganization = Reference(Covid19OrganizationExample)
 
 Instance: Covid19AssessmentEncounterExample
 InstanceOf: Covid19AssessmentEncounter    
