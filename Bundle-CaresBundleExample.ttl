@@ -204,24 +204,23 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"Covid19AssessmentEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter &quot;Covid19AssessmentEncounterExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Covid19 Assessment Encounter</a></p></div><p><b>Covid19 Ever Hospitalized</b>: Yes <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#373066001)</span></p><p><b>Covid19 date of next vaccination</b>: 2022-07-28</p><p><b>Covid19 Date Last Hospitalised</b>: 2022-07-28</p><p><b>status</b>: finished</p><p><b>class</b>: short stay (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code SS = 'short stay', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Person exposed to disease (person) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#428792000)</span></p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td><td><b>PhysicalType</b></td></tr><tr><td>*</td><td><a href=\"#Location_Covid19AdmissionLocationExample\">See above (Location/Covid19AdmissionLocationExample)</a></td><td>Ward <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#225746001)</span></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"Covid19AssessmentEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter &quot;Covid19AssessmentEncounterExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Covid19 Assessment Encounter</a></p></div><p><b>Covid19 date of next vaccination</b>: 2022-07-28</p><p><b>Covid19 Ever Hospitalized</b>: Yes (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#373066001)</span></p><p><b>Covid19 Date Last Hospitalised</b>: 2022-07-28</p><p><b>status</b>: finished</p><p><b>class</b>: short stay (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code SS = 'short stay', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><p><b>reasonCode</b>: Person exposed to disease (person) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#428792000)</span></p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td><td><b>PhysicalType</b></td></tr><tr><td>*</td><td><a href=\"#Location_Covid19AdmissionLocationExample\">See above (Location/Covid19AdmissionLocationExample)</a></td><td>Ward <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#225746001)</span></td></tr></table></div>"
   ];
   fhir:DomainResource.extension [
      fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination" ];
+     fhir:Extension.valueDateTime [ fhir:value "2022-07-28"^^xsd:date ]
+  ], [
+     fhir:index 1;
      fhir:Extension.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised" ];
      fhir:Extension.valueCodeableConcept [
        fhir:CodeableConcept.coding [
          fhir:index 0;
          a sct:373066001;
          fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:Coding.code [ fhir:value "373066001" ];
-         fhir:Coding.display [ fhir:value "Yes" ]
+         fhir:Coding.code [ fhir:value "373066001" ]
        ]
      ]
-  ], [
-     fhir:index 1;
-     fhir:Extension.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination" ];
-     fhir:Extension.valueDateTime [ fhir:value "2022-07-28"^^xsd:date ]
   ], [
      fhir:index 2;
      fhir:Extension.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised" ];
@@ -260,8 +259,7 @@
          fhir:index 0;
          a sct:225746001;
          fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:Coding.code [ fhir:value "225746001" ];
-         fhir:Coding.display [ fhir:value "Ward" ]
+         fhir:Coding.code [ fhir:value "225746001" ]
        ]
      ]
   ] .
