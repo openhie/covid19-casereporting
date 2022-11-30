@@ -43,6 +43,7 @@ Description: "Covid19 Patient example"
 * address.city = "Cape Town"
 * contact[0].relationship.coding.code = #N
 * contact[0].relationship.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0131"
+* contact[0].name.given = "John" 
 * contact[0].name.family = "Doe"
 * contact[0].telecom.system = #phone
 * contact[0].telecom.value = "+27829999999"
@@ -206,17 +207,17 @@ Description: "Covid19 Specimen example"
 * note.time = "2015-02-07T13:28:17-05:00" //Covdi19SpecimenNoteDate
 
 Instance: Covid19LabResultsDiagnosticReportExample
-InstanceOf: DiagnosticReport
+InstanceOf: Covid19DiagnosticReport
 Usage: #example
 Title: "Covid19 Lab Results Diagnostic Report example"
 Description: "Covid19 Lab Results Diagnostic Report example"
+* basedOn = Reference(Covid19ServiceRequestExample)
+* status = #final
 * code = $LNC#94558-4 
-* basedOn = Reference(Covid19ServiceRequestExample) 
 * subject = Reference(Covid19PatientExample) 
-* status = #final 
-* result = Reference(Covid19TestResultExample)
 * performer = Reference(PractitionerExample)
-* conclusion = "Some textual conclusion"
+* result = Reference(Covid19TestResultExample)
+* conclusion = "Some conclusion text"
 
 Instance: Covid19TestResultExample
 InstanceOf: Covid19TestResult
@@ -251,14 +252,14 @@ Description: "Covid19 Vaccination example"
 * note.time = "2015-02-07T13:28:17-05:00"
 
 Instance: PractitionerExample
-InstanceOf: Practitioner
+InstanceOf: Covid19Practitioner
 Usage: #example
 Title: "Practitioner example"
 Description: "Practitioner example"
-* name.given = "Joe"
+* name.given = "James"
 * name.family = "Smith"
 * telecom.system = #phone
-* telecom.value = "27 53 765 2509"
+* telecom.value = "27537652509"
 
 Instance: Covid19ServiceRequestLocationExample
 InstanceOf: Covid19ServiceRequestLocation
