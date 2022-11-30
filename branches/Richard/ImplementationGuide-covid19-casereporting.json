@@ -11,7 +11,7 @@
   "title": "COVID19 Case Reporting",
   "status": "draft",
   "experimental": false,
-  "date": "2022-11-30T09:05:55+00:00",
+  "date": "2022-11-30T11:29:51+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -352,7 +352,22 @@
         ],
         "reference": {
           "reference": "Task/Covid19LabOrderCancellationExample"
-        }
+        },
+        "name": "Example Task - Covid19LabOrderCancellationExample",
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-lab-task"
+        },
+        "name": "Covid19 Lab Task",
+        "description": "Covid19 Lab Task"
       },
       {
         "extension": [
@@ -556,7 +571,9 @@
         ],
         "reference": {
           "reference": "Task/LabResultTaskExample"
-        }
+        },
+        "name": "Example Task - LabResultTaskExample",
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
       },
       {
         "extension": [
@@ -596,6 +613,19 @@
         },
         "name": "Example Encounter - Covid19AssessmentEncounterExample",
         "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/CaresSubmitLabCancellationBundleExample"
+        },
+        "name": "Example Bundle - CaresSubmitLabCancellationBundleExample",
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
       },
       {
         "extension": [
@@ -770,19 +800,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ServiceRequest"
-          }
-        ],
-        "reference": {
-          "reference": "ServiceRequest/Covid19LabOrderExample"
-        },
-        "name": "Example ServiceRequest - Covid19LabOrderExample",
-        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Specimen"
           }
         ],
@@ -929,7 +946,9 @@
         ],
         "reference": {
           "reference": "Task/LabOrderTaskExample"
-        }
+        },
+        "name": "Example Task - LabOrderTaskExample",
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
       },
       {
         "extension": [
@@ -987,6 +1006,19 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Task"
+          }
+        ],
+        "reference": {
+          "reference": "Task/Covid19LabOrderRejectionExample"
+        },
+        "name": "Example Task - Covid19LabOrderRejectionExample",
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           }
         ],
@@ -1021,6 +1053,19 @@
         },
         "name": "Covid19 Vaccination",
         "description": "Covid19 Vaccination"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ServiceRequest"
+          }
+        ],
+        "reference": {
+          "reference": "ServiceRequest/Covid19ServiceRequestExample"
+        },
+        "name": "Example ServiceRequest - Covid19ServiceRequestExample",
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"
       },
       {
         "extension": [
@@ -1109,7 +1154,9 @@
         ],
         "reference": {
           "reference": "Bundle/CaresSubmitLabRejectionBundleExample"
-        }
+        },
+        "name": "Example Bundle - CaresSubmitLabRejectionBundleExample",
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
       },
       {
         "extension": [
