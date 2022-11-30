@@ -157,3 +157,9 @@ Description: "Source of information - codes"
 * #MobilePhoneNotification "Mobile Phone Notification"
 * #VaccineAdministeredFromFacility "Vaccine Administered from this facility"
 * #Other "Other"
+
+ValueSet: VSSourceOfInfo
+Id: vs-source-of-info
+Title: "Source of information - codes"
+Description: "Source of information - codes"
+* include codes from system CSSourceOfInfo
