@@ -133,7 +133,7 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 * patient 1..1
 * encounter 1..1
 * occurrenceDateTime 1..1
-* reportOrigin from VSSourceOfInfo (required)
+* reportOrigin from CSSourceOfInfo (required)
 * lotNumber 1..1
 * expirationDate 0..1
 * protocolApplied 1..1
@@ -229,7 +229,7 @@ Description: "Covid19 Vaccination"
 * patient 1..1
 * encounter 1..1
 * occurrenceDateTime 1..1
-* reportOrigin from VSSourceOfInfo (required)
+* reportOrigin from CSSourceOfInfo (required)
 * lotNumber 1..1
 * expirationDate 0..1
 * protocolApplied 1..1
@@ -249,14 +249,30 @@ Parent: Location
 Id: covid19-service-request-location
 Title: "Covid19 Service Request Location"
 Description: "Covid19 Service Request Location"
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "Slice based on the type of identifier"
+* identifier contains
+    PRN 0..1
+* identifier[PRN].value 0..1
+* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-service-request-location"
 * name 1..1
 * address 1..1
 
 Profile: Covid19AdmissionLocation
 Parent: Location
 Id: covid19-admission-location
-Title: "Covid19 Service Request Location"
-Description: "Covid19 Service Request Location"
+Title: "Covid19 Admission Location"
+Description: "Covid19 Admission Location"
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "Slice based on the type of identifier"
+* identifier contains
+    PRN 0..1
+* identifier[PRN].value 0..1
+* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-admission-location"
 * name 1..1
 * address 1..1
 
@@ -317,3 +333,25 @@ Description: "Covid19 Lab Task"
 * requester only Reference(Organization)
 * owner only Reference(Organization)
 * output 0..*
+
+Profile: Covid19Practitioner
+Parent: Practitioner
+Id: covid19-practitioner
+Title: "Covid19 Practitioner"
+Description: "Covid19 Practitioner"
+* name 1..1
+* telecom 0..1
+
+Profile: Covid19DiagnosticReport
+Parent: DiagnosticReport
+Id: covid19-diagnostic-report
+Title: "Covid19 Diagnostic Report"
+Description: "Covid19 Diagnostic Report"
+* basedOn only Reference(ServiceRequest)
+* status = #final
+* code from VSTestTypes (required)
+* subject only Reference(Patient)
+* subject 1..1
+* performer only Reference(Practitioner)
+* result 1..1
+* conclusion 0..1
