@@ -40,7 +40,7 @@ Description: "This Patient profile allows the exchange of patient information, i
 * active 1..1
 * name.given 1..*
 * name.family 1..1
-* telecom 0..1
+* telecom 0..*
 * gender 1..1
 * birthDate 1..1
 * address 0..*
