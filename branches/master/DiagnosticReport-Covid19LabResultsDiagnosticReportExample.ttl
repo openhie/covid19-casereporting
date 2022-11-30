@@ -9,9 +9,16 @@
 <http://openhie.org/fhir/covid19-casereporting/DiagnosticReport/Covid19LabResultsDiagnosticReportExample> a fhir:DiagnosticReport;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Covid19LabResultsDiagnosticReportExample"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report";
+       fhir:index 0;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report>
+     ]
+  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 94558-4}\">SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Jane Maria Smith (OFFICIAL)</b> female, DoB: 1986-06-04 ( id: EMR1234567)</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-Covid19TestResultExample.html\"><span title=\"Codes: {http://loinc.org 94558-4}\">SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 10828004}\">Positive</span></td><td>2022-07-28</td></tr></table><p>Some textual conclusion</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 94558-4}\">SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Jane Maria Smith (OFFICIAL)</b> female, DoB: 1986-06-04 ( id: EMR1234567)</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-Covid19TestResultExample.html\"><span title=\"Codes: {http://loinc.org 94558-4}\">SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 10828004}\">Positive</span></td><td>2022-07-28</td></tr></table><p>Some conclusion text</p></div>"
   ];
   fhir:DiagnosticReport.basedOn [
      fhir:index 0;
@@ -41,7 +48,7 @@
      fhir:link <http://openhie.org/fhir/covid19-casereporting/Observation/Covid19TestResultExample>;
      fhir:Reference.reference [ fhir:value "Observation/Covid19TestResultExample" ]
   ];
-  fhir:DiagnosticReport.conclusion [ fhir:value "Some textual conclusion"] .
+  fhir:DiagnosticReport.conclusion [ fhir:value "Some conclusion text"] .
 
 # - ontology header ------------------------------------------------------------
 
