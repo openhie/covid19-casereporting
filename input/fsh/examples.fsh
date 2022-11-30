@@ -108,12 +108,11 @@ Usage: #example
 Title: "Covid19 Diagnosis Example"
 Description: "Covid19 Diagnosis Example"
 * verificationStatus.coding.code = #confirmed
-//* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * onsetDateTime = "2022-07-28"
 * recordedDate = "2022-07-28"
-* abatementDateTime = "2022-07-28"
 * evidence.code = $SCT#84387000
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "additional notes here"
