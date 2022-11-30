@@ -51,19 +51,19 @@ Instance: Covid19AssessmentEncounterExample
 InstanceOf: Covid19AssessmentEncounter    
 Usage: #example
 Title: "Covid19 Assessment Encounter example"
-Description: "Covid19 Assessment Encounter  example"
-* class.code = #SS  
-* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* status = #finished
-* period.start =  "2022-07-28"  //Date of assessment
-* subject = Reference(Covid19PatientExample) //Patient reference
-* period.end  =  "2022-08-15"  //Date of death
-* reasonCode = $SCT#428792000
+Description: "Covid19 Assessment Encounter example"
 * extension[nextVisit].valueDateTime = "2022-07-28" 
-* location.location  = Reference(Covid19AdmissionLocationExample)
-* location.physicalType = $SCT#225746001 "Ward"
-* extension[extCovid19EverHospitalised].valueCodeableConcept = $SCT#373066001 "Yes"
-* extension[extCovid19DateLastHospitalised].valueDateTime = "2022-07-28" 
+* extension[extCovid19EverHospitalised].valueCodeableConcept = $SCT#373066001
+* extension[extCovid19DateLastHospitalised].valueDateTime = "2022-07-28"
+* status = #finished
+* class.code = #SS
+* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* subject = Reference(Covid19PatientExample)
+* period.start = "2022-07-28"
+* period.end  = "2022-08-15"
+* reasonCode = $SCT#428792000
+* location.location = Reference(Covid19AdmissionLocationExample)
+* location.physicalType = $SCT#225746001
 
 Instance: Covid19VaccineDoseEverReceivedExample
 InstanceOf: Covid19VaccineDoseEverReceived
@@ -72,35 +72,36 @@ Title: "Covid19 Vaccine Dose Received example"
 Description: "Covid19 Vaccine Dose Received example"
 * status = #final
 * code = $SCT#373066001
-* encounter = Reference(Covid19AssessmentEncounterExample) 
 * subject = Reference(Covid19PatientExample) 
+* encounter = Reference(Covid19AssessmentEncounterExample) 
 
 Instance: Covid19PresentingSymptomsExample
 InstanceOf: Covid19PresentingSymptoms
 Usage: #example
 Title: "Covid19 Symptom example"
 Description: "Covid19 Symptom example"
-* encounter = Reference(Covid19AssessmentEncounterExample) 
-* subject = Reference(Covid19PatientExample) 
 * status = #final
+* subject = Reference(Covid19PatientExample) 
+* encounter = Reference(Covid19AssessmentEncounterExample)
 * code = $SCT#21522001 
 * effectiveDateTime = "2022-07-28"  
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "Other symptoms here"
-* note.time = "2015-02-07T13:28:17-05:00" //presentingSymptomdate
+* note.time = "2015-02-07T13:28:17-05:00"
 
 Instance: Covid19ConditionsOrComorbidityExample
 InstanceOf: Covid19ConditionsOrComorbidity
 Usage: #example
 Title: "Covid19 Conditions or comorbidity example"
 Description: "Covid19 Conditions or comorbidity example"
+* extension[extCovid19ConditionsOrComorbiditiesPresent].valueCodeableConcept = $SCT#373066001
+* code = $SCT#49601007
 * subject = Reference(Covid19PatientExample) 
 * encounter = Reference(Covid19AssessmentEncounterExample) 
-* code = $SCT#49601007
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "Other conditionss or comorbidities here"
-* note.time = "2015-02-07T13:28:17-05:00" //ConditionsOrComorbiditiesDate
-* extension[extCovid19ConditionsOrComorbiditiesPresent].valueCodeableConcept = $SCT#373066001  
+* note.time = "2015-02-07T13:28:17-05:00"
+  
 
 Instance: Covid19DiagnosisExample
 InstanceOf: Covid19Diagnosis
@@ -308,17 +309,6 @@ Description: "Lab Result Task example"
 * output.type.coding.code = #result 
 * output.valueReference = Reference(Covid19LabResultsDiagnosticReportExample)
 * executionPeriod.start = "2022-11-09"
-
-/*
-Instance: Covid19ReasonTestNotPerformedExample
-InstanceOf: Covid19ReasonTestNotPerformed
-Usage: #example
-Title: "Covid19 Reason Test Not Performed example"
-Description: "Covid19 reason test not peformed example"  
-* status = #final
-* code = $SCT#183944003
-* dataAbsentReason = $SCT#441510007
-*/
 
 Instance: Covid19ServiceRequestLocationExample
 InstanceOf: Covid19ServiceRequestLocation
