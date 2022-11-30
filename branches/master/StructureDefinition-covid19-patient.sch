@@ -13,7 +13,6 @@
     <sch:title>f:Patient</sch:title>
     <sch:rule context="f:Patient">
       <sch:assert test="count(f:active) &gt;= 1">active: minimum cardinality of 'active' is 1</sch:assert>
-      <sch:assert test="count(f:telecom) &lt;= 1">telecom: maximum cardinality of 'telecom' is 1</sch:assert>
       <sch:assert test="count(f:gender) &gt;= 1">gender: minimum cardinality of 'gender' is 1</sch:assert>
       <sch:assert test="count(f:birthDate) &gt;= 1">birthDate: minimum cardinality of 'birthDate' is 1</sch:assert>
       <sch:assert test="count(f:managingOrganization) &gt;= 1">managingOrganization: minimum cardinality of 'managingOrganization' is 1</sch:assert>
