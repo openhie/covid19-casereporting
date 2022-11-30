@@ -66,9 +66,14 @@
       "resource": {
         "resourceType": "DiagnosticReport",
         "id": "Covid19LabResultsDiagnosticReportExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"
+          ]
+        },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b><a name=\"Covid19LabResultsDiagnosticReportExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport &quot;Covid19LabResultsDiagnosticReportExample&quot; </p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-Covid19ServiceRequestExample.html\">ServiceRequest/Covid19ServiceRequestExample</a></p><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#94558-4)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> &quot; SMITH&quot;</p><p><b>performer</b>: <a href=\"#Practitioner_PractitionerExample\">See above (Practitioner/PractitionerExample)</a></p><p><b>result</b>: <a href=\"#Observation_Covid19TestResultExample\">See above (Observation/Covid19TestResultExample)</a></p><p><b>conclusion</b>: Some textual conclusion</p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b><a name=\"Covid19LabResultsDiagnosticReportExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport &quot;Covid19LabResultsDiagnosticReportExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-diagnostic-report.html\">Covid19 Diagnostic Report</a></p></div><p><b>basedOn</b>: <a href=\"ServiceRequest-Covid19ServiceRequestExample.html\">ServiceRequest/Covid19ServiceRequestExample</a></p><p><b>status</b>: final</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#94558-4)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> &quot; SMITH&quot;</p><p><b>performer</b>: <a href=\"#Practitioner_PractitionerExample\">See above (Practitioner/PractitionerExample)</a></p><p><b>result</b>: <a href=\"#Observation_Covid19TestResultExample\">See above (Observation/Covid19TestResultExample)</a></p><p><b>conclusion</b>: Some conclusion text</p></div>"
         },
         "basedOn": [
           {
@@ -97,7 +102,7 @@
             "reference": "Observation/Covid19TestResultExample"
           }
         ],
-        "conclusion": "Some textual conclusion"
+        "conclusion": "Some conclusion text"
       },
       "request": {
         "method": "PUT",
@@ -109,22 +114,27 @@
       "resource": {
         "resourceType": "Practitioner",
         "id": "PractitionerExample",
+        "meta": {
+          "profile": [
+            "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner"
+          ]
+        },
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"PractitionerExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;PractitionerExample&quot; </p></div><p><b>name</b>: Joe Smith </p><p><b>telecom</b>: ph: 27 53 765 2509</p></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"PractitionerExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;PractitionerExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-practitioner.html\">Covid19 Practitioner</a></p></div><p><b>name</b>: James Smith </p><p><b>telecom</b>: ph: 27537652509</p></div>"
         },
         "name": [
           {
             "family": "Smith",
             "given": [
-              "Joe"
+              "James"
             ]
           }
         ],
         "telecom": [
           {
             "system": "phone",
-            "value": "27 53 765 2509"
+            "value": "27537652509"
           }
         ]
       },

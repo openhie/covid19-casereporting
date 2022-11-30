@@ -185,22 +185,29 @@
 
 <Practitioner/PractitionerExample> a fhir:Practitioner;
   fhir:Resource.id [ fhir:value "PractitionerExample"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner";
+       fhir:index 0;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner>
+     ]
+  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"PractitionerExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;PractitionerExample&quot; </p></div><p><b>name</b>: Joe Smith </p><p><b>telecom</b>: ph: 27 53 765 2509</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"PractitionerExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;PractitionerExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-practitioner.html\">Covid19 Practitioner</a></p></div><p><b>name</b>: James Smith </p><p><b>telecom</b>: ph: 27537652509</p></div>"
   ];
   fhir:Practitioner.name [
      fhir:index 0;
      fhir:HumanName.family [ fhir:value "Smith" ];
      fhir:HumanName.given [
-       fhir:value "Joe";
+       fhir:value "James";
        fhir:index 0
      ]
   ];
   fhir:Practitioner.telecom [
      fhir:index 0;
      fhir:ContactPoint.system [ fhir:value "phone" ];
-     fhir:ContactPoint.value [ fhir:value "27 53 765 2509" ]
+     fhir:ContactPoint.value [ fhir:value "27537652509" ]
   ] .
 
 <Specimen/Covid19SpecimenExample> a fhir:Specimen;

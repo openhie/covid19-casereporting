@@ -12,7 +12,7 @@
   <title value="COVID19 Case Reporting"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-11-30T11:53:49+00:00"/>
+  <date value="2022-11-30T12:56:54+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -282,6 +282,8 @@
       <reference>
         <reference value="DiagnosticReport/Covid19LabResultsDiagnosticReportExample"/>
       </reference>
+      <name value="Example DiagnosticReport - Covid19LabResultsDiagnosticReportExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -325,6 +327,16 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-practitioner"/>
+      </reference>
+      <name value="Covid19 Practitioner"/>
+      <description value="Covid19 Practitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -332,6 +344,16 @@
       </reference>
       <name value="Presenting symptoms"/>
       <description value="A list of symptoms"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-diagnostic-report"/>
+      </reference>
+      <name value="Covid19 Diagnostic Report"/>
+      <description value="Covid19 Diagnostic Report"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -380,8 +402,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-admission-location"/>
       </reference>
-      <name value="Covid19 Service Request Location"/>
-      <description value="Covid19 Service Request Location"/>
+      <name value="Covid19 Admission Location"/>
+      <description value="Covid19 Admission Location"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -650,6 +672,8 @@
       <reference>
         <reference value="Practitioner/PractitionerExample"/>
       </reference>
+      <name value="Example Practitioner - PractitionerExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -709,7 +733,7 @@
         <reference value="Bundle/CaresSubmitLabResultBundleExample"/>
       </reference>
       <name value="Example Bundle - CaresSubmitLabResultBundleExample"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
