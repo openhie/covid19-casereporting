@@ -3,8 +3,8 @@ InstanceOf: Covid19Organization
 Usage: #example
 Title: "Covid19 Organization example"
 Description: "Covid19 Organization example"
-* identifier[prn].value = "facility1"
-* identifier[prn].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
+* identifier[PRN].value = "facility1"
+* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
 * name = "Covid19 Organization"
 * address[0].country = "Country"
 * address[0].state = "State"
@@ -20,12 +20,12 @@ InstanceOf: Covid19Patient
 Usage: #example
 Title: "Covid19 Patient example"
 Description: "Covid19 Patient example"
-* identifier[passport].value = "PASSPORT1234567"
-* identifier[passport].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport"
-* identifier[national].value = "NAT1234567"
-* identifier[national].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
-* identifier[pos].value = "EMR1234567"
-* identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
+* identifier[PPN].value = "PASSPORT1234567"
+* identifier[PPN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport"
+* identifier[NID].value = "NAT1234567"
+* identifier[NID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
+* identifier[FI].value = "EMR1234567"
+* identifier[FI].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
 * active = true
 * name.use = #official
 * name.family = "Smith"

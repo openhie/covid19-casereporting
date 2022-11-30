@@ -3,10 +3,14 @@ Parent: Organization
 Id: covid19-organization
 Title: "Covid19 Organization"
 Description: "Covid19 Organization for case report - this represents a health facility"
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "Slice based on the type of identifier"
 * identifier contains
-    prn 0..1
-* identifier[prn].value 0..1
-* identifier[prn].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
+    PRN 0..1
+* identifier[PRN].value 0..1
+* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
 * name 1..1
 * address 1..1
 * address.country 1..1
@@ -24,15 +28,15 @@ Description: "This Patient profile allows the exchange of patient information, i
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slice based on the type of identifier"
 * identifier contains
-    passport 0..1 and
-    national 0..1 and
-    pos 1..1
-* identifier[passport].value 0..1
-* identifier[passport].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport"
-* identifier[national].value 0..1
-* identifier[national].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
-* identifier[pos].value 1..1
-* identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
+    PPN 0..1 and
+    NID 0..1 and
+    FI 1..1
+* identifier[PPN].value 0..1
+* identifier[PPN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport"
+* identifier[NID].value 0..1
+* identifier[NID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
+* identifier[FI].value 1..1
+* identifier[FI].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
 * active 1..1
 * name.given 1..*
 * name.family 1..1
