@@ -28,5 +28,3 @@ Description: "Cares Submit Lab Result Bundle Example"
 * entry[=].resource = Covid19TestResultExample
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Observation/Covid19TestResultExample"
-
-

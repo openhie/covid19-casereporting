@@ -3,17 +3,17 @@ InstanceOf: Covid19Organization
 Usage: #example
 Title: "Covid19 Organization example"
 Description: "Covid19 Organization example"
-* address[+].country = "CARES country"
-* address[=].state = "CARES state 1"
-* address[=].district = "CARES district 1"
-* address[=].city = "CARES city 1"
-* address[=].line[+] = "CARES line 1"
-* address[=].line[+] = "CARES line 2"
-* address[=].line[+] = "CARES line 3"
-* address[=].postalCode = "CARES postal code"
+* identifier[PRN].value = "facility1"
+* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
 * name = "Covid19 Organization"
-* identifier[+].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
-* identifier[=].value = "facility"
+* address[0].country = "Country"
+* address[0].state = "State"
+* address[0].district = "District"
+* address[0].city = "City"
+* address[0].line[0] = "Some building number"
+* address[0].line[0] = "Some street name"
+* address[0].line[0] = "Some additional address info"
+* address[0].postalCode = "Some postal code"
 
 Instance: Covid19PatientExample
 InstanceOf: Covid19Patient
@@ -31,10 +31,10 @@ Description: "Covid19 Patient example"
 * name.family = "Smith"
 * name.given[0] = "Jane"
 * name.given[1] = "Maria"
-* telecom.system = #phone
-* telecom.value = "+27825556666"
-* telecom.system = #email
-* telecom.value = "someone@example.com"
+* telecom[0].system = #phone
+* telecom[0].value = "+27825556666"
+* telecom[1].system = #email
+* telecom[1].value = "someone@example.com"
 * gender = #female
 * birthDate = "1986-06-04"
 * address.country = "South Africa"
@@ -154,8 +154,8 @@ Description: "Covid19 Vaccine Type Administered example"
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
 
-Instance: Covid19LabOrderExample
-InstanceOf: Covid19LabOrder
+Instance: Covid19ServiceRequestExample
+InstanceOf: Covid19ServiceRequest
 Usage: #example
 Title: "Covid19 Lab Order example"
 Description: "Covid19 Lab Order example"
@@ -206,29 +206,13 @@ Description: "Covid19 Specimen example"
 * note.text = "additional notes here"
 * note.time = "2015-02-07T13:28:17-05:00" //Covdi19SpecimenNoteDate
 
-Instance: Covid19LabOrderCancellationExample
-InstanceOf: Task
-Usage: #example
-Title: "Covid19 Lab Order Cancellation  example"
-Description: "Covid19 Lab Order Cancellation Task example"
-* basedOn = Reference(Covid19LabOrderExample)
-* executionPeriod.end = "2022-07-28"
-* statusReason = $SCT#281264009 
-* requester = Reference(Covid19OrganizationExample)
-* owner = Reference(Covid19OrganizationExample)
-* lastModified = "2015-02-07"
-* intent = #order
-* status = #cancelled
-* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
-* identifier.value = "ORDER12345"
-
 Instance: Covid19LabResultsDiagnosticReportExample
 InstanceOf: DiagnosticReport
 Usage: #example
 Title: "Covid19 Lab Results Diagnostic Report example"
 Description: "Covid19 Lab Results Diagnostic Report example"
 * code = $LNC#94558-4 
-* basedOn = Reference(Covid19LabOrderExample) 
+* basedOn = Reference(Covid19ServiceRequestExample) 
 * subject = Reference(Covid19PatientExample) 
 * status = #final 
 * result = Reference(Covid19TestResultExample)
@@ -267,22 +251,6 @@ Description: "Covid19 Vaccination example"
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
 
-
-Instance: LabOrderTaskExample
-InstanceOf: Task
-Usage: #example
-Title: "Lab Order example"
-Description: "Lab Order example"
-* basedOn = Reference(Covid19LabOrderExample)
-* requester = Reference(Covid19OrganizationExample)
-* owner = Reference(Covid19OrganizationExample)
-* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
-* identifier.value = "ORDER12345"
-* intent = #order
-* status = #requested
-* lastModified = "2015-02-07"
-* executionPeriod.start = "2022-11-09"
-
 Instance: PractitionerExample
 InstanceOf: Practitioner
 Usage: #example
@@ -292,24 +260,6 @@ Description: "Practitioner example"
 * name.family = "Smith"
 * telecom.system = #phone
 * telecom.value = "27 53 765 2509"
-
-Instance: LabResultTaskExample
-InstanceOf: Task
-Usage: #example
-Title: "Lab Result Task example"
-Description: "Lab Result Task example"
-* basedOn = Reference(Covid19LabOrderExample)
-* requester = Reference(Covid19OrganizationExample)
-* owner = Reference(Covid19OrganizationExample)
-* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
-* identifier.value = "ORDER12345"
-* intent = #order
-* status = #completed
-* lastModified = "2015-02-07"
-* output.type.coding.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output"
-* output.type.coding.code = #result 
-* output.valueReference = Reference(Covid19LabResultsDiagnosticReportExample)
-* executionPeriod.start = "2022-11-09"
 
 Instance: Covid19ServiceRequestLocationExample
 InstanceOf: Covid19ServiceRequestLocation
@@ -374,3 +324,68 @@ Description: "Covid19 Long Covid / Post-Covid"
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
+
+Instance: CaresSubmitLabRejectionBundleExample
+InstanceOf: Covid19LabTask
+Usage: #example
+Title: "Covid19 Lab Order Cancellation  example"
+Description: "Covid19 Lab Order Cancellation Task example"
+* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
+* identifier.value = "ORDER12345"
+* basedOn = Reference(Covid19ServiceRequestExample)
+* status = #rejected
+* statusReason = $SCT#135839007 
+* intent = #order
+* executionPeriod.end = "2022-07-30"
+* lastModified = "2022-07-30"
+* requester = Reference(Covid19OrganizationExample)
+* owner = Reference(Covid19OrganizationExample)
+
+Instance: Covid19LabOrderCancellationExample
+InstanceOf: Covid19LabTask
+Usage: #example
+Title: "Covid19 Lab Order Cancellation  example"
+Description: "Covid19 Lab Order Cancellation Task example"
+* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
+* identifier.value = "ORDER12345"
+* basedOn = Reference(Covid19ServiceRequestExample)
+* status = #cancelled
+* statusReason = $SCT#281264009 
+* intent = #order
+* executionPeriod.end = "2022-07-30"
+* lastModified = "2022-07-30"
+* requester = Reference(Covid19OrganizationExample)
+* owner = Reference(Covid19OrganizationExample)
+
+Instance: LabResultTaskExample
+InstanceOf: Covid19LabTask
+Usage: #example
+Title: "Lab Result Task example"
+Description: "Lab Result Task example"
+* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
+* identifier.value = "ORDER12345"
+* basedOn = Reference(Covid19ServiceRequestExample)
+* status = #completed
+* intent = #order
+* executionPeriod.end = "2022-07-30"
+* lastModified = "2022-07-30"
+* requester = Reference(Covid19OrganizationExample)
+* owner = Reference(Covid19OrganizationExample)
+* output.type.coding.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output"
+* output.type.coding.code = #result 
+* output.valueReference = Reference(Covid19LabResultsDiagnosticReportExample)
+
+Instance: LabOrderTaskExample
+InstanceOf: Covid19LabTask
+Usage: #example
+Title: "Lab Order example"
+Description: "Lab Order example"
+* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
+* identifier.value = "ORDER12345"
+* basedOn = Reference(Covid19ServiceRequestExample)
+* status = #requested
+* intent = #order
+* executionPeriod.start = "2022-07-28"
+* lastModified = "2022-07-28"
+* requester = Reference(Covid19OrganizationExample)
+* owner = Reference(Covid19OrganizationExample)

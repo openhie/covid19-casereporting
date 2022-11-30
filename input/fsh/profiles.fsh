@@ -3,12 +3,13 @@ Parent: Organization
 Id: covid19-organization
 Title: "Covid19 Organization"
 Description: "Covid19 Organization for case report - this represents a health facility"
+* identifier 1..*
+* name 1..1
 * address 1..1
 * address.country 1..1
 * address.state 1..1
 * address.district 1..1
 * address.city 1..1
-* identifier 1..* 
 
 Profile: Covid19Patient
 Parent: Patient
@@ -164,7 +165,7 @@ Description: "Covid19 Treatment dispensed or prescribed"
 * note.authorReference only Reference(Organization)
 * note 0..1
 
-Profile: Covid19LabOrder 
+Profile: Covid19ServiceRequest
 Parent: ServiceRequest
 Id: covid19-lab-order
 Title: "Covid19 Lab Order"
@@ -293,3 +294,19 @@ Description: "Covid19 Long Covid / Post-Covid"
 * effectiveDateTime 1..1
 * note.authorReference only Reference(Organization)
 * note 1..1
+
+Profile: Covid19LabTask
+Parent: Task
+Id: covid19-lab-task
+Title: "Covid19 Lab Task"
+Description: "Covid19 Lab Task"
+* identifier 1..*
+* basedOn only Reference(ServiceRequest)
+* status 1..1
+* statusReason 0..1
+* intent = #order
+* executionPeriod 1..1
+* lastModified 0..1
+* requester only Reference(Organization)
+* owner only Reference(Organization)
+* output 0..*
