@@ -1,16 +1,16 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 0, warn = 56, info = 8
+err = 0, warn = 42, info = 8
 IG Publisher Version: 1.2.19
-Generated Wed Nov 30 13:40:39 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
+Generated Wed Nov 30 14:27:15 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
  Build Errors : 0 / 35 / 0
  /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 0 / 2 / 30
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 12
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample : 0 / 0 / 11
- /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info : 0 / 2 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info : 0 / 1 / 2
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 0 / 0 / 1
@@ -61,19 +61,19 @@ Generated Wed Nov 30 13:40:39 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Task-Covid19LabOrderRejectionExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-LabOrderTaskExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-LabResultTaskExample : 0 / 0 / 2
- /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-presentation : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-test-types : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed : 0 / 1 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types : 0 / 3 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-presentation : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-test-types : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no : 0 / 0 / 1
  /github/workspace/input/covid19-casereporting : 0 / 0 / 1
 </table>
 == n/a ==
@@ -125,7 +125,6 @@ INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[0].resource.
 == fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample.json ==
 == fsh-generated/resources/CodeSystem-cs-source-of-info.json ==
 INFORMATION: CodeSystem/cs-source-of-info: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
-WARNING: CodeSystem/cs-source-of-info: CodeSystem: The ShareableCodeSystem profile says that the experimental element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile
 WARNING: CodeSystem/cs-source-of-info: CodeSystem: The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile
 == fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample.json ==
 == fsh-generated/resources/Condition-Covid19DiagnosisExample.json ==
@@ -183,31 +182,18 @@ INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.co
 == fsh-generated/resources/Task-LabResultTaskExample.json ==
 INFORMATION: Task/LabResultTaskExample: Task.output[0].type.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output' is unknown so the code cannot be validated
 == fsh-generated/resources/ValueSet-vs-AdmissionTypes.json ==
-WARNING: ValueSet/vs-AdmissionTypes: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-cancellation-reason.json ==
-WARNING: ValueSet/vs-cancellation-reason: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-conditions-comorbidity.json ==
-WARNING: ValueSet/vs-conditions-comorbidity: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.json ==
-WARNING: ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-covid19-specimen-type.json ==
-WARNING: ValueSet/vs-covid19-specimen-type: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-covid19-test-result.json ==
-WARNING: ValueSet/vs-covid19-test-result: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-presentation.json ==
-WARNING: ValueSet/vs-presentation: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-source-of-info.json ==
-WARNING: ValueSet/vs-source-of-info: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-symptoms.json ==
-WARNING: ValueSet/vs-symptoms: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-test-types.json ==
-WARNING: ValueSet/vs-test-types: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json ==
-WARNING: ValueSet/vs-treatment-dispensed-prescribed: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == fsh-generated/resources/ValueSet-vs-vaccine-types.json ==
 WARNING: ValueSet/vs-vaccine-types: ValueSet.compose[0].include[0]: Unknown System 'http://id.who.int/icd11/mms' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated)
-WARNING: ValueSet/vs-vaccine-types: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 WARNING: ValueSet.where(id = 'vs-vaccine-types'): Error from server: Unable to provide support for code system http://id.who.int/icd11/mms
 == fsh-generated/resources/ValueSet-vs-yes-no.json ==
-WARNING: ValueSet/vs-yes-no: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
 == input/covid19-casereporting.xml ==
