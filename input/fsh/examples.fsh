@@ -31,10 +31,10 @@ Description: "Covid19 Patient example"
 * name.family = "Smith"
 * name.given[0] = "Jane"
 * name.given[1] = "Maria"
-* telecom[0].system = #phone
-* telecom[0].value = "+27825556666"
-* telecom[1].system = #email
-* telecom[1].value = "someone@example.com"
+* telecom.system = #phone
+* telecom.value = "+27825556666"
+* telecom.system = #email
+* telecom.value = "someone@example.com"
 * gender = #female
 * birthDate = "1986-06-04"
 * address.country = "South Africa"

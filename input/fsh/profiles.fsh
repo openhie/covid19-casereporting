@@ -3,7 +3,8 @@ Parent: Organization
 Id: covid19-organization
 Title: "Covid19 Organization"
 Description: "Covid19 Organization for case report - this represents a health facility"
-* identifier 1..*
+* identifier[PRN].value 0..*
+* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
 * name 1..1
 * address 1..1
 * address.country 1..1
