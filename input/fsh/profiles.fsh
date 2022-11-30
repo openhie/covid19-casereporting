@@ -15,37 +15,28 @@ Parent: Patient
 Id: covid19-patient
 Title: "Covid19 Patient"
 Description: "This Patient profile allows the exchange of patient information, including all the data associated with Covid19 patients"
-* name.given 1..* MS   //Client first name(s) & Mioddle Name(s)
-* name.family 1..1 MS // Surname
-* gender 1..1 MS // Client Sex
-* birthDate 1..1 MS   // Client Date of Birth
-* telecom MS  // Client telephone number and Client Email Addresss
-//Next of kin contact details
-* contact.name MS
-* contact.telecom MS
-* address.country MS    //Client Country  /  Nationality / Citizenship
-* address.state MS      //Client County / Province  / State
-* address.district MS   //Client SubCounty / District 
-* address.line MS   //Client Ward / Division
-* address.city MS      //Client Village / Estate */
-
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slice based on the type of identifier"
-
 * identifier contains
     passport 0..1 and
     national 0..1 and
-    pos 0..1
-
+    pos 1..1
 * identifier[passport].value 0..1
 * identifier[passport].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport"
 * identifier[national].value 0..1
 * identifier[national].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
 * identifier[pos].value 1..1
 * identifier[pos].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
-
+* active 1..1
+* name.given 1..*
+* name.family 1..1
+* telecom 0..1
+* gender 1..1
+* birthDate 1..1
+* address 0..*
+* contact 0..*
 * managingOrganization 1..1
 
 Extension: ExtCovid19EverHospitalised
