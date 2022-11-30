@@ -11,7 +11,7 @@
   "title": "COVID19 Case Reporting",
   "status": "draft",
   "experimental": false,
-  "date": "2022-11-30T11:59:57+00:00",
+  "date": "2022-11-30T12:56:54+00:00",
   "publisher": "OpenHIE",
   "contact": [
     {
@@ -430,7 +430,9 @@
         ],
         "reference": {
           "reference": "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
-        }
+        },
+        "name": "Example DiagnosticReport - Covid19LabResultsDiagnosticReportExample",
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"
       },
       {
         "extension": [
@@ -488,6 +490,19 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-practitioner"
+        },
+        "name": "Covid19 Practitioner",
+        "description": "Covid19 Practitioner"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ValueSet"
           }
         ],
@@ -496,6 +511,19 @@
         },
         "name": "Presenting symptoms",
         "description": "A list of symptoms"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/covid19-diagnostic-report"
+        },
+        "name": "Covid19 Diagnostic Report",
+        "description": "Covid19 Diagnostic Report"
       },
       {
         "extension": [
@@ -559,8 +587,8 @@
         "reference": {
           "reference": "StructureDefinition/covid19-admission-location"
         },
-        "name": "Covid19 Service Request Location",
-        "description": "Covid19 Service Request Location"
+        "name": "Covid19 Admission Location",
+        "description": "Covid19 Admission Location"
       },
       {
         "extension": [
@@ -909,7 +937,9 @@
         ],
         "reference": {
           "reference": "Practitioner/PractitionerExample"
-        }
+        },
+        "name": "Example Practitioner - PractitionerExample",
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner"
       },
       {
         "extension": [
@@ -987,7 +1017,7 @@
           "reference": "Bundle/CaresSubmitLabResultBundleExample"
         },
         "name": "Example Bundle - CaresSubmitLabResultBundleExample",
-        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"
+        "exampleCanonical": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"
       },
       {
         "extension": [
