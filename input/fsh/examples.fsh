@@ -324,7 +324,7 @@ Description: "Covid19 Long Covid / Post-Covid"
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
 
-Instance: CaresSubmitLabRejectionExample
+Instance: Covid19LabOrderRejectionExample
 InstanceOf: Covid19LabTask
 Usage: #example
 Title: "Covid19 Lab Order Cancellation  example"
