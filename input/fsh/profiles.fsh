@@ -134,7 +134,6 @@ Parent: Condition
 Id: covid19-diagnosis
 Title: "Covid19 Diagnosis"
 Description: "Covid19 Diagnosis"
-* clinicalStatus = #inactive
 * verificationStatus 1..1
 * subject only Reference(Patient)
 * subject 1..1

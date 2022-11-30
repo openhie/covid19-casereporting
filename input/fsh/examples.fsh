@@ -107,10 +107,8 @@ InstanceOf: Covid19Diagnosis
 Usage: #example
 Title: "Covid19 Diagnosis Example"
 Description: "Covid19 Diagnosis Example"
-* clinicalStatus.coding.code = #inactive
-* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
 * verificationStatus.coding.code = #confirmed
-* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+//* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * onsetDateTime = "2022-07-28"
