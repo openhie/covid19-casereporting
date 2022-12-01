@@ -140,7 +140,7 @@ Usage: #example
 Title: "Covid19 Vaccine Type Administered example"
 Description: "Covid19 Vaccine Type Administered example"
 * status = #completed
-* vaccineCode = $ICD11#XM8NQ0
+* vaccineCode.coding.code = $ICD11#XM8NQ0
 * patient = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * occurrenceDateTime = "2022-07-28"
@@ -237,7 +237,7 @@ Usage: #example
 Title: "Covid19 Vaccination example"
 Description: "Covid19 Vaccination example"
 * status = #completed
-* vaccineCode = $ICD11#XM4YL8
+* vaccineCode.coding.code = $ICD11#XM4YL8
 * patient = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * occurrenceDateTime = "2022-07-28"

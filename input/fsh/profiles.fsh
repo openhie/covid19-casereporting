@@ -129,7 +129,7 @@ Id: covid19-assessment-vaccination
 Title: "Covid19 Vaccination info included as part of the Assessment"
 Description: "Covid19 Vaccination info included as part of the Assessment"
 * status = #completed
-* vaccineCode from VSVaccineTypes (required)
+* vaccineCode.coding.code from VSVaccineTypes (required)
 * patient 1..1
 * encounter 1..1
 * occurrenceDateTime 1..1
@@ -225,7 +225,7 @@ Id: covid19-vaccination
 Title: "Covid19 Vaccination"
 Description: "Covid19 Vaccination"
 * status = #completed
-* vaccineCode from VSVaccineTypes (required)
+* vaccineCode.coding.code from VSVaccineTypes (required)
 * patient 1..1
 * encounter 1..1
 * occurrenceDateTime 1..1
