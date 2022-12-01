@@ -13,12 +13,12 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
     "valueCode" : "patient"
   }],
-  "url" : "https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-lab-order",
+  "url" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order",
   "version" : "0.1.0",
   "name" : "Covid19ServiceRequest",
   "title" : "Covid19 Lab Order",
   "status" : "active",
-  "date" : "2022-12-01T17:51:39+00:00",
+  "date" : "2022-12-01T17:57:12+00:00",
   "publisher" : "Jembi Health Systems",
   "contact" : [{
     "telecom" : [{
@@ -958,7 +958,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types"
+        "valueSet" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -1633,7 +1633,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"
+        "valueSet" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -2236,7 +2236,7 @@
       "path" : "ServiceRequest.code",
       "binding" : {
         "strength" : "required",
-        "valueSet" : "https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types"
+        "valueSet" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types"
       }
     },
     {
@@ -2290,7 +2290,7 @@
       "path" : "ServiceRequest.reasonCode",
       "binding" : {
         "strength" : "required",
-        "valueSet" : "https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"
+        "valueSet" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"
       }
     },
     {

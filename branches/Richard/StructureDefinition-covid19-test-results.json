@@ -13,12 +13,12 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
     "valueCode" : "patient"
   }],
-  "url" : "https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-test-results",
+  "url" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results",
   "version" : "0.1.0",
   "name" : "Covid19TestResult",
   "title" : "Covid19 Lab Results",
   "status" : "active",
-  "date" : "2022-12-01T17:51:39+00:00",
+  "date" : "2022-12-01T17:57:12+00:00",
   "publisher" : "Jembi Health Systems",
   "contact" : [{
     "telecom" : [{
@@ -717,7 +717,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types"
+        "valueSet" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -1188,7 +1188,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-test-result"
+        "valueSet" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result"
       },
       "mapping" : [{
         "identity" : "sct-concept",
@@ -2424,7 +2424,7 @@
       "path" : "Observation.code",
       "binding" : {
         "strength" : "required",
-        "valueSet" : "https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types"
+        "valueSet" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types"
       }
     },
     {
@@ -2473,7 +2473,7 @@
       }],
       "binding" : {
         "strength" : "required",
-        "valueSet" : "https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-test-result"
+        "valueSet" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result"
       }
     }]
   }
