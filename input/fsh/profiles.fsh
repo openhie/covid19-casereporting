@@ -333,7 +333,7 @@ Description: "Covid19 Lab Task"
 * requester only Reference(Organization)
 * owner only Reference(Organization)
 * output 0..*
-* output.type.coding.code from VSLabTaskOutput (required)
+* output.type.coding.code from CSLabTaskOutput (required)
 * output.valueReference 1..1
 
 Profile: Covid19Practitioner
