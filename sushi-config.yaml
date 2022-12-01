@@ -36,9 +36,9 @@ releaseLabel: STU1
 # as IG.publisher.  The contact details and/or additional publishers
 # will be translated into IG.contact values.
 publisher:
-  name: My Organization 
-  url: http://openhie.org/committees
-  email: my-group@openhie.org
+  name: Jembi Health Systems
+  url: https://www.jembi.org
+  email: info@jembi.org
 
 # ContactDetail is required by the template.
 contact:
@@ -53,7 +53,6 @@ contact:
 
 #jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
-
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -166,6 +165,18 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 #  Downloads: downloads.html
 #  History: http://hl7.org/fhir/us/example/history.html
 
+history:
+  title: "COVID19 Case Reporting:"
+  current: "http://openhie.org/fhir/covid19-casereporting"
+  1.0.0:
+    fhirversion: 4.0.1"
+    date: 2022-12-01
+    desc: "STU 1 Release"
+    path: "http://openhie.org/fhir/covid19-casereporting/STU1"
+    status: "trial-use"
+    sequence: STU 1
+    current: true
+
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating
@@ -180,7 +191,6 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # If set to true, no IG related content will be generated.
 # The default value for this property is false.
 FSHOnly: false
-
 # When set to true, the "short" and "definition" field on the root element of an Extension will
 # be set to the "Title" and "Description" of that Extension. Default is true.
 #applyExtensionMetadataToRoot: false
