@@ -133,7 +133,7 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 * patient 1..1
 * encounter 1..1
 * occurrenceDateTime 1..1
-* reportOrigin from VSSourceOfInfo (required)
+* reportOrigin.coding.code from VSSourceOfInfo (required)
 * lotNumber 1..1
 * expirationDate 0..1
 * protocolApplied 1..1
@@ -229,7 +229,7 @@ Description: "Covid19 Vaccination"
 * patient 1..1
 * encounter 1..1
 * occurrenceDateTime 1..1
-* reportOrigin from VSSourceOfInfo (required)
+* reportOrigin.coding.code from VSSourceOfInfo (required)
 * lotNumber 1..1
 * expirationDate 0..1
 * protocolApplied 1..1
@@ -333,6 +333,8 @@ Description: "Covid19 Lab Task"
 * requester only Reference(Organization)
 * owner only Reference(Organization)
 * output 0..*
+* output.type.coding.code from VSLabTaskOutput (required)
+* output.valueReference 1..1
 
 Profile: Covid19Practitioner
 Parent: Practitioner
