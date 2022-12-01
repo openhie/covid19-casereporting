@@ -1,11 +1,11 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 0, warn = 41, info = 5
+err = 9, warn = 41, info = 1
 IG Publisher Version: 1.2.20
-Generated Thu Dec 01 09:04:18 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
+Generated Thu Dec 01 09:21:58 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
  Build Errors : 0 / 35 / 0
- /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 0 / 2 / 30
+ /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 4 / 2 / 28
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 11
@@ -16,8 +16,8 @@ Generated Thu Dec 01 09:04:18 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 0 / 1 / 2
- /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 2 / 1 / 1
+ /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 2 / 1 / 1
  /github/workspace/fsh-generated/resources/Location-Covid19AdmissionLocationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Location-Covid19ServiceRequestLocationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample : 0 / 0 / 1
@@ -74,7 +74,7 @@ Generated Thu Dec 01 09:04:18 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-test-types : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types : 1 / 2 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no : 0 / 0 / 1
  /github/workspace/input/covid19-casereporting : 0 / 0 / 1
 </table>
@@ -116,10 +116,12 @@ WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-ta
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/Bundle-CaresBundleExample.json ==
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#428792000)
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated
-WARNING: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode: [Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated]
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated
-WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode: [Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated]
+ERROR: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0]: Unknown Code System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11'
+ERROR: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0].system: URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve
+WARNING: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode: [Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated]
+ERROR: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0]: Unknown Code System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11'
+ERROR: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0].system: URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve
+WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode: [Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated]
 == fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json ==
@@ -131,11 +133,13 @@ WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization
 == fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.json ==
 == fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json ==
 == fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json ==
-WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode: [Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated]
-INFORMATION: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated
+WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode: [Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated]
+ERROR: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode.coding[0]: Unknown Code System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11'
+ERROR: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode.coding[0].system: URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve
 == fsh-generated/resources/Immunization-Covid19VaccinationExample.json ==
-WARNING: Immunization/Covid19VaccinationExample: Immunization.vaccineCode: [Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated]
-INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated
+WARNING: Immunization/Covid19VaccinationExample: Immunization.vaccineCode: [Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated]
+ERROR: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.coding[0]: Unknown Code System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11'
+ERROR: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.coding[0].system: URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve
 == fsh-generated/resources/Location-Covid19AdmissionLocationExample.json ==
 == fsh-generated/resources/Location-Covid19ServiceRequestLocationExample.json ==
 == fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample.json ==
@@ -193,7 +197,8 @@ INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.co
 == fsh-generated/resources/ValueSet-vs-test-types.json ==
 == fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json ==
 == fsh-generated/resources/ValueSet-vs-vaccine-types.json ==
-WARNING: ValueSet/vs-vaccine-types: ValueSet.compose[0].include[0]: Unknown System 'http://id.who.int/icd/release/11/2022-02/mms' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated)
-WARNING: ValueSet.where(id = 'vs-vaccine-types'): Error from server: Unable to provide support for code system http://id.who.int/icd/release/11/2022-02/mms
+ERROR: ValueSet/vs-vaccine-types: ValueSet.compose.include[0].system: URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve
+WARNING: ValueSet/vs-vaccine-types: ValueSet.compose[0].include[0]: Unknown System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated)
+WARNING: ValueSet.where(id = 'vs-vaccine-types'): Error from server: Unable to provide support for code system http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11
 == fsh-generated/resources/ValueSet-vs-yes-no.json ==
 == input/covid19-casereporting.xml ==
