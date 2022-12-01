@@ -1,11 +1,11 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 6, warn = 41, info = 17
+err = 0, warn = 41, info = 5
 IG Publisher Version: 1.2.21
-Generated Thu Dec 01 11:33:38 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
+Generated Thu Dec 01 11:41:53 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
  Build Errors : 0 / 35 / 0
- /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 3 / 2 / 41
+ /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 0 / 2 / 30
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 11
@@ -15,7 +15,7 @@ Generated Thu Dec 01 11:33:38 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 3 / 0 / 2
+ /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 0 / 1 / 2
  /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 0 / 1 / 2
  /github/workspace/fsh-generated/resources/Location-Covid19AdmissionLocationExample : 0 / 0 / 1
@@ -115,25 +115,11 @@ WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-v
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/Bundle-CaresBundleExample.json ==
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)
-ERROR: Bundle/CaresBundleExample: Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')
-ERROR: Bundle/CaresBundleExample: Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed' is unknown so the code cannot be validated
-ERROR: Bundle/CaresBundleExample: Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[3].resource.ofType(Observation).encounter: Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[4].resource.ofType(Condition).encounter: Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[5].resource.ofType(Condition).encounter: Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
+INFORMATION: Bundle/CaresBundleExample: Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#428792000)
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).encounter: Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
 WARNING: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode: [Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).encounter: Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
 WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode: [Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[8].resource.ofType(MedicationRequest).encounter: Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[9].resource.ofType(Observation).encounter: Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[10].resource.ofType(Observation).encounter: Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[11].resource.ofType(Observation).encounter: Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[12].resource.ofType(Observation).encounter: Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1
 == fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json ==
@@ -144,10 +130,6 @@ INFORMATION: Bundle/CaresBundleExample: Bundle.entry[12].resource.ofType(Observa
 == fsh-generated/resources/Condition-Covid19DiagnosisExample.json ==
 == fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.json ==
 == fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json ==
-ERROR: Encounter/Covid19AssessmentEncounterExample: Encounter.reasonCode[0]: None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)
-ERROR: Encounter/Covid19AssessmentEncounterExample: Encounter.reasonCode[0].coding[0]: The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')
-ERROR: Encounter/Covid19AssessmentEncounterExample: Encounter.reasonCode[0].coding[0]: Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system
-INFORMATION: Encounter/Covid19AssessmentEncounterExample: Encounter.reasonCode[0].coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed' is unknown so the code cannot be validated
 == fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json ==
 WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode: [Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
