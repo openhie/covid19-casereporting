@@ -13,6 +13,7 @@
     <sch:title>f:Immunization</sch:title>
     <sch:rule context="f:Immunization">
       <sch:assert test="count(f:encounter) &gt;= 1">encounter: minimum cardinality of 'encounter' is 1</sch:assert>
+      <sch:assert test="count(f:reportOrigin) &gt;= 1">reportOrigin: minimum cardinality of 'reportOrigin' is 1</sch:assert>
       <sch:assert test="count(f:lotNumber) &gt;= 1">lotNumber: minimum cardinality of 'lotNumber' is 1</sch:assert>
       <sch:assert test="count(f:note) &lt;= 1">note: maximum cardinality of 'note' is 1</sch:assert>
       <sch:assert test="count(f:protocolApplied) &gt;= 1">protocolApplied: minimum cardinality of 'protocolApplied' is 1</sch:assert>
@@ -113,8 +114,82 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:title>f:Immunization/f:reportOrigin</sch:title>
+    <sch:rule context="f:Immunization/f:reportOrigin">
+      <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:text) &lt;= 1">text: maximum cardinality of 'text' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>Immunization.reportOrigin</sch:title>
     <sch:rule context="f:Immunization/f:reportOrigin">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Immunization.reportOrigin.extension</sch:title>
+    <sch:rule context="f:Immunization/f:reportOrigin/f:extension">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
+      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])">Must have either extensions or value[x], not both</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:Immunization/f:reportOrigin/f:coding</sch:title>
+    <sch:rule context="f:Immunization/f:reportOrigin/f:coding">
+      <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:system) &lt;= 1">system: maximum cardinality of 'system' is 1</sch:assert>
+      <sch:assert test="count(f:version) &lt;= 1">version: maximum cardinality of 'version' is 1</sch:assert>
+      <sch:assert test="count(f:code) &lt;= 1">code: maximum cardinality of 'code' is 1</sch:assert>
+      <sch:assert test="count(f:display) &lt;= 1">display: maximum cardinality of 'display' is 1</sch:assert>
+      <sch:assert test="count(f:userSelected) &lt;= 1">userSelected: maximum cardinality of 'userSelected' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Immunization.reportOrigin.coding</sch:title>
+    <sch:rule context="f:Immunization/f:reportOrigin/f:coding">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Immunization.reportOrigin.coding.extension</sch:title>
+    <sch:rule context="f:Immunization/f:reportOrigin/f:coding/f:extension">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
+      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])">Must have either extensions or value[x], not both</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Immunization.reportOrigin.coding.system</sch:title>
+    <sch:rule context="f:Immunization/f:reportOrigin/f:coding/f:system">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Immunization.reportOrigin.coding.version</sch:title>
+    <sch:rule context="f:Immunization/f:reportOrigin/f:coding/f:version">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Immunization.reportOrigin.coding.code</sch:title>
+    <sch:rule context="f:Immunization/f:reportOrigin/f:coding/f:code">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Immunization.reportOrigin.coding.display</sch:title>
+    <sch:rule context="f:Immunization/f:reportOrigin/f:coding/f:display">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Immunization.reportOrigin.coding.userSelected</sch:title>
+    <sch:rule context="f:Immunization/f:reportOrigin/f:coding/f:userSelected">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Immunization.reportOrigin.text</sch:title>
+    <sch:rule context="f:Immunization/f:reportOrigin/f:text">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
