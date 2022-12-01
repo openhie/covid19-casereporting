@@ -63,7 +63,8 @@ Description: "Covid19 Assessment Encounter example"
 * subject = Reference(Covid19PatientExample)
 * period.start = "2022-07-28"
 * period.end  = "2022-08-15"
-* reasonCode.coding.code = $SCT#428792000
+* reasonCode = $SCT#428792000
+* reasonCode.coding.system = "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"
 * location.location = Reference(Covid19AdmissionLocationExample)
 * location.physicalType = $SCT#225746001
 
