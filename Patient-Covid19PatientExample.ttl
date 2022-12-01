@@ -7,18 +7,18 @@
 
 <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> a fhir:Patient;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "Covid19PatientExample"];
+  fhir:Resource.id [ fhir:value "Covid19PatientExample"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient";
        fhir:index 0;
        fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient>
      ]
-  ];
+  ]; # 
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Jane Maria Smith (OFFICIAL)</b> female, DoB: 1986-06-04 ( id: EMR1234567)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li>id: PASSPORT1234567</li><li>id: NAT1234567</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Details:</td><td colspan=\"3\"><ul><li><a href=\"tel:+27825556666\">+27825556666</a></li><li><a href=\"mailto:someone@example.com\">someone@example.com</a></li><li>Cape Town Western Province South Africa </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Next-of-Kin\">Next-of-Kin:</td><td colspan=\"3\"><ul><li>John Doe </li><li><a href=\"tel:+27829999999\">+27829999999</a></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>Managing Organization: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</li></ul></td></tr></table></div>"
-  ];
+  ]; # 
   fhir:Patient.identifier [
      fhir:index 0;
      fhir:Identifier.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/identifier/facility" ];
@@ -31,8 +31,8 @@
      fhir:index 2;
      fhir:Identifier.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/identifier/nid" ];
      fhir:Identifier.value [ fhir:value "NAT1234567" ]
-  ];
-  fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
+  ]; # 
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean]; # 
   fhir:Patient.name [
      fhir:index 0;
      fhir:HumanName.use [ fhir:value "official" ];
@@ -44,7 +44,7 @@
        fhir:value "Maria";
        fhir:index 1
      ]
-  ];
+  ]; # 
   fhir:Patient.telecom [
      fhir:index 0;
      fhir:ContactPoint.system [ fhir:value "phone" ];
@@ -53,16 +53,16 @@
      fhir:index 1;
      fhir:ContactPoint.system [ fhir:value "email" ];
      fhir:ContactPoint.value [ fhir:value "someone@example.com" ]
-  ];
-  fhir:Patient.gender [ fhir:value "female"];
-  fhir:Patient.birthDate [ fhir:value "1986-06-04"^^xsd:date];
+  ]; # 
+  fhir:Patient.gender [ fhir:value "female"]; # 
+  fhir:Patient.birthDate [ fhir:value "1986-06-04"^^xsd:date]; # 
   fhir:Patient.address [
      fhir:index 0;
      fhir:Address.city [ fhir:value "Cape Town" ];
      fhir:Address.district [ fhir:value "City of Cape Town" ];
      fhir:Address.state [ fhir:value "Western Province" ];
      fhir:Address.country [ fhir:value "South Africa" ]
-  ];
+  ]; # 
   fhir:Patient.contact [
      fhir:index 0;
      fhir:Patient.contact.relationship [
@@ -85,11 +85,11 @@
        fhir:ContactPoint.system [ fhir:value "phone" ];
        fhir:ContactPoint.value [ fhir:value "+27829999999" ]
      ]
-  ];
+  ]; # 
   fhir:Patient.managingOrganization [
      fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
      fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
-  ] .
+  ] . # 
 
 # - ontology header ------------------------------------------------------------
 

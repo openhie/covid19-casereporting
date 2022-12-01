@@ -322,6 +322,7 @@
     <sch:title>Task.output.value[x] 1</sch:title>
     <sch:rule context="f:Task/f:output/f:value[x]">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>

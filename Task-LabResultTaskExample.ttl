@@ -7,48 +7,47 @@
 
 <http://openhie.org/fhir/covid19-casereporting/Task/LabResultTaskExample> a fhir:Task;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "LabResultTaskExample"];
+  fhir:Resource.id [ fhir:value "LabResultTaskExample"]; # 
   fhir:Resource.meta [
      fhir:Meta.profile [
        fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task";
        fhir:index 0;
        fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task>
      ]
-  ];
+  ]; # 
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"LabResultTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task &quot;LabResultTaskExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-task.html\">Covid19 Lab Task</a></p></div><p><b>identifier</b>: id: ORDER12345</p><p><b>basedOn</b>: <a href=\"ServiceRequest-Covid19ServiceRequestExample.html\">ServiceRequest/Covid19ServiceRequestExample</a></p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: ?? --&gt; 2022-07-30</p><p><b>lastModified</b>: 2022-07-30</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p><p><b>owner</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p><h3>Outputs</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>result <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (task-output#result)</span></td><td><a href=\"DiagnosticReport-Covid19LabResultsDiagnosticReportExample.html\">DiagnosticReport/Covid19LabResultsDiagnosticReportExample</a></td></tr></table></div>"
-  ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"LabResultTaskExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task &quot;LabResultTaskExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-task.html\">Covid19 Lab Task</a></p></div><p><b>identifier</b>: id: ORDER12345</p><p><b>basedOn</b>: <a href=\"ServiceRequest-Covid19ServiceRequestExample.html\">ServiceRequest/Covid19ServiceRequestExample</a></p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: ?? --&gt; 2022-07-30</p><p><b>lastModified</b>: 2022-07-30</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p><p><b>owner</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p><h3>Outputs</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>result <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#result)</span></td><td><a href=\"DiagnosticReport-Covid19LabResultsDiagnosticReportExample.html\">DiagnosticReport/Covid19LabResultsDiagnosticReportExample</a></td></tr></table></div>"
+  ]; # 
   fhir:Task.identifier [
      fhir:index 0;
      fhir:Identifier.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number" ];
      fhir:Identifier.value [ fhir:value "ORDER12345" ]
-  ];
+  ]; # 
   fhir:Task.basedOn [
      fhir:index 0;
      fhir:link <http://openhie.org/fhir/covid19-casereporting/ServiceRequest/Covid19ServiceRequestExample>;
      fhir:Reference.reference [ fhir:value "ServiceRequest/Covid19ServiceRequestExample" ]
-  ];
-  fhir:Task.status [ fhir:value "completed"];
-  fhir:Task.intent [ fhir:value "order"];
+  ]; # 
+  fhir:Task.status [ fhir:value "completed"]; # 
+  fhir:Task.intent [ fhir:value "order"]; # 
   fhir:Task.executionPeriod [
      fhir:Period.end [ fhir:value "2022-07-30"^^xsd:date ]
-  ];
-  fhir:Task.lastModified [ fhir:value "2022-07-30"^^xsd:date];
+  ]; # 
+  fhir:Task.lastModified [ fhir:value "2022-07-30"^^xsd:date]; # 
   fhir:Task.requester [
      fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
      fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
-  ];
+  ]; # 
   fhir:Task.owner [
      fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
      fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
-  ];
+  ]; # 
   fhir:Task.output [
      fhir:index 0;
      fhir:Task.output.type [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output" ];
          fhir:Coding.code [ fhir:value "result" ]
        ]
      ];
@@ -56,7 +55,7 @@
        fhir:link <http://openhie.org/fhir/covid19-casereporting/DiagnosticReport/Covid19LabResultsDiagnosticReportExample>;
        fhir:Reference.reference [ fhir:value "DiagnosticReport/Covid19LabResultsDiagnosticReportExample" ]
      ]
-  ] .
+  ] . # 
 
 # - ontology header ------------------------------------------------------------
 
