@@ -1,6 +1,6 @@
 Alias: $SCT = http://snomed.info/sct
 Alias: $LNC = http://loinc.org
-Alias: $ICD11 = http://id.who.int/icd11/mms
+Alias: $ICD11 = http://id.who.int/icd/release/11/2022-02/mms
 Alias: $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 
 ValueSet: VSPresentation
