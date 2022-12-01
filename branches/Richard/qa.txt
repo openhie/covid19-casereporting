@@ -1,15 +1,16 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 0, warn = 42, info = 8
-IG Publisher Version: 1.2.19
-Generated Wed Nov 30 14:27:15 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
+err = 2, warn = 45, info = 7
+IG Publisher Version: 1.2.20
+Generated Thu Dec 01 06:24:03 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
  Build Errors : 0 / 35 / 0
  /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 0 / 2 / 30
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 3
- /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 12
+ /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 1 / 1 / 11
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample : 0 / 0 / 11
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-lab-task-output : 0 / 1 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info : 0 / 1 / 2
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 0 / 0 / 1
@@ -60,13 +61,14 @@ Generated Wed Nov 30 14:27:15 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Task-Covid19LabOrderCancellationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-Covid19LabOrderRejectionExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-LabOrderTaskExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Task-LabResultTaskExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/Task-LabResultTaskExample : 1 / 1 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-lab-task-output : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-presentation : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms : 0 / 0 / 1
@@ -115,14 +117,18 @@ WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in 
 == fsh-generated/resources/Bundle-CaresBundleExample.json ==
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#428792000)
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
-WARNING: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
+WARNING: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode: [Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
-WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
+WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode: [Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 == fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json ==
-INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[0].resource.ofType(Task).output[0].type.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output' is unknown so the code cannot be validated
+WARNING: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[0].resource.ofType(Task).output[0].type.coding[0]: A code with no system has no defined meaning. A system should be provided
+ERROR: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[0].resource.ofType(Task).output[0].type: None of the codings provided are in the value set 'Lab Result Task Output' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output|0.1.0-test), and a coding from this value set is required) (codes = null#result)
 == fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample.json ==
+== fsh-generated/resources/CodeSystem-cs-lab-task-output.json ==
+INFORMATION: CodeSystem/cs-lab-task-output: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/cs-lab-task-output: CodeSystem: The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile
 == fsh-generated/resources/CodeSystem-cs-source-of-info.json ==
 INFORMATION: CodeSystem/cs-source-of-info: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
 WARNING: CodeSystem/cs-source-of-info: CodeSystem: The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile
@@ -131,10 +137,10 @@ WARNING: CodeSystem/cs-source-of-info: CodeSystem: The ShareableCodeSystem profi
 == fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.json ==
 == fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json ==
 == fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json ==
-WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
+WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode: [Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
 == fsh-generated/resources/Immunization-Covid19VaccinationExample.json ==
-WARNING: Immunization/Covid19VaccinationExample: Immunization.vaccineCode: [Unable to determine whether the provided codes are in the value set http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types because the value set or a code system it depends on is not known to the validator, Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
+WARNING: Immunization/Covid19VaccinationExample: Immunization.vaccineCode: [Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
 == fsh-generated/resources/Location-Covid19AdmissionLocationExample.json ==
 == fsh-generated/resources/Location-Covid19ServiceRequestLocationExample.json ==
@@ -180,13 +186,15 @@ INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.co
 == fsh-generated/resources/Task-Covid19LabOrderRejectionExample.json ==
 == fsh-generated/resources/Task-LabOrderTaskExample.json ==
 == fsh-generated/resources/Task-LabResultTaskExample.json ==
-INFORMATION: Task/LabResultTaskExample: Task.output[0].type.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/lab-integration/task-output' is unknown so the code cannot be validated
+ERROR: Task/LabResultTaskExample: Task.output[0].type: None of the codings provided are in the value set 'Lab Result Task Output' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output|0.1.0-test), and a coding from this value set is required) (codes = null#result)
+WARNING: Task/LabResultTaskExample: Task.output[0].type.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/ValueSet-vs-AdmissionTypes.json ==
 == fsh-generated/resources/ValueSet-vs-cancellation-reason.json ==
 == fsh-generated/resources/ValueSet-vs-conditions-comorbidity.json ==
 == fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.json ==
 == fsh-generated/resources/ValueSet-vs-covid19-specimen-type.json ==
 == fsh-generated/resources/ValueSet-vs-covid19-test-result.json ==
+== fsh-generated/resources/ValueSet-vs-lab-task-output.json ==
 == fsh-generated/resources/ValueSet-vs-presentation.json ==
 == fsh-generated/resources/ValueSet-vs-source-of-info.json ==
 == fsh-generated/resources/ValueSet-vs-symptoms.json ==

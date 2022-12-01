@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "405eaf59-7192-4e2e-8810-aa25651762f9",
+  "id" : "9d455d80-bf02-48c9-88f6-9b5ac2c9f3c4",
   "meta" : {
-    "lastUpdated" : "2022-11-30T14:25:57.413+00:00"
+    "lastUpdated" : "2022-12-01T06:22:50.073+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -20,7 +20,7 @@
       "title" : "Cancellation Reasons",
       "status" : "active",
       "experimental" : false,
-      "date" : "2022-11-30T14:25:57+00:00",
+      "date" : "2022-12-01T06:22:50+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -36,8 +36,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:5e2aa04c-43b7-40dc-ad36-0328344f6237",
-        "timestamp" : "2022-11-30T14:26:32+00:00",
+        "identifier" : "urn:uuid:2f834f22-7435-400a-91bc-df40097a3f8a",
+        "timestamp" : "2022-12-01T06:23:19+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -84,7 +84,7 @@
       "title" : "Covid19 Specimen Type",
       "status" : "active",
       "experimental" : false,
-      "date" : "2022-11-30T14:25:57+00:00",
+      "date" : "2022-12-01T06:22:50+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -100,8 +100,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:330604a6-e5c2-4c8a-99d9-58ad3c518e2a",
-        "timestamp" : "2022-11-30T14:26:32+00:00",
+        "identifier" : "urn:uuid:f2516e3e-62b9-47fa-8daa-0d3ead5ca587",
+        "timestamp" : "2022-12-01T06:23:19+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -134,6 +134,56 @@
     }
   },
   {
+    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "vs-lab-task-output",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 1 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-cs-lab-task-output.html\">Lab Result Task Output v0.1.0-test (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-lab-task-output-result\"> </a>  <a href=\"CodeSystem-cs-lab-task-output.html#cs-lab-task-output-result\">result</a></td><td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output</td><td>Covid19 Test Result</td></tr></table></div>"
+      },
+      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output",
+      "version" : "0.1.0-test",
+      "name" : "VSLabTaskOutput",
+      "title" : "Lab Result Task Output",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2022-12-01T06:22:50+00:00",
+      "publisher" : "OpenHIE",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "url",
+          "value" : "http://xxhl7.org/Special/committees/[something]"
+        }]
+      }],
+      "description" : "Lab Result Task Output",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:586aa814-5b6b-4600-89d2-55ddacea3a03",
+        "timestamp" : "2022-12-01T06:23:19+00:00",
+        "total" : 1,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output|0.1.0-test"
+        }],
+        "contains" : [{
+          "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output",
+          "code" : "result",
+          "display" : "Covid19 Test Result"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -148,7 +198,7 @@
       "title" : "Covid19 Test Result",
       "status" : "active",
       "experimental" : false,
-      "date" : "2022-11-30T14:25:57+00:00",
+      "date" : "2022-12-01T06:22:50+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -164,8 +214,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:08a2f3e3-c885-43c1-9f58-38921d136409",
-        "timestamp" : "2022-11-30T14:26:32+00:00",
+        "identifier" : "urn:uuid:4c9b023c-f970-4b1d-b94a-a557c4e460db",
+        "timestamp" : "2022-12-01T06:23:19+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -212,7 +262,7 @@
       "title" : "Covid19 Reason for Assessment or Test not performed",
       "status" : "active",
       "experimental" : false,
-      "date" : "2022-11-30T14:25:57+00:00",
+      "date" : "2022-12-01T06:22:50+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -228,8 +278,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:d66b2288-c6e2-4dd4-8e21-d0c4971cf7b5",
-        "timestamp" : "2022-11-30T14:26:33+00:00",
+        "identifier" : "urn:uuid:7e417c88-7ac2-400a-bca1-c7077058930b",
+        "timestamp" : "2022-12-01T06:23:20+00:00",
         "total" : 18,
         "parameter" : [{
           "name" : "excludeNested",
@@ -351,7 +401,7 @@
       "title" : "Presenting symptoms",
       "status" : "active",
       "experimental" : false,
-      "date" : "2022-11-30T14:25:57+00:00",
+      "date" : "2022-12-01T06:22:50+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -367,8 +417,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:161b7df3-bf8d-4759-afc2-28d7000c7a7a",
-        "timestamp" : "2022-11-30T14:26:34+00:00",
+        "identifier" : "urn:uuid:96531f45-c10c-4c73-9adc-ae5fa5c11277",
+        "timestamp" : "2022-12-01T06:23:21+00:00",
         "total" : 20,
         "parameter" : [{
           "name" : "excludeNested",
@@ -500,7 +550,7 @@
       "title" : "Source of information - codes",
       "status" : "active",
       "experimental" : false,
-      "date" : "2022-11-30T14:25:57+00:00",
+      "date" : "2022-12-01T06:22:50+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -516,8 +566,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:faa55863-1379-4034-8886-306f890e2ed3",
-        "timestamp" : "2022-11-30T14:26:37+00:00",
+        "identifier" : "urn:uuid:b25f379a-6125-404c-b260-b93f8efd90c5",
+        "timestamp" : "2022-12-01T06:23:24+00:00",
         "total" : 5,
         "parameter" : [{
           "name" : "excludeNested",
@@ -570,7 +620,7 @@
       "title" : "Admission Types",
       "status" : "active",
       "experimental" : false,
-      "date" : "2022-11-30T14:25:57+00:00",
+      "date" : "2022-12-01T06:22:50+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -586,8 +636,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:846818d9-4ed5-4e5b-8cc3-0401250e462f",
-        "timestamp" : "2022-11-30T14:26:37+00:00",
+        "identifier" : "urn:uuid:e85fe7c8-8e68-479e-8045-2bb1ee8823b6",
+        "timestamp" : "2022-12-01T06:23:24+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -634,7 +684,7 @@
       "title" : "Test Types",
       "status" : "active",
       "experimental" : false,
-      "date" : "2022-11-30T14:25:57+00:00",
+      "date" : "2022-12-01T06:22:50+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -650,8 +700,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:e4c42f9b-b181-452e-85b6-cd221210d49b",
-        "timestamp" : "2022-11-30T14:26:37+00:00",
+        "identifier" : "urn:uuid:11c810a2-f8c9-4517-a9dc-f27d574df2af",
+        "timestamp" : "2022-12-01T06:23:24+00:00",
         "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
@@ -693,7 +743,7 @@
       "title" : "Yes No Unknown",
       "status" : "active",
       "experimental" : false,
-      "date" : "2022-11-30T14:25:57+00:00",
+      "date" : "2022-12-01T06:22:50+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -709,8 +759,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:aeddb9e4-df40-4ed8-aec0-c91c3c21e66a",
-        "timestamp" : "2022-11-30T14:26:37+00:00",
+        "identifier" : "urn:uuid:d90f5cc5-f484-4269-9635-81c055f2c067",
+        "timestamp" : "2022-12-01T06:23:24+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -757,7 +807,7 @@
       "title" : "Presentation valueset",
       "status" : "active",
       "experimental" : false,
-      "date" : "2022-11-30T14:25:57+00:00",
+      "date" : "2022-12-01T06:22:50+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -773,8 +823,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:7b2e197e-4f55-4496-b3c7-b3905dcb0e2a",
-        "timestamp" : "2022-11-30T14:26:38+00:00",
+        "identifier" : "urn:uuid:061ee725-04a0-498d-ab02-8c454d861136",
+        "timestamp" : "2022-12-01T06:23:25+00:00",
         "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
@@ -816,7 +866,7 @@
       "title" : "COVID Treatmens dispensed or prescribed",
       "status" : "active",
       "experimental" : false,
-      "date" : "2022-11-30T14:25:57+00:00",
+      "date" : "2022-12-01T06:22:50+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -832,8 +882,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:d336fef7-015e-4b46-a1fa-5ada886eb355",
-        "timestamp" : "2022-11-30T14:26:39+00:00",
+        "identifier" : "urn:uuid:da535065-83da-40cc-97f7-ebe9d160c622",
+        "timestamp" : "2022-12-01T06:23:26+00:00",
         "total" : 1,
         "parameter" : [{
           "name" : "excludeNested",
@@ -870,7 +920,7 @@
       "title" : "List of Conditions / Comorbidity",
       "status" : "active",
       "experimental" : false,
-      "date" : "2022-11-30T14:25:57+00:00",
+      "date" : "2022-12-01T06:22:50+00:00",
       "publisher" : "OpenHIE",
       "contact" : [{
         "telecom" : [{
@@ -886,8 +936,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:cae58ce3-70dc-456e-9542-91d315ba9e06",
-        "timestamp" : "2022-11-30T14:26:41+00:00",
+        "identifier" : "urn:uuid:51843114-56cb-4b4f-a53e-32a850eaacb0",
+        "timestamp" : "2022-12-01T06:23:28+00:00",
         "total" : 14,
         "parameter" : [{
           "name" : "excludeNested",
