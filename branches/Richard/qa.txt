@@ -1,14 +1,14 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 2, warn = 45, info = 7
+err = 0, warn = 43, info = 7
 IG Publisher Version: 1.2.20
-Generated Thu Dec 01 06:24:03 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
+Generated Thu Dec 01 06:32:04 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
  Build Errors : 0 / 35 / 0
  /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 0 / 2 / 30
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 3
- /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 1 / 1 / 11
+ /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 11
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample : 0 / 0 / 11
  /github/workspace/fsh-generated/resources/CodeSystem-cs-lab-task-output : 0 / 1 / 2
  /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info : 0 / 1 / 2
@@ -61,7 +61,7 @@ Generated Thu Dec 01 06:24:03 UTC 2022. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Task-Covid19LabOrderCancellationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-Covid19LabOrderRejectionExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-LabOrderTaskExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Task-LabResultTaskExample : 1 / 1 / 1
+ /github/workspace/fsh-generated/resources/Task-LabResultTaskExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity : 0 / 0 / 1
@@ -123,8 +123,6 @@ WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization
 == fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json ==
-WARNING: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[0].resource.ofType(Task).output[0].type.coding[0]: A code with no system has no defined meaning. A system should be provided
-ERROR: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[0].resource.ofType(Task).output[0].type: None of the codings provided are in the value set 'Lab Result Task Output' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output|0.1.0-test), and a coding from this value set is required) (codes = null#result)
 == fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample.json ==
 == fsh-generated/resources/CodeSystem-cs-lab-task-output.json ==
 INFORMATION: CodeSystem/cs-lab-task-output: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
@@ -186,8 +184,6 @@ INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.co
 == fsh-generated/resources/Task-Covid19LabOrderRejectionExample.json ==
 == fsh-generated/resources/Task-LabOrderTaskExample.json ==
 == fsh-generated/resources/Task-LabResultTaskExample.json ==
-ERROR: Task/LabResultTaskExample: Task.output[0].type: None of the codings provided are in the value set 'Lab Result Task Output' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output|0.1.0-test), and a coding from this value set is required) (codes = null#result)
-WARNING: Task/LabResultTaskExample: Task.output[0].type.coding[0]: A code with no system has no defined meaning. A system should be provided
 == fsh-generated/resources/ValueSet-vs-AdmissionTypes.json ==
 == fsh-generated/resources/ValueSet-vs-cancellation-reason.json ==
 == fsh-generated/resources/ValueSet-vs-conditions-comorbidity.json ==
