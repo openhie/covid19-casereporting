@@ -41,7 +41,7 @@ Description: "Covid19 Patient example"
 * address.state = "Western Province"
 * address.district = "City of Cape Town"
 * address.city = "Cape Town"
-* contact[0].relationship.coding.code = #N
+* contact[0].relationship = #N
 * contact[0].relationship.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0131"
 * contact[0].name.given = "John" 
 * contact[0].name.family = "Doe"
@@ -109,7 +109,7 @@ InstanceOf: Covid19Diagnosis
 Usage: #example
 Title: "Covid19 Diagnosis Example"
 Description: "Covid19 Diagnosis Example"
-* verificationStatus.coding.code = #confirmed
+* verificationStatus = #confirmed
 * verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
@@ -140,12 +140,12 @@ Usage: #example
 Title: "Covid19 Vaccine Type Administered example"
 Description: "Covid19 Vaccine Type Administered example"
 * status = #completed
-* vaccineCode.coding.code = $ICD11#XM8NQ0
+* vaccineCode = $ICD11#XM8NQ0
 * patient = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * occurrenceDateTime = "2022-07-28"
 * reportOrigin.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"
-* reportOrigin.coding.code = #VaccineCard
+* reportOrigin = #VaccineCard
 * lotNumber = "1"
 * expirationDate = "2022-12-28"
 * protocolApplied.series = "Primary"
@@ -237,12 +237,12 @@ Usage: #example
 Title: "Covid19 Vaccination example"
 Description: "Covid19 Vaccination example"
 * status = #completed
-* vaccineCode.coding.code = $ICD11#XM4YL8
+* vaccineCode = $ICD11#XM4YL8
 * patient = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * occurrenceDateTime = "2022-07-28"
 * reportOrigin.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"
-* reportOrigin.coding.code = #VaccineCard
+* reportOrigin = #VaccineCard
 * lotNumber = "1"
 * expirationDate = "2022-12-28"
 * protocolApplied.series = "Booster"
@@ -372,7 +372,7 @@ Description: "Lab Result Task example"
 * requester = Reference(Covid19OrganizationExample)
 * owner = Reference(Covid19OrganizationExample)
 * output.type.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output"
-* output.type.coding.code = #Result 
+* output.type = #Result 
 * output.valueReference = Reference(Covid19LabResultsDiagnosticReportExample)
 
 Instance: LabOrderTaskExample
