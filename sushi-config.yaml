@@ -7,14 +7,14 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 id: covid19-casereporting
-canonical: http://openhie.org/fhir/covid19-casereporting
+canonical: https://openhie.github.io/cares-covid-ig
 url: http://openhie.org/fhir/covid19-casereporting
 name: Covid19IG
 title: "HL7 FHIR Implementation Guide: Covid IG Release 1 - US Realm | STU1"
 description: Covid19 IG exercises many of the fields in a SUSHI configuration.
 status: active
 license: CC0-1.0
-date: 2022-12-01
+date: 2020-02-26
 version: 1.0.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
@@ -36,16 +36,16 @@ releaseLabel: STU1
 # as IG.publisher.  The contact details and/or additional publishers
 # will be translated into IG.contact values.
 publisher:
-  name: Jembi Health Systems
-  url: https://www.jembi.org
-  email: info@jembi.org
+  name: My Organization 
+  url: http://openhie.org/committees
+  email: my-group@openhie.org
 
 # ContactDetail is required by the template.
 contact:
-  - name: Richard Langford
+  - name: Bob Smith
     telecom:
       - system: email
-        value: richard.langford@jembi.org
+        value: bobsmith@openhie.org
         use: work
 
 # The jurisdiction can be a single item or a list. The FHIR Shorthand
@@ -53,6 +53,7 @@ contact:
 
 #jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
+
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -179,6 +180,7 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # If set to true, no IG related content will be generated.
 # The default value for this property is false.
 FSHOnly: false
+
 # When set to true, the "short" and "definition" field on the root element of an Extension will
 # be set to the "Title" and "Description" of that Extension. Default is true.
 #applyExtensionMetadataToRoot: false
