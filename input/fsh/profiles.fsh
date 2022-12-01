@@ -332,7 +332,9 @@ Description: "Covid19 Lab Task"
 * lastModified 0..1
 * requester only Reference(Organization)
 * owner only Reference(Organization)
-* output from VSLabTaskOutput
+* output 0..*
+* output.type from VSLabTaskOutput (required)
+* output.valueReference 1..1
 
 Profile: Covid19Practitioner
 Parent: Practitioner

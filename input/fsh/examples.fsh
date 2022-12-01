@@ -371,7 +371,7 @@ Description: "Lab Result Task example"
 * lastModified = "2022-07-30"
 * requester = Reference(Covid19OrganizationExample)
 * owner = Reference(Covid19OrganizationExample)
-* output.type.code = #result 
+* output.type = #result 
 * output.valueReference = Reference(Covid19LabResultsDiagnosticReportExample)
 
 Instance: LabOrderTaskExample
