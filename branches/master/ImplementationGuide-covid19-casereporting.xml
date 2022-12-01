@@ -12,7 +12,7 @@
   <title value="COVID19 Case Reporting"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-11-30T14:32:33+00:00"/>
+  <date value="2022-12-01T07:10:15+00:00"/>
   <publisher value="OpenHIE"/>
   <contact>
     <telecom>
@@ -300,6 +300,16 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/vs-lab-task-output"/>
+      </reference>
+      <name value="Lab Result Task Output"/>
+      <description value="Lab Result Task Output"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/vs-covid19-test-result"/>
       </reference>
       <name value="Covid19 Test Result"/>
@@ -394,6 +404,16 @@
       </reference>
       <name value="Covid19 Lab Order"/>
       <description value="Covid19 Lab Order"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-lab-task-output"/>
+      </reference>
+      <name value="Lab Result Task Output"/>
+      <description value="Lab Result Task Output"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
