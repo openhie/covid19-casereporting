@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = errors = 6, warn = 41, info = 17, 0 -->
+<!-- broken links = errors = 0, warn = 41, info = 5, 0 -->
 <head>
   <title>Covid19CaseReporting : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Covid19CaseReporting</h1>
- <p>Generated Thu Dec 01 11:33:38 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://openhie.org/fhir/covid19-casereporting">http://openhie.org/fhir/covid19-casereporting</a> (<a href="http://openhie.org/fhir/covid19-casereporting/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
+ <p>Generated Thu Dec 01 11:41:52 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://openhie.org/fhir/covid19-casereporting">http://openhie.org/fhir/covid19-casereporting</a> (<a href="http://openhie.org/fhir/covid19-casereporting/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.2.21</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = openhie.fhir.covid, Canonical = http://openhie.org/fhir/covid19-casereporting</td></tr>
@@ -57,7 +57,7 @@
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://openhie.org/fhir/covid19-casereporting (Problem #1 with package-list.json at http://openhie.org/fhir/covid19-casereporting: openhie.org)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 6, warn = 41, info = 17, broken links = 0</td></tr>
+ <tr><td>Summary:</td><td> errors = 0, warn = 41, info = 5, broken links = 0</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -66,8 +66,8 @@
    <tr style="background-color: #EFFFEF">
      <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>35</b></td><td><b>0</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-CaresBundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-CaresBundleExample</b></a></td><td><b>3</b></td><td><b>2</b></td><td><b>14</b></td>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-CaresBundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-CaresBundleExample</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>3</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_github_workspace_fsh-generated_resources_Bundle-CaresSubmitLabCancellationBundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -96,8 +96,8 @@
    <tr style="background-color: #EFFFEF">
      <td><a href="#_github_workspace_fsh-generated_resources_DiagnosticReport-Covid19LabResultsDiagnosticReportExample"><b>/github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Encounter-Covid19AssessmentEncounterExample"><b>/github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample</b></a></td><td><b>3</b></td><td><b>0</b></td><td><b>1</b></td>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_github_workspace_fsh-generated_resources_Encounter-Covid19AssessmentEncounterExample"><b>/github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19AssessmentVaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
@@ -404,34 +404,10 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0] (l140/c12)</b></td><td><b>information</b></td><td title="Terminology_TX_NoValid_3_CC"><b>None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0] (l142/c16)</b></td><td><b>error</b></td><td title="Terminology_TX_System_ValueSet2"><b>The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0] (l142/c16)</b></td><td><b>error</b></td><td title="Terminology_TX_System_ValueSet"><b>Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0] (l142/c16)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed' is unknown so the code cannot be validated</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0] (l140/c12)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle.entry[3].resource.ofType(Observation).encounter (l207/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sl40" class="flip" onclick="flip('l40')">Show Reasoning</span><div id="l40" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</li></ul></div></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle.entry[4].resource.ofType(Condition).encounter (l255/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sl41" class="flip" onclick="flip('l41')">Show Reasoning</span><div id="l41" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</li></ul></div></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle.entry[5].resource.ofType(Condition).encounter (l323/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sl42" class="flip" onclick="flip('l42')">Show Reasoning</span><div id="l42" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</li></ul></div></td>
+     <td><b>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0] (l140/c12)</b></td><td><b>information</b></td><td title="Terminology_TX_NoValid_3_CC"><b>None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#428792000)</b></td>
    </tr>
    <tr style="background-color: #ffffe6">
      <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0] (l354/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle.entry[6].resource.ofType(Immunization).encounter (l363/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sl44" class="flip" onclick="flip('l44')">Show Reasoning</span><div id="l44" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</li></ul></div></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode (l352/c10)</b></td><td><b>warning</b></td><td title="[Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
@@ -439,26 +415,8 @@
    <tr style="background-color: #ffffe6">
      <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0] (l411/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle.entry[7].resource.ofType(Immunization).encounter (l420/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sl47" class="flip" onclick="flip('l47')">Show Reasoning</span><div id="l47" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</li></ul></div></td>
-   </tr>
    <tr style="background-color: #ffebcc">
      <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode (l409/c10)</b></td><td><b>warning</b></td><td title="[Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]"><b>[Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle.entry[8].resource.ofType(MedicationRequest).encounter (l470/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sl49" class="flip" onclick="flip('l49')">Show Reasoning</span><div id="l49" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</li></ul></div></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle.entry[9].resource.ofType(Observation).encounter (l518/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sl50" class="flip" onclick="flip('l50')">Show Reasoning</span><div id="l50" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</li></ul></div></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle.entry[10].resource.ofType(Observation).encounter (l549/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sl51" class="flip" onclick="flip('l51')">Show Reasoning</span><div id="l51" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</li></ul></div></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle.entry[11].resource.ofType(Observation).encounter (l590/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sl52" class="flip" onclick="flip('l52')">Show Reasoning</span><div id="l52" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</li></ul></div></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b><a href="">Bundle.entry[12].resource.ofType(Observation).encounter (l631/c10)</a></b></td><td><b>Slicing Information</b></td><td><b>Details for Encounter/Covid19AssessmentEncounterExample matching against profile http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1</b> <span id="sl53" class="flip" onclick="flip('l53')">Show Reasoning</span><div id="l53" style="display: none"><p>&nbsp;</p><ul><li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0].coding[0]: Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</li>, <li>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0]: None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</li></ul></div></td>
    </tr>
 </table>
 <hr/>
@@ -558,19 +516,7 @@
 </div>
  <table class="grid">
    <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Encounter.reasonCode[0] (l43/c6)</b></td><td><b>error</b></td><td title="Terminology_TX_NoValid_1_CC"><b>None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Encounter.reasonCode[0].coding[0] (l45/c10)</b></td><td><b>error</b></td><td title="Terminology_TX_System_ValueSet2"><b>The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Encounter.reasonCode[0].coding[0] (l45/c10)</b></td><td><b>error</b></td><td title="Terminology_TX_System_ValueSet"><b>Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Encounter.reasonCode[0].coding[0] (l45/c10)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed' is unknown so the code cannot be validated</b></td>
+     <td>&check;</td>
    </tr>
 </table>
 <hr/>
@@ -1178,7 +1124,7 @@
      <td><b>ValueSet.compose[0].include[0]</b></td><td><b>warning</b></td><td title=""><b>Unknown System 'http://id.who.int/icd11/mms' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.where(id = 'vs-vaccine-types')</b></td><td><b>warning</b></td><td><b>Error from server: Unable to provide support for code system http://id.who.int/icd11/mms</b> (<a href="qa-tx.html#l95">see Tx log</a>)</td>
+     <td><b>ValueSet.where(id = 'vs-vaccine-types')</b></td><td><b>warning</b></td><td><b>Error from server: Unable to provide support for code system http://id.who.int/icd11/mms</b> (<a href="qa-tx.html#l101">see Tx log</a>)</td>
    </tr>
 </table>
 <hr/>
@@ -1205,22 +1151,11 @@
 <p>No suppressed messsages</p><a name="sorted"> </a>
 <p><b>Errors sorted by type</b></p>
 <hr/>
-<a name="Terminology_TX_NoValid_1_CC"> </a>
-<h2>Terminology_TX_NoValid_1_CC</h2>
- <table class="grid">
-   <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="Encounter-Covid19AssessmentEncounterExample.html">fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json</a></td><td><b>None of the codings provided are in the value set 'Covid19 Reason for Assessment or Test not performed' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed|0.1.0-test), and a coding from this value set is required) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</b></td>
-   </tr>
-</table>
-<hr/>
 <a name="Terminology_TX_NoValid_3_CC"> </a>
 <h2>Terminology_TX_NoValid_3_CC</h2>
  <table class="grid">
    <tr style="background-color: #fffff2">
-     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed#428792000)</b></td>
+     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#428792000)</b></td>
    </tr>
 </table>
 <hr/>
@@ -1228,44 +1163,16 @@
 <h2>Terminology_TX_System_NotKnown</h2>
  <table class="grid">
    <tr style="background-color: #fffff2">
-     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed' is unknown so the code cannot be validated</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
      <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
-   </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Encounter-Covid19AssessmentEncounterExample.html">fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json</a></td><td><b>Code System URI 'http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
    </tr>
    <tr style="background-color: #fffff2">
      <td><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="Terminology_TX_System_ValueSet"> </a>
-<h2>Terminology_TX_System_ValueSet</h2>
- <table class="grid">
-   <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="Encounter-Covid19AssessmentEncounterExample.html">fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json</a></td><td><b>Invalid System URI: http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed - cannot use a value set URI as a system</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="Terminology_TX_System_ValueSet2"> </a>
-<h2>Terminology_TX_System_ValueSet2</h2>
- <table class="grid">
-   <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="Encounter-Covid19AssessmentEncounterExample.html">fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json</a></td><td><b>The Coding references a value set, not a code system ('http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed')</b></td>
    </tr>
 </table>
 </body>
