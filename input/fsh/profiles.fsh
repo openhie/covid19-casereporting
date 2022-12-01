@@ -180,7 +180,7 @@ Description: "Covid19 Lab Order"
 * identifier 1..1
 * status 1..1
 * intent = #order
-* code from VSTestTypes (required)
+* code.coding.code from VSTestTypes (required)
 * subject only Reference(Patient)
 * subject 1..1
 * encounter 1..1
