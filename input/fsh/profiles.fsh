@@ -133,8 +133,6 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 * patient 1..1
 * encounter 1..1
 * occurrenceDateTime 1..1
-* reportOrigin 1..1
-* reportOrigin.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"
 * reportOrigin.coding.code from VSSourceOfInfo (required)
 * lotNumber 1..1
 * expirationDate 0..1
@@ -231,8 +229,6 @@ Description: "Covid19 Vaccination"
 * patient 1..1
 * encounter 1..1
 * occurrenceDateTime 1..1
-* reportOrigin 1..1
-* reportOrigin.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"
 * reportOrigin.coding.code from VSSourceOfInfo (required)
 * lotNumber 1..1
 * expirationDate 0..1
@@ -337,7 +333,6 @@ Description: "Covid19 Lab Task"
 * requester only Reference(Organization)
 * owner only Reference(Organization)
 * output 0..*
-* output.type.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output"
 * output.type.coding.code from VSLabTaskOutput (required)
 * output.valueReference 1..1
 
