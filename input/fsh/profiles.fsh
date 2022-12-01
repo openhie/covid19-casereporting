@@ -333,7 +333,8 @@ Description: "Covid19 Lab Task"
 * requester only Reference(Organization)
 * owner only Reference(Organization)
 * output 0..*
-* output.type.coding.code from CSLabTaskOutput (required)
+* output.type.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output"
+* output.type.coding.code from VSLabTaskOutput (required)
 * output.valueReference 1..1
 
 Profile: Covid19Practitioner
