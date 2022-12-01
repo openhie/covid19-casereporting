@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = errors = 0, warn = 41, info = 5, 0 -->
+<!-- broken links = errors = 9, warn = 41, info = 1, 0 -->
 <head>
   <title>Covid19CaseReporting : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Covid19CaseReporting</h1>
- <p>Generated Thu Dec 01 09:04:18 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://openhie.org/fhir/covid19-casereporting">http://openhie.org/fhir/covid19-casereporting</a> (<a href="http://openhie.org/fhir/covid19-casereporting/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Thu Dec 01 09:21:58 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://openhie.org/fhir/covid19-casereporting">http://openhie.org/fhir/covid19-casereporting</a> (<a href="http://openhie.org/fhir/covid19-casereporting/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.2.20</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = openhie.fhir.covid, Canonical = http://openhie.org/fhir/covid19-casereporting</td></tr>
@@ -57,7 +57,7 @@
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://openhie.org/fhir/covid19-casereporting (Problem #1 with package-list.json at http://openhie.org/fhir/covid19-casereporting: openhie.org)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 0, warn = 41, info = 5, broken links = 0</td></tr>
+ <tr><td>Summary:</td><td> errors = 9, warn = 41, info = 1, broken links = 0</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -66,17 +66,17 @@
    <tr style="background-color: #EFFFEF">
      <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>35</b></td><td><b>0</b></td>
    </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-CaresBundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-CaresBundleExample</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>3</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-CaresBundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-CaresBundleExample</b></a></td><td><b>4</b></td><td><b>2</b></td><td><b>1</b></td>
    </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19AssessmentVaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19AssessmentVaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19VaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19VaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#_github_workspace_fsh-generated_resources_ValueSet-vs-vaccine-types"><b>/github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_github_workspace_fsh-generated_resources_ValueSet-vs-vaccine-types"><b>/github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types</b></a></td><td><b>1</b></td><td><b>2</b></td><td><b>0</b></td>
    </tr>
 </table>
 <hr/>
@@ -202,17 +202,23 @@
    <tr style="background-color: #ffffe6">
      <td><b>Bundle.entry[1].resource.ofType(Encounter).reasonCode[0] (l140/c12)</b></td><td><b>information</b></td><td title="Terminology_TX_NoValid_3_CC"><b>None of the codings provided are in the value set 'Encounter Reason Codes' (http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1), and a coding is recommended to come from this value set) (codes = http://snomed.info/sct#428792000)</b></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0] (l354/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0] (l354/c14)</b></td><td><b>error</b></td><td title="Terminology_TX_System_Unknown"><b>Unknown Code System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0].system (l356/c89)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode (l352/c10)</b></td><td><b>warning</b></td><td title="[Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated]"><b>[Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated]</b></td>
+     <td><b>Bundle.entry[6].resource.ofType(Immunization).vaccineCode (l352/c10)</b></td><td><b>warning</b></td><td title="[Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated]"><b>[Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated]</b></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0] (l411/c14)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0] (l411/c14)</b></td><td><b>error</b></td><td title="Terminology_TX_System_Unknown"><b>Unknown Code System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0].system (l413/c89)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode (l409/c10)</b></td><td><b>warning</b></td><td title="[Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated]"><b>[Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated]</b></td>
+     <td><b>Bundle.entry[7].resource.ofType(Immunization).vaccineCode (l409/c10)</b></td><td><b>warning</b></td><td title="[Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated]"><b>[Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated]</b></td>
    </tr>
 </table>
 <hr/>
@@ -225,10 +231,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Immunization.vaccineCode (l10/c4)</b></td><td><b>warning</b></td><td title="[Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated]"><b>[Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated]</b></td>
+     <td><b>Immunization.vaccineCode (l10/c4)</b></td><td><b>warning</b></td><td title="[Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated]"><b>[Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated]</b></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Immunization.vaccineCode.coding[0] (l12/c8)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>Immunization.vaccineCode.coding[0] (l12/c8)</b></td><td><b>error</b></td><td title="Terminology_TX_System_Unknown"><b>Unknown Code System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Immunization.vaccineCode.coding[0].system (l14/c83)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve</b></td>
    </tr>
 </table>
 <hr/>
@@ -241,10 +250,13 @@
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>Immunization.vaccineCode (l10/c4)</b></td><td><b>warning</b></td><td title="[Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated]"><b>[Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated]</b></td>
+     <td><b>Immunization.vaccineCode (l10/c4)</b></td><td><b>warning</b></td><td title="[Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated]"><b>[Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated]</b></td>
    </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>Immunization.vaccineCode.coding[0] (l12/c8)</b></td><td><b>information</b></td><td title="Terminology_TX_System_NotKnown"><b>Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>Immunization.vaccineCode.coding[0] (l12/c8)</b></td><td><b>error</b></td><td title="Terminology_TX_System_Unknown"><b>Unknown Code System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Immunization.vaccineCode.coding[0].system (l14/c83)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve</b></td>
    </tr>
 </table>
 <hr/>
@@ -256,11 +268,14 @@
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.compose[0].include[0]</b></td><td><b>warning</b></td><td title=""><b>Unknown System 'http://id.who.int/icd/release/11/2022-02/mms' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated)</b></td>
+   <tr style="background-color: #ffcccc">
+     <td><b>ValueSet.compose.include[0].system (l1/c1409)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.where(id = 'vs-vaccine-types')</b></td><td><b>warning</b></td><td><b>Error from server: Unable to provide support for code system http://id.who.int/icd/release/11/2022-02/mms</b> (<a href="qa-tx.html#l101">see Tx log</a>)</td>
+     <td><b>ValueSet.compose[0].include[0]</b></td><td><b>warning</b></td><td title=""><b>Unknown System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' is unknown so the code cannot be validated)</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.where(id = 'vs-vaccine-types')</b></td><td><b>warning</b></td><td><b>Error from server: Unable to provide support for code system http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11</b> (<a href="qa-tx.html#l101">see Tx log</a>)</td>
    </tr>
 </table>
 <a name="suppressed"> </a>
@@ -276,20 +291,40 @@
    </tr>
 </table>
 <hr/>
-<a name="Terminology_TX_System_NotKnown"> </a>
-<h2>Terminology_TX_System_NotKnown</h2>
+<a name="Terminology_TX_System_Unknown"> </a>
+<h2>Terminology_TX_System_Unknown</h2>
  <table class="grid">
-   <tr style="background-color: #fffff2">
-     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated</b></td>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>Unknown Code System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11'</b></td>
    </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated</b></td>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>Unknown Code System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11'</b></td>
    </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated</b></td>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a></td><td><b>Unknown Code System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11'</b></td>
    </tr>
-   <tr style="background-color: #fffff2">
-     <td><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a></td><td><b>Code System URI 'http://id.who.int/icd/release/11/2022-02/mms' is unknown so the code cannot be validated</b></td>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a></td><td><b>Unknown Code System 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Type_Specific_Checks_DT_URL_Resolve"> </a>
+<h2>Type_Specific_Checks_DT_URL_Resolve</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Bundle-CaresBundleExample.html">fsh-generated/resources/Bundle-CaresBundleExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a></td><td><b>URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="ValueSet-vs-vaccine-types.html">fsh-generated/resources/ValueSet-vs-vaccine-types.json</a></td><td><b>URL value 'http://hl7.org/fhir/uv/shc-vaccination/ValueSet/vaccine-icd-11' does not resolve</b></td>
    </tr>
 </table>
 </body>
