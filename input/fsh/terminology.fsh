@@ -177,3 +177,17 @@ Title: "Source of information - codes"
 Description: "Source of information - codes"
 * ^experimental = false
 * include codes from system CSSourceOfInfo
+
+CodeSystem: CSLabTaskOutput
+Id: cs-lab-task-output
+Title: "Lab Result Task Output"
+Description: "Lab Result Task Output"
+* ^experimental = false
+* #result "Covid19 Test Result"
+
+ValueSet: VSLabTaskOutput
+Id: vs-lab-task-output
+Title: "Lab Result Task Output"
+Description: "Lab Result Task Output"
+* ^experimental = false
+* include codes from system CSLabTaskOutput
