@@ -371,7 +371,8 @@ Description: "Lab Result Task example"
 * lastModified = "2022-07-30"
 * requester = Reference(Covid19OrganizationExample)
 * owner = Reference(Covid19OrganizationExample)
-* output.type = #result 
+* output.type.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output"
+* output.type.coding.code = #result 
 * output.valueReference = Reference(Covid19LabResultsDiagnosticReportExample)
 
 Instance: LabOrderTaskExample
