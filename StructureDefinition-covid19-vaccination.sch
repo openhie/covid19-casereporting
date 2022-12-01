@@ -13,7 +13,6 @@
     <sch:title>f:Immunization</sch:title>
     <sch:rule context="f:Immunization">
       <sch:assert test="count(f:encounter) &gt;= 1">encounter: minimum cardinality of 'encounter' is 1</sch:assert>
-      <sch:assert test="count(f:reportOrigin) &gt;= 1">reportOrigin: minimum cardinality of 'reportOrigin' is 1</sch:assert>
       <sch:assert test="count(f:lotNumber) &gt;= 1">lotNumber: minimum cardinality of 'lotNumber' is 1</sch:assert>
       <sch:assert test="count(f:note) &lt;= 1">note: maximum cardinality of 'note' is 1</sch:assert>
       <sch:assert test="count(f:protocolApplied) &gt;= 1">protocolApplied: minimum cardinality of 'protocolApplied' is 1</sch:assert>
