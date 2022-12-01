@@ -73,7 +73,7 @@ Description: "Covid19 Assessment Encounter"
 * subject only Reference(Patient)
 * subject 1..1
 * period 1..1
-* reasonCode from VSReasonForAssessmentOrTestNotPerformed (required)
+* reasonCode.coding.code from VSReasonForAssessmentOrTestNotPerformed (required)
 * location 1..1
 * location.location 1..1
 * location.physicalType from VSAdmissionTypes (required)
@@ -188,7 +188,7 @@ Description: "Covid19 Lab Order"
 * requester 1..1
 * locationReference 1..1
 * doNotPerform 0..1
-* reasonCode from VSReasonForAssessmentOrTestNotPerformed (required)
+* reasonCode.coding.code from VSReasonForAssessmentOrTestNotPerformed (required)
 * specimen 1..1
 * note.authorReference only Reference(Organization)
 * note 0..1
