@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = errors = 2, warn = 45, info = 7, 0 -->
+<!-- broken links = errors = 0, warn = 43, info = 7, 0 -->
 <head>
   <title>Covid19CaseReporting : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Covid19CaseReporting</h1>
- <p>Generated Thu Dec 01 06:24:03 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://openhie.org/fhir/covid19-casereporting">http://openhie.org/fhir/covid19-casereporting</a> (<a href="http://openhie.org/fhir/covid19-casereporting/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Thu Dec 01 06:32:04 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://openhie.org/fhir/covid19-casereporting">http://openhie.org/fhir/covid19-casereporting</a> (<a href="http://openhie.org/fhir/covid19-casereporting/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.2.20</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = openhie.fhir.covid, Canonical = http://openhie.org/fhir/covid19-casereporting</td></tr>
@@ -57,7 +57,7 @@
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://openhie.org/fhir/covid19-casereporting (Problem #1 with package-list.json at http://openhie.org/fhir/covid19-casereporting: openhie.org)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 2, warn = 45, info = 7, broken links = 0</td></tr>
+ <tr><td>Summary:</td><td> errors = 0, warn = 43, info = 7, broken links = 0</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -68,9 +68,6 @@
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_github_workspace_fsh-generated_resources_Bundle-CaresBundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-CaresBundleExample</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>3</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Bundle-CaresSubmitLabResultBundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample</b></a></td><td><b>1</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_github_workspace_fsh-generated_resources_CodeSystem-cs-lab-task-output"><b>/github/workspace/fsh-generated/resources/CodeSystem-cs-lab-task-output</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
@@ -83,9 +80,6 @@
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_github_workspace_fsh-generated_resources_Immunization-Covid19VaccinationExample"><b>/github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><a href="#_github_workspace_fsh-generated_resources_Task-LabResultTaskExample"><b>/github/workspace/fsh-generated/resources/Task-LabResultTaskExample</b></a></td><td><b>1</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_github_workspace_fsh-generated_resources_ValueSet-vs-vaccine-types"><b>/github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
@@ -228,25 +222,9 @@
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_fsh-generated_resources_Bundle-CaresSubmitLabResultBundleExample"> </a>
-<h2><a href="Bundle-CaresSubmitLabResultBundleExample.html">fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(11)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>Bundle: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></li><li>Bundle.entry[0].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/task.html">Task</a> and <i>this.</i><a href="StructureDefinition-covid19-lab-task.html">Covid19 Lab Task</a> (per meta)</li><li>Bundle.entry[1].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a> and <i>this.</i><a href="StructureDefinition-covid19-diagnostic-report.html">Covid19 Diagnostic Report</a> (per meta)</li><li>Bundle.entry[2].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a> and <i>this.</i><a href="StructureDefinition-covid19-practitioner.html">Covid19 Practitioner</a> (per meta)</li><li>Bundle.entry[3].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/specimen.html">Specimen</a> and <i>this.</i><a href="StructureDefinition-covid19-specimen.html">Covid19 Specimen</a> (per meta)</li><li>Bundle.entry[4].resource: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and <i>this.</i><a href="StructureDefinition-covid19-test-results.html">Covid19 Lab Results</a> (per meta)</li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Bundle.entry[0].resource.ofType(Task).output[0].type.coding[0] (l43/c18)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Bundle.entry[0].resource.ofType(Task).output[0].type (l41/c14)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Lab Result Task Output' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output|0.1.0-test), and a coding from this value set is required) (codes = null#result)</b> (<a href="qa-tx.html#l79">see Tx log</a>)</td>
-   </tr>
-</table>
-<hr/>
 <a name="_github_workspace_fsh-generated_resources_CodeSystem-cs-lab-task-output"> </a>
-<h2><a href="CodeSystem-cs-lab-task-output.html">fsh-generated/resources/CodeSystem-cs-lab-task-output.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+<h2><a href="CodeSystem-cs-lab-task-output.html">fsh-generated/resources/CodeSystem-cs-lab-task-output.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -261,8 +239,8 @@
 </table>
 <hr/>
 <a name="_github_workspace_fsh-generated_resources_CodeSystem-cs-source-of-info"> </a>
-<h2><a href="CodeSystem-cs-source-of-info.html">fsh-generated/resources/CodeSystem-cs-source-of-info.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+<h2><a href="CodeSystem-cs-source-of-info.html">fsh-generated/resources/CodeSystem-cs-source-of-info.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -277,8 +255,8 @@
 </table>
 <hr/>
 <a name="_github_workspace_fsh-generated_resources_Immunization-Covid19AssessmentVaccinationExample"> </a>
-<h2><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>Immunization: Validated against <i>this.</i><a href="StructureDefinition-covid19-assessment-vaccination.html">Covid19 Vaccination info included as part of the Assessment</a></li></ul>
+<h2><a href="Immunization-Covid19AssessmentVaccinationExample.html">fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>Immunization: Validated against <i>this.</i><a href="StructureDefinition-covid19-assessment-vaccination.html">Covid19 Vaccination info included as part of the Assessment</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -293,8 +271,8 @@
 </table>
 <hr/>
 <a name="_github_workspace_fsh-generated_resources_Immunization-Covid19VaccinationExample"> </a>
-<h2><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>Immunization: Validated against <i>this.</i><a href="StructureDefinition-covid19-vaccination.html">Covid19 Vaccination</a></li></ul>
+<h2><a href="Immunization-Covid19VaccinationExample.html">fsh-generated/resources/Immunization-Covid19VaccinationExample.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>Immunization: Validated against <i>this.</i><a href="StructureDefinition-covid19-vaccination.html">Covid19 Vaccination</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -308,25 +286,9 @@
    </tr>
 </table>
 <hr/>
-<a name="_github_workspace_fsh-generated_resources_Task-LabResultTaskExample"> </a>
-<h2><a href="Task-LabResultTaskExample.html">fsh-generated/resources/Task-LabResultTaskExample.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>Task: Validated against <i>this.</i><a href="StructureDefinition-covid19-lab-task.html">Covid19 Lab Task</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>Task.output[0].type (l34/c8)</b></td><td><b>error</b></td><td><b>None of the codings provided are in the value set 'Lab Result Task Output' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output|0.1.0-test), and a coding from this value set is required) (codes = null#result)</b> (<a href="qa-tx.html#l57">see Tx log</a>)</td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>Task.output[0].type.coding[0] (l36/c12)</b></td><td><b>warning</b></td><td title="TERMINOLOGY_TX_SYSTEM_NO_CODE"><b>A code with no system has no defined meaning. A system should be provided</b></td>
-   </tr>
-</table>
-<hr/>
 <a name="_github_workspace_fsh-generated_resources_ValueSet-vs-vaccine-types"> </a>
-<h2><a href="ValueSet-vs-vaccine-types.html">fsh-generated/resources/ValueSet-vs-vaccine-types.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+<h2><a href="ValueSet-vs-vaccine-types.html">fsh-generated/resources/ValueSet-vs-vaccine-types.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
    <tr>
@@ -336,7 +298,7 @@
      <td><b>ValueSet.compose[0].include[0]</b></td><td><b>warning</b></td><td title=""><b>Unknown System 'http://id.who.int/icd11/mms' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>ValueSet.where(id = 'vs-vaccine-types')</b></td><td><b>warning</b></td><td><b>Error from server: Unable to provide support for code system http://id.who.int/icd11/mms</b> (<a href="qa-tx.html#l103">see Tx log</a>)</td>
+     <td><b>ValueSet.where(id = 'vs-vaccine-types')</b></td><td><b>warning</b></td><td><b>Error from server: Unable to provide support for code system http://id.who.int/icd11/mms</b> (<a href="qa-tx.html#l101">see Tx log</a>)</td>
    </tr>
 </table>
 <a name="suppressed"> </a>
@@ -352,28 +314,6 @@
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="CodeSystem-cs-source-of-info.html">fsh-generated/resources/CodeSystem-cs-source-of-info.json</a></td><td><b>The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="TERMINOLOGY_TX_SYSTEM_NO_CODE"> </a>
-<h2>TERMINOLOGY_TX_SYSTEM_NO_CODE</h2>
- <table class="grid">
-   <tr style="background-color: #fff4ee">
-     <td><a href="Bundle-CaresSubmitLabResultBundleExample.html">fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="Task-LabResultTaskExample.html">fsh-generated/resources/Task-LabResultTaskExample.json</a></td><td><b>A code with no system has no defined meaning. A system should be provided</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="Terminology_TX_NoValid_1_CC"> </a>
-<h2>Terminology_TX_NoValid_1_CC</h2>
- <table class="grid">
-   <tr style="background-color: #ffeeee">
-     <td><a href="Bundle-CaresSubmitLabResultBundleExample.html">fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json</a></td><td><b>None of the codings provided are in the value set 'Lab Result Task Output' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output|0.1.0-test), and a coding from this value set is required) (codes = null#result)</b></td>
-   </tr>
-   <tr style="background-color: #ffeeee">
-     <td><a href="Task-LabResultTaskExample.html">fsh-generated/resources/Task-LabResultTaskExample.json</a></td><td><b>None of the codings provided are in the value set 'Lab Result Task Output' (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output|0.1.0-test), and a coding from this value set is required) (codes = null#result)</b></td>
    </tr>
 </table>
 <hr/>
