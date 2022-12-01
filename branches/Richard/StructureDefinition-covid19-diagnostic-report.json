@@ -13,17 +13,17 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
     "valueCode" : "patient"
   }],
-  "url" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report",
-  "version" : "1.0.0",
+  "url" : "https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-diagnostic-report",
+  "version" : "0.1.0-test",
   "name" : "Covid19DiagnosticReport",
   "title" : "Covid19 Diagnostic Report",
   "status" : "active",
-  "date" : "2022-12-01T17:22:13+00:00",
-  "publisher" : "Jembi Health Systems",
+  "date" : "2022-12-01T17:41:14+00:00",
+  "publisher" : "OpenHIE",
   "contact" : [{
     "telecom" : [{
-      "system" : "email",
-      "value" : "info@jembi.org"
+      "system" : "url",
+      "value" : "http://xxhl7.org/Special/committees/[something]"
     }]
   }],
   "description" : "Covid19 Diagnostic Report",
@@ -635,7 +635,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types"
+        "valueSet" : "https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -1411,7 +1411,7 @@
       "path" : "DiagnosticReport.code",
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types"
+        "valueSet" : "https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types"
       }
     },
     {

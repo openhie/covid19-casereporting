@@ -21,19 +21,19 @@
      fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category" ];
      fhir:Extension.valueCode [ fhir:value "patient" ]
   ]; # 
-  fhir:StructureDefinition.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request"]; # 
-  fhir:StructureDefinition.version [ fhir:value "1.0.0"]; # 
+  fhir:StructureDefinition.url [ fhir:value "https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-medication-request"]; # 
+  fhir:StructureDefinition.version [ fhir:value "0.1.0-test"]; # 
   fhir:StructureDefinition.name [ fhir:value "Covid19MedicationRequest"]; # 
   fhir:StructureDefinition.title [ fhir:value "Covid19 Treatment dispensed or prescribed"]; # 
   fhir:StructureDefinition.status [ fhir:value "active"]; # 
-  fhir:StructureDefinition.date [ fhir:value "2022-12-01T17:22:13+00:00"^^xsd:dateTime]; # 
-  fhir:StructureDefinition.publisher [ fhir:value "Jembi Health Systems"]; # 
+  fhir:StructureDefinition.date [ fhir:value "2022-12-01T17:41:14+00:00"^^xsd:dateTime]; # 
+  fhir:StructureDefinition.publisher [ fhir:value "OpenHIE"]; # 
   fhir:StructureDefinition.contact [
      fhir:index 0;
      fhir:ContactDetail.telecom [
        fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "info@jembi.org" ]
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://xxhl7.org/Special/committees/[something]" ]
      ]
   ]; # 
   fhir:StructureDefinition.description [ fhir:value "Covid19 Treatment dispensed or prescribed"]; # 
@@ -1090,8 +1090,8 @@
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed";
-           fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed>
+           fhir:value "https://openhie.github.io/cares-covid-ig/ValueSet/vs-treatment-dispensed-prescribed";
+           fhir:link <https://openhie.github.io/cares-covid-ig/ValueSet/vs-treatment-dispensed-prescribed>
          ]
        ];
        fhir:ElementDefinition.mapping [
@@ -3548,8 +3548,8 @@
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed";
-           fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed>
+           fhir:value "https://openhie.github.io/cares-covid-ig/ValueSet/vs-treatment-dispensed-prescribed";
+           fhir:link <https://openhie.github.io/cares-covid-ig/ValueSet/vs-treatment-dispensed-prescribed>
          ]
        ]
      ], [

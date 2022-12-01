@@ -1,23 +1,23 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 0, warn = 40, info = 4
+err = 112, warn = 40, info = 10
 IG Publisher Version: 1.2.22
-Generated Thu Dec 01 17:23:25 UTC 2022. FHIR version 4.0.1 for covid19-casereporting#1.0.0 (canonical = http://openhie.org/fhir/covid19-casereporting)
- Build Errors : 430 / 34 / 0
- /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 0 / 2 / 29
+Generated Thu Dec 01 17:42:29 UTC 2022. FHIR version 4.0.1 for covid19-casereporting#0.1.0-test (canonical = http://openhie.org/fhir/covid19-casereporting)
+ Build Errors : 30 / 34 / 0
+ /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 0 / 2 / 31
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample : 0 / 0 / 3
- /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 11
+ /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample : 0 / 0 / 12
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample : 0 / 0 / 11
- /github/workspace/fsh-generated/resources/CodeSystem-cs-lab-task-output : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-lab-task-output : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Condition-Covid19DiagnosisExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 0 / 1 / 2
- /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 0 / 1 / 3
+ /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 0 / 1 / 3
  /github/workspace/fsh-generated/resources/Location-Covid19AdmissionLocationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Location-Covid19ServiceRequestLocationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample : 0 / 0 / 1
@@ -33,527 +33,134 @@ Generated Thu Dec 01 17:23:25 UTC 2022. FHIR version 4.0.1 for covid19-caserepor
  /github/workspace/fsh-generated/resources/ServiceRequest-Covid19ServiceRequestExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Specimen-Covid19SpecimenLabResultExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission-location : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-death : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnostic-report : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-task : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-long-covid-post-covid : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-medication-request : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-next-vaccination : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-patient : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-practitioner : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-service-request-location : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-test-results : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccination : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission-location : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-death : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnostic-report : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-task : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-long-covid-post-covid : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-medication-request : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-next-vaccination : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-patient : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-practitioner : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-service-request-location : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-test-results : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccination : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received : 2 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-Covid19LabOrderCancellationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-Covid19LabOrderRejectionExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Task-LabOrderTaskExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/Task-LabResultTaskExample : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-lab-task-output : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-presentation : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-test-types : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed : 0 / 0 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types : 0 / 2 / 1
- /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Task-LabResultTaskExample : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-lab-task-output : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-presentation : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-test-types : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types : 2 / 2 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no : 2 / 0 / 1
  /github/workspace/input/covid19-casereporting : 0 / 0 / 1
 </table>
 == n/a ==
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Task/Covid19LabOrderCancellationExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Task/Covid19LabOrderCancellationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Immunization/Covid19AssessmentVaccinationExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Immunization/Covid19AssessmentVaccinationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource DiagnosticReport/Covid19LabResultsDiagnosticReportExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource DiagnosticReport/Covid19LabResultsDiagnosticReportExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Location/Covid19ServiceRequestLocationExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Location/Covid19ServiceRequestLocationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/Covid19OrganizationExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/Covid19OrganizationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/CaresSubmitLaborderBundleExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/CaresSubmitLaborderBundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Task/LabResultTaskExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Task/LabResultTaskExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Encounter/Covid19AssessmentEncounterExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Encounter/Covid19AssessmentEncounterExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/CaresSubmitLabCancellationBundleExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/CaresSubmitLabCancellationBundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Observation/Covid19TestResultExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19TestResultExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Observation/Covid19VaccineDoseEverReceivedExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19VaccineDoseEverReceivedExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Patient/Covid19PatientExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/Covid19PatientExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Observation/Covid19DeathExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19DeathExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Location/Covid19AdmissionLocationExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Location/Covid19AdmissionLocationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Observation/Covid19PresentingSymptomsExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19PresentingSymptomsExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Specimen/Covid19SpecimenLabResultExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Specimen/Covid19SpecimenLabResultExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Condition/Covid19ConditionsOrComorbidityExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Condition/Covid19ConditionsOrComorbidityExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Observation/Covid19LongCovidPostCovidExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19LongCovidPostCovidExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Condition/Covid19DiagnosisExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Condition/Covid19DiagnosisExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Immunization/Covid19VaccinationExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Immunization/Covid19VaccinationExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Practitioner/PractitionerExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/PractitionerExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Task/LabOrderTaskExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Task/LabOrderTaskExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/CaresSubmitLabResultBundleExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/CaresSubmitLabResultBundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Task/Covid19LabOrderRejectionExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Task/Covid19LabOrderRejectionExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource ServiceRequest/Covid19ServiceRequestExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ServiceRequest/Covid19ServiceRequestExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource MedicationRequest/Covid19MedicationRequestExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource MedicationRequest/Covid19MedicationRequestExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Specimen/Covid19SpecimenExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Specimen/Covid19SpecimenExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/CaresSubmitLabRejectionBundleExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/CaresSubmitLabRejectionBundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Bundle/CaresBundleExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/CaresBundleExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Observation/Covid19RecoveredOrSymptomsResolvedExample.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/Covid19RecoveredOrSymptomsResolvedExample.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: /github/workspace/output/Bundle-CaresBundleExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresBundleExample.html#/html/body/div/div/div/p/a at Line 248, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresBundleExample.json.html#/html/body/div/div/div/p/a at Line 940, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresBundleExample.ttl.html#/html/body/div/div/div/p/a at Line 889, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresBundleExample.xml.html#/html/body/div/div/div/p/a at Line 856, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabCancellationBundleExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabCancellationBundleExample.html#/html/body/div/div/div/p/a at Line 236, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabCancellationBundleExample.json.html#/html/body/div/div/div/p/a at Line 295, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabCancellationBundleExample.ttl.html#/html/body/div/div/div/p/a at Line 306, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabCancellationBundleExample.xml.html#/html/body/div/div/div/p/a at Line 288, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabRejectionBundleExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabRejectionBundleExample.html#/html/body/div/div/div/p/a at Line 236, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabRejectionBundleExample.json.html#/html/body/div/div/div/p/a at Line 295, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabRejectionBundleExample.ttl.html#/html/body/div/div/div/p/a at Line 306, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabRejectionBundleExample.xml.html#/html/body/div/div/div/p/a at Line 288, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabResultBundleExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabResultBundleExample.html#/html/body/div/div/div/p/a at Line 240, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabResultBundleExample.json.html#/html/body/div/div/div/p/a at Line 483, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabResultBundleExample.ttl.html#/html/body/div/div/div/p/a at Line 478, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLabResultBundleExample.xml.html#/html/body/div/div/div/p/a at Line 451, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLaborderBundleExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLaborderBundleExample.html#/html/body/div/div/div/p/a at Line 240, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLaborderBundleExample.json.html#/html/body/div/div/div/p/a at Line 473, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLaborderBundleExample.ttl.html#/html/body/div/div/div/p/a at Line 472, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Bundle-CaresSubmitLaborderBundleExample.xml.html#/html/body/div/div/div/p/a at Line 442, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/CodeSystem-cs-lab-task-output.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/CodeSystem-cs-lab-task-output.html#/html/body/div/div/div/p/a at Line 260, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/CodeSystem-cs-lab-task-output.json.html#/html/body/div/div/div/p/a at Line 283, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/CodeSystem-cs-lab-task-output.ttl.html#/html/body/div/div/div/p/a at Line 290, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/CodeSystem-cs-lab-task-output.xml.html#/html/body/div/div/div/p/a at Line 274, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/CodeSystem-cs-source-of-info.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/CodeSystem-cs-source-of-info.html#/html/body/div/div/div/p/a at Line 260, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/CodeSystem-cs-source-of-info.json.html#/html/body/div/div/div/p/a at Line 299, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/CodeSystem-cs-source-of-info.ttl.html#/html/body/div/div/div/p/a at Line 306, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/CodeSystem-cs-source-of-info.xml.html#/html/body/div/div/div/p/a at Line 290, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Condition-Covid19ConditionsOrComorbidityExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Condition-Covid19ConditionsOrComorbidityExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Condition-Covid19ConditionsOrComorbidityExample.json.html#/html/body/div/div/div/p/a at Line 286, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Condition-Covid19ConditionsOrComorbidityExample.ttl.html#/html/body/div/div/div/p/a at Line 296, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Condition-Covid19ConditionsOrComorbidityExample.xml.html#/html/body/div/div/div/p/a at Line 277, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Condition-Covid19DiagnosisExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Condition-Covid19DiagnosisExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Condition-Covid19DiagnosisExample.json.html#/html/body/div/div/div/p/a at Line 289, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Condition-Covid19DiagnosisExample.ttl.html#/html/body/div/div/div/p/a at Line 297, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Condition-Covid19DiagnosisExample.xml.html#/html/body/div/div/div/p/a at Line 279, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.json.html#/html/body/div/div/div/p/a at Line 278, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.ttl.html#/html/body/div/div/div/p/a at Line 290, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.xml.html#/html/body/div/div/div/p/a at Line 269, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Encounter-Covid19AssessmentEncounterExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Encounter-Covid19AssessmentEncounterExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Encounter-Covid19AssessmentEncounterExample.json.html#/html/body/div/div/div/p/a at Line 308, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Encounter-Covid19AssessmentEncounterExample.ttl.html#/html/body/div/div/div/p/a at Line 315, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Encounter-Covid19AssessmentEncounterExample.xml.html#/html/body/div/div/div/p/a at Line 295, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Immunization-Covid19AssessmentVaccinationExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Immunization-Covid19AssessmentVaccinationExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Immunization-Covid19AssessmentVaccinationExample.json.html#/html/body/div/div/div/p/a at Line 291, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Immunization-Covid19AssessmentVaccinationExample.ttl.html#/html/body/div/div/div/p/a at Line 299, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Immunization-Covid19AssessmentVaccinationExample.xml.html#/html/body/div/div/div/p/a at Line 283, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Immunization-Covid19VaccinationExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Immunization-Covid19VaccinationExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Immunization-Covid19VaccinationExample.json.html#/html/body/div/div/div/p/a at Line 291, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Immunization-Covid19VaccinationExample.ttl.html#/html/body/div/div/div/p/a at Line 299, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Immunization-Covid19VaccinationExample.xml.html#/html/body/div/div/div/p/a at Line 283, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Location-Covid19AdmissionLocationExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Location-Covid19AdmissionLocationExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Location-Covid19AdmissionLocationExample.json.html#/html/body/div/div/div/p/a at Line 257, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Location-Covid19AdmissionLocationExample.ttl.html#/html/body/div/div/div/p/a at Line 272, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Location-Covid19AdmissionLocationExample.xml.html#/html/body/div/div/div/p/a at Line 256, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Location-Covid19ServiceRequestLocationExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Location-Covid19ServiceRequestLocationExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Location-Covid19ServiceRequestLocationExample.json.html#/html/body/div/div/div/p/a at Line 257, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Location-Covid19ServiceRequestLocationExample.ttl.html#/html/body/div/div/div/p/a at Line 272, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Location-Covid19ServiceRequestLocationExample.xml.html#/html/body/div/div/div/p/a at Line 256, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/MedicationRequest-Covid19MedicationRequestExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/MedicationRequest-Covid19MedicationRequestExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/MedicationRequest-Covid19MedicationRequestExample.json.html#/html/body/div/div/div/p/a at Line 275, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/MedicationRequest-Covid19MedicationRequestExample.ttl.html#/html/body/div/div/div/p/a at Line 286, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/MedicationRequest-Covid19MedicationRequestExample.xml.html#/html/body/div/div/div/p/a at Line 270, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19DeathExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19DeathExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19DeathExample.json.html#/html/body/div/div/div/p/a at Line 275, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19DeathExample.ttl.html#/html/body/div/div/div/p/a at Line 288, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19DeathExample.xml.html#/html/body/div/div/div/p/a at Line 270, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19LongCovidPostCovidExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19LongCovidPostCovidExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19LongCovidPostCovidExample.json.html#/html/body/div/div/div/p/a at Line 275, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19LongCovidPostCovidExample.ttl.html#/html/body/div/div/div/p/a at Line 288, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19LongCovidPostCovidExample.xml.html#/html/body/div/div/div/p/a at Line 270, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19PresentingSymptomsExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19PresentingSymptomsExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19PresentingSymptomsExample.json.html#/html/body/div/div/div/p/a at Line 275, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19PresentingSymptomsExample.ttl.html#/html/body/div/div/div/p/a at Line 288, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19PresentingSymptomsExample.xml.html#/html/body/div/div/div/p/a at Line 270, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19RecoveredOrSymptomsResolvedExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19RecoveredOrSymptomsResolvedExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19RecoveredOrSymptomsResolvedExample.json.html#/html/body/div/div/div/p/a at Line 275, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19RecoveredOrSymptomsResolvedExample.ttl.html#/html/body/div/div/div/p/a at Line 288, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19RecoveredOrSymptomsResolvedExample.xml.html#/html/body/div/div/div/p/a at Line 270, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19TestResultExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19TestResultExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19TestResultExample.json.html#/html/body/div/div/div/p/a at Line 274, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19TestResultExample.ttl.html#/html/body/div/div/div/p/a at Line 289, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19TestResultExample.xml.html#/html/body/div/div/div/p/a at Line 269, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19VaccineDoseEverReceivedExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19VaccineDoseEverReceivedExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19VaccineDoseEverReceivedExample.json.html#/html/body/div/div/div/p/a at Line 265, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19VaccineDoseEverReceivedExample.ttl.html#/html/body/div/div/div/p/a at Line 280, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Observation-Covid19VaccineDoseEverReceivedExample.xml.html#/html/body/div/div/div/p/a at Line 262, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Organization-Covid19OrganizationExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Organization-Covid19OrganizationExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Organization-Covid19OrganizationExample.json.html#/html/body/div/div/div/p/a at Line 269, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Organization-Covid19OrganizationExample.ttl.html#/html/body/div/div/div/p/a at Line 282, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Organization-Covid19OrganizationExample.xml.html#/html/body/div/div/div/p/a at Line 263, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Patient-Covid19PatientExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Patient-Covid19PatientExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Patient-Covid19PatientExample.json.html#/html/body/div/div/div/p/a at Line 324, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Patient-Covid19PatientExample.ttl.html#/html/body/div/div/div/p/a at Line 328, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Patient-Covid19PatientExample.xml.html#/html/body/div/div/div/p/a at Line 306, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Practitioner-PractitionerExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Practitioner-PractitionerExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Practitioner-PractitionerExample.json.html#/html/body/div/div/div/p/a at Line 264, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Practitioner-PractitionerExample.ttl.html#/html/body/div/div/div/p/a at Line 277, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Practitioner-PractitionerExample.xml.html#/html/body/div/div/div/p/a at Line 257, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ServiceRequest-Covid19ServiceRequestExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ServiceRequest-Covid19ServiceRequestExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ServiceRequest-Covid19ServiceRequestExample.json.html#/html/body/div/div/div/p/a at Line 306, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ServiceRequest-Covid19ServiceRequestExample.ttl.html#/html/body/div/div/div/p/a at Line 315, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ServiceRequest-Covid19ServiceRequestExample.xml.html#/html/body/div/div/div/p/a at Line 291, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Specimen-Covid19SpecimenExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Specimen-Covid19SpecimenExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Specimen-Covid19SpecimenExample.json.html#/html/body/div/div/div/p/a at Line 279, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Specimen-Covid19SpecimenExample.ttl.html#/html/body/div/div/div/p/a at Line 291, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Specimen-Covid19SpecimenExample.xml.html#/html/body/div/div/div/p/a at Line 272, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Specimen-Covid19SpecimenLabResultExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Specimen-Covid19SpecimenLabResultExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Specimen-Covid19SpecimenLabResultExample.json.html#/html/body/div/div/div/p/a at Line 285, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Specimen-Covid19SpecimenLabResultExample.ttl.html#/html/body/div/div/div/p/a at Line 296, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Specimen-Covid19SpecimenLabResultExample.xml.html#/html/body/div/div/div/p/a at Line 276, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-admission-location-definitions.html#/html/body/div/div/div/p/a at Line 757, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-admission-location-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-admission-location-mappings.html#/html/body/div/div/div/p/a at Line 349, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-admission-location.html#/html/body/div/div/div/p/a at Line 775, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-admission-location.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-admission-location.profile.json.html#/html/body/div/div/div/p/a at Line 2513, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-admission-location.profile.ttl.html#/html/body/div/div/div/p/a at Line 2211, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-admission-location.profile.xml.html#/html/body/div/div/div/p/a at Line 2297, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-assessment-vaccination-definitions.html#/html/body/div/div/div/p/a at Line 1036, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-assessment-vaccination-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-assessment-vaccination-mappings.html#/html/body/div/div/div/p/a at Line 461, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-assessment-vaccination.html#/html/body/div/div/div/p/a at Line 959, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-assessment-vaccination.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-assessment-vaccination.profile.json.html#/html/body/div/div/div/p/a at Line 4250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-assessment-vaccination.profile.ttl.html#/html/body/div/div/div/p/a at Line 3690, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-assessment-vaccination.profile.xml.html#/html/body/div/div/div/p/a at Line 3858, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities-definitions.html#/html/body/div/div/div/p/a at Line 708, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities-examples.html#/html/body/div/div/div/p/a at Line 309, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities-mappings.html#/html/body/div/div/div/p/a at Line 420, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities-present-definitions.html#/html/body/div/div/div/p/a at Line 330, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities-present-mappings.html#/html/body/div/div/div/p/a at Line 289, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities-present.html#/html/body/div/div/div/p/a at Line 543, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities-present.profile.history.html#/html/body/div/div/div/p/a at Line 271, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities-present.profile.json.html#/html/body/div/div/div/p/a at Line 638, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities-present.profile.ttl.html#/html/body/div/div/div/p/a at Line 599, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities-present.profile.xml.html#/html/body/div/div/div/p/a at Line 588, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities.html#/html/body/div/div/div/p/a at Line 820, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities.profile.json.html#/html/body/div/div/div/p/a at Line 2690, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities.profile.ttl.html#/html/body/div/div/div/p/a at Line 2401, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-conditions-or-comorbidities.profile.xml.html#/html/body/div/div/div/p/a at Line 2497, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-date-last-hospitalised-definitions.html#/html/body/div/div/div/p/a at Line 319, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-date-last-hospitalised-mappings.html#/html/body/div/div/div/p/a at Line 288, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-date-last-hospitalised.html#/html/body/div/div/div/p/a at Line 512, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-date-last-hospitalised.profile.history.html#/html/body/div/div/div/p/a at Line 271, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-date-last-hospitalised.profile.json.html#/html/body/div/div/div/p/a at Line 567, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-date-last-hospitalised.profile.ttl.html#/html/body/div/div/div/p/a at Line 539, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-date-last-hospitalised.profile.xml.html#/html/body/div/div/div/p/a at Line 524, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-death-definitions.html#/html/body/div/div/div/p/a at Line 910, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-death-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-death-mappings.html#/html/body/div/div/div/p/a at Line 464, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-death.html#/html/body/div/div/div/p/a at Line 952, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-death.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-death.profile.json.html#/html/body/div/div/div/p/a at Line 3441, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-death.profile.ttl.html#/html/body/div/div/div/p/a at Line 3052, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-death.profile.xml.html#/html/body/div/div/div/p/a at Line 3215, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnosis-definitions.html#/html/body/div/div/div/p/a at Line 714, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnosis-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnosis-mappings.html#/html/body/div/div/div/p/a at Line 425, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnosis.html#/html/body/div/div/div/p/a at Line 806, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnosis.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnosis.profile.json.html#/html/body/div/div/div/p/a at Line 2707, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnosis.profile.ttl.html#/html/body/div/div/div/p/a at Line 2410, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnosis.profile.xml.html#/html/body/div/div/div/p/a at Line 2512, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnostic-report-definitions.html#/html/body/div/div/div/p/a at Line 632, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnostic-report-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnostic-report-mappings.html#/html/body/div/div/div/p/a at Line 370, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnostic-report.html#/html/body/div/div/div/p/a at Line 695, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnostic-report.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnostic-report.profile.json.html#/html/body/div/div/div/p/a at Line 2017, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnostic-report.profile.ttl.html#/html/body/div/div/div/p/a at Line 1846, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-diagnostic-report.profile.xml.html#/html/body/div/div/div/p/a at Line 1862, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-encounter-definitions.html#/html/body/div/div/div/p/a at Line 998, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-encounter-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-encounter-mappings.html#/html/body/div/div/div/p/a at Line 441, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-encounter.html#/html/body/div/div/div/p/a at Line 941, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-encounter.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-encounter.profile.json.html#/html/body/div/div/div/p/a at Line 4025, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-encounter.profile.ttl.html#/html/body/div/div/div/p/a at Line 3554, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-encounter.profile.xml.html#/html/body/div/div/div/p/a at Line 3645, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-ever-hospitalised-definitions.html#/html/body/div/div/div/p/a at Line 330, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-ever-hospitalised-mappings.html#/html/body/div/div/div/p/a at Line 289, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-ever-hospitalised.html#/html/body/div/div/div/p/a at Line 543, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-ever-hospitalised.profile.history.html#/html/body/div/div/div/p/a at Line 271, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-ever-hospitalised.profile.json.html#/html/body/div/div/div/p/a at Line 638, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-ever-hospitalised.profile.ttl.html#/html/body/div/div/div/p/a at Line 599, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-ever-hospitalised.profile.xml.html#/html/body/div/div/div/p/a at Line 588, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-order-definitions.html#/html/body/div/div/div/p/a at Line 774, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-order-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-order-mappings.html#/html/body/div/div/div/p/a at Line 445, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-order.html#/html/body/div/div/div/p/a at Line 824, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-order.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-order.profile.json.html#/html/body/div/div/div/p/a at Line 3024, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-order.profile.ttl.html#/html/body/div/div/div/p/a at Line 2689, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-order.profile.xml.html#/html/body/div/div/div/p/a at Line 2786, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-task-definitions.html#/html/body/div/div/div/p/a at Line 961, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-task-examples.html#/html/body/div/div/div/p/a at Line 345, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-task-mappings.html#/html/body/div/div/div/p/a at Line 420, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-task.html#/html/body/div/div/div/p/a at Line 1066, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-task.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-task.profile.json.html#/html/body/div/div/div/p/a at Line 3744, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-task.profile.ttl.html#/html/body/div/div/div/p/a at Line 3242, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-lab-task.profile.xml.html#/html/body/div/div/div/p/a at Line 3410, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-long-covid-post-covid-definitions.html#/html/body/div/div/div/p/a at Line 910, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-long-covid-post-covid-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-long-covid-post-covid-mappings.html#/html/body/div/div/div/p/a at Line 464, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-long-covid-post-covid.html#/html/body/div/div/div/p/a at Line 952, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-long-covid-post-covid.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-long-covid-post-covid.profile.json.html#/html/body/div/div/div/p/a at Line 3441, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-long-covid-post-covid.profile.ttl.html#/html/body/div/div/div/p/a at Line 3052, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-long-covid-post-covid.profile.xml.html#/html/body/div/div/div/p/a at Line 3215, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-medication-request-definitions.html#/html/body/div/div/div/p/a at Line 925, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-medication-request-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-medication-request-mappings.html#/html/body/div/div/div/p/a at Line 472, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-medication-request.html#/html/body/div/div/div/p/a at Line 887, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-medication-request.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-medication-request.profile.json.html#/html/body/div/div/div/p/a at Line 3667, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-medication-request.profile.ttl.html#/html/body/div/div/div/p/a at Line 3248, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-medication-request.profile.xml.html#/html/body/div/div/div/p/a at Line 3408, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-next-vaccination-definitions.html#/html/body/div/div/div/p/a at Line 319, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-next-vaccination-mappings.html#/html/body/div/div/div/p/a at Line 288, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-next-vaccination.html#/html/body/div/div/div/p/a at Line 512, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-next-vaccination.profile.history.html#/html/body/div/div/div/p/a at Line 271, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-next-vaccination.profile.json.html#/html/body/div/div/div/p/a at Line 567, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-next-vaccination.profile.ttl.html#/html/body/div/div/div/p/a at Line 539, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-next-vaccination.profile.xml.html#/html/body/div/div/div/p/a at Line 524, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-organization-definitions.html#/html/body/div/div/div/p/a at Line 788, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-organization-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-organization-mappings.html#/html/body/div/div/div/p/a at Line 400, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-organization.html#/html/body/div/div/div/p/a at Line 777, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-organization.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-organization.profile.json.html#/html/body/div/div/div/p/a at Line 2764, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-organization.profile.ttl.html#/html/body/div/div/div/p/a at Line 2404, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-organization.profile.xml.html#/html/body/div/div/div/p/a at Line 2528, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-patient-definitions.html#/html/body/div/div/div/p/a at Line 1160, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-patient-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-patient-mappings.html#/html/body/div/div/div/p/a at Line 474, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-patient.html#/html/body/div/div/div/p/a at Line 995, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-patient.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-patient.profile.json.html#/html/body/div/div/div/p/a at Line 4420, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-patient.profile.ttl.html#/html/body/div/div/div/p/a at Line 3809, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-patient.profile.xml.html#/html/body/div/div/div/p/a at Line 4070, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-practitioner-definitions.html#/html/body/div/div/div/p/a at Line 557, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-practitioner-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-practitioner-mappings.html#/html/body/div/div/div/p/a at Line 349, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-practitioner.html#/html/body/div/div/div/p/a at Line 674, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-practitioner.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-practitioner.profile.json.html#/html/body/div/div/div/p/a at Line 1583, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-practitioner.profile.ttl.html#/html/body/div/div/div/p/a at Line 1424, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-practitioner.profile.xml.html#/html/body/div/div/div/p/a at Line 1490, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-presenting-symptoms-definitions.html#/html/body/div/div/div/p/a at Line 907, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-presenting-symptoms-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-presenting-symptoms-mappings.html#/html/body/div/div/div/p/a at Line 464, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-presenting-symptoms.html#/html/body/div/div/div/p/a at Line 924, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-presenting-symptoms.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-presenting-symptoms.profile.json.html#/html/body/div/div/div/p/a at Line 3421, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-presenting-symptoms.profile.ttl.html#/html/body/div/div/div/p/a at Line 3038, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-presenting-symptoms.profile.xml.html#/html/body/div/div/div/p/a at Line 3200, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-recovered-or-symptoms-resolved-definitions.html#/html/body/div/div/div/p/a at Line 910, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-recovered-or-symptoms-resolved-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-recovered-or-symptoms-resolved-mappings.html#/html/body/div/div/div/p/a at Line 464, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-recovered-or-symptoms-resolved.html#/html/body/div/div/div/p/a at Line 952, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-recovered-or-symptoms-resolved.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-recovered-or-symptoms-resolved.profile.json.html#/html/body/div/div/div/p/a at Line 3441, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-recovered-or-symptoms-resolved.profile.ttl.html#/html/body/div/div/div/p/a at Line 3052, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-recovered-or-symptoms-resolved.profile.xml.html#/html/body/div/div/div/p/a at Line 3215, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-service-request-location-definitions.html#/html/body/div/div/div/p/a at Line 757, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-service-request-location-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-service-request-location-mappings.html#/html/body/div/div/div/p/a at Line 349, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-service-request-location.html#/html/body/div/div/div/p/a at Line 775, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-service-request-location.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-service-request-location.profile.json.html#/html/body/div/div/div/p/a at Line 2513, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-service-request-location.profile.ttl.html#/html/body/div/div/div/p/a at Line 2211, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-service-request-location.profile.xml.html#/html/body/div/div/div/p/a at Line 2297, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-specimen-definitions.html#/html/body/div/div/div/p/a at Line 791, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-specimen-examples.html#/html/body/div/div/div/p/a at Line 309, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-specimen-mappings.html#/html/body/div/div/div/p/a at Line 390, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-specimen.html#/html/body/div/div/div/p/a at Line 852, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-specimen.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-specimen.profile.json.html#/html/body/div/div/div/p/a at Line 2920, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-specimen.profile.ttl.html#/html/body/div/div/div/p/a at Line 2572, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-specimen.profile.xml.html#/html/body/div/div/div/p/a at Line 2640, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-test-results-definitions.html#/html/body/div/div/div/p/a at Line 869, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-test-results-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-test-results-mappings.html#/html/body/div/div/div/p/a at Line 458, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-test-results.html#/html/body/div/div/div/p/a at Line 875, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-test-results.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-test-results.profile.json.html#/html/body/div/div/div/p/a at Line 3206, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-test-results.profile.ttl.html#/html/body/div/div/div/p/a at Line 2852, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-test-results.profile.xml.html#/html/body/div/div/div/p/a at Line 3016, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccination-definitions.html#/html/body/div/div/div/p/a at Line 1036, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccination-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccination-mappings.html#/html/body/div/div/div/p/a at Line 461, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccination.html#/html/body/div/div/div/p/a at Line 959, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccination.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccination.profile.json.html#/html/body/div/div/div/p/a at Line 4250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccination.profile.ttl.html#/html/body/div/div/div/p/a at Line 3690, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccination.profile.xml.html#/html/body/div/div/div/p/a at Line 3857, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccine-dose-ever-received-definitions.html#/html/body/div/div/div/p/a at Line 839, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccine-dose-ever-received-examples.html#/html/body/div/div/div/p/a at Line 303, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccine-dose-ever-received-mappings.html#/html/body/div/div/div/p/a at Line 450, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccine-dose-ever-received.html#/html/body/div/div/div/p/a at Line 872, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccine-dose-ever-received.profile.history.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccine-dose-ever-received.profile.json.html#/html/body/div/div/div/p/a at Line 3042, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccine-dose-ever-received.profile.ttl.html#/html/body/div/div/div/p/a at Line 2717, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/StructureDefinition-covid19-vaccine-dose-ever-received.profile.xml.html#/html/body/div/div/div/p/a at Line 2869, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-Covid19LabOrderCancellationExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-Covid19LabOrderCancellationExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-Covid19LabOrderCancellationExample.json.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-Covid19LabOrderCancellationExample.ttl.html#/html/body/div/div/div/p/a at Line 294, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-Covid19LabOrderCancellationExample.xml.html#/html/body/div/div/div/p/a at Line 275, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-Covid19LabOrderRejectionExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-Covid19LabOrderRejectionExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-Covid19LabOrderRejectionExample.json.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-Covid19LabOrderRejectionExample.ttl.html#/html/body/div/div/div/p/a at Line 294, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-Covid19LabOrderRejectionExample.xml.html#/html/body/div/div/div/p/a at Line 275, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-LabOrderTaskExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-LabOrderTaskExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-LabOrderTaskExample.json.html#/html/body/div/div/div/p/a at Line 273, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-LabOrderTaskExample.ttl.html#/html/body/div/div/div/p/a at Line 286, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-LabOrderTaskExample.xml.html#/html/body/div/div/div/p/a at Line 269, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-LabResultTaskExample.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-LabResultTaskExample.html#/html/body/div/div/div/p/a at Line 235, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-LabResultTaskExample.json.html#/html/body/div/div/div/p/a at Line 288, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-LabResultTaskExample.ttl.html#/html/body/div/div/div/p/a at Line 296, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/Task-LabResultTaskExample.xml.html#/html/body/div/div/div/p/a at Line 282, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-AdmissionTypes.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-AdmissionTypes.html#/html/body/div/div/div/p/a at Line 298, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-AdmissionTypes.json.html#/html/body/div/div/div/p/a at Line 295, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-AdmissionTypes.ttl.html#/html/body/div/div/div/p/a at Line 297, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-AdmissionTypes.xml.html#/html/body/div/div/div/p/a at Line 284, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-cancellation-reason.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-cancellation-reason.html#/html/body/div/div/div/p/a at Line 296, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-cancellation-reason.json.html#/html/body/div/div/div/p/a at Line 295, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-cancellation-reason.ttl.html#/html/body/div/div/div/p/a at Line 297, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-cancellation-reason.xml.html#/html/body/div/div/div/p/a at Line 284, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-conditions-comorbidity.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-conditions-comorbidity.html#/html/body/div/div/div/p/a at Line 298, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-conditions-comorbidity.json.html#/html/body/div/div/div/p/a at Line 339, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-conditions-comorbidity.ttl.html#/html/body/div/div/div/p/a at Line 330, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-conditions-comorbidity.xml.html#/html/body/div/div/div/p/a at Line 328, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.html#/html/body/div/div/div/p/a at Line 299, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.json.html#/html/body/div/div/div/p/a at Line 355, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.ttl.html#/html/body/div/div/div/p/a at Line 342, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.xml.html#/html/body/div/div/div/p/a at Line 344, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-specimen-type.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-specimen-type.html#/html/body/div/div/div/p/a at Line 298, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-specimen-type.json.html#/html/body/div/div/div/p/a at Line 295, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-specimen-type.ttl.html#/html/body/div/div/div/p/a at Line 297, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-specimen-type.xml.html#/html/body/div/div/div/p/a at Line 284, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-test-result.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-test-result.html#/html/body/div/div/div/p/a at Line 298, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-test-result.json.html#/html/body/div/div/div/p/a at Line 295, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-test-result.ttl.html#/html/body/div/div/div/p/a at Line 297, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-covid19-test-result.xml.html#/html/body/div/div/div/p/a at Line 284, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-lab-task-output.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-lab-task-output.html#/html/body/div/div/div/p/a at Line 298, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-lab-task-output.json.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-lab-task-output.ttl.html#/html/body/div/div/div/p/a at Line 287, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-lab-task-output.xml.html#/html/body/div/div/div/p/a at Line 273, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-presentation.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-presentation.html#/html/body/div/div/div/p/a at Line 298, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-presentation.json.html#/html/body/div/div/div/p/a at Line 291, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-presentation.ttl.html#/html/body/div/div/div/p/a at Line 294, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-presentation.xml.html#/html/body/div/div/div/p/a at Line 280, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-source-of-info.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-source-of-info.html#/html/body/div/div/div/p/a at Line 299, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-source-of-info.json.html#/html/body/div/div/div/p/a at Line 281, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-source-of-info.ttl.html#/html/body/div/div/div/p/a at Line 287, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-source-of-info.xml.html#/html/body/div/div/div/p/a at Line 273, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-symptoms.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-symptoms.html#/html/body/div/div/div/p/a at Line 298, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-symptoms.json.html#/html/body/div/div/div/p/a at Line 363, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-symptoms.ttl.html#/html/body/div/div/div/p/a at Line 348, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-symptoms.xml.html#/html/body/div/div/div/p/a at Line 352, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-test-types.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-test-types.html#/html/body/div/div/div/p/a at Line 300, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-test-types.json.html#/html/body/div/div/div/p/a at Line 291, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-test-types.ttl.html#/html/body/div/div/div/p/a at Line 294, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-test-types.xml.html#/html/body/div/div/div/p/a at Line 282, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-treatment-dispensed-prescribed.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-treatment-dispensed-prescribed.html#/html/body/div/div/div/p/a at Line 298, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-treatment-dispensed-prescribed.json.html#/html/body/div/div/div/p/a at Line 287, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-treatment-dispensed-prescribed.ttl.html#/html/body/div/div/div/p/a at Line 291, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-treatment-dispensed-prescribed.xml.html#/html/body/div/div/div/p/a at Line 276, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-vaccine-types.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-vaccine-types.html#/html/body/div/div/div/p/a at Line 300, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-vaccine-types.json.html#/html/body/div/div/div/p/a at Line 323, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-vaccine-types.ttl.html#/html/body/div/div/div/p/a at Line 318, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-vaccine-types.xml.html#/html/body/div/div/div/p/a at Line 312, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-yes-no.change.history.html#/html/body/div/div/div/p/a at Line 250, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-yes-no.html#/html/body/div/div/div/p/a at Line 300, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-yes-no.json.html#/html/body/div/div/div/p/a at Line 295, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-yes-no.ttl.html#/html/body/div/div/div/p/a at Line 297, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/ValueSet-vs-yes-no.xml.html#/html/body/div/div/div/p/a at Line 284, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 815, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/changes.html#/html/body/div/div/div/p/a at Line 197, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 223, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
-ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/p/a at Line 186, column 28: The link 'info@jembi.org' for "Jembi Health Systems" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/Bundle-CaresBundleExample.json ==
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
+INFORMATION: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).reportOrigin.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info' is unknown so the code cannot be validated
 WARNING: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode: [Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
+INFORMATION: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).reportOrigin.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info' is unknown so the code cannot be validated
 WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode: [Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 == fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json ==
+INFORMATION: Bundle/CaresSubmitLabResultBundleExample: Bundle.entry[0].resource.ofType(Task).output[0].type.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output' is unknown so the code cannot be validated
 == fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample.json ==
 == fsh-generated/resources/CodeSystem-cs-lab-task-output.json ==
+ERROR: CodeSystem.where(url = 'https://openhie.github.io/cares-covid-ig/CodeSystem/cs-lab-task-output'): Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-cs-lab-task-output.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output) does not match the URL (https://openhie.github.io/cares-covid-ig/CodeSystem/cs-lab-task-output)
+ERROR: /github/workspace/fsh-generated/resources/CodeSystem-cs-lab-task-output: URL Mismatch http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output vs https://openhie.github.io/cares-covid-ig/CodeSystem/cs-lab-task-output
 == fsh-generated/resources/CodeSystem-cs-source-of-info.json ==
+ERROR: CodeSystem.where(url = 'https://openhie.github.io/cares-covid-ig/CodeSystem/cs-source-of-info'): Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info) does not match the URL (https://openhie.github.io/cares-covid-ig/CodeSystem/cs-source-of-info)
+ERROR: /github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info: URL Mismatch http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info vs https://openhie.github.io/cares-covid-ig/CodeSystem/cs-source-of-info
 == fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample.json ==
 == fsh-generated/resources/Condition-Covid19DiagnosisExample.json ==
 == fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.json ==
@@ -561,9 +168,11 @@ WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization
 == fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json ==
 WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode: [Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
+INFORMATION: Immunization/Covid19AssessmentVaccinationExample: Immunization.reportOrigin.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info' is unknown so the code cannot be validated
 == fsh-generated/resources/Immunization-Covid19VaccinationExample.json ==
 WARNING: Immunization/Covid19VaccinationExample: Immunization.vaccineCode: [Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated]
 INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated
+INFORMATION: Immunization/Covid19VaccinationExample: Immunization.reportOrigin.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info' is unknown so the code cannot be validated
 == fsh-generated/resources/Location-Covid19AdmissionLocationExample.json ==
 == fsh-generated/resources/Location-Covid19ServiceRequestLocationExample.json ==
 == fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample.json ==
@@ -580,48 +189,127 @@ INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.co
 == fsh-generated/resources/Specimen-Covid19SpecimenExample.json ==
 == fsh-generated/resources/Specimen-Covid19SpecimenLabResultExample.json ==
 == fsh-generated/resources/StructureDefinition-covid19-admission-location.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-admission-location'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission-location.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-admission-location)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-admission-location: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-admission-location
 == fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-assessment-vaccination'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-assessment-vaccination)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-assessment-vaccination: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-assessment-vaccination
 == fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities
 == fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities-present'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities-present)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-conditions-or-comorbidities-present: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-conditions-or-comorbidities-present
 == fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-date-last-hospitalised'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-date-last-hospitalised)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-date-last-hospitalised: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-date-last-hospitalised
 == fsh-generated/resources/StructureDefinition-covid19-death.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-death'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-death.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-death)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-death: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-death
 == fsh-generated/resources/StructureDefinition-covid19-diagnosis.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-diagnosis'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-diagnosis)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnosis: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-diagnosis
 == fsh-generated/resources/StructureDefinition-covid19-diagnostic-report.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-diagnostic-report'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnostic-report.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-diagnostic-report)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-diagnostic-report: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-diagnostic-report
 == fsh-generated/resources/StructureDefinition-covid19-encounter.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-encounter'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-encounter)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-encounter: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-encounter
 == fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-ever-hospitalised'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-ever-hospitalised)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-ever-hospitalised: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-ever-hospitalised
 == fsh-generated/resources/StructureDefinition-covid19-lab-order.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-lab-order'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-lab-order)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-order: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-lab-order
 == fsh-generated/resources/StructureDefinition-covid19-lab-task.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-lab-task'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-task.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-lab-task)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-lab-task: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-lab-task
 == fsh-generated/resources/StructureDefinition-covid19-long-covid-post-covid.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-long-covid-post-covid'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-long-covid-post-covid.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-long-covid-post-covid)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-long-covid-post-covid: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-long-covid-post-covid
 == fsh-generated/resources/StructureDefinition-covid19-medication-request.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-medication-request'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-medication-request.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-medication-request)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-medication-request: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-medication-request
 == fsh-generated/resources/StructureDefinition-covid19-next-vaccination.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-next-vaccination'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-next-vaccination.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-next-vaccination)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-next-vaccination: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-next-vaccination
 == fsh-generated/resources/StructureDefinition-covid19-organization.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-organization'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-organization)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-organization: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-organization
 == fsh-generated/resources/StructureDefinition-covid19-patient.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-patient'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-patient.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-patient)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-patient: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-patient
 == fsh-generated/resources/StructureDefinition-covid19-practitioner.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-practitioner'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-practitioner.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-practitioner)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-practitioner: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-practitioner
 == fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-presenting-symptoms'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-presenting-symptoms)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-presenting-symptoms: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-presenting-symptoms
 == fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-recovered-or-symptoms-resolved'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-recovered-or-symptoms-resolved)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-recovered-or-symptoms-resolved: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-recovered-or-symptoms-resolved
 == fsh-generated/resources/StructureDefinition-covid19-service-request-location.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-service-request-location'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-service-request-location.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-service-request-location)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-service-request-location: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-service-request-location
 == fsh-generated/resources/StructureDefinition-covid19-specimen.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-specimen'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-specimen)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-specimen: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-specimen
 == fsh-generated/resources/StructureDefinition-covid19-test-results.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-test-results'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-test-results.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-test-results)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-test-results: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-test-results
 == fsh-generated/resources/StructureDefinition-covid19-vaccination.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccination'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccination.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccination)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccination: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccination
 == fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received.json ==
+ERROR: StructureDefinition.where(url = 'https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccine-dose-ever-received'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received) does not match the URL (https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccine-dose-ever-received)
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-covid19-vaccine-dose-ever-received: URL Mismatch http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received vs https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccine-dose-ever-received
 == fsh-generated/resources/Task-Covid19LabOrderCancellationExample.json ==
 == fsh-generated/resources/Task-Covid19LabOrderRejectionExample.json ==
 == fsh-generated/resources/Task-LabOrderTaskExample.json ==
 == fsh-generated/resources/Task-LabResultTaskExample.json ==
+INFORMATION: Task/LabResultTaskExample: Task.output[0].type.coding[0]: Code System URI 'http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output' is unknown so the code cannot be validated
 == fsh-generated/resources/ValueSet-vs-AdmissionTypes.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-AdmissionTypes'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-AdmissionTypes) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-AdmissionTypes)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-AdmissionTypes: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-AdmissionTypes vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-AdmissionTypes
 == fsh-generated/resources/ValueSet-vs-cancellation-reason.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-cancellation-reason'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-cancellation-reason) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-cancellation-reason)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-cancellation-reason: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-cancellation-reason vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-cancellation-reason
 == fsh-generated/resources/ValueSet-vs-conditions-comorbidity.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-conditions-comorbidity'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-conditions-comorbidity)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-conditions-comorbidity: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-conditions-comorbidity
 == fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-reason-for-assessment-or-test-not-performed: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed
 == fsh-generated/resources/ValueSet-vs-covid19-specimen-type.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-specimen-type'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-specimen-type)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-specimen-type: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-specimen-type
 == fsh-generated/resources/ValueSet-vs-covid19-test-result.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-test-result'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-test-result)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-covid19-test-result: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-test-result
 == fsh-generated/resources/ValueSet-vs-lab-task-output.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-lab-task-output'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-lab-task-output.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-lab-task-output)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-lab-task-output: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-lab-task-output
 == fsh-generated/resources/ValueSet-vs-presentation.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-presentation'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-presentation.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-presentation) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-presentation)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-presentation: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-presentation vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-presentation
 == fsh-generated/resources/ValueSet-vs-source-of-info.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-source-of-info: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info
 == fsh-generated/resources/ValueSet-vs-symptoms.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-symptoms'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-symptoms) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-symptoms)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-symptoms: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-symptoms vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-symptoms
 == fsh-generated/resources/ValueSet-vs-test-types.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-test-types.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-test-types: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types
 == fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-treatment-dispensed-prescribed'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-treatment-dispensed-prescribed)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-treatment-dispensed-prescribed
 == fsh-generated/resources/ValueSet-vs-vaccine-types.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types)
 WARNING: ValueSet/vs-vaccine-types: ValueSet.compose[0].include[0]: Unknown System 'http://id.who.int/icd11/mms' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://id.who.int/icd11/mms' is unknown so the code cannot be validated)
 WARNING: ValueSet.where(id = 'vs-vaccine-types'): Error from server: Unable to provide support for code system http://id.who.int/icd11/mms
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types
 == fsh-generated/resources/ValueSet-vs-yes-no.json ==
+ERROR: ValueSet.where(url = 'https://openhie.github.io/cares-covid-ig/ValueSet/vs-yes-no'): Conformance resource /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no) does not match the URL (https://openhie.github.io/cares-covid-ig/ValueSet/vs-yes-no)
+ERROR: /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no vs https://openhie.github.io/cares-covid-ig/ValueSet/vs-yes-no
 == input/covid19-casereporting.xml ==
