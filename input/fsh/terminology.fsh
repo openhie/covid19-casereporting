@@ -1,6 +1,6 @@
 Alias: $SCT = http://snomed.info/sct
 Alias: $LNC = http://loinc.org
-Alias: $ICD = http://id.who.int/icd11/mms
+Alias: $ICD11 = http://id.who.int/icd/release/11/mms
 Alias: $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 
 ValueSet: VSPresentation
@@ -87,16 +87,16 @@ Id: vs-vaccine-types
 Title: "Vaccine Types"
 Description: "A list of Vaccine Types"
 * ^experimental = false
-* $ICD#XM4YL8 "AstraZeneca/Oxford vaccine"
-* $ICD#XM6QV1 "Johnson and Johnson"
-* $ICD#XM3DT5 "Moderna"
-* $ICD#XM8NQ0 "Pfizer/BionTech"
-* $ICD#XM8866 "Sinopharm"
-* $ICD#XM7HT3 "Sinovac"
-* $ICD#XM1G90 "COVAXIN"
-* $ICD#XM9T65  "Covovax"
-* $ICD#XM5JC5 "Nuvaxovid"
-* $ICD#XM1AG7 "CanSino"
+* $ICD11#XM4YL8 "AstraZeneca/Oxford vaccine"
+* $ICD11#XM6QV1 "Johnson and Johnson"
+* $ICD11#XM3DT5 "Moderna"
+* $ICD11#XM8NQ0 "Pfizer/BionTech"
+* $ICD11#XM8866 "Sinopharm"
+* $ICD11#XM7HT3 "Sinovac"
+* $ICD11#XM1G90 "COVAXIN"
+* $ICD11#XM9T65  "Covovax"
+* $ICD11#XM5JC5 "Nuvaxovid"
+* $ICD11#XM1AG7 "CanSino"
 
 ValueSet: VSTestTypes
 Id: vs-test-types
