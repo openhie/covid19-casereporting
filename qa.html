@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = errors = 0, warn = 43, info = 7, 0 -->
+<!-- broken links = errors = 0, warn = 41, info = 5, 0 -->
 <head>
   <title>Covid19CaseReporting : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Covid19CaseReporting</h1>
- <p>Generated Thu Dec 01 06:44:42 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://openhie.org/fhir/covid19-casereporting">http://openhie.org/fhir/covid19-casereporting</a> (<a href="http://openhie.org/fhir/covid19-casereporting/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
+ <p>Generated Thu Dec 01 06:56:39 UTC 2022, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0-test (canonical = <a href="http://openhie.org/fhir/covid19-casereporting">http://openhie.org/fhir/covid19-casereporting</a> (<a href="http://openhie.org/fhir/covid19-casereporting/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.2.20</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = openhie.fhir.covid, Canonical = http://openhie.org/fhir/covid19-casereporting</td></tr>
@@ -57,7 +57,7 @@
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://openhie.org/fhir/covid19-casereporting (Problem #1 with package-list.json at http://openhie.org/fhir/covid19-casereporting: openhie.org)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 0, warn = 43, info = 7, broken links = 0</td></tr>
+ <tr><td>Summary:</td><td> errors = 0, warn = 41, info = 5, broken links = 0</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -82,10 +82,10 @@
      <td><a href="#_github_workspace_fsh-generated_resources_Bundle-CaresSubmitLaborderBundleExample"><b>/github/workspace/fsh-generated/resources/Bundle-CaresSubmitLaborderBundleExample</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_github_workspace_fsh-generated_resources_CodeSystem-cs-lab-task-output"><b>/github/workspace/fsh-generated/resources/CodeSystem-cs-lab-task-output</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+     <td><a href="#_github_workspace_fsh-generated_resources_CodeSystem-cs-lab-task-output"><b>/github/workspace/fsh-generated/resources/CodeSystem-cs-lab-task-output</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
-     <td><a href="#_github_workspace_fsh-generated_resources_CodeSystem-cs-source-of-info"><b>/github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+     <td><a href="#_github_workspace_fsh-generated_resources_CodeSystem-cs-source-of-info"><b>/github/workspace/fsh-generated/resources/CodeSystem-cs-source-of-info</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_github_workspace_fsh-generated_resources_Condition-Covid19ConditionsOrComorbidityExample"><b>/github/workspace/fsh-generated/resources/Condition-Covid19ConditionsOrComorbidityExample</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -466,13 +466,7 @@
 </div>
  <table class="grid">
    <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>CodeSystem</b></td><td><b>information</b></td><td title=""><b>CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>CodeSystem (l1/c1119)</b></td><td><b>warning</b></td><td title="CODESYSTEM_SHAREABLE_MISSING"><b>The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile</b></td>
+     <td>&check;</td>
    </tr>
 </table>
 <hr/>
@@ -482,13 +476,7 @@
 </div>
  <table class="grid">
    <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
-   <tr style="background-color: #ffffe6">
-     <td><b>CodeSystem</b></td><td><b>information</b></td><td title=""><b>CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>CodeSystem (l1/c1979)</b></td><td><b>warning</b></td><td title="CODESYSTEM_SHAREABLE_MISSING"><b>The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile</b></td>
+     <td>&check;</td>
    </tr>
 </table>
 <hr/>
@@ -1162,17 +1150,6 @@
 <p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
 <p>No suppressed messsages</p><a name="sorted"> </a>
 <p><b>Errors sorted by type</b></p>
-<hr/>
-<a name="CODESYSTEM_SHAREABLE_MISSING"> </a>
-<h2>CODESYSTEM_SHAREABLE_MISSING</h2>
- <table class="grid">
-   <tr style="background-color: #fff4ee">
-     <td><a href="CodeSystem-cs-lab-task-output.html">fsh-generated/resources/CodeSystem-cs-lab-task-output.json</a></td><td><b>The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile</b></td>
-   </tr>
-   <tr style="background-color: #fff4ee">
-     <td><a href="CodeSystem-cs-source-of-info.html">fsh-generated/resources/CodeSystem-cs-source-of-info.json</a></td><td><b>The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile</b></td>
-   </tr>
-</table>
 <hr/>
 <a name="Terminology_TX_NoValid_3_CC"> </a>
 <h2>Terminology_TX_NoValid_3_CC</h2>
