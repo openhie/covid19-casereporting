@@ -20,12 +20,12 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="patient"/>
   </extension>
-  <url value="https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-specimen"/>
+  <url value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"/>
   <version value="0.1.0"/>
   <name value="Covid19Specimen"/>
   <title value="Covid19 Specimen"/>
   <status value="active"/>
-  <date value="2022-12-01T17:51:39+00:00"/>
+  <date value="2022-12-01T17:57:12+00:00"/>
   <publisher value="Jembi Health Systems"/>
   <contact>
     <telecom>
@@ -536,7 +536,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-specimen-type"/>
+        <valueSet value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type"/>
       </binding>
       <mapping>
         <identity value="w5"/>
@@ -2080,7 +2080,7 @@
       <path value="Specimen.type"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-specimen-type"/>
+        <valueSet value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type"/>
       </binding>
     </element>
     <element id="Specimen.subject">
