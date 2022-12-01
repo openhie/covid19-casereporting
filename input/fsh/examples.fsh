@@ -63,7 +63,7 @@ Description: "Covid19 Assessment Encounter example"
 * subject = Reference(Covid19PatientExample)
 * period.start = "2022-07-28"
 * period.end  = "2022-08-15"
-* reasonCode = $SCT#428792000
+* reasonCode = $SCT#397933008
 * location.location = Reference(Covid19AdmissionLocationExample)
 * location.physicalType = $SCT#225746001
 
