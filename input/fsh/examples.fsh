@@ -73,7 +73,8 @@ Description: "Covid19 Vaccine Dose Received example"
 * status = #final
 * code = $SCT#373066001
 * subject = Reference(Covid19PatientExample) 
-* encounter = Reference(Covid19AssessmentEncounterExample) 
+* encounter = Reference(Covid19AssessmentEncounterExample)
+* performer = Reference(Covid19OrganizationExample)
 
 Instance: Covid19PresentingSymptomsExample
 InstanceOf: Covid19PresentingSymptoms
@@ -84,7 +85,8 @@ Description: "Covid19 Symptom example"
 * subject = Reference(Covid19PatientExample) 
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * code = $SCT#21522001 
-* effectiveDateTime = "2022-07-28"  
+* effectiveDateTime = "2022-07-28"
+* performer = Reference(Covid19OrganizationExample)
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "Other symptoms here"
 * note.time = "2015-02-07T13:28:17-05:00"
@@ -227,6 +229,7 @@ Description: "Covid19 Lab Results example"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * effectiveDateTime = "2022-07-28"
+* performer = Reference(Covid19OrganizationExample)
 * valueCodeableConcept = $SCT#10828004
 
 Instance: Covid19VaccinationExample
@@ -291,6 +294,7 @@ Description: "Covid19 Recovered Or Symptoms Resolved"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * effectiveDateTime =  "2022-11-09"
+* performer = Reference(Covid19OrganizationExample)
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
@@ -305,6 +309,7 @@ Description: "Covid19 Death"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * effectiveDateTime =  "2022-11-09"
+* performer = Reference(Covid19OrganizationExample)
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
@@ -319,6 +324,7 @@ Description: "Covid19 Long Covid / Post-Covid"
 * subject = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * effectiveDateTime =  "2022-11-09"
+* performer = Reference(Covid19OrganizationExample)
 * note.authorReference = Reference(Covid19OrganizationExample)
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
