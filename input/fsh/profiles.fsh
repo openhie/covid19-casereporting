@@ -5,12 +5,12 @@ Title: "Covid19 Organization"
 Description: "Covid19 Organization for case report - this represents a health facility"
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
+* identifier ^slicing.rules = #openAtEnd
 * identifier ^slicing.description = "Slice based on the type of identifier"
 * identifier contains
-    PRN 0..1
-* identifier[PRN].value 0..1
-* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
+    PRN 1..1
+* identifier[PRN].value 1..1
+* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization" (exactly)
 * name 1..1
 * address 1..1
 * address.country 1..1
@@ -25,18 +25,15 @@ Title: "Covid19 Patient"
 Description: "This Patient profile allows the exchange of patient information, including all the data associated with Covid19 patients"
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
+* identifier ^slicing.rules = #openAtEnd
 * identifier ^slicing.description = "Slice based on the type of identifier"
 * identifier contains
-    PPN 0..1 and
-    NID 0..1 and
-    FI 1..1
-* identifier[PPN].value 0..1
-* identifier[PPN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport"
-* identifier[NID].value 0..1
-* identifier[NID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
-* identifier[FI].value 1..1
-* identifier[FI].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
+    PPN 1..1 and
+    NID 1..1
+* identifier[PPN].value 1..1
+* identifier[PPN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport" (exactly)
+* identifier[NID].value 1..1
+* identifier[NID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid" (exactly)
 * active 1..1
 * name.given 1..*
 * name.family 1..1
@@ -177,7 +174,14 @@ Parent: ServiceRequest
 Id: covid19-lab-order
 Title: "Covid19 Lab Order"
 Description: "Covid19 Lab Order"
-* identifier 1..1
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #openAtEnd
+* identifier ^slicing.description = "Slice based on the type of identifier"
+* identifier contains
+    FILL 1..1 
+* identifier[FILL].value 1..1
+* identifier[FILL].system = "http://openhie.org/fhir/covid19-casereporting/identifier/lab-order-identifier" (exactly)
 * status 1..1
 * intent = #order
 * code from VSTestTypes (required)
@@ -251,12 +255,12 @@ Title: "Covid19 Service Request Location"
 Description: "Covid19 Service Request Location"
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
+* identifier ^slicing.rules = #openAtEnd
 * identifier ^slicing.description = "Slice based on the type of identifier"
 * identifier contains
     PRN 0..1
 * identifier[PRN].value 0..1
-* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-service-request-location"
+* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-service-request-location" (exactly)
 * name 1..1
 * address 1..1
 
@@ -267,12 +271,12 @@ Title: "Covid19 Admission Location"
 Description: "Covid19 Admission Location"
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
+* identifier ^slicing.rules = #openAtEnd
 * identifier ^slicing.description = "Slice based on the type of identifier"
 * identifier contains
     PRN 0..1
 * identifier[PRN].value 0..1
-* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-admission-location"
+* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-admission-location" (exactly)
 * name 1..1
 * address 1..1
 
