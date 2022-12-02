@@ -157,8 +157,8 @@ InstanceOf: Covid19ServiceRequest
 Usage: #example
 Title: "Covid19 Lab Order example"
 Description: "Covid19 Lab Order example"
-* identifier[PRN].value = "ORDER12345"
-* identifier[PRN].system = "http://covid19laborder.org/order"
+* identifier[FILL].value = "ORDER12345"
+* identifier[FILL].system = "http://openhie.org/fhir/covid19-casereporting/identifier/lab-order-identifier"
 * status = #completed
 * intent = #order
 * code = $LNC#94558-4

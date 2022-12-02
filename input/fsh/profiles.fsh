@@ -174,7 +174,14 @@ Parent: ServiceRequest
 Id: covid19-lab-order
 Title: "Covid19 Lab Order"
 Description: "Covid19 Lab Order"
-* identifier 1..1
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #openAtEnd
+* identifier ^slicing.description = "Slice based on the type of identifier"
+* identifier contains
+    FILL 1..1 
+* identifier[FILL].value 1..1
+* identifier[FILL].system = "http://openhie.org/fhir/covid19-casereporting/identifier/lab-order-identifier" (exactly)
 * status 1..1
 * intent = #order
 * code from VSTestTypes (required)
@@ -251,8 +258,8 @@ Description: "Covid19 Service Request Location"
 * identifier ^slicing.rules = #openAtEnd
 * identifier ^slicing.description = "Slice based on the type of identifier"
 * identifier contains
-    PRN 1..1
-* identifier[PRN].value 1..1
+    PRN 0..1
+* identifier[PRN].value 0..1
 * identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-service-request-location" (exactly)
 * name 1..1
 * address 1..1
