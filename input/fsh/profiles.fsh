@@ -67,7 +67,7 @@ Description: "Covid19 Assessment Encounter"
 * extension contains ExtCovid19DateLastHospitalised named extCovid19DateLastHospitalised 0..1
 * status = #finished
 * class 1..1
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
 * period 1..1
 * reasonCode from VSReasonForAssessmentOrTestNotPerformed (required)
@@ -81,12 +81,12 @@ Id: covid19-presenting-symptoms
 Title: "Covid19 Symptom"
 Description: "Covid19 Symptom"
 * status = #final
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
 * encounter 1..1
 * code from VSSymptoms (required)
 * effectiveDateTime 1..1
-* note.authorReference only Reference(Organization)
+* note.authorReference only Reference(Organization) (required)
 * note 0..1
 
 Extension: ExtCovid19ConditionsOrComorbiditiesPresent
@@ -103,10 +103,10 @@ Title: "Covid19 Conditions or comorbidity"
 Description: "Covid19 Conditions or comorbidity"
 * extension contains ExtCovid19ConditionsOrComorbiditiesPresent named extCovid19ConditionsOrComorbiditiesPresent 1..1
 * code from VSConditionsComorbidity (required)
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
 * encounter 1..1
-* note.authorReference only Reference(Organization)
+* note.authorReference only Reference(Organization) (required)
 * note 0..1
 
 Profile: Covid19VaccineDoseEverReceived
@@ -116,7 +116,7 @@ Title: "Covid19 Vaccine Dose Received"
 Description: "Covid19 Vaccine Dose Received"
 * status = #final
 * code from VSYesNoUnknown (required)
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
 * encounter 1..1
 
@@ -136,7 +136,7 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 * protocolApplied 1..1
 * protocolApplied.series 1..1
 * protocolApplied.doseNumberPositiveInt 1..1
-* note.authorReference only Reference(Organization)
+* note.authorReference only Reference(Organization) (required)
 * note 0..1
 
 Profile: Covid19Diagnosis
@@ -145,14 +145,14 @@ Id: covid19-diagnosis
 Title: "Covid19 Diagnosis"
 Description: "Covid19 Diagnosis"
 * verificationStatus 1..1
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
 * encounter 1..1
 * onsetDateTime 1..1
 * recordedDate 1..1
 * evidence 1..1
 * evidence.code from VSPresentation (required)
-* note.authorReference only Reference(Organization)
+* note.authorReference only Reference(Organization) (required)
 * note 0..1
 
 Profile: Covid19MedicationRequest
@@ -162,11 +162,11 @@ Title: "Covid19 Treatment dispensed or prescribed"
 Description: "Covid19 Treatment dispensed or prescribed"
 * status = #active
 * intent = #order
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
 * encounter 1..1
 * medicationCodeableConcept from VSTreatMentDispensedPrescribed (required)
-* note.authorReference only Reference(Organization)
+* note.authorReference only Reference(Organization) (required)
 * note 0..1
 
 Profile: Covid19ServiceRequest
@@ -185,7 +185,7 @@ Description: "Covid19 Lab Order"
 * status 1..1
 * intent = #order
 * code from VSTestTypes (required)
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
 * encounter 1..1
 * occurrenceDateTime 1..1
@@ -194,7 +194,7 @@ Description: "Covid19 Lab Order"
 * doNotPerform 0..1
 * reasonCode from VSReasonForAssessmentOrTestNotPerformed (required)
 * specimen 1..1
-* note.authorReference only Reference(Organization)
+* note.authorReference only Reference(Organization) (required)
 * note 0..1
  
 Profile: Covid19Specimen
@@ -204,10 +204,10 @@ Title: "Covid19 Specimen"
 Description: "Covid19 Specimen"
 * identifier 1..1
 * type from VSCovid19SpecimenType (required)
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
 * collection.collectedDateTime 1..1
-* note.authorReference only Reference(Organization)
+* note.authorReference only Reference(Organization) (required)
 * note 0..1
 
 Profile: Covid19TestResult
@@ -217,7 +217,7 @@ Title: "Covid19 Lab Results"
 Description: "Covid19 Lab Results"
 * status = #final
 * code from VSTestTypes (required)
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
 * encounter 1..1
 * effectiveDateTime 1..1
@@ -239,7 +239,7 @@ Description: "Covid19 Vaccination"
 * protocolApplied 1..1
 * protocolApplied.series 1..1
 * protocolApplied.doseNumberPositiveInt 1..1
-* note.authorReference only Reference(Organization)
+* note.authorReference only Reference(Organization) (required)
 * note 0..1
 
 Extension: ExtNextVisit
@@ -287,11 +287,11 @@ Title: "Covid19 Recovered Or Symptoms Resolved"
 Description: "Covid19 Recovered Or Symptoms Resolved"
 * status = #final
 * code = $SCT#370996005
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
 * encounter 1..1
 * effectiveDateTime 1..1
-* note.authorReference only Reference(Organization)
+* note.authorReference only Reference(Organization) (required)
 * note 0..1
 
 Profile: Covid19Death
@@ -301,11 +301,11 @@ Title: "Covid19 Death"
 Description: "Covid19 Death"
 * status = #final
 * code = $SCT#419099009
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
 * encounter 1..1
 * effectiveDateTime 1..1
-* note.authorReference only Reference(Organization)
+* note.authorReference only Reference(Organization) (required)
 * note 0..1
 
 Profile: Covid19LongCovidPostCovid
@@ -315,11 +315,11 @@ Title: "Covid19 Long Covid / Post-Covid"
 Description: "Covid19 Long Covid / Post-Covid"
 * status = #final
 * code = $SCT#1119303003
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
 * encounter 1..1
 * effectiveDateTime 1..1
-* note.authorReference only Reference(Organization)
+* note.authorReference only Reference(Organization) (required)
 * note 0..1
 
 Profile: Covid19LabTask
@@ -328,14 +328,14 @@ Id: covid19-lab-task
 Title: "Covid19 Lab Task"
 Description: "Covid19 Lab Task"
 * identifier 1..*
-* basedOn only Reference(ServiceRequest)
+* basedOn only Reference(ServiceRequest) (required)
 * status 1..1
 * statusReason 0..1
 * intent = #order
 * executionPeriod 1..1
 * lastModified 0..1
-* requester only Reference(Organization)
-* owner only Reference(Organization)
+* requester only Reference(Organization) (required)
+* owner only Reference(Organization) (required)
 * output 0..*
 * output.type.coding.code from VSLabTaskOutput (required)
 * output.valueReference 1..1
@@ -353,11 +353,11 @@ Parent: DiagnosticReport
 Id: covid19-diagnostic-report
 Title: "Covid19 Diagnostic Report"
 Description: "Covid19 Diagnostic Report"
-* basedOn only Reference(ServiceRequest)
+* basedOn only Reference(ServiceRequest) (required)
 * status = #final
 * code from VSTestTypes (required)
-* subject only Reference(Patient)
+* subject only Reference(Patient) (required)
 * subject 1..1
-* performer only Reference(Practitioner)
+* performer only Reference(Practitioner) (required)
 * result 1..1
 * conclusion 0..1
