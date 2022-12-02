@@ -32,7 +32,7 @@ Description: "This Patient profile allows the exchange of patient information, i
     FI 1..1
 * identifier[PPN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport" (exactly)
 * identifier[NID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid" (exactly)
-* identifier[FI].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility" (exactly)
+* identifier[FI].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
 * active 1..1
 * name.given 1..*
 * name.family 1..1
