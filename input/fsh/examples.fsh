@@ -24,8 +24,8 @@ Description: "Covid19 Patient example"
 * identifier[PPN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport"
 * identifier[NID].value = "NAT1234567"
 * identifier[NID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
-* identifier[FI].value = "EMR1234567"
-* identifier[FI].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility123"
+//* identifier[FI].value = "EMR1234567"
+//* identifier[FI].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility123"
 * active = true
 * name.use = #official
 * name.family = "Smith"
