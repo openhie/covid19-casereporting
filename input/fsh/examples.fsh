@@ -140,7 +140,6 @@ Usage: #example
 Title: "Covid19 Vaccine Type Administered example"
 Description: "Covid19 Vaccine Type Administered example"
 * status = #completed
-* vaccineCode.coding.system = "http://id.who.int/icd11/mms"
 * vaccineCode = $ICD11#XM8NQ0
 * patient = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample) 
@@ -238,7 +237,6 @@ Usage: #example
 Title: "Covid19 Vaccination example"
 Description: "Covid19 Vaccination example"
 * status = #completed
-* vaccineCode.coding.system = "http://id.who.int/icd11/mms"
 * vaccineCode = $ICD11#XM4YL8
 * patient = Reference(Covid19PatientExample)
 * encounter = Reference(Covid19AssessmentEncounterExample) 
