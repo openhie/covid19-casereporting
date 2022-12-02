@@ -25,7 +25,7 @@ Description: "Covid19 Patient example"
 * identifier[NID].value = "NAT1234567"
 * identifier[NID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
 * identifier[FI].value = "EMR1234567"
-* identifier[FI].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility"
+* identifier[FI].system = "http://openhie.org/fhir/covid19-casereporting/identifier/facility/123"
 * active = true
 * name.use = #official
 * name.family = "Smith"
