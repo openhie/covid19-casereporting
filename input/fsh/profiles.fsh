@@ -267,8 +267,8 @@ Description: "Covid19 Admission Location"
 * identifier ^slicing.rules = #openAtEnd
 * identifier ^slicing.description = "Slice based on the type of identifier"
 * identifier contains
-    PRN 1..1
-* identifier[PRN].value 1..1
+    PRN 0..1
+* identifier[PRN].value 0..1
 * identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-admission-location"
 * name 1..1
 * address 1..1
