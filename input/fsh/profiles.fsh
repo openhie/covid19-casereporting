@@ -86,6 +86,7 @@ Description: "Covid19 Symptom"
 * encounter 1..1
 * code from VSSymptoms (required)
 * effectiveDateTime 1..1
+* performer only Reference(Organization)
 * note.authorReference only Reference(Organization)
 * note 0..1
 
@@ -119,6 +120,7 @@ Description: "Covid19 Vaccine Dose Received"
 * subject only Reference(Patient)
 * subject 1..1
 * encounter 1..1
+* performer only Reference(Organization)
 
 Profile: Covid19AssessmentVaccination
 Parent: Immunization
@@ -221,6 +223,7 @@ Description: "Covid19 Lab Results"
 * subject 1..1
 * encounter 1..1
 * effectiveDateTime 1..1
+* performer only Reference(Organization)
 * valueCodeableConcept from VSTestResult (required)
 
 Profile: Covid19Vaccination
@@ -291,8 +294,9 @@ Description: "Covid19 Recovered Or Symptoms Resolved"
 * subject 1..1
 * encounter 1..1
 * effectiveDateTime 1..1
+* performer only Reference(Organization)
 * note.authorReference only Reference(Organization)
-* note 1..1
+* note 0..1
 
 Profile: Covid19Death
 Parent: Observation
@@ -305,8 +309,9 @@ Description: "Covid19 Death"
 * subject 1..1
 * encounter 1..1
 * effectiveDateTime 1..1
+* performer only Reference(Organization)
 * note.authorReference only Reference(Organization)
-* note 1..1
+* note 0..1
 
 Profile: Covid19LongCovidPostCovid
 Parent: Observation
@@ -319,8 +324,9 @@ Description: "Covid19 Long Covid / Post-Covid"
 * subject 1..1
 * encounter 1..1
 * effectiveDateTime 1..1
+* performer only Reference(Organization)
 * note.authorReference only Reference(Organization)
-* note 1..1
+* note 0..1
 
 Profile: Covid19LabTask
 Parent: Task
