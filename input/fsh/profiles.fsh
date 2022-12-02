@@ -10,7 +10,7 @@ Description: "Covid19 Organization for case report - this represents a health fa
 * identifier contains
     PRN 1..1
 * identifier[PRN].value 1..1
-* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization" (exactly)
+* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
 * name 1..1
 * address 1..1
 * address.country 1..1
@@ -29,11 +29,11 @@ Description: "This Patient profile allows the exchange of patient information, i
 * identifier ^slicing.description = "Slice based on the type of identifier"
 * identifier contains
     PPN 1..1 and
-    NID 1..1 and
+    NID 1..1
 * identifier[PPN].value 1..1
-* identifier[PPN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport" (exactly)
+* identifier[PPN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport"
 * identifier[NID].value 1..1
-* identifier[NID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid" (exactly)
+* identifier[NID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
 * active 1..1
 * name.given 1..*
 * name.family 1..1
@@ -253,7 +253,7 @@ Description: "Covid19 Service Request Location"
 * identifier contains
     PRN 1..1
 * identifier[PRN].value 1..1
-* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-service-request-location" (exactly)
+* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-service-request-location"
 * name 1..1
 * address 1..1
 
@@ -269,7 +269,7 @@ Description: "Covid19 Admission Location"
 * identifier contains
     PRN 1..1
 * identifier[PRN].value 1..1
-* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-admission-location" (exactly)
+* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-admission-location"
 * name 1..1
 * address 1..1
 
