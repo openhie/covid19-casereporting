@@ -292,7 +292,7 @@ Description: "Covid19 Recovered Or Symptoms Resolved"
 * encounter 1..1
 * effectiveDateTime 1..1
 * note.authorReference only Reference(Organization)
-* note 1..1
+* note 0..1
 
 Profile: Covid19Death
 Parent: Observation
@@ -306,7 +306,7 @@ Description: "Covid19 Death"
 * encounter 1..1
 * effectiveDateTime 1..1
 * note.authorReference only Reference(Organization)
-* note 1..1
+* note 0..1
 
 Profile: Covid19LongCovidPostCovid
 Parent: Observation
@@ -320,7 +320,7 @@ Description: "Covid19 Long Covid / Post-Covid"
 * encounter 1..1
 * effectiveDateTime 1..1
 * note.authorReference only Reference(Organization)
-* note 1..1
+* note 0..1
 
 Profile: Covid19LabTask
 Parent: Task
