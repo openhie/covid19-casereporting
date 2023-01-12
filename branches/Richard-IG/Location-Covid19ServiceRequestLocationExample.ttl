@@ -1,0 +1,36 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/Location/Covid19ServiceRequestLocationExample> a fhir:Location;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Covid19ServiceRequestLocationExample"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location";
+       fhir:index 0;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"Covid19ServiceRequestLocationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;Covid19ServiceRequestLocationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-service-request-location.html\">Covid19 Service Request Location</a></p></div><p><b>name</b>: Covid19 Location</p><p><b>address</b>: Cares city 1 Cares state 1 Cares country 1 </p></div>"
+  ]; # 
+  fhir:Location.name [ fhir:value "Covid19 Location"]; # 
+  fhir:Location.address [
+     fhir:Address.city [ fhir:value "Cares city 1" ];
+     fhir:Address.district [ fhir:value "Cares district 1" ];
+     fhir:Address.state [ fhir:value "Cares state 1" ];
+     fhir:Address.country [ fhir:value "Cares country 1" ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/Location/Covid19ServiceRequestLocationExample.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

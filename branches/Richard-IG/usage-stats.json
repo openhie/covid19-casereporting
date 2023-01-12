@@ -1,0 +1,188 @@
+{
+  "package": "openhie.fhir.covid",
+  "version": "0.1.0",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "001",
+  "extensions": [
+    {
+      "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present",
+      "title": "Covid19 Conditions or Comorbidities Present",
+      "types": [
+        "CodeableConcept",
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised",
+      "title": "Covid19 Date Last Hospitalised",
+      "types": [
+        "dateTime"
+      ]
+    },
+    {
+      "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised",
+      "title": "Covid19 Ever Hospitalized",
+      "types": [
+        "CodeableConcept",
+        "CodeableConcept"
+      ]
+    },
+    {
+      "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination",
+      "title": "Covid19 date of next vaccination",
+      "types": [
+        "dateTime"
+      ]
+    }
+  ],
+  "profiles": {
+    "Location": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location",
+        "title": "Covid19 Service Request Location"
+      }
+    ],
+    "Immunization": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination",
+        "title": "Covid19 Vaccination"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis",
+        "title": "Covid19 Diagnosis"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received",
+        "title": "Covid19 Vaccine Dose Received"
+      }
+    ],
+    "DiagnosticReport": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report",
+        "title": "Covid19 Diagnostic Report"
+      }
+    ],
+    "Encounter": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter",
+        "title": "Covid19 Assessment Encounter"
+      }
+    ],
+    "ServiceRequest": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order",
+        "title": "Covid19 Lab Order"
+      }
+    ],
+    "Task": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task",
+        "title": "Covid19 Lab Task"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request",
+        "title": "Covid19 Treatment dispensed or prescribed"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization",
+        "title": "Covid19 Organization"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient",
+        "title": "Covid19 Patient"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner",
+        "title": "Covid19 Practitioner"
+      }
+    ],
+    "Specimen": [
+      {
+        "url": "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen",
+        "title": "Covid19 Specimen"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-category": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present": [
+      "Bundle.entry.resource",
+      "Condition"
+    ],
+    "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised": [
+      "Bundle.entry.resource",
+      "Encounter"
+    ],
+    "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised": [
+      "Bundle.entry.resource",
+      "Encounter"
+    ],
+    "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination": [
+      "Bundle.entry.resource",
+      "Encounter"
+    ]
+  }
+}

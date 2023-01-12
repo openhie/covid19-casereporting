@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/DiagnosticReport/Covid19LabResultsDiagnosticReportExample> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Covid19LabResultsDiagnosticReportExample"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report";
+       fhir:index 0;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 94558-4}\">SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay</span> </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Jane Maria Smith (OFFICIAL)</b> female, DoB: 1986-06-04 ( id: PASSPORT1234567)</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-Covid19TestResultExample.html\"><span title=\"Codes: {http://loinc.org 94558-4}\">SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 10828004}\">Positive</span></td><td>2022-07-28</td></tr></table><p>Some conclusion text</p></div>"
+  ]; # 
+  fhir:DiagnosticReport.basedOn [
+     fhir:index 0;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/ServiceRequest/Covid19ServiceRequestExample>;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/Covid19ServiceRequestExample" ]
+  ]; # 
+  fhir:DiagnosticReport.status [ fhir:value "final"]; # 
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:94558-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "94558-4" ]
+     ]
+  ]; # 
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample>;
+     fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
+  ]; # 
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Practitioner/PractitionerExample>;
+     fhir:Reference.reference [ fhir:value "Practitioner/PractitionerExample" ]
+  ]; # 
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Observation/Covid19TestResultExample>;
+     fhir:Reference.reference [ fhir:value "Observation/Covid19TestResultExample" ]
+  ]; # 
+  fhir:DiagnosticReport.conclusion [ fhir:value "Some conclusion text"] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/DiagnosticReport/Covid19LabResultsDiagnosticReportExample.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

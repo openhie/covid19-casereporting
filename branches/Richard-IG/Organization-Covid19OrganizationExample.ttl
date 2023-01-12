@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> a fhir:Organization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Covid19OrganizationExample"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization";
+       fhir:index 0;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Organization</b><a name=\"Covid19OrganizationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Organization &quot;Covid19OrganizationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-organization.html\">Covid19 Organization</a></p></div><p><b>identifier</b>: id: facility1</p><p><b>name</b>: Covid19 Organization</p><p><b>address</b>: Some additional address info City State Some postal code Country </p></div>"
+  ]; # 
+  fhir:Organization.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization" ];
+     fhir:Identifier.value [ fhir:value "facility1" ]
+  ]; # 
+  fhir:Organization.name [ fhir:value "Covid19 Organization"]; # 
+  fhir:Organization.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "Some additional address info";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "City" ];
+     fhir:Address.district [ fhir:value "District" ];
+     fhir:Address.state [ fhir:value "State" ];
+     fhir:Address.postalCode [ fhir:value "Some postal code" ];
+     fhir:Address.country [ fhir:value "Country" ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
