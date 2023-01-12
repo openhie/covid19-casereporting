@@ -131,7 +131,7 @@ Description: "Covid19 Reason for Assessment or Test not performed"
 * ^experimental = false
 //Reasons for assessment
 * $SCT#428792000 "Contact of a case"
-* $SCT#171367005 "Entry into a country"
+* $SCT#171367005 "Travel Examination"
 * $SCT#308273005 "Follow-up"
 * $SCT#223366009 "Health worker"
 * $SCT#34325006 "Other frontline worker"
@@ -140,7 +140,7 @@ Description: "Covid19 Reason for Assessment or Test not performed"
 * $SCT#273407003 "RDT confirmatory"
 * $SCT#243790003 "Surveillance"
 * $SCT#264931009 "Symptomatic/Illness"
-* $SCT#171367005 "Travel out of country"
+//* $SCT#171367005 "Travel out of country"
 * $SCT#255375007 "Voluntary" 
 //Reasons test not performed
 * $SCT#441510007 "Blood sample coagulated" 
