@@ -1,9 +1,9 @@
 ﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 0, warn = 40, info = 4
+err = 0, warn = 34, info = 0
 IG Publisher Version: 1.2.26
-Generated Thu Jan 12 06:04:41 UTC 2023. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0 (canonical = http://openhie.org/fhir/covid19-casereporting)
+Generated Thu Jan 12 13:22:33 UTC 2023. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0 (canonical = http://openhie.org/fhir/covid19-casereporting)
  Build Errors : 0 / 34 / 0
  /github/workspace/fsh-generated/resources/Bundle-CaresBundleExample : 0 / 2 / 29
  /github/workspace/fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample : 0 / 0 / 3
@@ -114,10 +114,6 @@ WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-v
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == fsh-generated/resources/Bundle-CaresBundleExample.json ==
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://icd.who.int/icd11/mms' is unknown so the code cannot be validated
-WARNING: Bundle/CaresBundleExample: Bundle.entry[6].resource.ofType(Immunization).vaccineCode: [Code System URI 'http://icd.who.int/icd11/mms' is unknown so the code cannot be validated]
-INFORMATION: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode.coding[0]: Code System URI 'http://icd.who.int/icd11/mms' is unknown so the code cannot be validated
-WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization).vaccineCode: [Code System URI 'http://icd.who.int/icd11/mms' is unknown so the code cannot be validated]
 == fsh-generated/resources/Bundle-CaresSubmitLabCancellationBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabRejectionBundleExample.json ==
 == fsh-generated/resources/Bundle-CaresSubmitLabResultBundleExample.json ==
@@ -129,11 +125,7 @@ WARNING: Bundle/CaresBundleExample: Bundle.entry[7].resource.ofType(Immunization
 == fsh-generated/resources/DiagnosticReport-Covid19LabResultsDiagnosticReportExample.json ==
 == fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json ==
 == fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json ==
-WARNING: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode: [Code System URI 'http://icd.who.int/icd11/mms' is unknown so the code cannot be validated]
-INFORMATION: Immunization/Covid19AssessmentVaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://icd.who.int/icd11/mms' is unknown so the code cannot be validated
 == fsh-generated/resources/Immunization-Covid19VaccinationExample.json ==
-WARNING: Immunization/Covid19VaccinationExample: Immunization.vaccineCode: [Code System URI 'http://icd.who.int/icd11/mms' is unknown so the code cannot be validated]
-INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.coding[0]: Code System URI 'http://icd.who.int/icd11/mms' is unknown so the code cannot be validated
 == fsh-generated/resources/Location-Covid19AdmissionLocationExample.json ==
 == fsh-generated/resources/Location-Covid19ServiceRequestLocationExample.json ==
 == fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample.json ==
@@ -191,7 +183,5 @@ INFORMATION: Immunization/Covid19VaccinationExample: Immunization.vaccineCode.co
 == fsh-generated/resources/ValueSet-vs-test-types.json ==
 == fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json ==
 == fsh-generated/resources/ValueSet-vs-vaccine-types.json ==
-WARNING: ValueSet/vs-vaccine-types: ValueSet.compose[0].include[0]: Unknown System 'http://icd.who.int/icd11/mms' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://icd.who.int/icd11/mms' is unknown so the code cannot be validated)
-WARNING: ValueSet.where(id = 'vs-vaccine-types'): Error from server: Unable to provide support for code system http://icd.who.int/icd11/mms
 == fsh-generated/resources/ValueSet-vs-yes-no.json ==
 == input/covid19-casereporting.xml ==
