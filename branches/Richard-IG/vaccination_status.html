@@ -1,13 +1,9 @@
-<!-- get modelType -->
-
-
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>OPENHIE.FHIR.COVID\Covid19 Practitioner - Testing - FHIR v4.0.1</title>
+    <title>OPENHIE.FHIR.COVID\Vaccination Status - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -51,8 +47,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"4.4"}
-    h3,h4,h5,h6{--heading-prefix:"4.4"}</style>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -140,7 +136,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Covid19 Practitioner</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Vaccination Status</b></li>
           
         </ul>
       </div>  <!-- /container -->
@@ -152,110 +148,80 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div style="counter-reset: section 6" class="col-12">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">COVID19 Case Reporting - Local Development build (v0.1.0). See the <a href="http://openhie.org/fhir/covid19-casereporting/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Vaccination Status</h2>
   
-
-
-
-
-
-
-
-
-
-
-
-<ul class="nav nav-tabs">
-
-  <li>
-    <a href="StructureDefinition-covid19-practitioner.html">Content</a>
-  </li>
-
-
-
-  <li>
-    <a href="StructureDefinition-covid19-practitioner-definitions.html">Detailed Descriptions</a>
-  </li>
-
-
-
   
-    <li>
-      <a href="StructureDefinition-covid19-practitioner-mappings.html">Mappings</a>
-    </li>
   
+  <div xmlns="http://www.w3.org/1999/xhtml" lang="en"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#1">Vaccine Series</a></li><li><a href="#2">References</a></li></ul></div>
+  <a name="scope">   </a>
 
-
-
-
-
-
+  <p>The following categories of vaccination statuses exist in order to measure an individual's progress towards being vaccinated.</p>
   
-    
-      <li>
-        <a href="StructureDefinition-covid19-practitioner-examples.html">Examples</a>
-      </li>
-    
+  <a name="1"/><h4>Unvaccinated</h4> <a name="vaccine-status-unvaccinated">  </a>
   
+  <p>If the individual has not had at least one vaccine administered.</p>
 
-
-
-
+  <a name="2"/><h4>Partially Vaccinated</h4> <a name="vaccine-status-partially-vaccinated">  </a>
   
-    <li>
-      <a href="StructureDefinition-covid19-practitioner.profile.xml.html">XML</a>
-    </li>
+  <p>If the individual has had at least one vaccine administered using any manufacturer based on their age and for the primary series.</p>
+
+  <a name="3"/><h4>Fully Vaccinated</h4> <a name="vaccine-status-fully-vaccinated">  </a>
   
+  <p>If the individual has had all vaccines administered using the exact same manufacturer based on their age and for the primary series but the individual has not yet received the booster vaccine issued by the exact same manufacturer.</p>
 
-
+  <a name="4"/><h4>Up-to-Date Vaccinated</h4> <a name="vaccine-status-up-to-date-vaccinated">  </a>
   
-    <li>
-      <a href="StructureDefinition-covid19-practitioner.profile.json.html">JSON</a>
-    </li>
+  <p>The following algorithm is used when determining whether a patient is up-to-date vaccinated.</p>
   
+  <p>
+    If the individual has received all primary series vaccinations based on their age
+    <br/>
+    And
+    <br/>
+    If the individual received the booster vaccine (if available by the vaccine manufacturer)
+    And
+    <br/>
+    If the date &amp; time of reporting is &gt;= (date when booster was administered + weeksWaitingInterval)
 
+    <blockquote class="stu-note">
+      <p>
+        The weeksWaitingInterval variable is used to indicate when a patient is considered to be up-to-date taking into account the following key vaccination information:
+        <ul>
+          <li>Manufacturer</li>
+          <li>Target age group</li>
+          <li><a href="#vaccine-series">Vaccine series</a></li>
+          <li>Maximum number of doses per Vaccine Series</li>
+        </ul>
+      </p>
+      <p>
+        <em><strong>Not all manufacturers have a waiting period defined for up-to-date for the primary series</strong></em>.
+      </p>
+    </blockquote>
+  </p>
 
-  
-    <li>
-      <a href="StructureDefinition-covid19-practitioner.profile.ttl.html">TTL</a>
-    </li>
-  
+  <a name="1"/><h3 id="vaccine-series">Vaccine Series</h3> <a name="vaccine-series">  </a>
 
+  <p>
+    The COVID19 booster shot is an additional dose or doses of a vaccine that is administered after the protection from the orginal shot(s) has begun to decrease (COVID-19 Vaccination, 2020). 
+    Booster shots are used to enhance or retore protection against the disease.
+  </p>
 
-</ul>
+  <a name="2"/><h3>References</h3> <a name="references">  </a>
 
-
-  <a name="root"> </a>
-  <h2 id="root">Resource Profile: Covid19Practitioner - Testing</h2>
-  <table class="colsi">
-    <tr>
-
-      <td colspan="2">
-        
-          Active
-          
-            as of 2023-01-16
-          
-        
-      </td>
-
-    </tr>
-  </table>
-
-
-
-
-  <p><b>No TestScripts are currently available for the  Profile.</b></p>
-
-
-<!-- insert notes if present -->
-
-
-
-
+  <p>
+    COVID-19 Vaccination. (2020, February 11). Centers for Disease Control and Prevention. https://www.cdc.gov/coronavirus/2019-ncov/vaccines/recommendations/immuno.html
+  </p>
 </div>
-
+</div>
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -263,29 +229,6 @@
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
-
-  <script type="text/javascript">
-    try {
-      var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
-    } catch(exception) {
-    }
-
-    if (!currentTabIndex)
-      currentTabIndex = '0';
-
-    $( '#tabs' ).tabs({
-      active: currentTabIndex,
-      activate: function( event, ui ) {
-        var active = $('.selector').tabs('option', 'active');
-        currentTabIndex = ui.newTab.index();
-        document.activeElement.blur();
-        try {
-          sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
-        } catch(exception) {
-        }
-      }
-    });
-  </script>
 
   <script type="text/javascript">
     $(document).ready(function(){
