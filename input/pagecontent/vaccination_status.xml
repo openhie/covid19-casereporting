@@ -5,51 +5,48 @@
 
   <h3>Categories</h3> <a name="vaccine-status"> </a>
   
-  <div>
-    <h4>Unvaccinated</h4> <a name="vaccine-status-unvaccinated"> </a>
-    
-    <p>If the individual has not had at least one vaccine administered.</p>
+  <h4>Unvaccinated</h4>
   
+  <p>If the individual has not had at least one vaccine administered.</p>
 
-    <h4>Partially Vaccinated</h4> <a name="vaccine-status-partially-vaccinated"> </a>
-    
-    <p>If the individual has had at least one vaccine administered using any manufacturer based on their age and for the primary series.</p>
+  <h4>Partially Vaccinated</h4>
+  
+  <p>If the individual has had at least one vaccine administered using any manufacturer based on their age and for the primary series.</p>
 
-    <h4>Fully Vaccinated</h4> <a name="vaccine-status-fully-vaccinated"> </a>
-    
-    <p>If the individual has had all vaccines administered using the exact same manufacturer based on their age and for the primary series but the individual has not yet received the booster vaccine issued by the exact same manufacturer.</p>
+  <h4>Fully Vaccinated</h4>
+  
+  <p>If the individual has had all vaccines administered using the exact same manufacturer based on their age and for the primary series but the individual has not yet received the booster vaccine issued by the exact same manufacturer.</p>
 
-    <h4>Up-to-Date Vaccinated</h4> <a name="vaccine-status-up-to-date-vaccinated"> </a>
-    
-    <p>The following algorithm is used when determining whether a patient is up-to-date vaccinated.</p>
-    
-    <p>
-      If the individual has received all primary series vaccinations based on their age
-      <br />
-      And
-      <br/>
-      If the individual received the booster vaccine (if available by the vaccine manufacturer)
-      <br/>
-      And
-      <br/>
-      If the date &amp; time of reporting is >= (date when booster was administered + weeksWaitingInterval)
+  <h4>Up-to-Date Vaccinated</h4>
+  
+  <p>The following algorithm is used when determining whether a patient is up-to-date vaccinated.</p>
+  
+  <p>
+    If the individual has received all primary series vaccinations based on their age
+    <br />
+    And
+    <br/>
+    If the individual received the booster vaccine (if available by the vaccine manufacturer)
+    <br/>
+    And
+    <br/>
+    If the date &amp; time of reporting is >= (date when booster was administered + weeksWaitingInterval)
 
-      <blockquote class="stu-note">
-        <p>
-          The weeksWaitingInterval variable is used to indicate when a patient is considered to be up-to-date taking into account the following key vaccination information:
-          <ul>
-            <li>Manufacturer</li>
-            <li>Target age group</li>
-            <li><a href="#vaccine-series">Vaccine series</a></li>
-            <li>Maximum number of doses per Vaccine Series</li>
-          </ul>
-        </p>
-        <p>
-          <em><strong>Not all manufacturers have a waiting period defined for up-to-date for the primary series</strong></em>.
-        </p>
-      </blockquote>
-    </p>
-  </div>
+    <blockquote class="stu-note">
+      <p>
+        The weeksWaitingInterval variable is used to indicate when a patient is considered to be up-to-date taking into account the following key vaccination information:
+        <ul>
+          <li>Manufacturer</li>
+          <li>Target age group</li>
+          <li><a href="#vaccine-series">Vaccine series</a></li>
+          <li>Maximum number of doses per Vaccine Series</li>
+        </ul>
+      </p>
+      <p>
+        <em><strong>Not all manufacturers have a waiting period defined for up-to-date for the primary series</strong></em>.
+      </p>
+    </blockquote>
+  </p>
 
   <h3 id="vaccine-series">Vaccine Series</h3> <a name="vaccine-series"> </a>
 
