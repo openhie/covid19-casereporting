@@ -190,32 +190,51 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   
   
   
-  <div xmlns="http://www.w3.org/1999/xhtml" lang="en">
-  <a name="scope"> </a>
-  <ns0:p xmlns:ns0="http://www.w3.org/1999/xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml" lang="en"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#1">Introduction</a></li><li><a href="#2">Intellectual Property Considerations</a></li><li><a href="#3">Disclaimer</a></li><li><a href="#4">Credits and Acknowledgements</a></li></ul></div>
+  <a name="scope">   </a>
+
+  <p>
     This is the FHIR Implementation Guide for Case Reporting containing the specifications developed by the OpenHIE community. 
-  </ns0:p>
-  <ns1:blockquote xmlns:ns1="http://www.w3.org/1999/xhtml" class="stu-note">
-    <ns2:ul xmlns:ns2="http://www.w3.org/1999/xhtml">
-      <ns3:li xmlns:ns3="http://www.w3.org/1999/xhtml">
-        <ns4:strong xmlns:ns4="http://www.w3.org/1999/xhtml">This implementation guide and set of artifacts are still undergoing development.</ns4:strong>
-      </ns3:li>
-      <ns5:li xmlns:ns5="http://www.w3.org/1999/xhtml">
-        This content is only for demonstration purposes only.
-      </ns5:li>
-    </ns2:ul>
-  </ns1:blockquote>
-  
-  <ns6:p xmlns:ns6="http://www.w3.org/1999/xhtml">
-    <a name="1"/><ns7:h3 xmlns:ns7="http://www.w3.org/1999/xhtml">Introduction</ns7:h3> <a name="intro">  </a>
-    
-    This Implementation Guide contains the base specifications for general case reporting pipeline.
-  </ns6:p>
-  <ns8:p xmlns:ns8="http://www.w3.org/1999/xhtml">
+  </p>
+
+  <blockquote class="stu-note">
+    <ul>
+      <li><strong>This implementation guide and set of artifacts are still undergoing development.</strong> </li>
+      <li>This content is only for demonstration purposes only. </li>
+      <li>Providing Feedback: Please submit any issues via the Feedback link next to the appropriate section of the implementation guide </li>
+    </ul>
+  </blockquote>
+  <p> </p>
+  <a name="1"/><h3>Introduction</h3> <a name="intro">  </a>
+
+
+  <p>This Implementation Guide contains the specifications for COVID19 case reporting. This is a reference specification to the <a href="https://openhie.github.io/case-reporting/index.html">base case reporting specification</a>.</p>
+
+  <p>
     There is a need for countries to centralize and report on data that is captured at the point of service systems to effectively measure and monitor the progression and outcome of the COVID19 pandemic by measuring and monitoring individuals diagnosed with the disease and their status towards being up-to-date vaccinated. 
-    The COVID19 immunisation status of <ns9:em xmlns:ns9="http://www.w3.org/1999/xhtml">Up-to-date Vaccinated</ns9:em> refers to those clients who have been fully vaccinated (received all doses for the Primary Vaccine Series) and received all doses for the specified Booster Vaccine Series. 
-    This is a content specific FHIR IG that has been tailored to support the <ns10:a xmlns:ns10="http://www.w3.org/1999/xhtml" href="https://www.notion.so/gicsandbox/09ee19ee4fd34649a8cc07e1c171a84e?v=85d824b3ef9943ba92cb4204f6532ccf">COVID19 Minimum Dataset (MDS)</ns10:a>.
-  </ns8:p>
+    The COVID19 immunisation status of <em>Up-to-date Vaccinated</em> refers to those clients who have been fully vaccinated (received all doses for the Primary Vaccine Series) and received all doses for the specified Booster Vaccine Series. 
+    This is a content specific FHIR IG that has been tailored to support the <a href="https://www.notion.so/gicsandbox/09ee19ee4fd34649a8cc07e1c171a84e?v=85d824b3ef9943ba92cb4204f6532ccf">COVID19 Minimum Dataset (MDS)</a>.
+  </p>
+
+  <a name="2"/><h3>Intellectual Property Considerations</h3>  <a name="ip">  </a>
+  <p>
+    While this implementation guide and the underlying FHIR are licensed as public domain, this guide may include examples making use of terminologies such 
+    as LOINC, SNOMED CT and others which have more restrictive licensing requirements. Implementers should make themselves familiar with licensing and 
+    any other constraints of terminologies, questionnaires, and other components used as part of their implementation process. In some cases, 
+    licensing requirements may limit the systems that data captured using certain questionnaires may be shared with.
+  </p>
+
+  <a name="3"/><h3>Disclaimer</h3>  <a name="disclaimer">  </a>
+  <p>
+    This specification is provided without warranty of completeness or consistency, and the official publication supersedes this draft.
+    No liability can be inferred from the use or misuse of this specification, or its consequences.
+  </p>
+
+  <a name="4"/><h3>Credits and Acknowledgements</h3>  <a name="credits">  </a>
+  <p>
+    This specification is based on FHIR and the FHIR tooling ecosystem and community processes. 
+    It has been defined with the support and participation of the following institutions:
+  </p>
 </div>
 </div>
         </div>  <!-- /inner-wrapper -->
@@ -240,7 +259,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 13, 2023 10:29+0000">2023-01-13</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 16, 2023 11:51+0000">2023-01-16</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
