@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>OPENHIE.FHIR.COVID\Vaccination Status - FHIR v4.0.1</title>
+    <title>OPENHIE.FHIR.COVID\COVID19 Vaccination Statuses - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -136,7 +136,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Vaccination Status</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>COVID19 Vaccination Statuses</b></li>
           
         </ul>
       </div>  <!-- /container -->
@@ -157,65 +157,70 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">COVID19 Case Reporting - Local Development build (v0.1.0). See the <a href="http://openhie.org/fhir/covid19-casereporting/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Vaccination Status</h2>
+  <h2>COVID19 Vaccination Statuses</h2>
   
   
   
-  <div xmlns="http://www.w3.org/1999/xhtml" lang="en"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#1">Vaccine Series</a></li><li><a href="#2">References</a></li></ul></div>
+  <div xmlns="http://www.w3.org/1999/xhtml" lang="en"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#1">Categories</a></li><li><a href="#2">Vaccine Series</a></li><li><a href="#3">References</a></li></ul></div>
   <a name="scope">   </a>
 
   <p>The following categories of vaccination statuses exist in order to measure an individual's progress towards being vaccinated.</p>
-  
-  <a name="1"/><h4>Unvaccinated</h4> <a name="vaccine-status-unvaccinated">  </a>
-  
-  <p>If the individual has not had at least one vaccine administered.</p>
 
-  <a name="2"/><h4>Partially Vaccinated</h4> <a name="vaccine-status-partially-vaccinated">  </a>
+  <a name="1"/><h3>Categories</h3> <a name="vaccine-status">  </a>
   
-  <p>If the individual has had at least one vaccine administered using any manufacturer based on their age and for the primary series.</p>
-
-  <a name="3"/><h4>Fully Vaccinated</h4> <a name="vaccine-status-fully-vaccinated">  </a>
+  <div>
+    <a name="1"/><h4>Unvaccinated</h4> <a name="vaccine-status-unvaccinated">  </a>
+    
+    <p>If the individual has not had at least one vaccine administered.</p>
   
-  <p>If the individual has had all vaccines administered using the exact same manufacturer based on their age and for the primary series but the individual has not yet received the booster vaccine issued by the exact same manufacturer.</p>
 
-  <a name="4"/><h4>Up-to-Date Vaccinated</h4> <a name="vaccine-status-up-to-date-vaccinated">  </a>
-  
-  <p>The following algorithm is used when determining whether a patient is up-to-date vaccinated.</p>
-  
-  <p>
-    If the individual has received all primary series vaccinations based on their age
-    <br/>
-    And
-    <br/>
-    If the individual received the booster vaccine (if available by the vaccine manufacturer)
-    And
-    <br/>
-    If the date &amp; time of reporting is &gt;= (date when booster was administered + weeksWaitingInterval)
+    <a name="2"/><h4>Partially Vaccinated</h4> <a name="vaccine-status-partially-vaccinated">  </a>
+    
+    <p>If the individual has had at least one vaccine administered using any manufacturer based on their age and for the primary series.</p>
 
-    <blockquote class="stu-note">
-      <p>
-        The weeksWaitingInterval variable is used to indicate when a patient is considered to be up-to-date taking into account the following key vaccination information:
-        <ul>
-          <li>Manufacturer</li>
-          <li>Target age group</li>
-          <li><a href="#vaccine-series">Vaccine series</a></li>
-          <li>Maximum number of doses per Vaccine Series</li>
-        </ul>
-      </p>
-      <p>
-        <em><strong>Not all manufacturers have a waiting period defined for up-to-date for the primary series</strong></em>.
-      </p>
-    </blockquote>
-  </p>
+    <a name="3"/><h4>Fully Vaccinated</h4> <a name="vaccine-status-fully-vaccinated">  </a>
+    
+    <p>If the individual has had all vaccines administered using the exact same manufacturer based on their age and for the primary series but the individual has not yet received the booster vaccine issued by the exact same manufacturer.</p>
 
-  <a name="1"/><h3 id="vaccine-series">Vaccine Series</h3> <a name="vaccine-series">  </a>
+    <a name="4"/><h4>Up-to-Date Vaccinated</h4> <a name="vaccine-status-up-to-date-vaccinated">  </a>
+    
+    <p>The following algorithm is used when determining whether a patient is up-to-date vaccinated.</p>
+    
+    <p>
+      If the individual has received all primary series vaccinations based on their age
+      <br/>
+      And
+      <br/>
+      If the individual received the booster vaccine (if available by the vaccine manufacturer)
+      And
+      <br/>
+      If the date &amp; time of reporting is &gt;= (date when booster was administered + weeksWaitingInterval)
+
+      <blockquote class="stu-note">
+        <p>
+          The weeksWaitingInterval variable is used to indicate when a patient is considered to be up-to-date taking into account the following key vaccination information:
+          <ul>
+            <li>Manufacturer</li>
+            <li>Target age group</li>
+            <li><a href="#vaccine-series">Vaccine series</a></li>
+            <li>Maximum number of doses per Vaccine Series</li>
+          </ul>
+        </p>
+        <p>
+          <em><strong>Not all manufacturers have a waiting period defined for up-to-date for the primary series</strong></em>.
+        </p>
+      </blockquote>
+    </p>
+  </div>
+
+  <a name="2"/><h3 id="vaccine-series">Vaccine Series</h3> <a name="vaccine-series">  </a>
 
   <p>
     The COVID19 booster shot is an additional dose or doses of a vaccine that is administered after the protection from the orginal shot(s) has begun to decrease (COVID-19 Vaccination, 2020). 
     Booster shots are used to enhance or retore protection against the disease.
   </p>
 
-  <a name="2"/><h3>References</h3> <a name="references">  </a>
+  <a name="3"/><h3>References</h3> <a name="references">  </a>
 
   <p>
     COVID-19 Vaccination. (2020, February 11). Centers for Disease Control and Prevention. https://www.cdc.gov/coronavirus/2019-ncov/vaccines/recommendations/immuno.html
@@ -244,7 +249,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 16, 2023 15:11+0000">2023-01-16</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 16, 2023 16:50+0000">2023-01-16</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
