@@ -1,8 +1,8 @@
 Profile: Covid19Organization
 Parent: Organization
 Id: covid19-organization
-Title: "Covid19 Organization"
-Description: "Covid19 Organization for case report - this represents a health facility"
+Title: "Organization"
+Description: "Administering Organization"
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #openAtEnd
@@ -21,8 +21,8 @@ Description: "Covid19 Organization for case report - this represents a health fa
 Profile: Covid19Patient
 Parent: Patient
 Id: covid19-patient
-Title: "Covid19 Patient"
-Description: "This Patient profile allows the exchange of patient information, including all the data associated with Covid19 patients"
+Title: "Patient"
+Description: "The individual receiving COVID19 services"
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #openAtEnd
@@ -46,22 +46,22 @@ Description: "This Patient profile allows the exchange of patient information, i
 
 Extension: ExtCovid19EverHospitalised
 Id: covid19-ever-hospitalised
-Title: "Covid19 Ever Hospitalized"
-Description: "Covid19 Ever Hospitalized"
+Title: "Ever Hospitalized"
+Description: "Has the individual been admitted to hospital at any point in time in the past?"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSYesNoUnknown
 
 Extension: ExtCovid19DateLastHospitalised
 Id: covid19-date-last-hospitalised
-Title: "Covid19 Date Last Hospitalised"
-Description: "Covid19 Date Last Hospitalised"
+Title: "Date Last Hospitalised"
+Description: "When last was the individual admitted to hospital?"
 * value[x] only dateTime 
 
 Profile: Covid19AssessmentEncounter
 Parent: Encounter
 Id: covid19-encounter
-Title: "Covid19 Assessment Encounter"
-Description: "Covid19 Assessment Encounter"
+Title: "Encounter"
+Description: "A record of the individual's visit at the organization"
 * extension contains ExtNextVisit named nextVisit 0..1
 * extension contains ExtCovid19EverHospitalised named extCovid19EverHospitalised 0..1
 * extension contains ExtCovid19DateLastHospitalised named extCovid19DateLastHospitalised 0..1
@@ -78,8 +78,8 @@ Description: "Covid19 Assessment Encounter"
 Profile: Covid19PresentingSymptoms
 Parent: Observation
 Id: covid19-presenting-symptoms 
-Title: "Covid19 Symptom"
-Description: "Covid19 Symptom"
+Title: "Presenting Symptoms"
+Description: "Existing symptoms which may help with diagnosis"
 * status = #final
 * subject only Reference(Patient)
 * subject 1..1
@@ -92,16 +92,16 @@ Description: "Covid19 Symptom"
 
 Extension: ExtCovid19ConditionsOrComorbiditiesPresent
 Id: covid19-conditions-or-comorbidities-present
-Title: "Covid19 Conditions or Comorbidities Present"
-Description: "Covid19 Conditions or Comorbidities Present"
+Title: "Conditions or Comorbidities Present"
+Description: "Does the individual have any known pre-existing conditions and/or comorbidities?"
 * value[x] only CodeableConcept
 * valueCodeableConcept from VSYesNoUnknown
 
 Profile: Covid19ConditionsOrComorbidity
 Parent: Condition
 Id: covid19-conditions-or-comorbidities
-Title: "Covid19 Conditions or comorbidity"
-Description: "Covid19 Conditions or comorbidity"
+Title: "Conditions or Comorbidity"
+Description: "What pre-existing conditions and/or comorbidities exist for the individual?"
 * extension contains ExtCovid19ConditionsOrComorbiditiesPresent named extCovid19ConditionsOrComorbiditiesPresent 1..1
 * code from VSConditionsComorbidity (required)
 * subject only Reference(Patient)
@@ -113,8 +113,8 @@ Description: "Covid19 Conditions or comorbidity"
 Profile: Covid19VaccineDoseEverReceived
 Parent: Observation
 Id: covid19-vaccine-dose-ever-received
-Title: "Covid19 Vaccine Dose Received"
-Description: "Covid19 Vaccine Dose Received"
+Title: "Vaccine Dose Ever Received"
+Description: "Has the individual received at least one shot of the vaccine at any point in time in the past?"
 * status = #final
 * code from VSYesNoUnknown (required)
 * subject only Reference(Patient)
@@ -125,8 +125,8 @@ Description: "Covid19 Vaccine Dose Received"
 Profile: Covid19AssessmentVaccination
 Parent: Immunization
 Id: covid19-assessment-vaccination
-Title: "Covid19 Vaccination info included as part of the Assessment"
-Description: "Covid19 Vaccination info included as part of the Assessment"
+Title: "Immunization Tracking"
+Description: "Retrospectively capture COVID19 immunization data for vaccines administered at other organizations"
 * status = #completed
 * vaccineCode from VSVaccineTypes (required)
 * patient 1..1
@@ -144,8 +144,8 @@ Description: "Covid19 Vaccination info included as part of the Assessment"
 Profile: Covid19Diagnosis
 Parent: Condition
 Id: covid19-diagnosis
-Title: "Covid19 Diagnosis"
-Description: "Covid19 Diagnosis"
+Title: "Diagnosis"
+Description: "Confirmation of the diagnosis"
 * verificationStatus 1..1
 * subject only Reference(Patient)
 * subject 1..1
@@ -160,8 +160,8 @@ Description: "Covid19 Diagnosis"
 Profile: Covid19MedicationRequest
 Parent: MedicationRequest
 Id: covid19-medication-request
-Title: "Covid19 Treatment dispensed or prescribed"
-Description: "Covid19 Treatment dispensed or prescribed"
+Title: "Treatment dispensed or prescribed"
+Description: "To indicate whether Paxlovid has been issued to the individual"
 * status = #active
 * intent = #order
 * subject only Reference(Patient)
@@ -174,8 +174,8 @@ Description: "Covid19 Treatment dispensed or prescribed"
 Profile: Covid19ServiceRequest
 Parent: ServiceRequest
 Id: covid19-lab-order
-Title: "Covid19 Lab Order"
-Description: "Covid19 Lab Order"
+Title: "Lab Order"
+Description: "A service request that initiates the need for the lab to collect the test sample"
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #openAtEnd
@@ -202,8 +202,8 @@ Description: "Covid19 Lab Order"
 Profile: Covid19Specimen
 Parent: Specimen
 Id: covid19-specimen
-Title: "Covid19 Specimen"
-Description: "Covid19 Specimen"
+Title: "Specimen"
+Description: "The test sample that was collected for the initiated lab order"
 * identifier 1..1
 * type from VSCovid19SpecimenType (required)
 * subject only Reference(Patient)
@@ -215,8 +215,8 @@ Description: "Covid19 Specimen"
 Profile: Covid19TestResult
 Parent: Observation
 Id: covid19-test-results
-Title: "Covid19 Lab Results"
-Description: "Covid19 Lab Results"
+Title: "Lab Results"
+Description: "The result of the lab test which determines whether the patient is infected with COVID19 or not"
 * status = #final
 * code from VSTestTypes (required)
 * subject only Reference(Patient)
@@ -229,8 +229,8 @@ Description: "Covid19 Lab Results"
 Profile: Covid19Vaccination
 Parent: Immunization
 Id: covid19-vaccination
-Title: "Covid19 Vaccination"
-Description: "Covid19 Vaccination"
+Title: "Immunization Tracking"
+Description: "Administer a suitable vaccine based on the most recent lab result"
 * status = #completed
 * vaccineCode from VSVaccineTypes (required)
 * patient 1..1
@@ -247,15 +247,15 @@ Description: "Covid19 Vaccination"
 
 Extension: ExtNextVisit
 Id: covid19-next-vaccination
-Title: "Covid19 date of next vaccination"
-Description: "Covid19 date of next vaccination"
+Title: "Date of next vaccination"
+Description: "When must the individual return to the organization for the next scheduled vaccination?"
 * value[x] only dateTime
 
 Profile: Covid19ServiceRequestLocation
 Parent: Location
 Id: covid19-service-request-location
-Title: "Covid19 Service Request Location"
-Description: "Covid19 Service Request Location"
+Title: "Lab Order Request Location"
+Description: "What is the location of the organization responsible for conducting the examination of the individual's sample?"
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #openAtEnd
@@ -270,8 +270,8 @@ Description: "Covid19 Service Request Location"
 Profile: Covid19AdmissionLocation
 Parent: Location
 Id: covid19-admission-location
-Title: "Covid19 Admission Location"
-Description: "Covid19 Admission Location"
+Title: "Admission Location"
+Description: "What is the location of the organization where the patient is currently being admitted to for treatment?"
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #openAtEnd
@@ -286,8 +286,8 @@ Description: "Covid19 Admission Location"
 Profile: Covid19RecoveredOrSymptomsResolved
 Parent: Observation
 Id: covid19-recovered-or-symptoms-resolved 
-Title: "Covid19 Recovered Or Symptoms Resolved"
-Description: "Covid19 Recovered Or Symptoms Resolved"
+Title: "Recovered Or Symptoms Resolved"
+Description: "Has the individual fully recovered from symptoms associated with COVID19?"
 * status = #final
 * code = $SCT#370996005
 * subject only Reference(Patient)
@@ -301,8 +301,8 @@ Description: "Covid19 Recovered Or Symptoms Resolved"
 Profile: Covid19Death
 Parent: Observation
 Id: covid19-death 
-Title: "Covid19 Death"
-Description: "Covid19 Death"
+Title: "Death"
+Description: "An event assoicated with the death of an individual who has been diagnosed with COVID19"
 * status = #final
 * code = $SCT#419099009
 * subject only Reference(Patient)
@@ -316,8 +316,8 @@ Description: "Covid19 Death"
 Profile: Covid19LongCovidPostCovid
 Parent: Observation
 Id: covid19-long-covid-post-covid
-Title: "Covid19 Long Covid / Post-Covid"
-Description: "Covid19 Long Covid / Post-Covid"
+Title: "Long Covid / Post-Covid"
+Description: "Does the indiviual continue to suffer from COVID19 health problems that are new, returning or ongoing conditons?"
 * status = #final
 * code = $SCT#1119303003
 * subject only Reference(Patient)
@@ -331,8 +331,8 @@ Description: "Covid19 Long Covid / Post-Covid"
 Profile: Covid19LabTask
 Parent: Task
 Id: covid19-lab-task
-Title: "Covid19 Lab Task"
-Description: "Covid19 Lab Task"
+Title: "Lab Task"
+Description: "Assists with tracking the state of the lab order and its completion status"
 * identifier 1..*
 * basedOn only Reference(ServiceRequest)
 * status 1..1
@@ -349,16 +349,16 @@ Description: "Covid19 Lab Task"
 Profile: Covid19Practitioner
 Parent: Practitioner
 Id: covid19-practitioner
-Title: "Covid19 Practitioner"
-Description: "Covid19 Practitioner"
+Title: "Practitioner"
+Description: "The healthcare professional who has been assigned to a given lab task"
 * name 1..1
 * telecom 0..1
 
 Profile: Covid19DiagnosticReport
 Parent: DiagnosticReport
 Id: covid19-diagnostic-report
-Title: "Covid19 Diagnostic Report"
-Description: "Covid19 Diagnostic Report"
+Title: "Diagnostic Report"
+Description: "A report as a result of the lab task being completed"
 * basedOn only Reference(ServiceRequest)
 * status = #final
 * code from VSTestTypes (required)
