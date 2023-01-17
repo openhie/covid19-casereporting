@@ -49,7 +49,7 @@ Description: "A list of admission types"
 ValueSet: VSYesNoUnknown
 Id: vs-yes-no
 Title: "Yes No Unknown"
-Description:  ""
+Description:  "A list of options used to provide an answer"
 * ^experimental = false
 * $SCT#373066001 "Yes"
 * $SCT#373067005 "No"
