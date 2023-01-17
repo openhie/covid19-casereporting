@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="LabRejection"/>
+  <type value="transaction"/>
+  <entry>
+    <fullUrl value="Task/Covid19LabOrderRejectionExample"/>
+    <resource>
+      <Task>
+        <id value="Covid19LabOrderRejectionExample"/>
+        <meta>
+          <profile value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Task</b><a name="Covid19LabOrderRejectionExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Task &quot;Covid19LabOrderRejectionExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-lab-task.html">Lab Task</a></p></div><p><b>identifier</b>: id: ORDER12345</p><p><b>basedOn</b>: <a href="ServiceRequest-Covid19ServiceRequestExample.html">ServiceRequest/Covid19ServiceRequestExample</a></p><p><b>status</b>: rejected</p><p><b>statusReason</b>: Sample rejected <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#135839007)</span></p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: ?? --&gt; 2022-07-30</p><p><b>lastModified</b>: 2022-07-30</p><p><b>requester</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p><p><b>owner</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p></div>
+        </text>
+        <identifier>
+          <system value="http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"/>
+          <value value="ORDER12345"/>
+        </identifier>
+        <basedOn>
+          <reference value="ServiceRequest/Covid19ServiceRequestExample"/>
+        </basedOn>
+        <status value="rejected"/>
+        <statusReason>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="135839007"/>
+          </coding>
+        </statusReason>
+        <intent value="order"/>
+        <executionPeriod>
+          <end value="2022-07-30"/>
+        </executionPeriod>
+        <lastModified value="2022-07-30"/>
+        <requester>
+          <reference value="Organization/Covid19OrganizationExample"/>
+        </requester>
+        <owner>
+          <reference value="Organization/Covid19OrganizationExample"/>
+        </owner>
+      </Task>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Task/Covid19LabOrderRejectionExample"/>
+    </request>
+  </entry>
+</Bundle>
