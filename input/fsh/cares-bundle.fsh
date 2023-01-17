@@ -1,6 +1,6 @@
 Instance: CaresBundleExample
 InstanceOf: Bundle
-Usage: #definition
+Usage: #example
 Title: "Covid19 Case Report - Full Bundle Example"
 Description: "Example of a clinical bundle representing a case report"
 * type = #transaction
