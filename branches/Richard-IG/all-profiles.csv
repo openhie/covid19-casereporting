@@ -292,15 +292,15 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "covid19-encounter","Encounter.extension:nextVisit","Encounter.extension","nextVisit","","",0,1,"","","","Extension {[CanonicalType[http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination]]} {[]}
-","Covid19 date of next vaccination","Covid19 date of next vaccination","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","Date of next vaccination","When must the individual return to the organization for the next scheduled vaccination?","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "covid19-encounter","Encounter.extension:extCovid19EverHospitalised","Encounter.extension","extCovid19EverHospitalised","","",0,1,"","","","Extension {[CanonicalType[http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised]]} {[]}
-","Covid19 Ever Hospitalized","Covid19 Ever Hospitalized","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","Ever Hospitalized","Has the individual been admitted to hospital at any point in time in the past?","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "covid19-encounter","Encounter.extension:extCovid19DateLastHospitalised","Encounter.extension","extCovid19DateLastHospitalised","","",0,1,"","","","Extension {[CanonicalType[http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised]]} {[]}
-","Covid19 Date Last Hospitalised","Covid19 Date Last Hospitalised","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","Date Last Hospitalised","When last was the individual admitted to hospital?","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "covid19-encounter","Encounter.modifierExtension","Encounter.modifierExtension","","extensions
@@ -1301,7 +1301,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","replaced-by | replaces | refer | seealso","The type of link between this patient resource and another patient resource.","","","","","","","","","",,"required","The type of link between this patient resource and another patient resource.","http://hl7.org/fhir/ValueSet/link-type|4.0.1","",,,,"Patient.link.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "covid19-next-vaccination","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Covid19 date of next vaccination","Covid19 date of next vaccination","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","Date of next vaccination","When must the individual return to the organization for the next scheduled vaccination?","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ",""
 "covid19-next-vaccination","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -1744,7 +1744,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Entire report as issued","Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.","""application/pdf"" is recommended as the most reliable and interoperable in this context.","Gives laboratory the ability to provide its own fully formatted report for clinical fidelity.","","","","","","","",,,,,"",,,,"DiagnosticReport.presentedForm",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "covid19-date-last-hospitalised","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Covid19 Date Last Hospitalised","Covid19 Date Last Hospitalised","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","Date Last Hospitalised","When last was the individual admitted to hospital?","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ",""
 "covid19-date-last-hospitalised","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -2246,7 +2246,7 @@ Drug Utilization Review (DUR)Alert","",0,*,"","","","Reference {[]} {[CanonicalT
 ","A list of events of interest in the lifecycle","Links to Provenance records for past versions of this resource or fulfilling request or event resources that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the resource.","This might not include provenances for all versions of the request – only those deemed “relevant” or important. This SHALL NOT include the provenance associated with this current version of the resource. (If that provenance is deemed to be a “relevant” change, it will need to be added as part of a later update. Until then, it can be queried directly as the provenance that points to this version using _revinclude All Provenances should have some historical version of this Request as their subject.).","","","","","","","","",,,,,"",,,,"MedicationRequest.eventHistory",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "covid19-conditions-or-comorbidities-present","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Covid19 Conditions or Comorbidities Present","Covid19 Conditions or Comorbidities Present","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","Conditions or Comorbidities Present","Does the individual have any known pre-existing conditions and/or comorbidities?","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ",""
 "covid19-conditions-or-comorbidities-present","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -3219,7 +3219,7 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "covid19-conditions-or-comorbidities","Condition.extension:extCovid19ConditionsOrComorbiditiesPresent","Condition.extension","extCovid19ConditionsOrComorbiditiesPresent","","",1,1,"","","","Extension {[CanonicalType[http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present]]} {[]}
-","Covid19 Conditions or Comorbidities Present","Covid19 Conditions or Comorbidities Present","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","Conditions or Comorbidities Present","Does the individual have any known pre-existing conditions and/or comorbidities?","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "covid19-conditions-or-comorbidities","Condition.modifierExtension","Condition.modifierExtension","","extensions
@@ -3519,7 +3519,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Technical endpoints providing access to services operated for the organization","Technical endpoints providing access to services operated for the organization.","","Organizations have multiple systems that provide various services and need to be able to define the technical connection details for how to connect to them, and for what purpose.","","","","","","","",,,,,"",,,,"Organization.endpoint",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "covid19-ever-hospitalised","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Covid19 Ever Hospitalized","Covid19 Ever Hospitalized","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","Ever Hospitalized","Has the individual been admitted to hospital at any point in time in the past?","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ",""
 "covid19-ever-hospitalised","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""

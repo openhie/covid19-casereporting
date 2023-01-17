@@ -11,7 +11,7 @@
   "title" : "COVID19 Case Reporting",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2023-01-17T08:30:31+00:00",
+  "date" : "2023-01-17T11:00:15+00:00",
   "publisher" : "Jembi Health Systems",
   "contact" : [{
     "telecom" : [{
@@ -635,8 +635,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-vaccination"
       },
-      "name" : "Covid19 Vaccination",
-      "description" : "Covid19 Vaccination"
+      "name" : "Immunization Tracking",
+      "description" : "Administer a suitable vaccine based on the most recent lab result"
     },
     {
       "extension" : [{
@@ -646,8 +646,8 @@
       "reference" : {
         "reference" : "ValueSet/vs-treatment-dispensed-prescribed"
       },
-      "name" : "COVID Treatmens dispensed or prescribed",
-      "description" : "COVID Treatmens dispensed or prescribed"
+      "name" : "Treatment Dispensed or Prescribed",
+      "description" : "A list of all possible drugs"
     },
     {
       "extension" : [{
@@ -658,7 +658,7 @@
         "reference" : "ValueSet/vs-test-types"
       },
       "name" : "Test Types",
-      "description" : "A list of Test Types"
+      "description" : "A list of COVID19 test types"
     },
     {
       "extension" : [{
@@ -712,8 +712,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-encounter"
       },
-      "name" : "Covid19 Assessment Encounter",
-      "description" : "Covid19 Assessment Encounter"
+      "name" : "Encounter",
+      "description" : "A record of the individual's visit at the organization"
     },
     {
       "extension" : [{
@@ -723,8 +723,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-death"
       },
-      "name" : "Covid19 Death",
-      "description" : "Covid19 Death"
+      "name" : "Death",
+      "description" : "An event assoicated with the death of an individual who has been diagnosed with COVID19"
     },
     {
       "extension" : [{
@@ -734,8 +734,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-practitioner"
       },
-      "name" : "Covid19 Practitioner",
-      "description" : "Covid19 Practitioner"
+      "name" : "Practitioner",
+      "description" : "The healthcare professional who has been assigned to a given lab task"
     },
     {
       "extension" : [{
@@ -756,8 +756,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-lab-task"
       },
-      "name" : "Covid19 Lab Task",
-      "description" : "Covid19 Lab Task"
+      "name" : "Lab Task",
+      "description" : "Assists with tracking the state of the lab order and its completion status"
     },
     {
       "extension" : [{
@@ -767,8 +767,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-patient"
       },
-      "name" : "Covid19 Patient",
-      "description" : "This Patient profile allows the exchange of patient information, including all the data associated with Covid19 patients"
+      "name" : "Patient",
+      "description" : "The individual receiving COVID19 services"
     },
     {
       "extension" : [{
@@ -778,8 +778,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-next-vaccination"
       },
-      "name" : "Covid19 date of next vaccination",
-      "description" : "Covid19 date of next vaccination"
+      "name" : "Date of next vaccination",
+      "description" : "When must the individual return to the organization for the next scheduled vaccination?"
     },
     {
       "extension" : [{
@@ -789,8 +789,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-diagnosis"
       },
-      "name" : "Covid19 Diagnosis",
-      "description" : "Covid19 Diagnosis"
+      "name" : "Diagnosis",
+      "description" : "Confirmation of the diagnosis"
     },
     {
       "extension" : [{
@@ -801,7 +801,7 @@
         "reference" : "ValueSet/vs-AdmissionTypes"
       },
       "name" : "Admission Types",
-      "description" : "A list of Admission Types"
+      "description" : "A list of admission types"
     },
     {
       "extension" : [{
@@ -822,8 +822,8 @@
       "reference" : {
         "reference" : "ValueSet/vs-source-of-info"
       },
-      "name" : "Source of information - codes",
-      "description" : "Source of information - codes"
+      "name" : "Source of Information",
+      "description" : "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis"
     },
     {
       "extension" : [{
@@ -834,7 +834,7 @@
         "reference" : "ValueSet/vs-lab-task-output"
       },
       "name" : "Lab Result Task Output",
-      "description" : "Lab Result Task Output"
+      "description" : "Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"
     },
     {
       "extension" : [{
@@ -855,8 +855,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-service-request-location"
       },
-      "name" : "Covid19 Service Request Location",
-      "description" : "Covid19 Service Request Location"
+      "name" : "Lab Order Request Location",
+      "description" : "What is the location of the organization responsible for conducting the examination of the individual's sample?"
     },
     {
       "extension" : [{
@@ -910,8 +910,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-diagnostic-report"
       },
-      "name" : "Covid19 Diagnostic Report",
-      "description" : "Covid19 Diagnostic Report"
+      "name" : "Diagnostic Report",
+      "description" : "A report as a result of the lab task being completed"
     },
     {
       "extension" : [{
@@ -954,8 +954,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-date-last-hospitalised"
       },
-      "name" : "Covid19 Date Last Hospitalised",
-      "description" : "Covid19 Date Last Hospitalised"
+      "name" : "Date Last Hospitalised",
+      "description" : "When last was the individual admitted to hospital?"
     },
     {
       "extension" : [{
@@ -1009,8 +1009,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-assessment-vaccination"
       },
-      "name" : "Covid19 Vaccination info included as part of the Assessment",
-      "description" : "Covid19 Vaccination info included as part of the Assessment"
+      "name" : "Immunization Tracking",
+      "description" : "Retrospectively capture COVID19 immunization data for vaccines administered at other organizations"
     },
     {
       "extension" : [{
@@ -1032,7 +1032,7 @@
         "reference" : "CodeSystem/cs-lab-task-output"
       },
       "name" : "Lab Result Task Output",
-      "description" : "Lab Result Task Output"
+      "description" : "Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"
     },
     {
       "extension" : [{
@@ -1042,8 +1042,8 @@
       "reference" : {
         "reference" : "ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"
       },
-      "name" : "Covid19 Reason for Assessment or Test not performed",
-      "description" : "Covid19 Reason for Assessment or Test not performed"
+      "name" : "Reason for Assessment or Test Not Performed",
+      "description" : "A list of reasons associated with the service request for the lab order"
     },
     {
       "extension" : [{
@@ -1086,8 +1086,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-medication-request"
       },
-      "name" : "Covid19 Treatment dispensed or prescribed",
-      "description" : "Covid19 Treatment dispensed or prescribed"
+      "name" : "Treatment dispensed or prescribed",
+      "description" : "To indicate whether Paxlovid has been issued to the individual"
     },
     {
       "extension" : [{
@@ -1098,7 +1098,7 @@
         "reference" : "ValueSet/vs-cancellation-reason"
       },
       "name" : "Cancellation Reasons",
-      "description" : "A list of Cancellation Reasons"
+      "description" : "A list of reasons as a result of the lab task being cancelled"
     },
     {
       "extension" : [{
@@ -1108,8 +1108,8 @@
       "reference" : {
         "reference" : "ValueSet/vs-conditions-comorbidity"
       },
-      "name" : "List of Conditions / Comorbidity",
-      "description" : "List of Conditions / Comorbidity"
+      "name" : "Conditions / Comorbidity",
+      "description" : "List of conditions and comorbidities"
     },
     {
       "extension" : [{
@@ -1130,8 +1130,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-conditions-or-comorbidities-present"
       },
-      "name" : "Covid19 Conditions or Comorbidities Present",
-      "description" : "Covid19 Conditions or Comorbidities Present"
+      "name" : "Conditions or Comorbidities Present",
+      "description" : "Does the individual have any known pre-existing conditions and/or comorbidities?"
     },
     {
       "extension" : [{
@@ -1152,8 +1152,8 @@
       "reference" : {
         "reference" : "ValueSet/vs-covid19-test-result"
       },
-      "name" : "Covid19 Test Result",
-      "description" : "Covid19 Test Result"
+      "name" : "Test Result",
+      "description" : "COVID19 diagnosis"
     },
     {
       "extension" : [{
@@ -1163,8 +1163,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-lab-order"
       },
-      "name" : "Covid19 Lab Order",
-      "description" : "Covid19 Lab Order"
+      "name" : "Lab Order",
+      "description" : "A service request that initiates the need for the lab to collect the test sample"
     },
     {
       "extension" : [{
@@ -1174,8 +1174,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-vaccine-dose-ever-received"
       },
-      "name" : "Covid19 Vaccine Dose Received",
-      "description" : "Covid19 Vaccine Dose Received"
+      "name" : "Vaccine Dose Ever Received",
+      "description" : "Has the individual received at least one shot of the vaccine at any point in time in the past?"
     },
     {
       "extension" : [{
@@ -1196,8 +1196,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-admission-location"
       },
-      "name" : "Covid19 Admission Location",
-      "description" : "Covid19 Admission Location"
+      "name" : "Admission Location",
+      "description" : "What is the location of the organization where the patient is currently being admitted to for treatment?"
     },
     {
       "extension" : [{
@@ -1207,8 +1207,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-test-results"
       },
-      "name" : "Covid19 Lab Results",
-      "description" : "Covid19 Lab Results"
+      "name" : "Lab Results",
+      "description" : "The result of the lab test which determines whether the patient is infected with COVID19 or not"
     },
     {
       "extension" : [{
@@ -1218,8 +1218,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-recovered-or-symptoms-resolved"
       },
-      "name" : "Covid19 Recovered Or Symptoms Resolved",
-      "description" : "Covid19 Recovered Or Symptoms Resolved"
+      "name" : "Recovered Or Symptoms Resolved",
+      "description" : "Has the individual fully recovered from symptoms associated with COVID19?"
     },
     {
       "extension" : [{
@@ -1229,8 +1229,8 @@
       "reference" : {
         "reference" : "CodeSystem/cs-source-of-info"
       },
-      "name" : "Source of information - codes",
-      "description" : "Source of information - codes"
+      "name" : "Source of Information",
+      "description" : "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis"
     },
     {
       "extension" : [{
@@ -1240,8 +1240,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-conditions-or-comorbidities"
       },
-      "name" : "Covid19 Conditions or comorbidity",
-      "description" : "Covid19 Conditions or comorbidity"
+      "name" : "Conditions or Comorbidity",
+      "description" : "What pre-existing conditions and/or comorbidities exist for the individual?"
     },
     {
       "extension" : [{
@@ -1251,8 +1251,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-organization"
       },
-      "name" : "Covid19 Organization",
-      "description" : "Covid19 Organization for case report - this represents a health facility"
+      "name" : "Organization",
+      "description" : "Administering Organization"
     },
     {
       "extension" : [{
@@ -1262,8 +1262,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-ever-hospitalised"
       },
-      "name" : "Covid19 Ever Hospitalized",
-      "description" : "Covid19 Ever Hospitalized"
+      "name" : "Ever Hospitalized",
+      "description" : "Has the individual been admitted to hospital at any point in time in the past?"
     },
     {
       "extension" : [{
@@ -1284,8 +1284,8 @@
       "reference" : {
         "reference" : "ValueSet/vs-presentation"
       },
-      "name" : "Presentation valueset",
-      "description" : "Valueset - presentation"
+      "name" : "Presentation",
+      "description" : "Determine if the COVID19 positive individual has any noticeable symptoms"
     },
     {
       "extension" : [{
@@ -1295,8 +1295,8 @@
       "reference" : {
         "reference" : "ValueSet/vs-covid19-specimen-type"
       },
-      "name" : "Covid19 Specimen Type",
-      "description" : "A list of Covid19 Specimen Type"
+      "name" : "Specimen Type",
+      "description" : "The type of specimen sample that was collected by the lab"
     },
     {
       "extension" : [{
@@ -1306,8 +1306,7 @@
       "reference" : {
         "reference" : "ValueSet/vs-yes-no"
       },
-      "name" : "Yes No Unknown",
-      "description" : "Yes No Unknown"
+      "name" : "Yes No Unknown"
     },
     {
       "extension" : [{
@@ -1328,8 +1327,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-long-covid-post-covid"
       },
-      "name" : "Covid19 Long Covid / Post-Covid",
-      "description" : "Covid19 Long Covid / Post-Covid"
+      "name" : "Long Covid / Post-Covid",
+      "description" : "Does the indiviual continue to suffer from COVID19 health problems that are new, returning or ongoing conditons?"
     },
     {
       "extension" : [{
@@ -1362,7 +1361,7 @@
         "reference" : "ValueSet/vs-vaccine-types"
       },
       "name" : "Vaccine Types",
-      "description" : "A list of Vaccine Types"
+      "description" : "A list of COVID19 manufacturers"
     },
     {
       "extension" : [{
@@ -1383,8 +1382,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-presenting-symptoms"
       },
-      "name" : "Covid19 Symptom",
-      "description" : "Covid19 Symptom"
+      "name" : "Presenting Symptoms",
+      "description" : "Existing symptoms which may help with diagnosis"
     },
     {
       "extension" : [{
@@ -1394,8 +1393,8 @@
       "reference" : {
         "reference" : "StructureDefinition/covid19-specimen"
       },
-      "name" : "Covid19 Specimen",
-      "description" : "Covid19 Specimen"
+      "name" : "Specimen",
+      "description" : "The test sample that was collected for the initiated lab order"
     }],
     "page" : {
       "extension" : [{
