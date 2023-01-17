@@ -12,7 +12,7 @@
   <title value="COVID19 Case Reporting"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2023-01-17T08:38:12+00:00"/>
+  <date value="2023-01-17T11:11:06+00:00"/>
   <publisher value="Jembi Health Systems"/>
   <contact>
     <telecom>
@@ -476,8 +476,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-vaccination"/>
       </reference>
-      <name value="Covid19 Vaccination"/>
-      <description value="Covid19 Vaccination"/>
+      <name value="Immunization Tracking"/>
+      <description value="Administer a suitable vaccine based on the most recent lab result"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -486,8 +486,8 @@
       <reference>
         <reference value="ValueSet/vs-treatment-dispensed-prescribed"/>
       </reference>
-      <name value="COVID Treatmens dispensed or prescribed"/>
-      <description value="COVID Treatmens dispensed or prescribed"/>
+      <name value="Treatment Dispensed or Prescribed"/>
+      <description value="A list of all possible drugs"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -497,7 +497,7 @@
         <reference value="ValueSet/vs-test-types"/>
       </reference>
       <name value="Test Types"/>
-      <description value="A list of Test Types"/>
+      <description value="A list of COVID19 test types"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -546,8 +546,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-encounter"/>
       </reference>
-      <name value="Covid19 Assessment Encounter"/>
-      <description value="Covid19 Assessment Encounter"/>
+      <name value="Encounter"/>
+      <description value="A record of the individual's visit at the organization"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -556,8 +556,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-death"/>
       </reference>
-      <name value="Covid19 Death"/>
-      <description value="Covid19 Death"/>
+      <name value="Death"/>
+      <description value="An event assoicated with the death of an individual who has been diagnosed with COVID19"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -566,8 +566,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-practitioner"/>
       </reference>
-      <name value="Covid19 Practitioner"/>
-      <description value="Covid19 Practitioner"/>
+      <name value="Practitioner"/>
+      <description value="The healthcare professional who has been assigned to a given lab task"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -586,8 +586,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-lab-task"/>
       </reference>
-      <name value="Covid19 Lab Task"/>
-      <description value="Covid19 Lab Task"/>
+      <name value="Lab Task"/>
+      <description value="Assists with tracking the state of the lab order and its completion status"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -596,8 +596,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-patient"/>
       </reference>
-      <name value="Covid19 Patient"/>
-      <description value="This Patient profile allows the exchange of patient information, including all the data associated with Covid19 patients"/>
+      <name value="Patient"/>
+      <description value="The individual receiving COVID19 services"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -606,8 +606,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-next-vaccination"/>
       </reference>
-      <name value="Covid19 date of next vaccination"/>
-      <description value="Covid19 date of next vaccination"/>
+      <name value="Date of next vaccination"/>
+      <description value="When must the individual return to the organization for the next scheduled vaccination?"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -616,8 +616,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-diagnosis"/>
       </reference>
-      <name value="Covid19 Diagnosis"/>
-      <description value="Covid19 Diagnosis"/>
+      <name value="Diagnosis"/>
+      <description value="Confirmation of the diagnosis"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -627,7 +627,7 @@
         <reference value="ValueSet/vs-AdmissionTypes"/>
       </reference>
       <name value="Admission Types"/>
-      <description value="A list of Admission Types"/>
+      <description value="A list of admission types"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -646,8 +646,8 @@
       <reference>
         <reference value="ValueSet/vs-source-of-info"/>
       </reference>
-      <name value="Source of information - codes"/>
-      <description value="Source of information - codes"/>
+      <name value="Source of Information"/>
+      <description value="Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -657,7 +657,7 @@
         <reference value="ValueSet/vs-lab-task-output"/>
       </reference>
       <name value="Lab Result Task Output"/>
-      <description value="Lab Result Task Output"/>
+      <description value="Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -676,8 +676,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-service-request-location"/>
       </reference>
-      <name value="Covid19 Service Request Location"/>
-      <description value="Covid19 Service Request Location"/>
+      <name value="Lab Order Request Location"/>
+      <description value="What is the location of the organization responsible for conducting the examination of the individual's sample?"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -726,8 +726,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-diagnostic-report"/>
       </reference>
-      <name value="Covid19 Diagnostic Report"/>
-      <description value="Covid19 Diagnostic Report"/>
+      <name value="Diagnostic Report"/>
+      <description value="A report as a result of the lab task being completed"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -766,8 +766,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-date-last-hospitalised"/>
       </reference>
-      <name value="Covid19 Date Last Hospitalised"/>
-      <description value="Covid19 Date Last Hospitalised"/>
+      <name value="Date Last Hospitalised"/>
+      <description value="When last was the individual admitted to hospital?"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -816,8 +816,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-assessment-vaccination"/>
       </reference>
-      <name value="Covid19 Vaccination info included as part of the Assessment"/>
-      <description value="Covid19 Vaccination info included as part of the Assessment"/>
+      <name value="Immunization Tracking"/>
+      <description value="Retrospectively capture COVID19 immunization data for vaccines administered at other organizations"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -837,7 +837,7 @@
         <reference value="CodeSystem/cs-lab-task-output"/>
       </reference>
       <name value="Lab Result Task Output"/>
-      <description value="Lab Result Task Output"/>
+      <description value="Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -846,8 +846,8 @@
       <reference>
         <reference value="ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"/>
       </reference>
-      <name value="Covid19 Reason for Assessment or Test not performed"/>
-      <description value="Covid19 Reason for Assessment or Test not performed"/>
+      <name value="Reason for Assessment or Test Not Performed"/>
+      <description value="A list of reasons associated with the service request for the lab order"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -886,8 +886,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-medication-request"/>
       </reference>
-      <name value="Covid19 Treatment dispensed or prescribed"/>
-      <description value="Covid19 Treatment dispensed or prescribed"/>
+      <name value="Treatment dispensed or prescribed"/>
+      <description value="To indicate whether Paxlovid has been issued to the individual"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -897,7 +897,7 @@
         <reference value="ValueSet/vs-cancellation-reason"/>
       </reference>
       <name value="Cancellation Reasons"/>
-      <description value="A list of Cancellation Reasons"/>
+      <description value="A list of reasons as a result of the lab task being cancelled"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -906,8 +906,8 @@
       <reference>
         <reference value="ValueSet/vs-conditions-comorbidity"/>
       </reference>
-      <name value="List of Conditions / Comorbidity"/>
-      <description value="List of Conditions / Comorbidity"/>
+      <name value="Conditions / Comorbidity"/>
+      <description value="List of conditions and comorbidities"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -926,8 +926,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-conditions-or-comorbidities-present"/>
       </reference>
-      <name value="Covid19 Conditions or Comorbidities Present"/>
-      <description value="Covid19 Conditions or Comorbidities Present"/>
+      <name value="Conditions or Comorbidities Present"/>
+      <description value="Does the individual have any known pre-existing conditions and/or comorbidities?"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -946,8 +946,8 @@
       <reference>
         <reference value="ValueSet/vs-covid19-test-result"/>
       </reference>
-      <name value="Covid19 Test Result"/>
-      <description value="Covid19 Test Result"/>
+      <name value="Test Result"/>
+      <description value="COVID19 diagnosis"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -956,8 +956,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-lab-order"/>
       </reference>
-      <name value="Covid19 Lab Order"/>
-      <description value="Covid19 Lab Order"/>
+      <name value="Lab Order"/>
+      <description value="A service request that initiates the need for the lab to collect the test sample"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -966,8 +966,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-vaccine-dose-ever-received"/>
       </reference>
-      <name value="Covid19 Vaccine Dose Received"/>
-      <description value="Covid19 Vaccine Dose Received"/>
+      <name value="Vaccine Dose Ever Received"/>
+      <description value="Has the individual received at least one shot of the vaccine at any point in time in the past?"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -986,8 +986,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-admission-location"/>
       </reference>
-      <name value="Covid19 Admission Location"/>
-      <description value="Covid19 Admission Location"/>
+      <name value="Admission Location"/>
+      <description value="What is the location of the organization where the patient is currently being admitted to for treatment?"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -996,8 +996,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-test-results"/>
       </reference>
-      <name value="Covid19 Lab Results"/>
-      <description value="Covid19 Lab Results"/>
+      <name value="Lab Results"/>
+      <description value="The result of the lab test which determines whether the patient is infected with COVID19 or not"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1006,8 +1006,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-recovered-or-symptoms-resolved"/>
       </reference>
-      <name value="Covid19 Recovered Or Symptoms Resolved"/>
-      <description value="Covid19 Recovered Or Symptoms Resolved"/>
+      <name value="Recovered Or Symptoms Resolved"/>
+      <description value="Has the individual fully recovered from symptoms associated with COVID19?"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1016,8 +1016,8 @@
       <reference>
         <reference value="CodeSystem/cs-source-of-info"/>
       </reference>
-      <name value="Source of information - codes"/>
-      <description value="Source of information - codes"/>
+      <name value="Source of Information"/>
+      <description value="Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1026,8 +1026,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-conditions-or-comorbidities"/>
       </reference>
-      <name value="Covid19 Conditions or comorbidity"/>
-      <description value="Covid19 Conditions or comorbidity"/>
+      <name value="Conditions or Comorbidity"/>
+      <description value="What pre-existing conditions and/or comorbidities exist for the individual?"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1036,8 +1036,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-organization"/>
       </reference>
-      <name value="Covid19 Organization"/>
-      <description value="Covid19 Organization for case report - this represents a health facility"/>
+      <name value="Organization"/>
+      <description value="Administering Organization"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1046,8 +1046,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-ever-hospitalised"/>
       </reference>
-      <name value="Covid19 Ever Hospitalized"/>
-      <description value="Covid19 Ever Hospitalized"/>
+      <name value="Ever Hospitalized"/>
+      <description value="Has the individual been admitted to hospital at any point in time in the past?"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1066,8 +1066,8 @@
       <reference>
         <reference value="ValueSet/vs-presentation"/>
       </reference>
-      <name value="Presentation valueset"/>
-      <description value="Valueset - presentation"/>
+      <name value="Presentation"/>
+      <description value="Determine if the COVID19 positive individual has any noticeable symptoms"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1076,8 +1076,8 @@
       <reference>
         <reference value="ValueSet/vs-covid19-specimen-type"/>
       </reference>
-      <name value="Covid19 Specimen Type"/>
-      <description value="A list of Covid19 Specimen Type"/>
+      <name value="Specimen Type"/>
+      <description value="The type of specimen sample that was collected by the lab"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1087,7 +1087,6 @@
         <reference value="ValueSet/vs-yes-no"/>
       </reference>
       <name value="Yes No Unknown"/>
-      <description value="Yes No Unknown"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1106,8 +1105,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-long-covid-post-covid"/>
       </reference>
-      <name value="Covid19 Long Covid / Post-Covid"/>
-      <description value="Covid19 Long Covid / Post-Covid"/>
+      <name value="Long Covid / Post-Covid"/>
+      <description value="Does the indiviual continue to suffer from COVID19 health problems that are new, returning or ongoing conditons?"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1137,7 +1136,7 @@
         <reference value="ValueSet/vs-vaccine-types"/>
       </reference>
       <name value="Vaccine Types"/>
-      <description value="A list of Vaccine Types"/>
+      <description value="A list of COVID19 manufacturers"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1156,8 +1155,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-presenting-symptoms"/>
       </reference>
-      <name value="Covid19 Symptom"/>
-      <description value="Covid19 Symptom"/>
+      <name value="Presenting Symptoms"/>
+      <description value="Existing symptoms which may help with diagnosis"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1166,8 +1165,8 @@
       <reference>
         <reference value="StructureDefinition/covid19-specimen"/>
       </reference>
-      <name value="Covid19 Specimen"/>
-      <description value="Covid19 Specimen"/>
+      <name value="Specimen"/>
+      <description value="The test sample that was collected for the initiated lab order"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
