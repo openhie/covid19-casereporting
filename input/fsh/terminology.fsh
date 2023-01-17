@@ -5,8 +5,8 @@ Alias: $RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 
 ValueSet: VSPresentation
 Id: vs-presentation
-Title: "Presentation valueset"
-Description:  "Valueset - presentation"
+Title: "Presentation"
+Description:  "Determine if the COVID19 positive individual has any noticeable symptoms"
 * ^experimental = false
 * $SCT#84387000 "Asymptomatic"
 * $SCT#264931009 "Symptomatic"
@@ -40,7 +40,7 @@ Description:  "A list of symptoms"
 ValueSet: VSAdmissionTypes
 Id: vs-AdmissionTypes
 Title: "Admission Types"
-Description: "A list of Admission Types"
+Description: "A list of admission types"
 * ^experimental = false
 * $SCT#225746001 "Ward"
 * $SCT#309904001 "ICU"
@@ -49,7 +49,7 @@ Description: "A list of Admission Types"
 ValueSet: VSYesNoUnknown
 Id: vs-yes-no
 Title: "Yes No Unknown"
-Description:  "Yes No Unknown"
+Description:  ""
 * ^experimental = false
 * $SCT#373066001 "Yes"
 * $SCT#373067005 "No"
@@ -57,8 +57,8 @@ Description:  "Yes No Unknown"
 
 ValueSet: VSConditionsComorbidity
 Id: vs-conditions-comorbidity
-Title: "List of Conditions / Comorbidity"
-Description:  "List of Conditions / Comorbidity"
+Title: "Conditions / Comorbidity"
+Description:  "List of conditions and comorbidities"
 * ^experimental = false
 * $SCT#49601007 "Cardiovascular disease e.g heart failure"
 * $SCT#13645005 "Chronic Lung Disease"
@@ -77,15 +77,15 @@ Description:  "List of Conditions / Comorbidity"
 
 ValueSet: VSTreatMentDispensedPrescribed
 Id: vs-treatment-dispensed-prescribed
-Title: "COVID Treatmens dispensed or prescribed"
-Description: "COVID Treatmens dispensed or prescribed"
+Title: "Treatment Dispensed or Prescribed"
+Description: "A list of all possible drugs"
 * ^experimental = false
 * $RXN#2599543 "Paxlovid"
 
 ValueSet: VSVaccineTypes
 Id: vs-vaccine-types
 Title: "Vaccine Types"
-Description: "A list of Vaccine Types"
+Description: "A list of COVID19 manufacturers"
 * ^experimental = false
 * $ICD11#XM4YL8 "AstraZeneca/Oxford vaccine"
 * $ICD11#XM6QV1 "Johnson and Johnson"
@@ -101,7 +101,7 @@ Description: "A list of Vaccine Types"
 ValueSet: VSTestTypes
 Id: vs-test-types
 Title: "Test Types"
-Description: "A list of Test Types"
+Description: "A list of COVID19 test types"
 * ^experimental = false
 * $LNC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"   
 * $LNC#94745-7 "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
@@ -109,7 +109,7 @@ Description: "A list of Test Types"
 ValueSet: VSCancellationReason //no binding currently because the Task resource is not profiled -usefull as a reference
 Id: vs-cancellation-reason
 Title: "Cancellation Reasons"
-Description: "A list of Cancellation Reasons"
+Description: "A list of reasons as a result of the lab task being cancelled"
 * ^experimental = false
 * $SCT#281264009 "Improperly ordered" //need to double check the code from with CDC
 * $SCT#281266006 "No sample collected"
@@ -117,8 +117,8 @@ Description: "A list of Cancellation Reasons"
 
 ValueSet: VSCovid19SpecimenType
 Id: vs-covid19-specimen-type
-Title: "Covid19 Specimen Type"
-Description: "A list of Covid19 Specimen Type"
+Title: "Specimen Type"
+Description: "The type of specimen sample that was collected by the lab"
 * ^experimental = false
 * $SCT#258500001 "Nasopharyngeal"
 * $SCT#461911000124106 "Oropharyngeal swab" //TODO: replaced with the correct code. MDS uses the wrong one: 461911000000000
@@ -126,8 +126,8 @@ Description: "A list of Covid19 Specimen Type"
 
 ValueSet: VSReasonForAssessmentOrTestNotPerformed
 Id: vs-covid19-reason-for-assessment-or-test-not-performed
-Title: "Covid19 Reason for Assessment or Test not performed"
-Description: "Covid19 Reason for Assessment or Test not performed"
+Title: "Reason for Assessment or Test Not Performed"
+Description: "A list of reasons associated with the service request for the lab order"
 * ^experimental = false
 //Reasons for assessment
 * $SCT#428792000 "Contact of a case"
@@ -153,8 +153,8 @@ Description: "Covid19 Reason for Assessment or Test not performed"
 
 ValueSet: VSTestResult
 Id: vs-covid19-test-result
-Title: "Covid19 Test Result"
-Description: "Covid19 Test Result"
+Title: "Test Result"
+Description: "COVID19 diagnosis"
 * ^experimental = false
 * $SCT#10828004 "Positive"
 * $SCT#260385009 "Negative"
@@ -162,8 +162,8 @@ Description: "Covid19 Test Result"
 
 CodeSystem: CSSourceOfInfo
 Id: cs-source-of-info
-Title: "Source of information - codes"
-Description: "Source of information - codes"
+Title: "Source of Information"
+Description: "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis"
 * ^experimental = false
 * ^caseSensitive = true
 * #PatientRecall "Patient Recall"
@@ -174,15 +174,15 @@ Description: "Source of information - codes"
 
 ValueSet: VSSourceOfInfo
 Id: vs-source-of-info
-Title: "Source of information - codes"
-Description: "Source of information - codes"
+Title: "Source of Information"
+Description: "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis"
 * ^experimental = false
 * include codes from system CSSourceOfInfo
 
 CodeSystem: CSLabTaskOutput
 Id: cs-lab-task-output
 Title: "Lab Result Task Output"
-Description: "Lab Result Task Output"
+Description: "Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"
 * ^experimental = false
 * ^caseSensitive = true
 * #Result "Covid19 Test Result"
@@ -190,6 +190,6 @@ Description: "Lab Result Task Output"
 ValueSet: VSLabTaskOutput
 Id: vs-lab-task-output
 Title: "Lab Result Task Output"
-Description: "Lab Result Task Output"
+Description: "Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"
 * ^experimental = false
 * include codes from system CSLabTaskOutput
