@@ -268,10 +268,10 @@ Usage: #example
 Title: "Covid19 Service Request Location example"
 Description: "Covid19 Service Request Location example"
 * name = "Covid19 Location"
-* address.country = "Cares country 1"
-* address.state = "Cares state 1"
-* address.district = "Cares district 1"
-* address.city = "Cares city 1"
+* address.country = "Example country 1"
+* address.state = "Example state 1"
+* address.district = "Example district 1"
+* address.city = "Example city 1"
 
 Instance: Covid19AdmissionLocationExample
 InstanceOf: Covid19AdmissionLocation
@@ -279,10 +279,10 @@ Usage: #example
 Title: "Covid19 Admission Location example"
 Description: "Covid19 Admission Location example"
 * name = "Covid19 Location"
-* address.country = "Cares country 1"
-* address.state = "Cares state 1"
-* address.district = "Cares district 1"
-* address.city = "Cares city 1"
+* address.country = "Example country 1"
+* address.state = "Example state 1"
+* address.district = "Example district 1"
+* address.city = "Example city 1"
 
 Instance: Covid19RecoveredOrSymptomsResolvedExample
 InstanceOf: Covid19RecoveredOrSymptomsResolved

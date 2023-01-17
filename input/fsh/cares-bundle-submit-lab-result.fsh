@@ -1,4 +1,4 @@
-Instance: CaresSubmitLabResultBundleExample
+Instance: LabResult
 InstanceOf: Bundle
 Usage: #example
 Title: "Cares Submit Lab Result Bundle Example"
