@@ -11,7 +11,7 @@
   "title" : "COVID19 Case Reporting",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2023-01-17T11:46:45+00:00",
+  "date" : "2023-01-17T12:57:40+00:00",
   "publisher" : "Jembi Health Systems",
   "contact" : [{
     "telecom" : [{
@@ -674,17 +674,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/CaresBundleExample"
-      },
-      "name" : "Example Bundle - CaresBundleExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Location"
       }],
       "reference" : {
@@ -795,6 +784,17 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/LabCancellation"
+      },
+      "name" : "Example Bundle - LabCancellation",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -802,17 +802,6 @@
       },
       "name" : "Admission Types",
       "description" : "A list of admission types"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/CaresSubmitLabCancellationBundleExample"
-      },
-      "name" : "Example Bundle - CaresSubmitLabCancellationBundleExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
     },
     {
       "extension" : [{
@@ -956,17 +945,6 @@
       },
       "name" : "Date Last Hospitalised",
       "description" : "When last was the individual admitted to hospital?"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/CaresSubmitLaborderBundleExample"
-      },
-      "name" : "Example Bundle - CaresSubmitLaborderBundleExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"
     },
     {
       "extension" : [{
@@ -1180,17 +1158,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/CaresSubmitLabResultBundleExample"
-      },
-      "name" : "Example Bundle - CaresSubmitLabResultBundleExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -1220,6 +1187,17 @@
       },
       "name" : "Recovered Or Symptoms Resolved",
       "description" : "Has the individual fully recovered from symptoms associated with COVID19?"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/LabRejection"
+      },
+      "name" : "Example Bundle - LabRejection",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
     },
     {
       "extension" : [{
@@ -1348,10 +1326,32 @@
         "valueString" : "Bundle"
       }],
       "reference" : {
-        "reference" : "Bundle/CaresSubmitLabRejectionBundleExample"
+        "reference" : "Bundle/EMR"
       },
-      "name" : "Example Bundle - CaresSubmitLabRejectionBundleExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
+      "name" : "Example Bundle - EMR",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/LabOrder"
+      },
+      "name" : "Example Bundle - LabOrder",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/LabResult"
+      },
+      "name" : "Example Bundle - LabResult",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"
     },
     {
       "extension" : [{

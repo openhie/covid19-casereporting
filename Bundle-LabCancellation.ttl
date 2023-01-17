@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/Bundle/LabCancellation> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "LabCancellation"]; # 
+  fhir:Bundle.type [ fhir:value "transaction"]; # 
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "Task/Covid19LabOrderCancellationExample" ];
+     fhir:Bundle.entry.resource <Task/Covid19LabOrderCancellationExample>;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ];
+       fhir:Bundle.entry.request.url [ fhir:value "Task/Covid19LabOrderCancellationExample" ]
+     ]
+  ] . # 
+
+<Task/Covid19LabOrderCancellationExample> a fhir:Task;
+  fhir:Resource.id [ fhir:value "Covid19LabOrderCancellationExample"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task";
+       fhir:index 0;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Task</b><a name=\"Covid19LabOrderCancellationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Task &quot;Covid19LabOrderCancellationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-task.html\">Lab Task</a></p></div><p><b>identifier</b>: id: ORDER12345</p><p><b>basedOn</b>: <a href=\"ServiceRequest-Covid19ServiceRequestExample.html\">ServiceRequest/Covid19ServiceRequestExample</a></p><p><b>status</b>: cancelled</p><p><b>statusReason</b>: Inappropriate bottle or container for sample <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#281264009)</span></p><p><b>intent</b>: order</p><p><b>executionPeriod</b>: ?? --&gt; 2022-07-30</p><p><b>lastModified</b>: 2022-07-30</p><p><b>requester</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p><p><b>owner</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p></div>"
+  ]; # 
+  fhir:Task.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number" ];
+     fhir:Identifier.value [ fhir:value "ORDER12345" ]
+  ]; # 
+  fhir:Task.basedOn [
+     fhir:index 0;
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/ServiceRequest/Covid19ServiceRequestExample>;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/Covid19ServiceRequestExample" ]
+  ]; # 
+  fhir:Task.status [ fhir:value "cancelled"]; # 
+  fhir:Task.statusReason [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:281264009;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "281264009" ]
+     ]
+  ]; # 
+  fhir:Task.intent [ fhir:value "order"]; # 
+  fhir:Task.executionPeriod [
+     fhir:Period.end [ fhir:value "2022-07-30"^^xsd:date ]
+  ]; # 
+  fhir:Task.lastModified [ fhir:value "2022-07-30"^^xsd:date]; # 
+  fhir:Task.requester [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
+     fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
+  ]; # 
+  fhir:Task.owner [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
+     fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/Bundle/LabCancellation.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
