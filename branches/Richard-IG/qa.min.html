@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = errors = 0, warn = 5, info = 0, 0 -->
+<!-- broken links = errors = 0, warn = 4, info = 0, 0 -->
 <head>
   <title>Covid19CaseReporting : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for Covid19CaseReporting</h1>
- <p>Generated Tue Jan 17 11:01:54 UTC 2023, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0 (canonical = <a href="http://openhie.org/fhir/covid19-casereporting">http://openhie.org/fhir/covid19-casereporting</a> (<a href="http://openhie.org/fhir/covid19-casereporting/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Tue Jan 17 11:41:56 UTC 2023, FHIR version 4.0.1 for openhie.fhir.covid#0.1.0 (canonical = <a href="http://openhie.org/fhir/covid19-casereporting">http://openhie.org/fhir/covid19-casereporting</a> (<a href="http://openhie.org/fhir/covid19-casereporting/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.2.27</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = openhie.fhir.covid, Canonical = http://openhie.org/fhir/covid19-casereporting</td></tr>
@@ -57,7 +57,7 @@
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://openhie.org/fhir/covid19-casereporting (Problem #1 with package-list.json at http://openhie.org/fhir/covid19-casereporting: openhie.org)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 0, warn = 5, info = 0, broken links = 0</td></tr>
+ <tr><td>Summary:</td><td> errors = 0, warn = 4, info = 0, broken links = 0</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -65,9 +65,6 @@
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>4</b></td><td><b>0</b></td>
-   </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#_github_workspace_fsh-generated_resources_ValueSet-vs-yes-no"><b>/github/workspace/fsh-generated/resources/ValueSet-vs-yes-no</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
 </table>
 <hr/>
@@ -88,23 +85,10 @@
      <td><b>4</b></td><td><b>warning</b></td><td title=""><b>The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide</b></td>
    </tr>
 </table>
-<hr/>
-<a name="_github_workspace_fsh-generated_resources_ValueSet-vs-yes-no"> </a>
-<h2><a href="ValueSet-vs-yes-no.html">fsh-generated/resources/ValueSet-vs-yes-no.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
-   </tr>
-   <tr style="background-color: #ffebcc">
-     <td><b>ValueSet (l1/c1292)</b></td><td><b>warning</b></td><td title="VALUESET_SHAREABLE_MISSING"><b>The ShareableValueSet profile says that the description element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
-   </tr>
-</table>
 <a name="suppressed"> </a>
 <p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
 <p><b>Not conerned about these warnings becuase we did not construct resources using xml becuase Sushi was used to generate the JSON FHIR resource examples</b></p><ul>
- <li>%Unable to find ImplementationGuide.definition.resource.description for the resource% <span style="color: navy">(31 uses)<span></li>
+ <li>%Unable to find ImplementationGuide.definition.resource.description for the resource% <span style="color: navy">(30 uses)<span></li>
 </ul>
 <p><b>This is a known issue that is being addressed: https://chat.fhir.org/#narrow/stream/179166-implementers/topic/IG</b></p><ul>
  <li>Code System URI 'http://icd.who.int/icd11/mms' is unknown so the code cannot be validated <span style="color: navy">(3068 uses)<span></li>
@@ -114,13 +98,5 @@
 </ul>
 <a name="sorted"> </a>
 <p><b>Errors sorted by type</b></p>
-<hr/>
-<a name="VALUESET_SHAREABLE_MISSING"> </a>
-<h2>VALUESET_SHAREABLE_MISSING</h2>
- <table class="grid">
-   <tr style="background-color: #fff4ee">
-     <td><a href="ValueSet-vs-yes-no.html">fsh-generated/resources/ValueSet-vs-yes-no.json</a></td><td><b>The ShareableValueSet profile says that the description element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile</b></td>
-   </tr>
-</table>
 </body>
 </html>
