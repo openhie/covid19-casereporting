@@ -4,10 +4,10 @@ Usage: #example
 Title: "Covid19 Case Report - Full Bundle Example"
 Description: "Example of a clinical bundle representing a case report"
 * type = #transaction
-* entry[+].fullUrl = "Patient/Patient"
-* entry[=].resource = Patient
+* entry[+].fullUrl = "Patient/Covid19PatientExample"
+* entry[=].resource = Covid19PatientExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Patient/Patient"
+* entry[=].request.url = "Patient/Covid19PatientExample"
 
 * entry[+].fullUrl = "Encounter/Covid19AssessmentEncounterExample"
 * entry[=].resource = Covid19AssessmentEncounterExample
