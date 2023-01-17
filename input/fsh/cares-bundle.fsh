@@ -1,13 +1,13 @@
-Instance: CaresBundleExample
+Instance: EMR
 InstanceOf: Bundle
 Usage: #example
 Title: "Covid19 Case Report - Full Bundle Example"
 Description: "Example of a clinical bundle representing a case report"
 * type = #transaction
-* entry[+].fullUrl = "Patient/Covid19PatientExample"
-* entry[=].resource = Covid19PatientExample
+* entry[+].fullUrl = "Patient/Patient"
+* entry[=].resource = Patient
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Patient/Covid19PatientExample"
+* entry[=].request.url = "Patient/Patient"
 
 * entry[+].fullUrl = "Encounter/Covid19AssessmentEncounterExample"
 * entry[=].resource = Covid19AssessmentEncounterExample

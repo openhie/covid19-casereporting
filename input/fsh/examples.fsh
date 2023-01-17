@@ -1,4 +1,4 @@
-Instance: Covid19OrganizationExample
+Instance: AdministeringOrganization
 InstanceOf: Covid19Organization
 Usage: #example
 Title: "Covid19 Organization example"
@@ -15,7 +15,7 @@ Description: "Covid19 Organization example"
 * address[0].line[0] = "Some additional address info"
 * address[0].postalCode = "Some postal code"
 
-Instance: Covid19PatientExample
+Instance: Patient
 InstanceOf: Covid19Patient
 Usage: #example
 Title: "Covid19 Patient example"
@@ -45,7 +45,7 @@ Description: "Covid19 Patient example"
 * contact[0].name.family = "Doe"
 * contact[0].telecom.system = #phone
 * contact[0].telecom.value = "+27829999999"
-* managingOrganization = Reference(Covid19OrganizationExample)
+* managingOrganization = Reference(AdministeringOrganization)
 
 Instance: Covid19AssessmentEncounterExample
 InstanceOf: Covid19AssessmentEncounter    
@@ -58,7 +58,7 @@ Description: "Covid19 Assessment Encounter example"
 * status = #finished
 * class.code = #SS
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* subject = Reference(Covid19PatientExample)
+* subject = Reference(Patient)
 * period.start = "2022-07-28"
 * period.end  = "2022-08-15"
 //* reasonCode = $SCT#397933008
@@ -72,9 +72,9 @@ Title: "Covid19 Vaccine Dose Received example"
 Description: "Covid19 Vaccine Dose Received example"
 * status = #final
 * code = $SCT#373066001
-* subject = Reference(Covid19PatientExample) 
+* subject = Reference(Patient) 
 * encounter = Reference(Covid19AssessmentEncounterExample)
-* performer = Reference(Covid19OrganizationExample)
+* performer = Reference(AdministeringOrganization)
 
 Instance: Covid19PresentingSymptomsExample
 InstanceOf: Covid19PresentingSymptoms
@@ -82,12 +82,12 @@ Usage: #example
 Title: "Covid19 Symptom example"
 Description: "Covid19 Symptom example"
 * status = #final
-* subject = Reference(Covid19PatientExample) 
+* subject = Reference(Patient) 
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * code = $SCT#21522001 
 * effectiveDateTime = "2022-07-28"
-* performer = Reference(Covid19OrganizationExample)
-* note.authorReference = Reference(Covid19OrganizationExample)
+* performer = Reference(AdministeringOrganization)
+* note.authorReference = Reference(AdministeringOrganization)
 * note.text = "Other symptoms here"
 * note.time = "2015-02-07T13:28:17-05:00"
 
@@ -98,9 +98,9 @@ Title: "Covid19 Conditions or comorbidity example"
 Description: "Covid19 Conditions or comorbidity example"
 * extension[extCovid19ConditionsOrComorbiditiesPresent].valueCodeableConcept = $SCT#373066001
 * code = $SCT#49601007
-* subject = Reference(Covid19PatientExample) 
+* subject = Reference(Patient) 
 * encounter = Reference(Covid19AssessmentEncounterExample) 
-* note.authorReference = Reference(Covid19OrganizationExample)
+* note.authorReference = Reference(AdministeringOrganization)
 * note.text = "Other conditionss or comorbidities here"
 * note.time = "2015-02-07T13:28:17-05:00"
   
@@ -111,12 +111,12 @@ Title: "Covid19 Diagnosis Example"
 Description: "Covid19 Diagnosis Example"
 * verificationStatus = #confirmed
 * verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
-* subject = Reference(Covid19PatientExample)
+* subject = Reference(Patient)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * onsetDateTime = "2022-07-28"
 * recordedDate = "2022-07-28"
 * evidence.code = $SCT#84387000
-* note.authorReference = Reference(Covid19OrganizationExample)
+* note.authorReference = Reference(AdministeringOrganization)
 * note.text = "additional notes here"
 * note.time = "2015-02-07T13:28:17-05:00"
 
@@ -127,10 +127,10 @@ Title: "Covid19 Treatment dispensed or prescribed example"
 Description: "Covid19 Treatment dispensed or prescribed example"
 * status = #active
 * intent = #order
-* subject = Reference(Covid19PatientExample)
+* subject = Reference(Patient)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * medicationCodeableConcept = $RXN#2599543
-* note.authorReference = Reference(Covid19OrganizationExample)
+* note.authorReference = Reference(AdministeringOrganization)
 * note.text = "additional notes here"
 * note.time = "2015-02-07T13:28:17-05:00"
 
@@ -141,7 +141,7 @@ Title: "Covid19 Vaccine Type Administered example"
 Description: "Covid19 Vaccine Type Administered example"
 * status = #completed
 * vaccineCode = $ICD11#XM8NQ0
-* patient = Reference(Covid19PatientExample)
+* patient = Reference(Patient)
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * occurrenceDateTime = "2022-07-28"
 * reportOrigin.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"
@@ -150,7 +150,7 @@ Description: "Covid19 Vaccine Type Administered example"
 * expirationDate = "2022-12-28"
 * protocolApplied.series = "Primary"
 * protocolApplied.doseNumberPositiveInt = 1 
-* note.authorReference = Reference(Covid19OrganizationExample)
+* note.authorReference = Reference(AdministeringOrganization)
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
 
@@ -164,7 +164,7 @@ Description: "Covid19 Lab Order example"
 * status = #completed
 * intent = #order
 * code = $LNC#94558-4
-* subject = Reference(Covid19PatientExample)
+* subject = Reference(Patient)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * occurrenceDateTime = "2012-01-05"
 * requester = Reference(PractitionerExample)
@@ -172,7 +172,7 @@ Description: "Covid19 Lab Order example"
 * doNotPerform = false
 * reasonCode = $SCT#397933008
 * specimen = Reference(Covid19SpecimenExample)
-* note.authorReference = Reference(Covid19OrganizationExample)
+* note.authorReference = Reference(AdministeringOrganization)
 * note.text = "additional notes here"
 * note.time = "2015-02-07T13:28:17-05:00"
 
@@ -185,8 +185,8 @@ Description: "Covid19 Specimen example"
 * identifier.system = "http://covid19laborder.org/specimen"
 * collection.collectedDateTime = "2022-07-28"
 * type = $SCT#258500001
-* subject = Reference(Covid19PatientExample)
-* note.authorReference = Reference(Covid19OrganizationExample)
+* subject = Reference(Patient)
+* note.authorReference = Reference(AdministeringOrganization)
 * note.text = "additional notes here"
 * note.time = "2015-02-07T13:28:17-05:00"
 
@@ -199,10 +199,10 @@ Description: "Covid19 Specimen example"
 * identifier.system = "http://covid19laborder.org/specimen"
 * collection.collectedDateTime = "2022-07-28"
 * type = $SCT#258500001  
-* subject = Reference(Covid19PatientExample)
+* subject = Reference(Patient)
 * processing.timeDateTime = "2022-07-28"
 * receivedTime = "2022-07-28T13:28:17-05:00" 
-* note.authorReference = Reference(Covid19OrganizationExample)
+* note.authorReference = Reference(AdministeringOrganization)
 * note.text = "additional notes here"
 * note.time = "2015-02-07T13:28:17-05:00" //Covdi19SpecimenNoteDate
 
@@ -214,7 +214,7 @@ Description: "Covid19 Lab Results Diagnostic Report example"
 * basedOn = Reference(Covid19ServiceRequestExample)
 * status = #final
 * code = $LNC#94558-4 
-* subject = Reference(Covid19PatientExample) 
+* subject = Reference(Patient) 
 * performer = Reference(PractitionerExample)
 * result = Reference(Covid19TestResultExample)
 * conclusion = "Some conclusion text"
@@ -226,10 +226,10 @@ Title: "Covid19 Lab Results example"
 Description: "Covid19 Lab Results example"
 * status = #final
 * code = $LNC#94558-4
-* subject = Reference(Covid19PatientExample)
+* subject = Reference(Patient)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * effectiveDateTime = "2022-07-28"
-* performer = Reference(Covid19OrganizationExample)
+* performer = Reference(AdministeringOrganization)
 * valueCodeableConcept = $SCT#10828004
 
 Instance: Covid19VaccinationExample
@@ -239,7 +239,7 @@ Title: "Covid19 Vaccination example"
 Description: "Covid19 Vaccination example"
 * status = #completed
 * vaccineCode = $ICD11#XM4YL8
-* patient = Reference(Covid19PatientExample)
+* patient = Reference(Patient)
 * encounter = Reference(Covid19AssessmentEncounterExample) 
 * occurrenceDateTime = "2022-07-28"
 * reportOrigin.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"
@@ -248,7 +248,7 @@ Description: "Covid19 Vaccination example"
 * expirationDate = "2022-12-28"
 * protocolApplied.series = "Booster"
 * protocolApplied.doseNumberPositiveInt = 1 
-* note.authorReference = Reference(Covid19OrganizationExample)
+* note.authorReference = Reference(AdministeringOrganization)
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
 
@@ -268,10 +268,10 @@ Usage: #example
 Title: "Covid19 Service Request Location example"
 Description: "Covid19 Service Request Location example"
 * name = "Covid19 Location"
-* address.country = "Cares country 1"
-* address.state = "Cares state 1"
-* address.district = "Cares district 1"
-* address.city = "Cares city 1"
+* address.country = "Example country 1"
+* address.state = "Example state 1"
+* address.district = "Example district 1"
+* address.city = "Example city 1"
 
 Instance: Covid19AdmissionLocationExample
 InstanceOf: Covid19AdmissionLocation
@@ -279,10 +279,10 @@ Usage: #example
 Title: "Covid19 Admission Location example"
 Description: "Covid19 Admission Location example"
 * name = "Covid19 Location"
-* address.country = "Cares country 1"
-* address.state = "Cares state 1"
-* address.district = "Cares district 1"
-* address.city = "Cares city 1"
+* address.country = "Example country 1"
+* address.state = "Example state 1"
+* address.district = "Example district 1"
+* address.city = "Example city 1"
 
 Instance: Covid19RecoveredOrSymptomsResolvedExample
 InstanceOf: Covid19RecoveredOrSymptomsResolved
@@ -291,11 +291,11 @@ Title: "Covid19 Recovered Or Symptoms Resolved"
 Description: "Covid19 Recovered Or Symptoms Resolved"
 * status = #final
 * code = $SCT#370996005
-* subject = Reference(Covid19PatientExample)
+* subject = Reference(Patient)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * effectiveDateTime =  "2022-11-09"
-* performer = Reference(Covid19OrganizationExample)
-* note.authorReference = Reference(Covid19OrganizationExample)
+* performer = Reference(AdministeringOrganization)
+* note.authorReference = Reference(AdministeringOrganization)
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
 
@@ -306,11 +306,11 @@ Title: "Covid19 Death"
 Description: "Covid19 Death"
 * status = #final
 * code = $SCT#419099009
-* subject = Reference(Covid19PatientExample)
+* subject = Reference(Patient)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * effectiveDateTime =  "2022-11-09"
-* performer = Reference(Covid19OrganizationExample)
-* note.authorReference = Reference(Covid19OrganizationExample)
+* performer = Reference(AdministeringOrganization)
+* note.authorReference = Reference(AdministeringOrganization)
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
 
@@ -321,11 +321,11 @@ Title: "Covid19 Long Covid / Post-Covid"
 Description: "Covid19 Long Covid / Post-Covid"
 * status = #final
 * code = $SCT#1119303003
-* subject = Reference(Covid19PatientExample)
+* subject = Reference(Patient)
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * effectiveDateTime =  "2022-11-09"
-* performer = Reference(Covid19OrganizationExample)
-* note.authorReference = Reference(Covid19OrganizationExample)
+* performer = Reference(AdministeringOrganization)
+* note.authorReference = Reference(AdministeringOrganization)
 * note.text = "Some other text..."
 * note.time = "2015-02-07T13:28:17-05:00"
 
@@ -342,8 +342,8 @@ Description: "Covid19 Lab Order Cancellation Task example"
 * intent = #order
 * executionPeriod.end = "2022-07-30"
 * lastModified = "2022-07-30"
-* requester = Reference(Covid19OrganizationExample)
-* owner = Reference(Covid19OrganizationExample)
+* requester = Reference(AdministeringOrganization)
+* owner = Reference(AdministeringOrganization)
 
 Instance: Covid19LabOrderCancellationExample
 InstanceOf: Covid19LabTask
@@ -358,8 +358,8 @@ Description: "Covid19 Lab Order Cancellation Task example"
 * intent = #order
 * executionPeriod.end = "2022-07-30"
 * lastModified = "2022-07-30"
-* requester = Reference(Covid19OrganizationExample)
-* owner = Reference(Covid19OrganizationExample)
+* requester = Reference(AdministeringOrganization)
+* owner = Reference(AdministeringOrganization)
 
 Instance: LabResultTaskExample
 InstanceOf: Covid19LabTask
@@ -373,8 +373,8 @@ Description: "Lab Result Task example"
 * intent = #order
 * executionPeriod.end = "2022-07-30"
 * lastModified = "2022-07-30"
-* requester = Reference(Covid19OrganizationExample)
-* owner = Reference(Covid19OrganizationExample)
+* requester = Reference(AdministeringOrganization)
+* owner = Reference(AdministeringOrganization)
 * output.type.coding.system = "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output"
 * output.type = #Result 
 * output.valueReference = Reference(Covid19LabResultsDiagnosticReportExample)
@@ -391,5 +391,5 @@ Description: "Lab Order example"
 * intent = #order
 * executionPeriod.start = "2022-07-28"
 * lastModified = "2022-07-28"
-* requester = Reference(Covid19OrganizationExample)
-* owner = Reference(Covid19OrganizationExample)
+* requester = Reference(AdministeringOrganization)
+* owner = Reference(AdministeringOrganization)
