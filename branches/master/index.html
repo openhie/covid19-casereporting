@@ -213,12 +213,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </p>
 
   <p>
-    This is a content specific FHIR IG that has been derived from the <a href="https://www.notion.so/gicsandbox/09ee19ee4fd34649a8cc07e1c171a84e?v=85d824b3ef9943ba92cb4204f6532ccf" target="_blank">COVID19 Minimum Dataset</a>.
+    This is a content specific implementation guide that has been derived from the <a href="https://www.notion.so/gicsandbox/09ee19ee4fd34649a8cc07e1c171a84e?v=85d824b3ef9943ba92cb4204f6532ccf" target="_blank">COVID19 Minimum Dataset</a>.
   </p>
 
   <a name="2"/><h3>Summary</h3> <a name="summary">  </a>
   <p>
-    The <a href="artifacts.html">artifacts page</a> provides examples of all the FHIR resources that been built into this specification. Moreover, the following key example bundles exist.
+    The <a href="artifacts.html">artifacts page</a> provides examples of all the FHIR resources that have been built into this specification. Moreover, the following key example bundles exist.
   </p>
 
   <a href="emr-bundle.html"><p style="display: block;   font-family: verdana;  line-height: 1.2em;  font-size: 1.2em;;  margin: 0 0 3px 0;  margin-top: 10px;    color: #337AB7;">EMR</p></a>
@@ -245,8 +245,37 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <p>The <a href="Bundle-LabRejection.html">lab rejection message bundle</a> contains the FHIR resources neccessary to support the rejection of an existing lab order request.</p>
 
   <a name="3"/><h3>Technical</h3> <a name="technical">  </a>
+  <p style="display: block;   font-family: verdana;  line-height: 1.2em;  font-size: 1.2em;;  margin: 0 0 3px 0;  margin-top: 10px;    color: #337AB7;">Background</p>
+
   <p>
-  Add content...
+    This implementation guide was developed as the messaging standards specification for one of the Data Integration Strategy &amp; Implementation (DISI) Platform reference solutions. 
+    DISI proposes to create a standards-based architecture that would allow multiple countries to adopt a similar framework for generating reports that they require. Currently, there are two DISI Reference Implementations for data centralization and reporting, one for <a href="https://jembi.gitbook.io/disi-on-platform/" target="_blank">HIV</a> and another for <a href="https://jembi.gitbook.io/cares-on-platform/" target="_blank">COVID19</a>.
+    <br/>
+    <br/>
+    The DISI acrhitecture brings forth a <a href="https://jembi.gitbook.io/jembi-platform/packages" target="_blank">set of components</a> that are common among HIV and COVID19. The DISI architecture can be seen below.
+  </p>
+
+  <figure>
+    <img src="disi_architecture.png" alt="DISI Platform Architecture"/>
+    <figcaption>DISI Platform Architecture</figcaption>
+  </figure>
+
+  <p style="display: block;   font-family: verdana;  line-height: 1.2em;  font-size: 1.2em;;  margin: 0 0 3px 0;  margin-top: 10px;    color: #337AB7;">Messaging</p>
+
+  <p>
+    Using an application called <a href="https://www.postman.com/" target="_blank">Postman</a>, you will be able to submit requests to the DISI Platform for processing &amp; reporting.
+    <br/>
+    <br/>
+    There are two Postman Collections namely: 
+  </p>
+
+  <ol>
+    <li>COVID19 Postman Collection for the EMR</li>
+    <li>COVID19 Lab Integration Postman Collection</li>
+  </ol>
+
+  <p>
+    Please see our <a href="https://jembi.gitbook.io/cares-on-platform/postman-collections" target="_blank">Postman Collections for COVID19</a> as well as the descriptions for each of the message bundles that exist in each collection. 
   </p>
 
   <a name="4"/><h3>Intellectual Property Considerations</h3>  <a name="ip">  </a>
@@ -295,7 +324,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 18, 2023 09:08+0000">2023-01-18</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 18, 2023 12:04+0000">2023-01-18</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
