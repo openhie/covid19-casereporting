@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.title [ fhir:value "COVID19 Case Reporting"]; # 
   fhir:ImplementationGuide.status [ fhir:value "draft"]; # 
   fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean]; # 
-  fhir:ImplementationGuide.date [ fhir:value "2023-01-17T16:11:06+00:00"^^xsd:dateTime]; # 
+  fhir:ImplementationGuide.date [ fhir:value "2023-01-18T08:56:45+00:00"^^xsd:dateTime]; # 
   fhir:ImplementationGuide.publisher [ fhir:value "Jembi Health Systems"]; # 
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -1726,13 +1726,63 @@
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "emr-bundle.html" ]
+         ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "emr-bundle.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "EMR Bundle" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "lab-order-bundle.html" ]
+         ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "lab-order-bundle.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Lab Order Bundle" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "lab-result-bundle.html" ]
+         ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "lab-result-bundle.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Lab Result Bundle" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "lab-cancellation-bundle.html" ]
+         ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "lab-cancellation-bundle.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Lab Cancellation Bundle" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "lab-rejection-bundle.html" ]
+         ];
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "lab-rejection-bundle.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Lab Rejection Bundle" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
            fhir:Extension.valueUrl [ fhir:value "vaccination_status.html" ]
          ];
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "vaccination_status.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "COVID19 Vaccination Statuses" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
        ], [
-         fhir:index 2;
+         fhir:index 7;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
