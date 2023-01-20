@@ -3,17 +3,17 @@
   "id" : "openhie.fhir.covid",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Covid19CaseReporting</h2><p>The official URL for this implementation guide is: </p><pre>http://openhie.org/fhir/covid19-casereporting/ImplementationGuide/openhie.fhir.covid</pre><div><p>COVID19 Case Reporting</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Covid19IG</h2><p>The official URL for this implementation guide is: </p><pre>http://openhie.org/fhir/covid19-casereporting</pre><div><p>Covid19 IG exercises many of the fields in a SUSHI configuration.</p>\n</div></div>"
   },
-  "url" : "http://openhie.org/fhir/covid19-casereporting/ImplementationGuide/openhie.fhir.covid",
-  "version" : "0.1.0",
-  "name" : "Covid19CaseReporting",
-  "title" : "COVID19 Case Reporting",
-  "status" : "draft",
-  "experimental" : false,
-  "date" : "2023-01-20T12:42:46+00:00",
+  "url" : "http://openhie.org/fhir/covid19-casereporting",
+  "version" : "0.2.0",
+  "name" : "Covid19IG",
+  "title" : "HL7 FHIR Implementation Guide: Covid IG Release 1 - US Realm | STU1",
+  "status" : "active",
+  "date" : "2022-12-01",
   "publisher" : "Jembi Health Systems",
   "contact" : [{
+    "name" : "Jembi Health Systems",
     "telecom" : [{
       "system" : "url",
       "value" : "https://www.jembi.org"
@@ -22,12 +22,21 @@
       "system" : "email",
       "value" : "info@jembi.org"
     }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
   }],
-  "description" : "COVID19 Case Reporting",
+  "description" : "Covid19 IG exercises many of the fields in a SUSHI configuration.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-      "code" : "001"
+      "code" : "001",
+      "display" : "World"
     }]
   }],
   "packageId" : "openhie.fhir.covid",
@@ -62,29 +71,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "CI Build"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-binary"
-      },
-      {
-        "url" : "value",
-        "valueString" : "input\\cql"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-liquid"
-      },
-      {
-        "url" : "value",
-        "valueString" : "templates\\liquid"
+        "valueString" : "STU1"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -172,7 +159,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "http://openhie.org/fhir/covid19-casereporting/history.html"
+        "valueString" : "history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -348,29 +335,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "CI Build"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-binary"
-      },
-      {
-        "url" : "value",
-        "valueString" : "input\\cql"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-liquid"
-      },
-      {
-        "url" : "value",
-        "valueString" : "templates\\liquid"
+        "valueString" : "STU1"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -458,7 +423,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "http://openhie.org/fhir/covid19-casereporting/history.html"
+        "valueString" : "history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -619,541 +584,14 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Organization"
-      }],
-      "reference" : {
-        "reference" : "Organization/Covid19OrganizationExample"
-      },
-      "name" : "Example Organization - Covid19OrganizationExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-assessment-vaccination"
-      },
-      "name" : "Immunization Tracking",
-      "description" : "Retrospectively capture COVID19 immunization data for vaccines administered at other organizations"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-ever-hospitalised"
-      },
-      "name" : "Ever Hospitalized",
-      "description" : "Has the individual been admitted to hospital at any point in time in the past?"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-conditions-or-comorbidities"
-      },
-      "name" : "Conditions or Comorbidity",
-      "description" : "What pre-existing conditions and/or comorbidities exist for the individual?"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-lab-order"
-      },
-      "name" : "Lab Order",
-      "description" : "A service request that initiates the need for the lab to collect the test sample"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/Covid19VaccineDoseEverReceivedExample"
-      },
-      "name" : "Example Observation - Covid19VaccineDoseEverReceivedExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Task"
-      }],
-      "reference" : {
-        "reference" : "Task/Covid19LabOrderCancellationExample"
-      },
-      "name" : "Example Task - Covid19LabOrderCancellationExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-long-covid-post-covid"
-      },
-      "name" : "Long Covid / Post-Covid",
-      "description" : "Does the indiviual continue to suffer from COVID19 health problems that are new, returning or ongoing conditons?"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ServiceRequest"
-      }],
-      "reference" : {
-        "reference" : "ServiceRequest/Covid19ServiceRequestExample"
-      },
-      "name" : "Example ServiceRequest - Covid19ServiceRequestExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-treatment-dispensed-prescribed"
-      },
-      "name" : "Treatment Dispensed or Prescribed",
-      "description" : "A list of all possible drugs"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-medication-request"
-      },
-      "name" : "Treatment dispensed or prescribed",
-      "description" : "To indicate whether Paxlovid has been issued to the individual"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Practitioner"
-      }],
-      "reference" : {
-        "reference" : "Practitioner/PractitionerExample"
-      },
-      "name" : "Example Practitioner - PractitionerExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Location"
-      }],
-      "reference" : {
-        "reference" : "Location/Covid19ServiceRequestLocationExample"
-      },
-      "name" : "Example Location - Covid19ServiceRequestLocationExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-test-types"
-      },
-      "name" : "Test Types",
-      "description" : "A list of COVID19 test types"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
-      }],
-      "reference" : {
-        "reference" : "Specimen/Covid19SpecimenExample"
-      },
-      "name" : "Example Specimen - Covid19SpecimenExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
         "reference" : "StructureDefinition/covid19-admission-location"
       },
       "name" : "Admission Location",
-      "description" : "What is the location of the organization where the patient is currently being admitted to for treatment?"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/LabOrder"
-      },
-      "name" : "Example Bundle - LabOrder",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/Covid19LongCovidPostCovidExample"
-      },
-      "name" : "Example Observation - Covid19LongCovidPostCovidExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-test-results"
-      },
-      "name" : "Lab Results",
-      "description" : "The result of the lab test which determines whether the patient is infected with COVID19 or not"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Patient"
-      }],
-      "reference" : {
-        "reference" : "Patient/Covid19PatientExample"
-      },
-      "name" : "Example Patient - Covid19PatientExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"
-      },
-      "name" : "Reason for Assessment or Test Not Performed",
-      "description" : "A list of reasons associated with the service request for the lab order"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-conditions-comorbidity"
-      },
-      "name" : "Conditions / Comorbidity",
-      "description" : "List of conditions and comorbidities"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/LabCancellation"
-      },
-      "name" : "Example Bundle - LabCancellation",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-recovered-or-symptoms-resolved"
-      },
-      "name" : "Recovered Or Symptoms Resolved",
-      "description" : "Has the individual fully recovered from symptoms associated with COVID19?"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "MedicationRequest"
-      }],
-      "reference" : {
-        "reference" : "MedicationRequest/Covid19MedicationRequestExample"
-      },
-      "name" : "Example MedicationRequest - Covid19MedicationRequestExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Immunization"
-      }],
-      "reference" : {
-        "reference" : "Immunization/Covid19VaccinationExample"
-      },
-      "name" : "Example Immunization - Covid19VaccinationExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-AdmissionTypes"
-      },
-      "name" : "Admission Types",
-      "description" : "A list of admission types"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/cs-lab-task-output"
-      },
-      "name" : "Lab Result Task Output",
-      "description" : "Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "DiagnosticReport"
-      }],
-      "reference" : {
-        "reference" : "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
-      },
-      "name" : "Example DiagnosticReport - Covid19LabResultsDiagnosticReportExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-conditions-or-comorbidities-present"
-      },
-      "name" : "Conditions or Comorbidities Present",
-      "description" : "Does the individual have any known pre-existing conditions and/or comorbidities?"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-presentation"
-      },
-      "name" : "Presentation",
-      "description" : "Determine if the COVID19 positive individual has any noticeable symptoms"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Immunization"
-      }],
-      "reference" : {
-        "reference" : "Immunization/Covid19AssessmentVaccinationExample"
-      },
-      "name" : "Example Immunization - Covid19AssessmentVaccinationExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/Covid19TestResultExample"
-      },
-      "name" : "Example Observation - Covid19TestResultExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Task"
-      }],
-      "reference" : {
-        "reference" : "Task/Covid19LabOrderRejectionExample"
-      },
-      "name" : "Example Task - Covid19LabOrderRejectionExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/cs-source-of-info"
-      },
-      "name" : "Source of Information",
-      "description" : "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-yes-no"
-      },
-      "name" : "Yes No Unknown",
-      "description" : "A list of options used to provide an answer"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/EMR"
-      },
-      "name" : "Example Bundle - EMR",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-covid19-specimen-type"
-      },
-      "name" : "Specimen Type",
-      "description" : "The type of specimen sample that was collected by the lab"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Task"
-      }],
-      "reference" : {
-        "reference" : "Task/LabResultTaskExample"
-      },
-      "name" : "Example Task - LabResultTaskExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-organization"
-      },
-      "name" : "Organization",
-      "description" : "Administering Organization"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-specimen"
-      },
-      "name" : "Specimen",
-      "description" : "The test sample that was collected for the initiated lab order"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-service-request-location"
-      },
-      "name" : "Lab Order Request Location",
-      "description" : "What is the location of the organization responsible for conducting the examination of the individual's sample?"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-practitioner"
-      },
-      "name" : "Practitioner",
-      "description" : "The healthcare professional who has been assigned to a given lab task"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-symptoms"
-      },
-      "name" : "Presenting symptoms",
-      "description" : "A list of symptoms"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-lab-task-output"
-      },
-      "name" : "Lab Result Task Output",
-      "description" : "Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-diagnosis"
-      },
-      "name" : "Diagnosis",
-      "description" : "Confirmation of the diagnosis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/Covid19DeathExample"
-      },
-      "name" : "Example Observation - Covid19DeathExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-cancellation-reason"
-      },
-      "name" : "Cancellation Reasons",
-      "description" : "A list of reasons as a result of the lab task being cancelled"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-vaccine-dose-ever-received"
-      },
-      "name" : "Vaccine Dose Ever Received",
-      "description" : "Has the individual received at least one shot of the vaccine at any point in time in the past?"
+      "description" : "What is the location of the organization where the patient is currently being admitted to for treatment?",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1164,29 +602,8 @@
         "reference" : "StructureDefinition/covid19-encounter"
       },
       "name" : "Encounter",
-      "description" : "A record of the individual's visit at the organization"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/LabResult"
-      },
-      "name" : "Example Bundle - LabResult",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/Covid19RecoveredOrSymptomsResolvedExample"
-      },
-      "name" : "Example Observation - Covid19RecoveredOrSymptomsResolvedExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved"
+      "description" : "A record of the individual's visit at the organization",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1194,21 +611,11 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/covid19-lab-task"
+        "reference" : "StructureDefinition/covid19-assessment-vaccination"
       },
-      "name" : "Lab Task",
-      "description" : "Assists with tracking the state of the lab order and its completion status"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-source-of-info"
-      },
-      "name" : "Source of Information",
-      "description" : "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis"
+      "name" : "Immunization Tracking",
+      "description" : "Retrospectively capture COVID19 immunization data for vaccines administered at other organizations",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1216,65 +623,11 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/covid19-diagnostic-report"
+        "reference" : "StructureDefinition/covid19-conditions-or-comorbidities"
       },
-      "name" : "Diagnostic Report",
-      "description" : "A report as a result of the lab task being completed"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Condition"
-      }],
-      "reference" : {
-        "reference" : "Condition/Covid19DiagnosisExample"
-      },
-      "name" : "Example Condition - Covid19DiagnosisExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-covid19-test-result"
-      },
-      "name" : "Test Result",
-      "description" : "COVID19 diagnosis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Location"
-      }],
-      "reference" : {
-        "reference" : "Location/Covid19AdmissionLocationExample"
-      },
-      "name" : "Example Location - Covid19AdmissionLocationExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Specimen"
-      }],
-      "reference" : {
-        "reference" : "Specimen/Covid19SpecimenLabResultExample"
-      },
-      "name" : "Example Specimen - Covid19SpecimenLabResultExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-date-last-hospitalised"
-      },
-      "name" : "Date Last Hospitalised",
-      "description" : "When last was the individual admitted to hospital?"
+      "name" : "Conditions or Comorbidity",
+      "description" : "What pre-existing conditions and/or comorbidities exist for the individual?",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1285,62 +638,8 @@
         "reference" : "StructureDefinition/covid19-death"
       },
       "name" : "Death",
-      "description" : "An event assoicated with the death of an individual who has been diagnosed with COVID19"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Bundle"
-      }],
-      "reference" : {
-        "reference" : "Bundle/LabRejection"
-      },
-      "name" : "Example Bundle - LabRejection",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Condition"
-      }],
-      "reference" : {
-        "reference" : "Condition/Covid19ConditionsOrComorbidityExample"
-      },
-      "name" : "Example Condition - Covid19ConditionsOrComorbidityExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      }],
-      "reference" : {
-        "reference" : "Observation/Covid19PresentingSymptomsExample"
-      },
-      "name" : "Example Observation - Covid19PresentingSymptomsExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/vs-vaccine-types"
-      },
-      "name" : "Vaccine Types",
-      "description" : "A list of COVID19 manufacturers"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/covid19-next-vaccination"
-      },
-      "name" : "Date of next vaccination",
-      "description" : "When must the individual return to the organization for the next scheduled vaccination?"
+      "description" : "An event assoicated with the death of an individual who has been diagnosed with COVID19",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1348,21 +647,11 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/covid19-presenting-symptoms"
+        "reference" : "StructureDefinition/covid19-diagnosis"
       },
-      "name" : "Presenting Symptoms",
-      "description" : "Existing symptoms which may help with diagnosis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Encounter"
-      }],
-      "reference" : {
-        "reference" : "Encounter/Covid19AssessmentEncounterExample"
-      },
-      "name" : "Example Encounter - Covid19AssessmentEncounterExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"
+      "name" : "Diagnosis",
+      "description" : "Confirmation of the diagnosis",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1370,10 +659,59 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/covid19-vaccination"
+        "reference" : "StructureDefinition/covid19-diagnostic-report"
       },
-      "name" : "Immunization Tracking",
-      "description" : "Administer a suitable vaccine based on the most recent lab result"
+      "name" : "Diagnostic Report",
+      "description" : "A report as a result of the lab task being completed",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-lab-task"
+      },
+      "name" : "Lab Task",
+      "description" : "Assists with tracking the state of the lab order and its completion status",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-long-covid-post-covid"
+      },
+      "name" : "Long Covid / Post-Covid",
+      "description" : "Does the indiviual continue to suffer from COVID19 health problems that are new, returning or ongoing conditons?",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-medication-request"
+      },
+      "name" : "Treatment dispensed or prescribed",
+      "description" : "To indicate whether Paxlovid has been issued to the individual",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-organization"
+      },
+      "name" : "Organization",
+      "description" : "Administering Organization",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -1384,7 +722,656 @@
         "reference" : "StructureDefinition/covid19-patient"
       },
       "name" : "Patient",
-      "description" : "The individual receiving COVID19 services"
+      "description" : "The individual receiving COVID19 services",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-practitioner"
+      },
+      "name" : "Practitioner",
+      "description" : "The healthcare professional who has been assigned to a given lab task",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-presenting-symptoms"
+      },
+      "name" : "Presenting Symptoms",
+      "description" : "Existing symptoms which may help with diagnosis",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-recovered-or-symptoms-resolved"
+      },
+      "name" : "Recovered Or Symptoms Resolved",
+      "description" : "Has the individual fully recovered from symptoms associated with COVID19?",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-lab-order"
+      },
+      "name" : "Lab Order",
+      "description" : "A service request that initiates the need for the lab to collect the test sample",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-service-request-location"
+      },
+      "name" : "Lab Order Request Location",
+      "description" : "What is the location of the organization responsible for conducting the examination of the individual's sample?",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-specimen"
+      },
+      "name" : "Specimen",
+      "description" : "The test sample that was collected for the initiated lab order",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-test-results"
+      },
+      "name" : "Lab Results",
+      "description" : "The result of the lab test which determines whether the patient is infected with COVID19 or not",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-vaccination"
+      },
+      "name" : "Immunization Tracking",
+      "description" : "Administer a suitable vaccine based on the most recent lab result",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-vaccine-dose-ever-received"
+      },
+      "name" : "Vaccine Dose Ever Received",
+      "description" : "Has the individual received at least one shot of the vaccine at any point in time in the past?",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-conditions-or-comorbidities-present"
+      },
+      "name" : "Conditions or Comorbidities Present",
+      "description" : "Does the individual have any known pre-existing conditions and/or comorbidities?",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-date-last-hospitalised"
+      },
+      "name" : "Date Last Hospitalised",
+      "description" : "When last was the individual admitted to hospital?",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-ever-hospitalised"
+      },
+      "name" : "Ever Hospitalized",
+      "description" : "Has the individual been admitted to hospital at any point in time in the past?",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/covid19-next-vaccination"
+      },
+      "name" : "Date of next vaccination",
+      "description" : "When must the individual return to the organization for the next scheduled vaccination?",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-AdmissionTypes"
+      },
+      "name" : "Admission Types",
+      "description" : "A list of admission types",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-cancellation-reason"
+      },
+      "name" : "Cancellation Reasons",
+      "description" : "A list of reasons as a result of the lab task being cancelled",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-conditions-comorbidity"
+      },
+      "name" : "Conditions / Comorbidity",
+      "description" : "List of conditions and comorbidities",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-covid19-specimen-type"
+      },
+      "name" : "Specimen Type",
+      "description" : "The type of specimen sample that was collected by the lab",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-lab-task-output"
+      },
+      "name" : "Lab Result Task Output",
+      "description" : "Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-presentation"
+      },
+      "name" : "Presentation",
+      "description" : "Determine if the COVID19 positive individual has any noticeable symptoms",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"
+      },
+      "name" : "Reason for Assessment or Test Not Performed",
+      "description" : "A list of reasons associated with the service request for the lab order",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-source-of-info"
+      },
+      "name" : "Source of Information",
+      "description" : "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-symptoms"
+      },
+      "name" : "Presenting symptoms",
+      "description" : "A list of symptoms",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-covid19-test-result"
+      },
+      "name" : "Test Result",
+      "description" : "COVID19 diagnosis",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-test-types"
+      },
+      "name" : "Test Types",
+      "description" : "A list of COVID19 test types",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-treatment-dispensed-prescribed"
+      },
+      "name" : "Treatment Dispensed or Prescribed",
+      "description" : "A list of all possible drugs",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-vaccine-types"
+      },
+      "name" : "Vaccine Types",
+      "description" : "A list of COVID19 manufacturers",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-yes-no"
+      },
+      "name" : "Yes No Unknown",
+      "description" : "A list of options used to provide an answer",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/cs-lab-task-output"
+      },
+      "name" : "Lab Result Task Output",
+      "description" : "Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/cs-source-of-info"
+      },
+      "name" : "Source of Information",
+      "description" : "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      }],
+      "reference" : {
+        "reference" : "Location/Covid19AdmissionLocationExample"
+      },
+      "name" : "Covid19 Admission Location example",
+      "description" : "Covid19 Admission Location example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/Covid19AssessmentEncounterExample"
+      },
+      "name" : "Covid19 Assessment Encounter example",
+      "description" : "Covid19 Assessment Encounter example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Immunization"
+      }],
+      "reference" : {
+        "reference" : "Immunization/Covid19AssessmentVaccinationExample"
+      },
+      "name" : "Covid19 Vaccine Type Administered example",
+      "description" : "Covid19 Vaccine Type Administered example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/Covid19ConditionsOrComorbidityExample"
+      },
+      "name" : "Covid19 Conditions or comorbidity example",
+      "description" : "Covid19 Conditions or comorbidity example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/Covid19DeathExample"
+      },
+      "name" : "Covid19 Death",
+      "description" : "Covid19 Death",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/Covid19DiagnosisExample"
+      },
+      "name" : "Covid19 Diagnosis Example",
+      "description" : "Covid19 Diagnosis Example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Covid19LabOrderCancellationExample"
+      },
+      "name" : "Covid19 Lab Order Cancellation  example",
+      "description" : "Covid19 Lab Order Cancellation Task example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/Covid19LabOrderRejectionExample"
+      },
+      "name" : "Covid19 Lab Order Cancellation  example",
+      "description" : "Covid19 Lab Order Cancellation Task example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
+      },
+      "name" : "Covid19 Lab Results Diagnostic Report example",
+      "description" : "Covid19 Lab Results Diagnostic Report example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/Covid19LongCovidPostCovidExample"
+      },
+      "name" : "Covid19 Long Covid / Post-Covid",
+      "description" : "Covid19 Long Covid / Post-Covid",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/Covid19MedicationRequestExample"
+      },
+      "name" : "Covid19 Treatment dispensed or prescribed example",
+      "description" : "Covid19 Treatment dispensed or prescribed example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Covid19OrganizationExample"
+      },
+      "name" : "Covid19 Organization example",
+      "description" : "Covid19 Organization example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/Covid19PatientExample"
+      },
+      "name" : "Covid19 Patient example",
+      "description" : "Covid19 Patient example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/Covid19PresentingSymptomsExample"
+      },
+      "name" : "Covid19 Symptom example",
+      "description" : "Covid19 Symptom example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/Covid19RecoveredOrSymptomsResolvedExample"
+      },
+      "name" : "Covid19 Recovered Or Symptoms Resolved",
+      "description" : "Covid19 Recovered Or Symptoms Resolved",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/Covid19ServiceRequestExample"
+      },
+      "name" : "Covid19 Lab Order example",
+      "description" : "Covid19 Lab Order example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      }],
+      "reference" : {
+        "reference" : "Location/Covid19ServiceRequestLocationExample"
+      },
+      "name" : "Covid19 Service Request Location example",
+      "description" : "Covid19 Service Request Location example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/Covid19SpecimenExample"
+      },
+      "name" : "Covid19 Specimen example",
+      "description" : "Covid19 Specimen example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Specimen"
+      }],
+      "reference" : {
+        "reference" : "Specimen/Covid19SpecimenLabResultExample"
+      },
+      "name" : "Covid19 Specimen example",
+      "description" : "Covid19 Specimen example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/Covid19TestResultExample"
+      },
+      "name" : "Covid19 Lab Results example",
+      "description" : "Covid19 Lab Results example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Immunization"
+      }],
+      "reference" : {
+        "reference" : "Immunization/Covid19VaccinationExample"
+      },
+      "name" : "Covid19 Vaccination example",
+      "description" : "Covid19 Vaccination example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/Covid19VaccineDoseEverReceivedExample"
+      },
+      "name" : "Covid19 Vaccine Dose Received example",
+      "description" : "Covid19 Vaccine Dose Received example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/EMR"
+      },
+      "name" : "Covid19 Case Report - Full Bundle Example",
+      "description" : "Example of a clinical bundle representing a case report",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/LabCancellation"
+      },
+      "name" : "Cares Submit Lab Cancellation Bundle Example",
+      "description" : "Cares Submit Lab Cancellation Bundle Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/LabOrder"
+      },
+      "name" : "Cares Submit Lab Order Bundle Example",
+      "description" : "Cares Submit Lab Order Bundle Example",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1394,8 +1381,57 @@
       "reference" : {
         "reference" : "Task/LabOrderTaskExample"
       },
-      "name" : "Example Task - LabOrderTaskExample",
+      "name" : "Lab Order example",
+      "description" : "Lab Order example",
       "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/LabRejection"
+      },
+      "name" : "Cares Submit Lab Rejection Bundle Example",
+      "description" : "Cares Submit Lab Rejection Bundle Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/LabResult"
+      },
+      "name" : "Cares Submit Lab Result Bundle Example",
+      "description" : "Cares Submit Lab Result Bundle Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Task"
+      }],
+      "reference" : {
+        "reference" : "Task/LabResultTaskExample"
+      },
+      "name" : "Lab Result Task example",
+      "description" : "Lab Result Task example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/PractitionerExample"
+      },
+      "name" : "Practitioner example",
+      "description" : "Practitioner example",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner"
     }],
     "page" : {
       "extension" : [{
@@ -1411,7 +1447,16 @@
           "valueUrl" : "index.html"
         }],
         "nameUrl" : "index.html",
-        "title" : "COVID19 Case Reporting",
+        "title" : "Home",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "changes.html"
+        }],
+        "nameUrl" : "changes.html",
+        "title" : "Changes",
         "generation" : "html"
       },
       {
@@ -1420,25 +1465,7 @@
           "valueUrl" : "emr-bundle.html"
         }],
         "nameUrl" : "emr-bundle.html",
-        "title" : "EMR Bundle",
-        "generation" : "html"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "lab-order-bundle.html"
-        }],
-        "nameUrl" : "lab-order-bundle.html",
-        "title" : "Lab Order Bundle",
-        "generation" : "html"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "lab-result-bundle.html"
-        }],
-        "nameUrl" : "lab-result-bundle.html",
-        "title" : "Lab Result Bundle",
+        "title" : "Emr Bundle",
         "generation" : "html"
       },
       {
@@ -1453,6 +1480,15 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "lab-order-bundle.html"
+        }],
+        "nameUrl" : "lab-order-bundle.html",
+        "title" : "Lab Order Bundle",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "lab-rejection-bundle.html"
         }],
         "nameUrl" : "lab-rejection-bundle.html",
@@ -1462,31 +1498,23 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "vaccination_status.html"
+          "valueUrl" : "lab-result-bundle.html"
         }],
-        "nameUrl" : "vaccination_status.html",
-        "title" : "COVID19 Vaccination Statuses",
+        "nameUrl" : "lab-result-bundle.html",
+        "title" : "Lab Result Bundle",
         "generation" : "html"
       },
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "changes.html"
+          "valueUrl" : "vaccination_status.html"
         }],
-        "nameUrl" : "changes.html",
-        "title" : "IG Change History",
+        "nameUrl" : "vaccination_status.html",
+        "title" : "Vaccination Status",
         "generation" : "html"
       }]
     },
     "parameter" : [{
-      "code" : "path-resource",
-      "value" : "input\\history"
-    },
-    {
-      "code" : "path-resource",
-      "value" : "input\\scenarios"
-    },
-    {
       "code" : "path-resource",
       "value" : "input/capabilities"
     },
@@ -1517,6 +1545,10 @@
     {
       "code" : "path-resource",
       "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/maps"
     },
     {
       "code" : "path-resource",

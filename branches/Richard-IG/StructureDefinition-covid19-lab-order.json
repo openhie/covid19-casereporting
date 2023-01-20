@@ -14,13 +14,14 @@
     "valueCode" : "patient"
   }],
   "url" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "Covid19ServiceRequest",
   "title" : "Lab Order",
   "status" : "active",
-  "date" : "2023-01-20T12:42:46+00:00",
+  "date" : "2023-01-20T13:20:19+00:00",
   "publisher" : "Jembi Health Systems",
   "contact" : [{
+    "name" : "Jembi Health Systems",
     "telecom" : [{
       "system" : "url",
       "value" : "https://www.jembi.org"
@@ -29,12 +30,21 @@
       "system" : "email",
       "value" : "info@jembi.org"
     }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
   }],
   "description" : "A service request that initiates the need for the lab to collect the test sample",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-      "code" : "001"
+      "code" : "001",
+      "display" : "World"
     }]
   }],
   "fhirVersion" : "4.0.1",
