@@ -1,10 +1,10 @@
-﻿Covid19IG : Validation Results
+﻿Covid19CaseReporting : Validation Results
 =========================================
 
-err = 3, warn = 5, info = 0
+err = 0, warn = 4, info = 0
 IG Publisher Version: 1.2.28
-Generated Fri Jan 20 13:21:37 UTC 2023. FHIR version 4.0.1 for openhie.fhir.covid#0.2.0 (canonical = http://openhie.org/fhir/covid19-casereporting)
- Build Errors : 0 / 5 / 0
+Generated Fri Jan 20 13:39:33 UTC 2023. FHIR version 4.0.1 for openhie.fhir.covid#0.1.0 (canonical = http://openhie.org/fhir/covid19-casereporting)
+ Build Errors : 0 / 4 / 0
  /github/workspace/fsh-generated/resources/Bundle-EMR : 0 / 2 / 29
  /github/workspace/fsh-generated/resources/Bundle-LabCancellation : 0 / 0 / 3
  /github/workspace/fsh-generated/resources/Bundle-LabOrder : 0 / 0 / 11
@@ -18,7 +18,6 @@ Generated Fri Jan 20 13:21:37 UTC 2023. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample : 0 / 1 / 2
  /github/workspace/fsh-generated/resources/Immunization-Covid19VaccinationExample : 0 / 1 / 2
- /github/workspace/fsh-generated/resources/ImplementationGuide-openhie.fhir.covid : 3 / 0 / 1
  /github/workspace/fsh-generated/resources/Location-Covid19AdmissionLocationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/Location-Covid19ServiceRequestLocationExample : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample : 0 / 0 / 1
@@ -77,9 +76,9 @@ Generated Fri Jan 20 13:21:37 UTC 2023. FHIR version 4.0.1 for openhie.fhir.covi
  /github/workspace/fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-vaccine-types : 0 / 2 / 1
  /github/workspace/fsh-generated/resources/ValueSet-vs-yes-no : 0 / 0 / 1
+ /github/workspace/input/covid19-casereporting : 0 / 0 / 1
 </table>
 == n/a ==
-WARNING: ImplementationGuide.url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
@@ -97,10 +96,6 @@ WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in 
 == fsh-generated/resources/Encounter-Covid19AssessmentEncounterExample.json ==
 == fsh-generated/resources/Immunization-Covid19AssessmentVaccinationExample.json ==
 == fsh-generated/resources/Immunization-Covid19VaccinationExample.json ==
-== fsh-generated/resources/ImplementationGuide-openhie.fhir.covid.json ==
-ERROR: ImplementationGuide.where(url = 'http://openhie.org/fhir/covid19-casereporting'): Conformance resource /github/workspace/fsh-generated/resources/ImplementationGuide-openhie.fhir.covid.json - the canonical URL (http://openhie.org/fhir/covid19-casereporting/ImplementationGuide/openhie.fhir.covid) does not match the URL (http://openhie.org/fhir/covid19-casereporting)
-ERROR: ImplementationGuide.url: Resource id/url mismatch: openhie.fhir.covid/http://openhie.org/fhir/covid19-casereporting
-ERROR: /github/workspace/fsh-generated/resources/ImplementationGuide-openhie.fhir.covid: URL Mismatch http://openhie.org/fhir/covid19-casereporting/ImplementationGuide/openhie.fhir.covid vs http://openhie.org/fhir/covid19-casereporting
 == fsh-generated/resources/Location-Covid19AdmissionLocationExample.json ==
 == fsh-generated/resources/Location-Covid19ServiceRequestLocationExample.json ==
 == fsh-generated/resources/MedicationRequest-Covid19MedicationRequestExample.json ==
@@ -159,3 +154,4 @@ ERROR: /github/workspace/fsh-generated/resources/ImplementationGuide-openhie.fhi
 == fsh-generated/resources/ValueSet-vs-treatment-dispensed-prescribed.json ==
 == fsh-generated/resources/ValueSet-vs-vaccine-types.json ==
 == fsh-generated/resources/ValueSet-vs-yes-no.json ==
+== input/covid19-casereporting.xml ==

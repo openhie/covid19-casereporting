@@ -13,16 +13,15 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://icd.who.int/icd11/mms</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>XM4YL8</td><td>AstraZeneca/Oxford vaccine</td></tr><tr><td>XM6QV1</td><td>Johnson and Johnson</td></tr><tr><td>XM3DT5</td><td>Moderna</td></tr><tr><td>XM8NQ0</td><td>Pfizer/BionTech</td></tr><tr><td>XM8866</td><td>Sinopharm</td></tr><tr><td>XM7HT3</td><td>Sinovac</td></tr><tr><td>XM1G90</td><td>COVAXIN</td></tr><tr><td>XM9T65</td><td>Covovax</td></tr><tr><td>XM5JC5</td><td>Nuvaxovid</td></tr><tr><td>XM1AG7</td><td>CanSino</td></tr></table></li></ul></div>"
   ]; # 
   fhir:ValueSet.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types"]; # 
-  fhir:ValueSet.version [ fhir:value "0.2.0"]; # 
+  fhir:ValueSet.version [ fhir:value "0.1.0"]; # 
   fhir:ValueSet.name [ fhir:value "VSVaccineTypes"]; # 
   fhir:ValueSet.title [ fhir:value "Vaccine Types"]; # 
   fhir:ValueSet.status [ fhir:value "active"]; # 
   fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean]; # 
-  fhir:ValueSet.date [ fhir:value "2023-01-20T13:20:19+00:00"^^xsd:dateTime]; # 
+  fhir:ValueSet.date [ fhir:value "2023-01-20T13:37:57+00:00"^^xsd:dateTime]; # 
   fhir:ValueSet.publisher [ fhir:value "Jembi Health Systems"]; # 
   fhir:ValueSet.contact [
      fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "Jembi Health Systems" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "url" ];
@@ -32,15 +31,6 @@
        fhir:ContactPoint.system [ fhir:value "email" ];
        fhir:ContactPoint.value [ fhir:value "info@jembi.org" ]
      ]
-  ], [
-     fhir:index 1;
-     fhir:ContactDetail.name [ fhir:value "Richard Langford" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "richard.langford@jembi.org" ];
-       fhir:ContactPoint.use [ fhir:value "work" ]
-     ]
   ]; # 
   fhir:ValueSet.description [ fhir:value "A list of COVID19 manufacturers"]; # 
   fhir:ValueSet.jurisdiction [
@@ -48,8 +38,7 @@
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
-       fhir:Coding.code [ fhir:value "001" ];
-       fhir:Coding.display [ fhir:value "World" ]
+       fhir:Coding.code [ fhir:value "001" ]
      ]
   ]; # 
   fhir:ValueSet.compose [
