@@ -1,17 +1,17 @@
-@startjson lab-order-bundle
+@startjson lab-result-bundle
 {
   "resourceType" : "Bundle",
-  "id" : "LabOrder",
+  "id" : "LabResult",
   "type" : "transaction",
   "entry" : [{
-    "fullUrl" : "Task/LabOrderTaskExample",
+    "fullUrl" : "Task/LabResultTaskExample",
     "resource" : {
       "resourceType" : "Task",
-      "id" : "LabOrderTaskExample",
+      "id" : "LabResultTaskExample",
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"]
       },
-     
+      
       "identifier" : [{
         "system" : "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number",
         "value" : "ORDER12345"
@@ -19,62 +19,48 @@
       "basedOn" : [{
         "reference" : "ServiceRequest/Covid19ServiceRequestExample"
       }],
-      "status" : "requested",
+      "status" : "completed",
       "intent" : "order",
       "executionPeriod" : {
-        "start" : "2022-07-28"
+        "end" : "2022-07-30"
       },
-      "lastModified" : "2022-07-28",
+      "lastModified" : "2022-07-30",
       "requester" : {
         "reference" : "Organization/Covid19OrganizationExample"
       },
       "owner" : {
         "reference" : "Organization/Covid19OrganizationExample"
-      }
-    },
-    "request" : {
-      "method" : "PUT",
-      "url" : "Task/LabOrderTaskExample"
-    }
-  },
-  {
-    "fullUrl" : "Location/Covid19ServiceRequestLocationExample",
-    "resource" : {
-      "resourceType" : "Location",
-      "id" : "Covid19ServiceRequestLocationExample",
-      "meta" : {
-        "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"]
       },
-    
-      "name" : "Covid19 Location",
-      "address" : {
-        "city" : "Example city 1",
-        "district" : "Example district 1",
-        "state" : "Example state 1",
-        "country" : "Example country 1"
-      }
+      "output" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output",
+            "code" : "Result"
+          }]
+        },
+        "valueReference" : {
+          "reference" : "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
+        }
+      }]
     },
     "request" : {
       "method" : "PUT",
-      "url" : "Location/Covid19ServiceRequestLocationExample"
+      "url" : "Task/LabResultTaskExample"
     }
   },
   {
-    "fullUrl" : "ServiceRequest/Covid19ServiceRequestExample",
+    "fullUrl" : "DiagnosticReport/Covid19LabResultsDiagnosticReportExample",
     "resource" : {
-      "resourceType" : "ServiceRequest",
-      "id" : "Covid19ServiceRequestExample",
+      "resourceType" : "DiagnosticReport",
+      "id" : "Covid19LabResultsDiagnosticReportExample",
       "meta" : {
-        "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"]
+        "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"]
       },
       
-      "identifier" : [{
-        "system" : "http://openhie.org/fhir/covid19-casereporting/identifier/lab-order-identifier",
-        "value" : "ORDER12345"
+      "basedOn" : [{
+        "reference" : "ServiceRequest/Covid19ServiceRequestExample"
       }],
-      "status" : "completed",
-      "intent" : "order",
-      "doNotPerform" : false,
+      "status" : "final",
       "code" : {
         "coding" : [{
           "system" : "http://loinc.org",
@@ -84,36 +70,17 @@
       "subject" : {
         "reference" : "Patient/Covid19PatientExample"
       },
-      "encounter" : {
-        "reference" : "Encounter/Covid19AssessmentEncounterExample"
-      },
-      "occurrenceDateTime" : "2012-01-05",
-      "requester" : {
+      "performer" : [{
         "reference" : "Practitioner/PractitionerExample"
-      },
-      "locationReference" : [{
-        "reference" : "Location/Covid19ServiceRequestLocationExample"
       }],
-      "reasonCode" : [{
-        "coding" : [{
-          "system" : "http://snomed.info/sct",
-          "code" : "397933008"
-        }]
+      "result" : [{
+        "reference" : "Observation/Covid19TestResultExample"
       }],
-      "specimen" : [{
-        "reference" : "Specimen/Covid19SpecimenExample"
-      }],
-      "note" : [{
-        "authorReference" : {
-          "reference" : "Organization/Covid19OrganizationExample"
-        },
-        "time" : "2015-02-07T13:28:17-05:00",
-        "text" : "additional notes here"
-      }]
+      "conclusion" : "Some conclusion text"
     },
     "request" : {
       "method" : "PUT",
-      "url" : "ServiceRequest/Covid19ServiceRequestExample"
+      "url" : "DiagnosticReport/Covid19LabResultsDiagnosticReportExample"
     }
   },
   {
@@ -124,7 +91,7 @@
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner"]
       },
-    
+     
       "name" : [{
         "family" : "Smith",
         "given" : ["James"]
@@ -140,14 +107,14 @@
     }
   },
   {
-    "fullUrl" : "Specimen/Covid19SpecimenExample",
+    "fullUrl" : "Specimen/Covid19SpecimenLabResultExample",
     "resource" : {
       "resourceType" : "Specimen",
-      "id" : "Covid19SpecimenExample",
+      "id" : "Covid19SpecimenLabResultExample",
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"]
       },
-    
+     
       "identifier" : [{
         "system" : "http://covid19laborder.org/specimen",
         "value" : "SPECIMEN109191879"
@@ -161,9 +128,13 @@
       "subject" : {
         "reference" : "Patient/Covid19PatientExample"
       },
+      "receivedTime" : "2022-07-28T13:28:17-05:00",
       "collection" : {
         "collectedDateTime" : "2022-07-28"
       },
+      "processing" : [{
+        "timeDateTime" : "2022-07-28"
+      }],
       "note" : [{
         "authorReference" : {
           "reference" : "Organization/Covid19OrganizationExample"
@@ -174,7 +145,45 @@
     },
     "request" : {
       "method" : "PUT",
-      "url" : "Specimen/Covid19SpecimenExample"
+      "url" : "Specimen/Covid19SpecimenLabResultExample"
+    }
+  },
+  {
+    "fullUrl" : "Observation/Covid19TestResultExample",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "Covid19TestResultExample",
+      "meta" : {
+        "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results"]
+      },
+    
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "94558-4"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/Covid19PatientExample"
+      },
+      "encounter" : {
+        "reference" : "Encounter/Covid19AssessmentEncounterExample"
+      },
+      "effectiveDateTime" : "2022-07-28",
+      "performer" : [{
+        "reference" : "Organization/Covid19OrganizationExample"
+      }],
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "10828004"
+        }]
+      }
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Observation/Covid19TestResultExample"
     }
   }]
 }
