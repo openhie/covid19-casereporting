@@ -22,15 +22,14 @@
      fhir:Extension.valueCode [ fhir:value "business" ]
   ]; # 
   fhir:StructureDefinition.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"]; # 
-  fhir:StructureDefinition.version [ fhir:value "0.2.0"]; # 
+  fhir:StructureDefinition.version [ fhir:value "0.1.0"]; # 
   fhir:StructureDefinition.name [ fhir:value "Covid19ServiceRequestLocation"]; # 
   fhir:StructureDefinition.title [ fhir:value "Lab Order Request Location"]; # 
   fhir:StructureDefinition.status [ fhir:value "active"]; # 
-  fhir:StructureDefinition.date [ fhir:value "2023-01-20T13:20:19+00:00"^^xsd:dateTime]; # 
+  fhir:StructureDefinition.date [ fhir:value "2023-01-20T13:37:57+00:00"^^xsd:dateTime]; # 
   fhir:StructureDefinition.publisher [ fhir:value "Jembi Health Systems"]; # 
   fhir:StructureDefinition.contact [
      fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "Jembi Health Systems" ];
      fhir:ContactDetail.telecom [
        fhir:index 0;
        fhir:ContactPoint.system [ fhir:value "url" ];
@@ -40,15 +39,6 @@
        fhir:ContactPoint.system [ fhir:value "email" ];
        fhir:ContactPoint.value [ fhir:value "info@jembi.org" ]
      ]
-  ], [
-     fhir:index 1;
-     fhir:ContactDetail.name [ fhir:value "Richard Langford" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "richard.langford@jembi.org" ];
-       fhir:ContactPoint.use [ fhir:value "work" ]
-     ]
   ]; # 
   fhir:StructureDefinition.description [ fhir:value "What is the location of the organization responsible for conducting the examination of the individual's sample?"]; # 
   fhir:StructureDefinition.jurisdiction [
@@ -56,8 +46,7 @@
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
-       fhir:Coding.code [ fhir:value "001" ];
-       fhir:Coding.display [ fhir:value "World" ]
+       fhir:Coding.code [ fhir:value "001" ]
      ]
   ]; # 
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"]; # 

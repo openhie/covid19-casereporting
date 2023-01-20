@@ -3,18 +3,18 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="openhie.fhir.covid"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Covid19IG</h2><p>The official URL for this implementation guide is: </p><pre>http://openhie.org/fhir/covid19-casereporting</pre><div><p>Covid19 IG exercises many of the fields in a SUSHI configuration.</p>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Covid19CaseReporting</h2><p>The official URL for this implementation guide is: </p><pre>http://openhie.org/fhir/covid19-casereporting/ImplementationGuide/openhie.fhir.covid</pre><div><p>COVID19 Case Reporting</p>
 </div></div>
   </text>
-  <url value="http://openhie.org/fhir/covid19-casereporting"/>
-  <version value="0.2.0"/>
-  <name value="Covid19IG"/>
-  <title value="HL7 FHIR Implementation Guide: Covid IG Release 1 - US Realm | STU1"/>
-  <status value="active"/>
-  <date value="2022-12-01"/>
+  <url value="http://openhie.org/fhir/covid19-casereporting/ImplementationGuide/openhie.fhir.covid"/>
+  <version value="0.1.0"/>
+  <name value="Covid19CaseReporting"/>
+  <title value="COVID19 Case Reporting"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2023-01-20T13:37:57+00:00"/>
   <publisher value="Jembi Health Systems"/>
   <contact>
-    <name value="Jembi Health Systems"/>
     <telecom>
       <system value="url"/>
       <value value="https://www.jembi.org"/>
@@ -24,20 +24,11 @@
       <value value="info@jembi.org"/>
     </telecom>
   </contact>
-  <contact>
-    <name value="Richard Langford"/>
-    <telecom>
-      <system value="email"/>
-      <value value="richard.langford@jembi.org"/>
-      <use value="work"/>
-    </telecom>
-  </contact>
-  <description value="Covid19 IG exercises many of the fields in a SUSHI configuration."/>
+  <description value="COVID19 Case Reporting"/>
   <jurisdiction>
     <coding>
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
       <code value="001"/>
-      <display value="World"/>
     </coding>
   </jurisdiction>
   <packageId value="openhie.fhir.covid"/>
@@ -65,7 +56,23 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="STU1"/>
+        <valueString value="CI Build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-binary"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input\cql"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="templates\liquid"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -129,7 +136,7 @@
         <valueString value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="history.html"/>
+        <valueString value="http://openhie.org/fhir/covid19-casereporting/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -257,7 +264,23 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="STU1"/>
+        <valueString value="CI Build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-binary"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input\cql"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="templates\liquid"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -321,7 +344,7 @@
         <valueString value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="history.html"/>
+        <valueString value="http://openhie.org/fhir/covid19-casereporting/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -438,25 +461,13 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
+        <valueString value="Organization"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/covid19-admission-location"/>
+        <reference value="Organization/Covid19OrganizationExample"/>
       </reference>
-      <name value="Admission Location"/>
-      <description value="What is the location of the organization where the patient is currently being admitted to for treatment?"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-encounter"/>
-      </reference>
-      <name value="Encounter"/>
-      <description value="A record of the individual's visit at the organization"/>
-      <exampleBoolean value="false"/>
+      <name value="Example Organization - Covid19OrganizationExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -467,227 +478,6 @@
       </reference>
       <name value="Immunization Tracking"/>
       <description value="Retrospectively capture COVID19 immunization data for vaccines administered at other organizations"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-conditions-or-comorbidities"/>
-      </reference>
-      <name value="Conditions or Comorbidity"/>
-      <description value="What pre-existing conditions and/or comorbidities exist for the individual?"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-death"/>
-      </reference>
-      <name value="Death"/>
-      <description value="An event assoicated with the death of an individual who has been diagnosed with COVID19"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-diagnosis"/>
-      </reference>
-      <name value="Diagnosis"/>
-      <description value="Confirmation of the diagnosis"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-diagnostic-report"/>
-      </reference>
-      <name value="Diagnostic Report"/>
-      <description value="A report as a result of the lab task being completed"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-lab-task"/>
-      </reference>
-      <name value="Lab Task"/>
-      <description value="Assists with tracking the state of the lab order and its completion status"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-long-covid-post-covid"/>
-      </reference>
-      <name value="Long Covid / Post-Covid"/>
-      <description value="Does the indiviual continue to suffer from COVID19 health problems that are new, returning or ongoing conditons?"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-medication-request"/>
-      </reference>
-      <name value="Treatment dispensed or prescribed"/>
-      <description value="To indicate whether Paxlovid has been issued to the individual"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-organization"/>
-      </reference>
-      <name value="Organization"/>
-      <description value="Administering Organization"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-patient"/>
-      </reference>
-      <name value="Patient"/>
-      <description value="The individual receiving COVID19 services"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-practitioner"/>
-      </reference>
-      <name value="Practitioner"/>
-      <description value="The healthcare professional who has been assigned to a given lab task"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-presenting-symptoms"/>
-      </reference>
-      <name value="Presenting Symptoms"/>
-      <description value="Existing symptoms which may help with diagnosis"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-recovered-or-symptoms-resolved"/>
-      </reference>
-      <name value="Recovered Or Symptoms Resolved"/>
-      <description value="Has the individual fully recovered from symptoms associated with COVID19?"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-lab-order"/>
-      </reference>
-      <name value="Lab Order"/>
-      <description value="A service request that initiates the need for the lab to collect the test sample"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-service-request-location"/>
-      </reference>
-      <name value="Lab Order Request Location"/>
-      <description value="What is the location of the organization responsible for conducting the examination of the individual's sample?"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-specimen"/>
-      </reference>
-      <name value="Specimen"/>
-      <description value="The test sample that was collected for the initiated lab order"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-test-results"/>
-      </reference>
-      <name value="Lab Results"/>
-      <description value="The result of the lab test which determines whether the patient is infected with COVID19 or not"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-vaccination"/>
-      </reference>
-      <name value="Immunization Tracking"/>
-      <description value="Administer a suitable vaccine based on the most recent lab result"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-vaccine-dose-ever-received"/>
-      </reference>
-      <name value="Vaccine Dose Ever Received"/>
-      <description value="Has the individual received at least one shot of the vaccine at any point in time in the past?"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-conditions-or-comorbidities-present"/>
-      </reference>
-      <name value="Conditions or Comorbidities Present"/>
-      <description value="Does the individual have any known pre-existing conditions and/or comorbidities?"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/covid19-date-last-hospitalised"/>
-      </reference>
-      <name value="Date Last Hospitalised"/>
-      <description value="When last was the individual admitted to hospital?"/>
-      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -698,139 +488,66 @@
       </reference>
       <name value="Ever Hospitalized"/>
       <description value="Has the individual been admitted to hospital at any point in time in the past?"/>
-      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
+        <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/covid19-next-vaccination"/>
+        <reference value="StructureDefinition/covid19-conditions-or-comorbidities"/>
       </reference>
-      <name value="Date of next vaccination"/>
-      <description value="When must the individual return to the organization for the next scheduled vaccination?"/>
-      <exampleBoolean value="false"/>
+      <name value="Conditions or Comorbidity"/>
+      <description value="What pre-existing conditions and/or comorbidities exist for the individual?"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
+        <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="ValueSet/vs-AdmissionTypes"/>
+        <reference value="StructureDefinition/covid19-lab-order"/>
       </reference>
-      <name value="Admission Types"/>
-      <description value="A list of admission types"/>
-      <exampleBoolean value="false"/>
+      <name value="Lab Order"/>
+      <description value="A service request that initiates the need for the lab to collect the test sample"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
+        <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="ValueSet/vs-cancellation-reason"/>
+        <reference value="Observation/Covid19VaccineDoseEverReceivedExample"/>
       </reference>
-      <name value="Cancellation Reasons"/>
-      <description value="A list of reasons as a result of the lab task being cancelled"/>
-      <exampleBoolean value="false"/>
+      <name value="Example Observation - Covid19VaccineDoseEverReceivedExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
+        <valueString value="Task"/>
       </extension>
       <reference>
-        <reference value="ValueSet/vs-conditions-comorbidity"/>
+        <reference value="Task/Covid19LabOrderCancellationExample"/>
       </reference>
-      <name value="Conditions / Comorbidity"/>
-      <description value="List of conditions and comorbidities"/>
-      <exampleBoolean value="false"/>
+      <name value="Example Task - Covid19LabOrderCancellationExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
+        <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="ValueSet/vs-covid19-specimen-type"/>
+        <reference value="StructureDefinition/covid19-long-covid-post-covid"/>
       </reference>
-      <name value="Specimen Type"/>
-      <description value="The type of specimen sample that was collected by the lab"/>
-      <exampleBoolean value="false"/>
+      <name value="Long Covid / Post-Covid"/>
+      <description value="Does the indiviual continue to suffer from COVID19 health problems that are new, returning or ongoing conditons?"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
+        <valueString value="ServiceRequest"/>
       </extension>
       <reference>
-        <reference value="ValueSet/vs-lab-task-output"/>
+        <reference value="ServiceRequest/Covid19ServiceRequestExample"/>
       </reference>
-      <name value="Lab Result Task Output"/>
-      <description value="Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/vs-presentation"/>
-      </reference>
-      <name value="Presentation"/>
-      <description value="Determine if the COVID19 positive individual has any noticeable symptoms"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"/>
-      </reference>
-      <name value="Reason for Assessment or Test Not Performed"/>
-      <description value="A list of reasons associated with the service request for the lab order"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/vs-source-of-info"/>
-      </reference>
-      <name value="Source of Information"/>
-      <description value="Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/vs-symptoms"/>
-      </reference>
-      <name value="Presenting symptoms"/>
-      <description value="A list of symptoms"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/vs-covid19-test-result"/>
-      </reference>
-      <name value="Test Result"/>
-      <description value="COVID19 diagnosis"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/vs-test-types"/>
-      </reference>
-      <name value="Test Types"/>
-      <description value="A list of COVID19 test types"/>
-      <exampleBoolean value="false"/>
+      <name value="Example ServiceRequest - Covid19ServiceRequestExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -841,29 +558,176 @@
       </reference>
       <name value="Treatment Dispensed or Prescribed"/>
       <description value="A list of all possible drugs"/>
-      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-medication-request"/>
+      </reference>
+      <name value="Treatment dispensed or prescribed"/>
+      <description value="To indicate whether Paxlovid has been issued to the individual"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/PractitionerExample"/>
+      </reference>
+      <name value="Example Practitioner - PractitionerExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/Covid19ServiceRequestLocationExample"/>
+      </reference>
+      <name value="Example Location - Covid19ServiceRequestLocationExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/vs-vaccine-types"/>
+        <reference value="ValueSet/vs-test-types"/>
       </reference>
-      <name value="Vaccine Types"/>
-      <description value="A list of COVID19 manufacturers"/>
-      <exampleBoolean value="false"/>
+      <name value="Test Types"/>
+      <description value="A list of COVID19 test types"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/Covid19SpecimenExample"/>
+      </reference>
+      <name value="Example Specimen - Covid19SpecimenExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-admission-location"/>
+      </reference>
+      <name value="Admission Location"/>
+      <description value="What is the location of the organization where the patient is currently being admitted to for treatment?"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/LabOrder"/>
+      </reference>
+      <name value="Example Bundle - LabOrder"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/Covid19LongCovidPostCovidExample"/>
+      </reference>
+      <name value="Example Observation - Covid19LongCovidPostCovidExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-test-results"/>
+      </reference>
+      <name value="Lab Results"/>
+      <description value="The result of the lab test which determines whether the patient is infected with COVID19 or not"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/Covid19PatientExample"/>
+      </reference>
+      <name value="Example Patient - Covid19PatientExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/vs-yes-no"/>
+        <reference value="ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"/>
       </reference>
-      <name value="Yes No Unknown"/>
-      <description value="A list of options used to provide an answer"/>
-      <exampleBoolean value="false"/>
+      <name value="Reason for Assessment or Test Not Performed"/>
+      <description value="A list of reasons associated with the service request for the lab order"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-conditions-comorbidity"/>
+      </reference>
+      <name value="Conditions / Comorbidity"/>
+      <description value="List of conditions and comorbidities"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/LabCancellation"/>
+      </reference>
+      <name value="Example Bundle - LabCancellation"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-recovered-or-symptoms-resolved"/>
+      </reference>
+      <name value="Recovered Or Symptoms Resolved"/>
+      <description value="Has the individual fully recovered from symptoms associated with COVID19?"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/Covid19MedicationRequestExample"/>
+      </reference>
+      <name value="Example MedicationRequest - Covid19MedicationRequestExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Immunization"/>
+      </extension>
+      <reference>
+        <reference value="Immunization/Covid19VaccinationExample"/>
+      </reference>
+      <name value="Example Immunization - Covid19VaccinationExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-AdmissionTypes"/>
+      </reference>
+      <name value="Admission Types"/>
+      <description value="A list of admission types"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -874,7 +738,66 @@
       </reference>
       <name value="Lab Result Task Output"/>
       <description value="Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"/>
-      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/Covid19LabResultsDiagnosticReportExample"/>
+      </reference>
+      <name value="Example DiagnosticReport - Covid19LabResultsDiagnosticReportExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-conditions-or-comorbidities-present"/>
+      </reference>
+      <name value="Conditions or Comorbidities Present"/>
+      <description value="Does the individual have any known pre-existing conditions and/or comorbidities?"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-presentation"/>
+      </reference>
+      <name value="Presentation"/>
+      <description value="Determine if the COVID19 positive individual has any noticeable symptoms"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Immunization"/>
+      </extension>
+      <reference>
+        <reference value="Immunization/Covid19AssessmentVaccinationExample"/>
+      </reference>
+      <name value="Example Immunization - Covid19AssessmentVaccinationExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/Covid19TestResultExample"/>
+      </reference>
+      <name value="Example Observation - Covid19TestResultExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/Covid19LabOrderRejectionExample"/>
+      </reference>
+      <name value="Example Task - Covid19LabOrderRejectionExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -885,249 +808,16 @@
       </reference>
       <name value="Source of Information"/>
       <description value="Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis"/>
-      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Location"/>
+        <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="Location/Covid19AdmissionLocationExample"/>
+        <reference value="ValueSet/vs-yes-no"/>
       </reference>
-      <name value="Covid19 Admission Location example"/>
-      <description value="Covid19 Admission Location example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Encounter"/>
-      </extension>
-      <reference>
-        <reference value="Encounter/Covid19AssessmentEncounterExample"/>
-      </reference>
-      <name value="Covid19 Assessment Encounter example"/>
-      <description value="Covid19 Assessment Encounter example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Immunization"/>
-      </extension>
-      <reference>
-        <reference value="Immunization/Covid19AssessmentVaccinationExample"/>
-      </reference>
-      <name value="Covid19 Vaccine Type Administered example"/>
-      <description value="Covid19 Vaccine Type Administered example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Condition"/>
-      </extension>
-      <reference>
-        <reference value="Condition/Covid19ConditionsOrComorbidityExample"/>
-      </reference>
-      <name value="Covid19 Conditions or comorbidity example"/>
-      <description value="Covid19 Conditions or comorbidity example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/Covid19DeathExample"/>
-      </reference>
-      <name value="Covid19 Death"/>
-      <description value="Covid19 Death"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Condition"/>
-      </extension>
-      <reference>
-        <reference value="Condition/Covid19DiagnosisExample"/>
-      </reference>
-      <name value="Covid19 Diagnosis Example"/>
-      <description value="Covid19 Diagnosis Example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Task"/>
-      </extension>
-      <reference>
-        <reference value="Task/Covid19LabOrderCancellationExample"/>
-      </reference>
-      <name value="Covid19 Lab Order Cancellation  example"/>
-      <description value="Covid19 Lab Order Cancellation Task example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Task"/>
-      </extension>
-      <reference>
-        <reference value="Task/Covid19LabOrderRejectionExample"/>
-      </reference>
-      <name value="Covid19 Lab Order Cancellation  example"/>
-      <description value="Covid19 Lab Order Cancellation Task example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="DiagnosticReport"/>
-      </extension>
-      <reference>
-        <reference value="DiagnosticReport/Covid19LabResultsDiagnosticReportExample"/>
-      </reference>
-      <name value="Covid19 Lab Results Diagnostic Report example"/>
-      <description value="Covid19 Lab Results Diagnostic Report example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/Covid19LongCovidPostCovidExample"/>
-      </reference>
-      <name value="Covid19 Long Covid / Post-Covid"/>
-      <description value="Covid19 Long Covid / Post-Covid"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="MedicationRequest"/>
-      </extension>
-      <reference>
-        <reference value="MedicationRequest/Covid19MedicationRequestExample"/>
-      </reference>
-      <name value="Covid19 Treatment dispensed or prescribed example"/>
-      <description value="Covid19 Treatment dispensed or prescribed example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Organization"/>
-      </extension>
-      <reference>
-        <reference value="Organization/Covid19OrganizationExample"/>
-      </reference>
-      <name value="Covid19 Organization example"/>
-      <description value="Covid19 Organization example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Patient"/>
-      </extension>
-      <reference>
-        <reference value="Patient/Covid19PatientExample"/>
-      </reference>
-      <name value="Covid19 Patient example"/>
-      <description value="Covid19 Patient example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/Covid19PresentingSymptomsExample"/>
-      </reference>
-      <name value="Covid19 Symptom example"/>
-      <description value="Covid19 Symptom example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/Covid19RecoveredOrSymptomsResolvedExample"/>
-      </reference>
-      <name value="Covid19 Recovered Or Symptoms Resolved"/>
-      <description value="Covid19 Recovered Or Symptoms Resolved"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ServiceRequest"/>
-      </extension>
-      <reference>
-        <reference value="ServiceRequest/Covid19ServiceRequestExample"/>
-      </reference>
-      <name value="Covid19 Lab Order example"/>
-      <description value="Covid19 Lab Order example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Location"/>
-      </extension>
-      <reference>
-        <reference value="Location/Covid19ServiceRequestLocationExample"/>
-      </reference>
-      <name value="Covid19 Service Request Location example"/>
-      <description value="Covid19 Service Request Location example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
-      </extension>
-      <reference>
-        <reference value="Specimen/Covid19SpecimenExample"/>
-      </reference>
-      <name value="Covid19 Specimen example"/>
-      <description value="Covid19 Specimen example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Specimen"/>
-      </extension>
-      <reference>
-        <reference value="Specimen/Covid19SpecimenLabResultExample"/>
-      </reference>
-      <name value="Covid19 Specimen example"/>
-      <description value="Covid19 Specimen example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/Covid19TestResultExample"/>
-      </reference>
-      <name value="Covid19 Lab Results example"/>
-      <description value="Covid19 Lab Results example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Immunization"/>
-      </extension>
-      <reference>
-        <reference value="Immunization/Covid19VaccinationExample"/>
-      </reference>
-      <name value="Covid19 Vaccination example"/>
-      <description value="Covid19 Vaccination example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/Covid19VaccineDoseEverReceivedExample"/>
-      </reference>
-      <name value="Covid19 Vaccine Dose Received example"/>
-      <description value="Covid19 Vaccine Dose Received example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"/>
+      <name value="Yes No Unknown"/>
+      <description value="A list of options used to provide an answer"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1136,64 +826,18 @@
       <reference>
         <reference value="Bundle/EMR"/>
       </reference>
-      <name value="Covid19 Case Report - Full Bundle Example"/>
-      <description value="Example of a clinical bundle representing a case report"/>
-      <exampleBoolean value="true"/>
+      <name value="Example Bundle - EMR"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
+        <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="Bundle/LabCancellation"/>
+        <reference value="ValueSet/vs-covid19-specimen-type"/>
       </reference>
-      <name value="Cares Submit Lab Cancellation Bundle Example"/>
-      <description value="Cares Submit Lab Cancellation Bundle Example"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/LabOrder"/>
-      </reference>
-      <name value="Cares Submit Lab Order Bundle Example"/>
-      <description value="Cares Submit Lab Order Bundle Example"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Task"/>
-      </extension>
-      <reference>
-        <reference value="Task/LabOrderTaskExample"/>
-      </reference>
-      <name value="Lab Order example"/>
-      <description value="Lab Order example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/LabRejection"/>
-      </reference>
-      <name value="Cares Submit Lab Rejection Bundle Example"/>
-      <description value="Cares Submit Lab Rejection Bundle Example"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/LabResult"/>
-      </reference>
-      <name value="Cares Submit Lab Result Bundle Example"/>
-      <description value="Cares Submit Lab Result Bundle Example"/>
-      <exampleBoolean value="true"/>
+      <name value="Specimen Type"/>
+      <description value="The type of specimen sample that was collected by the lab"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1202,20 +846,328 @@
       <reference>
         <reference value="Task/LabResultTaskExample"/>
       </reference>
-      <name value="Lab Result Task example"/>
-      <description value="Lab Result Task example"/>
+      <name value="Example Task - LabResultTaskExample"/>
       <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Practitioner"/>
+        <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="Practitioner/PractitionerExample"/>
+        <reference value="StructureDefinition/covid19-organization"/>
       </reference>
-      <name value="Practitioner example"/>
-      <description value="Practitioner example"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner"/>
+      <name value="Organization"/>
+      <description value="Administering Organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-specimen"/>
+      </reference>
+      <name value="Specimen"/>
+      <description value="The test sample that was collected for the initiated lab order"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-service-request-location"/>
+      </reference>
+      <name value="Lab Order Request Location"/>
+      <description value="What is the location of the organization responsible for conducting the examination of the individual's sample?"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-practitioner"/>
+      </reference>
+      <name value="Practitioner"/>
+      <description value="The healthcare professional who has been assigned to a given lab task"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-symptoms"/>
+      </reference>
+      <name value="Presenting symptoms"/>
+      <description value="A list of symptoms"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-lab-task-output"/>
+      </reference>
+      <name value="Lab Result Task Output"/>
+      <description value="Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-diagnosis"/>
+      </reference>
+      <name value="Diagnosis"/>
+      <description value="Confirmation of the diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/Covid19DeathExample"/>
+      </reference>
+      <name value="Example Observation - Covid19DeathExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-cancellation-reason"/>
+      </reference>
+      <name value="Cancellation Reasons"/>
+      <description value="A list of reasons as a result of the lab task being cancelled"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-vaccine-dose-ever-received"/>
+      </reference>
+      <name value="Vaccine Dose Ever Received"/>
+      <description value="Has the individual received at least one shot of the vaccine at any point in time in the past?"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-encounter"/>
+      </reference>
+      <name value="Encounter"/>
+      <description value="A record of the individual's visit at the organization"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/LabResult"/>
+      </reference>
+      <name value="Example Bundle - LabResult"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/Covid19RecoveredOrSymptomsResolvedExample"/>
+      </reference>
+      <name value="Example Observation - Covid19RecoveredOrSymptomsResolvedExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-lab-task"/>
+      </reference>
+      <name value="Lab Task"/>
+      <description value="Assists with tracking the state of the lab order and its completion status"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-source-of-info"/>
+      </reference>
+      <name value="Source of Information"/>
+      <description value="Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-diagnostic-report"/>
+      </reference>
+      <name value="Diagnostic Report"/>
+      <description value="A report as a result of the lab task being completed"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/Covid19DiagnosisExample"/>
+      </reference>
+      <name value="Example Condition - Covid19DiagnosisExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-covid19-test-result"/>
+      </reference>
+      <name value="Test Result"/>
+      <description value="COVID19 diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/Covid19AdmissionLocationExample"/>
+      </reference>
+      <name value="Example Location - Covid19AdmissionLocationExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/Covid19SpecimenLabResultExample"/>
+      </reference>
+      <name value="Example Specimen - Covid19SpecimenLabResultExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-date-last-hospitalised"/>
+      </reference>
+      <name value="Date Last Hospitalised"/>
+      <description value="When last was the individual admitted to hospital?"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-death"/>
+      </reference>
+      <name value="Death"/>
+      <description value="An event assoicated with the death of an individual who has been diagnosed with COVID19"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/LabRejection"/>
+      </reference>
+      <name value="Example Bundle - LabRejection"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/Covid19ConditionsOrComorbidityExample"/>
+      </reference>
+      <name value="Example Condition - Covid19ConditionsOrComorbidityExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/Covid19PresentingSymptomsExample"/>
+      </reference>
+      <name value="Example Observation - Covid19PresentingSymptomsExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-vaccine-types"/>
+      </reference>
+      <name value="Vaccine Types"/>
+      <description value="A list of COVID19 manufacturers"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-next-vaccination"/>
+      </reference>
+      <name value="Date of next vaccination"/>
+      <description value="When must the individual return to the organization for the next scheduled vaccination?"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-presenting-symptoms"/>
+      </reference>
+      <name value="Presenting Symptoms"/>
+      <description value="Existing symptoms which may help with diagnosis"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/Covid19AssessmentEncounterExample"/>
+      </reference>
+      <name value="Example Encounter - Covid19AssessmentEncounterExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-vaccination"/>
+      </reference>
+      <name value="Immunization Tracking"/>
+      <description value="Administer a suitable vaccine based on the most recent lab result"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/covid19-patient"/>
+      </reference>
+      <name value="Patient"/>
+      <description value="The individual receiving COVID19 services"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/LabOrderTaskExample"/>
+      </reference>
+      <name value="Example Task - LabOrderTaskExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
@@ -1229,15 +1181,7 @@
           <valueUrl value="index.html"/>
         </extension>
         <nameUrl value="index.html"/>
-        <title value="Home"/>
-        <generation value="html"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="changes.html"/>
-        </extension>
-        <nameUrl value="changes.html"/>
-        <title value="Changes"/>
+        <title value="COVID19 Case Reporting"/>
         <generation value="html"/>
       </page>
       <page>
@@ -1245,15 +1189,7 @@
           <valueUrl value="emr-bundle.html"/>
         </extension>
         <nameUrl value="emr-bundle.html"/>
-        <title value="Emr Bundle"/>
-        <generation value="html"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="lab-cancellation-bundle.html"/>
-        </extension>
-        <nameUrl value="lab-cancellation-bundle.html"/>
-        <title value="Lab Cancellation Bundle"/>
+        <title value="EMR Bundle"/>
         <generation value="html"/>
       </page>
       <page>
@@ -1266,14 +1202,6 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="lab-rejection-bundle.html"/>
-        </extension>
-        <nameUrl value="lab-rejection-bundle.html"/>
-        <title value="Lab Rejection Bundle"/>
-        <generation value="html"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="lab-result-bundle.html"/>
         </extension>
         <nameUrl value="lab-result-bundle.html"/>
@@ -1282,13 +1210,45 @@
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="lab-cancellation-bundle.html"/>
+        </extension>
+        <nameUrl value="lab-cancellation-bundle.html"/>
+        <title value="Lab Cancellation Bundle"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="lab-rejection-bundle.html"/>
+        </extension>
+        <nameUrl value="lab-rejection-bundle.html"/>
+        <title value="Lab Rejection Bundle"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="vaccination_status.html"/>
         </extension>
         <nameUrl value="vaccination_status.html"/>
-        <title value="Vaccination Status"/>
+        <title value="COVID19 Vaccination Statuses"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="changes.html"/>
+        </extension>
+        <nameUrl value="changes.html"/>
+        <title value="IG Change History"/>
         <generation value="html"/>
       </page>
     </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input\history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input\scenarios"/>
+    </parameter>
     <parameter>
       <code value="path-resource"/>
       <value value="input/capabilities"/>
@@ -1320,10 +1280,6 @@
     <parameter>
       <code value="path-resource"/>
       <value value="input/vocabulary"/>
-    </parameter>
-    <parameter>
-      <code value="path-resource"/>
-      <value value="input/maps"/>
     </parameter>
     <parameter>
       <code value="path-resource"/>
