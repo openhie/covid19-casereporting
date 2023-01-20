@@ -6,14 +6,15 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://icd.who.int/icd11/mms</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>XM4YL8</td><td>AstraZeneca/Oxford vaccine</td></tr><tr><td>XM6QV1</td><td>Johnson and Johnson</td></tr><tr><td>XM3DT5</td><td>Moderna</td></tr><tr><td>XM8NQ0</td><td>Pfizer/BionTech</td></tr><tr><td>XM8866</td><td>Sinopharm</td></tr><tr><td>XM7HT3</td><td>Sinovac</td></tr><tr><td>XM1G90</td><td>COVAXIN</td></tr><tr><td>XM9T65</td><td>Covovax</td></tr><tr><td>XM5JC5</td><td>Nuvaxovid</td></tr><tr><td>XM1AG7</td><td>CanSino</td></tr></table></li></ul></div>"
   },
   "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "VSVaccineTypes",
   "title" : "Vaccine Types",
   "status" : "active",
   "experimental" : false,
-  "date" : "2023-01-20T12:42:46+00:00",
+  "date" : "2023-01-20T13:20:19+00:00",
   "publisher" : "Jembi Health Systems",
   "contact" : [{
+    "name" : "Jembi Health Systems",
     "telecom" : [{
       "system" : "url",
       "value" : "https://www.jembi.org"
@@ -22,12 +23,21 @@
       "system" : "email",
       "value" : "info@jembi.org"
     }]
+  },
+  {
+    "name" : "Richard Langford",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "richard.langford@jembi.org",
+      "use" : "work"
+    }]
   }],
   "description" : "A list of COVID19 manufacturers",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-      "code" : "001"
+      "code" : "001",
+      "display" : "World"
     }]
   }],
   "compose" : {
