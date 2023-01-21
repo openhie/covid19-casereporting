@@ -267,7 +267,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 string {[]} {[]}","Recommended number of doses for immunity","The recommended number of doses to achieve immunity.","The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).","","","","","","","","",,,,,"",,,,"Immunization.protocolApplied.seriesDoses[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "covid19-ever-hospitalised","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Ever Hospitalized","Has the individual been admitted to hospital at any point in time in the past?","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ",""
 "covid19-ever-hospitalised","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -309,7 +309,7 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "covid19-conditions-or-comorbidities","Condition.extension:extCovid19ConditionsOrComorbiditiesPresent","Condition.extension","extCovid19ConditionsOrComorbiditiesPresent","","",1,1,"","","","Extension {[CanonicalType[http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present]]} {[]}
-","Conditions or Comorbidities Present","Does the individual have any known pre-existing conditions and/or comorbidities?","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "covid19-conditions-or-comorbidities","Condition.modifierExtension","Condition.modifierExtension","","extensions
@@ -1621,7 +1621,7 @@ The alternate way is to use the value element for actual observations and use th
 ","Provides guide for interpretation of component result","Guidance on how to interpret the value by comparison to a normal or recommended range.","Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.","Knowing what values are considered ""normal"" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.","","","","","","","",,,,,"",,,,"Observation.component.referenceRange",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "covid19-conditions-or-comorbidities-present","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Conditions or Comorbidities Present","Does the individual have any known pre-existing conditions and/or comorbidities?","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ",""
 "covid19-conditions-or-comorbidities-present","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -2589,15 +2589,15 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "covid19-encounter","Encounter.extension:nextVisit","Encounter.extension","nextVisit","","",0,1,"","","","Extension {[CanonicalType[http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination]]} {[]}
-","Date of next vaccination","When must the individual return to the organization for the next scheduled vaccination?","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "covid19-encounter","Encounter.extension:extCovid19EverHospitalised","Encounter.extension","extCovid19EverHospitalised","","",0,1,"","","","Extension {[CanonicalType[http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised]]} {[]}
-","Ever Hospitalized","Has the individual been admitted to hospital at any point in time in the past?","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "covid19-encounter","Encounter.extension:extCovid19DateLastHospitalised","Encounter.extension","extCovid19DateLastHospitalised","","",0,1,"","","","Extension {[CanonicalType[http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised]]} {[]}
-","Date Last Hospitalised","When last was the individual admitted to hospital?","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","Optional Extensions Element","Optional Extension Element - found in all resources.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "covid19-encounter","Encounter.modifierExtension","Encounter.modifierExtension","","extensions
@@ -3171,7 +3171,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Entire report as issued","Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.","""application/pdf"" is recommended as the most reliable and interoperable in this context.","Gives laboratory the ability to provide its own fully formatted report for clinical fidelity.","","","","","","","",,,,,"",,,,"DiagnosticReport.presentedForm",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "covid19-date-last-hospitalised","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Date Last Hospitalised","When last was the individual admitted to hospital?","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ",""
 "covid19-date-last-hospitalised","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
@@ -3393,7 +3393,7 @@ The alternate way is to use the value element for actual observations and use th
 ","Provides guide for interpretation of component result","Guidance on how to interpret the value by comparison to a normal or recommended range.","Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.","Knowing what values are considered ""normal"" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.","","","","","","","",,,,,"",,,,"Observation.component.referenceRange",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "covid19-next-vaccination","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Date of next vaccination","When must the individual return to the organization for the next scheduled vaccination?","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
 ",""
 "covid19-next-vaccination","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
