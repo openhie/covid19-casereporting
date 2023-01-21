@@ -127,14 +127,22 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # file name extension.  Any subproperties that are valid filenames
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
-#pages:
-#  index.md:
-#    title: Example Home
-#  implementation.xml:
-#  examples.xml:
-#    title: Examples Overview
-#    simpleExamples.xml:
-#    complexExamples.xml:
+
+pages:
+  index.xml:
+    title: COVID19 Case Reporting
+  specifications.xml:
+    title: Specifications
+    emr-bundle.xml:
+      title: EMR Bundle
+    lab-order-bundle.xml:
+      title: Lab Order Bundle
+    lab-result-bundle.xml:
+      title: Lab Result Bundle
+    lab-rejection-bundle.xml:
+      title: Lab Rejection Bundle
+    lab-cancellation-bundle.xml:
+      title: Lab Cancellation Bundle
 
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and
@@ -157,14 +165,16 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # currently only supports one level deep on sub-menus.
 # To provide a custom menu.xml file, do not include this property and
 # include a `menu.xml` file in input/includes.
-#menu:
-#  Home: index.html
-#  Artifacts:
-#    Profiles: artifacts.html#2
-#    Extensions: artifacts.html#3
-#    Value Sets: artifacts.html#4
-#  Downloads: downloads.html
-#  History: http://hl7.org/fhir/us/example/history.html
+menu:
+  Home: index.html
+  Specifications:
+    EMR Bundle: emr-bundle.html
+    Lab Order Bundle: lab-order-bundle.html
+    Lab Result Bundle: lab-result-bundle.html
+    Lab Rejection Bundle: lab-rejection-bundle.html
+    Lab Cancellation Bundle: lab-cancellation-bundle.html
+    Artifacts: examples.html
+
 
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
@@ -179,7 +189,7 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # The FSHOnly flag indicates if only FSH resources should be exported.
 # If set to true, no IG related content will be generated.
 # The default value for this property is false.
-FSHOnly: true
+FSHOnly: false
 
 # When set to true, the "short" and "definition" field on the root element of an Extension will
 # be set to the "Title" and "Description" of that Extension. Default is true.
