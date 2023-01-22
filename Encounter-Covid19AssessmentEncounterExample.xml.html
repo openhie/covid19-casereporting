@@ -102,7 +102,39 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul
+              <style>
+	ul {
+		position: absolute;
+		margin: 0;
+		list-style:none;
+	}
+
+	li {
+		display: inline-block;
+		padding: 5px 10px;
+		position: relative;
+	}
+	li:hover > ul {
+		display: block;
+	}
+	ul ul {
+		position: absolute;
+		display: none;
+		margin: 0;
+		padding: 5px 10px;
+	}
+	ul ul li {
+		display: block;
+	}
+
+	ul ul ul {
+		position: absolute;
+		top: 0;
+		left: 100%;
+	}
+</style>
+
+<ul
 	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
 	<li>
 		<a href="index.html">Home</a>
@@ -321,7 +353,7 @@
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Jan 21, 2023 18:48+0000">2023-01-21</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Jan 22, 2023 13:29+0000">2023-01-22</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
