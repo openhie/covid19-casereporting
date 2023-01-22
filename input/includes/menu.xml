@@ -1,35 +1,3 @@
-<style>
-	ul {
-		position: absolute;
-		margin: 0;
-		list-style:none;
-	}
-
-	li {
-		display: inline-block;
-	
-		position: relative;
-	}
-	li:hover > ul {
-		display: block;
-	}
-	ul ul {
-		position: absolute;
-		display: none;
-		margin: 0;
-		
-	}
-	ul ul li {
-		display: block;
-	}
-
-	ul ul ul {
-		position: absolute;
-		top: 0;
-		left: 100%;
-	}
-</style>
-
 <ul
 	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
 	<li>
@@ -37,30 +5,24 @@
 	</li>
 	
 
-	<li>
-		<a data-toggle="dropdown" href="#">Specifications<b class="caret"></b>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Bundles<b class="caret"></b>
 		</a>
-		<ul>
+		<ul class="dropdown-menu">
 			<li>
-				<a data-toggle="dropdown" href="#">Bundles<b class="caret"></b>
-				</a>
-				<ul>
-					<li>
-						<a href="emr-bundle.html">EMR</a>
-					</li>
-					<li>
-						<a href="lab-order-bundle.html">Lab Order</a>
-					</li>
-					<li>
-						<a href="lab-result-bundle.html">Lab Result</a>
-					</li>
-					<li>
-						<a href="lab-rejection-bundle.html">Lab Rejection</a>
-					</li>
-					<li>
-						<a href="lab-order-bundle.html">Lab Cancellation</a>
-					</li>
-				</ul>
+				<a href="emr-bundle.html">EMR</a>
+			</li>
+			<li>
+				<a href="lab-order-bundle.html">Lab Order</a>
+			</li>
+			<li>
+				<a href="lab-result-bundle.html">Lab Result</a>
+			</li>
+			<li>
+				<a href="lab-rejection-bundle.html">Lab Rejection</a>
+			</li>
+			<li>
+				<a href="lab-order-bundle.html">Lab Cancellation</a>
 			</li>
 		</ul>
 	</li>
