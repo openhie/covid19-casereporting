@@ -1,3 +1,35 @@
+<style>
+	ul {
+		position: absolute;
+		margin: 0;
+		list-style:none;
+	}
+
+	li {
+		display: inline-block;
+		padding: 5px 10px;
+		position: relative;
+	}
+	li:hover > ul {
+		display: block;
+	}
+	ul ul {
+		position: absolute;
+		display: none;
+		margin: 0;
+		padding: 5px 10px;
+	}
+	ul ul li {
+		display: block;
+	}
+
+	ul ul ul {
+		position: absolute;
+		top: 0;
+		left: 100%;
+	}
+</style>
+
 <ul
 	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
 	<li>
