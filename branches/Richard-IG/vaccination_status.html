@@ -100,44 +100,110 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <ul
-	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
-	<li>
-		<a href="index.html">Home</a>
-	</li>
-	
+              *,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
 
-	<li class="dropdown">
-		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Bundles<b class="caret"></b>
-		</a>
-		<ul class="dropdown-menu">
-			<li>
-				<a href="emr-bundle.html">EMR</a>
-			</li>
-			<li>
-				<a href="lab-order-bundle.html">Lab Order</a>
-			</li>
-			<li>
-				<a href="lab-result-bundle.html">Lab Result</a>
-			</li>
-			<li>
-				<a href="lab-rejection-bundle.html">Lab Rejection</a>
-			</li>
-			<li>
-				<a href="lab-cancellation-bundle.html">Lab Cancellation</a>
-			</li>
-		</ul>
-	</li>
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 10px;
+}
 
-	
-	<li>
-		<a href="artifacts.html">Artifact</a>
-	</li>
-	
-	<li>
-		<a href="toc.html">Table of Contents</a>
-	</li>
-</ul>      
+.dropdownv2 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100px;
+    background-color: #0abf53;
+}
+
+.dropdownv2 li {
+    position: relative;
+}
+
+.dropdownv2 li a {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.dropdownv2 li ul {
+    position: absolute;
+    top: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    line-height: normal;
+    background-color: #333;
+}
+
+.dropdownv2 li ul li a {
+    text-align: left;
+    color: #cccccc;
+    font-size: 14px;
+    padding: 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdownv2 li ul li a:hover {
+    background-color: #0abf53;
+    color: #ffffff;
+}
+
+.dropdownv2 li ul li ul {
+    left: 100%;
+    top: 0;
+}
+
+ul li:hover>a {
+    background-color: #0abf53;
+    color: #ffffff !important;
+}
+
+ul li:hover>ul {
+    display: block;
+}
+
+<ul class="dropdownv2">
+        <li><a href="#">Menu</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Technical</a>
+                    <ul>
+                        <li><a href="#">Message Bundles</a>
+                            <ul>
+                               <li>
+									<a href="emr-bundle.html">EMR</a>
+								</li>
+								<li>
+									<a href="lab-order-bundle.html">Lab Order</a>
+								</li>
+								<li>
+									<a href="lab-result-bundle.html">Lab Result</a>
+								</li>
+								<li>
+									<a href="lab-rejection-bundle.html">Lab Rejection</a>
+								</li>
+								<li>
+									<a href="lab-cancellation-bundle.html">Lab Cancellation</a>
+								</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="artifacts.html">Artifacts</a></li>
+				<li><a href="toc.html">Table of Contents</a></li>
+            </ul>
+        </li>
+    </ul>    
             </div>  <!-- /.nav-collapse -->
           </div>  <!-- /.container -->
         </nav>  <!-- /.navbar -->
@@ -272,7 +338,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 23, 2023 10:32+0000">2023-01-23</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 23, 2023 12:28+0000">2023-01-23</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
