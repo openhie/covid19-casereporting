@@ -1,10 +1,25 @@
-{% include custom-main-menu.css %}
-
-<ul class="dropdownv2">
-        <li><a href="#">Menu</a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Technical</a>
+<ul class="dropdownv2" xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+        <li style="position: relative;"><a href="#">Menu</a>
+            <ul style="position: absolute;
+						top: 100%;
+						margin: 0;
+						padding: 0;
+						list-style: none;
+						display: none;
+						line-height: normal;
+						background-color: #333;">
+                <li><a style=" text-align: left;
+					color: #cccccc;
+					font-size: 14px;
+					padding: 10px;
+					display: block;
+					white-space: nowrap;" href="index.html">Home</a></li>
+                <li><a style=" text-align: left;
+					color: #cccccc;
+					font-size: 14px;
+					padding: 10px;
+					display: block;
+					white-space: nowrap;" href="#">Technical</a>
                     <ul>
                         <li><a href="#">Message Bundles</a>
                             <ul>
