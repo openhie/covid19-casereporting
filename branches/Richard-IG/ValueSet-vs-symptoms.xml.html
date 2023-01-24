@@ -102,10 +102,75 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <link href="assets/css/custom-main-menu.css" rel="stylesheet"/>
+              <style type='text/css'>
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
 
-<ul
-	xmlns="http://www.w3.org/1999/xhtml" class="dropdownv2">
+.dropdown {
+   padding: 0; margin: 0;
+    list-style: none;
+    width: 100px;
+    background-color: #0abf53;
+}
+
+.dropdown li {
+    position: relative;
+	z-index: 999;
+}
+
+.dropdown li a {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+   padding: 15px; 
+}
+
+.dropdown li ul {
+    position: absolute;
+    top: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    line-height: normal;
+    background-color: #1F4D2E;
+}
+
+.dropdown li ul li a {
+    text-align: left;
+    color: #cccccc;
+    font-size: 14px;
+    padding: 10px;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown li ul li a:hover {
+    color: white;
+}
+
+.dropdown li ul li ul {
+    left: 100%;
+    top: 0;
+}
+
+#mainMenuOptions li:hover>a {
+    background-color: #0abf53;
+    color: #ffffff !important;
+}
+
+#mainMenuOptions li:hover>ul {
+    display: block;
+}
+</style>
+
+<ul id="mainMenuOptions"
+	xmlns="http://www.w3.org/1999/xhtml" class="dropdown">
 	<li><a href="#">Menu</a>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -246,7 +311,7 @@
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Presenting symptoms&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2023-01-24T08:11:51+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2023-01-24T11:54:26+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Jembi Health Systems&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
@@ -381,7 +446,7 @@
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 24, 2023 08:11+0000">2023-01-24</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 24, 2023 11:54+0000">2023-01-24</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
