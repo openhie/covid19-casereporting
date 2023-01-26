@@ -1,0 +1,60 @@
+@startuml
+left to right direction
+actor "Nurse" as nurse
+rectangle EMR {
+  usecase "Register Client" as UC1
+  usecase "Assess Client" as UC2
+  usecase "Document Screening Information" as UC3
+  usecase "Document Symptoms" as UC4
+  usecase "Document Comorbidities" as UC5
+  usecase "Document Hospital Encounters" as UC6
+  usecase "Document Diagnosis" as UC8
+  usecase "Document Treatment Information" as UC9
+  usecase "Document Client Outcome" as UC10
+  usecase "Submit Lab Order" as UC11
+  usecase "Document Vaccination Events" as UC12
+  usecase "Generate Reports" as UC13
+}
+
+nurse --> UC1
+nurse --> UC2
+nurse --> UC10
+nurse --> UC11
+nurse --> UC12
+nurse --> UC13
+
+
+(UC2) ..> (UC3)
+(UC2) ..> (UC4)
+(UC2) ..> (UC5)
+(UC2) ..> (UC6)
+(UC2) ..> (UC12)
+(UC2) ..> (UC8)
+(UC2) ..> (UC9)
+
+actor "Lab Assistant" as lab
+rectangle Laboratory {
+  usecase "Sample Collection" as UC14
+  usecase "Process Lab Request" as UC15
+  usecase "Document Lab Result" as UC16
+  usecase "Reject Lab Order" as UC17
+  usecase "Cancel Lab Order" as UC18
+  usecase "Document Reason For Not Performing Test" as UC19
+}
+
+lab --> UC14
+lab --> UC15
+
+
+(UC15) ..> (UC16)
+(UC15) ..> (UC17)
+(UC15) ..> (UC18)
+
+(UC18) ..> (UC19)
+(UC17) ..> (UC19)
+
+(UC11) ..> Laboratory
+
+(UC16) ..> (UC8)
+
+@enduml
