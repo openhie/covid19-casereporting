@@ -100,8 +100,8 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <style type='text/css'>
-*,
+              <style>
+    *,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -145,9 +145,6 @@
     padding: 10px;
     display: block;
     white-space: nowrap;
-}
-
-.dropdown li ul li a:hover {
 }
 
 .dropdown li ul li ul {
@@ -247,30 +244,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   
   
   <div xmlns="http://www.w3.org/1999/xhtml" lang="en"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#1">Categories</a></li><li><a href="#2">Vaccine Series</a></li><li><a href="#3">References</a></li></ul></div>
+  <style>
+    .heading {
+    display: block;
+    font-family: verdana;
+    line-height: 1.2em;
+    font-size: 1.2em;;
+    margin: 0 0 3px 0;
+    margin-top: 10px; 
+    color: #337AB7;
+}
+  </style>
+  
   <p>The following categories of vaccination statuses exist in order to measure an individual's progress towards being up-to-date vaccinated.</p>
 
   <a name="1"/><h3>Categories</h3> <a name="vaccine-status-categories">  </a>
   
  
-  <p style="display: block;   font-family: verdana;  line-height: 1.2em;  font-size: 1.2em;;  margin: 0 0 3px 0;  margin-top: 10px;    color: #337AB7;">Unvaccinated</p>
+  <p class="heading">Unvaccinated</p>
 
   <p>If the individual has not had at least one vaccine administered.</p>
   
 
 
-  <p style="display: block;   font-family: verdana;  line-height: 1.2em;  font-size: 1.2em;;  margin: 0 0 3px 0;  margin-top: 10px;   color: #337AB7;">Partially Vaccinated</p>
+  <p class="heading">Partially Vaccinated</p>
   
   <p>If the individual has had at least one vaccine administered using any manufacturer based on their age and for the primary series.</p>
   
 
   
-  <p style="display: block;   font-family: verdana;  line-height: 1.2em;  font-size: 1.2em;;  margin: 0 0 3px 0;  margin-top: 10px;   color: #337AB7;">Fully Vaccinated</p>
+  <p class="heading">Fully Vaccinated</p>
 
   <p>If the individual has had all vaccines administered using the exact same manufacturer based on their age and for the primary series but the individual has not yet received the booster vaccine issued by the exact same manufacturer.</p>
   
 
   
-  <p style="display: block;   font-family: verdana;  line-height: 1.2em;  font-size: 1.2em;;  margin: 0 0 3px 0;  margin-top: 10px;   color: #337AB7;" id="up-to-date-vaccinated">Up-to-Date Vaccinated</p>
+  <p class="heading" id="up-to-date-vaccinated">Up-to-Date Vaccinated</p>
   
   <p>The following algorithm is used when determining whether a patient is up-to-date vaccinated.</p>
   
@@ -344,7 +353,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 27, 2023 13:52+0000">2023-01-27</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 27, 2023 14:37+0000">2023-01-27</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
