@@ -13,7 +13,7 @@ rectangle EMR {
   usecase "Document Client Outcome" as UC10
   usecase "Submit Lab Order" as UC11
   usecase "Document Vaccination Events" as UC12
-  usecase "Generate Reports" as UC13
+  
 }
 
 nurse --> UC1
@@ -21,18 +21,16 @@ nurse --> UC2
 nurse --> UC10
 nurse --> UC11
 nurse --> UC12
-nurse --> UC13
 
+(UC2) <.. (UC3) : "<<extends>>"
+(UC2) <.. (UC4) : "<<extends>>"
+(UC2) <.. (UC5) : "<<extends>>"
+(UC2) <.. (UC6) : "<<extends>>"
+(UC2) <.. (UC12) : "<<extends>>"
+(UC2) <.. (UC8) : "<<extends>>"
+(UC2) <.. (UC9) : "<<extends>>"
 
-(UC2) ..> (UC3)
-(UC2) ..> (UC4)
-(UC2) ..> (UC5)
-(UC2) ..> (UC6)
-(UC2) ..> (UC12)
-(UC2) ..> (UC8)
-(UC2) ..> (UC9)
-
-actor "Lab Assistant" as lab
+actor "Lab Assistant" as labAssistant
 rectangle Laboratory {
   usecase "Sample Collection" as UC14
   usecase "Process Lab Request" as UC15
@@ -42,19 +40,29 @@ rectangle Laboratory {
   usecase "Document Reason For Not Performing Test" as UC19
 }
 
-lab --> UC14
-lab --> UC15
+labAssistant --> UC14
+labAssistant --> UC15
 
 
-(UC15) ..> (UC16)
-(UC15) ..> (UC17)
-(UC15) ..> (UC18)
+(UC15) <.. (UC16) : "<<extends>>"
+(UC15) <.. (UC17) : "<<extends>>"
+(UC15) <.. (UC18) : "<<extends>>"
 
-(UC18) <.. (UC19)
-(UC17) <.. (UC19)
+(UC18) ..> (UC19) : "<<include>>"
+(UC17) ..> (UC19) : "<<include>>"
 
 (UC11) ..> Laboratory
 
-'(UC16) ..> (UC8)
+(UC16) ..> EMR : "submit lab result"
+
+actor "Stakeholder" as stakeholder
+rectangle "Centralised Data Repository" as cdr {
+  usecase "Generate Reports" as UC20
+}
+
+stakeholder --> UC20
+
+EMR ..> cdr : "submit EMR data"
+Laboratory ..> cdr : "submit lab data"
 
 @enduml
