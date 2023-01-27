@@ -100,8 +100,8 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <style type='text/css'>
-*,
+              <style>
+    *,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -145,9 +145,6 @@
     padding: 10px;
     display: block;
     white-space: nowrap;
-}
-
-.dropdown li ul li a:hover {
 }
 
 .dropdown li ul li ul {
@@ -247,13 +244,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   
   
   <div xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <style>
+    .heading {
+    display: block;
+    font-family: verdana;
+    line-height: 1.2em;
+    font-size: 1.2em;;
+    margin: 0 0 3px 0;
+    margin-top: 10px; 
+    color: #337AB7;
+}
+  </style>
+
     <a name="1"/><h3>Use Cases</h3> <a name="usecase-description">  </a>
 
     <p>
         The following uses cases have been identified for this implementation guide.
     </p>
 
-    <p style="display: block;         font-family: verdana;         line-height: 1.2em;         font-size: 1.2em;;         margin: 0 0 3px 0;         margin-top: 10px;          color: #337AB7;">Use Case Diagram</p>
+    <p class="heading">Use Case Diagram</p>
     <p/>
     
     <figure>
@@ -368,10 +377,10 @@ Country: GB
         <figcaption>Use Case Diagram</figcaption>
     </figure>
 
-   <p style="display: block;         font-family: verdana;         line-height: 1.2em;         font-size: 1.2em;;         margin: 0 0 3px 0;         margin-top: 10px;          color: #337AB7;">Use Case Context</p>
+   <p class="heading">Use Case Context</p>
 
     <p>
-        Add text...
+        This use case supports integration between the EMR and the lab systems in order enable effective  
     </p>
 </div>
 </div>
@@ -397,7 +406,7 @@ Country: GB
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 27, 2023 08:34+0000">2023-01-27</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 27, 2023 14:37+0000">2023-01-27</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
