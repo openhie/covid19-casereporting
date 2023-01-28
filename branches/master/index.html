@@ -100,8 +100,8 @@
             </button>
             <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
             <div class="nav-collapse collapse navbar-inverse-collapse">
-              <style type='text/css'>
-*,
+              <style>
+    *,
 *::before,
 *::after {
     box-sizing: border-box;
@@ -145,9 +145,6 @@
     padding: 10px;
     display: block;
     white-space: nowrap;
-}
-
-.dropdown li ul li a:hover {
 }
 
 .dropdown li ul li ul {
@@ -268,7 +265,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2023-01-27
+            as of 2023-01-28
           
         
       </td>
@@ -286,6 +283,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   
   
   <div xmlns="http://www.w3.org/1999/xhtml" lang="en"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#1">Introduction</a></li><li><a href="#2">Technical</a></li><li><a href="#3">Intellectual Property Considerations</a></li><li><a href="#4">Disclaimer</a></li><li><a href="#5">Credits and Acknowledgements</a></li></ul></div>
+  <style>
+    .heading {
+    display: block;
+    font-family: verdana;
+    line-height: 1.2em;
+    font-size: 1.2em;;
+    margin: 0 0 3px 0;
+    margin-top: 10px; 
+    color: #337AB7;
+    background-color: white !important;
+}
+  </style>
+
   <a name="scope">   </a>
 
   <p>
@@ -315,7 +325,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </p>
 
   <a name="2"/><h3>Technical</h3> <a name="technical">  </a>
-  <p style="display: block;   font-family: verdana;  line-height: 1.2em;  font-size: 1.2em;;  margin: 0 0 3px 0;  margin-top: 10px;    color: #337AB7;">Background</p>
+  <p class="heading" id="technicalBackground">Background</p>
 
   <p>
     This implementation guide was developed as the messaging standards specification for one of the Data Integration Strategy &amp; Implementation (DISI) Platform reference solutions. 
@@ -330,7 +340,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <figcaption>DISI Platform Architecture</figcaption>
   </figure>
 
-  <p style="display: block;   font-family: verdana;  line-height: 1.2em;  font-size: 1.2em;;  margin: 0 0 3px 0;  margin-top: 10px;    color: #337AB7;">Messaging</p>
+  <p class="heading">Messaging</p>
 
   <p>
     This specification defines the <a href="bundles.html">key FHIR messaging bundles</a> needed to support COVID19 case reporting &amp; lab integration.
@@ -398,7 +408,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 27, 2023 13:52+0000">2023-01-27</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Jan 28, 2023 12:05+0000">2023-01-28</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
