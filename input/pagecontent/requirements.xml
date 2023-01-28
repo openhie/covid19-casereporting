@@ -1,17 +1,15 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd" lang="en">
+    <style>
+    {% include custom.css %}
+  </style>
+
     <h3>Use Cases</h3> <a name="usecase-description"> </a>
 
     <p>
         The following uses cases have been identified for this implementation guide.
     </p>
 
-    <p style="display: block;
-        font-family: verdana;
-        line-height: 1.2em;
-        font-size: 1.2em;;
-        margin: 0 0 3px 0;
-        margin-top: 10px; 
-        color: #337AB7;">Use Case Diagram</p>
+    <p class="heading">Use Case Diagram</p>
     <p></p>
     
     <figure>
@@ -19,15 +17,30 @@
         <figcaption>Use Case Diagram</figcaption>
     </figure>
 
-   <p style="display: block;
-        font-family: verdana;
-        line-height: 1.2em;
-        font-size: 1.2em;;
-        margin: 0 0 3px 0;
-        margin-top: 10px; 
-        color: #337AB7;">Use Case Context</p>
+   <p class="heading">Use Case Context</p>
 
     <p>
-        Add text...
+        This use case supports integration between the EMR and lab systems in order to effectively process lab requests and have the results returned to the EMR for diagnosis.
+        <br />
+        <br />
+        In addition, this use case illustrates the need for a Centralised Data Repository (DR) and a Client Registry (CR) to enable regional and/or national COVID19 case reporting. 
+        <br />
+        <br />
+        The <a href="index.html#technicalBackground">technical specificaton documentation</a> for the Data Integration Strategy &amp; Implementation reference platform identifies the following technologies for the two aforementioned centralised repositories.
     </p>
+    <ol>
+        <li><strong>DR:</strong> <a href="https://hapifhir.io/hapi-fhir/docs/getting_started/introduction.html" target="_blank">HAPI FHIR</a></li>
+        <li><strong>CR:</strong> <a href="https://jembi.gitbook.io/jembi-platform/packages/client-registry-santempi" target="_blank">SanteMPI</a></li>
+    </ol>
+
+    <blockquote class="stu-note">
+        <ul>
+            <li>This use case diagram is limited to the <a href="bundles.html">specification</a> for this implementation guide and will not discuss the architectural componenets for the DR, CR and Data Mart.</li>
+            <li>For more information regarding the implementation of a the architectural componenets, please see the <a href="index.html#technicalBackground">technical specificaton documentation</a>.</li>
+        </ul>
+    </blockquote>
+
+    <p class="heading">Use Case Overview</p>
+
+    <p>add overview text for each use case....</p>
 </div>  

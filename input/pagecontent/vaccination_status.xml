@@ -1,52 +1,32 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd" lang="en">
+  <style>
+    {% include custom.css %}
+  </style>
+  
   <p>The following categories of vaccination statuses exist in order to measure an individual's progress towards being up-to-date vaccinated.</p>
 
   <h3>Categories</h3> <a name="vaccine-status-categories"> </a>
   
  
-  <p style="display: block;
-  font-family: verdana;
-	line-height: 1.2em;
-	font-size: 1.2em;;
-	margin: 0 0 3px 0;
-	margin-top: 10px; 
-  color: #337AB7;">Unvaccinated</p>
+  <p class="heading">Unvaccinated</p>
 
   <p>If the individual has not had at least one vaccine administered.</p>
   
 
 
-  <p style="display: block;
-  font-family: verdana;
-	line-height: 1.2em;
-	font-size: 1.2em;;
-	margin: 0 0 3px 0;
-	margin-top: 10px;
-  color: #337AB7;">Partially Vaccinated</p>
+  <p class="heading">Partially Vaccinated</p>
   
   <p>If the individual has had at least one vaccine administered using any manufacturer based on their age and for the primary series.</p>
   
 
   
-  <p style="display: block;
-  font-family: verdana;
-	line-height: 1.2em;
-	font-size: 1.2em;;
-	margin: 0 0 3px 0;
-	margin-top: 10px;
-  color: #337AB7;">Fully Vaccinated</p>
+  <p class="heading">Fully Vaccinated</p>
 
   <p>If the individual has had all vaccines administered using the exact same manufacturer based on their age and for the primary series but the individual has not yet received the booster vaccine issued by the exact same manufacturer.</p>
   
 
   
-  <p style="display: block;
-  font-family: verdana;
-	line-height: 1.2em;
-	font-size: 1.2em;;
-	margin: 0 0 3px 0;
-	margin-top: 10px;
-  color: #337AB7;" id="up-to-date-vaccinated">Up-to-Date Vaccinated</p>
+  <p class="heading" id="up-to-date-vaccinated">Up-to-Date Vaccinated</p>
   
   <p>The following algorithm is used when determining whether a patient is up-to-date vaccinated.</p>
   
