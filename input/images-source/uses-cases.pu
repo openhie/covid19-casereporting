@@ -53,16 +53,36 @@ labAssistant --> UC15
 
 (UC11) ..> Laboratory
 
-(UC16) ..> EMR : "submit lab result"
+(UC16) ..> EMR : "Lab result"
 
-actor "Stakeholder" as stakeholder
+actor "Interoperability Layer" as iol
 rectangle "Centralised Data Repository" as cdr {
-  usecase "Generate Reports" as UC20
+  usecase "Manage Clinical Data" as UC20
 }
 
-stakeholder --> UC20
+iol <--> cdr : "HTTPS"
 
-EMR ..> cdr : "submit EMR data"
-Laboratory ..> cdr : "submit lab data"
+EMR <..> iol : "EMR data"
+Laboratory <..> iol : "Lab data"
+
+
+actor "Matching Administrator" as macthingAdmin
+rectangle "Client Registry" as cr {
+  usecase "Manage Master Patient Index (MPI)" as UC21
+}
+
+macthingAdmin --> UC21
+
+iol <--> cr : "HTTPS"
+
+actor "Case Reporter" as caseReporter
+rectangle "Data Mart" as dm {
+  usecase "Generate Reports" as UC22
+}
+
+caseReporter --> UC22
+
+cdr --> dm
+cr --> dm
 
 @enduml
