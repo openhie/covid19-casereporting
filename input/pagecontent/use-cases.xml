@@ -88,7 +88,7 @@
     <p class="heading">Submit lab order</p>
 
     <p>
-        A nurse must be able to submit a request for a sample to be examined at the laboratory. 
+        A nurse must be able to submit a request from the EMR for a sample to be collected and examined at the laboratory. 
         <br />
         <br />
 
@@ -106,12 +106,39 @@
         <li>Reason for the test</li>
         <li>Specimen type</li>
             <ul>
-                <li><strong>Nasopharyngeal:</strong> <a href="https://www.findacode.com/snomed/258500001--nasopharyngeal-swab.html?hl=258500001" target="_blank">258500001</a></li>
-                <li><strong>Oropharyngeal swab:</strong> <a href="https://www.findacode.com/snomed/461911000124106--oropharyngeal-swab.html" target="_blank">461911000124106</a></li>
-                <li><strong>Unknown:</strong> <a href="https://www.findacode.com/snomed/119324002--specimen-of-unknown-material.html" target="_blank">119324002</a></li>
+                <li id="specimen-type-nasopharyngeal"><strong>Nasopharyngeal:</strong> <a href="https://www.findacode.com/snomed/258500001--nasopharyngeal-swab.html?hl=258500001" target="_blank">258500001</a></li>
+                <li id="specimen-type-oropharyngeal-swab"><strong>Oropharyngeal swab:</strong> <a href="https://www.findacode.com/snomed/461911000124106--oropharyngeal-swab.html" target="_blank">461911000124106</a></li>
+                <li id="specimen-type-unknown"><strong>Unknown:</strong> <a href="https://www.findacode.com/snomed/119324002--specimen-of-unknown-material.html" target="_blank">119324002</a></li>
             </ul>
         <li>Specimen ID</li>
     </ul>
+
+    <p class="heading">Sample Collection</p>
+
+    <p>
+        A lab assistant must be able to collect samples that have been submitted for testing from the EMR.
+        <br />
+        <br />
+
+        Sample collection in the context of this implementation guide, will typically contain the following key data. 
+    </p>
+
+    <ul>
+        <li>Metadata</li>
+        <li>Specimen type</li>
+            <ul>
+                <li><strong>Nasopharyngeal:</strong> <a href="#specimen-type-nasopharyngeal">258500001</a></li>
+                <li><strong>Oropharyngeal swab:</strong> <a href="#specimen-type-oropharyngeal-swab">461911000124106</a></li>
+                <li><strong>Unknown:</strong> <a href="#specimen-type-unknown">119324002</a></li>
+            </ul>
+        <li>Specimen ID</li>
+    </ul>
+
+    <p class="heading">Process Lab Request</p>
+
+    <p>
+        Add text...
+    </p>
 
     <h3>References</h3> <a name="references"> </a>
 
