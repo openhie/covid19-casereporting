@@ -11,7 +11,7 @@
   "title" : "COVID19 Case Reporting",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2023-01-28T11:42:03+00:00",
+  "date" : "2023-01-30T06:47:44+00:00",
   "publisher" : "Jembi Health Systems",
   "contact" : [{
     "telecom" : [{
@@ -1429,7 +1429,25 @@
           }],
           "nameUrl" : "requirements.html",
           "title" : "Functional Requirements",
-          "generation" : "html"
+          "generation" : "html",
+          "page" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "use-cases.html"
+            }],
+            "nameUrl" : "use-cases.html",
+            "title" : "Use Cases",
+            "generation" : "html"
+          },
+          {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "vaccination_status.html"
+            }],
+            "nameUrl" : "vaccination_status.html",
+            "title" : "Vaccination Status",
+            "generation" : "html"
+          }]
         }]
       },
       {
@@ -1485,15 +1503,6 @@
           "title" : "Lab Rejection Bundle",
           "generation" : "html"
         }]
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "vaccination_status.html"
-        }],
-        "nameUrl" : "vaccination_status.html",
-        "title" : "COVID19 Vaccination Statuses",
-        "generation" : "html"
       },
       {
         "extension" : [{
