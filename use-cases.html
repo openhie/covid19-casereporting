@@ -445,7 +445,7 @@ Country: GB
         first-time visit or if the visited facility has older data in regards to the progression towards being <a href="vaccination_status.html#up-to-date-vaccinated">up-to-date vaccinated</a> for COVID19.
         <br/>
         <br/>
-        In addition, this use case enables the nurse to capture the following.
+        In addition, this use case enables the nurse to capture the following key data.
     </p>
 
     <ul>
@@ -476,6 +476,34 @@ Country: GB
             <ul>
                 <li>Those individuals who have suffered death due to exposure to COVID19.</li>
             </ul>
+    </ul>
+
+    <p class="heading">Submit lab order</p>
+
+    <p>
+        A nurse must be able to submit a request for a sample to be examined at the laboratory. 
+        <br/>
+        <br/>
+
+        A lab request, in the context of this implementation guide, will typically contain the following key data. 
+    </p>
+
+     <ul>
+        <li>Metadata</li>
+        <li>Order number</li>
+        <li>Test requested code</li>
+            <ul>
+                <li><strong>SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay:</strong> <a href="https://loinc.org/94558-4/" target="_blank">94558-4</a></li>
+                <li><strong>SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection:</strong> <a href="https://loinc.org/94745-7/">94745-7</a></li>
+            </ul>
+        <li>Reason for the test</li>
+        <li>Specimen type</li>
+            <ul>
+                <li><strong>Nasopharyngeal:</strong> <a href="https://phinvads.cdc.gov/vads/ViewValueSetConcept.action?id=62EF9F86-B5C4-DE11-913D-0015173D1785" target="_blank">258500001</a></li>
+                <li><strong>Oropharyngeal swab:</strong> <a href="https://www.findacode.com/snomed/461911000124106--oropharyngeal-swab.html" target="_blank">461911000124106</a></li>
+                <li><strong>Unknown:</strong> <a href="https://www.findacode.com/snomed/119324002--specimen-of-unknown-material.html" target="_blank">119324002</a></li>
+            </ul>
+        <li>Specimen ID</li>
     </ul>
 
     <a name="3"/><h3>References</h3> <a name="references">  </a>
@@ -509,7 +537,7 @@ Country: GB
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 30, 2023 12:46+0000">2023-01-30</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jan 30, 2023 14:07+0000">2023-01-30</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
