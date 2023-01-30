@@ -52,7 +52,7 @@
         first-time visit or if the visited facility has older data in regards to the progression towards being <a href="vaccination_status.html#up-to-date-vaccinated">up-to-date vaccinated</a> for COVID19.
         <br />
         <br />
-        In addition, this use case enables the nurse to capture the following.
+        In addition, this use case enables the nurse to capture the following key data.
     </p>
 
     <ul>
@@ -83,6 +83,34 @@
             <ul>
                 <li>Those individuals who have suffered death due to exposure to COVID19.</li>
             </ul>
+    </ul>
+
+    <p class="heading">Submit lab order</p>
+
+    <p>
+        A nurse must be able to submit a request for a sample to be examined at the laboratory. 
+        <br />
+        <br />
+
+        A lab request, in the context of this implementation guide, will typically contain the following key data. 
+    </p>
+
+     <ul>
+        <li>Metadata</li>
+        <li>Order number</li>
+        <li>Test requested code</li>
+            <ul>
+                <li><strong>SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay:</strong> <a href="https://loinc.org/94558-4/" target="_blank">94558-4</a></li>
+                <li><strong>SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection:</strong> <a href="https://loinc.org/94745-7/">94745-7</a></li>
+            </ul>
+        <li>Reason for the test</li>
+        <li>Specimen type</li>
+            <ul>
+                <li><strong>Nasopharyngeal:</strong> <a href="https://phinvads.cdc.gov/vads/ViewCodeSystemConcept.action?oid=2.16.840.1.113883.6.96&mp;code=258500001" target="_blank">258500001</a></li>
+                <li><strong>Oropharyngeal swab:</strong> <a href="https://www.findacode.com/snomed/461911000124106--oropharyngeal-swab.html" target="_blank">461911000124106</a></li>
+                <li><strong>Unknown:</strong> <a href="https://www.findacode.com/snomed/119324002--specimen-of-unknown-material.html" target="_blank">119324002</a></li>
+            </ul>
+        <li>Specimen ID</li>
     </ul>
 
     <h3>References</h3> <a name="references"> </a>
