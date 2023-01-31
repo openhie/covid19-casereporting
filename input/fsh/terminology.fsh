@@ -106,12 +106,12 @@ Description: "A list of COVID19 test types"
 * $LNC#94558-4 "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"   
 * $LNC#94745-7 "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
  
-ValueSet: VSCancellationReason //no binding currently because the Task resource is not profiled -usefull as a reference
+ValueSet: VSCancellationReason
 Id: vs-cancellation-reason
 Title: "Cancellation Reasons"
 Description: "A list of reasons as a result of the lab task being cancelled"
 * ^experimental = false
-* $SCT#281264009 "Improperly ordered" //need to double check the code from with CDC
+* $SCT#281264009 "Improperly ordered"
 * $SCT#281266006 "No sample collected"
 * $SCT#135839007  "Sample rejected"
 
@@ -121,7 +121,7 @@ Title: "Specimen Type"
 Description: "The type of specimen sample that was collected by the lab"
 * ^experimental = false
 * $SCT#258500001 "Nasopharyngeal"
-* $SCT#461911000124106 "Oropharyngeal swab" //TODO: replaced with the correct code. MDS uses the wrong one: 461911000000000
+* $SCT#461911000124106 "Oropharyngeal swab"
 * $SCT#119324002 "unknown"
 
 ValueSet: VSReasonForAssessmentOrTestNotPerformed
@@ -182,7 +182,7 @@ Description: "Custom code system to support the need to report on the origin of 
 CodeSystem: CSLabTaskOutput
 Id: cs-lab-task-output
 Title: "Lab Result Task Output"
-Description: "Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"
+Description: "Custom code system to support the need to indicate that a COVID19 result was documented by the lab"
 * ^experimental = false
 * ^caseSensitive = true
 * #Result "Covid19 Test Result"
@@ -190,6 +190,6 @@ Description: "Custom code system to support the need to indicate that a COVID19 
 ValueSet: VSLabTaskOutput
 Id: vs-lab-task-output
 Title: "Lab Result Task Output"
-Description: "Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"
+Description: "Custom code system to support the need to indicate that a COVID19 result was documented by the lab"
 * ^experimental = false
 * include codes from system CSLabTaskOutput
