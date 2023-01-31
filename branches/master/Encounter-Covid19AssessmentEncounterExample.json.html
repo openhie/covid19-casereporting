@@ -44,8 +44,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"5.70"}
-    h3,h4,h5,h6{--heading-prefix:"5.70"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.70"}
+    h3,h4,h5,h6{--heading-prefix:"6.70"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -122,7 +122,7 @@
 }
 
 .dropdown li a {
-    color: #ffffff;
+    color: white;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -137,7 +137,7 @@
     list-style: none;
     display: none;
     line-height: normal;
-    background-color: white;
+    background-color: #DDFFEE;
 }
 
 .dropdown li ul li a {
@@ -156,11 +156,30 @@
 
 #mainMenuOptions li:hover>a {
   background-color: #43A682; 
-    
+  color: white;
 }
 
 #mainMenuOptions li:hover>ul {
     display: block;
+}
+
+	.heading {
+    display: block;
+    font-family: verdana;
+    line-height: 1.2em;
+    font-size: 1.2em;
+    margin: 0 0 3px 0;
+    margin-top: 10px;
+    color: #337AB7;
+    background-color: white !important;
+}
+
+.not-allowed {
+    cursor: not-allowed !important;
+}
+
+.pointer {
+    cursor: pointer;
 }
 </style>
 
@@ -184,7 +203,7 @@
 						</li>
                     </ul>
                 </li>
-                <li><a href="#">Technical <b class="caret" style="transform:rotate(270deg);"></b></a>
+                <li class=".not-allowed"><a href="#">Technical <b class="caret" style="transform:rotate(270deg);"></b></a>
                     <ul>
                         <li><a href="bundles.html">Message Bundles <b class="caret" style="transform:rotate(270deg);"></b></a>
                             <ul>
@@ -207,6 +226,7 @@
                         </li>
                     </ul>
                 </li>
+				<li><a href="referenced-sources.html">References</a></li>
                 <li><a href="artifacts.html">Artifacts</a></li>
 				<li><a href="toc.html">Table of Contents</a></li>
             </ul>
@@ -396,7 +416,7 @@
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 31, 2023 09:39+0000">2023-01-31</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 31, 2023 16:23+0000">2023-01-31</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

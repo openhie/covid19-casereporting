@@ -120,7 +120,7 @@
 }
 
 .dropdown li a {
-    color: #ffffff;
+    color: white;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -135,7 +135,7 @@
     list-style: none;
     display: none;
     line-height: normal;
-    background-color: white;
+    background-color: #DDFFEE;
 }
 
 .dropdown li ul li a {
@@ -154,11 +154,30 @@
 
 #mainMenuOptions li:hover>a {
   background-color: #43A682; 
-    
+  color: white;
 }
 
 #mainMenuOptions li:hover>ul {
     display: block;
+}
+
+	.heading {
+    display: block;
+    font-family: verdana;
+    line-height: 1.2em;
+    font-size: 1.2em;
+    margin: 0 0 3px 0;
+    margin-top: 10px;
+    color: #337AB7;
+    background-color: white !important;
+}
+
+.not-allowed {
+    cursor: not-allowed !important;
+}
+
+.pointer {
+    cursor: pointer;
 }
 </style>
 
@@ -182,7 +201,7 @@
 						</li>
                     </ul>
                 </li>
-                <li><a href="#">Technical <b class="caret" style="transform:rotate(270deg);"></b></a>
+                <li class=".not-allowed"><a href="#">Technical <b class="caret" style="transform:rotate(270deg);"></b></a>
                     <ul>
                         <li><a href="bundles.html">Message Bundles <b class="caret" style="transform:rotate(270deg);"></b></a>
                             <ul>
@@ -205,6 +224,7 @@
                         </li>
                     </ul>
                 </li>
+				<li><a href="referenced-sources.html">References</a></li>
                 <li><a href="artifacts.html">Artifacts</a></li>
 				<li><a href="toc.html">Table of Contents</a></li>
             </ul>
@@ -246,10 +266,87 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   
   
   
-  <div xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <div xmlns="http://www.w3.org/1999/xhtml" lang="en"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#1">Introduction</a></li><li><a href="#2">How to Report</a></li><li><a href="#3">What to Report</a></li><li><a href="#4">References</a></li></ul></div>
+     <a name="1"/><h3>Introduction</h3> <a name="intro">  </a>
+
     <p>
-        Add text
+        This implementation guide conforms with the following key reporting requirements as identified by the Center for Disease Control and prevention (CDC) for COVID19 <a href="#ref1">(Labs, 2020)</a>.
     </p>
+
+    <a name="2"/><h3>How to Report</h3> <a name="how-to-report">  </a>
+
+    <p>Laboratory data elements must be reported in one or more of the following ways.</p>
+
+    <ol>
+        <li>
+            Lab data can be submitted directly to an EMR electronically provided the communication stream adheres to country laws in regards to privacy &amp; confidentiality.
+            Lab results must be shared with the requesting organisation/provider or individual as applicable.
+        </li>
+        <li>
+            Lab data can be submitted directly to a <a href="https://jembi.gitbook.io/cares-on-platform/" target="_blank">centralised data repository</a>, stripped of all personally identifiable information (<a href="https://piwik.pro/blog/what-is-pii-personal-data/" target="_blank">PII</a>) and later be routed to an analytics platform for reporting.
+        </li>
+        <li>
+            Lab data can be submitted to an EMR via a health information exchange (HIE). It will be the responsibility of the interoperability layer to facilitate the mediation of the message to the correct destination system. 
+        </li>
+    </ol>
+
+    <a name="3"/><h3>What to Report</h3> <a name="what-to-report">  </a>
+
+    <p>
+        The following list of data elements should be provided for the purpose of COVID19 case reporting.
+    </p>
+
+    <ul>
+        <li>Test requested (must use the LOINC code system for harmonization)</li>
+        <li>Device ID</li>
+        <li>Test result (must use appropriate diagnoses codes issued by LOINC or SNOMED)</li>
+        <li>Specimen ID</li>
+        <li>Client age</li>
+            <ul>
+                <li>This is calculated using the client's date of birth.</li>
+            </ul>
+        <li>Client race</li>
+            <ul>
+                <li><strong>Currently not in scope</strong></li>
+            </ul>
+       <li>Client ethnicity</li>
+            <ul>
+                <li><strong>Currently not in scope</strong></li>
+            </ul>
+        <li>Client gender</li>
+        <li>Client residence zip code</li>
+             <ul>
+                <li><strong>Currently not in scope</strong></li>
+            </ul>
+        <li>Client residence country</li>
+        <li>Lab order requesting provider name</li>
+        <li>Lab order requesting provider zip code</li>
+             <ul>
+                <li><strong>Currently not in scope</strong></li>
+            </ul>
+        <li>Lab examination performing provider name</li>
+        <li>Lab examination performing provider zip code</li>
+             <ul>
+                <li><strong>Currently not in scope</strong></li>
+            </ul>
+        <li>Specimen type (must use appropriate codes issued by LOINC or SNOMED)</li>
+        <li>Lab order date &amp; time</li>
+        <li>Sample collection date</li>
+        <li>Client name (Last name, First name, Middle Initial)</li>
+        <li>Client street address</li>
+        <li>Client contact details with area code</li>
+        <li>Client date of birth</li>
+        <li>Lab order requesting provider address</li>
+        <li>Lab order requesting provider contact details</li>
+    </ul>
+
+    <a name="4"/><h3>References</h3> <a name="references">  </a>
+
+    <div>
+        <ol>
+            <li id="ref1">Labs. (2020, February 11). Centers for Disease Control and Prevention. https://www.cdc.gov/coronavirus/2019-ncov/lab/reporting-lab-data.html</li>
+        </ol>
+    </div>
 </div>
 </div>
         </div>  <!-- /inner-wrapper -->
@@ -274,7 +371,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 31, 2023 09:39+0000">2023-01-31</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Jan 31, 2023 16:23+0000">2023-01-31</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
