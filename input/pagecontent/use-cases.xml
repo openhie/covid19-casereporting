@@ -35,8 +35,8 @@
 
     <blockquote class="stu-note">
         <ul>
-            <li>The <a href="#use-case-summary">use case summary</a> is limited to the <a href="bundles.html">specification</a> for this implementation guide and will not discuss the architectural componenets for the DR, CR and Data Mart.</li>
-            <li>For more information regarding the implementation of a the architectural componenets, please see the <a href="index.html#technicalBackground">technical specificaton documentation</a>.</li>
+            <li>The <a href="#use-case-summary">use case summary</a> is limited to the <a href="bundles.html">specification</a> for this implementation guide and will not discuss the architectural components for the DR, CR and Data Mart.</li>
+            <li>For more information regarding the implementation of a the architectural components, please see the <a href="index.html#technicalBackground">technical specificaton documentation</a>.</li>
         </ul>
     </blockquote>
 
@@ -110,9 +110,9 @@
         <li>Reason for the test</li>
         <li>Specimen type</li>
             <ul>
-                <li id="specimen-type-nasopharyngeal"><strong>Nasopharyngeal:</strong> <a href="https://www.findacode.com/snomed/258500001--nasopharyngeal-swab.html?hl=258500001" target="_blank">258500001</a></li>
-                <li id="specimen-type-oropharyngeal-swab"><strong>Oropharyngeal swab:</strong> <a href="https://www.findacode.com/snomed/461911000124106--oropharyngeal-swab.html" target="_blank">461911000124106</a></li>
-                <li id="specimen-type-unknown"><strong>Unknown:</strong> <a href="https://www.findacode.com/snomed/119324002--specimen-of-unknown-material.html" target="_blank">119324002</a></li>
+                <li><strong>Nasopharyngeal:</strong> <a href="https://www.findacode.com/snomed/258500001--nasopharyngeal-swab.html?hl=258500001" target="_blank">258500001</a></li>
+                <li><strong>Oropharyngeal swab:</strong> <a href="https://www.findacode.com/snomed/461911000124106--oropharyngeal-swab.html" target="_blank">461911000124106</a></li>
+                <li><strong>Unknown:</strong> <a href="https://www.findacode.com/snomed/119324002--specimen-of-unknown-material.html" target="_blank">119324002</a></li>
             </ul>
         <li>Specimen ID</li>
     </ul>
@@ -140,8 +140,54 @@
     <p class="heading">Process Lab Request</p>
 
     <p>
-        Add text...
+        A lab assistant must be able to close the request for sample examination using one of the following three statuses.
     </p>
+
+    <ul>
+        <li>The specimen was successfully examined and the result issued (<a href="lab-result-bundle.html">lab result</a>)</li>
+        <li>The request for sample examination was cancelled by the lab order requester (<a href="lab-cancellation-bundle.html">lab cancellation</a>)</li>
+        <li>The specimen examination was rejected by the lab performer without carrying out any part of the test (<a href="lab-rejection-bundle.html">lab rejection</a>)</li>
+    </ul>
+
+    <p>
+        Process lab request in the context of this implementation guide, will typically contain the following <u>key</u> data. 
+    </p>
+
+    <ul>
+        <li>Metadata</li>
+        <li>Order number</li>
+        <li>Reason for not performing test</li>
+            <ul>
+                <li>Only applicable for lab cancellations and lab rejections</li>
+            </ul>
+        <li>Output code</li>
+            <ul>
+                <li>Only applicable to lab orders that have been successfully examined and issued with a result</li>
+                <li>Currently, the code of <a href="ValueSet-vs-lab-task-output.html">Result</a> represents the successfull completion of a lab order</li>
+            </ul>
+        <li>Test requested code</li>
+            <ul>
+                <li>Same as the <strong>submit lab order</strong> use case</li>
+            </ul>
+        <li>Specimen ID</li>
+            <ul>
+                <li>Same as the <strong>sample collection</strong> use case</li>
+            </ul>
+        <li>Specimen type</li>
+            <ul>
+                <li>Same as the <strong>submit lab order</strong> use case</li>
+            </ul>
+        <li>Result code</li>
+            <ul>
+                <li>Only applicable to lab orders that have been successfully examined and issued with a result</li>
+                <li>Codes</li>
+                <ul>
+                    <li><strong>Positive:</strong> <a href="https://www.findacode.com/snomed/10828004--positive.html" target="_blank">10828004</a></li>
+                    <li><strong>Negative:</strong> <a href="https://www.findacode.com/snomed/260385009--negative.html?hl=260385009" target="_blank">260385009</a></li>
+                    <li><strong>Inconclusive:</strong> <a href="https://www.findacode.com/snomed/419984006--inconclusive.html?hl=419984006" target="_blank">419984006</a></li>
+                </ul>
+            </ul>
+    </ul>
 
     <h3>References</h3> <a name="references"> </a>
 

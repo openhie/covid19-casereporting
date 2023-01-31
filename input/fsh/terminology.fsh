@@ -182,7 +182,7 @@ Description: "Custom code system to support the need to report on the origin of 
 CodeSystem: CSLabTaskOutput
 Id: cs-lab-task-output
 Title: "Lab Result Task Output"
-Description: "Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"
+Description: "Custom code system to support the need to indicate that a COVID19 result was documented by the lab"
 * ^experimental = false
 * ^caseSensitive = true
 * #Result "Covid19 Test Result"
@@ -190,6 +190,6 @@ Description: "Custom code system to support the need to indicate that a COVID19 
 ValueSet: VSLabTaskOutput
 Id: vs-lab-task-output
 Title: "Lab Result Task Output"
-Description: "Custom code system to support the need to indicate that a COVID19 result was documeneted by the lab"
+Description: "Custom code system to support the need to indicate that a COVID19 result was documented by the lab"
 * ^experimental = false
 * include codes from system CSLabTaskOutput
