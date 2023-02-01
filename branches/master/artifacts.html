@@ -109,14 +109,15 @@
 }
 
 .dropdown {
-   padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
     list-style: none;
     width: 100px;
 }
 
 .dropdown li {
     position: relative;
-	z-index: 999;
+    z-index: 999;
 }
 
 .dropdown li a {
@@ -124,7 +125,7 @@
     text-align: center;
     text-decoration: none;
     display: block;
-   padding: 15px; 
+    padding: 15px;
 }
 
 .dropdown li ul {
@@ -153,9 +154,10 @@
 }
 
 #mainMenuOptions li:hover>a {
-  background-color: #43A682; 
-  color: white;
-  text-decoration: underline;
+    background-color: #43A682;
+    color: white;
+    text-decoration: underline;
+    font-size: 13px;
 }
 
 #mainMenuOptions li:hover>ul {
@@ -175,6 +177,7 @@
 
 .not-allowed {
     cursor: not-allowed !important;
+    text-decoration: none !important;
 }
 
 .pointer {
@@ -182,54 +185,56 @@
 }
 </style>
 
-<ul id="mainMenuOptions"
-	xmlns="http://www.w3.org/1999/xhtml" class="dropdown">
-	<li><a href="#">Menu <b class="caret"></b></a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-				<li><a href="bussiness-description.html">Bussiness Description <b class="caret" style="transform:rotate(270deg);"></b></a>
-                    <ul>
-                        <li>
-							<a href="requirements.html">Functional Requirements <b class="caret" style="transform:rotate(270deg);"></b></a>
-							<ul>
-                               <li>
-									<a href="use-cases.html">Use Cases</a>
-								</li>
-							   <li>
-									<a href="vaccination_status.html">Vaccination Status</a>
-								</li>
-                            </ul>
-						</li>
-                    </ul>
-                </li>
-                <li><a href="#" class="not-allowed">Technical <b class="caret" style="transform:rotate(270deg);"></b></a>
-                    <ul>
-                        <li><a href="bundles.html">Message Bundles <b class="caret" style="transform:rotate(270deg);"></b></a>
-                            <ul>
-                               <li>
-									<a href="emr-bundle.html">EMR</a>
-								</li>
-								<li>
-									<a href="lab-order-bundle.html">Lab Order</a>
-								</li>
-								<li>
-									<a href="lab-result-bundle.html">Lab Result</a>
-								</li>
-								<li>
-									<a href="lab-rejection-bundle.html">Lab Rejection</a>
-								</li>
-								<li>
-									<a href="lab-cancellation-bundle.html">Lab Cancellation</a>
-								</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-				<li><a href="referenced-sources.html">References</a></li>
-                <li><a href="artifacts.html">Artifacts</a></li>
-				<li><a href="toc.html">Table of Contents</a></li>
-            </ul>
-        </li>
+<ul id="mainMenuOptions" xmlns="http://www.w3.org/1999/xhtml" class="dropdown">
+	<li><a href="#" style="font-size: 12px; text-decoration: none;">Menu <b class="caret"></b></a>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="bussiness-description.html">Bussiness Description <b class="caret" style="transform:rotate(270deg);"></b></a>
+				<ul>
+					<li>
+						<a href="requirements.html">Functional Requirements <b class="caret" style="transform:rotate(270deg);"></b></a>
+						<ul>
+							<li>
+								<a href="use-cases.html">Use Cases</a>
+							</li>
+							<li>
+								<a href="vaccination_status.html">Vaccination Status</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="personas.html">Personas</a></li>
+					<li><a href="workflows.html">Usage Workflows</a></li>
+				</ul>
+			</li>
+			<li><a href="deployment.html">Deployment &amp; Use <b class="caret" style="transform:rotate(270deg);"></b></a>
+				<ul>
+					<li><a href="bundles.html">Message Bundles <b class="caret" style="transform:rotate(270deg);"></b></a>
+						<ul>
+							<li>
+								<a href="emr-bundle.html">EMR</a>
+							</li>
+							<li>
+								<a href="lab-order-bundle.html">Lab Order</a>
+							</li>
+							<li>
+								<a href="lab-result-bundle.html">Lab Result</a>
+							</li>
+							<li>
+								<a href="lab-rejection-bundle.html">Lab Rejection</a>
+							</li>
+							<li>
+								<a href="lab-cancellation-bundle.html">Lab Cancellation</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="security-privacy.html">Security &amp; Privacy</a></li>
+				</ul>
+			</li>
+			<li><a href="referenced-sources.html">References</a></li>
+			<li><a href="artifacts.html">Artifacts</a></li>
+			<li><a href="toc.html">Table of Contents</a></li>
+		</ul>
+    </li>
 </ul> 
             </div>  <!-- /.nav-collapse -->
           </div>  <!-- /.container -->
@@ -916,7 +921,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 1, 2023 07:41+0000">2023-02-01</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 1, 2023 15:14+0000">2023-02-01</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
