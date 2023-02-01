@@ -11,7 +11,7 @@
   "title" : "COVID19 Case Reporting",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2023-02-01T13:33:19+00:00",
+  "date" : "2023-02-01T13:57:16+00:00",
   "publisher" : "Jembi Health Systems",
   "contact" : [{
     "telecom" : [{
@@ -1471,54 +1471,72 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "bundles.html"
+          "valueUrl" : "deployment.html"
         }],
-        "nameUrl" : "bundles.html",
-        "title" : "Message Bundles",
+        "nameUrl" : "deployment.html",
+        "title" : "Deployment & Use",
         "generation" : "html",
         "page" : [{
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "emr-bundle.html"
+            "valueUrl" : "bundles.html"
           }],
-          "nameUrl" : "emr-bundle.html",
-          "title" : "EMR Bundle",
-          "generation" : "html"
+          "nameUrl" : "bundles.html",
+          "title" : "Message Bundles",
+          "generation" : "html",
+          "page" : [{
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "emr-bundle.html"
+            }],
+            "nameUrl" : "emr-bundle.html",
+            "title" : "EMR Bundle",
+            "generation" : "html"
+          },
+          {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "lab-order-bundle.html"
+            }],
+            "nameUrl" : "lab-order-bundle.html",
+            "title" : "Lab Order Bundle",
+            "generation" : "html"
+          },
+          {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "lab-result-bundle.html"
+            }],
+            "nameUrl" : "lab-result-bundle.html",
+            "title" : "Lab Result Bundle",
+            "generation" : "html"
+          },
+          {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "lab-cancellation-bundle.html"
+            }],
+            "nameUrl" : "lab-cancellation-bundle.html",
+            "title" : "Lab Cancellation Bundle",
+            "generation" : "html"
+          },
+          {
+            "extension" : [{
+              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl" : "lab-rejection-bundle.html"
+            }],
+            "nameUrl" : "lab-rejection-bundle.html",
+            "title" : "Lab Rejection Bundle",
+            "generation" : "html"
+          }]
         },
         {
           "extension" : [{
             "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "lab-order-bundle.html"
+            "valueUrl" : "security-privacy.html"
           }],
-          "nameUrl" : "lab-order-bundle.html",
-          "title" : "Lab Order Bundle",
-          "generation" : "html"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "lab-result-bundle.html"
-          }],
-          "nameUrl" : "lab-result-bundle.html",
-          "title" : "Lab Result Bundle",
-          "generation" : "html"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "lab-cancellation-bundle.html"
-          }],
-          "nameUrl" : "lab-cancellation-bundle.html",
-          "title" : "Lab Cancellation Bundle",
-          "generation" : "html"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "lab-rejection-bundle.html"
-          }],
-          "nameUrl" : "lab-rejection-bundle.html",
-          "title" : "Lab Rejection Bundle",
+          "nameUrl" : "security-privacy.html",
+          "title" : "Security & Privacy",
           "generation" : "html"
         }]
       },
