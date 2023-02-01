@@ -47,7 +47,7 @@
     <figcaption>DISI Platform Architecture</figcaption>
   </figure>
 
-  <p class="heading">Messaging</p>
+  <p class="heading">Messaging &amp; Testing</p>
 
   <p>
     This specification defines the <a href="bundles.html">key FHIR messaging bundles</a> needed to support COVID19 case reporting &amp; lab integration.
@@ -66,8 +66,28 @@
   </ol>
 
   <p>
-    Please see our <a href="https://jembi.gitbook.io/cares-on-platform/postman-collections" target="_blank">Postman Collections for COVID19</a> as well as the descriptions for each of the message bundles that exist in each collection. 
+    Please see our <a href="https://jembi.gitbook.io/cares-on-platform/postman-collections" target="_blank">Postman Collections for COVID19</a> as well as the descriptions for each of the message bundles that exist in each postman collection.
+    <br />
+    <br />
+    Each of the these postman collections have been tailored to support end-to-end testing between the EMR and lab systems. Moreover, each collection comes with a set of postman variables which have been designed to randomly populate data for all key fields in all resources. This is a great way to carry out exploratory testing.
+    <br />
+    <br />
+    The use of postman variables also allows you to statically initiate variables to actual values you need.
+    <br />
+    <br />
+    Another way is to <a href="https://docs.google.com/document/d/1R5gv0rCefN26ZlCYUzmgMueXksErhDvRMIRQ3IewSOY/" target="_blank">automate end-to-end testing</a> over the data pipeline till the point that case report data is available in the analytics platform.
   </p>
+
+  <h3>Target audience for this Implementation Guide</h3> <a name="audience"> </a>
+  <p>
+    This Implementation Guide is targeted at the following typical audiences:
+  </p>
+
+   <ul>
+      <li><b>SMEs, Health program managers and specialists, informaticists</b> who wish to consult the architecture for case reporting.</li>
+      <li><b>Healthcare IT analysts</b> who wish to design or integrate systems for case reporting, case surveillance.</li>
+      <li><b>Technical designers</b> who must implement such case surveillance and reporting systems and their interfaces.</li>
+    </ul>
 
   <h3>Intellectual Property Considerations</h3>  <a name="ip"> </a>
   <p>
