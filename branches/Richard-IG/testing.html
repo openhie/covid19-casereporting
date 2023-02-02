@@ -296,12 +296,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         The CDR testing framework has undergone a modular design which enables analysts, testers and developers to quite easily build new report modules to efficiently execute on-demand and regression testing processes against the data pipeline.
         <br/>
         <br/>
-        The image below illustrates the High-level Design Architecture for a CDR testing framework.
+        The illustration depicted as a <a href="#cdr-testing-framework-high-level-architecture-image">High-level Design Architecture</a> offers an overview of what the CDR testing framework modules should look like. 
+        <br/>
+        <br/>
+        The illustration depicted as a <a href="#cdr-testing-framework-component-architecture-image">Component Architecture</a> is an <strong>example</strong> of what the type of components could look like to support end-to-end testing.
     </p>
 
-    <figure>
+    <figure id="cdr-testing-framework-high-level-architecture-image">
         <img src="cdr-testing-framework-high-level-architecture.png" alt="High-level Design Architecture"/>
         <figcaption>High-level Design Architecture</figcaption>
+    </figure>
+
+    <figure id="cdr-testing-framework-component-architecture-image">
+        <img src="cdr-testing-framework-component-architecture.png" alt="Component Architecture"/>
+        <figcaption>Component Architecture</figcaption>
     </figure>
 
     <a name="3"/><h3>Input &amp; Expected Outcome Dataset</h3> <a name="datasets">  </a>
@@ -342,44 +350,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
     <a name="4"/><h3>Summary of Benefits</h3> <a name="benefits">  </a>
 
-    <table>
-        <tr>
-            <th>Benefits</th>
-        </tr>
-        <tr>
-            <td>Able to run tests rapidly using accurate input data</td>
-        </tr>
-        <tr>
-            <td>Able to update the input and expected outcome data in the test cases with a single click of a button - data managed solely in the input and expected outcome documents</td>
-        </tr>
-        <tr>
-            <td>Uses behavioral-driven development - non technical stakeholders can understand the test cases</td>
-        </tr>
-        <tr>
-            <td>Can be configured to use any middleware component or even transact directly with the analytics system (API)</td>
-        </tr>
-        <tr>
-            <td>Input and expected outcome datasets are Google Sheet documents in Google Drive - Implements a Google Service account</td>
-        </tr>
-        <tr>
-            <td>Able to see point of failures on a system level or patient record</td>
-        </tr>
-        <tr>
-            <td>Able to see point of failures per patient record resulting from incorrect field-level values</td>
-        </tr>
-        <tr>
-            <td>Supports a modular design approach - easily build custom reports using any preferred techniques and simply reference the automation framework engine to do all the work</td>
-        </tr>
-        <tr>
-            <td>Tests the pipeline end-to-end</td>
-        </tr>
-         <tr>
-            <td>Contributes to performance testing over the pipeline</td>
-        </tr>
-         <tr>
-            <td>Can be included into the project's continuous integration (CI) processes so that report data quality is ensured with each build before merging into master.</td>
-        </tr>
-    </table>
+    <ul>
+        <li>Able to run tests rapidly using accurate input data</li>  
+        <li>Able to update the input and expected outcome data in the test cases with a single click of a button - data managed solely in the input and expected outcome documents</li>
+        <li>Uses behavioral-driven development - non technical stakeholders can understand the test cases</li>
+        <li>Can be configured to use any middleware component or even transact directly with the analytics system (API)</li>
+        <li>Input and expected outcome datasets are Google Sheet documents in Google Drive - Implements a Google Service account</li>
+        <li>Able to see point of failures on a system level or patient record</li>
+        <li>Able to see point of failures per patient record resulting from incorrect field-level values</li>
+        <li>Supports a modular design approach - easily build custom reports using any preferred techniques and simply reference the automation framework engine to do all the work</li>
+        <li>Tests the pipeline end-to-end</li>
+        <li>Contributes to performance testing over the pipeline</li>
+        <li>Can be included into the project's continuous integration (CI) processes so that report data quality is ensured with each build before merging into master.</li>
+    </ul>
 </div>
 </div>
         </div>  <!-- /inner-wrapper -->
@@ -404,7 +387,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 2, 2023 08:37+0000">2023-02-02</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Feb 2, 2023 10:52+0000">2023-02-02</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
