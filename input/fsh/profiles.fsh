@@ -65,7 +65,7 @@ Description: "A record of the individual's visit at the organization"
 * extension contains ExtNextVisit named nextVisit 0..1
 * extension contains ExtCovid19EverHospitalised named extCovid19EverHospitalised 0..1
 * extension contains ExtCovid19DateLastHospitalised named extCovid19DateLastHospitalised 0..1
-* status = #finished
+* status 1..1
 * class 1..1
 * subject only Reference(Patient)
 * subject 1..1
