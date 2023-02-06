@@ -274,7 +274,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   
   
   
-  <div xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <div xmlns="http://www.w3.org/1999/xhtml" lang="en"><div class="markdown-toc"><p>Contents:</p><ul><li><a href="#1">Introduction</a></li><li><a href="#2">Development Dependencies</a></li></ul></div>
     <style>
         .heading {
     display: block;
@@ -300,14 +300,48 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <a name="1"/><h3>Introduction</h3> <a name="intro">  </a>
 
     <p>
-        The following steps have been adopted with regards to the development, testing and deployment of this implementation guide.
+        This implementation guide provides a framework which can be adopted to ensure messaging standards and compliance among implementers. 
+        In other words, this is a governing framework that issues messaging requirements (allowed codes and code systems), 
+        specifies the minimum required data elements per FHIR resource and also has control over which data elements are mandatory.
+        <br/>
+        <br/>
+        Systems must be able to talk the same lanuguage otherwise important information will be lost...
     </p>
 
-    <p class="heading">Development</p>
+    <p class="heading">Prerequisites</p>
 
     <p>
-        text here...qq
+        When preparing for the development of an implementation guide, the following key tasks will be essential.
     </p>
+
+    <ol>
+        <li><strong>Define a minimum dataset (MDS)</strong>: Identifify the informational requirements for specific use cases. I.e., what data elements are needed by the EMR and lab systems to be interoperable with regards to data availability?</li>
+        <li><strong>Map the MDS fields to FHIR elements</strong>: Identify the appropriate FHIR resources and their data elements and establish a mapping with the MDS data elements.</li>
+    </ol>
+
+    <a name="2"/><h3>Development Dependencies</h3> <a name="dependencies">  </a>
+
+    <p>
+        The following will need to be installed on your machine to support the development and testing of an implementation guide.
+    </p>
+
+    <ol>
+        <li><a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a>: A code editor.</li>
+        <li><a href="https://nodejs.org/en/download/" target="_blank">NodeJS</a>: A Runtime enviornment.</li>
+        <li>
+            <a href="https://github.com/FHIR/sushi" target="_blank">Sushi</a>: Enables FHIR shorthand which greatly reduces the complexities associated with implementation guide development.
+            <br/>
+            <br/>
+
+            <blockquote class="stu-note">
+                <ul>
+                    <li><a href="https://fshschool.org/" target="_blank">Mitre</a> has created an <a href="https://fshschool.org/courses/fsh-seminar/04-deep-dive-with-fsh.html" target="_blank">excellent reference article</a> for the purpose of exploring and understanding Sushi. <strong>It is highly recommended that beginners carefully consult this great resource</strong> to assist with the development of an implementation guide.</li>
+                </ul>
+            </blockquote>
+        </li>
+        <li><a href="https://www.oracle.com/java/technologies/javase/jdk19-archive-downloads.html" target="_blank">Java</a>: A platform used for the development and running of Java applications.</li>
+        <li><a href="https://www.digitalocean.com/community/tutorial_collections/how-to-set-up-a-jekyll-development-site" target="_blank">Jekyll</a>: A static-site generator that allows for quick command line control over setup, deployment, and content management.</li>
+    </ol>
 </div>
 </div>
         </div>  <!-- /inner-wrapper -->
@@ -332,7 +366,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 6, 2023 09:39+0000">2023-02-06</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 6, 2023 13:29+0000">2023-02-06</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
