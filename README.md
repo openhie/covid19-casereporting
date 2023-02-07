@@ -6,14 +6,14 @@ An Covid case reporting IG for the DISI architecture.
 
 This ImplementationGuide is published in the following locations:
 
-* Continuous Build: <http://build.fhir.org/ig/openhie/cares-covid-ig/>
-* Canonical/permanent URL: <https://openhie.github.io/cares-covid-ig/index.html>
+* Continuous Build: <http://build.fhir.org/ig/openhie/covid19-casereporting/>
+* Canonical/permanent URL: <https://openhie.github.io/covid19-casereporting/index.html>
 
 ## Issues
 
 Issues and change requests are managed here:  
 
-* Issues:  <https://github.com/openhie/cares-covid-ig/issues>  
+* Issues:  <https://github.com/openhie/covid19-casereporting/issues>  
 * Kanban board: 
 
 # Run the IG locally
