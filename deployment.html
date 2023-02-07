@@ -326,6 +326,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </p>
 
     <ol>
+        <li><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></li>
         <li><a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a>: A code editor.</li>
         <li><a href="https://nodejs.org/en/download/" target="_blank">NodeJS</a>: A Runtime enviornment.</li>
         <li>
@@ -385,16 +386,57 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                 </ul>
             </blockquote>
         </li>
+        <li>Using <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a>, clone the implementation guide repository.</li>
+        <li>
+            Create a new branch.
+            <br/>
+            <br/>
+            <blockquote class="stu-note">
+                <ul>
+                    <li>Never edit master directly as this will lead to merge conflicts...especially when there are multiple contributors.</li>
+                </ul>
+            </blockquote>
+        </li>
+        <li><a href="https://github.com/hapifhir/hapi-fhir-jpaserver-starter" target="_blank">Install HAPI FHIR</a></li>
     </ol>
 
     <a name="4"/><h3>Testing &amp; Validation</h3> <a name="validation">  </a>
 
     <p>
-        The following steps offer some guidance in regards to the deployment and testing of an implementation guide on your local machine.
+        The following easy steps offer some guidance in regards to the deployment and testing of an implementation guide on your local machine.
     </p>
 
+    <ol>
+        <li>
+             When executing the build and deployment of the implementation guide for the very first time, you will need to execute the following command.
+            <br/>
+            <ul>
+                <li><em>./_updatePublisher.sh</em></li>
+            </ul>
+        </li>
+        <li>
+            Execute the following command to build and deploy the implementation guide.
+            <br/>
+            <ul>
+                <li><em>./_genonce.sh</em></li>
+            </ul>
+        </li>
+    </ol>
+
     <p>
-        text here...
+        The <em>./_genonce.sh</em> command creates a folder in the root of the project repository titled "<strong>output</strong>". This folder contains all artifacts for the implementation guide which also enables an implementer to view the HTML output locally before deploying to a public facing server.
+        <br/>
+        <br/>
+        When it comes to validating the implementation guide, simply launch the file "<strong>output\qa.html</strong>" and view its contents. It will inform you of any warnings and errors found in the implementation guide specification.
+        <br/>
+        <br/>
+        <blockquote class="stu-note">
+            <ul>
+                <li>The output\qa.html report is a critical tool to inform quality and correctness of an implementation guide!</li>
+                <li>The implementation guide must be free of all errors!</li>
+                <li>There may be a need to silence uneccessary warnings. Follow the instructions in the file "<strong>ignoreWarnings.txt</strong>".</li>
+            </ul>
+        </blockquote>
     </p>
 </div>
 </div>
@@ -420,7 +462,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
            
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 7, 2023 06:38+0000">2023-02-07</span>
+          IG &#169; 2022+ <a style="color: #81BEF7" href="https://www.jembi.org">Jembi Health Systems</a>.  Package openhie.fhir.covid#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 7, 2023 08:23+0000">2023-02-07</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
