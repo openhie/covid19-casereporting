@@ -23,12 +23,12 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="not-classified"/>
   </extension>
-  <url value="https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-lab-task"/>
+  <url value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"/>
   <version value="0.1.0"/>
   <name value="Covid19LabTask"/>
   <title value="Lab Task"/>
   <status value="active"/>
-  <date value="2023-02-07T14:57:14+00:00"/>
+  <date value="2023-02-07T15:22:54+00:00"/>
   <publisher value="Jembi Health Systems"/>
   <contact>
     <telecom>
@@ -2554,7 +2554,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="https://openhie.github.io/cares-covid-ig/ValueSet/vs-lab-task-output"/>
+        <valueSet value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -2802,7 +2802,7 @@
       <path value="Task.output.type.coding.code"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="https://openhie.github.io/cares-covid-ig/ValueSet/vs-lab-task-output"/>
+        <valueSet value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output"/>
       </binding>
     </element>
     <element id="Task.output.valueReference">
