@@ -25,12 +25,12 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="patient"/>
   </extension>
-  <url value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination"/>
+  <url value="https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-vaccination"/>
   <version value="0.1.0"/>
   <name value="Covid19Vaccination"/>
   <title value="Immunization Tracking"/>
   <status value="active"/>
-  <date value="2023-02-07T10:12:56+00:00"/>
+  <date value="2023-02-07T14:57:14+00:00"/>
   <publisher value="Jembi Health Systems"/>
   <contact>
     <telecom>
@@ -568,7 +568,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types"/>
+        <valueSet value="https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -1186,7 +1186,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info"/>
+        <valueSet value="https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -3176,7 +3176,7 @@
       <path value="Immunization.vaccineCode"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types"/>
+        <valueSet value="https://openhie.github.io/cares-covid-ig/ValueSet/vs-vaccine-types"/>
       </binding>
     </element>
     <element id="Immunization.encounter">
@@ -3195,7 +3195,7 @@
       <path value="Immunization.reportOrigin.coding.code"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info"/>
+        <valueSet value="https://openhie.github.io/cares-covid-ig/ValueSet/vs-source-of-info"/>
       </binding>
     </element>
     <element id="Immunization.lotNumber">
