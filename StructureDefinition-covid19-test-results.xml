@@ -20,12 +20,12 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="patient"/>
   </extension>
-  <url value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results"/>
+  <url value="https://openhie.github.io/cares-covid-ig/StructureDefinition/covid19-test-results"/>
   <version value="0.1.0"/>
   <name value="Covid19TestResult"/>
   <title value="Lab Results"/>
   <status value="active"/>
-  <date value="2023-02-07T10:23:57+00:00"/>
+  <date value="2023-02-07T14:57:14+00:00"/>
   <publisher value="Jembi Health Systems"/>
   <contact>
     <telecom>
@@ -700,7 +700,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types"/>
+        <valueSet value="https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -1156,7 +1156,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result"/>
+        <valueSet value="https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-test-result"/>
       </binding>
       <mapping>
         <identity value="sct-concept"/>
@@ -2350,7 +2350,7 @@
       <path value="Observation.code"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types"/>
+        <valueSet value="https://openhie.github.io/cares-covid-ig/ValueSet/vs-test-types"/>
       </binding>
     </element>
     <element id="Observation.subject">
@@ -2401,7 +2401,7 @@
       </type>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result"/>
+        <valueSet value="https://openhie.github.io/cares-covid-ig/ValueSet/vs-covid19-test-result"/>
       </binding>
     </element>
   </differential>
