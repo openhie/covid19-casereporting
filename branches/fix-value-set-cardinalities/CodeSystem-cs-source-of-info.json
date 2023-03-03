@@ -1,0 +1,56 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cs-source-of-info",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">PatientRecall<a name=\"cs-source-of-info-PatientRecall\"> </a></td><td>Patient Recall</td></tr><tr><td style=\"white-space:nowrap\">VaccineCard<a name=\"cs-source-of-info-VaccineCard\"> </a></td><td>Vaccine Card</td></tr><tr><td style=\"white-space:nowrap\">MobilePhoneNotification<a name=\"cs-source-of-info-MobilePhoneNotification\"> </a></td><td>Mobile Phone Notification</td></tr><tr><td style=\"white-space:nowrap\">VaccineAdministeredFromFacility<a name=\"cs-source-of-info-VaccineAdministeredFromFacility\"> </a></td><td>Vaccine Administered from this facility</td></tr><tr><td style=\"white-space:nowrap\">Other<a name=\"cs-source-of-info-Other\"> </a></td><td>Other</td></tr></table></div>"
+  },
+  "url" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info",
+  "version" : "0.1.0",
+  "name" : "CSSourceOfInfo",
+  "title" : "Source of Information",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-03-03T15:18:01+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  }],
+  "description" : "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 5,
+  "concept" : [{
+    "code" : "PatientRecall",
+    "display" : "Patient Recall"
+  },
+  {
+    "code" : "VaccineCard",
+    "display" : "Vaccine Card"
+  },
+  {
+    "code" : "MobilePhoneNotification",
+    "display" : "Mobile Phone Notification"
+  },
+  {
+    "code" : "VaccineAdministeredFromFacility",
+    "display" : "Vaccine Administered from this facility"
+  },
+  {
+    "code" : "Other",
+    "display" : "Other"
+  }]
+}

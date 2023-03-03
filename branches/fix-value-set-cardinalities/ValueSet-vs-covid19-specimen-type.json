@@ -1,0 +1,50 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-covid19-specimen-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/258500001\">258500001</a></td><td>Nasopharyngeal</td></tr><tr><td><a href=\"http://snomed.info/id/461911000124106\">461911000124106</a></td><td>Oropharyngeal swab</td></tr><tr><td><a href=\"http://snomed.info/id/119324002\">119324002</a></td><td>unknown</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type",
+  "version" : "0.1.0",
+  "name" : "VSCovid19SpecimenType",
+  "title" : "Specimen Type",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-03-03T15:18:01+00:00",
+  "publisher" : "Jembi Health Systems",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.jembi.org"
+    },
+    {
+      "system" : "email",
+      "value" : "info@jembi.org"
+    }]
+  }],
+  "description" : "The type of specimen sample that was collected by the lab",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "258500001",
+        "display" : "Nasopharyngeal"
+      },
+      {
+        "code" : "461911000124106",
+        "display" : "Oropharyngeal swab"
+      },
+      {
+        "code" : "119324002",
+        "display" : "unknown"
+      }]
+    }]
+  }
+}

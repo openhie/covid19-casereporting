@@ -1,0 +1,683 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/Bundle/EMR> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EMR"] ; # 
+  fhir:type [ fhir:v "transaction"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "Patient/Covid19PatientExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Patient/Covid19PatientExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Patient/Covid19PatientExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Encounter/Covid19AssessmentEncounterExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Encounter/Covid19AssessmentEncounterExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Encounter/Covid19AssessmentEncounterExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Location/Covid19AdmissionLocationExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Location/Covid19AdmissionLocationExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Location/Covid19AdmissionLocationExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Observation/Covid19PresentingSymptomsExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Observation/Covid19PresentingSymptomsExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Observation/Covid19PresentingSymptomsExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Condition/Covid19DiagnosisExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Condition/Covid19DiagnosisExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Condition/Covid19DiagnosisExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Condition/Covid19ConditionsOrComorbidityExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Condition/Covid19ConditionsOrComorbidityExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Condition/Covid19ConditionsOrComorbidityExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Immunization/Covid19AssessmentVaccinationExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Immunization/Covid19AssessmentVaccinationExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Immunization/Covid19AssessmentVaccinationExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Immunization/Covid19VaccinationExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Immunization/Covid19VaccinationExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Immunization/Covid19VaccinationExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "MedicationRequest/Covid19MedicationRequestExample"^^xsd:anyURI ] ;
+     fhir:resource ( <MedicationRequest/Covid19MedicationRequestExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "MedicationRequest/Covid19MedicationRequestExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Observation/Covid19VaccineDoseEverReceivedExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Observation/Covid19VaccineDoseEverReceivedExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Observation/Covid19VaccineDoseEverReceivedExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Observation/Covid19RecoveredOrSymptomsResolvedExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Observation/Covid19RecoveredOrSymptomsResolvedExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Observation/Covid19RecoveredOrSymptomsResolvedExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Observation/Covid19DeathExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Observation/Covid19DeathExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Observation/Covid19DeathExample"^^xsd:anyURI ]
+     ]
+  ] [
+     fhir:fullUrl [ fhir:v "Observation/Covid19LongCovidPostCovidExample"^^xsd:anyURI ] ;
+     fhir:resource ( <Observation/Covid19LongCovidPostCovidExample> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "PUT" ] ;
+       fhir:url [ fhir:v "Observation/Covid19LongCovidPostCovidExample"^^xsd:anyURI ]
+     ]
+  ] ) . # 
+
+<Patient/Covid19PatientExample> a fhir:Patient ;
+  fhir:id [ fhir:v "Covid19PatientExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Covid19PatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Covid19PatientExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-patient.html\">Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Maria Smith (OFFICIAL)</p><p><b>telecom</b>: <a href=\"tel:+27825556666\">+27825556666</a>, <a href=\"mailto:someone@example.com\">someone@example.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><h3>Contacts</h3><table class=\"grid\"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v2-0131.html\">contactRole2</a>#N)</span></td><td>John Doe </td><td><a href=\"tel:+27829999999\">+27829999999</a></td></tr></table><p><b>managingOrganization</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://openhie.org/fhir/covid19-casereporting/identifier/passport"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "PASSPORT1234567" ]
+  ] [
+     fhir:system [ fhir:v "http://openhie.org/fhir/covid19-casereporting/identifier/nid"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "NAT1234567" ]
+  ] ) ; # 
+  fhir:active [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Smith" ] ;
+     fhir:given ( [ fhir:v "Jane" ] [ fhir:v "Maria" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+27825556666" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "someone@example.com" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1986-06-04"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:city [ fhir:v "Cape Town" ] ;
+     fhir:district [ fhir:v "City of Cape Town" ] ;
+     fhir:state [ fhir:v "Western Province" ] ;
+     fhir:country [ fhir:v "South Africa" ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0131"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "N" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:family [ fhir:v "Doe" ] ;
+       fhir:given ( [ fhir:v "John" ] )
+     ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "+27829999999" ]
+     ] )
+  ] ) ; # 
+  fhir:managingOrganization [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+  ] . # 
+
+<Encounter/Covid19AssessmentEncounterExample> a fhir:Encounter ;
+  fhir:id [ fhir:v "Covid19AssessmentEncounterExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"Covid19AssessmentEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter &quot;Covid19AssessmentEncounterExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Encounter</a></p></div><p><b>Date of next vaccination</b>: 2022-07-28</p><p><b>Ever Hospitalized</b>: Yes (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#373066001)</span></p><p><b>Date Last Hospitalised</b>: 2022-07-28</p><p><b>status</b>: finished</p><p><b>class</b>: short stay (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code SS = 'short stay', stated as 'null')</p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td><td><b>PhysicalType</b></td></tr><tr><td>*</td><td><a href=\"#Location_Covid19AdmissionLocationExample\">See above (Location/Covid19AdmissionLocationExample)</a></td><td>Ward <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#225746001)</span></td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2022-07-28"^^xsd:date ]
+  ] [
+     fhir:url [ fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:373066001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "373066001" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2022-07-28"^^xsd:date ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "SS" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-07-28"^^xsd:date ] ;
+     fhir:end [ fhir:v "2022-08-15"^^xsd:date ]
+  ] ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Location/Covid19AdmissionLocationExample> ;
+       fhir:reference [ fhir:v "Location/Covid19AdmissionLocationExample" ]
+     ] ;
+     fhir:physicalType [
+       fhir:coding ( [
+         a sct:225746001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "225746001" ]
+       ] )
+     ]
+  ] ) . # 
+
+<Location/Covid19AdmissionLocationExample> a fhir:Location ;
+  fhir:id [ fhir:v "Covid19AdmissionLocationExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"Covid19AdmissionLocationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;Covid19AdmissionLocationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-admission-location.html\">Admission Location</a></p></div><p><b>name</b>: Covid19 Location</p><p><b>address</b>: Example city 1 Example state 1 Example country 1 </p></div>"
+  ] ; # 
+  fhir:name [ fhir:v "Covid19 Location"] ; # 
+  fhir:address [
+     fhir:city [ fhir:v "Example city 1" ] ;
+     fhir:district [ fhir:v "Example district 1" ] ;
+     fhir:state [ fhir:v "Example state 1" ] ;
+     fhir:country [ fhir:v "Example country 1" ]
+  ] . # 
+
+<Observation/Covid19PresentingSymptomsExample> a fhir:Observation ;
+  fhir:id [ fhir:v "Covid19PresentingSymptomsExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19PresentingSymptomsExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;Covid19PresentingSymptomsExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-presenting-symptoms.html\">Presenting Symptoms</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Abdominal pain <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#21522001)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>effective</b>: 2022-07-28</p><p><b>performer</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p><p><b>note</b>: Other symptoms here (By Organization/Covid19OrganizationExample @Feb 7, 2015, 6:28:17 PM)</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:21522001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "21522001" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/Covid19AssessmentEncounterExample" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-07-28"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+       fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+     ] ;
+     fhir:time [ fhir:v "2015-02-07T13:28:17-05:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "Other symptoms here" ]
+  ] ) . # 
+
+<Condition/Covid19DiagnosisExample> a fhir:Condition ;
+  fhir:id [ fhir:v "Covid19DiagnosisExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"Covid19DiagnosisExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;Covid19DiagnosisExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-diagnosis.html\">Diagnosis</a></p></div><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-condition-ver-status.html\">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>onset</b>: 2022-07-28</p><p><b>recordedDate</b>: 2022-07-28</p><h3>Evidences</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Asymptomatic <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#84387000)</span></td></tr></table><p><b>note</b>: additional notes here (By Organization/Covid19OrganizationExample @Feb 7, 2015, 6:28:17 PM)</p></div>"
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/Covid19AssessmentEncounterExample" ]
+  ] ; # 
+  fhir:onset [ fhir:v "2022-07-28"^^xsd:date] ; # 
+  fhir:recordedDate [ fhir:v "2022-07-28"^^xsd:date] ; # 
+  fhir:evidence ( [
+     fhir:code ( [
+       fhir:coding ( [
+         a sct:84387000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "84387000" ]
+       ] )
+     ] )
+  ] ) ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+       fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+     ] ;
+     fhir:time [ fhir:v "2015-02-07T13:28:17-05:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "additional notes here" ]
+  ] ) . # 
+
+<Condition/Covid19ConditionsOrComorbidityExample> a fhir:Condition ;
+  fhir:id [ fhir:v "Covid19ConditionsOrComorbidityExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"Covid19ConditionsOrComorbidityExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;Covid19ConditionsOrComorbidityExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-conditions-or-comorbidities.html\">Conditions or Comorbidity</a></p></div><p><b>Conditions or Comorbidities Present</b>: Yes (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#373066001)</span></p><p><b>code</b>: Cardiovascular disorder <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#49601007)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>note</b>: Other conditionss or comorbidities here (By Organization/Covid19OrganizationExample @Feb 7, 2015, 6:28:17 PM)</p></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:373066001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "373066001" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:49601007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "49601007" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/Covid19AssessmentEncounterExample" ]
+  ] ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+       fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+     ] ;
+     fhir:time [ fhir:v "2015-02-07T13:28:17-05:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "Other conditionss or comorbidities here" ]
+  ] ) . # 
+
+<Immunization/Covid19AssessmentVaccinationExample> a fhir:Immunization ;
+  fhir:id [ fhir:v "Covid19AssessmentVaccinationExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Immunization</b><a name=\"Covid19AssessmentVaccinationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Immunization &quot;Covid19AssessmentVaccinationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-assessment-vaccination.html\">Immunization Tracking</a></p></div><p><b>status</b>: completed</p><p><b>vaccineCode</b>: XM8NQ0 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (mms#XM8NQ0)</span></p><p><b>patient</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>occurrence</b>: 2022-07-28</p><p><b>reportOrigin</b>: Vaccine Card <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-source-of-info.html\">Source of Information</a>#VaccineCard)</span></p><p><b>lotNumber</b>: 1</p><p><b>expirationDate</b>: 2022-12-28</p><p><b>note</b>: Some other text... (By Organization/Covid19OrganizationExample @Feb 7, 2015, 6:28:17 PM)</p><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td>-</td><td><b>Series</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td>*</td><td>Primary</td><td>1</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://icd.who.int/icd11/mms"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "XM8NQ0" ]
+     ] )
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/Covid19AssessmentEncounterExample" ]
+  ] ; # 
+  fhir:occurrence [ fhir:v "2022-07-28"^^xsd:date] ; # 
+  fhir:reportOrigin [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "VaccineCard" ]
+     ] )
+  ] ; # 
+  fhir:lotNumber [ fhir:v "1"] ; # 
+  fhir:expirationDate [ fhir:v "2022-12-28"^^xsd:date] ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+       fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+     ] ;
+     fhir:time [ fhir:v "2015-02-07T13:28:17-05:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "Some other text..." ]
+  ] ) ; # 
+  fhir:protocolApplied ( [
+     fhir:series [ fhir:v "Primary" ] ;
+     fhir:doseNumber [ fhir:v "1"^^xsd:positiveInteger ]
+  ] ) . # 
+
+<Immunization/Covid19VaccinationExample> a fhir:Immunization ;
+  fhir:id [ fhir:v "Covid19VaccinationExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Immunization</b><a name=\"Covid19VaccinationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Immunization &quot;Covid19VaccinationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-vaccination.html\">Immunization Tracking</a></p></div><p><b>status</b>: completed</p><p><b>vaccineCode</b>: XM4YL8 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (mms#XM4YL8)</span></p><p><b>patient</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>occurrence</b>: 2022-07-28</p><p><b>reportOrigin</b>: Vaccine Card <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-cs-source-of-info.html\">Source of Information</a>#VaccineCard)</span></p><p><b>lotNumber</b>: 1</p><p><b>expirationDate</b>: 2022-12-28</p><p><b>note</b>: Some other text... (By Organization/Covid19OrganizationExample @Feb 7, 2015, 6:28:17 PM)</p><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td>-</td><td><b>Series</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td>*</td><td>Booster</td><td>1</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://icd.who.int/icd11/mms"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "XM4YL8" ]
+     ] )
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/Covid19AssessmentEncounterExample" ]
+  ] ; # 
+  fhir:occurrence [ fhir:v "2022-07-28"^^xsd:date] ; # 
+  fhir:reportOrigin [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "VaccineCard" ]
+     ] )
+  ] ; # 
+  fhir:lotNumber [ fhir:v "1"] ; # 
+  fhir:expirationDate [ fhir:v "2022-12-28"^^xsd:date] ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+       fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+     ] ;
+     fhir:time [ fhir:v "2015-02-07T13:28:17-05:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "Some other text..." ]
+  ] ) ; # 
+  fhir:protocolApplied ( [
+     fhir:series [ fhir:v "Booster" ] ;
+     fhir:doseNumber [ fhir:v "1"^^xsd:positiveInteger ]
+  ] ) . # 
+
+<MedicationRequest/Covid19MedicationRequestExample> a fhir:MedicationRequest ;
+  fhir:id [ fhir:v "Covid19MedicationRequestExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationRequest</b><a name=\"Covid19MedicationRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationRequest &quot;Covid19MedicationRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-medication-request.html\">Treatment dispensed or prescribed</a></p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: {10 (nirmatrelvir 150 MG Oral Tablet) / 10 (ritonavir 100 MG Oral Tablet) } Pack [Paxlovid 150 MG /100 MG Dose Pack] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v3-rxNorm.html\">RxNorm</a>#2599543)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>note</b>: additional notes here (By Organization/Covid19OrganizationExample @Feb 7, 2015, 6:28:17 PM)</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2599543" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/Covid19AssessmentEncounterExample" ]
+  ] ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+       fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+     ] ;
+     fhir:time [ fhir:v "2015-02-07T13:28:17-05:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "additional notes here" ]
+  ] ) . # 
+
+<Observation/Covid19VaccineDoseEverReceivedExample> a fhir:Observation ;
+  fhir:id [ fhir:v "Covid19VaccineDoseEverReceivedExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19VaccineDoseEverReceivedExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;Covid19VaccineDoseEverReceivedExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-vaccine-dose-ever-received.html\">Vaccine Dose Ever Received</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Yes (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#373066001)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>performer</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:373066001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "373066001" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/Covid19AssessmentEncounterExample" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+  ] ) . # 
+
+<Observation/Covid19RecoveredOrSymptomsResolvedExample> a fhir:Observation ;
+  fhir:id [ fhir:v "Covid19RecoveredOrSymptomsResolvedExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19RecoveredOrSymptomsResolvedExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;Covid19RecoveredOrSymptomsResolvedExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-recovered-or-symptoms-resolved.html\">Recovered Or Symptoms Resolved</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Patient condition resolved (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#370996005)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>effective</b>: 2022-11-09</p><p><b>performer</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p><p><b>note</b>: Some other text... (By Organization/Covid19OrganizationExample @Feb 7, 2015, 6:28:17 PM)</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:370996005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "370996005" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/Covid19AssessmentEncounterExample" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-11-09"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+       fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+     ] ;
+     fhir:time [ fhir:v "2015-02-07T13:28:17-05:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "Some other text..." ]
+  ] ) . # 
+
+<Observation/Covid19DeathExample> a fhir:Observation ;
+  fhir:id [ fhir:v "Covid19DeathExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19DeathExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;Covid19DeathExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-death.html\">Death</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Dead (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#419099009)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>effective</b>: 2022-11-09</p><p><b>performer</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p><p><b>note</b>: Some other text... (By Organization/Covid19OrganizationExample @Feb 7, 2015, 6:28:17 PM)</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:419099009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "419099009" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/Covid19AssessmentEncounterExample" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-11-09"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+       fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+     ] ;
+     fhir:time [ fhir:v "2015-02-07T13:28:17-05:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "Some other text..." ]
+  ] ) . # 
+
+<Observation/Covid19LongCovidPostCovidExample> a fhir:Observation ;
+  fhir:id [ fhir:v "Covid19LongCovidPostCovidExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"Covid19LongCovidPostCovidExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;Covid19LongCovidPostCovidExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-long-covid-post-covid.html\">Long Covid / Post-Covid</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Post-acute COVID-19 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1119303003)</span></p><p><b>subject</b>: <a href=\"#Patient_Covid19PatientExample\">See above (Patient/Covid19PatientExample)</a></p><p><b>encounter</b>: <a href=\"#Encounter_Covid19AssessmentEncounterExample\">See above (Encounter/Covid19AssessmentEncounterExample)</a></p><p><b>effective</b>: 2022-11-09</p><p><b>performer</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p><p><b>note</b>: Some other text... (By Organization/Covid19OrganizationExample @Feb 7, 2015, 6:28:17 PM)</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:1119303003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1119303003" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/Covid19AssessmentEncounterExample" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2022-11-09"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+     fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+       fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+     ] ;
+     fhir:time [ fhir:v "2015-02-07T13:28:17-05:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "Some other text..." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
