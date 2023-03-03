@@ -1,5 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
-@prefix loinc: <http://loinc.org/rdf#> .
+@prefix loinc: <https://loinc.org/rdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sct: <http://snomed.info/id/> .
@@ -7,82 +7,70 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://openhie.org/fhir/covid19-casereporting/ServiceRequest/Covid19ServiceRequestExample> a fhir:ServiceRequest;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "Covid19ServiceRequestExample"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order";
-       fhir:index 0;
+<http://openhie.org/fhir/covid19-casereporting/ServiceRequest/Covid19ServiceRequestExample> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Covid19ServiceRequestExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"^^xsd:anyURI ;
        fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order>
-     ]
-  ]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"Covid19ServiceRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;Covid19ServiceRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order.html\">Lab Order</a></p></div><p><b>identifier</b>: id: ORDER12345</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>doNotPerform</b>: false</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#94558-4)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>occurrence</b>: 2012-01-05</p><p><b>requester</b>: <a href=\"Practitioner-PractitionerExample.html\">Practitioner/PractitionerExample</a> &quot; SMITH&quot;</p><p><b>locationReference</b>: <a href=\"Location-Covid19ServiceRequestLocationExample.html\">Location/Covid19ServiceRequestLocationExample</a> &quot;Covid19 Location&quot;</p><p><b>reasonCode</b>: Equipment error/failure (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#397933008)</span></p><p><b>specimen</b>: <a href=\"Specimen-Covid19SpecimenExample.html\">Specimen/Covid19SpecimenExample</a></p><p><b>note</b>: additional notes here (By Organization/Covid19OrganizationExample @Feb 7, 2015, 6:28:17 PM)</p></div>"
-  ]; # 
-  fhir:ServiceRequest.identifier [
-     fhir:index 0;
-     fhir:Identifier.system [ fhir:value "http://openhie.org/fhir/covid19-casereporting/identifier/lab-order-identifier" ];
-     fhir:Identifier.value [ fhir:value "ORDER12345" ]
-  ]; # 
-  fhir:ServiceRequest.status [ fhir:value "completed"]; # 
-  fhir:ServiceRequest.intent [ fhir:value "order"]; # 
-  fhir:ServiceRequest.doNotPerform [ fhir:value "false"^^xsd:boolean]; # 
-  fhir:ServiceRequest.code [
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       a loinc:94558-4;
-       fhir:Coding.system [ fhir:value "http://loinc.org" ];
-       fhir:Coding.code [ fhir:value "94558-4" ]
-     ]
-  ]; # 
-  fhir:ServiceRequest.subject [
-     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample>;
-     fhir:Reference.reference [ fhir:value "Patient/Covid19PatientExample" ]
-  ]; # 
-  fhir:ServiceRequest.encounter [
-     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample>;
-     fhir:Reference.reference [ fhir:value "Encounter/Covid19AssessmentEncounterExample" ]
-  ]; # 
-  fhir:ServiceRequest.occurrenceDateTime [ fhir:value "2012-01-05"^^xsd:date]; # 
-  fhir:ServiceRequest.requester [
-     fhir:link <http://openhie.org/fhir/covid19-casereporting/Practitioner/PractitionerExample>;
-     fhir:Reference.reference [ fhir:value "Practitioner/PractitionerExample" ]
-  ]; # 
-  fhir:ServiceRequest.locationReference [
-     fhir:index 0;
-     fhir:link <http://openhie.org/fhir/covid19-casereporting/Location/Covid19ServiceRequestLocationExample>;
-     fhir:Reference.reference [ fhir:value "Location/Covid19ServiceRequestLocationExample" ]
-  ]; # 
-  fhir:ServiceRequest.reasonCode [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       a sct:397933008;
-       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
-       fhir:Coding.code [ fhir:value "397933008" ]
-     ]
-  ]; # 
-  fhir:ServiceRequest.specimen [
-     fhir:index 0;
-     fhir:link <http://openhie.org/fhir/covid19-casereporting/Specimen/Covid19SpecimenExample>;
-     fhir:Reference.reference [ fhir:value "Specimen/Covid19SpecimenExample" ]
-  ]; # 
-  fhir:ServiceRequest.note [
-     fhir:index 0;
-     fhir:Annotation.authorReference [
-       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample>;
-       fhir:Reference.reference [ fhir:value "Organization/Covid19OrganizationExample" ]
-     ];
-     fhir:Annotation.time [ fhir:value "2015-02-07T13:28:17-05:00"^^xsd:dateTime ];
-     fhir:Annotation.text [ fhir:value "additional notes here" ]
-  ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<http://openhie.org/fhir/covid19-casereporting/ServiceRequest/Covid19ServiceRequestExample.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ServiceRequest</b><a name=\"Covid19ServiceRequestExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ServiceRequest &quot;Covid19ServiceRequestExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-lab-order.html\">Lab Order</a></p></div><p><b>identifier</b>: id: ORDER12345</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>doNotPerform</b>: false</p><p><b>code</b>: SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#94558-4)</span></p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href=\"Encounter-Covid19AssessmentEncounterExample.html\">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>occurrence</b>: 2012-01-05</p><p><b>requester</b>: <a href=\"Practitioner-PractitionerExample.html\">Practitioner/PractitionerExample</a> &quot; SMITH&quot;</p><p><b>locationReference</b>: <a href=\"Location-Covid19ServiceRequestLocationExample.html\">Location/Covid19ServiceRequestLocationExample</a> &quot;Covid19 Location&quot;</p><p><b>reasonCode</b>: Equipment error/failure (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#397933008)</span></p><p><b>specimen</b>: <a href=\"Specimen-Covid19SpecimenExample.html\">Specimen/Covid19SpecimenExample</a></p><p><b>note</b>: additional notes here (By Organization/Covid19OrganizationExample @Feb 7, 2015, 6:28:17 PM)</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://openhie.org/fhir/covid19-casereporting/identifier/lab-order-identifier"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "ORDER12345" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:doNotPerform [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:94558-4 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "94558-4" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> ;
+     fhir:reference [ fhir:v "Encounter/Covid19AssessmentEncounterExample" ]
+  ] ; # 
+  fhir:occurrence [ fhir:v "2012-01-05"^^xsd:date] ; # 
+  fhir:requester [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Practitioner/PractitionerExample> ;
+     fhir:reference [ fhir:v "Practitioner/PractitionerExample" ]
+  ] ; # 
+  fhir:locationReference ( [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Location/Covid19ServiceRequestLocationExample> ;
+     fhir:reference [ fhir:v "Location/Covid19ServiceRequestLocationExample" ]
+  ] ) ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:397933008 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "397933008" ]
+     ] )
+  ] ) ; # 
+  fhir:specimen ( [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Specimen/Covid19SpecimenExample> ;
+     fhir:reference [ fhir:v "Specimen/Covid19SpecimenExample" ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+       fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+     ] ;
+     fhir:time [ fhir:v "2015-02-07T13:28:17-05:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "additional notes here" ]
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

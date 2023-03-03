@@ -21,4 +21,10 @@
       <sch:assert test="count(f:location) &lt;= 1">location: maximum cardinality of 'location' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:Encounter/f:location</sch:title>
+    <sch:rule context="f:Encounter/f:location">
+      <sch:assert test="count(f:physicalType) &gt;= 1">physicalType: minimum cardinality of 'physicalType' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
 </sch:schema>
