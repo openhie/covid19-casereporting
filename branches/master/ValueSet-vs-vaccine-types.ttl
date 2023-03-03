@@ -5,94 +5,73 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types> a fhir:ValueSet;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "vs-vaccine-types"]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://icd.who.int/icd11/mms</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>XM4YL8</td><td>AstraZeneca/Oxford vaccine</td></tr><tr><td>XM6QV1</td><td>Johnson and Johnson</td></tr><tr><td>XM3DT5</td><td>Moderna</td></tr><tr><td>XM8NQ0</td><td>Pfizer/BionTech</td></tr><tr><td>XM8866</td><td>Sinopharm</td></tr><tr><td>XM7HT3</td><td>Sinovac</td></tr><tr><td>XM1G90</td><td>COVAXIN</td></tr><tr><td>XM9T65</td><td>Covovax</td></tr><tr><td>XM5JC5</td><td>Nuvaxovid</td></tr><tr><td>XM1AG7</td><td>CanSino</td></tr></table></li></ul></div>"
-  ]; # 
-  fhir:ValueSet.url [ fhir:value "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types"]; # 
-  fhir:ValueSet.version [ fhir:value "0.1.0"]; # 
-  fhir:ValueSet.name [ fhir:value "VSVaccineTypes"]; # 
-  fhir:ValueSet.title [ fhir:value "Vaccine Types"]; # 
-  fhir:ValueSet.status [ fhir:value "active"]; # 
-  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean]; # 
-  fhir:ValueSet.date [ fhir:value "2023-03-02T06:03:12+00:00"^^xsd:dateTime]; # 
-  fhir:ValueSet.publisher [ fhir:value "Jembi Health Systems"]; # 
-  fhir:ValueSet.contact [
-     fhir:index 0;
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www.jembi.org" ]
-     ], [
-       fhir:index 1;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "info@jembi.org" ]
-     ]
-  ]; # 
-  fhir:ValueSet.description [ fhir:value "A list of COVID19 manufacturers"]; # 
-  fhir:ValueSet.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
-       fhir:Coding.code [ fhir:value "001" ]
-     ]
-  ]; # 
-  fhir:ValueSet.compose [
-     fhir:ValueSet.compose.include [
-       fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://icd.who.int/icd11/mms" ];
-       fhir:ValueSet.compose.include.concept [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "XM4YL8" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "AstraZeneca/Oxford vaccine" ]
-       ], [
-         fhir:index 1;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "XM6QV1" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Johnson and Johnson" ]
-       ], [
-         fhir:index 2;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "XM3DT5" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Moderna" ]
-       ], [
-         fhir:index 3;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "XM8NQ0" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pfizer/BionTech" ]
-       ], [
-         fhir:index 4;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "XM8866" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sinopharm" ]
-       ], [
-         fhir:index 5;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "XM7HT3" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sinovac" ]
-       ], [
-         fhir:index 6;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "XM1G90" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "COVAXIN" ]
-       ], [
-         fhir:index 7;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "XM9T65" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Covovax" ]
-       ], [
-         fhir:index 8;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "XM5JC5" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nuvaxovid" ]
-       ], [
-         fhir:index 9;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "XM1AG7" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "CanSino" ]
-       ]
-     ]
+<http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vs-vaccine-types"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://icd.who.int/icd11/mms</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>XM4YL8</td><td>AstraZeneca/Oxford vaccine</td></tr><tr><td>XM6QV1</td><td>Johnson and Johnson</td></tr><tr><td>XM3DT5</td><td>Moderna</td></tr><tr><td>XM8NQ0</td><td>Pfizer/BionTech</td></tr><tr><td>XM8866</td><td>Sinopharm</td></tr><tr><td>XM7HT3</td><td>Sinovac</td></tr><tr><td>XM1G90</td><td>COVAXIN</td></tr><tr><td>XM9T65</td><td>Covovax</td></tr><tr><td>XM5JC5</td><td>Nuvaxovid</td></tr><tr><td>XM1AG7</td><td>CanSino</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "VSVaccineTypes"] ; # 
+  fhir:title [ fhir:v "Vaccine Types"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-03-03T15:24:05+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Jembi Health Systems"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.jembi.org" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@jembi.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A list of COVID19 manufacturers"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://icd.who.int/icd11/mms"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "XM4YL8" ] ;
+         fhir:display [ fhir:v "AstraZeneca/Oxford vaccine" ]
+       ] [
+         fhir:code [ fhir:v "XM6QV1" ] ;
+         fhir:display [ fhir:v "Johnson and Johnson" ]
+       ] [
+         fhir:code [ fhir:v "XM3DT5" ] ;
+         fhir:display [ fhir:v "Moderna" ]
+       ] [
+         fhir:code [ fhir:v "XM8NQ0" ] ;
+         fhir:display [ fhir:v "Pfizer/BionTech" ]
+       ] [
+         fhir:code [ fhir:v "XM8866" ] ;
+         fhir:display [ fhir:v "Sinopharm" ]
+       ] [
+         fhir:code [ fhir:v "XM7HT3" ] ;
+         fhir:display [ fhir:v "Sinovac" ]
+       ] [
+         fhir:code [ fhir:v "XM1G90" ] ;
+         fhir:display [ fhir:v "COVAXIN" ]
+       ] [
+         fhir:code [ fhir:v "XM9T65" ] ;
+         fhir:display [ fhir:v "Covovax" ]
+       ] [
+         fhir:code [ fhir:v "XM5JC5" ] ;
+         fhir:display [ fhir:v "Nuvaxovid" ]
+       ] [
+         fhir:code [ fhir:v "XM1AG7" ] ;
+         fhir:display [ fhir:v "CanSino" ]
+       ] )
+     ] )
   ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

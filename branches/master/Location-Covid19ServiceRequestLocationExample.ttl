@@ -5,32 +5,26 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://openhie.org/fhir/covid19-casereporting/Location/Covid19ServiceRequestLocationExample> a fhir:Location;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "Covid19ServiceRequestLocationExample"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location";
-       fhir:index 0;
+<http://openhie.org/fhir/covid19-casereporting/Location/Covid19ServiceRequestLocationExample> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Covid19ServiceRequestLocationExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"^^xsd:anyURI ;
        fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location>
-     ]
-  ]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"Covid19ServiceRequestLocationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;Covid19ServiceRequestLocationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-service-request-location.html\">Lab Order Request Location</a></p></div><p><b>name</b>: Covid19 Location</p><p><b>address</b>: Example city 1 Example state 1 Example country 1 </p></div>"
-  ]; # 
-  fhir:Location.name [ fhir:value "Covid19 Location"]; # 
-  fhir:Location.address [
-     fhir:Address.city [ fhir:value "Example city 1" ];
-     fhir:Address.district [ fhir:value "Example district 1" ];
-     fhir:Address.state [ fhir:value "Example state 1" ];
-     fhir:Address.country [ fhir:value "Example country 1" ]
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"Covid19ServiceRequestLocationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;Covid19ServiceRequestLocationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-service-request-location.html\">Lab Order Request Location</a></p></div><p><b>name</b>: Covid19 Location</p><p><b>address</b>: Example city 1 Example state 1 Example country 1 </p></div>"
+  ] ; # 
+  fhir:name [ fhir:v "Covid19 Location"] ; # 
+  fhir:address [
+     fhir:city [ fhir:v "Example city 1" ] ;
+     fhir:district [ fhir:v "Example district 1" ] ;
+     fhir:state [ fhir:v "Example state 1" ] ;
+     fhir:country [ fhir:v "Example country 1" ]
   ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<http://openhie.org/fhir/covid19-casereporting/Location/Covid19ServiceRequestLocationExample.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 
