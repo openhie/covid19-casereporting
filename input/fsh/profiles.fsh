@@ -70,9 +70,9 @@ Description: "A record of the individual's visit at the organization"
 * subject only Reference(Patient)
 * subject 1..1
 * period 1..1
-//* reasonCode from VSReasonForAssessmentOrTestNotPerformed (required)
 * location 1..1
 * location.location 1..1
+* location.physicalType 1..1
 * location.physicalType from VSAdmissionTypes (required)
 
 Profile: Covid19PresentingSymptoms
@@ -103,6 +103,7 @@ Id: covid19-conditions-or-comorbidities
 Title: "Conditions or Comorbidity"
 Description: "What pre-existing conditions and/or comorbidities exist for the individual?"
 * extension contains ExtCovid19ConditionsOrComorbiditiesPresent named extCovid19ConditionsOrComorbiditiesPresent 1..1
+* code 1..1
 * code from VSConditionsComorbidity (required)
 * subject only Reference(Patient)
 * subject 1..1
@@ -132,6 +133,7 @@ Description: "Retrospectively capture COVID19 immunization data for vaccines adm
 * patient 1..1
 * encounter 1..1
 * occurrenceDateTime 1..1
+* reportOrigin 1..1
 * reportOrigin.coding.code from VSSourceOfInfo (required)
 * lotNumber 1..1
 * expirationDate 0..1
@@ -152,7 +154,7 @@ Description: "Confirmation of the diagnosis"
 * encounter 1..1
 * onsetDateTime 1..1
 * recordedDate 1..1
-* evidence 1..1
+* evidence.code 1..1
 * evidence.code from VSPresentation (required)
 * note.authorReference only Reference(Organization)
 * note 0..1
@@ -167,6 +169,7 @@ Description: "To indicate whether Paxlovid has been issued to the individual"
 * subject only Reference(Patient)
 * subject 1..1
 * encounter 1..1
+* medicationCodeableConcept 1..1
 * medicationCodeableConcept from VSTreatMentDispensedPrescribed (required)
 * note.authorReference only Reference(Organization)
 * note 0..1
@@ -186,6 +189,7 @@ Description: "A service request that initiates the need for the lab to collect t
 * identifier[FILL].system = "http://openhie.org/fhir/covid19-casereporting/identifier/lab-order-identifier" (exactly)
 * status 1..1
 * intent = #order
+* code 1..1
 * code from VSTestTypes (required)
 * subject only Reference(Patient)
 * subject 1..1
@@ -194,6 +198,7 @@ Description: "A service request that initiates the need for the lab to collect t
 * requester 1..1
 * locationReference 1..1
 * doNotPerform 0..1
+* reasonCode 1..*
 * reasonCode from VSReasonForAssessmentOrTestNotPerformed (required)
 * specimen 1..1
 * note.authorReference only Reference(Organization)
@@ -205,6 +210,7 @@ Id: covid19-specimen
 Title: "Specimen"
 Description: "The test sample that was collected for the initiated lab order"
 * identifier 1..1
+* type 1..1
 * type from VSCovid19SpecimenType (required)
 * subject only Reference(Patient)
 * subject 1..1
@@ -224,6 +230,7 @@ Description: "The result of the lab test which determines whether the patient is
 * encounter 1..1
 * effectiveDateTime 1..1
 * performer only Reference(Organization)
+* valueCodeableConcept 1..1
 * valueCodeableConcept from VSTestResult (required)
 
 Profile: Covid19Vaccination
@@ -236,6 +243,7 @@ Description: "Administer a suitable vaccine based on the most recent lab result"
 * patient 1..1
 * encounter 1..1
 * occurrenceDateTime 1..1
+* reportOrigin 1..1
 * reportOrigin.coding.code from VSSourceOfInfo (required)
 * lotNumber 1..1
 * expirationDate 0..1
