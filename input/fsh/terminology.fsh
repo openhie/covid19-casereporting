@@ -196,7 +196,7 @@ Description: "Custom code system to support the need to indicate that a COVID19 
 
 ValueSet: VSOutcome
 Id: vs-covid19-outcome-code
-Title: "COVID19 Outcome"
+Title: "Patient Outcome"
 Description: "A list of possible outcomes."
 * ^experimental = false
 * $SCT#370996005 "Patient condition resolved (finding)"
