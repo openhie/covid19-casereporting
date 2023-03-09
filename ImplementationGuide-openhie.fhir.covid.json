@@ -11,7 +11,7 @@
   "title" : "COVID19 Case Reporting",
   "status" : "draft",
   "experimental" : false,
-  "date" : "2023-03-03T15:24:05+00:00",
+  "date" : "2023-03-09T08:26:45+00:00",
   "publisher" : "Jembi Health Systems",
   "contact" : [{
     "telecom" : [{
@@ -949,17 +949,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Location"
-      }],
-      "reference" : {
-        "reference" : "Location/Covid19ServiceRequestLocationExample"
-      },
-      "name" : "Example Location - Covid19ServiceRequestLocationExample",
-      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -1000,6 +989,17 @@
       },
       "name" : "Example Observation - Covid19DeathExample",
       "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-covid19-outcome-code"
+      },
+      "name" : "COVID19 Outcome",
+      "description" : "A list of possible outcomes."
     },
     {
       "extension" : [{
@@ -1055,6 +1055,17 @@
       },
       "name" : "Example Bundle - LabResult",
       "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      }],
+      "reference" : {
+        "reference" : "Organization/Covid19ServiceRequestLocationExample"
+      },
+      "name" : "Example Organization - Covid19ServiceRequestLocationExample",
+      "exampleCanonical" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"
     },
     {
       "extension" : [{

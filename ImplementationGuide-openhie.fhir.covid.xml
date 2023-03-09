@@ -12,7 +12,7 @@
   <title value="COVID19 Case Reporting"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2023-03-03T15:24:05+00:00"/>
+  <date value="2023-03-09T08:26:45+00:00"/>
   <publisher value="Jembi Health Systems"/>
   <contact>
     <telecom>
@@ -761,16 +761,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Location"/>
-      </extension>
-      <reference>
-        <reference value="Location/Covid19ServiceRequestLocationExample"/>
-      </reference>
-      <name value="Example Location - Covid19ServiceRequestLocationExample"/>
-      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
@@ -808,6 +798,16 @@
       </reference>
       <name value="Example Observation - Covid19DeathExample"/>
       <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-covid19-outcome-code"/>
+      </reference>
+      <name value="COVID19 Outcome"/>
+      <description value="A list of possible outcomes."/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -858,6 +858,16 @@
       </reference>
       <name value="Example Bundle - LabResult"/>
       <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/Covid19ServiceRequestLocationExample"/>
+      </reference>
+      <name value="Example Organization - Covid19ServiceRequestLocationExample"/>
+      <exampleCanonical value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

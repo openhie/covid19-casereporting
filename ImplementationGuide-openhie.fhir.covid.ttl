@@ -18,7 +18,7 @@
   fhir:title [ fhir:v "COVID19 Case Reporting"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2023-03-03T15:24:05+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-03-09T08:26:45+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Jembi Health Systems"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -888,20 +888,6 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Location" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://openhie.org/fhir/covid19-casereporting/Location/Covid19ServiceRequestLocationExample> ;
-         fhir:reference [ fhir:v "Location/Covid19ServiceRequestLocationExample" ]
-       ] ;
-       fhir:name [ fhir:v "Example Location - Covid19ServiceRequestLocationExample" ] ;
-       fhir:example [
-         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"^^xsd:anyURI ;
-         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "CodeSystem" ]
        ] ) ;
        fhir:reference [
@@ -952,6 +938,17 @@
          fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death"^^xsd:anyURI ;
          fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death>
        ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-outcome-code> ;
+         fhir:reference [ fhir:v "ValueSet/vs-covid19-outcome-code" ]
+       ] ;
+       fhir:name [ fhir:v "COVID19 Outcome" ] ;
+       fhir:description [ fhir:v "A list of possible outcomes." ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -1015,6 +1012,20 @@
        fhir:example [
          fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"^^xsd:anyURI ;
          fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19ServiceRequestLocationExample> ;
+         fhir:reference [ fhir:v "Organization/Covid19ServiceRequestLocationExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Organization - Covid19ServiceRequestLocationExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location>
        ]
      ] [
        fhir:extension ( [
