@@ -113,9 +113,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Covid19PatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Covid19PatientExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-patient.html\">Patient</a></p></div><p><b>identifier</b>: id: PASSPORT1234567, id: NAT1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Maria Smith (OFFICIAL)</p><p><b>telecom</b>: <a href=\"tel:+27825556666\">+27825556666</a>, <a href=\"mailto:someone@example.com\">someone@example.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><h3>Contacts</h3><table class=\"grid\"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v2-0131.html\">contactRole2</a>#N)</span></td><td>John Doe </td><td><a href=\"tel:+27829999999\">+27829999999</a></td></tr></table><p><b>managingOrganization</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"Covid19PatientExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;Covid19PatientExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-patient.html\">Patient</a></p></div><p><b>identifier</b>: Passport number: PASSPORT1234567, id: NAT1234567</p><p><b>active</b>: true</p><p><b>name</b>: Jane Maria Smith (OFFICIAL)</p><p><b>telecom</b>: <a href=\"tel:+27825556666\">+27825556666</a>, <a href=\"mailto:someone@example.com\">someone@example.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1986-06-04</p><p><b>address</b>: Cape Town Western Province South Africa </p><h3>Contacts</h3><table class=\"grid\"><tr><td>-</td><td><b>Relationship</b></td><td><b>Name</b></td><td><b>Telecom</b></td></tr><tr><td>*</td><td>Next-of-Kin <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v2-0131.html\">contactRole2</a>#N)</span></td><td>John Doe </td><td><a href=\"tel:+27829999999\">+27829999999</a></td></tr></table><p><b>managingOrganization</b>: <a href=\"Organization-Covid19OrganizationExample.html\">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p></div>"
   ] ; # 
   fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "PPN" ]
+       ] )
+     ] ;
      fhir:system [ fhir:v "http://openhie.org/fhir/covid19-casereporting/identifier/passport"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "PASSPORT1234567" ]
   ] [
@@ -230,8 +236,18 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"Covid19AdmissionLocationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;Covid19AdmissionLocationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-admission-location.html\">Admission Location</a></p></div><p><b>name</b>: Covid19 Location</p><p><b>address</b>: Example city 1 Example state 1 Example country 1 </p></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Location</b><a name=\"Covid19AdmissionLocationExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Location &quot;Covid19AdmissionLocationExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-admission-location.html\">Admission Location</a></p></div><p><b>identifier</b>: Resource identifier: abc123</p><p><b>name</b>: Covid19 Location</p><p><b>address</b>: Example city 1 Example state 1 Example country 1 </p></div>"
   ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "RI" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-admission-location-id"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "abc123" ]
+  ] ) ; # 
   fhir:name [ fhir:v "Covid19 Location"] ; # 
   fhir:address [
      fhir:city [ fhir:v "Example city 1" ] ;
