@@ -3,37 +3,42 @@ Parent: Organization
 Id: covid19-organization
 Title: "Organization"
 Description: "Administering Organization"
+* identifier 1..*
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #openAtEnd
-* identifier ^slicing.description = "Slice based on the type of identifier"
+* identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
-    PRN 1..1
-* identifier[PRN].value 1..1
-* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization" (exactly)
-* name 1..1
+    XX 1..1
+* identifier[XX].value 1..1
+* identifier[XX].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization" (exactly)
+* identifier[XX].type.coding.code = #XX
+* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * address 1..1
 * address.country 1..1
 * address.state 1..1
 * address.district 1..1
 * address.city 1..1
+* name 1..1
 
 Profile: Covid19Patient
 Parent: Patient
 Id: covid19-patient
 Title: "Patient"
 Description: "The individual receiving COVID19 services"
+* identifier 1..*
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #openAtEnd
-* identifier ^slicing.description = "Slice based on the type of identifier"
 * identifier contains
-    PPN 1..1 and
-    NID 1..1
+    NID 0..1 and
+    PPN 1..1
+* identifier[NID].value 0..1
+* identifier[NID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid" (exactly)
 * identifier[PPN].value 1..1
 * identifier[PPN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport" (exactly)
-* identifier[NID].value 1..1
-* identifier[NID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid" (exactly)
+* identifier[PPN].type.coding.code = #PPN
+* identifier[PPN].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * active 1..1
 * name.given 1..*
 * name.family 1..1
@@ -179,14 +184,17 @@ Parent: ServiceRequest
 Id: covid19-lab-order
 Title: "Lab Order"
 Description: "A service request that initiates the need for the lab to collect the test sample"
+* identifier 1..*
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #openAtEnd
 * identifier ^slicing.description = "Slice based on the type of identifier"
 * identifier contains
-    FILL 1..1 
-* identifier[FILL].value 1..1
-* identifier[FILL].system = "http://openhie.org/fhir/covid19-casereporting/identifier/lab-order-identifier" (exactly)
+    PLAC 1..1 
+* identifier[PLAC].value 1..1
+* identifier[PLAC].system = "http://openhie.org/fhir/covid19-casereporting/identifier/lab-order-identifier" (exactly)
+* identifier[PLAC].type.coding.code = #PLAC
+* identifier[PLAC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * status 1..1
 * intent = #order
 * code 1..1
@@ -196,7 +204,8 @@ Description: "A service request that initiates the need for the lab to collect t
 * encounter 1..1
 * occurrenceDateTime 1..1
 * requester 1..1
-* locationReference 1..1
+//* locationReference 1..1
+* performer 1..1
 * doNotPerform 0..1
 * reasonCode 1..*
 * reasonCode from VSReasonForAssessmentOrTestNotPerformed (required)
@@ -209,7 +218,16 @@ Parent: Specimen
 Id: covid19-specimen
 Title: "Specimen"
 Description: "The test sample that was collected for the initiated lab order"
-* identifier 1..1
+* identifier 1..*
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #openAtEnd
+* identifier contains
+    USID 1..1
+* identifier[USID].value 1..1
+* identifier[USID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/specimen-id" (exactly)
+* identifier[USID].type.coding.code = #USID
+* identifier[USID].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * type 1..1
 * type from VSCovid19SpecimenType (required)
 * subject only Reference(Patient)
@@ -260,34 +278,44 @@ Description: "When must the individual return to the organization for the next s
 * value[x] only dateTime
 
 Profile: Covid19ServiceRequestLocation
-Parent: Location
+Parent: Organization
 Id: covid19-service-request-location
 Title: "Lab Order Request Location"
 Description: "What is the location of the organization responsible for conducting the examination of the individual's sample?"
+* identifier 1..*
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #openAtEnd
-* identifier ^slicing.description = "Slice based on the type of identifier"
+* identifier ^slicing.description = "Slice based on the type of identifier."
 * identifier contains
-    PRN 0..1
-* identifier[PRN].value 0..1
-* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-service-request-location" (exactly)
-* name 1..1
+    XX 1..1
+* identifier[XX].value 1..1
+* identifier[XX].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-service-request-location" (exactly)
+* identifier[XX].type.coding.code = #XX
+* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * address 1..1
+* address.country 1..1
+* address.state 1..1
+* address.district 1..1
+* address.city 1..1
+* name 1..1
 
 Profile: Covid19AdmissionLocation
 Parent: Location
 Id: covid19-admission-location
 Title: "Admission Location"
 Description: "What is the location of the organization where the patient is currently being admitted to for treatment?"
+* identifier 1..*
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #openAtEnd
 * identifier ^slicing.description = "Slice based on the type of identifier"
 * identifier contains
-    PRN 0..1
-* identifier[PRN].value 0..1
-* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-admission-location" (exactly)
+    RI 1..1
+* identifier[RI].value 1..1
+* identifier[RI].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-admission-location-id" (exactly)
+* identifier[RI].type.coding.code = #RI
+* identifier[RI].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * name 1..1
 * address 1..1
 
@@ -297,6 +325,7 @@ Id: covid19-recovered-or-symptoms-resolved
 Title: "Recovered Or Symptoms Resolved"
 Description: "Has the individual fully recovered from symptoms associated with COVID19?"
 * status = #final
+* code from VSOutcome (required)
 * code = $SCT#370996005
 * subject only Reference(Patient)
 * subject 1..1
@@ -312,6 +341,7 @@ Id: covid19-death
 Title: "Death"
 Description: "An event assoicated with the death of an individual who has been diagnosed with COVID19"
 * status = #final
+* code from VSOutcome (required)
 * code = $SCT#419099009
 * subject only Reference(Patient)
 * subject 1..1
@@ -327,6 +357,7 @@ Id: covid19-long-covid-post-covid
 Title: "Long Covid / Post-Covid"
 Description: "Does the indiviual continue to suffer from COVID19 health problems that are new, returning or ongoing conditons?"
 * status = #final
+* code from VSOutcome (required)
 * code = $SCT#1119303003
 * subject only Reference(Patient)
 * subject 1..1
@@ -342,6 +373,16 @@ Id: covid19-lab-task
 Title: "Lab Task"
 Description: "Assists with tracking the state of the lab order and its completion status"
 * identifier 1..*
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #openAtEnd
+* identifier ^slicing.description = "Slice based on the type of identifier."
+* identifier contains
+    FILL 1..1
+* identifier[FILL].value 1..1
+* identifier[FILL].system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/order-id" (exactly)
+* identifier[FILL].type.coding.code = #FILL
+* identifier[FILL].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * basedOn only Reference(ServiceRequest)
 * status 1..1
 * statusReason 0..1

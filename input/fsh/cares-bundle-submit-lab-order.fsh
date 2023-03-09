@@ -9,10 +9,10 @@ Description: "Cares Submit Lab Order Bundle Example"
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Task/LabOrderTaskExample"
 
-* entry[+].fullUrl = "Location/Covid19ServiceRequestLocationExample"
+* entry[+].fullUrl = "Organization/Covid19ServiceRequestLocationExample"
 * entry[=].resource = Covid19ServiceRequestLocationExample
 * entry[=].request.method = #PUT
-* entry[=].request.url = "Location/Covid19ServiceRequestLocationExample"
+* entry[=].request.url = "Organization/Covid19ServiceRequestLocationExample"
 
 * entry[+].fullUrl = "ServiceRequest/Covid19ServiceRequestExample"
 * entry[=].resource = Covid19ServiceRequestExample
