@@ -193,3 +193,12 @@ Title: "Lab Result Task Output"
 Description: "Custom code system to support the need to indicate that a COVID19 result was documented by the lab"
 * ^experimental = false
 * include codes from system CSLabTaskOutput
+
+ValueSet: VSOutcome
+Id: vs-covid19-outcome-code
+Title: "Patient Outcome"
+Description: "A list of possible outcomes."
+* ^experimental = false
+* $SCT#370996005 "Patient condition resolved (finding)"
+* $SCT#1119303003 "Post-acute COVID-19 (disorder)"
+* $SCT#419099009 "Dead (finding)"

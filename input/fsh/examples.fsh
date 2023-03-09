@@ -3,8 +3,10 @@ InstanceOf: Covid19Organization
 Usage: #example
 Title: "Covid19 Organization example"
 Description: "Covid19 Organization example"
-* identifier[PRN].value = "facility1"
-* identifier[PRN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
+* identifier[XX].value = "facility1"
+* identifier[XX].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-organization"
+* identifier[XX].type.coding.code = #XX
+* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * name = "Covid19 Organization"
 * address[0].country = "Country"
 * address[0].state = "State"
@@ -22,6 +24,8 @@ Title: "Covid19 Patient example"
 Description: "Covid19 Patient example"
 * identifier[PPN].value = "PASSPORT1234567"
 * identifier[PPN].system = "http://openhie.org/fhir/covid19-casereporting/identifier/passport"
+* identifier[PPN].type.coding.code = #PPN
+* identifier[PPN].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[NID].value = "NAT1234567"
 * identifier[NID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/nid"
 * active = true
@@ -159,8 +163,10 @@ InstanceOf: Covid19ServiceRequest
 Usage: #example
 Title: "Covid19 Lab Order example"
 Description: "Covid19 Lab Order example"
-* identifier[FILL].value = "ORDER12345"
-* identifier[FILL].system = "http://openhie.org/fhir/covid19-casereporting/identifier/lab-order-identifier"
+* identifier[PLAC].value = "ORDER12345"
+* identifier[PLAC].system = "http://openhie.org/fhir/covid19-casereporting/identifier/lab-order-identifier"
+* identifier[PLAC].type.coding.code = #PLAC
+* identifier[PLAC].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * status = #completed
 * intent = #order
 * code = $LNC#94558-4
@@ -168,7 +174,8 @@ Description: "Covid19 Lab Order example"
 * encounter = Reference(Covid19AssessmentEncounterExample)
 * occurrenceDateTime = "2012-01-05"
 * requester = Reference(PractitionerExample)
-* locationReference = Reference(Covid19ServiceRequestLocationExample)
+//* locationReference = Reference(Covid19ServiceRequestLocationExample)
+* performer = Reference(Covid19ServiceRequestLocationExample)
 * doNotPerform = false
 * reasonCode = $SCT#397933008
 * specimen = Reference(Covid19SpecimenExample)
@@ -181,8 +188,10 @@ InstanceOf: Covid19Specimen
 Usage: #example
 Title: "Covid19 Specimen example"
 Description: "Covid19 Specimen example"
-* identifier.value = "SPECIMEN109191879"
-* identifier.system = "http://covid19laborder.org/specimen"
+* identifier[USID].value = "abc123"
+* identifier[USID].system = "http://openhie.org/fhir/covid19-casereporting/identifier/specimen-id" (exactly)
+* identifier[USID].type.coding.code = #USID
+* identifier[USID].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * collection.collectedDateTime = "2022-07-28"
 * type = $SCT#258500001
 * subject = Reference(Covid19PatientExample)
@@ -267,17 +276,29 @@ InstanceOf: Covid19ServiceRequestLocation
 Usage: #example
 Title: "Covid19 Service Request Location example"
 Description: "Covid19 Service Request Location example"
-* name = "Covid19 Location"
-* address.country = "Example country 1"
-* address.state = "Example state 1"
-* address.district = "Example district 1"
-* address.city = "Example city 1"
+* identifier[XX].value = "facility2"
+* identifier[XX].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-service-request-location"
+* identifier[XX].type.coding.code = #XX
+* identifier[XX].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
+* name = "Laboratory Services"
+* address[+].country = "DISI country"
+* address[=].state = "DISI state 1"
+* address[=].district = "DISI district 1"
+* address[=].city = "DISI city 1"
+* address[=].line[+] = "DISI line 1"
+* address[=].line[+] = "DISI line 2"
+* address[=].line[+] = "DISI line 3"
+* address[=].postalCode = "DISI postal code"
 
 Instance: Covid19AdmissionLocationExample
 InstanceOf: Covid19AdmissionLocation
 Usage: #example
 Title: "Covid19 Admission Location example"
 Description: "Covid19 Admission Location example"
+* identifier[RI].value = "abc123"
+* identifier[RI].system = "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-admission-location-id"
+* identifier[RI].type.coding.code = #RI
+* identifier[RI].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * name = "Covid19 Location"
 * address.country = "Example country 1"
 * address.state = "Example state 1"
@@ -334,8 +355,10 @@ InstanceOf: Covid19LabTask
 Usage: #example
 Title: "Covid19 Lab Order Cancellation  example"
 Description: "Covid19 Lab Order Cancellation Task example"
-* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
-* identifier.value = "ORDER12345"
+* identifier[FILL].system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/order-id"
+* identifier[FILL].value = "ORDER12345"
+* identifier[FILL].type.coding.code = #FILL
+* identifier[FILL].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * basedOn = Reference(Covid19ServiceRequestExample)
 * status = #rejected
 * statusReason = $SCT#135839007 
@@ -350,8 +373,10 @@ InstanceOf: Covid19LabTask
 Usage: #example
 Title: "Covid19 Lab Order Cancellation  example"
 Description: "Covid19 Lab Order Cancellation Task example"
-* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
-* identifier.value = "ORDER12345"
+* identifier[FILL].system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/order-id"
+* identifier[FILL].value = "ORDER12345"
+* identifier[FILL].type.coding.code = #FILL
+* identifier[FILL].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * basedOn = Reference(Covid19ServiceRequestExample)
 * status = #cancelled
 * statusReason = $SCT#281264009 
@@ -366,8 +391,10 @@ InstanceOf: Covid19LabTask
 Usage: #example
 Title: "Lab Result Task example"
 Description: "Lab Result Task example"
-* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
-* identifier.value = "ORDER12345"
+* identifier[FILL].system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/order-id"
+* identifier[FILL].value = "ORDER12345"
+* identifier[FILL].type.coding.code = #FILL
+* identifier[FILL].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * basedOn = Reference(Covid19ServiceRequestExample)
 * status = #completed
 * intent = #order
@@ -384,8 +411,10 @@ InstanceOf: Covid19LabTask
 Usage: #example
 Title: "Lab Order example"
 Description: "Lab Order example"
-* identifier.system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/test-order-number"
-* identifier.value = "ORDER12345"
+* identifier[FILL].system = "http://openhie.org/fhir/covid19-casereporting/lab-integration/order-id"
+* identifier[FILL].value = "ORDER12345"
+* identifier[FILL].type.coding.code = #FILL
+* identifier[FILL].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * basedOn = Reference(Covid19ServiceRequestExample)
 * status = #requested
 * intent = #order

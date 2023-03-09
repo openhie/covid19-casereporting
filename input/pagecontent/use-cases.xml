@@ -72,21 +72,25 @@
 
     <ul>
         <li>Metadata</li>
-        <li>Outcome code</li>
+        <li><a href="ValueSet-vs-covid19-outcome-code.html" target="_blank">Outcome codes</a>
             <ul>
-                <li><strong>Recovered (symptoms resolved):</strong> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=370996005&amp;edition=MAIN/2023-01-31&amp;release=&amp;languages=en&amp;latestRedirect=false" target="_blank">370996005</a></li>
+                <li><strong>Recovered (symptoms resolved)</strong>
                     <ul>
                         <li>Those individuals who previously suffered from the disease are no longer showing any symptoms.</li>
                     </ul>
-                <li><strong>Long COVID / Post-COVID:</strong> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1119303003&amp;edition=MAIN/2022-12-31&amp;release=&amp;languages=en&amp;latestRedirect=false" target="_blank">1119303003</a></li>
+                </li>
+                <li><strong>Long COVID / Post-COVID</strong>
                     <ul>
                         <li>Those individuals who suffer long-term affects which could range anywhere between a few weeks to even years <a href="#ref1">(Post-COVID Conditions, 2022)</a>.</li>
                     </ul>
-                <li><strong>Death:</strong> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=419099009&amp;edition=MAIN/2023-01-31&amp;release=&amp;languages=en&amp;latestRedirect=false" target="_blank">419099009</a></li>
+                </li>
+                <li><strong>Death</strong>
                     <ul>
                         <li>Those individuals who have suffered death due to exposure to COVID19.</li>
                     </ul>
+                </li>
             </ul>
+         </li>
     </ul>
 
     <p class="heading">Submit lab order</p>
@@ -102,18 +106,20 @@
      <ul>
         <li>Metadata</li>
         <li>Order number</li>
-        <li>Test requested code</li>
+        <li><a href="ValueSet-vs-test-types.html" target="_blank">Test requested codes</a>
             <ul>
-                <li><strong>SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay:</strong> <a href="https://loinc.org/94558-4/" target="_blank">94558-4</a></li>
-                <li><strong>SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection:</strong> <a href="https://loinc.org/94745-7/" target="_blank">94745-7</a></li>
+                <li><strong>SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay</strong></li>
+                <li><strong>SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection</strong></li>
             </ul>
+        </li>
         <li>Reason for the test</li>
-        <li>Specimen type</li>
+        <li><a href="ValueSet-vs-covid19-specimen-type.html" target="_blank">Specimen types</a>
             <ul>
-                <li><strong>Nasopharyngeal:</strong> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=258500001&amp;edition=MAIN/2023-01-31&amp;release=&amp;languages=en&amp;latestRedirect=false" target="_blank">258500001</a></li>
-                <li><strong>Oropharyngeal swab:</strong> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=461911000124106&amp;edition=MAIN/2023-01-31&amp;release=&amp;languages=en&amp;latestRedirect=false" target="_blank">461911000124106</a></li>
-                <li><strong>Unknown:</strong> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=119324002&amp;edition=MAIN/2023-01-31&amp;release=&amp;languages=en&amp;latestRedirect=false" target="_blank">119324002</a></li>
+                <li><strong>Nasopharyngeal</strong></li>
+                <li><strong>Oropharyngeal swab</strong></li>
+                <li><strong>Unknown</strong></li>
             </ul>
+        </li>
         <li>Specimen ID</li>
     </ul>
 
@@ -123,17 +129,17 @@
         A lab assistant must be able to collect samples that have been submitted for testing from the EMR.
         <br />
         <br />
-
         Sample collection in the context of this implementation guide, will typically contain the following <u>key</u> data. 
     </p>
 
     <ul>
         <li>Metadata</li>
         <li>Sample collection date &amp; time</li>
-        <li>Specimen type</li>
+        <li>Specimen type
             <ul>
                 <li>Same as the <u>submit lab order</u> use case</li>
             </ul>
+        </li>
         <li>Specimen ID</li>
     </ul>
 
@@ -156,37 +162,43 @@
     <ul>
         <li>Metadata</li>
         <li>Order number</li>
-        <li>Reason for not performing test</li>
+        <li>Reason for not performing test
             <ul>
                 <li>Only applicable for lab cancellations and lab rejections</li>
             </ul>
-        <li>Output code</li>
+        </li> 
+        <li>Output code
             <ul>
                 <li>Only applicable to lab orders that have been successfully examined and issued with a result</li>
                 <li>Currently, the code of <a href="ValueSet-vs-lab-task-output.html">Result</a> represents the successful completion of a lab order</li>
             </ul>
-        <li>Test requested code</li>
+        </li>
+        <li>Test requested code
             <ul>
                 <li>Same as the <u>submit lab order</u> use case</li>
             </ul>
-        <li>Specimen ID</li>
+        </li>
+        <li>Specimen ID
             <ul>
                 <li>Same as the <u>sample collection</u> use case</li>
             </ul>
-        <li>Specimen type</li>
+        </li>
+        <li>Specimen type
             <ul>
                 <li>Same as the <u>submit lab order</u> use case</li>
             </ul>
-        <li>Result code</li>
+        </li>
+        <li><a href="ValueSet-vs-covid19-test-result.html" target="_blank">Result code</a>
             <ul>
-                <li>Only applicable to lab orders that have been successfully examined and issued with a result</li>
-                <li>Codes</li>
-                <ul>
-                    <li><strong>Positive:</strong> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=10828004&amp;edition=MAIN/2023-01-31&amp;release=&amp;languages=en&amp;latestRedirect=false" target="_blank">10828004</a></li>
-                    <li><strong>Negative:</strong> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=260385009&amp;edition=MAIN/2023-01-31&amp;release=&amp;languages=en&amp;latestRedirect=false" target="_blank">260385009</a></li>
-                    <li><strong>Inconclusive:</strong> <a href="https://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=419984006&amp;edition=MAIN/2023-01-31&amp;release=&amp;languages=en&amp;latestRedirect=false" target="_blank">419984006</a></li>
-                </ul>
+                <li>Only applicable to lab orders that have been successfully examined and issued with a result.
+                    <ul>
+                        <li><strong>Positive</strong></li>
+                        <li><strong>Negative</strong></li>
+                        <li><strong>Inconclusive</strong></li>
+                    </ul>
+                </li>
             </ul>
+        </li>
     </ul>
 
     <h3>References</h3> <a name="references"> </a>
