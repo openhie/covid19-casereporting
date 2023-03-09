@@ -1,0 +1,67 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "Covid19AssessmentEncounterExample"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"^^xsd:anyURI ;
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"Covid19AssessmentEncounterExample\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter &quot;Covid19AssessmentEncounterExample&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-covid19-encounter.html\">Encounter</a></p></div><p><b>Date of next vaccination</b>: 2022-07-28</p><p><b>Ever Hospitalized</b>: Yes (qualifier value) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#373066001)</span></p><p><b>Date Last Hospitalised</b>: 2022-07-28</p><p><b>status</b>: finished</p><p><b>class</b>: short stay (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code SS = 'short stay', stated as 'null')</p><p><b>subject</b>: <a href=\"Patient-Covid19PatientExample.html\">Patient/Covid19PatientExample</a> &quot; SMITH&quot;</p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><h3>Locations</h3><table class=\"grid\"><tr><td>-</td><td><b>Location</b></td><td><b>PhysicalType</b></td></tr><tr><td>*</td><td><a href=\"Location-Covid19AdmissionLocationExample.html\">Location/Covid19AdmissionLocationExample</a> &quot;Covid19 Location&quot;</td><td>Ward <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#225746001)</span></td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2022-07-28"^^xsd:date ]
+  ] [
+     fhir:url [ fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:373066001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "373066001" ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2022-07-28"^^xsd:date ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "SS" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+     fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-07-28"^^xsd:date ] ;
+     fhir:end [ fhir:v "2022-08-15"^^xsd:date ]
+  ] ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:link <http://openhie.org/fhir/covid19-casereporting/Location/Covid19AdmissionLocationExample> ;
+       fhir:reference [ fhir:v "Location/Covid19AdmissionLocationExample" ]
+     ] ;
+     fhir:physicalType [
+       fhir:coding ( [
+         a sct:225746001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "225746001" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

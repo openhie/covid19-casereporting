@@ -1,0 +1,101 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vs-covid19-reason-for-assessment-or-test-not-performed"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/428792000\">428792000</a></td><td>Contact of a case</td></tr><tr><td><a href=\"http://snomed.info/id/171367005\">171367005</a></td><td>Travel Examination</td></tr><tr><td><a href=\"http://snomed.info/id/308273005\">308273005</a></td><td>Follow-up</td></tr><tr><td><a href=\"http://snomed.info/id/223366009\">223366009</a></td><td>Health worker</td></tr><tr><td><a href=\"http://snomed.info/id/34325006\">34325006</a></td><td>Other frontline worker</td></tr><tr><td><a href=\"http://snomed.info/id/168260004\">168260004</a></td><td>Post-mortem</td></tr><tr><td><a href=\"http://snomed.info/id/170497006\">170497006</a></td><td>Quarantine</td></tr><tr><td><a href=\"http://snomed.info/id/273407003\">273407003</a></td><td>RDT confirmatory</td></tr><tr><td><a href=\"http://snomed.info/id/243790003\">243790003</a></td><td>Surveillance</td></tr><tr><td><a href=\"http://snomed.info/id/264931009\">264931009</a></td><td>Symptomatic/Illness</td></tr><tr><td><a href=\"http://snomed.info/id/255375007\">255375007</a></td><td>Voluntary</td></tr><tr><td><a href=\"http://snomed.info/id/441510007\">441510007</a></td><td>Blood sample coagulated</td></tr><tr><td><a href=\"http://snomed.info/id/123840003\">123840003</a></td><td>Contaminated specimen</td></tr><tr><td><a href=\"http://snomed.info/id/397933008\">397933008</a></td><td>Equipment failure</td></tr><tr><td><a href=\"http://snomed.info/id/281264009\">281264009</a></td><td>Inappropriate sample container used</td></tr><tr><td><a href=\"http://snomed.info/id/281268007\">281268007</a></td><td>Insufficient sample</td></tr><tr><td><a href=\"http://snomed.info/id/281265005\">281265005</a></td><td>Specimen not labeled</td></tr><tr><td><a href=\"http://snomed.info/id/419182006\">419182006</a></td><td>Supplies not available</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "VSReasonForAssessmentOrTestNotPerformed"] ; # 
+  fhir:title [ fhir:v "Reason for Assessment or Test Not Performed"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-03-09T08:26:45+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Jembi Health Systems"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.jembi.org" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@jembi.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A list of reasons associated with the service request for the lab order"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "428792000" ] ;
+         fhir:display [ fhir:v "Contact of a case" ]
+       ] [
+         fhir:code [ fhir:v "171367005" ] ;
+         fhir:display [ fhir:v "Travel Examination" ]
+       ] [
+         fhir:code [ fhir:v "308273005" ] ;
+         fhir:display [ fhir:v "Follow-up" ]
+       ] [
+         fhir:code [ fhir:v "223366009" ] ;
+         fhir:display [ fhir:v "Health worker" ]
+       ] [
+         fhir:code [ fhir:v "34325006" ] ;
+         fhir:display [ fhir:v "Other frontline worker" ]
+       ] [
+         fhir:code [ fhir:v "168260004" ] ;
+         fhir:display [ fhir:v "Post-mortem" ]
+       ] [
+         fhir:code [ fhir:v "170497006" ] ;
+         fhir:display [ fhir:v "Quarantine" ]
+       ] [
+         fhir:code [ fhir:v "273407003" ] ;
+         fhir:display [ fhir:v "RDT confirmatory" ]
+       ] [
+         fhir:code [ fhir:v "243790003" ] ;
+         fhir:display [ fhir:v "Surveillance" ]
+       ] [
+         fhir:code [ fhir:v "264931009" ] ;
+         fhir:display [ fhir:v "Symptomatic/Illness" ]
+       ] [
+         fhir:code [ fhir:v "255375007" ] ;
+         fhir:display [ fhir:v "Voluntary" ]
+       ] [
+         fhir:code [ fhir:v "441510007" ] ;
+         fhir:display [ fhir:v "Blood sample coagulated" ]
+       ] [
+         fhir:code [ fhir:v "123840003" ] ;
+         fhir:display [ fhir:v "Contaminated specimen" ]
+       ] [
+         fhir:code [ fhir:v "397933008" ] ;
+         fhir:display [ fhir:v "Equipment failure" ]
+       ] [
+         fhir:code [ fhir:v "281264009" ] ;
+         fhir:display [ fhir:v "Inappropriate sample container used" ]
+       ] [
+         fhir:code [ fhir:v "281268007" ] ;
+         fhir:display [ fhir:v "Insufficient sample" ]
+       ] [
+         fhir:code [ fhir:v "281265005" ] ;
+         fhir:display [ fhir:v "Specimen not labeled" ]
+       ] [
+         fhir:code [ fhir:v "419182006" ] ;
+         fhir:display [ fhir:v "Supplies not available" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

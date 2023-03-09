@@ -1,0 +1,1618 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/ImplementationGuide/openhie.fhir.covid> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "openhie.fhir.covid"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Covid19CaseReporting</h2><p>The official URL for this implementation guide is: </p><pre>http://openhie.org/fhir/covid19-casereporting/ImplementationGuide/openhie.fhir.covid</pre><div><p>COVID19 Case Reporting</p>\n</div></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://openhie.org/fhir/covid19-casereporting/ImplementationGuide/openhie.fhir.covid"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "Covid19CaseReporting"] ; # 
+  fhir:title [ fhir:v "COVID19 Case Reporting"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-03-09T08:26:45+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Jembi Health Systems"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.jembi.org" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@jembi.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "COVID19 Case Reporting"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:packageId [ fhir:v "openhie.fhir.covid"] ; # 
+  fhir:license [ fhir:v "CC0-1.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
+     fhir:version [ fhir:v "5.0.0" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2022+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CI Build" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-binary" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input\\cql" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "templates\\liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://openhie.org/fhir/covid19-casereporting/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2022+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CI Build" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-binary" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input\\cql" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "templates\\liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://openhie.org/fhir/covid19-casereporting/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "DiagnosticReport" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/DiagnosticReport/Covid19LabResultsDiagnosticReportExample> ;
+         fhir:reference [ fhir:v "DiagnosticReport/Covid19LabResultsDiagnosticReportExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example DiagnosticReport - Covid19LabResultsDiagnosticReportExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-recovered-or-symptoms-resolved" ]
+       ] ;
+       fhir:name [ fhir:v "Recovered Or Symptoms Resolved" ] ;
+       fhir:description [ fhir:v "Has the individual fully recovered from symptoms associated with COVID19?" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Task" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Task/Covid19LabOrderRejectionExample> ;
+         fhir:reference [ fhir:v "Task/Covid19LabOrderRejectionExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Task - Covid19LabOrderRejectionExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19OrganizationExample> ;
+         fhir:reference [ fhir:v "Organization/Covid19OrganizationExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Organization - Covid19OrganizationExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Bundle/LabCancellation> ;
+         fhir:reference [ fhir:v "Bundle/LabCancellation" ]
+       ] ;
+       fhir:name [ fhir:v "Example Bundle - LabCancellation" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-practitioner" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner" ] ;
+       fhir:description [ fhir:v "The healthcare professional who has been assigned to a given lab task" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-symptoms> ;
+         fhir:reference [ fhir:v "ValueSet/vs-symptoms" ]
+       ] ;
+       fhir:name [ fhir:v "Presenting symptoms" ] ;
+       fhir:description [ fhir:v "A list of symptoms" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Specimen" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Specimen/Covid19SpecimenExample> ;
+         fhir:reference [ fhir:v "Specimen/Covid19SpecimenExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Specimen - Covid19SpecimenExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-vaccine-types> ;
+         fhir:reference [ fhir:v "ValueSet/vs-vaccine-types" ]
+       ] ;
+       fhir:name [ fhir:v "Vaccine Types" ] ;
+       fhir:description [ fhir:v "A list of COVID19 manufacturers" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-vaccination" ]
+       ] ;
+       fhir:name [ fhir:v "Immunization Tracking" ] ;
+       fhir:description [ fhir:v "Administer a suitable vaccine based on the most recent lab result" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-specimen" ]
+       ] ;
+       fhir:name [ fhir:v "Specimen" ] ;
+       fhir:description [ fhir:v "The test sample that was collected for the initiated lab order" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-diagnosis" ]
+       ] ;
+       fhir:name [ fhir:v "Diagnosis" ] ;
+       fhir:description [ fhir:v "Confirmation of the diagnosis" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-lab-task-output" ]
+       ] ;
+       fhir:name [ fhir:v "Lab Result Task Output" ] ;
+       fhir:description [ fhir:v "Custom code system to support the need to indicate that a COVID19 result was documented by the lab" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-presenting-symptoms" ]
+       ] ;
+       fhir:name [ fhir:v "Presenting Symptoms" ] ;
+       fhir:description [ fhir:v "Existing symptoms which may help with diagnosis" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-test-results" ]
+       ] ;
+       fhir:name [ fhir:v "Lab Results" ] ;
+       fhir:description [ fhir:v "The result of the lab test which determines whether the patient is infected with COVID19 or not" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-death" ]
+       ] ;
+       fhir:name [ fhir:v "Death" ] ;
+       fhir:description [ fhir:v "An event assoicated with the death of an individual who has been diagnosed with COVID19" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Condition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Condition/Covid19ConditionsOrComorbidityExample> ;
+         fhir:reference [ fhir:v "Condition/Covid19ConditionsOrComorbidityExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Condition - Covid19ConditionsOrComorbidityExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Immunization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Immunization/Covid19AssessmentVaccinationExample> ;
+         fhir:reference [ fhir:v "Immunization/Covid19AssessmentVaccinationExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Immunization - Covid19AssessmentVaccinationExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-ever-hospitalised" ]
+       ] ;
+       fhir:name [ fhir:v "Ever Hospitalized" ] ;
+       fhir:description [ fhir:v "Has the individual been admitted to hospital at any point in time in the past?" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result> ;
+         fhir:reference [ fhir:v "ValueSet/vs-covid19-test-result" ]
+       ] ;
+       fhir:name [ fhir:v "Test Result" ] ;
+       fhir:description [ fhir:v "COVID19 diagnosis" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-lab-task" ]
+       ] ;
+       fhir:name [ fhir:v "Lab Task" ] ;
+       fhir:description [ fhir:v "Assists with tracking the state of the lab order and its completion status" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-patient" ]
+       ] ;
+       fhir:name [ fhir:v "Patient" ] ;
+       fhir:description [ fhir:v "The individual receiving COVID19 services" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MedicationRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/MedicationRequest/Covid19MedicationRequestExample> ;
+         fhir:reference [ fhir:v "MedicationRequest/Covid19MedicationRequestExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example MedicationRequest - Covid19MedicationRequestExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-next-vaccination" ]
+       ] ;
+       fhir:name [ fhir:v "Date of next vaccination" ] ;
+       fhir:description [ fhir:v "When must the individual return to the organization for the next scheduled vaccination?" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Bundle/EMR> ;
+         fhir:reference [ fhir:v "Bundle/EMR" ]
+       ] ;
+       fhir:name [ fhir:v "Example Bundle - EMR" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ServiceRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ServiceRequest/Covid19ServiceRequestExample> ;
+         fhir:reference [ fhir:v "ServiceRequest/Covid19ServiceRequestExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example ServiceRequest - Covid19ServiceRequestExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-cancellation-reason> ;
+         fhir:reference [ fhir:v "ValueSet/vs-cancellation-reason" ]
+       ] ;
+       fhir:name [ fhir:v "Cancellation Reasons" ] ;
+       fhir:description [ fhir:v "A list of reasons as a result of the lab task being cancelled" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Bundle/LabOrder> ;
+         fhir:reference [ fhir:v "Bundle/LabOrder" ]
+       ] ;
+       fhir:name [ fhir:v "Example Bundle - LabOrder" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info> ;
+         fhir:reference [ fhir:v "ValueSet/vs-source-of-info" ]
+       ] ;
+       fhir:name [ fhir:v "Source of Information" ] ;
+       fhir:description [ fhir:v "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-order> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-lab-order" ]
+       ] ;
+       fhir:name [ fhir:v "Lab Order" ] ;
+       fhir:description [ fhir:v "A service request that initiates the need for the lab to collect the test sample" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-source-of-info" ]
+       ] ;
+       fhir:name [ fhir:v "Source of Information" ] ;
+       fhir:description [ fhir:v "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Task" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Task/LabResultTaskExample> ;
+         fhir:reference [ fhir:v "Task/LabResultTaskExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Task - LabResultTaskExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Observation/Covid19LongCovidPostCovidExample> ;
+         fhir:reference [ fhir:v "Observation/Covid19LongCovidPostCovidExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Observation - Covid19LongCovidPostCovidExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Observation/Covid19DeathExample> ;
+         fhir:reference [ fhir:v "Observation/Covid19DeathExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Observation - Covid19DeathExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-death>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-outcome-code> ;
+         fhir:reference [ fhir:v "ValueSet/vs-covid19-outcome-code" ]
+       ] ;
+       fhir:name [ fhir:v "COVID19 Outcome" ] ;
+       fhir:description [ fhir:v "A list of possible outcomes." ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Immunization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Immunization/Covid19VaccinationExample> ;
+         fhir:reference [ fhir:v "Immunization/Covid19VaccinationExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Immunization - Covid19VaccinationExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities-present> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-conditions-or-comorbidities-present" ]
+       ] ;
+       fhir:name [ fhir:v "Conditions or Comorbidities Present" ] ;
+       fhir:description [ fhir:v "Does the individual have any known pre-existing conditions and/or comorbidities?" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-vaccine-dose-ever-received" ]
+       ] ;
+       fhir:name [ fhir:v "Vaccine Dose Ever Received" ] ;
+       fhir:description [ fhir:v "Has the individual received at least one shot of the vaccine at any point in time in the past?" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Location" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Location/Covid19AdmissionLocationExample> ;
+         fhir:reference [ fhir:v "Location/Covid19AdmissionLocationExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Location - Covid19AdmissionLocationExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Bundle/LabResult> ;
+         fhir:reference [ fhir:v "Bundle/LabResult" ]
+       ] ;
+       fhir:name [ fhir:v "Example Bundle - LabResult" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Organization/Covid19ServiceRequestLocationExample> ;
+         fhir:reference [ fhir:v "Organization/Covid19ServiceRequestLocationExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Organization - Covid19ServiceRequestLocationExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-organization> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-organization" ]
+       ] ;
+       fhir:name [ fhir:v "Organization" ] ;
+       fhir:description [ fhir:v "Administering Organization" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Observation/Covid19RecoveredOrSymptomsResolvedExample> ;
+         fhir:reference [ fhir:v "Observation/Covid19RecoveredOrSymptomsResolvedExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Observation - Covid19RecoveredOrSymptomsResolvedExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-assessment-vaccination" ]
+       ] ;
+       fhir:name [ fhir:v "Immunization Tracking" ] ;
+       fhir:description [ fhir:v "Retrospectively capture COVID19 immunization data for vaccines administered at other organizations" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Patient/Covid19PatientExample> ;
+         fhir:reference [ fhir:v "Patient/Covid19PatientExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Patient - Covid19PatientExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-admission-location" ]
+       ] ;
+       fhir:name [ fhir:v "Admission Location" ] ;
+       fhir:description [ fhir:v "What is the location of the organization where the patient is currently being admitted to for treatment?" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type> ;
+         fhir:reference [ fhir:v "ValueSet/vs-covid19-specimen-type" ]
+       ] ;
+       fhir:name [ fhir:v "Specimen Type" ] ;
+       fhir:description [ fhir:v "The type of specimen sample that was collected by the lab" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnostic-report> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-diagnostic-report" ]
+       ] ;
+       fhir:name [ fhir:v "Diagnostic Report" ] ;
+       fhir:description [ fhir:v "A report as a result of the lab task being completed" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Observation/Covid19PresentingSymptomsExample> ;
+         fhir:reference [ fhir:v "Observation/Covid19PresentingSymptomsExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Observation - Covid19PresentingSymptomsExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed> ;
+         fhir:reference [ fhir:v "ValueSet/vs-treatment-dispensed-prescribed" ]
+       ] ;
+       fhir:name [ fhir:v "Treatment Dispensed or Prescribed" ] ;
+       fhir:description [ fhir:v "A list of all possible drugs" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Bundle/LabRejection> ;
+         fhir:reference [ fhir:v "Bundle/LabRejection" ]
+       ] ;
+       fhir:name [ fhir:v "Example Bundle - LabRejection" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no> ;
+         fhir:reference [ fhir:v "ValueSet/vs-yes-no" ]
+       ] ;
+       fhir:name [ fhir:v "Yes No Unknown" ] ;
+       fhir:description [ fhir:v "A list of options used to provide an answer" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Task" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Task/Covid19LabOrderCancellationExample> ;
+         fhir:reference [ fhir:v "Task/Covid19LabOrderCancellationExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Task - Covid19LabOrderCancellationExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-medication-request" ]
+       ] ;
+       fhir:name [ fhir:v "Treatment dispensed or prescribed" ] ;
+       fhir:description [ fhir:v "To indicate whether Paxlovid has been issued to the individual" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-AdmissionTypes> ;
+         fhir:reference [ fhir:v "ValueSet/vs-AdmissionTypes" ]
+       ] ;
+       fhir:name [ fhir:v "Admission Types" ] ;
+       fhir:description [ fhir:v "A list of admission types" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types> ;
+         fhir:reference [ fhir:v "ValueSet/vs-test-types" ]
+       ] ;
+       fhir:name [ fhir:v "Test Types" ] ;
+       fhir:description [ fhir:v "A list of COVID19 test types" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Specimen" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Specimen/Covid19SpecimenLabResultExample> ;
+         fhir:reference [ fhir:v "Specimen/Covid19SpecimenLabResultExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Specimen - Covid19SpecimenLabResultExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-specimen>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-service-request-location> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-service-request-location" ]
+       ] ;
+       fhir:name [ fhir:v "Lab Order Request Location" ] ;
+       fhir:description [ fhir:v "What is the location of the organization responsible for conducting the examination of the individual's sample?" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Observation/Covid19TestResultExample> ;
+         fhir:reference [ fhir:v "Observation/Covid19TestResultExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Observation - Covid19TestResultExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-test-results>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-conditions-or-comorbidities> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-conditions-or-comorbidities" ]
+       ] ;
+       fhir:name [ fhir:v "Conditions or Comorbidity" ] ;
+       fhir:description [ fhir:v "What pre-existing conditions and/or comorbidities exist for the individual?" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Condition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Condition/Covid19DiagnosisExample> ;
+         fhir:reference [ fhir:v "Condition/Covid19DiagnosisExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Condition - Covid19DiagnosisExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Task" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Task/LabOrderTaskExample> ;
+         fhir:reference [ fhir:v "Task/LabOrderTaskExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Task - LabOrderTaskExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-lab-task>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-lab-task-output> ;
+         fhir:reference [ fhir:v "ValueSet/vs-lab-task-output" ]
+       ] ;
+       fhir:name [ fhir:v "Lab Result Task Output" ] ;
+       fhir:description [ fhir:v "Custom code system to support the need to indicate that a COVID19 result was documented by the lab" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed> ;
+         fhir:reference [ fhir:v "ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed" ]
+       ] ;
+       fhir:name [ fhir:v "Reason for Assessment or Test Not Performed" ] ;
+       fhir:description [ fhir:v "A list of reasons associated with the service request for the lab order" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-encounter" ]
+       ] ;
+       fhir:name [ fhir:v "Encounter" ] ;
+       fhir:description [ fhir:v "A record of the individual's visit at the organization" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-long-covid-post-covid" ]
+       ] ;
+       fhir:name [ fhir:v "Long Covid / Post-Covid" ] ;
+       fhir:description [ fhir:v "Does the indiviual continue to suffer from COVID19 health problems that are new, returning or ongoing conditons?" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Encounter" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Encounter/Covid19AssessmentEncounterExample> ;
+         fhir:reference [ fhir:v "Encounter/Covid19AssessmentEncounterExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Encounter - Covid19AssessmentEncounterExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity> ;
+         fhir:reference [ fhir:v "ValueSet/vs-conditions-comorbidity" ]
+       ] ;
+       fhir:name [ fhir:v "Conditions / Comorbidity" ] ;
+       fhir:description [ fhir:v "List of conditions and comorbidities" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Practitioner/PractitionerExample> ;
+         fhir:reference [ fhir:v "Practitioner/PractitionerExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Practitioner - PractitionerExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-practitioner>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised> ;
+         fhir:reference [ fhir:v "StructureDefinition/covid19-date-last-hospitalised" ]
+       ] ;
+       fhir:name [ fhir:v "Date Last Hospitalised" ] ;
+       fhir:description [ fhir:v "When last was the individual admitted to hospital?" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/Observation/Covid19VaccineDoseEverReceivedExample> ;
+         fhir:reference [ fhir:v "Observation/Covid19VaccineDoseEverReceivedExample" ]
+       ] ;
+       fhir:name [ fhir:v "Example Observation - Covid19VaccineDoseEverReceivedExample" ] ;
+       fhir:example [
+         fhir:v "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"^^xsd:anyURI ;
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-presentation> ;
+         fhir:reference [ fhir:v "ValueSet/vs-presentation" ]
+       ] ;
+       fhir:name [ fhir:v "Presentation" ] ;
+       fhir:description [ fhir:v "Determine if the COVID19 positive individual has any noticeable symptoms" ]
+     ] ) ;
+     fhir:page [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "toc.html"^^xsd:anyURI ]
+       ] ) ;
+       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "COVID19 Case Reporting" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "bussiness-description.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "bussiness-description.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Business Description" ] ;
+         fhir:generation [ fhir:v "html" ] ;
+         fhir:page ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "requirements.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "requirements.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Functional Requirements" ] ;
+           fhir:generation [ fhir:v "html" ] ;
+           fhir:page ( [
+             fhir:extension ( [
+               fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "use-cases.html"^^xsd:anyURI ]
+             ] ) ;
+             fhir:name [ fhir:v "use-cases.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Use Cases" ] ;
+             fhir:generation [ fhir:v "html" ]
+           ] [
+             fhir:extension ( [
+               fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "vaccination_status.html"^^xsd:anyURI ]
+             ] ) ;
+             fhir:name [ fhir:v "vaccination_status.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Vaccination Status" ] ;
+             fhir:generation [ fhir:v "html" ]
+           ] )
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "personas.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "personas.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Personas" ] ;
+           fhir:generation [ fhir:v "html" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "workflows.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "workflows.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Usage Workflows" ] ;
+           fhir:generation [ fhir:v "html" ]
+         ] )
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "deployment.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "deployment.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Deployment & Use" ] ;
+         fhir:generation [ fhir:v "html" ] ;
+         fhir:page ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "bundles.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "bundles.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Message Bundles" ] ;
+           fhir:generation [ fhir:v "html" ] ;
+           fhir:page ( [
+             fhir:extension ( [
+               fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "emr-bundle.html"^^xsd:anyURI ]
+             ] ) ;
+             fhir:name [ fhir:v "emr-bundle.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "EMR Bundle" ] ;
+             fhir:generation [ fhir:v "html" ]
+           ] [
+             fhir:extension ( [
+               fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "lab-order-bundle.html"^^xsd:anyURI ]
+             ] ) ;
+             fhir:name [ fhir:v "lab-order-bundle.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Lab Order Bundle" ] ;
+             fhir:generation [ fhir:v "html" ]
+           ] [
+             fhir:extension ( [
+               fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "lab-result-bundle.html"^^xsd:anyURI ]
+             ] ) ;
+             fhir:name [ fhir:v "lab-result-bundle.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Lab Result Bundle" ] ;
+             fhir:generation [ fhir:v "html" ]
+           ] [
+             fhir:extension ( [
+               fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "lab-cancellation-bundle.html"^^xsd:anyURI ]
+             ] ) ;
+             fhir:name [ fhir:v "lab-cancellation-bundle.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Lab Cancellation Bundle" ] ;
+             fhir:generation [ fhir:v "html" ]
+           ] [
+             fhir:extension ( [
+               fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+               fhir:value [ fhir:v "lab-rejection-bundle.html"^^xsd:anyURI ]
+             ] ) ;
+             fhir:name [ fhir:v "lab-rejection-bundle.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Lab Rejection Bundle" ] ;
+             fhir:generation [ fhir:v "html" ]
+           ] )
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "security-privacy.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "security-privacy.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Security & Privacy" ] ;
+           fhir:generation [ fhir:v "html" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "testing.html"^^xsd:anyURI ]
+           ] ) ;
+           fhir:name [ fhir:v "testing.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Testing" ] ;
+           fhir:generation [ fhir:v "html" ]
+         ] )
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "referenced-sources.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "referenced-sources.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "References" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "changes.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "changes.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "IG Change History" ] ;
+         fhir:generation [ fhir:v "html" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input\\history" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input\\scenarios" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [ fhir:v "path-tx-cache" ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
