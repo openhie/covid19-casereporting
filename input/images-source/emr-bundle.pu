@@ -11,7 +11,14 @@
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-patient"]
       },
+    
       "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "PPN"
+          }]
+        },
         "system" : "http://openhie.org/fhir/covid19-casereporting/identifier/passport",
         "value" : "PASSPORT1234567"
       },
@@ -75,6 +82,7 @@
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"]
       },
+      
       "extension" : [{
         "url" : "http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination",
         "valueDateTime" : "2022-07-28"
@@ -129,6 +137,17 @@
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-admission-location"]
       },
+     
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code" : "RI"
+          }]
+        },
+        "system" : "http://openhie.org/fhir/covid19-casereporting/identifier/covid19-admission-location-id",
+        "value" : "abc123"
+      }],
       "name" : "Covid19 Location",
       "address" : {
         "city" : "Example city 1",
@@ -150,6 +169,7 @@
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-presenting-symptoms"]
       },
+    
       "status" : "final",
       "code" : {
         "coding" : [{
@@ -188,6 +208,7 @@
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-diagnosis"]
       },
+     
       "verificationStatus" : {
         "coding" : [{
           "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
@@ -274,7 +295,7 @@
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-assessment-vaccination"]
       },
-    
+     
       "status" : "completed",
       "vaccineCode" : {
         "coding" : [{
@@ -322,7 +343,7 @@
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccination"]
       },
-    
+     
       "status" : "completed",
       "vaccineCode" : {
         "coding" : [{
@@ -370,7 +391,7 @@
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-medication-request"]
       },
-     
+      
       "status" : "active",
       "intent" : "order",
       "medicationCodeableConcept" : {
@@ -437,7 +458,7 @@
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-recovered-or-symptoms-resolved"]
       },
-     
+    
       "status" : "final",
       "code" : {
         "coding" : [{
@@ -515,7 +536,7 @@
       "meta" : {
         "profile" : ["http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-long-covid-post-covid"]
       },
-    
+     
       "status" : "final",
       "code" : {
         "coding" : [{
@@ -547,5 +568,4 @@
     }
   }]
 }
-
 @endjson
