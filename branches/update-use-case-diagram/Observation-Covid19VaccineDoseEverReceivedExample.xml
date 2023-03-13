@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="Covid19VaccineDoseEverReceivedExample"/>
+  <meta>
+    <profile value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-vaccine-dose-ever-received"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="Covid19VaccineDoseEverReceivedExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;Covid19VaccineDoseEverReceivedExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-vaccine-dose-ever-received.html">Vaccine Dose Ever Received</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Yes (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#373066001)</span></p><p><b>subject</b>: <a href="Patient-Covid19PatientExample.html">Patient/Covid19PatientExample</a> &quot; SMITH&quot;</p><p><b>encounter</b>: <a href="Encounter-Covid19AssessmentEncounterExample.html">Encounter/Covid19AssessmentEncounterExample</a></p><p><b>performer</b>: <a href="Organization-Covid19OrganizationExample.html">Organization/Covid19OrganizationExample</a> &quot;Covid19 Organization&quot;</p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="373066001"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Covid19PatientExample"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/Covid19AssessmentEncounterExample"/>
+  </encounter>
+  <performer>
+    <reference value="Organization/Covid19OrganizationExample"/>
+  </performer>
+</Observation>

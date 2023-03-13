@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-source-of-info"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">PatientRecall<a name=\"cs-source-of-info-PatientRecall\"> </a></td><td>Patient Recall</td></tr><tr><td style=\"white-space:nowrap\">VaccineCard<a name=\"cs-source-of-info-VaccineCard\"> </a></td><td>Vaccine Card</td></tr><tr><td style=\"white-space:nowrap\">MobilePhoneNotification<a name=\"cs-source-of-info-MobilePhoneNotification\"> </a></td><td>Mobile Phone Notification</td></tr><tr><td style=\"white-space:nowrap\">VaccineAdministeredFromFacility<a name=\"cs-source-of-info-VaccineAdministeredFromFacility\"> </a></td><td>Vaccine Administered from this facility</td></tr><tr><td style=\"white-space:nowrap\">Other<a name=\"cs-source-of-info-Other\"> </a></td><td>Other</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CSSourceOfInfo"] ; # 
+  fhir:title [ fhir:v "Source of Information"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-03-13T06:27:04+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Jembi Health Systems"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.jembi.org" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "info@jembi.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "5"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "PatientRecall" ] ;
+     fhir:display [ fhir:v "Patient Recall" ]
+  ] [
+     fhir:code [ fhir:v "VaccineCard" ] ;
+     fhir:display [ fhir:v "Vaccine Card" ]
+  ] [
+     fhir:code [ fhir:v "MobilePhoneNotification" ] ;
+     fhir:display [ fhir:v "Mobile Phone Notification" ]
+  ] [
+     fhir:code [ fhir:v "VaccineAdministeredFromFacility" ] ;
+     fhir:display [ fhir:v "Vaccine Administered from this facility" ]
+  ] [
+     fhir:code [ fhir:v "Other" ] ;
+     fhir:display [ fhir:v "Other" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
