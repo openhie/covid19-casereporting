@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="Covid19AssessmentEncounterExample"/>
+  <meta>
+    <profile value="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-encounter"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Encounter</b><a name="Covid19AssessmentEncounterExample"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Encounter &quot;Covid19AssessmentEncounterExample&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-covid19-encounter.html">Encounter</a></p></div><p><b>Date of next vaccination</b>: 2022-07-28</p><p><b>Ever Hospitalized</b>: Yes (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#373066001)</span></p><p><b>Date Last Hospitalised</b>: 2022-07-28</p><p><b>status</b>: finished</p><p><b>class</b>: short stay (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code SS = 'short stay', stated as 'null')</p><p><b>subject</b>: <a href="Patient-Covid19PatientExample.html">Patient/Covid19PatientExample</a> &quot; SMITH&quot;</p><p><b>period</b>: 2022-07-28 --&gt; 2022-08-15</p><h3>Locations</h3><table class="grid"><tr><td>-</td><td><b>Location</b></td><td><b>PhysicalType</b></td></tr><tr><td>*</td><td><a href="Location-Covid19AdmissionLocationExample.html">Location/Covid19AdmissionLocationExample</a> &quot;Covid19 Location&quot;</td><td>Ward <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#225746001)</span></td></tr></table></div>
+  </text>
+  <extension url="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-next-vaccination">
+    <valueDateTime value="2022-07-28"/>
+  </extension>
+  <extension url="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-ever-hospitalised">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="373066001"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://openhie.org/fhir/covid19-casereporting/StructureDefinition/covid19-date-last-hospitalised">
+    <valueDateTime value="2022-07-28"/>
+  </extension>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="SS"/>
+  </class>
+  <subject>
+    <reference value="Patient/Covid19PatientExample"/>
+  </subject>
+  <period>
+    <start value="2022-07-28"/>
+    <end value="2022-08-15"/>
+  </period>
+  <location>
+    <location>
+      <reference value="Location/Covid19AdmissionLocationExample"/>
+    </location>
+    <physicalType>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="225746001"/>
+      </coding>
+    </physicalType>
+  </location>
+</Encounter>

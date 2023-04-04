@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-covid19-specimen-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/258500001">258500001</a></td><td>Nasopharyngeal</td></tr><tr><td><a href="http://snomed.info/id/461911000124106">461911000124106</a></td><td>Oropharyngeal swab</td></tr><tr><td><a href="http://snomed.info/id/119324002">119324002</a></td><td>unknown</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type"/>
+  <version value="0.1.0"/>
+  <name value="VSCovid19SpecimenType"/>
+  <title value="Specimen Type"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-04-04T10:46:14+00:00"/>
+  <publisher value="Jembi Health Systems"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.jembi.org"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="info@jembi.org"/>
+    </telecom>
+  </contact>
+  <description value="The type of specimen sample that was collected by the lab"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="258500001"/>
+        <display value="Nasopharyngeal"/>
+      </concept>
+      <concept>
+        <code value="461911000124106"/>
+        <display value="Oropharyngeal swab"/>
+      </concept>
+      <concept>
+        <code value="119324002"/>
+        <display value="unknown"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
