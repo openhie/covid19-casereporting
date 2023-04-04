@@ -1,26 +1,26 @@
 {
   "resourceType" : "Bundle",
-  "id" : "9859edf2-830f-4c00-9312-204ea9feb3b1",
+  "id" : "6a7951a5-17ea-411c-b050-b44ddd42ecec",
   "meta" : {
-    "lastUpdated" : "2023-03-13T06:32:29.837+00:00"
+    "lastUpdated" : "2023-04-04T10:46:14.420+00:00"
   },
   "type" : "collection",
   "entry" : [{
-    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result",
+    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info",
     "resource" : {
       "resourceType" : "ValueSet",
-      "id" : "vs-covid19-test-result",
+      "id" : "vs-source-of-info",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-10828004\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/10828004\">10828004</a></td><td>http://snomed.info/sct</td><td>Positive</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-260385009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/260385009\">260385009</a></td><td>http://snomed.info/sct</td><td>Negative</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-419984006\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/419984006\">419984006</a></td><td>http://snomed.info/sct</td><td>Inconclusive</td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-cs-source-of-info.html\">Source of Information v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-source-of-info-PatientRecall\"> </a>\u00a0\u00a0<a href=\"CodeSystem-cs-source-of-info.html#cs-source-of-info-PatientRecall\">PatientRecall</a></td><td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</td><td>Patient Recall</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-source-of-info-VaccineCard\"> </a>\u00a0\u00a0<a href=\"CodeSystem-cs-source-of-info.html#cs-source-of-info-VaccineCard\">VaccineCard</a></td><td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</td><td>Vaccine Card</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-source-of-info-MobilePhoneNotification\"> </a>\u00a0\u00a0<a href=\"CodeSystem-cs-source-of-info.html#cs-source-of-info-MobilePhoneNotification\">MobilePhoneNotification</a></td><td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</td><td>Mobile Phone Notification</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-source-of-info-VaccineAdministeredFromFacility\"> </a>\u00a0\u00a0<a href=\"CodeSystem-cs-source-of-info.html#cs-source-of-info-VaccineAdministeredFromFacility\">VaccineAdministeredFromFacility</a></td><td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</td><td>Vaccine Administered from this facility</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-source-of-info-Other\"> </a>\u00a0\u00a0<a href=\"CodeSystem-cs-source-of-info.html#cs-source-of-info-Other\">Other</a></td><td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</td><td>Other</td></tr></table></div>"
       },
-      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result",
+      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info",
       "version" : "0.1.0",
-      "name" : "VSTestResult",
-      "title" : "Test Result",
+      "name" : "VSSourceOfInfo",
+      "title" : "Source of Information",
       "status" : "active",
       "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
+      "date" : "2023-04-04T10:46:14+00:00",
       "publisher" : "Jembi Health Systems",
       "contact" : [{
         "telecom" : [{
@@ -32,7 +32,7 @@
           "value" : "info@jembi.org"
         }]
       }],
-      "description" : "COVID19 diagnosis",
+      "description" : "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -40,9 +40,83 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:506a54e9-7de4-4083-b51e-efe723311d2d",
-        "timestamp" : "2023-03-13T06:32:59+00:00",
-        "total" : 3,
+        "identifier" : "urn:uuid:fe43e1b5-087f-429c-910d-2636365b2de5",
+        "timestamp" : "2023-04-04T10:47:08+00:00",
+        "total" : 5,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info",
+          "code" : "PatientRecall",
+          "display" : "Patient Recall"
+        },
+        {
+          "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info",
+          "code" : "VaccineCard",
+          "display" : "Vaccine Card"
+        },
+        {
+          "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info",
+          "code" : "MobilePhoneNotification",
+          "display" : "Mobile Phone Notification"
+        },
+        {
+          "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info",
+          "code" : "VaccineAdministeredFromFacility",
+          "display" : "Vaccine Administered from this facility"
+        },
+        {
+          "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info",
+          "code" : "Other",
+          "display" : "Other"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-presentation",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "vs-presentation",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-84387000\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/84387000\">84387000</a></td><td>http://snomed.info/sct</td><td>Asymptomatic</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-264931009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/264931009\">264931009</a></td><td>http://snomed.info/sct</td><td>Symptomatic</td></tr></table></div>"
+      },
+      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-presentation",
+      "version" : "0.1.0",
+      "name" : "VSPresentation",
+      "title" : "Presentation",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-04-04T10:46:14+00:00",
+      "publisher" : "Jembi Health Systems",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www.jembi.org"
+        },
+        {
+          "system" : "email",
+          "value" : "info@jembi.org"
+        }]
+      }],
+      "description" : "Determine if the COVID19 positive individual has any noticeable symptoms",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:e8576069-0814-479a-9095-6c26af39ebdf",
+        "timestamp" : "2023-04-04T10:47:09+00:00",
+        "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
@@ -57,18 +131,13 @@
         }],
         "contains" : [{
           "system" : "http://snomed.info/sct",
-          "code" : "10828004",
-          "display" : "Positive"
+          "code" : "84387000",
+          "display" : "Asymptomatic"
         },
         {
           "system" : "http://snomed.info/sct",
-          "code" : "260385009",
-          "display" : "Negative"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "419984006",
-          "display" : "Inconclusive"
+          "code" : "264931009",
+          "display" : "Symptomatic"
         }]
       }
     }
@@ -88,7 +157,7 @@
       "title" : "Lab Result Task Output",
       "status" : "active",
       "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
+      "date" : "2023-04-04T10:46:14+00:00",
       "publisher" : "Jembi Health Systems",
       "contact" : [{
         "telecom" : [{
@@ -108,8 +177,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:3e83bce9-7373-415f-b950-d990aa03f3f0",
-        "timestamp" : "2023-03-13T06:33:02+00:00",
+        "identifier" : "urn:uuid:f82cc77c-b2c0-470e-b187-fe30af7a9bb7",
+        "timestamp" : "2023-04-04T10:47:10+00:00",
         "total" : 1,
         "parameter" : [{
           "name" : "excludeNested",
@@ -123,318 +192,6 @@
           "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-lab-task-output",
           "code" : "Result",
           "display" : "Covid19 Test Result"
-        }]
-      }
-    }
-  },
-  {
-    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "id" : "vs-test-types",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on Loinc v2.73</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---loinc.org-94558-4\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/94558-4/\">94558-4</a></td><td>http://loinc.org</td><td>SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---loinc.org-94745-7\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/94745-7/\">94745-7</a></td><td>http://loinc.org</td><td>SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection</td></tr></table></div>"
-      },
-      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types",
-      "version" : "0.1.0",
-      "name" : "VSTestTypes",
-      "title" : "Test Types",
-      "status" : "active",
-      "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
-      "publisher" : "Jembi Health Systems",
-      "contact" : [{
-        "telecom" : [{
-          "system" : "url",
-          "value" : "https://www.jembi.org"
-        },
-        {
-          "system" : "email",
-          "value" : "info@jembi.org"
-        }]
-      }],
-      "description" : "A list of COVID19 test types",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "code" : "001"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:0c430647-062d-4c91-be95-9ae6d5a36192",
-        "timestamp" : "2023-03-13T06:33:03+00:00",
-        "total" : 2,
-        "parameter" : [{
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "limitedExpansion",
-          "valueBoolean" : true
-        },
-        {
-          "name" : "version",
-          "valueUri" : "http://loinc.org|2.73"
-        }],
-        "contains" : [{
-          "system" : "http://loinc.org",
-          "code" : "94558-4",
-          "display" : "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"
-        },
-        {
-          "system" : "http://loinc.org",
-          "code" : "94745-7",
-          "display" : "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
-        }]
-      }
-    }
-  },
-  {
-    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "id" : "vs-conditions-comorbidity",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 14 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-49601007\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/49601007\">49601007</a></td><td>http://snomed.info/sct</td><td>Cardiovascular disease e.g heart failure</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-13645005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/13645005\">13645005</a></td><td>http://snomed.info/sct</td><td>Chronic Lung Disease</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-118940003\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/118940003\">118940003</a></td><td>http://snomed.info/sct</td><td>Chronic neurological or neuromuscular disease</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-77176002\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/77176002\">77176002</a></td><td>http://snomed.info/sct</td><td>Current smoker</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-46635009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/46635009\">46635009</a></td><td>http://snomed.info/sct</td><td>Diabetes type 1</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-44054006\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/44054006\">44054006</a></td><td>http://snomed.info/sct</td><td>Diabetes type 2</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-73211009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/73211009\">73211009</a></td><td>http://snomed.info/sct</td><td>Diabetes Type other or unspecified</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-165816005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/165816005\">165816005</a></td><td>http://snomed.info/sct</td><td>HIV /AIDS</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-38341003\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/38341003\">38341003</a></td><td>http://snomed.info/sct</td><td>Hypertension</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-234532001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/234532001\">234532001</a></td><td>http://snomed.info/sct</td><td>Immunodeficiency</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-76783007\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/76783007\">76783007</a></td><td>http://snomed.info/sct</td><td>Liver disease</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-363346000\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/363346000\">363346000</a></td><td>http://snomed.info/sct</td><td>Malignancy</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-709044004\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/709044004\">709044004</a></td><td>http://snomed.info/sct</td><td>Renal disease</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-56717001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/56717001\">56717001</a></td><td>http://snomed.info/sct</td><td>TB</td></tr></table></div>"
-      },
-      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity",
-      "version" : "0.1.0",
-      "name" : "VSConditionsComorbidity",
-      "title" : "Conditions / Comorbidity",
-      "status" : "active",
-      "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
-      "publisher" : "Jembi Health Systems",
-      "contact" : [{
-        "telecom" : [{
-          "system" : "url",
-          "value" : "https://www.jembi.org"
-        },
-        {
-          "system" : "email",
-          "value" : "info@jembi.org"
-        }]
-      }],
-      "description" : "List of conditions and comorbidities",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "code" : "001"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:bae65cd3-7f59-40d1-b4fc-830ca2fb3f20",
-        "timestamp" : "2023-03-13T06:33:03+00:00",
-        "total" : 14,
-        "parameter" : [{
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "limitedExpansion",
-          "valueBoolean" : true
-        },
-        {
-          "name" : "version",
-          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"
-        }],
-        "contains" : [{
-          "system" : "http://snomed.info/sct",
-          "code" : "49601007",
-          "display" : "Cardiovascular disease e.g heart failure"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "13645005",
-          "display" : "Chronic Lung Disease"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "118940003",
-          "display" : "Chronic neurological or neuromuscular disease"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "77176002",
-          "display" : "Current smoker"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "46635009",
-          "display" : "Diabetes type 1"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "44054006",
-          "display" : "Diabetes type 2"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "73211009",
-          "display" : "Diabetes Type other or unspecified"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "165816005",
-          "display" : "HIV /AIDS"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "38341003",
-          "display" : "Hypertension"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "234532001",
-          "display" : "Immunodeficiency"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "76783007",
-          "display" : "Liver disease"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "363346000",
-          "display" : "Malignancy"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "709044004",
-          "display" : "Renal disease"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "56717001",
-          "display" : "TB"
-        }]
-      }
-    }
-  },
-  {
-    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "id" : "vs-treatment-dispensed-prescribed",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 1 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on RxNorm version ??</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-2599543\"> </a>\u00a0\u00a02599543</td><td>http://www.nlm.nih.gov/research/umls/rxnorm</td><td>Paxlovid</td></tr></table></div>"
-      },
-      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed",
-      "version" : "0.1.0",
-      "name" : "VSTreatMentDispensedPrescribed",
-      "title" : "Treatment Dispensed or Prescribed",
-      "status" : "active",
-      "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
-      "publisher" : "Jembi Health Systems",
-      "contact" : [{
-        "telecom" : [{
-          "system" : "url",
-          "value" : "https://www.jembi.org"
-        },
-        {
-          "system" : "email",
-          "value" : "info@jembi.org"
-        }]
-      }],
-      "description" : "A list of all possible drugs",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "code" : "001"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:516645ff-78f9-4ce6-ae96-8a1655d799fe",
-        "timestamp" : "2023-03-13T06:33:04+00:00",
-        "total" : 1,
-        "parameter" : [{
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "limitedExpansion",
-          "valueBoolean" : true
-        },
-        {
-          "name" : "version",
-          "valueUri" : "http://www.nlm.nih.gov/research/umls/rxnorm|??"
-        }],
-        "contains" : [{
-          "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-          "code" : "2599543",
-          "display" : "Paxlovid"
-        }]
-      }
-    }
-  },
-  {
-    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "id" : "vs-yes-no",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-373066001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/373066001\">373066001</a></td><td>http://snomed.info/sct</td><td>Yes</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-373067005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/373067005\">373067005</a></td><td>http://snomed.info/sct</td><td>No</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-261665006\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/261665006\">261665006</a></td><td>http://snomed.info/sct</td><td>Unknown</td></tr></table></div>"
-      },
-      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no",
-      "version" : "0.1.0",
-      "name" : "VSYesNoUnknown",
-      "title" : "Yes No Unknown",
-      "status" : "active",
-      "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
-      "publisher" : "Jembi Health Systems",
-      "contact" : [{
-        "telecom" : [{
-          "system" : "url",
-          "value" : "https://www.jembi.org"
-        },
-        {
-          "system" : "email",
-          "value" : "info@jembi.org"
-        }]
-      }],
-      "description" : "A list of options used to provide an answer",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "code" : "001"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:e85630c1-334d-488d-bd18-1a6bf61c583e",
-        "timestamp" : "2023-03-13T06:33:07+00:00",
-        "total" : 3,
-        "parameter" : [{
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "limitedExpansion",
-          "valueBoolean" : true
-        },
-        {
-          "name" : "version",
-          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"
-        }],
-        "contains" : [{
-          "system" : "http://snomed.info/sct",
-          "code" : "373066001",
-          "display" : "Yes"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "373067005",
-          "display" : "No"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "261665006",
-          "display" : "Unknown"
         }]
       }
     }
@@ -454,7 +211,7 @@
       "title" : "Cancellation Reasons",
       "status" : "active",
       "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
+      "date" : "2023-04-04T10:46:14+00:00",
       "publisher" : "Jembi Health Systems",
       "contact" : [{
         "telecom" : [{
@@ -474,8 +231,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:58405678-ec55-4bb2-9541-632ddc752595",
-        "timestamp" : "2023-03-13T06:33:09+00:00",
+        "identifier" : "urn:uuid:c80e722a-a2ad-40b2-95ad-f11ca7f5ad31",
+        "timestamp" : "2023-04-04T10:47:11+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -508,6 +265,336 @@
     }
   },
   {
+    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-AdmissionTypes",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "vs-AdmissionTypes",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-225746001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/225746001\">225746001</a></td><td>http://snomed.info/sct</td><td>Ward</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-309904001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/309904001\">309904001</a></td><td>http://snomed.info/sct</td><td>ICU</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-397771005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/397771005\">397771005</a></td><td>http://snomed.info/sct</td><td>HDU</td></tr></table></div>"
+      },
+      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-AdmissionTypes",
+      "version" : "0.1.0",
+      "name" : "VSAdmissionTypes",
+      "title" : "Admission Types",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-04-04T10:46:14+00:00",
+      "publisher" : "Jembi Health Systems",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www.jembi.org"
+        },
+        {
+          "system" : "email",
+          "value" : "info@jembi.org"
+        }]
+      }],
+      "description" : "A list of admission types",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:e672ef41-5cd7-442e-a8a3-bbde0d3de84f",
+        "timestamp" : "2023-04-04T10:47:22+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "225746001",
+          "display" : "Ward"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "309904001",
+          "display" : "ICU"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "397771005",
+          "display" : "HDU"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "vs-treatment-dispensed-prescribed",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 1 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on RxNorm version ??</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---www.nlm.nih.gov-research-umls-rxnorm-2599543\"> </a>\u00a0\u00a02599543</td><td>http://www.nlm.nih.gov/research/umls/rxnorm</td><td>Paxlovid</td></tr></table></div>"
+      },
+      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-treatment-dispensed-prescribed",
+      "version" : "0.1.0",
+      "name" : "VSTreatMentDispensedPrescribed",
+      "title" : "Treatment Dispensed or Prescribed",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-04-04T10:46:14+00:00",
+      "publisher" : "Jembi Health Systems",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www.jembi.org"
+        },
+        {
+          "system" : "email",
+          "value" : "info@jembi.org"
+        }]
+      }],
+      "description" : "A list of all possible drugs",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:aeb3052c-2e63-4366-b2a5-5cfafae77012",
+        "timestamp" : "2023-04-04T10:47:23+00:00",
+        "total" : 1,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://www.nlm.nih.gov/research/umls/rxnorm|??"
+        }],
+        "contains" : [{
+          "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code" : "2599543",
+          "display" : "Paxlovid"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "vs-covid19-specimen-type",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-258500001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/258500001\">258500001</a></td><td>http://snomed.info/sct</td><td>Nasopharyngeal</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-461911000124106\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/461911000124106\">461911000124106</a></td><td>http://snomed.info/sct</td><td>Oropharyngeal swab</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-119324002\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/119324002\">119324002</a></td><td>http://snomed.info/sct</td><td>unknown</td></tr></table></div>"
+      },
+      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type",
+      "version" : "0.1.0",
+      "name" : "VSCovid19SpecimenType",
+      "title" : "Specimen Type",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-04-04T10:46:14+00:00",
+      "publisher" : "Jembi Health Systems",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www.jembi.org"
+        },
+        {
+          "system" : "email",
+          "value" : "info@jembi.org"
+        }]
+      }],
+      "description" : "The type of specimen sample that was collected by the lab",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:63bb5721-1afe-497a-a48f-19925ab39f8c",
+        "timestamp" : "2023-04-04T10:47:26+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "258500001",
+          "display" : "Nasopharyngeal"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "461911000124106",
+          "display" : "Oropharyngeal swab"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "119324002",
+          "display" : "unknown"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-outcome-code",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "vs-covid19-outcome-code",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-370996005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/370996005\">370996005</a></td><td>http://snomed.info/sct</td><td>Patient condition resolved (finding)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-1119303003\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/1119303003\">1119303003</a></td><td>http://snomed.info/sct</td><td>Post-acute COVID-19 (disorder)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-419099009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/419099009\">419099009</a></td><td>http://snomed.info/sct</td><td>Dead (finding)</td></tr></table></div>"
+      },
+      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-outcome-code",
+      "version" : "0.1.0",
+      "name" : "VSOutcome",
+      "title" : "Patient Outcome",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-04-04T10:46:14+00:00",
+      "publisher" : "Jembi Health Systems",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www.jembi.org"
+        },
+        {
+          "system" : "email",
+          "value" : "info@jembi.org"
+        }]
+      }],
+      "description" : "A list of possible outcomes.",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:fd6cc3db-c42b-4c1b-acbc-373a6bfd87d7",
+        "timestamp" : "2023-04-04T10:47:26+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "370996005",
+          "display" : "Patient condition resolved (finding)"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "1119303003",
+          "display" : "Post-acute COVID-19 (disorder)"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "419099009",
+          "display" : "Dead (finding)"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "vs-covid19-test-result",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-10828004\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/10828004\">10828004</a></td><td>http://snomed.info/sct</td><td>Positive</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-260385009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/260385009\">260385009</a></td><td>http://snomed.info/sct</td><td>Negative</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-419984006\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/419984006\">419984006</a></td><td>http://snomed.info/sct</td><td>Inconclusive</td></tr></table></div>"
+      },
+      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-test-result",
+      "version" : "0.1.0",
+      "name" : "VSTestResult",
+      "title" : "Test Result",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2023-04-04T10:46:14+00:00",
+      "publisher" : "Jembi Health Systems",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www.jembi.org"
+        },
+        {
+          "system" : "email",
+          "value" : "info@jembi.org"
+        }]
+      }],
+      "description" : "COVID19 diagnosis",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:177ba2a6-fdd0-4f5e-96af-d1467e7b904e",
+        "timestamp" : "2023-04-04T10:47:28+00:00",
+        "total" : 3,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "10828004",
+          "display" : "Positive"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "260385009",
+          "display" : "Negative"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "419984006",
+          "display" : "Inconclusive"
+        }]
+      }
+    }
+  },
+  {
     "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-reason-for-assessment-or-test-not-performed",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -522,7 +609,7 @@
       "title" : "Reason for Assessment or Test Not Performed",
       "status" : "active",
       "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
+      "date" : "2023-04-04T10:46:14+00:00",
       "publisher" : "Jembi Health Systems",
       "contact" : [{
         "telecom" : [{
@@ -542,8 +629,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:7b157a44-c74f-4f5f-9c6e-71fd6c2fb9e3",
-        "timestamp" : "2023-03-13T06:33:10+00:00",
+        "identifier" : "urn:uuid:6f085e79-d1f0-4c8b-ad8b-e3a1f275800f",
+        "timestamp" : "2023-04-04T10:47:29+00:00",
         "total" : 18,
         "parameter" : [{
           "name" : "excludeNested",
@@ -651,21 +738,21 @@
     }
   },
   {
-    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type",
+    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no",
     "resource" : {
       "resourceType" : "ValueSet",
-      "id" : "vs-covid19-specimen-type",
+      "id" : "vs-yes-no",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-258500001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/258500001\">258500001</a></td><td>http://snomed.info/sct</td><td>Nasopharyngeal</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-461911000124106\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/461911000124106\">461911000124106</a></td><td>http://snomed.info/sct</td><td>Oropharyngeal swab</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-119324002\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/119324002\">119324002</a></td><td>http://snomed.info/sct</td><td>unknown</td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-373066001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/373066001\">373066001</a></td><td>http://snomed.info/sct</td><td>Yes</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-373067005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/373067005\">373067005</a></td><td>http://snomed.info/sct</td><td>No</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-261665006\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/261665006\">261665006</a></td><td>http://snomed.info/sct</td><td>Unknown</td></tr></table></div>"
       },
-      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-specimen-type",
+      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-yes-no",
       "version" : "0.1.0",
-      "name" : "VSCovid19SpecimenType",
-      "title" : "Specimen Type",
+      "name" : "VSYesNoUnknown",
+      "title" : "Yes No Unknown",
       "status" : "active",
       "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
+      "date" : "2023-04-04T10:46:14+00:00",
       "publisher" : "Jembi Health Systems",
       "contact" : [{
         "telecom" : [{
@@ -677,7 +764,7 @@
           "value" : "info@jembi.org"
         }]
       }],
-      "description" : "The type of specimen sample that was collected by the lab",
+      "description" : "A list of options used to provide an answer",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -685,8 +772,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:c845abf2-591f-43f1-ba80-ffd268f49eba",
-        "timestamp" : "2023-03-13T06:33:13+00:00",
+        "identifier" : "urn:uuid:5d3fdc67-5e73-4f80-83f4-31ddd052387c",
+        "timestamp" : "2023-04-04T10:47:33+00:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -702,38 +789,38 @@
         }],
         "contains" : [{
           "system" : "http://snomed.info/sct",
-          "code" : "258500001",
-          "display" : "Nasopharyngeal"
+          "code" : "373066001",
+          "display" : "Yes"
         },
         {
           "system" : "http://snomed.info/sct",
-          "code" : "461911000124106",
-          "display" : "Oropharyngeal swab"
+          "code" : "373067005",
+          "display" : "No"
         },
         {
           "system" : "http://snomed.info/sct",
-          "code" : "119324002",
-          "display" : "unknown"
+          "code" : "261665006",
+          "display" : "Unknown"
         }]
       }
     }
   },
   {
-    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-presentation",
+    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types",
     "resource" : {
       "resourceType" : "ValueSet",
-      "id" : "vs-presentation",
+      "id" : "vs-test-types",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-84387000\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/84387000\">84387000</a></td><td>http://snomed.info/sct</td><td>Asymptomatic</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-264931009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/264931009\">264931009</a></td><td>http://snomed.info/sct</td><td>Symptomatic</td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on Loinc v2.73</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---loinc.org-94558-4\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/94558-4/\">94558-4</a></td><td>http://loinc.org</td><td>SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---loinc.org-94745-7\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/94745-7/\">94745-7</a></td><td>http://loinc.org</td><td>SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection</td></tr></table></div>"
       },
-      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-presentation",
+      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-test-types",
       "version" : "0.1.0",
-      "name" : "VSPresentation",
-      "title" : "Presentation",
+      "name" : "VSTestTypes",
+      "title" : "Test Types",
       "status" : "active",
       "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
+      "date" : "2023-04-04T10:46:14+00:00",
       "publisher" : "Jembi Health Systems",
       "contact" : [{
         "telecom" : [{
@@ -745,7 +832,7 @@
           "value" : "info@jembi.org"
         }]
       }],
-      "description" : "Determine if the COVID19 positive individual has any noticeable symptoms",
+      "description" : "A list of COVID19 test types",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -753,8 +840,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:c32d2c4c-943c-47a0-bc8c-415a749157ae",
-        "timestamp" : "2023-03-13T06:33:14+00:00",
+        "identifier" : "urn:uuid:1474934d-4f6e-44d2-b395-58f13f311ff8",
+        "timestamp" : "2023-04-04T10:47:41+00:00",
         "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
@@ -766,153 +853,17 @@
         },
         {
           "name" : "version",
-          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"
+          "valueUri" : "http://loinc.org|2.73"
         }],
         "contains" : [{
-          "system" : "http://snomed.info/sct",
-          "code" : "84387000",
-          "display" : "Asymptomatic"
+          "system" : "http://loinc.org",
+          "code" : "94558-4",
+          "display" : "SARS-CoV-2 (COVID-19) Ag [Presence] in Respiratory specimen by Rapid immunoassay"
         },
         {
-          "system" : "http://snomed.info/sct",
-          "code" : "264931009",
-          "display" : "Symptomatic"
-        }]
-      }
-    }
-  },
-  {
-    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-AdmissionTypes",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "id" : "vs-AdmissionTypes",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-225746001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/225746001\">225746001</a></td><td>http://snomed.info/sct</td><td>Ward</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-309904001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/309904001\">309904001</a></td><td>http://snomed.info/sct</td><td>ICU</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-397771005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/397771005\">397771005</a></td><td>http://snomed.info/sct</td><td>HDU</td></tr></table></div>"
-      },
-      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-AdmissionTypes",
-      "version" : "0.1.0",
-      "name" : "VSAdmissionTypes",
-      "title" : "Admission Types",
-      "status" : "active",
-      "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
-      "publisher" : "Jembi Health Systems",
-      "contact" : [{
-        "telecom" : [{
-          "system" : "url",
-          "value" : "https://www.jembi.org"
-        },
-        {
-          "system" : "email",
-          "value" : "info@jembi.org"
-        }]
-      }],
-      "description" : "A list of admission types",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "code" : "001"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:6c791496-1166-4934-8874-f803ebb05e7e",
-        "timestamp" : "2023-03-13T06:33:15+00:00",
-        "total" : 3,
-        "parameter" : [{
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "limitedExpansion",
-          "valueBoolean" : true
-        },
-        {
-          "name" : "version",
-          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"
-        }],
-        "contains" : [{
-          "system" : "http://snomed.info/sct",
-          "code" : "225746001",
-          "display" : "Ward"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "309904001",
-          "display" : "ICU"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "397771005",
-          "display" : "HDU"
-        }]
-      }
-    }
-  },
-  {
-    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-outcome-code",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "id" : "vs-covid19-outcome-code",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-370996005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/370996005\">370996005</a></td><td>http://snomed.info/sct</td><td>Patient condition resolved (finding)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-1119303003\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/1119303003\">1119303003</a></td><td>http://snomed.info/sct</td><td>Post-acute COVID-19 (disorder)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-419099009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/419099009\">419099009</a></td><td>http://snomed.info/sct</td><td>Dead (finding)</td></tr></table></div>"
-      },
-      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-covid19-outcome-code",
-      "version" : "0.1.0",
-      "name" : "VSOutcome",
-      "title" : "Patient Outcome",
-      "status" : "active",
-      "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
-      "publisher" : "Jembi Health Systems",
-      "contact" : [{
-        "telecom" : [{
-          "system" : "url",
-          "value" : "https://www.jembi.org"
-        },
-        {
-          "system" : "email",
-          "value" : "info@jembi.org"
-        }]
-      }],
-      "description" : "A list of possible outcomes.",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "code" : "001"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:2185e812-3088-416d-84f0-1f3c764d7fd1",
-        "timestamp" : "2023-03-13T06:33:16+00:00",
-        "total" : 3,
-        "parameter" : [{
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "limitedExpansion",
-          "valueBoolean" : true
-        },
-        {
-          "name" : "version",
-          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"
-        }],
-        "contains" : [{
-          "system" : "http://snomed.info/sct",
-          "code" : "370996005",
-          "display" : "Patient condition resolved (finding)"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "1119303003",
-          "display" : "Post-acute COVID-19 (disorder)"
-        },
-        {
-          "system" : "http://snomed.info/sct",
-          "code" : "419099009",
-          "display" : "Dead (finding)"
+          "system" : "http://loinc.org",
+          "code" : "94745-7",
+          "display" : "SARS-CoV-2 (COVID-19) RNA [Cycle Threshold #] in Respiratory specimen by NAA with probe detection"
         }]
       }
     }
@@ -932,7 +883,7 @@
       "title" : "Presenting symptoms",
       "status" : "active",
       "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
+      "date" : "2023-04-04T10:46:14+00:00",
       "publisher" : "Jembi Health Systems",
       "contact" : [{
         "telecom" : [{
@@ -952,8 +903,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:3a6c7cee-0467-483d-b0d0-767fa99d4225",
-        "timestamp" : "2023-03-13T06:33:16+00:00",
+        "identifier" : "urn:uuid:5e772734-815b-40b9-8521-ff8ac72b14a8",
+        "timestamp" : "2023-04-04T10:47:41+00:00",
         "total" : 20,
         "parameter" : [{
           "name" : "excludeNested",
@@ -1071,21 +1022,21 @@
     }
   },
   {
-    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info",
+    "fullUrl" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity",
     "resource" : {
       "resourceType" : "ValueSet",
-      "id" : "vs-source-of-info",
+      "id" : "vs-conditions-comorbidity",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-cs-source-of-info.html\">Source of Information v0.1.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-source-of-info-PatientRecall\"> </a>\u00a0\u00a0<a href=\"CodeSystem-cs-source-of-info.html#cs-source-of-info-PatientRecall\">PatientRecall</a></td><td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</td><td>Patient Recall</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-source-of-info-VaccineCard\"> </a>\u00a0\u00a0<a href=\"CodeSystem-cs-source-of-info.html#cs-source-of-info-VaccineCard\">VaccineCard</a></td><td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</td><td>Vaccine Card</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-source-of-info-MobilePhoneNotification\"> </a>\u00a0\u00a0<a href=\"CodeSystem-cs-source-of-info.html#cs-source-of-info-MobilePhoneNotification\">MobilePhoneNotification</a></td><td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</td><td>Mobile Phone Notification</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-source-of-info-VaccineAdministeredFromFacility\"> </a>\u00a0\u00a0<a href=\"CodeSystem-cs-source-of-info.html#cs-source-of-info-VaccineAdministeredFromFacility\">VaccineAdministeredFromFacility</a></td><td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</td><td>Vaccine Administered from this facility</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---openhie.org-fhir-covid19-casereporting-CodeSystem-cs-source-of-info-Other\"> </a>\u00a0\u00a0<a href=\"CodeSystem-cs-source-of-info.html#cs-source-of-info-Other\">Other</a></td><td>http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info</td><td>Other</td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 14 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2022</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-49601007\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/49601007\">49601007</a></td><td>http://snomed.info/sct</td><td>Cardiovascular disease e.g heart failure</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-13645005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/13645005\">13645005</a></td><td>http://snomed.info/sct</td><td>Chronic Lung Disease</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-118940003\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/118940003\">118940003</a></td><td>http://snomed.info/sct</td><td>Chronic neurological or neuromuscular disease</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-77176002\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/77176002\">77176002</a></td><td>http://snomed.info/sct</td><td>Current smoker</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-46635009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/46635009\">46635009</a></td><td>http://snomed.info/sct</td><td>Diabetes type 1</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-44054006\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/44054006\">44054006</a></td><td>http://snomed.info/sct</td><td>Diabetes type 2</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-73211009\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/73211009\">73211009</a></td><td>http://snomed.info/sct</td><td>Diabetes Type other or unspecified</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-165816005\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/165816005\">165816005</a></td><td>http://snomed.info/sct</td><td>HIV /AIDS</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-38341003\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/38341003\">38341003</a></td><td>http://snomed.info/sct</td><td>Hypertension</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-234532001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/234532001\">234532001</a></td><td>http://snomed.info/sct</td><td>Immunodeficiency</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-76783007\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/76783007\">76783007</a></td><td>http://snomed.info/sct</td><td>Liver disease</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-363346000\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/363346000\">363346000</a></td><td>http://snomed.info/sct</td><td>Malignancy</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-709044004\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/709044004\">709044004</a></td><td>http://snomed.info/sct</td><td>Renal disease</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-56717001\"> </a>\u00a0\u00a0<a href=\"http://snomed.info/id/56717001\">56717001</a></td><td>http://snomed.info/sct</td><td>TB</td></tr></table></div>"
       },
-      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-source-of-info",
+      "url" : "http://openhie.org/fhir/covid19-casereporting/ValueSet/vs-conditions-comorbidity",
       "version" : "0.1.0",
-      "name" : "VSSourceOfInfo",
-      "title" : "Source of Information",
+      "name" : "VSConditionsComorbidity",
+      "title" : "Conditions / Comorbidity",
       "status" : "active",
       "experimental" : false,
-      "date" : "2023-03-13T06:32:29+00:00",
+      "date" : "2023-04-04T10:46:14+00:00",
       "publisher" : "Jembi Health Systems",
       "contact" : [{
         "telecom" : [{
@@ -1097,7 +1048,7 @@
           "value" : "info@jembi.org"
         }]
       }],
-      "description" : "Custom code system to support the need to report on the origin of the individual's COVID19 diagnosis",
+      "description" : "List of conditions and comorbidities",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
@@ -1105,41 +1056,90 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:6ac16a0d-0bb8-4a51-a29a-4516e6d2aacb",
-        "timestamp" : "2023-03-13T06:33:19+00:00",
-        "total" : 5,
+        "identifier" : "urn:uuid:1940b7ee-ede6-4a34-83b1-d512458affd2",
+        "timestamp" : "2023-04-04T10:47:42+00:00",
+        "total" : 14,
         "parameter" : [{
           "name" : "excludeNested",
           "valueBoolean" : false
         },
         {
+          "name" : "limitedExpansion",
+          "valueBoolean" : true
+        },
+        {
           "name" : "version",
-          "valueUri" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info|0.1.0"
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20220731"
         }],
         "contains" : [{
-          "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info",
-          "code" : "PatientRecall",
-          "display" : "Patient Recall"
+          "system" : "http://snomed.info/sct",
+          "code" : "49601007",
+          "display" : "Cardiovascular disease e.g heart failure"
         },
         {
-          "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info",
-          "code" : "VaccineCard",
-          "display" : "Vaccine Card"
+          "system" : "http://snomed.info/sct",
+          "code" : "13645005",
+          "display" : "Chronic Lung Disease"
         },
         {
-          "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info",
-          "code" : "MobilePhoneNotification",
-          "display" : "Mobile Phone Notification"
+          "system" : "http://snomed.info/sct",
+          "code" : "118940003",
+          "display" : "Chronic neurological or neuromuscular disease"
         },
         {
-          "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info",
-          "code" : "VaccineAdministeredFromFacility",
-          "display" : "Vaccine Administered from this facility"
+          "system" : "http://snomed.info/sct",
+          "code" : "77176002",
+          "display" : "Current smoker"
         },
         {
-          "system" : "http://openhie.org/fhir/covid19-casereporting/CodeSystem/cs-source-of-info",
-          "code" : "Other",
-          "display" : "Other"
+          "system" : "http://snomed.info/sct",
+          "code" : "46635009",
+          "display" : "Diabetes type 1"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "44054006",
+          "display" : "Diabetes type 2"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "73211009",
+          "display" : "Diabetes Type other or unspecified"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "165816005",
+          "display" : "HIV /AIDS"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "38341003",
+          "display" : "Hypertension"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "234532001",
+          "display" : "Immunodeficiency"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "76783007",
+          "display" : "Liver disease"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "363346000",
+          "display" : "Malignancy"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "709044004",
+          "display" : "Renal disease"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "56717001",
+          "display" : "TB"
         }]
       }
     }
